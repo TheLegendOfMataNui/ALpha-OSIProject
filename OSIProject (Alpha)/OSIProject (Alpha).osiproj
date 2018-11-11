@@ -5,6 +5,9 @@
     <ProjectGuid>31990ee7-c1f8-435b-9056-58ef7c15fc52</ProjectGuid>
   </PropertyGroup>
   <Import Project="$(CustomProjectExtensionsPath)OSIProject.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputDirectory>C:\Program Files (x86)\LEGO Media\LEGO Bionicle\Data</OutputDirectory>
+  </PropertyGroup>
   <ItemGroup>
     <OSIAssembly Include="**\*.osa" />
   </ItemGroup>
