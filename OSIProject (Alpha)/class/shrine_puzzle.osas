@@ -1,0 +1,253 @@
+begin class "shrine_puzzle"
+	property "parent"
+	property "edoor"
+	property "bossdoorshone"
+
+	begin method "shrine_puzzle"
+		; address: 0xab7d0
+		; source: 184 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_shrn.vbo" 86:86
+		MemberFunctionArgumentCheck 2
+		LineNumber                  1931, 4
+		LineNumberAlt1              86, 184
+		GetVariableValue            1        ; local
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xab7e4
+		; source: 184 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_shrn.vbo" 93:97
+		; source: 182 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_brd3.vbo" 112:112
+		MemberFunctionArgumentCheck 1
+		CreateStackVariables        2
+		LineNumber                  1938, 4
+		LineNumberAlt1              93, 184
+		PushConstanti8              10
+		CallGameFunctionString      "gcareadirector", "setnearestmax", 1
+		Pop
+		LineNumber                  1940, 4
+		LineNumberAlt1              95, 184
+		CreateObjectString          "lego_moveableobject"
+		Dup
+		PushConstantStringString    "etdr"
+		GetThisMemberValueString    "parent"
+		GetMemberValueString        "name"
+		Pull                        3
+		GetMemberFunctionString     "lego_moveableobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  1940, 4
+		LineNumberAlt1              95, 184
+		SetThisMemberValueString    "edoor"
+		LineNumber                  1941, 4
+		LineNumberAlt1              96, 184
+		GetThisMemberValueString    "edoor"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  1942, 4
+		LineNumberAlt1              97, 184
+		GetThisMemberValueString    "edoor"
+		PushConstantf32             0.30000001192092896
+		Pull                        2
+		GetMemberFunctionString     "setalpha"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  4996, 4
+		LineNumberAlt1              112, 182
+		PushConstanti8              1
+		SetThisMemberValueString    "bossdoorshone"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xab866
+		; source: 184 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_shrn.vbo" 103:104
+		MemberFunctionArgumentCheck 1
+		LineNumber                  1948, 4
+		LineNumberAlt1              103, 184
+		GetThisMemberValueString    "edoor"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  1949, 4
+		LineNumberAlt1              104, 184
+		PushNothing
+		SetThisMemberValueString    "edoor"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "show"
+		; address: 0xab88c
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hide"
+		; address: 0xab890
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xab894
+		; source: 184 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_shrn.vbo" 120:127
+		; source: 182 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_brd3.vbo" 164:178
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          1
+		LineNumber                    1965, 4
+		LineNumberAlt1                120, 184
+		GetVariableValue              1                                             ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    5048, 4
+		LineNumberAlt1                164, 182
+		GetVariableValue              1                                             ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		PushConstantStringString      "etdr"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    5048, 4
+		LineNumberAlt1                164, 182
+		EqualTo
+		GetVariableValue              1                                             ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		PushConstantStringString      "cnt1"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    5048, 4
+		LineNumberAlt1                164, 182
+		EqualTo
+		And
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    5049, 4
+		LineNumberAlt1                165, 182
+		GetThisMemberValueString      "bossdoorshone"
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    5050, 4
+		LineNumberAlt1                166, 182
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "tokens"
+		PushConstanti8                75
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    5051, 4
+		LineNumberAlt1                167, 182
+		GetThisMemberValueString      "edoor"
+		PushConstantf32               1.5
+		Pull                          2
+		GetMemberFunctionString       "fadeout"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5052, 4
+		LineNumberAlt1                168, 182
+		PushConstanti16               1084
+		CallGameFunctionString        "gcstaticsoundsptrarray", "playtablesound", 1
+		Pop
+		LineNumber                    5053, 4
+		LineNumberAlt1                169, 182
+		PushConstant0
+		SetThisMemberValueString      "bossdoorshone"
+		; <-
+		BranchTarget                  0
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Dup
+		PushConstanti8                35
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    5061, 4
+		LineNumberAlt1                177, 182
+		GetVariableValue              1                                             ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		PushConstantStringString      "etdr"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    5061, 4
+		LineNumberAlt1                177, 182
+		EqualTo
+		GetVariableValue              1                                             ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		PushConstant0
+		EqualTo
+		And
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    5062, 4
+		LineNumberAlt1                178, 182
+		GetThisMemberValueString      "edoor"
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  2
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Dup
+		PushConstanti8                7
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    1970, 4
+		LineNumberAlt1                125, 184
+		GetVariableValue              1                                             ; local
+		GetMemberValueString          "args"
+		PushConstanti8                2
+		GetArrayValue
+		PushConstantStringString      "Ecut"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    1970, 4
+		LineNumberAlt1                125, 184
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    1972, 4
+		LineNumberAlt1                127, 184
+		PushConstanti16               144
+		CallGameFunctionString        "gcstaticsoundsptrarray", "playtablesound", 1
+		Pop
+		; <-
+		BranchTarget                  4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0xab9f9
+		; source: 184 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_shrn.vbo" 86:86
+		MemberFunctionArgumentCheck 2
+		LineNumber                  1931, 4
+		LineNumberAlt1              86, 184
+		PushNothing
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+end ; class

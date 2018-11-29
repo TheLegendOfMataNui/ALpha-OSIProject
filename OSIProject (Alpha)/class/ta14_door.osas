@@ -1,0 +1,62 @@
+begin class "ta14_door"
+	property "object"
+	property "id"
+
+	begin method "ta14_door"
+		; address: 0xc9ed0
+		; source: 227 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta14.vbo" 83:85
+		MemberFunctionArgumentCheck 2
+		LineNumber                  15325, 4
+		LineNumberAlt1              83, 227
+		CreateObjectString          "lego_moveableobject"
+		Dup
+		GetVariableValue            1                                            ; local
+		Pull                        2
+		GetMemberFunctionString     "lego_moveableobject"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  15325, 4
+		LineNumberAlt1              83, 227
+		SetThisMemberValueString    "object"
+		LineNumber                  15327, 4
+		LineNumberAlt1              85, 227
+		GetVariableValue            1                                            ; local
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  15327, 4
+		LineNumberAlt1              85, 227
+		SetThisMemberValueString    "id"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hide"
+		; address: 0xc9f1a
+		; source: 227 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta14.vbo" 90:90
+		MemberFunctionArgumentCheck 1
+		LineNumber                  15332, 4
+		LineNumberAlt1              90, 227
+		GetThisMemberValueString    "object"
+		Dup
+		GetMemberFunctionString     "hide"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0xc9f32
+		; source: 227 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta14.vbo" 95:96
+		MemberFunctionArgumentCheck 1
+		LineNumber                  15337, 4
+		LineNumberAlt1              95, 227
+		PushNothing
+		SetThisMemberValueString    "object"
+		LineNumber                  15338, 4
+		LineNumberAlt1              96, 227
+		PushNothing
+		SetThisMemberValueString    "id"
+		PushNothing
+		Return
+	end ; method
+end ; class

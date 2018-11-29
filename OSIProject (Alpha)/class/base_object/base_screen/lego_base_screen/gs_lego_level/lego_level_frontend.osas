@@ -1,0 +1,476 @@
+begin class "lego_level_frontend", "gs_lego_level"
+	property "curspline"
+	property "cameramode"
+	property "rotateval"
+	property "rotatedir"
+	property "bgmusic"
+
+	begin method "lego_level_frontend"
+		; address: 0x56230
+		; source: 46 "C:\\projects\\lego\\Scripting\\VBO\\lego_frontend.vbo" 106:113
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          1
+		LineNumber                    28761, 4
+		LineNumberAlt1                106, 46
+		PushConstanti8                1
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    28762, 4
+		LineNumberAlt1                107, 46
+		GetVariableValue              0                 ; local
+		PushConstantStringString      "fren"
+		PushConstantStringString      "onua"
+		PushConstantStringString      "frnt"
+		GetThisMemberFunctionString   "gs_lego_level"
+		JumpAbsolute                  4
+		Pop
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    28764, 4
+		LineNumberAlt1                109, 46
+		GetVariableValue              0                 ; local
+		PushConstantStringString      "lev1"
+		PushConstantStringString      "onua"
+		PushConstantStringString      "bech"
+		GetThisMemberFunctionString   "gs_lego_level"
+		JumpAbsolute                  4
+		Pop
+		; <-
+		BranchTarget                  1
+		LineNumber                    28767, 4
+		LineNumberAlt1                112, 46
+		CreateObjectString            "lego_area_front"
+		Dup
+		GetVariableValue              0                 ; local
+		Pull                          2
+		GetMemberFunctionString       "lego_area_front"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    28767, 4
+		LineNumberAlt1                112, 46
+		SetVariableValue              2                 ; local
+		LineNumber                    28768, 4
+		LineNumberAlt1                113, 46
+		GetThisMemberValueString      "areas"
+		GetVariableValue              2                 ; local
+		AppendToArray
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x562b7
+		; source: 46 "C:\\projects\\lego\\Scripting\\VBO\\lego_frontend.vbo" 122:141
+		MemberFunctionArgumentCheck  1
+		LineNumber                   28777, 4
+		LineNumberAlt1               122, 46
+		PushConstantStringString     "Root/Data/cinematics/New_LOGO8015.bik"
+		PushConstanti8               1
+		CallGameFunctionString       "gchuddirector", "playcinematic", 2
+		Pop
+		LineNumber                   28779, 4
+		LineNumberAlt1               124, 46
+		PushConstantStringString     "Root/Data/cinematics/New_Saffirelogo.bik"
+		PushConstanti8               1
+		CallGameFunctionString       "gchuddirector", "playcinematic", 2
+		Pop
+		LineNumber                   28780, 4
+		LineNumberAlt1               125, 46
+		PushConstantStringString     "Root/Data/cinematics/BIONICLEFMV3.bik"
+		PushConstanti8               1
+		CallGameFunctionString       "gchuddirector", "playcinematic", 2
+		Pop
+		LineNumber                   28783, 4
+		LineNumberAlt1               128, 46
+		GetVariableValue             0                                          ; local
+		GetThisMemberFunctionString  "lego_level_initfull"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   28786, 4
+		LineNumberAlt1               131, 46
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		PushConstantStringString     "fake"
+		PushConstant0
+		Pull                         3
+		GetMemberFunctionString      "addmask"
+		JumpAbsolute                 3
+		Pop
+		LineNumber                   28789, 4
+		LineNumberAlt1               134, 46
+		GetThisMemberValueString     "cam"
+		PushConstantStringString     "Root/Data/Levels/fren/frnt/frnt_CAM.slb"
+		Pull                         2
+		GetMemberFunctionString      "makespline"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   28790, 4
+		LineNumberAlt1               135, 46
+		PushConstant0
+		SetThisMemberValueString     "curspline"
+		LineNumber                   28791, 4
+		LineNumberAlt1               136, 46
+		GetVariableValue             0                                          ; local
+		PushConstant0
+		PushConstant0
+		PushConstanti8               1
+		PushConstantf32              5
+		GetThisMemberFunctionString  "adjustcamera"
+		JumpAbsolute                 5
+		Pop
+		LineNumber                   28794, 4
+		LineNumberAlt1               139, 46
+		CreateObjectString           "legomp3player"
+		Dup
+		Dup
+		GetMemberFunctionString      "legomp3player"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   28794, 4
+		LineNumberAlt1               139, 46
+		SetThisMemberValueString     "bgmusic"
+		LineNumber                   28795, 4
+		LineNumberAlt1               140, 46
+		GetThisMemberValueString     "bgmusic"
+		PushConstantStringString     "Root/Data/sounds/MUSICGaliAmbience"
+		Pull                         2
+		GetMemberFunctionString      "setupforplay"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   28796, 4
+		LineNumberAlt1               141, 46
+		GetThisMemberValueString     "bgmusic"
+		PushConstanti8               1
+		Pull                         2
+		GetMemberFunctionString      "play"
+		JumpAbsolute                 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x563bf
+		; source: 46 "C:\\projects\\lego\\Scripting\\VBO\\lego_frontend.vbo" 146:154
+		MemberFunctionArgumentCheck   1
+		LineNumber                    28801, 4
+		LineNumberAlt1                146, 46
+		PushConstantStringString      "[][0][] cleanup Lego_Level_FrontEnd"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    28802, 4
+		LineNumberAlt1                147, 46
+		GetVariableValue              0                                     ; local
+		GetThisMemberFunctionString   "lego_level_cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    28803, 4
+		LineNumberAlt1                148, 46
+		GetThisMemberValueString      "bgmusic"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    28804, 4
+		LineNumberAlt1                149, 46
+		GetThisMemberValueString      "bgmusic"
+		Dup
+		GetMemberFunctionString       "stop"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    28805, 4
+		LineNumberAlt1                150, 46
+		GetThisMemberValueString      "bgmusic"
+		Dup
+		GetMemberFunctionString       "cleanupfordestroy"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    28806, 4
+		LineNumberAlt1                151, 46
+		PushNothing
+		SetThisMemberValueString      "bgmusic"
+		; <-
+		BranchTarget                  0
+		LineNumber                    28808, 4
+		LineNumberAlt1                153, 46
+		PushNothing
+		SetThisMemberValueString      "cameramode"
+		LineNumber                    28809, 4
+		LineNumberAlt1                154, 46
+		PushConstantStringString      "[][1][] cleanup Lego_Level_FrontEnd"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "adjustcamera"
+		; address: 0x56455
+		; source: 46 "C:\\projects\\lego\\Scripting\\VBO\\lego_frontend.vbo" 159:176
+		MemberFunctionArgumentCheck   5
+		LineNumber                    28814, 4
+		LineNumberAlt1                159, 46
+		GetVariableValue              1                 ; local
+		PushConstanti8                3
+		Multiply
+		SetThisMemberValueString      "curspline"
+		LineNumber                    28820, 4
+		LineNumberAlt1                165, 46
+		GetThisMemberValueString      "cam"
+		GetThisMemberValueString      "curspline"
+		GetVariableValue              4                 ; local
+		GetVariableValue              2                 ; local
+		GetVariableValue              3                 ; local
+		Pull                          5
+		GetMemberFunctionString       "setspline"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    28821, 4
+		LineNumberAlt1                166, 46
+		GetThisMemberValueString      "curspline"
+		PushConstant0
+		EqualTo
+		GetThisMemberValueString      "curspline"
+		PushConstanti8                15
+		EqualTo
+		Or
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    28822, 4
+		LineNumberAlt1                167, 46
+		GetThisMemberValueString      "cam"
+		GetThisMemberValueString      "curspline"
+		PushConstanti8                3
+		Add
+		GetVariableValue              2                 ; local
+		GetVariableValue              3                 ; local
+		Pull                          4
+		GetMemberFunctionString       "settargetspline"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    28823, 4
+		LineNumberAlt1                168, 46
+		GetThisMemberValueString      "cam"
+		PushConstanti8                3
+		Pull                          2
+		GetMemberFunctionString       "setaimode"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    28824, 4
+		LineNumberAlt1                169, 46
+		PushConstanti8                1
+		SetThisMemberValueString      "cameramode"
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    28830, 4
+		LineNumberAlt1                175, 46
+		GetThisMemberValueString      "cam"
+		PushConstanti8                2
+		Pull                          2
+		GetMemberFunctionString       "setaimode"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    28831, 4
+		LineNumberAlt1                176, 46
+		PushConstanti8                1
+		SetThisMemberValueString      "cameramode"
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setcameraback"
+		; address: 0x56516
+		; source: 46 "C:\\projects\\lego\\Scripting\\VBO\\lego_frontend.vbo" 184:190
+		MemberFunctionArgumentCheck   1
+		LineNumber                    28839, 4
+		LineNumberAlt1                184, 46
+		GetThisMemberValueString      "curspline"
+		PushConstanti8                5
+		LessThan
+		GetThisMemberValueString      "curspline"
+		PushConstanti8                13
+		GreaterThan
+		And
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    28840, 4
+		LineNumberAlt1                185, 46
+		GetThisMemberValueString      "cam"
+		PushConstant0
+		PushConstantf32               5
+		Subtract
+		PushConstantf32               10
+		PushConstantf32               85
+		Pull                          4
+		GetMemberFunctionString       "setpos"
+		JumpAbsolute                  4
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    28842, 4
+		LineNumberAlt1                187, 46
+		GetThisMemberValueString      "cam"
+		PushConstantf32               0
+		PushConstantf32               0
+		PushConstantf32               0
+		Pull                          4
+		GetMemberFunctionString       "settargetpos"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    28843, 4
+		LineNumberAlt1                188, 46
+		GetThisMemberValueString      "cam"
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "setaimode"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    28844, 4
+		LineNumberAlt1                189, 46
+		PushConstant0
+		SetThisMemberValueString      "rotateval"
+		LineNumber                    28845, 4
+		LineNumberAlt1                190, 46
+		PushConstant0
+		SetThisMemberValueString      "cameramode"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "addyaw"
+		; address: 0x565b0
+		; source: 46 "C:\\projects\\lego\\Scripting\\VBO\\lego_frontend.vbo" 195:209
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    28850, 4
+		LineNumberAlt1                195, 46
+		GetThisMemberValueString      "rotatedir"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    28851, 4
+		LineNumberAlt1                196, 46
+		GetThisMemberValueString      "rotateval"
+		CallGameFunctionString        "scslosimath", "abs", 1
+		LineNumber                    28851, 4
+		LineNumberAlt1                196, 46
+		SetVariableValue              1                       ; local
+		LineNumber                    28852, 4
+		LineNumberAlt1                197, 46
+		GetThisMemberValueString      "cam"
+		PushConstantf32               0.5
+		PushConstanti8                75
+		GetVariableValue              1                       ; local
+		Subtract
+		PushConstanti8                75
+		Divide
+		Multiply
+		Pull                          2
+		GetMemberFunctionString       "addyaw"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    28853, 4
+		LineNumberAlt1                198, 46
+		GetThisMemberValueString      "rotateval"
+		PushConstantf32               0.5
+		Add
+		SetThisMemberValueString      "rotateval"
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    28855, 4
+		LineNumberAlt1                200, 46
+		GetThisMemberValueString      "rotateval"
+		CallGameFunctionString        "scslosimath", "abs", 1
+		LineNumber                    28855, 4
+		LineNumberAlt1                200, 46
+		SetVariableValue              1                       ; local
+		LineNumber                    28856, 4
+		LineNumberAlt1                201, 46
+		GetThisMemberValueString      "cam"
+		PushConstant0
+		PushConstantf32               0.5
+		PushConstanti8                75
+		GetVariableValue              1                       ; local
+		Subtract
+		PushConstanti8                75
+		Divide
+		Multiply
+		Subtract
+		Pull                          2
+		GetMemberFunctionString       "addyaw"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    28857, 4
+		LineNumberAlt1                202, 46
+		GetThisMemberValueString      "rotateval"
+		PushConstantf32               0.5
+		Subtract
+		SetThisMemberValueString      "rotateval"
+		; <-
+		BranchTarget                  1
+		LineNumber                    28859, 4
+		LineNumberAlt1                204, 46
+		GetThisMemberValueString      "rotateval"
+		PushConstanti8                75
+		GreaterThan
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    28860, 4
+		LineNumberAlt1                205, 46
+		PushConstant0
+		SetThisMemberValueString      "rotatedir"
+		; <-
+		BranchTarget                  2
+		LineNumber                    28863, 4
+		LineNumberAlt1                208, 46
+		GetThisMemberValueString      "rotateval"
+		PushConstanti8                -75
+		LessThan
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    28864, 4
+		LineNumberAlt1                209, 46
+		PushConstanti8                1
+		SetThisMemberValueString      "rotatedir"
+		; <-
+		BranchTarget                  3
+		PushNothing
+		Return
+	end ; method
+
+	begin method "getcameramode"
+		; address: 0x566c5
+		; source: 46 "C:\\projects\\lego\\Scripting\\VBO\\lego_frontend.vbo" 216:216
+		MemberFunctionArgumentCheck 1
+		LineNumber                  28871, 4
+		LineNumberAlt1              216, 46
+		GetThisMemberValueString    "cameramode"
+		Return
+	end ; method
+
+	begin method "setgamecamera"
+		; address: 0x566d5
+		; source: 46 "C:\\projects\\lego\\Scripting\\VBO\\lego_frontend.vbo" 221:221
+		MemberFunctionArgumentCheck 1
+		LineNumber                  28876, 4
+		LineNumberAlt1              221, 46
+		GetThisMemberValueString    "cam"
+		PushConstanti8              11
+		Pull                        2
+		GetMemberFunctionString     "setaimode"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

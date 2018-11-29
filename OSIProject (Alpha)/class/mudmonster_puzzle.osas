@@ -1,0 +1,2178 @@
+begin class "mudmonster_puzzle"
+	property "parea"
+	property "mudmonster"
+	property "mudtimer"
+	property "mudpos"
+	property "mudhits"
+	property "attacking"
+	property "reacting"
+	property "bgmusic"
+	property "thrown"
+	property "titletext1"
+	property "titletext2"
+	property "turaga"
+	property "turagashown"
+	property "mudmandead"
+	property "stone"
+
+	begin method "mudmonster_puzzle"
+		; address: 0x6605f
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 199:199
+		MemberFunctionArgumentCheck 2
+		LineNumber                  37120, 4
+		LineNumberAlt1              199, 102
+		GetVariableValue            1        ; local
+		SetThisMemberValueString    "parea"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x66073
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 207:241
+		MemberFunctionArgumentCheck 1
+		CreateStackVariables        1
+		LineNumber                  37128, 4
+		LineNumberAlt1              207, 102
+		CreateObjectString          "mudmonster"
+		Dup
+		GetVariableValue            0                                                ; local
+		Pull                        2
+		GetMemberFunctionString     "mudmonster"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  37128, 4
+		LineNumberAlt1              207, 102
+		SetThisMemberValueString    "mudmonster"
+		LineNumber                  37129, 4
+		LineNumberAlt1              208, 102
+		GetThisMemberValueString    "mudmonster"
+		Dup
+		GetMemberFunctionString     "init"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37130, 4
+		LineNumberAlt1              209, 102
+		GetThisMemberValueString    "mudmonster"
+		GetMemberValueString        "handle"
+		PushConstant0
+		CallGameFunctionString      "gccharacter", "setshadowtype", 2
+		Pop
+		LineNumber                  37133, 4
+		LineNumberAlt1              212, 102
+		CreateObjectString          "gs_lego_character"
+		Dup
+		PushConstantStringString    "when"
+		PushConstantStringString    "when"
+		PushConstantStringString    "fake"
+		PushConstanti8              -90
+		PushConstanti16             995
+		PushConstant0
+		PushConstanti16             212
+		PushConstantStringString    "aiin"
+		Pull                        9
+		GetMemberFunctionString     "gs_lego_character"
+		JumpAbsolute                9
+		Pop
+		LineNumber                  37133, 4
+		LineNumberAlt1              212, 102
+		SetThisMemberValueString    "turaga"
+		LineNumber                  37134, 4
+		LineNumberAlt1              213, 102
+		GetThisMemberValueString    "turaga"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37135, 4
+		LineNumberAlt1              214, 102
+		GetThisMemberValueString    "turaga"
+		Dup
+		GetMemberFunctionString     "add"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37136, 4
+		LineNumberAlt1              215, 102
+		GetThisMemberValueString    "turaga"
+		Dup
+		GetMemberFunctionString     "hide"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37137, 4
+		LineNumberAlt1              216, 102
+		GetThisMemberValueString    "turaga"
+		Dup
+		GetMemberFunctionString     "settweakable"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37139, 4
+		LineNumberAlt1              218, 102
+		CreateObjectString          "legomp3player"
+		Dup
+		Dup
+		GetMemberFunctionString     "legomp3player"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37139, 4
+		LineNumberAlt1              218, 102
+		SetThisMemberValueString    "bgmusic"
+		LineNumber                  37140, 4
+		LineNumberAlt1              219, 102
+		GetThisMemberValueString    "bgmusic"
+		PushConstantStringString    "Root/Data/sounds/MUSICTechnoAmbience"
+		Pull                        2
+		GetMemberFunctionString     "setupforplay"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  37142, 4
+		LineNumberAlt1              221, 102
+		PushConstanti32             1831874615
+		CallGameFunctionString      "gccharactermoveinterpreter", "checkanimdone", 1
+		Pop
+		LineNumber                  37143, 4
+		LineNumberAlt1              222, 102
+		PushConstanti32             1831874864
+		CallGameFunctionString      "gccharactermoveinterpreter", "checkanimdone", 1
+		Pop
+		LineNumber                  37144, 4
+		LineNumberAlt1              223, 102
+		PushConstanti32             1831874617
+		CallGameFunctionString      "gccharactermoveinterpreter", "checkanimdone", 1
+		Pop
+		LineNumber                  37147, 4
+		LineNumberAlt1              226, 102
+		PushConstant0
+		SetThisMemberValueString    "mudmandead"
+		LineNumber                  37149, 4
+		LineNumberAlt1              228, 102
+		PushConstantStringString    "tpm1"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  37149, 4
+		LineNumberAlt1              228, 102
+		CallGameFunctionString      "gccollisionphysicsgroup", "turnoffnextarea", 1
+		Pop
+		LineNumber                  37150, 4
+		LineNumberAlt1              229, 102
+		PushConstantStringString    "tpm1"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  37150, 4
+		LineNumberAlt1              229, 102
+		CallGameFunctionString      "gccollisionphysicsgroup", "gettriggerplane", 1
+		LineNumber                  37150, 4
+		LineNumberAlt1              229, 102
+		SetVariableValue            1                                                ; local
+		LineNumber                  37151, 4
+		LineNumberAlt1              230, 102
+		GetVariableValue            1                                                ; local
+		PushConstanti8              3
+		PushConstanti8              3
+		CallGameFunctionString      "gctriggerplane", "setplaneresponses", 3
+		Pop
+		LineNumber                  37153, 4
+		LineNumberAlt1              232, 102
+		PushConstantStringString    "tpm2"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  37153, 4
+		LineNumberAlt1              232, 102
+		CallGameFunctionString      "gccollisionphysicsgroup", "gettriggerplane", 1
+		LineNumber                  37153, 4
+		LineNumberAlt1              232, 102
+		SetVariableValue            1                                                ; local
+		LineNumber                  37154, 4
+		LineNumberAlt1              233, 102
+		GetVariableValue            1                                                ; local
+		PushConstanti8              3
+		PushConstanti8              3
+		CallGameFunctionString      "gctriggerplane", "setplaneresponses", 3
+		Pop
+		LineNumber                  37156, 4
+		LineNumberAlt1              235, 102
+		CreateObjectString          "lego_pickup"
+		Dup
+		PushConstantStringString    "ston"
+		PushConstant0
+		PushConstanti8              4
+		PushConstantStringString    "item"
+		PushConstanti8              13
+		PushConstant0
+		Pull                        7
+		GetMemberFunctionString     "lego_pickup"
+		JumpAbsolute                7
+		Pop
+		LineNumber                  37156, 4
+		LineNumberAlt1              235, 102
+		SetThisMemberValueString    "stone"
+		LineNumber                  37157, 4
+		LineNumberAlt1              236, 102
+		GetThisMemberValueString    "stone"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37158, 4
+		LineNumberAlt1              237, 102
+		GetThisMemberValueString    "stone"
+		GetMemberValueString        "obj"
+		PushConstanti16             1121
+		PushConstantf32             1.2000000476837158
+		PushConstanti16             216
+		Pull                        4
+		GetMemberFunctionString     "setpos"
+		JumpAbsolute                4
+		Pop
+		LineNumber                  37160, 4
+		LineNumberAlt1              239, 102
+		PushConstanti8              50
+		CallGameFunctionString      "gcareadirector", "setnearestmax", 1
+		Pop
+		LineNumber                  37162, 4
+		LineNumberAlt1              241, 102
+		GetVariableValue            0                                                ; local
+		GetThisMemberFunctionString "initshort"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initshort"
+		; address: 0x6631d
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 248:260
+		MemberFunctionArgumentCheck 1
+		LineNumber                  37169, 4
+		LineNumberAlt1              248, 102
+		GetThisMemberValueString    "mudmonster"
+		Dup
+		GetMemberFunctionString     "initshort"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37170, 4
+		LineNumberAlt1              249, 102
+		GetThisMemberValueString    "bgmusic"
+		Dup
+		GetMemberFunctionString     "stop"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37171, 4
+		LineNumberAlt1              250, 102
+		GetThisMemberValueString    "bgmusic"
+		PushConstanti8              1
+		Pull                        2
+		GetMemberFunctionString     "play"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  37172, 4
+		LineNumberAlt1              251, 102
+		GetVariableValue            0              ; local
+		GetThisMemberFunctionString "setupstrings"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37175, 4
+		LineNumberAlt1              254, 102
+		PushConstanti8              1
+		SetThisMemberValueString    "mudpos"
+		LineNumber                  37176, 4
+		LineNumberAlt1              255, 102
+		PushConstant0
+		SetThisMemberValueString    "mudhits"
+		LineNumber                  37177, 4
+		LineNumberAlt1              256, 102
+		PushConstant0
+		SetThisMemberValueString    "mudtimer"
+		LineNumber                  37178, 4
+		LineNumberAlt1              257, 102
+		PushConstant0
+		SetThisMemberValueString    "attacking"
+		LineNumber                  37179, 4
+		LineNumberAlt1              258, 102
+		PushConstant0
+		SetThisMemberValueString    "reacting"
+		LineNumber                  37181, 4
+		LineNumberAlt1              260, 102
+		PushConstant0
+		SetThisMemberValueString    "turagashown"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x663c8
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 266:266
+		MemberFunctionArgumentCheck 1
+		LineNumber                  37187, 4
+		LineNumberAlt1              266, 102
+		PushNothing
+		SetThisMemberValueString    "parea"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x663da
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 272:283
+		MemberFunctionArgumentCheck 1
+		LineNumber                  37193, 4
+		LineNumberAlt1              272, 102
+		GetThisMemberValueString    "mudmonster"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37194, 4
+		LineNumberAlt1              273, 102
+		PushNothing
+		SetThisMemberValueString    "mudmonster"
+		LineNumber                  37195, 4
+		LineNumberAlt1              274, 102
+		PushNothing
+		SetThisMemberValueString    "mudtimer"
+		LineNumber                  37196, 4
+		LineNumberAlt1              275, 102
+		PushNothing
+		SetThisMemberValueString    "mudpos"
+		LineNumber                  37197, 4
+		LineNumberAlt1              276, 102
+		PushNothing
+		SetThisMemberValueString    "mudhits"
+		LineNumber                  37198, 4
+		LineNumberAlt1              277, 102
+		PushNothing
+		SetThisMemberValueString    "attacking"
+		LineNumber                  37199, 4
+		LineNumberAlt1              278, 102
+		PushNothing
+		SetThisMemberValueString    "reacting"
+		LineNumber                  37200, 4
+		LineNumberAlt1              279, 102
+		GetThisMemberValueString    "bgmusic"
+		Dup
+		GetMemberFunctionString     "stop"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37201, 4
+		LineNumberAlt1              280, 102
+		PushNothing
+		SetThisMemberValueString    "bgmusic"
+		LineNumber                  37203, 4
+		LineNumberAlt1              282, 102
+		GetThisMemberValueString    "stone"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37204, 4
+		LineNumberAlt1              283, 102
+		PushNothing
+		SetThisMemberValueString    "stone"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setupstrings"
+		; address: 0x6648a
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 294:304
+		MemberFunctionArgumentCheck  1
+		CreateStackVariables         4
+		LineNumber                   37215, 4
+		LineNumberAlt1               294, 102
+		PushConstanti32              1651471219
+		PushConstanti8               3
+		PushConstant0
+		CallGameFunctionString       "gcareadirector", "getscriptstring", 3
+		LineNumber                   37215, 4
+		LineNumberAlt1               294, 102
+		SetVariableValue             1                                      ; local
+		LineNumber                   37216, 4
+		LineNumberAlt1               295, 102
+		PushConstanti32              1651471219
+		PushConstanti8               3
+		PushConstanti8               1
+		CallGameFunctionString       "gcareadirector", "getscriptstring", 3
+		LineNumber                   37216, 4
+		LineNumberAlt1               295, 102
+		SetVariableValue             2                                      ; local
+		LineNumber                   37218, 4
+		LineNumberAlt1               297, 102
+		GetVariableValueGlobalString "screeny"
+		PushConstanti8               100
+		Subtract
+		PushConstanti8               20
+		Add
+		SetVariableValue             3                                      ; local
+		LineNumber                   37219, 4
+		LineNumberAlt1               298, 102
+		GetVariableValueGlobalString "screeny"
+		PushConstanti8               100
+		Subtract
+		PushConstanti8               40
+		Add
+		SetVariableValue             4                                      ; local
+		LineNumber                   37221, 4
+		LineNumberAlt1               300, 102
+		CreateObjectString           "gs_legotext"
+		Dup
+		PushConstantStringString     "Root/Data/Art/Fonts/BionicleFont"
+		GetVariableValue             1                                      ; local
+		GetVariableValueGlobalString "screenx"
+		PushConstantf32              0.5
+		Multiply
+		GetVariableValue             3                                      ; local
+		PushConstant0
+		PushConstantf32              2
+		PushConstanti16              256
+		PushConstant0
+		PushConstant0
+		Pull                         10
+		GetMemberFunctionString      "gs_legotext"
+		JumpAbsolute                 10
+		Pop
+		LineNumber                   37222, 4
+		LineNumberAlt1               301, 102
+		SetThisMemberValueString     "titletext1"
+		LineNumber                   37224, 4
+		LineNumberAlt1               303, 102
+		CreateObjectString           "gs_legotext"
+		Dup
+		PushConstantStringString     "Root/Data/Art/Fonts/BionicleFont"
+		GetVariableValue             2                                      ; local
+		GetVariableValueGlobalString "screenx"
+		PushConstantf32              0.5
+		Multiply
+		GetVariableValue             4                                      ; local
+		PushConstant0
+		PushConstantf32              2
+		PushConstanti16              256
+		PushConstant0
+		PushConstant0
+		Pull                         10
+		GetMemberFunctionString      "gs_legotext"
+		JumpAbsolute                 10
+		Pop
+		LineNumber                   37225, 4
+		LineNumberAlt1               304, 102
+		SetThisMemberValueString     "titletext2"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "showstrings"
+		; address: 0x66587
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 310:315
+		MemberFunctionArgumentCheck 1
+		LineNumber                  37231, 4
+		LineNumberAlt1              310, 102
+		GetThisMemberValueString    "titletext1"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37232, 4
+		LineNumberAlt1              311, 102
+		GetThisMemberValueString    "titletext2"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37233, 4
+		LineNumberAlt1              312, 102
+		GetThisMemberValueString    "titletext1"
+		Dup
+		GetMemberFunctionString     "add"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37234, 4
+		LineNumberAlt1              313, 102
+		GetThisMemberValueString    "titletext2"
+		Dup
+		GetMemberFunctionString     "add"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37235, 4
+		LineNumberAlt1              314, 102
+		GetThisMemberValueString    "titletext1"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37236, 4
+		LineNumberAlt1              315, 102
+		GetThisMemberValueString    "titletext2"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupstrings"
+		; address: 0x66603
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 325:330
+		MemberFunctionArgumentCheck 1
+		LineNumber                  37246, 4
+		LineNumberAlt1              325, 102
+		GetThisMemberValueString    "titletext1"
+		Dup
+		GetMemberFunctionString     "remove"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37247, 4
+		LineNumberAlt1              326, 102
+		GetThisMemberValueString    "titletext2"
+		Dup
+		GetMemberFunctionString     "remove"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37248, 4
+		LineNumberAlt1              327, 102
+		GetThisMemberValueString    "titletext1"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37249, 4
+		LineNumberAlt1              328, 102
+		GetThisMemberValueString    "titletext2"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37250, 4
+		LineNumberAlt1              329, 102
+		PushNothing
+		SetThisMemberValueString    "titletext1"
+		LineNumber                  37251, 4
+		LineNumberAlt1              330, 102
+		PushNothing
+		SetThisMemberValueString    "titletext2"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x66673
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 338:462
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          5
+		LineNumber                    37259, 4
+		LineNumberAlt1                338, 102
+		PushConstanti8                11
+		SetVariableValue              2                                                    ; local
+		LineNumber                    37260, 4
+		LineNumberAlt1                339, 102
+		GetThisMemberValueString      "mudtimer"
+		GetVariableValue              1                                                    ; local
+		GetMemberValueString          "deltatime"
+		Add
+		SetThisMemberValueString      "mudtimer"
+		LineNumber                    37271, 4
+		LineNumberAlt1                350, 102
+		GetThisMemberValueString      "mudmonster"
+		GetMemberValueString          "mudstate"
+		Dup
+		PushConstanti8                6
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    37273, 4
+		LineNumberAlt1                352, 102
+		GetThisMemberValueString      "mudtimer"
+		PushConstanti8                3
+		GreaterThan
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    37274, 4
+		LineNumberAlt1                353, 102
+		GetThisMemberValueString      "mudmonster"
+		Dup
+		GetMemberFunctionString       "getposx"
+		JumpAbsolute                  1
+		LineNumber                    37274, 4
+		LineNumberAlt1                353, 102
+		SetVariableValue              3                                                    ; local
+		LineNumber                    37275, 4
+		LineNumberAlt1                354, 102
+		GetThisMemberValueString      "mudmonster"
+		Dup
+		GetMemberFunctionString       "getposy"
+		JumpAbsolute                  1
+		LineNumber                    37275, 4
+		LineNumberAlt1                354, 102
+		SetVariableValue              4                                                    ; local
+		LineNumber                    37276, 4
+		LineNumberAlt1                355, 102
+		GetThisMemberValueString      "mudmonster"
+		Dup
+		GetMemberFunctionString       "getposz"
+		JumpAbsolute                  1
+		LineNumber                    37276, 4
+		LineNumberAlt1                355, 102
+		SetVariableValue              5                                                    ; local
+		LineNumber                    37277, 4
+		LineNumberAlt1                356, 102
+		GetThisMemberValueString      "parea"
+		GetMemberValueString          "level"
+		GetMemberValueString          "cam"
+		GetVariableValue              3                                                    ; local
+		PushConstanti8                30
+		Subtract
+		GetVariableValue              4                                                    ; local
+		PushConstanti8                10
+		Add
+		GetVariableValue              5                                                    ; local
+		GetVariableValue              3                                                    ; local
+		GetVariableValue              4                                                    ; local
+		PushConstanti8                10
+		Add
+		GetVariableValue              5                                                    ; local
+		PushConstanti8                3
+		Pull                          8
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  8
+		Pop
+		LineNumber                    37278, 4
+		LineNumberAlt1                357, 102
+		PushConstanti8                5
+		GetThisMemberValueString      "mudmonster"
+		SetMemberValueString          "mudstate"
+		; <-
+		BranchTarget                  0
+		BranchAlwaysTarget            20, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Dup
+		PushConstanti8                7
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    37283, 4
+		LineNumberAlt1                362, 102
+		GetThisMemberValueString      "mudtimer"
+		PushConstanti8                2
+		GreaterThan
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    37284, 4
+		LineNumberAlt1                363, 102
+		GetThisMemberValueString      "parea"
+		GetMemberValueString          "level"
+		GetMemberValueString          "cam"
+		PushConstanti8                11
+		Pull                          2
+		GetMemberFunctionString       "setaimode"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    37285, 4
+		LineNumberAlt1                364, 102
+		PushConstant0
+		SetThisMemberValueString      "mudtimer"
+		LineNumber                    37286, 4
+		LineNumberAlt1                365, 102
+		PushConstant0
+		GetThisMemberValueString      "mudmonster"
+		SetMemberValueString          "mudstate"
+		LineNumber                    37287, 4
+		LineNumberAlt1                366, 102
+		GetVariableValue              0                                                    ; local
+		GetThisMemberFunctionString   "cleanupstrings"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  2
+		BranchAlwaysTarget            20, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Dup
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 8, 0
+		; ->
+		LineNumber                    37292, 4
+		LineNumberAlt1                371, 102
+		GetThisMemberValueString      "mudtimer"
+		PushConstanti8                7
+		GreaterThan
+		GetThisMemberValueString      "attacking"
+		PushConstant0
+		EqualTo
+		And
+		CompareAndBranchIfFalseTarget 6, 0
+		; ->
+		LineNumber                    37293, 4
+		LineNumberAlt1                372, 102
+		PushConstantStringString      "+ morph down"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    37295, 4
+		LineNumberAlt1                374, 102
+		GetThisMemberValueString      "mudhits"
+		PushConstanti8                4
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    37296, 4
+		LineNumberAlt1                375, 102
+		PushConstanti8                2
+		SetThisMemberValueString      "mudtimer"
+		BranchAlwaysTarget            5, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		LineNumber                    37298, 4
+		LineNumberAlt1                377, 102
+		PushConstant0
+		SetThisMemberValueString      "mudtimer"
+		; <-
+		BranchTarget                  5
+		LineNumber                    37301, 4
+		LineNumberAlt1                380, 102
+		GetThisMemberValueString      "mudmonster"
+		PushConstanti8                1
+		GetThisMemberValueString      "mudhits"
+		Pull                          3
+		GetMemberFunctionString       "morph"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    37302, 4
+		LineNumberAlt1                381, 102
+		GetThisMemberValueString      "mudmonster"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    37303, 4
+		LineNumberAlt1                382, 102
+		PushConstanti8                1
+		GetThisMemberValueString      "mudmonster"
+		SetMemberValueString          "mudstate"
+		LineNumber                    37304, 4
+		LineNumberAlt1                383, 102
+		GetThisMemberValueString      "mudmonster"
+		GetMemberValueString          "handle"
+		PushConstant0
+		CallGameFunctionString        "gccharacter", "setshadowtype", 2
+		Pop
+		BranchAlwaysTarget            7, 0
+		; ->
+		; <-
+		BranchTarget                  6
+		LineNumber                    37306, 4
+		LineNumberAlt1                385, 102
+		GetThisMemberValueString      "mudtimer"
+		PushConstanti8                2
+		GreaterThan
+		CompareAndBranchIfFalseTarget 7, 0
+		; ->
+		LineNumber                    37307, 4
+		LineNumberAlt1                386, 102
+		GetThisMemberValueString      "attacking"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 7, 0
+		; ->
+		LineNumber                    37308, 4
+		LineNumberAlt1                387, 102
+		PushConstantStringString      "+ throw"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    37309, 4
+		LineNumberAlt1                388, 102
+		GetThisMemberValueString      "mudmonster"
+		Dup
+		GetMemberFunctionString       "throw"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    37310, 4
+		LineNumberAlt1                389, 102
+		PushConstanti8                1
+		SetThisMemberValueString      "attacking"
+		LineNumber                    37311, 4
+		LineNumberAlt1                390, 102
+		PushConstant0
+		SetThisMemberValueString      "thrown"
+		; <-
+		BranchTarget                  7
+		BranchAlwaysTarget            20, 0
+		; ->
+		; <-
+		BranchTarget                  8
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 10, 0
+		; ->
+		LineNumber                    37318, 4
+		LineNumberAlt1                397, 102
+		GetThisMemberValueString      "mudtimer"
+		PushConstanti8                3
+		GreaterThan
+		CompareAndBranchIfFalseTarget 9, 0
+		; ->
+		LineNumber                    37321, 4
+		LineNumberAlt1                400, 102
+		PushConstant0
+		SetThisMemberValueString      "mudtimer"
+		LineNumber                    37322, 4
+		LineNumberAlt1                401, 102
+		PushConstant0
+		GetThisMemberValueString      "mudmonster"
+		SetMemberValueString          "mudstate"
+		LineNumber                    37323, 4
+		LineNumberAlt1                402, 102
+		GetThisMemberValueString      "mudmonster"
+		PushConstant0
+		GetThisMemberValueString      "mudhits"
+		Pull                          3
+		GetMemberFunctionString       "morph"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    37324, 4
+		LineNumberAlt1                403, 102
+		GetThisMemberValueString      "mudmonster"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    37325, 4
+		LineNumberAlt1                404, 102
+		PushConstantStringString      "setting state = UP"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		; <-
+		BranchTarget                  9
+		BranchAlwaysTarget            20, 0
+		; ->
+		; <-
+		BranchTarget                  10
+		Dup
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 12, 0
+		; ->
+		LineNumber                    37330, 4
+		LineNumberAlt1                409, 102
+		GetThisMemberValueString      "mudtimer"
+		PushConstanti8                5
+		GreaterThan
+		GetThisMemberValueString      "reacting"
+		PushConstant0
+		EqualTo
+		And
+		CompareAndBranchIfFalseTarget 11, 0
+		; ->
+		LineNumber                    37331, 4
+		LineNumberAlt1                410, 102
+		PushConstantStringString      "no longer stunned"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    37332, 4
+		LineNumberAlt1                411, 102
+		PushConstant0
+		GetThisMemberValueString      "mudmonster"
+		SetMemberValueString          "mudstate"
+		LineNumber                    37334, 4
+		LineNumberAlt1                413, 102
+		PushConstanti8                2
+		SetThisMemberValueString      "mudtimer"
+		LineNumber                    37335, 4
+		LineNumberAlt1                414, 102
+		GetThisMemberValueString      "mudmonster"
+		Dup
+		GetMemberFunctionString       "aiidle"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  11
+		BranchAlwaysTarget            20, 0
+		; ->
+		; <-
+		BranchTarget                  12
+		Dup
+		PushConstanti8                3
+		EqualTo
+		CompareAndBranchIfFalseTarget 13, 0
+		; ->
+		LineNumber                    37339, 4
+		LineNumberAlt1                418, 102
+		PushConstant0
+		SetThisMemberValueString      "mudtimer"
+		LineNumber                    37340, 4
+		LineNumberAlt1                419, 102
+		PushConstant0
+		SetThisMemberValueString      "attacking"
+		LineNumber                    37341, 4
+		LineNumberAlt1                420, 102
+		PushConstanti8                1
+		GetThisMemberValueString      "mudmonster"
+		SetMemberValueString          "mudstate"
+		LineNumber                    37342, 4
+		LineNumberAlt1                421, 102
+		PushConstanti32               1831874611
+		CallGameFunctionString        "gccharactermoveinterpreter", "stopcheckanimdone", 1
+		Pop
+		LineNumber                    37343, 4
+		LineNumberAlt1                422, 102
+		PushConstantStringString      "Setting state = DOWN"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		BranchAlwaysTarget            20, 0
+		; ->
+		; <-
+		BranchTarget                  13
+		Dup
+		PushConstanti8                4
+		EqualTo
+		CompareAndBranchIfFalseTarget 15, 0
+		; ->
+		LineNumber                    37346, 4
+		LineNumberAlt1                425, 102
+		GetThisMemberValueString      "turagashown"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 14, 0
+		; ->
+		LineNumber                    37347, 4
+		LineNumberAlt1                426, 102
+		GetThisMemberValueString      "turaga"
+		Dup
+		GetMemberFunctionString       "watch"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  14
+		BranchAlwaysTarget            20, 0
+		; ->
+		; <-
+		BranchTarget                  15
+		Dup
+		PushConstanti8                8
+		EqualTo
+		CompareAndBranchIfFalseTarget 16, 0
+		; ->
+		BranchAlwaysTarget            20, 0
+		; ->
+		; <-
+		BranchTarget                  16
+		Dup
+		PushConstanti8                9
+		EqualTo
+		CompareAndBranchIfFalseTarget 19, 0
+		; ->
+		LineNumber                    37355, 4
+		LineNumberAlt1                434, 102
+		GetThisMemberValueString      "attacking"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 18, 0
+		; ->
+		LineNumber                    37356, 4
+		LineNumberAlt1                435, 102
+		PushConstanti32               1831874864
+		SetVariableValue              6                                                    ; local
+		LineNumber                    37358, 4
+		LineNumberAlt1                437, 102
+		GetVariableValue              2                                                    ; local
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 17, 0
+		; ->
+		LineNumber                    37359, 4
+		LineNumberAlt1                438, 102
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		PushConstant0
+		PushConstanti8                10
+		Pull                          3
+		GetMemberFunctionString       "getrandomnumber"
+		JumpAbsolute                  3
+		LineNumber                    37359, 4
+		LineNumberAlt1                438, 102
+		SetVariableValue              2                                                    ; local
+		LineNumber                    37361, 4
+		LineNumberAlt1                440, 102
+		GetVariableValue              2                                                    ; local
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 17, 0
+		; ->
+		LineNumber                    37362, 4
+		LineNumberAlt1                441, 102
+		PushConstanti32               1831874617
+		SetVariableValue              6                                                    ; local
+		; <-
+		BranchTarget                  17
+		LineNumber                    37366, 4
+		LineNumberAlt1                445, 102
+		PushConstantStringString      "DROP ATTACK!"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    37367, 4
+		LineNumberAlt1                446, 102
+		GetThisMemberValueString      "mudmonster"
+		GetVariableValue              6                                                    ; local
+		PushConstanti8                -1
+		Pull                          3
+		GetMemberFunctionString       "setsplitanimation"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    37369, 4
+		LineNumberAlt1                448, 102
+		GetThisMemberValueString      "mudmonster"
+		Dup
+		GetMemberFunctionString       "dropmudballs"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    37370, 4
+		LineNumberAlt1                449, 102
+		PushConstanti8                1
+		SetThisMemberValueString      "attacking"
+		; <-
+		BranchTarget                  18
+		BranchAlwaysTarget            20, 0
+		; ->
+		; <-
+		BranchTarget                  19
+		Dup
+		PushConstanti8                10
+		EqualTo
+		CompareAndBranchIfFalseTarget 20, 0
+		; ->
+		LineNumber                    37379, 4
+		LineNumberAlt1                458, 102
+		GetThisMemberValueString      "mudtimer"
+		PushConstanti8                2
+		GreaterThan
+		CompareAndBranchIfFalseTarget 20, 0
+		; ->
+		LineNumber                    37381, 4
+		LineNumberAlt1                460, 102
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		Dup
+		GetMemberFunctionString       "idle"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    37382, 4
+		LineNumberAlt1                461, 102
+		GetThisMemberValueString      "parea"
+		GetMemberValueString          "level"
+		GetMemberValueString          "cam"
+		PushConstanti8                11
+		Pull                          2
+		GetMemberFunctionString       "setaimode"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    37383, 4
+		LineNumberAlt1                462, 102
+		PushConstanti8                11
+		GetThisMemberValueString      "mudmonster"
+		SetMemberValueString          "mudstate"
+		; <-
+		BranchTarget                  20
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x66bd5
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 470:476
+		MemberFunctionArgumentCheck   2
+		LineNumber                    37391, 4
+		LineNumberAlt1                470, 102
+		GetVariableValue              1            ; local
+		GetMemberValueString          "event"
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    37392, 4
+		LineNumberAlt1                471, 102
+		GetVariableValue              1            ; local
+		GetMemberValueString          "button"
+		Dup
+		PushConstanti8                80
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    37394, 4
+		LineNumberAlt1                473, 102
+		GetVariableValue              0            ; local
+		GetThisMemberFunctionString   "endarea"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		Dup
+		PushConstanti8                79
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    37396, 4
+		LineNumberAlt1                475, 102
+		PushConstanti8                2
+		GetThisMemberValueString      "mudmonster"
+		SetMemberValueString          "mudstate"
+		LineNumber                    37397, 4
+		LineNumberAlt1                476, 102
+		GetVariableValue              0            ; local
+		GetThisMemberFunctionString   "vinegrab"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  1
+		Pop
+		; <-
+		BranchTarget                  2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x66c49
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 485:651
+		MemberFunctionArgumentCheck   2
+		LineNumber                    37406, 4
+		LineNumberAlt1                485, 102
+		GetThisMemberValueString      "mudmonster"
+		GetVariableValue              1                                            ; local
+		Pull                          2
+		GetMemberFunctionString       "onevent"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    37408, 4
+		LineNumberAlt1                487, 102
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                46
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    37413, 4
+		LineNumberAlt1                492, 102
+		PushConstantf32               1.2000000476837158
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		BranchAlwaysTarget            31, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		Dup
+		PushConstanti8                7
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    37419, 4
+		LineNumberAlt1                498, 102
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		PushConstantStringString      "cnyy"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    37419, 4
+		LineNumberAlt1                498, 102
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    37420, 4
+		LineNumberAlt1                499, 102
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                2
+		GetArrayValue
+		PushConstantStringString      "Fprj"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    37420, 4
+		LineNumberAlt1                499, 102
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    37421, 4
+		LineNumberAlt1                500, 102
+		PushConstantStringString      "ANIMATION EVENT : "
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		CallGameFunctionString        "scslosifoundation", "identifiertostring", 1
+		LineNumber                    37421, 4
+		LineNumberAlt1                500, 102
+		Add
+		PushConstantStringString      ":"
+		Add
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		CallGameFunctionString        "scslosifoundation", "identifiertostring", 1
+		LineNumber                    37421, 4
+		LineNumberAlt1                500, 102
+		Add
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    37423, 4
+		LineNumberAlt1                502, 102
+		GetThisMemberValueString      "mudmonster"
+		GetThisMemberValueString      "mudhits"
+		Pull                          2
+		GetMemberFunctionString       "releasemudball"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    37424, 4
+		LineNumberAlt1                503, 102
+		PushConstanti8                1
+		SetThisMemberValueString      "thrown"
+		; <-
+		BranchTarget                  1
+		LineNumber                    37428, 4
+		LineNumberAlt1                507, 102
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		PushConstantStringString      "cnt1"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    37428, 4
+		LineNumberAlt1                507, 102
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    37429, 4
+		LineNumberAlt1                508, 102
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		PushConstantStringString      "o019"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    37429, 4
+		LineNumberAlt1                508, 102
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    37430, 4
+		LineNumberAlt1                509, 102
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "earthquake"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  2
+		BranchAlwaysTarget            31, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Dup
+		PushConstanti8                11
+		EqualTo
+		CompareAndBranchIfFalseTarget 12, 0
+		; ->
+		LineNumber                    37437, 4
+		LineNumberAlt1                516, 102
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		PushConstanti32               1831874864
+		EqualTo
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		PushConstanti32               1831874617
+		EqualTo
+		Or
+		CompareAndBranchIfFalseTarget 8, 0
+		; ->
+		LineNumber                    37438, 4
+		LineNumberAlt1                517, 102
+		GetThisMemberValueString      "mudmonster"
+		GetMemberValueString          "mudstate"
+		PushConstanti8                5
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    37439, 4
+		LineNumberAlt1                518, 102
+		GetThisMemberValueString      "mudmonster"
+		Dup
+		GetMemberFunctionString       "aiidle"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    37440, 4
+		LineNumberAlt1                519, 102
+		PushConstant0
+		SetThisMemberValueString      "mudtimer"
+		LineNumber                    37441, 4
+		LineNumberAlt1                520, 102
+		PushConstanti8                7
+		GetThisMemberValueString      "mudmonster"
+		SetMemberValueString          "mudstate"
+		LineNumber                    37442, 4
+		LineNumberAlt1                521, 102
+		PushConstantStringString      "setting mudstate to ready"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		BranchAlwaysTarget            7, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		LineNumber                    37444, 4
+		LineNumberAlt1                523, 102
+		PushConstantStringString      "setting mudstate to up"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    37445, 4
+		LineNumberAlt1                524, 102
+		GetThisMemberValueString      "mudmonster"
+		GetMemberValueString          "mudstate"
+		PushConstanti8                9
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    37446, 4
+		LineNumberAlt1                525, 102
+		PushConstant0
+		SetThisMemberValueString      "attacking"
+		LineNumber                    37447, 4
+		LineNumberAlt1                526, 102
+		PushConstanti8                1
+		SetThisMemberValueString      "mudtimer"
+		BranchAlwaysTarget            6, 0
+		; ->
+		; <-
+		BranchTarget                  5
+		LineNumber                    37449, 4
+		LineNumberAlt1                528, 102
+		PushConstant0
+		SetThisMemberValueString      "mudtimer"
+		; <-
+		BranchTarget                  6
+		LineNumber                    37451, 4
+		LineNumberAlt1                530, 102
+		PushConstant0
+		GetThisMemberValueString      "mudmonster"
+		SetMemberValueString          "mudstate"
+		; <-
+		BranchTarget                  7
+		BranchAlwaysTarget            11, 0
+		; ->
+		; <-
+		BranchTarget                  8
+		LineNumber                    37456, 4
+		LineNumberAlt1                535, 102
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		PushConstanti32               1831874611
+		EqualTo
+		CompareAndBranchIfFalseTarget 10, 0
+		; ->
+		LineNumber                    37457, 4
+		LineNumberAlt1                536, 102
+		GetThisMemberValueString      "mudmonster"
+		PushConstanti8                3
+		GetThisMemberValueString      "mudhits"
+		Pull                          3
+		GetMemberFunctionString       "morph"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    37458, 4
+		LineNumberAlt1                537, 102
+		PushConstanti8                3
+		GetThisMemberValueString      "mudmonster"
+		SetMemberValueString          "mudstate"
+		LineNumber                    37459, 4
+		LineNumberAlt1                538, 102
+		PushConstant0
+		SetThisMemberValueString      "reacting"
+		LineNumber                    37460, 4
+		LineNumberAlt1                539, 102
+		PushConstantStringString      "Setting mud state to M_HIT"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    37462, 4
+		LineNumberAlt1                541, 102
+		GetThisMemberValueString      "mudhits"
+		PushConstanti8                4
+		EqualTo
+		CompareAndBranchIfFalseTarget 9, 0
+		; ->
+		LineNumber                    37463, 4
+		LineNumberAlt1                542, 102
+		GetThisMemberValueString      "parea"
+		GetMemberValueString          "level"
+		GetMemberValueString          "cam"
+		PushConstanti8                11
+		Pull                          2
+		GetMemberFunctionString       "setaimode"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  9
+		BranchAlwaysTarget            11, 0
+		; ->
+		; <-
+		BranchTarget                  10
+		LineNumber                    37466, 4
+		LineNumberAlt1                545, 102
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		PushConstanti32               1831874615
+		EqualTo
+		CompareAndBranchIfFalseTarget 11, 0
+		; ->
+		LineNumber                    37468, 4
+		LineNumberAlt1                547, 102
+		PushConstant0
+		SetThisMemberValueString      "attacking"
+		; <-
+		BranchTarget                  11
+		BranchAlwaysTarget            31, 0
+		; ->
+		; <-
+		BranchTarget                  12
+		Dup
+		PushConstanti8                14
+		EqualTo
+		CompareAndBranchIfFalseTarget 15, 0
+		; ->
+		LineNumber                    37477, 4
+		LineNumberAlt1                556, 102
+		GetThisMemberValueString      "parea"
+		GetMemberValueString          "level"
+		GetMemberValueString          "cam"
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "setaimode"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    37479, 4
+		LineNumberAlt1                558, 102
+		GetThisMemberValueString      "mudhits"
+		PushConstanti8                4
+		EqualTo
+		CompareAndBranchIfFalseTarget 13, 0
+		; ->
+		LineNumber                    37480, 4
+		LineNumberAlt1                559, 102
+		GetThisMemberValueString      "mudmonster"
+		PushConstanti32               1831874611
+		PushConstanti8                -1
+		Pull                          3
+		GetMemberFunctionString       "setsplitanimation"
+		JumpAbsolute                  3
+		Pop
+		BranchAlwaysTarget            14, 0
+		; ->
+		; <-
+		BranchTarget                  13
+		LineNumber                    37482, 4
+		LineNumberAlt1                561, 102
+		PushConstant0
+		SetThisMemberValueString      "attacking"
+		LineNumber                    37483, 4
+		LineNumberAlt1                562, 102
+		GetThisMemberValueString      "mudmonster"
+		PushConstant0
+		GetThisMemberValueString      "mudhits"
+		Pull                          3
+		GetMemberFunctionString       "morph"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    37484, 4
+		LineNumberAlt1                563, 102
+		GetThisMemberValueString      "mudmonster"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    37485, 4
+		LineNumberAlt1                564, 102
+		PushConstant0
+		SetThisMemberValueString      "mudtimer"
+		LineNumber                    37486, 4
+		LineNumberAlt1                565, 102
+		GetThisMemberValueString      "mudmonster"
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "setevilpermanent"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    37488, 4
+		LineNumberAlt1                567, 102
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "showstrings"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  14
+		BranchAlwaysTarget            31, 0
+		; ->
+		; <-
+		BranchTarget                  15
+		Dup
+		PushConstanti8                13
+		EqualTo
+		CompareAndBranchIfFalseTarget 25, 0
+		; ->
+		LineNumber                    37493, 4
+		LineNumberAlt1                572, 102
+		GetThisMemberValueString      "mudmonster"
+		GetMemberValueString          "mudstate"
+		PushConstanti8                5
+		EqualTo
+		CompareAndBranchIfFalseTarget 16, 0
+		; ->
+		LineNumber                    37494, 4
+		LineNumberAlt1                573, 102
+		GetThisMemberValueString      "mudmonster"
+		PushConstanti32               1831874864
+		PushConstanti8                -1
+		Pull                          3
+		GetMemberFunctionString       "setsplitanimation"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    37495, 4
+		LineNumberAlt1                574, 102
+		PushConstant0
+		SetThisMemberValueString      "mudtimer"
+		BranchAlwaysTarget            24, 0
+		; ->
+		; <-
+		BranchTarget                  16
+		LineNumber                    37498, 4
+		LineNumberAlt1                577, 102
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		PushConstantStringString      "mudm"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    37498, 4
+		LineNumberAlt1                577, 102
+		EqualTo
+		CompareAndBranchIfFalseTarget 24, 0
+		; ->
+		LineNumber                    37499, 4
+		LineNumberAlt1                578, 102
+		GetThisMemberValueString      "mudhits"
+		PushConstanti8                5
+		EqualTo
+		CompareAndBranchIfFalseTarget 17, 0
+		; ->
+		LineNumber                    37501, 4
+		LineNumberAlt1                580, 102
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "endarea"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            24, 0
+		; ->
+		; <-
+		BranchTarget                  17
+		LineNumber                    37504, 4
+		LineNumberAlt1                583, 102
+		GetThisMemberValueString      "mudmonster"
+		GetMemberValueString          "mudstate"
+		PushConstanti8                1
+		EqualTo
+		GetThisMemberValueString      "mudmonster"
+		GetMemberValueString          "mudstate"
+		PushConstanti8                3
+		EqualTo
+		Or
+		CompareAndBranchIfFalseTarget 21, 0
+		; ->
+		LineNumber                    37506, 4
+		LineNumberAlt1                585, 102
+		PushConstantStringString      "Hiding monster"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    37507, 4
+		LineNumberAlt1                586, 102
+		GetThisMemberValueString      "mudmonster"
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    37509, 4
+		LineNumberAlt1                588, 102
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		PushConstanti8                1
+		PushConstanti8                3
+		Pull                          3
+		GetMemberFunctionString       "getrandomnumber"
+		JumpAbsolute                  3
+		LineNumber                    37509, 4
+		LineNumberAlt1                588, 102
+		SetThisMemberValueString      "mudpos"
+		LineNumber                    37511, 4
+		LineNumberAlt1                590, 102
+		GetThisMemberValueString      "mudpos"
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 18, 0
+		; ->
+		LineNumber                    37513, 4
+		LineNumberAlt1                592, 102
+		GetThisMemberValueString      "mudmonster"
+		PushConstanti16               995
+		PushConstant0
+		PushConstanti16               212
+		Pull                          4
+		GetMemberFunctionString       "setpos"
+		JumpAbsolute                  4
+		Pop
+		BranchAlwaysTarget            20, 0
+		; ->
+		; <-
+		BranchTarget                  18
+		Dup
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 19, 0
+		; ->
+		LineNumber                    37515, 4
+		LineNumberAlt1                594, 102
+		GetThisMemberValueString      "mudmonster"
+		PushConstanti16               991
+		PushConstant0
+		PushConstanti16               191
+		Pull                          4
+		GetMemberFunctionString       "setpos"
+		JumpAbsolute                  4
+		Pop
+		BranchAlwaysTarget            20, 0
+		; ->
+		; <-
+		BranchTarget                  19
+		Dup
+		PushConstanti8                3
+		EqualTo
+		CompareAndBranchIfFalseTarget 20, 0
+		; ->
+		LineNumber                    37517, 4
+		LineNumberAlt1                596, 102
+		GetThisMemberValueString      "mudmonster"
+		PushConstanti16               999
+		PushConstant0
+		PushConstanti16               246
+		Pull                          4
+		GetMemberFunctionString       "setpos"
+		JumpAbsolute                  4
+		Pop
+		; <-
+		BranchTarget                  20
+		Pop
+		BranchAlwaysTarget            24, 0
+		; ->
+		; <-
+		BranchTarget                  21
+		LineNumber                    37529, 4
+		LineNumberAlt1                608, 102
+		PushConstantStringString      "Setting monster to watch"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    37530, 4
+		LineNumberAlt1                609, 102
+		GetThisMemberValueString      "mudmonster"
+		Dup
+		GetMemberFunctionString       "watch"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    37531, 4
+		LineNumberAlt1                610, 102
+		GetThisMemberValueString      "mudmonster"
+		GetMemberValueString          "handle"
+		PushConstanti8                2
+		CallGameFunctionString        "gccharacter", "setshadowtype", 2
+		Pop
+		LineNumber                    37532, 4
+		LineNumberAlt1                611, 102
+		GetThisMemberValueString      "mudhits"
+		PushConstanti8                4
+		EqualTo
+		CompareAndBranchIfFalseTarget 22, 0
+		; ->
+		LineNumber                    37533, 4
+		LineNumberAlt1                612, 102
+		PushConstanti8                2
+		SetThisMemberValueString      "mudtimer"
+		BranchAlwaysTarget            23, 0
+		; ->
+		; <-
+		BranchTarget                  22
+		LineNumber                    37535, 4
+		LineNumberAlt1                614, 102
+		PushConstant0
+		SetThisMemberValueString      "mudtimer"
+		; <-
+		BranchTarget                  23
+		LineNumber                    37537, 4
+		LineNumberAlt1                616, 102
+		PushConstant0
+		SetThisMemberValueString      "attacking"
+		; <-
+		BranchTarget                  24
+		BranchAlwaysTarget            31, 0
+		; ->
+		; <-
+		BranchTarget                  25
+		Dup
+		PushConstanti8                19
+		EqualTo
+		CompareAndBranchIfFalseTarget 27, 0
+		; ->
+		LineNumber                    37547, 4
+		LineNumberAlt1                626, 102
+		PushConstantStringString      "proj-col : "
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		CallGameFunctionString        "scslosifoundation", "identifiertostring", 1
+		LineNumber                    37547, 4
+		LineNumberAlt1                626, 102
+		Add
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    37548, 4
+		LineNumberAlt1                627, 102
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		PushConstantStringString      "cnyy"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    37548, 4
+		LineNumberAlt1                627, 102
+		EqualTo
+		CompareAndBranchIfFalseTarget 26, 0
+		; ->
+		LineNumber                    37549, 4
+		LineNumberAlt1                628, 102
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "vinegrab"
+		JumpAbsolute                  1
+		LineNumber                    37549, 4
+		LineNumberAlt1                628, 102
+		SetThisMemberValueString      "reacting"
+		; <-
+		BranchTarget                  26
+		BranchAlwaysTarget            31, 0
+		; ->
+		; <-
+		BranchTarget                  27
+		Dup
+		PushConstanti8                4
+		EqualTo
+		CompareAndBranchIfFalseTarget 29, 0
+		; ->
+		LineNumber                    37555, 4
+		LineNumberAlt1                634, 102
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		PushConstantStringString      "tpm0"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    37555, 4
+		LineNumberAlt1                634, 102
+		EqualTo
+		CompareAndBranchIfFalseTarget 28, 0
+		; ->
+		LineNumber                    37556, 4
+		LineNumberAlt1                635, 102
+		GetThisMemberValueString      "mudmandead"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 28, 0
+		; ->
+		LineNumber                    37557, 4
+		LineNumberAlt1                636, 102
+		PushConstantf32               1.2000000476837158
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		; <-
+		BranchTarget                  28
+		BranchAlwaysTarget            31, 0
+		; ->
+		; <-
+		BranchTarget                  29
+		Dup
+		PushConstanti8                27
+		EqualTo
+		CompareAndBranchIfFalseTarget 31, 0
+		; ->
+		LineNumber                    37564, 4
+		LineNumberAlt1                643, 102
+		GetThisMemberValueString      "mudmandead"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 30, 0
+		; ->
+		BranchAlwaysTarget            31, 0
+		; ->
+		; <-
+		BranchTarget                  30
+		LineNumber                    37568, 4
+		LineNumberAlt1                647, 102
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "initshort"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    37569, 4
+		LineNumberAlt1                648, 102
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		GetThisMemberValueString      "parea"
+		GetMemberValueString          "enterstartid"
+		GetThisMemberValueString      "parea"
+		GetMemberValueString          "enterlookid"
+		Pull                          3
+		GetMemberFunctionString       "gotopos"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    37570, 4
+		LineNumberAlt1                649, 102
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "unkill"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    37571, 4
+		LineNumberAlt1                650, 102
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		Dup
+		GetMemberFunctionString       "idle"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    37572, 4
+		LineNumberAlt1                651, 102
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "ninp"
+		Pull                          2
+		GetMemberFunctionString       "setinputstate"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  31
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "endarea"
+		; address: 0x673f1
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 661:683
+		MemberFunctionArgumentCheck 1
+		CreateStackVariables        1
+		LineNumber                  37582, 4
+		LineNumberAlt1              661, 102
+		GetThisMemberValueString    "mudmonster"
+		Dup
+		GetMemberFunctionString     "die"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37584, 4
+		LineNumberAlt1              663, 102
+		PushConstantStringString    "mwf0"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  37584, 4
+		LineNumberAlt1              663, 102
+		PushConstant0
+		CallGameFunctionString      "gctransdirector", "hide", 2
+		Pop
+		LineNumber                  37586, 4
+		LineNumberAlt1              665, 102
+		GetThisMemberValueString    "bgmusic"
+		Dup
+		GetMemberFunctionString     "stop"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37587, 4
+		LineNumberAlt1              666, 102
+		PushNothing
+		SetThisMemberValueString    "bgmusic"
+		LineNumber                  37593, 4
+		LineNumberAlt1              672, 102
+		PushConstantStringString    "tpm2"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  37593, 4
+		LineNumberAlt1              672, 102
+		CallGameFunctionString      "gccollisionphysicsgroup", "gettriggerplane", 1
+		LineNumber                  37593, 4
+		LineNumberAlt1              672, 102
+		SetVariableValue            1                                               ; local
+		LineNumber                  37594, 4
+		LineNumberAlt1              673, 102
+		GetVariableValue            1                                               ; local
+		PushConstanti8              4
+		PushConstanti8              4
+		CallGameFunctionString      "gctriggerplane", "setplaneresponses", 3
+		Pop
+		LineNumber                  37596, 4
+		LineNumberAlt1              675, 102
+		GetThisMemberValueString    "parea"
+		GetMemberValueString        "level"
+		GetMemberValueString        "cam"
+		PushConstant0
+		Pull                        2
+		GetMemberFunctionString     "setaimode"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  37597, 4
+		LineNumberAlt1              676, 102
+		GetThisMemberValueString    "parea"
+		GetMemberValueString        "level"
+		GetMemberValueString        "cam"
+		PushConstanti16             985
+		PushConstanti8              2
+		PushConstanti16             212
+		Pull                        4
+		GetMemberFunctionString     "setpos"
+		JumpAbsolute                4
+		Pop
+		LineNumber                  37598, 4
+		LineNumberAlt1              677, 102
+		GetThisMemberValueString    "parea"
+		GetMemberValueString        "level"
+		GetMemberValueString        "cam"
+		PushConstanti16             995
+		PushConstanti8              2
+		PushConstanti16             212
+		Pull                        4
+		GetMemberFunctionString     "settargetpos"
+		JumpAbsolute                4
+		Pop
+		LineNumber                  37599, 4
+		LineNumberAlt1              678, 102
+		GetThisMemberValueString    "turaga"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37600, 4
+		LineNumberAlt1              679, 102
+		GetThisMemberValueString    "turaga"
+		Dup
+		GetMemberFunctionString     "disableai"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37603, 4
+		LineNumberAlt1              682, 102
+		PushConstant0
+		SetThisMemberValueString    "mudtimer"
+		LineNumber                  37604, 4
+		LineNumberAlt1              683, 102
+		PushConstanti8              10
+		GetThisMemberValueString    "mudmonster"
+		SetMemberValueString        "mudstate"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "earthquake"
+		; address: 0x67544
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 689:693
+		MemberFunctionArgumentCheck   1
+		LineNumber                    37610, 4
+		LineNumberAlt1                689, 102
+		GetThisMemberValueString      "mudmonster"
+		GetMemberValueString          "mudstate"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    37611, 4
+		LineNumberAlt1                690, 102
+		PushConstanti8                2
+		GetThisMemberValueString      "mudmonster"
+		SetMemberValueString          "mudstate"
+		LineNumber                    37612, 4
+		LineNumberAlt1                691, 102
+		GetThisMemberValueString      "mudmonster"
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "aistun"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    37613, 4
+		LineNumberAlt1                692, 102
+		PushConstant0
+		SetThisMemberValueString      "mudtimer"
+		LineNumber                    37614, 4
+		LineNumberAlt1                693, 102
+		PushConstantStringString      "You stunned 'im just as 'e wuz wakin' up!"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "vinegrab"
+		; address: 0x675a7
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 701:731
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    37622, 4
+		LineNumberAlt1                701, 102
+		PushConstantStringString      "VineGrab"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    37623, 4
+		LineNumberAlt1                702, 102
+		GetThisMemberValueString      "mudmonster"
+		GetMemberValueString          "mudstate"
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    37625, 4
+		LineNumberAlt1                704, 102
+		GetThisMemberValueString      "mudhits"
+		PushConstanti8                1
+		Add
+		SetThisMemberValueString      "mudhits"
+		LineNumber                    37627, 4
+		LineNumberAlt1                706, 102
+		GetThisMemberValueString      "mudhits"
+		PushConstanti8                4
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    37628, 4
+		LineNumberAlt1                707, 102
+		PushConstanti8                6
+		GetThisMemberValueString      "mudmonster"
+		SetMemberValueString          "mudstate"
+		LineNumber                    37629, 4
+		LineNumberAlt1                708, 102
+		PushConstanti8                3
+		SetThisMemberValueString      "mudtimer"
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    37631, 4
+		LineNumberAlt1                710, 102
+		GetThisMemberValueString      "mudmonster"
+		PushConstanti8                1
+		PushConstanti8                10
+		PushConstant0
+		PushConstant0
+		Pull                          5
+		GetMemberFunctionString       "aireact"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    37632, 4
+		LineNumberAlt1                711, 102
+		PushConstantStringString      "Reacting"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		; <-
+		BranchTarget                  1
+		LineNumber                    37634, 4
+		LineNumberAlt1                713, 102
+		PushConstanti32               1831874611
+		CallGameFunctionString        "gccharactermoveinterpreter", "checkanimdone", 1
+		Pop
+		LineNumber                    37636, 4
+		LineNumberAlt1                715, 102
+		PushConstanti8                1
+		Return
+		BranchAlwaysTarget            6, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		LineNumber                    37638, 4
+		LineNumberAlt1                717, 102
+		GetThisMemberValueString      "mudmonster"
+		GetMemberValueString          "mudstate"
+		PushConstant0
+		EqualTo
+		GetThisMemberValueString      "thrown"
+		PushConstanti8                1
+		EqualTo
+		And
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    37639, 4
+		LineNumberAlt1                718, 102
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		PushConstant0
+		PushConstanti8                10
+		Pull                          3
+		GetMemberFunctionString       "getrandomnumber"
+		JumpAbsolute                  3
+		LineNumber                    37639, 4
+		LineNumberAlt1                718, 102
+		SetVariableValue              1                                                ; local
+		LineNumber                    37642, 4
+		LineNumberAlt1                721, 102
+		GetVariableValue              1                                                ; local
+		PushConstanti8                1
+		GreaterThan
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    37643, 4
+		LineNumberAlt1                722, 102
+		GetThisMemberValueString      "mudmonster"
+		PushConstanti32               1831874864
+		Pull                          2
+		GetMemberFunctionString       "setsplitanimation"
+		JumpAbsolute                  2
+		Pop
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		LineNumber                    37645, 4
+		LineNumberAlt1                724, 102
+		GetThisMemberValueString      "mudmonster"
+		PushConstanti32               1831874617
+		Pull                          2
+		GetMemberFunctionString       "setsplitanimation"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  4
+		LineNumber                    37648, 4
+		LineNumberAlt1                727, 102
+		PushConstanti8                8
+		GetThisMemberValueString      "mudmonster"
+		SetMemberValueString          "mudstate"
+		; <-
+		BranchTarget                  5
+		LineNumber                    37652, 4
+		LineNumberAlt1                731, 102
+		PushConstant0
+		Return
+		; <-
+		BranchTarget                  6
+		PushNothing
+		Return
+	end ; method
+end ; class

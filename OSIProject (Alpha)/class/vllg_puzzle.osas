@@ -1,0 +1,242 @@
+begin class "vllg_puzzle"
+	property "parent"
+	property "discpickup"
+	property "bgmusic"
+
+	begin method "vllg_puzzle"
+		; address: 0xb9ad4
+		; source: 206 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_vllg.vbo" 116:116
+		MemberFunctionArgumentCheck 2
+		LineNumber                  8005, 4
+		LineNumberAlt1              116, 206
+		GetVariableValue            1        ; local
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xb9ae8
+		; source: 206 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_vllg.vbo" 124:133
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    8013, 4
+		LineNumberAlt1                124, 206
+		CreateObjectString            "legomp3player"
+		Dup
+		Dup
+		GetMemberFunctionString       "legomp3player"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    8013, 4
+		LineNumberAlt1                124, 206
+		SetThisMemberValueString      "bgmusic"
+		LineNumber                    8014, 4
+		LineNumberAlt1                125, 206
+		GetThisMemberValueString      "bgmusic"
+		PushConstantStringString      "Root/Data/sounds/MusicVillage"
+		Pull                          2
+		GetMemberFunctionString       "setupforplay"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    8015, 4
+		LineNumberAlt1                126, 206
+		GetThisMemberValueString      "bgmusic"
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "play"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    8017, 4
+		LineNumberAlt1                128, 206
+		PushConstantStringString      "dsc5"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    8017, 4
+		LineNumberAlt1                128, 206
+		CallGameFunctionString        "gcsaver", "finditem", 1
+		LineNumber                    8017, 4
+		LineNumberAlt1                128, 206
+		SetVariableValue              1                                            ; local
+		LineNumber                    8018, 4
+		LineNumberAlt1                129, 206
+		GetVariableValue              1                                            ; local
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    8019, 4
+		LineNumberAlt1                130, 206
+		CreateObjectString            "lego_pickup"
+		Dup
+		PushConstantStringString      "dsc5"
+		PushConstant0
+		PushConstanti8                5
+		PushConstantStringString      "item"
+		PushConstanti8                10
+		PushConstanti8                1
+		Pull                          7
+		GetMemberFunctionString       "lego_pickup"
+		JumpAbsolute                  7
+		Pop
+		LineNumber                    8019, 4
+		LineNumberAlt1                130, 206
+		SetThisMemberValueString      "discpickup"
+		LineNumber                    8020, 4
+		LineNumberAlt1                131, 206
+		GetThisMemberValueString      "discpickup"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    8021, 4
+		LineNumberAlt1                132, 206
+		GetThisMemberValueString      "discpickup"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    8022, 4
+		LineNumberAlt1                133, 206
+		GetThisMemberValueString      "discpickup"
+		PushConstanti16               8192
+		Pull                          2
+		GetMemberFunctionString       "setcondition"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xb9bf1
+		; source: 206 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_vllg.vbo" 139:145
+		MemberFunctionArgumentCheck   1
+		LineNumber                    8028, 4
+		LineNumberAlt1                139, 206
+		GetThisMemberValueString      "bgmusic"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    8029, 4
+		LineNumberAlt1                140, 206
+		GetThisMemberValueString      "bgmusic"
+		Dup
+		GetMemberFunctionString       "stop"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    8030, 4
+		LineNumberAlt1                141, 206
+		PushNothing
+		SetThisMemberValueString      "bgmusic"
+		; <-
+		BranchTarget                  0
+		LineNumber                    8032, 4
+		LineNumberAlt1                143, 206
+		GetThisMemberValueString      "discpickup"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    8033, 4
+		LineNumberAlt1                144, 206
+		GetThisMemberValueString      "discpickup"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    8034, 4
+		LineNumberAlt1                145, 206
+		PushNothing
+		SetThisMemberValueString      "discpickup"
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0xb9c5f
+		; source: 206 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_vllg.vbo" 151:151
+		MemberFunctionArgumentCheck 1
+		LineNumber                  8040, 4
+		LineNumberAlt1              151, 206
+		PushNothing
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xb9c71
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xb9c75
+		; source: 206 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_vllg.vbo" 162:167
+		MemberFunctionArgumentCheck   2
+		LineNumber                    8051, 4
+		LineNumberAlt1                162, 206
+		GetVariableValue              1                                        ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                46
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    8053, 4
+		LineNumberAlt1                164, 206
+		PushConstantf32               1.2000000476837158
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		Dup
+		PushConstanti8                27
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    8055, 4
+		LineNumberAlt1                166, 206
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "enterstartid"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "enterlookid"
+		Pull                          3
+		GetMemberFunctionString       "gotopos"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    8056, 4
+		LineNumberAlt1                167, 206
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "unkill"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0xb9cef
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+end ; class

@@ -1,0 +1,322 @@
+begin class "tablecopysound"
+	property "handle"
+
+	begin method "tablecopysound"
+		; address: 0x52a01
+		; source: 68 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_TableCopySound.vbo" 24:24
+		MemberFunctionArgumentCheck 2
+		LineNumber                  25731, 4
+		LineNumberAlt1              24, 68
+		GetVariableValue            1                                                ; local
+		CallGameFunctionString      "gcstaticsoundsptrarray", "gettablesoundcopy", 1
+		LineNumber                  25731, 4
+		LineNumberAlt1              24, 68
+		SetThisMemberValueString    "handle"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "synctocharacter"
+		; address: 0x52a25
+		; source: 68 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_TableCopySound.vbo" 31:31
+		MemberFunctionArgumentCheck 2
+		LineNumber                  25738, 4
+		LineNumberAlt1              31, 68
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                                 ; local
+		CallGameFunctionString      "gc3dsound", "synctocharacter", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "synctoobject"
+		; address: 0x52a40
+		; source: 68 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_TableCopySound.vbo" 36:36
+		MemberFunctionArgumentCheck 2
+		LineNumber                  25743, 4
+		LineNumberAlt1              36, 68
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                              ; local
+		CallGameFunctionString      "gc3dsound", "synctoobject", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "synctoprojectile"
+		; address: 0x52a5b
+		; source: 68 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_TableCopySound.vbo" 41:41
+		MemberFunctionArgumentCheck 2
+		LineNumber                  25748, 4
+		LineNumberAlt1              41, 68
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                                  ; local
+		CallGameFunctionString      "gc3dsound", "synctoprojectile", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "play"
+		; address: 0x52a76
+		; source: 68 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_TableCopySound.vbo" 47:50
+		MemberFunctionArgumentCheck   2
+		LineNumber                    25754, 4
+		LineNumberAlt1                47, 68
+		GetVariableValue              1                      ; local
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    25755, 4
+		LineNumberAlt1                48, 68
+		PushConstant0
+		SetVariableValue              1                      ; local
+		; <-
+		BranchTarget                  0
+		LineNumber                    25757, 4
+		LineNumberAlt1                50, 68
+		GetThisMemberValueString      "handle"
+		GetVariableValue              1                      ; local
+		CallGameFunctionString        "gc3dsound", "play", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "stop"
+		; address: 0x52ab1
+		; source: 68 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_TableCopySound.vbo" 55:55
+		MemberFunctionArgumentCheck 2
+		LineNumber                  25762, 4
+		LineNumberAlt1              55, 68
+		GetThisMemberValueString    "handle"
+		CallGameFunctionString      "gc3dsound", "stop", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "stopreset"
+		; address: 0x52ac9
+		; source: 68 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_TableCopySound.vbo" 60:60
+		MemberFunctionArgumentCheck 2
+		LineNumber                  25767, 4
+		LineNumberAlt1              60, 68
+		GetThisMemberValueString    "handle"
+		CallGameFunctionString      "gc3dsound", "stopreset", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x52ae1
+		; source: 68 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_TableCopySound.vbo" 65:67
+		MemberFunctionArgumentCheck 1
+		LineNumber                  25772, 4
+		LineNumberAlt1              65, 68
+		GetVariableValue            0                                                    ; local
+		GetThisMemberFunctionString "stop"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  25773, 4
+		LineNumberAlt1              66, 68
+		GetThisMemberValueString    "handle"
+		CallGameFunctionString      "gcstaticsoundsptrarray", "checkintablesoundcopy", 1
+		Pop
+		LineNumber                  25774, 4
+		LineNumberAlt1              67, 68
+		PushNothing
+		SetThisMemberValueString    "handle"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setplayoffset"
+		; address: 0x52b1a
+		; source: 68 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_TableCopySound.vbo" 76:76
+		MemberFunctionArgumentCheck 2
+		LineNumber                  25783, 4
+		LineNumberAlt1              76, 68
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                               ; local
+		CallGameFunctionString      "gc3dsound", "setplayoffset", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setvolume"
+		; address: 0x52b35
+		; source: 68 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_TableCopySound.vbo" 81:81
+		MemberFunctionArgumentCheck 2
+		LineNumber                  25788, 4
+		LineNumberAlt1              81, 68
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                           ; local
+		CallGameFunctionString      "gc3dsound", "setvolume", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setpan"
+		; address: 0x52b50
+		; source: 68 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_TableCopySound.vbo" 86:86
+		MemberFunctionArgumentCheck 2
+		LineNumber                  25793, 4
+		LineNumberAlt1              86, 68
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                        ; local
+		CallGameFunctionString      "gc3dsound", "setpan", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setfrequency"
+		; address: 0x52b6b
+		; source: 68 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_TableCopySound.vbo" 91:91
+		MemberFunctionArgumentCheck 2
+		LineNumber                  25798, 4
+		LineNumberAlt1              91, 68
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                              ; local
+		CallGameFunctionString      "gc3dsound", "setfrequency", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "getfrequency"
+		; address: 0x52b86
+		; source: 68 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_TableCopySound.vbo" 97:97
+		MemberFunctionArgumentCheck 1
+		LineNumber                  25804, 4
+		LineNumberAlt1              97, 68
+		GetThisMemberValueString    "handle"
+		CallGameFunctionString      "gc3dsound", "getfrequency", 1
+		LineNumber                  25804, 4
+		LineNumberAlt1              97, 68
+		Return
+	end ; method
+
+	begin method "setposition"
+		; address: 0x52c09
+		; source: 68 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_TableCopySound.vbo" 117:117
+		MemberFunctionArgumentCheck 4
+		LineNumber                  25824, 4
+		LineNumberAlt1              117, 68
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                             ; local
+		GetVariableValue            2                             ; local
+		GetVariableValue            3                             ; local
+		CallGameFunctionString      "gc3dsound", "setposition", 4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setmindistance"
+		; address: 0x52c2a
+		; source: 68 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_TableCopySound.vbo" 122:122
+		MemberFunctionArgumentCheck 2
+		LineNumber                  25829, 4
+		LineNumberAlt1              122, 68
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                                ; local
+		CallGameFunctionString      "gc3dsound", "setmindistance", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setmaxdistance"
+		; address: 0x52c45
+		; source: 68 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_TableCopySound.vbo" 127:127
+		MemberFunctionArgumentCheck 2
+		LineNumber                  25834, 4
+		LineNumberAlt1              127, 68
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                                ; local
+		CallGameFunctionString      "gc3dsound", "setmaxdistance", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setconeorientation"
+		; address: 0x52c60
+		; source: 68 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_TableCopySound.vbo" 132:132
+		MemberFunctionArgumentCheck 4
+		LineNumber                  25839, 4
+		LineNumberAlt1              132, 68
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                                    ; local
+		GetVariableValue            2                                    ; local
+		GetVariableValue            3                                    ; local
+		CallGameFunctionString      "gc3dsound", "setconeorientation", 4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setconeangles"
+		; address: 0x52c81
+		; source: 68 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_TableCopySound.vbo" 137:137
+		MemberFunctionArgumentCheck 3
+		LineNumber                  25844, 4
+		LineNumberAlt1              137, 68
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                               ; local
+		GetVariableValue            2                               ; local
+		CallGameFunctionString      "gc3dsound", "setconeangles", 3
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setconeoutsidevolume"
+		; address: 0x52c9f
+		; source: 68 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_TableCopySound.vbo" 142:142
+		MemberFunctionArgumentCheck 2
+		LineNumber                  25849, 4
+		LineNumberAlt1              142, 68
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                                      ; local
+		CallGameFunctionString      "gc3dsound", "setconeoutsidevolume", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setlistenerrollofffactor"
+		; address: 0x52cba
+		; source: 68 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_TableCopySound.vbo" 147:147
+		MemberFunctionArgumentCheck 2
+		LineNumber                  25854, 4
+		LineNumberAlt1              147, 68
+		GetVariableValue            1                                          ; local
+		CallGameFunctionString      "gc3dsound", "setlistenerrollofffactor", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "drifttovolume"
+		; address: 0x52cd2
+		; source: 68 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_TableCopySound.vbo" 152:152
+		MemberFunctionArgumentCheck 3
+		LineNumber                  25859, 4
+		LineNumberAlt1              152, 68
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                               ; local
+		GetVariableValue            2                               ; local
+		CallGameFunctionString      "gc3dsound", "drifttovolume", 3
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

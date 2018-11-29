@@ -1,0 +1,554 @@
+begin class "cliffscale_class"
+	property "parent"
+	property "boulderarray"
+	property "dropping"
+	property "targetarray"
+	property "areaid"
+	property "resetpoint"
+	property "orientation"
+	property "original_maxdist"
+	property "cliffrumble"
+	property "timer"
+
+	begin method "cliffscale_class"
+		; address: 0x5c983
+		; source: 91 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_clf2.vbo" 118:118
+		MemberFunctionArgumentCheck 2
+		LineNumber                  31781, 4
+		LineNumberAlt1              118, 91
+		GetVariableValue            1        ; local
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x5c997
+		; source: 91 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_clf2.vbo" 125:177
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    31788, 4
+		LineNumberAlt1                125, 91
+		PushConstanti8                20
+		CallGameFunctionString        "gcareadirector", "setnearestmax", 1
+		Pop
+		LineNumber                    31789, 4
+		LineNumberAlt1                126, 91
+		CallGameFunctionString        "gcareadirector", "getnearestmaxdist", 0
+		LineNumber                    31789, 4
+		LineNumberAlt1                126, 91
+		SetThisMemberValueString      "original_maxdist"
+		LineNumber                    31790, 4
+		LineNumberAlt1                127, 91
+		PushConstanti16               500
+		CallGameFunctionString        "gcareadirector", "setnearestmaxdist", 1
+		Pop
+		LineNumber                    31793, 4
+		LineNumberAlt1                130, 91
+		CreateObjectString            "basicpoint"
+		Dup
+		Dup
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    31793, 4
+		LineNumberAlt1                130, 91
+		SetThisMemberValueString      "resetpoint"
+		LineNumber                    31794, 4
+		LineNumberAlt1                131, 91
+		CreateObjectString            "basicpoint"
+		Dup
+		Dup
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    31794, 4
+		LineNumberAlt1                131, 91
+		SetThisMemberValueString      "orientation"
+		LineNumber                    31795, 4
+		LineNumberAlt1                132, 91
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    31795, 4
+		LineNumberAlt1                132, 91
+		SetThisMemberValueString      "areaid"
+		LineNumber                    31798, 4
+		LineNumberAlt1                135, 91
+		CreateArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "hot1"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    31799, 4
+		LineNumberAlt1                136, 91
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "hot2"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    31800, 4
+		LineNumberAlt1                137, 91
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "hot3"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    31801, 4
+		LineNumberAlt1                138, 91
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "hot4"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    31802, 4
+		LineNumberAlt1                139, 91
+		AppendToArray
+		SetThisMemberValueString      "targetarray"
+		LineNumber                    31805, 4
+		LineNumberAlt1                142, 91
+		GetThisMemberValueString      "targetarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                                            ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1                                            ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    31806, 4
+		LineNumberAlt1                143, 91
+		GetThisMemberValueString      "targetarray"
+		GetVariableValue              1                                            ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    31807, 4
+		LineNumberAlt1                144, 91
+		GetThisMemberValueString      "targetarray"
+		GetVariableValue              1                                            ; local
+		GetArrayValue
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "setmytargetingflags"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    31808, 4
+		LineNumberAlt1                145, 91
+		GetThisMemberValueString      "targetarray"
+		GetVariableValue              1                                            ; local
+		GetArrayValue
+		PushConstanti8                1
+		PushConstanti8                1
+		PushConstanti8                1
+		Pull                          4
+		GetMemberFunctionString       "setresponse"
+		JumpAbsolute                  4
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    31839, 4
+		LineNumberAlt1                176, 91
+		CreateObjectString            "lego_timer"
+		Dup
+		PushConstantStringString      "timr"
+		PushConstanti8                1
+		PushConstant0
+		Pull                          4
+		GetMemberFunctionString       "lego_timer"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    31839, 4
+		LineNumberAlt1                176, 91
+		SetThisMemberValueString      "timer"
+		LineNumber                    31840, 4
+		LineNumberAlt1                177, 91
+		GetThisMemberValueString      "timer"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initshort"
+		; address: 0x5cb8d
+		; source: 91 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_clf2.vbo" 184:184
+		MemberFunctionArgumentCheck 1
+		LineNumber                  31847, 4
+		LineNumberAlt1              184, 91
+		GetVariableValue            0          ; local
+		GetThisMemberFunctionString "initfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x5cba4
+		; source: 91 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_clf2.vbo" 189:205
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    31852, 4
+		LineNumberAlt1                189, 91
+		GetThisMemberValueString      "original_maxdist"
+		CallGameFunctionString        "gcareadirector", "setnearestmaxdist", 1
+		Pop
+		LineNumber                    31853, 4
+		LineNumberAlt1                190, 91
+		PushNothing
+		SetThisMemberValueString      "original_maxdist"
+		LineNumber                    31861, 4
+		LineNumberAlt1                198, 91
+		GetThisMemberValueString      "targetarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                                        ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1                                        ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    31862, 4
+		LineNumberAlt1                199, 91
+		GetThisMemberValueString      "targetarray"
+		GetVariableValue              1                                        ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    31863, 4
+		LineNumberAlt1                200, 91
+		GetThisMemberValueString      "targetarray"
+		GetVariableValue              1                                        ; local
+		PushNothing
+		SetArrayValue
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    31865, 4
+		LineNumberAlt1                202, 91
+		PushNothing
+		SetThisMemberValueString      "targetarray"
+		LineNumber                    31867, 4
+		LineNumberAlt1                204, 91
+		PushNothing
+		SetThisMemberValueString      "resetpoint"
+		LineNumber                    31868, 4
+		LineNumberAlt1                205, 91
+		PushNothing
+		SetThisMemberValueString      "orientation"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x5cc44
+		; source: 91 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_clf2.vbo" 212:212
+		MemberFunctionArgumentCheck 1
+		LineNumber                  31875, 4
+		LineNumberAlt1              212, 91
+		PushNothing
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x5cc56
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x5cc5a
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x5cc5e
+		; source: 91 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_clf2.vbo" 235:262
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          1
+		LineNumber                    31898, 4
+		LineNumberAlt1                235, 91
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                3
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    31902, 4
+		LineNumberAlt1                239, 91
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		PushConstantStringString      "tb00"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    31902, 4
+		LineNumberAlt1                239, 91
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    31903, 4
+		LineNumberAlt1                240, 91
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "reseta"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		BranchAlwaysTarget            5, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Dup
+		PushConstanti8                8
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    31909, 4
+		LineNumberAlt1                246, 91
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		SetVariableValue              2                                            ; local
+		LineNumber                    31910, 4
+		LineNumberAlt1                247, 91
+		GetVariableValue              2                                            ; local
+		PushConstantStringString      "timr"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    31910, 4
+		LineNumberAlt1                247, 91
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    31911, 4
+		LineNumberAlt1                248, 91
+		GetThisMemberValueString      "timer"
+		Dup
+		GetMemberFunctionString       "reset"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    31912, 4
+		LineNumberAlt1                249, 91
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "resetb"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  2
+		BranchAlwaysTarget            5, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Dup
+		PushConstanti8                27
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    31919, 4
+		LineNumberAlt1                256, 91
+		PushConstantStringString      "Screen Black Event"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    31920, 4
+		LineNumberAlt1                257, 91
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "resetc"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            5, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		Dup
+		PushConstanti8                46
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    31925, 4
+		LineNumberAlt1                262, 91
+		PushConstantf32               1.2000000476837158
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		; <-
+		BranchTarget                  5
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "reseta"
+		; address: 0x5cd73
+		; source: 91 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_clf2.vbo" 273:275
+		MemberFunctionArgumentCheck 2
+		LineNumber                  31936, 4
+		LineNumberAlt1              273, 91
+		GetThisMemberValueString    "parent"
+		GetMemberValueString        "parent"
+		GetMemberValueString        "cam"
+		PushConstanti8              7
+		Pull                        2
+		GetMemberFunctionString     "setaimode"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  31938, 4
+		LineNumberAlt1              275, 91
+		GetThisMemberValueString    "timer"
+		Dup
+		GetMemberFunctionString     "start"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "resetb"
+		; address: 0x5cda8
+		; source: 91 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_clf2.vbo" 281:281
+		MemberFunctionArgumentCheck  1
+		LineNumber                   31944, 4
+		LineNumberAlt1               281, 91
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		Dup
+		GetMemberFunctionString      "kill"
+		JumpAbsolute                 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "resetc"
+		; address: 0x5cdc3
+		; source: 91 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_clf2.vbo" 288:293
+		MemberFunctionArgumentCheck  1
+		LineNumber                   31951, 4
+		LineNumberAlt1               288, 91
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		GetMemberValueString         "actor"
+		PushConstantf32              207.60000610351562
+		PushConstant0
+		PushConstantf32              62.20000076293945
+		Subtract
+		PushConstant0
+		PushConstantf32              150.10000610351562
+		Subtract
+		Pull                         4
+		GetMemberFunctionString      "setpos"
+		JumpAbsolute                 4
+		Pop
+		LineNumber                   31952, 4
+		LineNumberAlt1               289, 91
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		GetMemberValueString         "actor"
+		PushConstantf32              31.5
+		Pull                         2
+		GetMemberFunctionString      "setorientation"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   31954, 4
+		LineNumberAlt1               291, 91
+		PushConstantStringString     "tb00"
+		CallGameFunctionString       "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                   31954, 4
+		LineNumberAlt1               291, 91
+		PushConstant0
+		CallGameFunctionString       "gccollisionphysicsgroup", "toggletriggerboxentered", 2
+		Pop
+		LineNumber                   31955, 4
+		LineNumberAlt1               292, 91
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		Dup
+		GetMemberFunctionString      "unkill"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   31956, 4
+		LineNumberAlt1               293, 91
+		GetThisMemberValueString     "parent"
+		GetMemberValueString         "parent"
+		GetMemberValueString         "cam"
+		PushConstanti8               11
+		Pull                         2
+		GetMemberFunctionString      "setaimode"
+		JumpAbsolute                 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "show"
+		; address: 0x5ce6e
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hide"
+		; address: 0x5ce72
+		; source: 91 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_clf2.vbo" 305:305
+		MemberFunctionArgumentCheck 1
+		LineNumber                  31968, 4
+		LineNumberAlt1              305, 91
+		GetVariableValue            0             ; local
+		GetThisMemberFunctionString "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

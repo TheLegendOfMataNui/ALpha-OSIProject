@@ -1,0 +1,149 @@
+begin class "ta07_platform"
+	property "obj"
+	property "id"
+	property "name"
+	property "up"
+
+	begin method "ta07_platform"
+		; address: 0xc314e
+		; source: 219 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta07.vbo" 610:612
+		MemberFunctionArgumentCheck 2
+		LineNumber                  12363, 4
+		LineNumberAlt1              610, 219
+		CreateObjectString          "lego_moveableobject"
+		Dup
+		GetVariableValue            1                                            ; local
+		Pull                        2
+		GetMemberFunctionString     "lego_moveableobject"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  12363, 4
+		LineNumberAlt1              610, 219
+		SetThisMemberValueString    "obj"
+		LineNumber                  12364, 4
+		LineNumberAlt1              611, 219
+		GetVariableValue            1                                            ; local
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  12364, 4
+		LineNumberAlt1              611, 219
+		SetThisMemberValueString    "id"
+		LineNumber                  12365, 4
+		LineNumberAlt1              612, 219
+		GetVariableValue            1                                            ; local
+		SetThisMemberValueString    "name"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xc31a8
+		; source: 219 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta07.vbo" 619:620
+		MemberFunctionArgumentCheck 1
+		LineNumber                  12372, 4
+		LineNumberAlt1              619, 219
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  12373, 4
+		LineNumberAlt1              620, 219
+		GetThisMemberValueString    "obj"
+		PushConstanti8              1
+		PushConstant0
+		PushConstanti8              1
+		Pull                        4
+		GetMemberFunctionString     "setresponse"
+		JumpAbsolute                4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xc31da
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xc31de
+		; source: 219 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta07.vbo" 631:635
+		MemberFunctionArgumentCheck 1
+		LineNumber                  12384, 4
+		LineNumberAlt1              631, 219
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  12385, 4
+		LineNumberAlt1              632, 219
+		PushNothing
+		SetThisMemberValueString    "obj"
+		LineNumber                  12386, 4
+		LineNumberAlt1              633, 219
+		PushNothing
+		SetThisMemberValueString    "id"
+		LineNumber                  12387, 4
+		LineNumberAlt1              634, 219
+		PushNothing
+		SetThisMemberValueString    "name"
+		LineNumber                  12388, 4
+		LineNumberAlt1              635, 219
+		PushNothing
+		SetThisMemberValueString    "up"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0xc322e
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xc3232
+		; source: 219 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta07.vbo" 646:646
+		MemberFunctionArgumentCheck   2
+		LineNumber                    12399, 4
+		LineNumberAlt1                646, 219
+		GetVariableValue              1         ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "reset"
+		; address: 0xc324e
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "settweakable"
+		; address: 0xc3252
+		; source: 219 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta07.vbo" 665:665
+		MemberFunctionArgumentCheck 1
+		LineNumber                  12418, 4
+		LineNumberAlt1              665, 219
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "settweakable"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

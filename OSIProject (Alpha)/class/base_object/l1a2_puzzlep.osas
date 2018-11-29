@@ -1,0 +1,283 @@
+begin class "l1a2_puzzlep", "base_object"
+	property "parent"
+	property "bgmusic"
+
+	begin method "l1a2_puzzlep"
+		; address: 0x6a23e
+		; source: 108 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_l1a2p.vbo" 95:95
+		MemberFunctionArgumentCheck 2
+		LineNumber                  39016, 4
+		LineNumberAlt1              95, 108
+		GetVariableValue            1        ; local
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x6a252
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x6a256
+		; source: 108 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_l1a2p.vbo" 107:129
+		MemberFunctionArgumentCheck   2
+		LineNumber                    39028, 4
+		LineNumberAlt1                107, 108
+		GetVariableValue              1                                                       ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                3
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    39032, 4
+		LineNumberAlt1                111, 108
+		GetVariableValue              1                                                       ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		PushConstantStringString      "tb00"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    39032, 4
+		LineNumberAlt1                111, 108
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    39033, 4
+		LineNumberAlt1                112, 108
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "kill"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    39034, 4
+		LineNumberAlt1                113, 108
+		PushConstanti16               737
+		CallGameFunctionString        "gcstaticsoundsptrarray", "playtablesound", 1
+		Pop
+		LineNumber                    39035, 4
+		LineNumberAlt1                114, 108
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "level"
+		GetMemberValueString          "cam"
+		PushConstanti8                7
+		Pull                          2
+		GetMemberFunctionString       "setaimode"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    39036, 4
+		LineNumberAlt1                115, 108
+		PushConstantf32               1.2000000476837158
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		; <-
+		BranchTarget                  0
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Dup
+		PushConstanti8                46
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    39040, 4
+		LineNumberAlt1                119, 108
+		PushConstantf32               1.2000000476837158
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		Dup
+		PushConstanti8                27
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    39045, 4
+		LineNumberAlt1                124, 108
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "unkill"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    39046, 4
+		LineNumberAlt1                125, 108
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "enterstartid"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "enterlookid"
+		Pull                          3
+		GetMemberFunctionString       "gotopos"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    39047, 4
+		LineNumberAlt1                126, 108
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "o000"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    39047, 4
+		LineNumberAlt1                126, 108
+		Pull                          2
+		GetMemberFunctionString       "switchanimation"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    39048, 4
+		LineNumberAlt1                127, 108
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "ninp"
+		Pull                          2
+		GetMemberFunctionString       "setinputstate"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    39049, 4
+		LineNumberAlt1                128, 108
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "level"
+		GetMemberValueString          "cam"
+		PushConstanti8                11
+		Pull                          2
+		GetMemberFunctionString       "setaimode"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    39050, 4
+		LineNumberAlt1                129, 108
+		PushConstantStringString      "tb00"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    39050, 4
+		LineNumberAlt1                129, 108
+		PushConstant0
+		CallGameFunctionString        "gccollisionphysicsgroup", "toggletriggerboxentered", 2
+		Pop
+		; <-
+		BranchTarget                  3
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x6a3ef
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x6a3f3
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x6a3f7
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupshort"
+		; address: 0x6a3fb
+		; source: 108 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_l1a2p.vbo" 145:145
+		MemberFunctionArgumentCheck 1
+		LineNumber                  39066, 4
+		LineNumberAlt1              145, 108
+		GetVariableValue            0             ; local
+		GetThisMemberFunctionString "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "show"
+		; address: 0x6a412
+		; source: 108 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_l1a2p.vbo" 150:152
+		MemberFunctionArgumentCheck 1
+		LineNumber                  39071, 4
+		LineNumberAlt1              150, 108
+		CreateObjectString          "legomp3player"
+		Dup
+		Dup
+		GetMemberFunctionString     "legomp3player"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  39071, 4
+		LineNumberAlt1              150, 108
+		SetThisMemberValueString    "bgmusic"
+		LineNumber                  39072, 4
+		LineNumberAlt1              151, 108
+		GetThisMemberValueString    "bgmusic"
+		PushConstantStringString    "Root/Data/sounds/MUSICLEGOUNDERGROUND"
+		Pull                        2
+		GetMemberFunctionString     "setupforplay"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  39073, 4
+		LineNumberAlt1              152, 108
+		GetThisMemberValueString    "bgmusic"
+		PushConstanti8              1
+		Pull                        2
+		GetMemberFunctionString     "play"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hide"
+		; address: 0x6a467
+		; source: 108 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_l1a2p.vbo" 157:159
+		MemberFunctionArgumentCheck   1
+		LineNumber                    39078, 4
+		LineNumberAlt1                157, 108
+		GetThisMemberValueString      "bgmusic"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    39079, 4
+		LineNumberAlt1                158, 108
+		GetThisMemberValueString      "bgmusic"
+		Dup
+		GetMemberFunctionString       "stop"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    39080, 4
+		LineNumberAlt1                159, 108
+		PushNothing
+		SetThisMemberValueString      "bgmusic"
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x6a4a0
+		; source: 108 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_l1a2p.vbo" 165:165
+		MemberFunctionArgumentCheck 1
+		LineNumber                  39086, 4
+		LineNumberAlt1              165, 108
+		PushNothing
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+end ; class

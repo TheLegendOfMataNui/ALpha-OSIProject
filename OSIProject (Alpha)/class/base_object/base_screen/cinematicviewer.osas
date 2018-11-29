@@ -1,0 +1,153 @@
+begin class "cinematicviewer", "base_screen"
+	property "cam"
+
+	begin method "cinematicviewer"
+		; address: 0xdb683
+		; source: 248 "C:\\projects\\lego\\Scripting\\VBO\\CinematicViewer.vbo" 27:27
+		MemberFunctionArgumentCheck 1
+		LineNumber                  22153, 4
+		LineNumberAlt1              27, 248
+		CreateObjectString          "gs_legocamera"
+		Dup
+		PushConstant0
+		PushConstantf32             346
+		Subtract
+		PushConstant0
+		PushConstantf32             61
+		Subtract
+		PushConstantf32             1349
+		PushConstantf32             608.4000244140625
+		PushConstantf32             0.699999988079071
+		PushConstantf32             404.29998779296875
+		Pull                        7
+		GetMemberFunctionString     "gs_legocamera"
+		JumpAbsolute                7
+		Pop
+		LineNumber                  22153, 4
+		LineNumberAlt1              27, 248
+		SetThisMemberValueString    "cam"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xdb6cc
+		; source: 248 "C:\\projects\\lego\\Scripting\\VBO\\CinematicViewer.vbo" 34:45
+		MemberFunctionArgumentCheck  1
+		CreateStackVariables         4
+		LineNumber                   22160, 4
+		LineNumberAlt1               34, 248
+		PushConstantStringString     "********CALLING INITFULL*********"
+		CallGameFunctionString       "debug", "print", 1
+		Pop
+		LineNumber                   22161, 4
+		LineNumberAlt1               35, 248
+		GetThisMemberValueString     "cam"
+		Dup
+		GetMemberFunctionString      "initfull"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   22162, 4
+		LineNumberAlt1               36, 248
+		CallGameFunctionString       "gccinemaeditor", "create", 0
+		LineNumber                   22162, 4
+		LineNumberAlt1               36, 248
+		SetVariableValue             1                                              ; local
+		LineNumber                   22163, 4
+		LineNumberAlt1               37, 248
+		GetVariableValue             1                                              ; local
+		CallGameFunctionString       "gccinemaeditor", "getlevelid", 1
+		LineNumber                   22163, 4
+		LineNumberAlt1               37, 248
+		SetVariableValue             2                                              ; local
+		LineNumber                   22164, 4
+		LineNumberAlt1               38, 248
+		GetVariableValue             1                                              ; local
+		CallGameFunctionString       "gccinemaeditor", "getareaid", 1
+		LineNumber                   22164, 4
+		LineNumberAlt1               38, 248
+		SetVariableValue             3                                              ; local
+		LineNumber                   22165, 4
+		LineNumberAlt1               39, 248
+		GetVariableValue             1                                              ; local
+		CallGameFunctionString       "gccinemaeditor", "gettoaid", 1
+		LineNumber                   22165, 4
+		LineNumberAlt1               39, 248
+		SetVariableValue             4                                              ; local
+		LineNumber                   22166, 4
+		LineNumberAlt1               40, 248
+		GetVariableValue             2                                              ; local
+		CallGameFunctionString       "scslosifoundation", "identifiertostring", 1
+		LineNumber                   22166, 4
+		LineNumberAlt1               40, 248
+		CallGameFunctionString       "gcareadirector", "setcurrentlevel", 1
+		Pop
+		LineNumber                   22167, 4
+		LineNumberAlt1               41, 248
+		GetVariableValue             3                                              ; local
+		CallGameFunctionString       "scslosifoundation", "identifiertostring", 1
+		LineNumber                   22167, 4
+		LineNumberAlt1               41, 248
+		CallGameFunctionString       "gcareadirector", "setcurrentarea", 1
+		Pop
+		LineNumber                   22168, 4
+		LineNumberAlt1               42, 248
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		PushConstantStringString     "cnt1"
+		PushConstantStringString     "onua"
+		PushConstantf32              0
+		PushConstantf32              0
+		PushConstantf32              0
+		PushConstantf32              0
+		PushConstantStringString     "none"
+		Pull                         8
+		GetMemberFunctionString      "setactor"
+		JumpAbsolute                 8
+		Pop
+		LineNumber                   22169, 4
+		LineNumberAlt1               43, 248
+		GetThisMemberValueString     "cam"
+		PushConstanti8               11
+		Pull                         2
+		GetMemberFunctionString      "setaimode"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   22170, 4
+		LineNumberAlt1               44, 248
+		PushConstantStringString     "str0"
+		CallGameFunctionString       "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                   22170, 4
+		LineNumberAlt1               44, 248
+		PushConstantStringString     "lok0"
+		CallGameFunctionString       "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                   22170, 4
+		LineNumberAlt1               44, 248
+		CallGameFunctionString       "gccollisionphysicsgroup", "settoaposition", 2
+		Pop
+		LineNumber                   22171, 4
+		LineNumberAlt1               45, 248
+		GetVariableValue             1                                              ; local
+		PushConstanti8               1
+		CallGameFunctionString       "gccinemaeditor", "setactive", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xdb858
+		; source: 248 "C:\\projects\\lego\\Scripting\\VBO\\CinematicViewer.vbo" 50:50
+		MemberFunctionArgumentCheck 2
+		LineNumber                  22176, 4
+		LineNumberAlt1              50, 248
+		GetThisMemberValueString    "cam"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "process"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

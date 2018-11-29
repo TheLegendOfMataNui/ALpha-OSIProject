@@ -1,0 +1,161 @@
+begin class "ss_tiledtextbox", "ss_rotatablesprite"
+	property "tilewidth"
+
+	begin method "ss_tiledtextbox"
+		; address: 0x33485
+		; source: 21 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_baseSprite.vbo" 882:885
+		MemberFunctionArgumentCheck 12
+		LineNumber                  4727, 4
+		LineNumberAlt1              882, 21
+		GetVariableValue            0                    ; local
+		GetVariableValue            1                    ; local
+		GetVariableValue            2                    ; local
+		GetVariableValue            3                    ; local
+		GetVariableValue            4                    ; local
+		GetVariableValue            5                    ; local
+		GetVariableValue            6                    ; local
+		GetVariableValue            7                    ; local
+		GetVariableValue            8                    ; local
+		GetVariableValue            9                    ; local
+		GetVariableValue            10                   ; local
+		GetThisMemberFunctionString "ss_rotatablesprite"
+		JumpAbsolute                11
+		Pop
+		LineNumber                  4728, 4
+		LineNumberAlt1              883, 21
+		GetVariableValue            11                   ; local
+		SetThisMemberValueString    "tilewidth"
+		LineNumber                  4729, 4
+		LineNumberAlt1              884, 21
+		GetThisMemberValueString    "w"
+		GetThisMemberValueString    "tilewidth"
+		Multiply
+		SetThisMemberValueString    "w"
+		LineNumber                  4730, 4
+		LineNumberAlt1              885, 21
+		GetThisMemberValueString    "h"
+		GetThisMemberValueString    "tilewidth"
+		Multiply
+		SetThisMemberValueString    "h"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x334f2
+		; source: 21 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_baseSprite.vbo" 889:890
+		MemberFunctionArgumentCheck 1
+		LineNumber                  4734, 4
+		LineNumberAlt1              889, 21
+		GetThisMemberValueString    "w"
+		GetThisMemberValueString    "h"
+		GetThisMemberValueString    "x1"
+		GetThisMemberValueString    "y1"
+		GetThisMemberValueString    "z"
+		GetThisMemberValueString    "filename"
+		PushConstanti8              1
+		CallGameFunctionString      "gcbigsprite", "create", 7
+		LineNumber                  4734, 4
+		LineNumberAlt1              889, 21
+		SetThisMemberValueString    "sprite"
+		LineNumber                  4735, 4
+		LineNumberAlt1              890, 21
+		GetThisMemberValueString    "sprite"
+		GetThisMemberValueString    "camstate"
+		CallGameFunctionString      "gcbigsprite", "facecamera", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initshort"
+		; address: 0x3353e
+		; source: 21 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_baseSprite.vbo" 894:895
+		MemberFunctionArgumentCheck 1
+		LineNumber                  4739, 4
+		LineNumberAlt1              894, 21
+		GetThisMemberValueString    "w"
+		GetThisMemberValueString    "h"
+		GetThisMemberValueString    "x1"
+		GetThisMemberValueString    "y1"
+		GetThisMemberValueString    "z"
+		GetThisMemberValueString    "filename"
+		PushConstanti8              1
+		CallGameFunctionString      "gcbigsprite", "create", 7
+		LineNumber                  4739, 4
+		LineNumberAlt1              894, 21
+		SetThisMemberValueString    "sprite"
+		LineNumber                  4740, 4
+		LineNumberAlt1              895, 21
+		GetThisMemberValueString    "sprite"
+		GetThisMemberValueString    "camstate"
+		CallGameFunctionString      "gcbigsprite", "facecamera", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setwh"
+		; address: 0x3358a
+		; source: 21 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_baseSprite.vbo" 905:915
+		MemberFunctionArgumentCheck 3
+		LineNumber                  4750, 4
+		LineNumberAlt1              905, 21
+		GetVariableValue            1                               ; local
+		GetThisMemberValueString    "tilewidth"
+		Multiply
+		SetThisMemberValueString    "w"
+		LineNumber                  4758, 4
+		LineNumberAlt1              913, 21
+		GetVariableValue            2                               ; local
+		GetThisMemberValueString    "tilewidth"
+		Multiply
+		SetThisMemberValueString    "h"
+		LineNumber                  4760, 4
+		LineNumberAlt1              915, 21
+		GetThisMemberValueString    "sprite"
+		GetThisMemberValueString    "w"
+		GetThisMemberValueString    "h"
+		GetThisMemberValueString    "x1"
+		GetThisMemberValueString    "y1"
+		GetThisMemberValueString    "z"
+		CallGameFunctionString      "gcbigsprite", "setposition", 6
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "changewh"
+		; address: 0x335d9
+		; source: 21 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_baseSprite.vbo" 925:935
+		MemberFunctionArgumentCheck 3
+		LineNumber                  4770, 4
+		LineNumberAlt1              925, 21
+		GetVariableValue            1                               ; local
+		GetThisMemberValueString    "tilewidth"
+		Multiply
+		GetThisMemberValueString    "w"
+		Add
+		SetThisMemberValueString    "w"
+		LineNumber                  4778, 4
+		LineNumberAlt1              933, 21
+		GetVariableValue            2                               ; local
+		GetThisMemberValueString    "tilewidth"
+		Multiply
+		GetThisMemberValueString    "h"
+		Add
+		SetThisMemberValueString    "h"
+		LineNumber                  4780, 4
+		LineNumberAlt1              935, 21
+		GetThisMemberValueString    "sprite"
+		GetThisMemberValueString    "w"
+		GetThisMemberValueString    "h"
+		GetThisMemberValueString    "x1"
+		GetThisMemberValueString    "y1"
+		GetThisMemberValueString    "z"
+		CallGameFunctionString      "gcbigsprite", "setposition", 6
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

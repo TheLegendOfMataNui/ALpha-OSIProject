@@ -1,0 +1,342 @@
+begin class "bullrun1"
+	property "parea"
+	property "bully"
+	property "bgmusic"
+
+	begin method "bullrun1"
+		; address: 0x8f4cc
+		; source: 153 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_blr1.vbo" 87:87
+		MemberFunctionArgumentCheck 2
+		LineNumber                  56063, 4
+		LineNumberAlt1              87, 153
+		GetVariableValue            1        ; local
+		SetThisMemberValueString    "parea"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "init"
+		; address: 0x8f4e0
+		; source: 153 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_blr1.vbo" 95:101
+		MemberFunctionArgumentCheck  1
+		CreateStackVariables         1
+		LineNumber                   56071, 4
+		LineNumberAlt1               95, 153
+		GetThisMemberValueString     "parea"
+		GetMemberValueString         "level"
+		Dup
+		GetMemberFunctionString      "getbull"
+		JumpAbsolute                 1
+		LineNumber                   56071, 4
+		LineNumberAlt1               95, 153
+		SetThisMemberValueString     "bully"
+		LineNumber                   56072, 4
+		LineNumberAlt1               96, 153
+		GetThisMemberValueString     "parea"
+		GetMemberValueString         "name"
+		SetVariableValue             1                                            ; local
+		LineNumber                   56073, 4
+		LineNumberAlt1               97, 153
+		GetThisMemberValueString     "bully"
+		GetVariableValue             1                                            ; local
+		CallGameFunctionString       "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                   56073, 4
+		LineNumberAlt1               97, 153
+		Pull                         2
+		GetMemberFunctionString      "changearea"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   56074, 4
+		LineNumberAlt1               98, 153
+		GetThisMemberValueString     "bully"
+		PushConstanti8               5
+		Pull                         2
+		GetMemberFunctionString      "setclimb"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   56075, 4
+		LineNumberAlt1               99, 153
+		GetThisMemberValueString     "bully"
+		PushConstanti8               36
+		PushConstanti8               2
+		PushConstanti16              248
+		Pull                         4
+		GetMemberFunctionString      "setpos"
+		JumpAbsolute                 4
+		Pop
+		LineNumber                   56076, 4
+		LineNumberAlt1               100, 153
+		GetThisMemberValueString     "bully"
+		PushConstantStringString     "bl09"
+		CallGameFunctionString       "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                   56076, 4
+		LineNumberAlt1               100, 153
+		Pull                         2
+		GetMemberFunctionString      "enableanim"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   56077, 4
+		LineNumberAlt1               101, 153
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		GetMemberValueString         "actor"
+		GetThisMemberValueString     "bully"
+		GetMemberValueString         "contstring"
+		CallGameFunctionString       "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                   56077, 4
+		LineNumberAlt1               101, 153
+		GetThisMemberValueString     "bully"
+		GetMemberValueString         "area"
+		CallGameFunctionString       "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                   56077, 4
+		LineNumberAlt1               101, 153
+		PushConstanti32              2063160497
+		Pull                         4
+		GetMemberFunctionString      "ride"
+		JumpAbsolute                 4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanup"
+		; address: 0x8f5eb
+		; source: 153 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_blr1.vbo" 107:109
+		MemberFunctionArgumentCheck   1
+		LineNumber                    56083, 4
+		LineNumberAlt1                107, 153
+		GetThisMemberValueString      "bgmusic"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    56084, 4
+		LineNumberAlt1                108, 153
+		GetThisMemberValueString      "bgmusic"
+		Dup
+		GetMemberFunctionString       "stop"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    56085, 4
+		LineNumberAlt1                109, 153
+		PushNothing
+		SetThisMemberValueString      "bgmusic"
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x8f624
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x8f628
+		; source: 153 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_blr1.vbo" 121:126
+		MemberFunctionArgumentCheck   2
+		LineNumber                    56097, 4
+		LineNumberAlt1                121, 153
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "event"
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    56098, 4
+		LineNumberAlt1                122, 153
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "button"
+		Dup
+		PushConstanti8                79
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    56100, 4
+		LineNumberAlt1                124, 153
+		GetThisMemberValueString      "bully"
+		PushConstantStringString      "str0"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    56100, 4
+		LineNumberAlt1                124, 153
+		PushConstantStringString      "lok0"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    56100, 4
+		LineNumberAlt1                124, 153
+		Pull                          3
+		GetMemberFunctionString       "gotostartpos"
+		JumpAbsolute                  3
+		Pop
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		Dup
+		PushConstanti8                80
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    56102, 4
+		LineNumberAlt1                126, 153
+		GetThisMemberValueString      "bully"
+		PushConstantStringString      "str1"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    56102, 4
+		LineNumberAlt1                126, 153
+		PushConstantStringString      "lok1"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    56102, 4
+		LineNumberAlt1                126, 153
+		Pull                          3
+		GetMemberFunctionString       "gotostartpos"
+		JumpAbsolute                  3
+		Pop
+		; <-
+		BranchTarget                  1
+		Pop
+		; <-
+		BranchTarget                  2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x8f6da
+		; source: 153 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_blr1.vbo" 136:156
+		MemberFunctionArgumentCheck   2
+		LineNumber                    56112, 4
+		LineNumberAlt1                136, 153
+		GetVariableValue              1                                                       ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                3
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    56116, 4
+		LineNumberAlt1                140, 153
+		GetVariableValue              1                                                       ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		PushConstantStringString      "tb00"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    56116, 4
+		LineNumberAlt1                140, 153
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    56117, 4
+		LineNumberAlt1                141, 153
+		PushConstantf32               1.2000000476837158
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		; <-
+		BranchTarget                  0
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Dup
+		PushConstanti8                46
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    56123, 4
+		LineNumberAlt1                147, 153
+		PushConstantf32               1.2000000476837158
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		Dup
+		PushConstanti8                27
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    56128, 4
+		LineNumberAlt1                152, 153
+		GetThisMemberValueString      "bully"
+		PushConstantStringString      "str0"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    56128, 4
+		LineNumberAlt1                152, 153
+		PushConstantStringString      "lok0"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    56128, 4
+		LineNumberAlt1                152, 153
+		Pull                          3
+		GetMemberFunctionString       "gotostartpos"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    56129, 4
+		LineNumberAlt1                153, 153
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "unkill"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    56130, 4
+		LineNumberAlt1                154, 153
+		PushConstantStringString      "tb00"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    56130, 4
+		LineNumberAlt1                154, 153
+		PushConstant0
+		CallGameFunctionString        "gccollisionphysicsgroup", "toggletriggerboxentered", 2
+		Pop
+		LineNumber                    56131, 4
+		LineNumberAlt1                155, 153
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "ninp"
+		Pull                          2
+		GetMemberFunctionString       "setinputstate"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    56132, 4
+		LineNumberAlt1                156, 153
+		GetThisMemberValueString      "parea"
+		GetMemberValueString          "level"
+		GetMemberValueString          "cam"
+		PushConstanti8                11
+		Pull                          2
+		GetMemberFunctionString       "setaimode"
+		JumpAbsolute                  2
+		Pop
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Dup
+		PushConstanti8                29
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x8f81b
+		; source: 153 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_blr1.vbo" 173:173
+		MemberFunctionArgumentCheck 1
+		LineNumber                  56149, 4
+		LineNumberAlt1              173, 153
+		PushNothing
+		SetThisMemberValueString    "parea"
+		PushNothing
+		Return
+	end ; method
+end ; class

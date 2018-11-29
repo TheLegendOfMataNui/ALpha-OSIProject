@@ -1,0 +1,176 @@
+begin class "lego_area_icmz4", "gs_lego_area"
+	property "puzzle"
+
+	begin method "lego_area_icmz4"
+		; address: 0xaba0b
+		; source: 185 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_icmz.vbo" 21:23
+		MemberFunctionArgumentCheck 2
+		LineNumber                  2022, 4
+		LineNumberAlt1              21, 185
+		GetVariableValue            0                    ; local
+		PushConstantStringString    "icmz"
+		GetVariableValue            1                    ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  2023, 4
+		LineNumberAlt1              22, 185
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  2024, 4
+		LineNumberAlt1              23, 185
+		CreateArray
+		Dup
+		PushConstanti16             180
+		AppendToArray
+		Dup
+		PushConstanti16             -356
+		AppendToArray
+		Dup
+		PushConstant0
+		PushConstantf32             51.400001525878906
+		Subtract
+		AppendToArray
+		Dup
+		PushConstanti16             689
+		AppendToArray
+		SetThisMemberValueString    "startingarea"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xaba63
+		; source: 185 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_icmz.vbo" 29:32
+		MemberFunctionArgumentCheck 1
+		LineNumber                  2030, 4
+		LineNumberAlt1              29, 185
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_show"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  2031, 4
+		LineNumberAlt1              30, 185
+		CreateObjectString          "icmz_puzzle"
+		Dup
+		GetVariableValue            0                ; local
+		Pull                        2
+		GetMemberFunctionString     "icmz_puzzle"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  2031, 4
+		LineNumberAlt1              30, 185
+		SetThisMemberValueString    "puzzle"
+		LineNumber                  2032, 4
+		LineNumberAlt1              31, 185
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  2033, 4
+		LineNumberAlt1              32, 185
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xabac8
+		; source: 185 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_icmz.vbo" 37:41
+		MemberFunctionArgumentCheck 1
+		LineNumber                  2038, 4
+		LineNumberAlt1              37, 185
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_hide"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  2039, 4
+		LineNumberAlt1              38, 185
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "hide"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  2040, 4
+		LineNumberAlt1              39, 185
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  2041, 4
+		LineNumberAlt1              40, 185
+		PushNothing
+		SetThisMemberValueString    "puzzle"
+		LineNumber                  2042, 4
+		LineNumberAlt1              41, 185
+		PushNothing
+		SetThisMemberValueString    "startingarea"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xabb23
+		; source: 185 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_icmz.vbo" 46:46
+		MemberFunctionArgumentCheck 2
+		LineNumber                  2047, 4
+		LineNumberAlt1              46, 185
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "process"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xabb3f
+		; source: 185 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_icmz.vbo" 51:51
+		MemberFunctionArgumentCheck 2
+		LineNumber                  2052, 4
+		LineNumberAlt1              51, 185
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0xabb5b
+		; source: 185 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_icmz.vbo" 56:56
+		MemberFunctionArgumentCheck 2
+		LineNumber                  2057, 4
+		LineNumberAlt1              56, 185
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1        ; local
+		Pull                        2
+		GetMemberFunctionString     "input"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0xabb77
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+end ; class

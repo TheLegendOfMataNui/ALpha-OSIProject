@@ -1,0 +1,520 @@
+begin class "lego_helpscreen"
+	property "helpscreen"
+	property "shown"
+	property "text"
+	property "inputenabled"
+	property "skip"
+
+	begin method "lego_helpscreen"
+		; address: 0x52530
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x52534
+		; source: 67 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_helpScreen.vbo" 43:47
+		MemberFunctionArgumentCheck 1
+		LineNumber                  25591, 4
+		LineNumberAlt1              43, 67
+		PushNothing
+		SetThisMemberValueString    "helpscreen"
+		LineNumber                  25592, 4
+		LineNumberAlt1              44, 67
+		PushConstant0
+		SetThisMemberValueString    "shown"
+		LineNumber                  25593, 4
+		LineNumberAlt1              45, 67
+		PushNothing
+		SetThisMemberValueString    "text"
+		LineNumber                  25594, 4
+		LineNumberAlt1              46, 67
+		PushConstanti8              1
+		SetThisMemberValueString    "inputenabled"
+		LineNumber                  25595, 4
+		LineNumberAlt1              47, 67
+		PushConstant0
+		SetThisMemberValueString    "skip"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x5257f
+		; source: 67 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_helpScreen.vbo" 52:58
+		MemberFunctionArgumentCheck   1
+		LineNumber                    25600, 4
+		LineNumberAlt1                52, 67
+		GetThisMemberValueString      "helpscreen"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    25601, 4
+		LineNumberAlt1                53, 67
+		GetThisMemberValueString      "helpscreen"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    25602, 4
+		LineNumberAlt1                54, 67
+		PushNothing
+		SetThisMemberValueString      "helpscreen"
+		; <-
+		BranchTarget                  0
+		LineNumber                    25604, 4
+		LineNumberAlt1                56, 67
+		GetThisMemberValueString      "text"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    25605, 4
+		LineNumberAlt1                57, 67
+		GetThisMemberValueString      "text"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    25606, 4
+		LineNumberAlt1                58, 67
+		PushNothing
+		SetThisMemberValueString      "text"
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "show"
+		; address: 0x525ed
+		; source: 67 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_helpScreen.vbo" 66:87
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    25614, 4
+		LineNumberAlt1                66, 67
+		GetThisMemberValueString      "shown"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    25615, 4
+		LineNumberAlt1                67, 67
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    25617, 4
+		LineNumberAlt1                69, 67
+		CallGameFunctionString        "gcareadirector", "getlanguage", 0
+		LineNumber                    25617, 4
+		LineNumberAlt1                69, 67
+		SetVariableValue              1                                       ; local
+		LineNumber                    25618, 4
+		LineNumberAlt1                70, 67
+		GetVariableValue              1                                       ; local
+		Dup
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    25620, 4
+		LineNumberAlt1                72, 67
+		CreateObjectString            "ss_basesprite"
+		Dup
+		PushConstantStringString      "Root/Data/Art/MenuArt/Help_Screen_US"
+		PushConstant0
+		PushConstant0
+		PushConstanti8                3
+		GetVariableValueGlobalString  "screenx"
+		GetVariableValueGlobalString  "screeny"
+		Pull                          7
+		GetMemberFunctionString       "ss_basesprite"
+		JumpAbsolute                  7
+		Pop
+		LineNumber                    25620, 4
+		LineNumberAlt1                72, 67
+		SetThisMemberValueString      "helpscreen"
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    25622, 4
+		LineNumberAlt1                74, 67
+		CreateObjectString            "ss_basesprite"
+		Dup
+		PushConstantStringString      "Root/Data/Art/MenuArt/Help_Screen_FR"
+		PushConstant0
+		PushConstant0
+		PushConstanti8                3
+		GetVariableValueGlobalString  "screenx"
+		GetVariableValueGlobalString  "screeny"
+		Pull                          7
+		GetMemberFunctionString       "ss_basesprite"
+		JumpAbsolute                  7
+		Pop
+		LineNumber                    25622, 4
+		LineNumberAlt1                74, 67
+		SetThisMemberValueString      "helpscreen"
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Dup
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    25624, 4
+		LineNumberAlt1                76, 67
+		CreateObjectString            "ss_basesprite"
+		Dup
+		PushConstantStringString      "Root/Data/Art/MenuArt/Help_Screen_GER"
+		PushConstant0
+		PushConstant0
+		PushConstanti8                3
+		GetVariableValueGlobalString  "screenx"
+		GetVariableValueGlobalString  "screeny"
+		Pull                          7
+		GetMemberFunctionString       "ss_basesprite"
+		JumpAbsolute                  7
+		Pop
+		LineNumber                    25624, 4
+		LineNumberAlt1                76, 67
+		SetThisMemberValueString      "helpscreen"
+		; <-
+		BranchTarget                  2
+		Pop
+		LineNumber                    25628, 4
+		LineNumberAlt1                80, 67
+		CreateObjectString            "gs_legotext"
+		Dup
+		PushConstantStringString      "Root/Data/Art/Fonts/BionicleFont"
+		PushConstantStringString      ""
+		GetVariableValueGlobalString  "screenx"
+		PushConstantf32               0.5
+		Multiply
+		GetVariableValueGlobalString  "screeny"
+		PushConstantf32               0.8299999833106995
+		Multiply
+		PushConstant0
+		PushConstantf32               1.5
+		PushConstanti16               256
+		PushConstanti8                4
+		PushConstant0
+		Pull                          10
+		GetMemberFunctionString       "gs_legotext"
+		JumpAbsolute                  10
+		Pop
+		LineNumber                    25628, 4
+		LineNumberAlt1                80, 67
+		SetThisMemberValueString      "text"
+		LineNumber                    25629, 4
+		LineNumberAlt1                81, 67
+		GetThisMemberValueString      "helpscreen"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    25629, 4
+		LineNumberAlt1                81, 67
+		GetThisMemberValueString      "helpscreen"
+		Dup
+		GetMemberFunctionString       "add"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    25629, 4
+		LineNumberAlt1                81, 67
+		GetThisMemberValueString      "helpscreen"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    25630, 4
+		LineNumberAlt1                82, 67
+		GetThisMemberValueString      "text"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    25630, 4
+		LineNumberAlt1                82, 67
+		GetThisMemberValueString      "text"
+		Dup
+		GetMemberFunctionString       "add"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    25630, 4
+		LineNumberAlt1                82, 67
+		GetThisMemberValueString      "text"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    25631, 4
+		LineNumberAlt1                83, 67
+		PushConstanti8                1
+		SetThisMemberValueString      "shown"
+		LineNumber                    25632, 4
+		LineNumberAlt1                84, 67
+		PushConstantStringString      "[][b][] helpScreen on"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    25633, 4
+		LineNumberAlt1                85, 67
+		PushConstanti8                10
+		SetThisMemberValueString      "skip"
+		LineNumber                    25635, 4
+		LineNumberAlt1                87, 67
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "pause"
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "toggleinput"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  3
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hide"
+		; address: 0x527fb
+		; source: 67 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_helpScreen.vbo" 94:103
+		MemberFunctionArgumentCheck   1
+		LineNumber                    25642, 4
+		LineNumberAlt1                94, 67
+		GetThisMemberValueString      "shown"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    25643, 4
+		LineNumberAlt1                95, 67
+		GetThisMemberValueString      "helpscreen"
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    25643, 4
+		LineNumberAlt1                95, 67
+		GetThisMemberValueString      "helpscreen"
+		Dup
+		GetMemberFunctionString       "remove"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    25643, 4
+		LineNumberAlt1                95, 67
+		GetThisMemberValueString      "helpscreen"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    25644, 4
+		LineNumberAlt1                96, 67
+		GetThisMemberValueString      "text"
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    25644, 4
+		LineNumberAlt1                96, 67
+		GetThisMemberValueString      "text"
+		Dup
+		GetMemberFunctionString       "remove"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    25644, 4
+		LineNumberAlt1                96, 67
+		GetThisMemberValueString      "text"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    25645, 4
+		LineNumberAlt1                97, 67
+		GetVariableValue              0                        ; local
+		GetThisMemberFunctionString   "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    25646, 4
+		LineNumberAlt1                98, 67
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    25647, 4
+		LineNumberAlt1                99, 67
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "pause"
+		GetMemberValueString          "ispaused"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    25648, 4
+		LineNumberAlt1                100, 67
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "pause"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    25650, 4
+		LineNumberAlt1                102, 67
+		PushConstantStringString      "[] b [] helpScreen off"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    25651, 4
+		LineNumberAlt1                103, 67
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "pause"
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "toggleinput"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x52912
+		; source: 67 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_helpScreen.vbo" 111:115
+		MemberFunctionArgumentCheck   2
+		LineNumber                    25659, 4
+		LineNumberAlt1                111, 67
+		GetThisMemberValueString      "shown"
+		PushConstanti8                1
+		EqualTo
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		GetMemberValueString          "hidden"
+		PushConstant0
+		EqualTo
+		And
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    25660, 4
+		LineNumberAlt1                112, 67
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    25662, 4
+		LineNumberAlt1                114, 67
+		GetThisMemberValueString      "skip"
+		PushConstant0
+		GreaterThan
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    25663, 4
+		LineNumberAlt1                115, 67
+		GetThisMemberValueString      "skip"
+		PushConstanti8                1
+		Subtract
+		SetThisMemberValueString      "skip"
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x52971
+		; source: 67 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_helpScreen.vbo" 126:128
+		MemberFunctionArgumentCheck   2
+		LineNumber                    25674, 4
+		LineNumberAlt1                126, 67
+		GetThisMemberValueString      "shown"
+		PushConstanti8                1
+		EqualTo
+		GetThisMemberValueString      "inputenabled"
+		PushConstanti8                1
+		EqualTo
+		And
+		GetThisMemberValueString      "skip"
+		PushConstant0
+		EqualTo
+		And
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    25675, 4
+		LineNumberAlt1                127, 67
+		GetVariableValue              1              ; local
+		GetMemberValueString          "event"
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    25676, 4
+		LineNumberAlt1                128, 67
+		GetVariableValue              0              ; local
+		GetThisMemberFunctionString   "hide"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "enableinput"
+		; address: 0x529be
+		; source: 67 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_helpScreen.vbo" 135:135
+		MemberFunctionArgumentCheck 2
+		LineNumber                  25683, 4
+		LineNumberAlt1              135, 67
+		GetVariableValue            1              ; local
+		SetThisMemberValueString    "inputenabled"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setstring"
+		; address: 0x529d2
+		; source: 67 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_helpScreen.vbo" 143:144
+		MemberFunctionArgumentCheck   2
+		LineNumber                    25691, 4
+		LineNumberAlt1                143, 67
+		GetThisMemberValueString      "shown"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    25692, 4
+		LineNumberAlt1                144, 67
+		GetThisMemberValueString      "text"
+		GetVariableValue              1           ; local
+		Pull                          2
+		GetMemberFunctionString       "setstring"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+end ; class

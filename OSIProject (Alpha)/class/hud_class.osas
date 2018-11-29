@@ -1,0 +1,904 @@
+begin class "hud_class"
+	property "itemsarray"
+	property "thingy"
+	property "tokens"
+	property "mask"
+	property "element"
+	property "debuginfo"
+	property "showdebuginfo"
+	property "screenfader"
+	property "hidden"
+	property "added"
+	property "cdtimer"
+
+	begin method "hud_class"
+		; address: 0x384b7
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 88:89
+		MemberFunctionArgumentCheck 1
+		LineNumber                  10936, 4
+		LineNumberAlt1              88, 28
+		PushConstant0
+		SetThisMemberValueString    "hidden"
+		LineNumber                  10937, 4
+		LineNumberAlt1              89, 28
+		PushConstant0
+		SetThisMemberValueString    "added"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x384d7
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 98:128
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    10946, 4
+		LineNumberAlt1                98, 28
+		CreateArray
+		SetThisMemberValueString      "itemsarray"
+		LineNumber                    10948, 4
+		LineNumberAlt1                100, 28
+		CreateObjectString            "hudthingy"
+		Dup
+		Dup
+		GetMemberFunctionString       "hudthingy"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    10948, 4
+		LineNumberAlt1                100, 28
+		SetThisMemberValueString      "thingy"
+		LineNumber                    10949, 4
+		LineNumberAlt1                101, 28
+		CreateObjectString            "hudtokens"
+		Dup
+		Dup
+		GetMemberFunctionString       "hudtokens"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    10949, 4
+		LineNumberAlt1                101, 28
+		SetThisMemberValueString      "tokens"
+		LineNumber                    10950, 4
+		LineNumberAlt1                102, 28
+		CreateObjectString            "hudmask"
+		Dup
+		Dup
+		GetMemberFunctionString       "hudmask"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    10950, 4
+		LineNumberAlt1                102, 28
+		SetThisMemberValueString      "mask"
+		LineNumber                    10951, 4
+		LineNumberAlt1                103, 28
+		CreateObjectString            "hudelement"
+		Dup
+		Dup
+		GetMemberFunctionString       "hudelement"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    10951, 4
+		LineNumberAlt1                103, 28
+		SetThisMemberValueString      "element"
+		LineNumber                    10952, 4
+		LineNumberAlt1                104, 28
+		GetThisMemberValueString      "itemsarray"
+		GetThisMemberValueString      "thingy"
+		AppendToArray
+		LineNumber                    10953, 4
+		LineNumberAlt1                105, 28
+		GetThisMemberValueString      "itemsarray"
+		GetThisMemberValueString      "tokens"
+		AppendToArray
+		LineNumber                    10954, 4
+		LineNumberAlt1                106, 28
+		GetThisMemberValueString      "itemsarray"
+		GetThisMemberValueString      "element"
+		AppendToArray
+		LineNumber                    10955, 4
+		LineNumberAlt1                107, 28
+		GetThisMemberValueString      "itemsarray"
+		GetThisMemberValueString      "mask"
+		AppendToArray
+		LineNumber                    10957, 4
+		LineNumberAlt1                109, 28
+		CreateObjectString            "huddebuginfo"
+		Dup
+		Dup
+		GetMemberFunctionString       "huddebuginfo"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    10957, 4
+		LineNumberAlt1                109, 28
+		SetThisMemberValueString      "debuginfo"
+		LineNumber                    10958, 4
+		LineNumberAlt1                110, 28
+		PushConstant0
+		SetThisMemberValueString      "showdebuginfo"
+		LineNumber                    10960, 4
+		LineNumberAlt1                112, 28
+		CreateObjectString            "fadescreen"
+		Dup
+		PushConstant0
+		PushConstantf32               1
+		Pull                          3
+		GetMemberFunctionString       "fadescreen"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    10960, 4
+		LineNumberAlt1                112, 28
+		SetThisMemberValueString      "screenfader"
+		LineNumber                    10962, 4
+		LineNumberAlt1                114, 28
+		PushConstant0
+		SetThisMemberValueString      "hidden"
+		LineNumber                    10963, 4
+		LineNumberAlt1                115, 28
+		PushConstant0
+		SetThisMemberValueString      "added"
+		LineNumber                    10965, 4
+		LineNumberAlt1                117, 28
+		CreateObjectString            "gs_lego_cdtimer"
+		Dup
+		PushConstantf32               15
+		Pull                          2
+		GetMemberFunctionString       "gs_lego_cdtimer"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    10965, 4
+		LineNumberAlt1                117, 28
+		SetThisMemberValueString      "cdtimer"
+		LineNumber                    10968, 4
+		LineNumberAlt1                120, 28
+		GetThisMemberValueString      "itemsarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                 ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1                 ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    10969, 4
+		LineNumberAlt1                121, 28
+		GetThisMemberValueString      "itemsarray"
+		GetVariableValue              1                 ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    10970, 4
+		LineNumberAlt1                122, 28
+		GetThisMemberValueString      "itemsarray"
+		GetVariableValue              1                 ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "add"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    10972, 4
+		LineNumberAlt1                124, 28
+		PushConstanti8                1
+		SetThisMemberValueString      "added"
+		LineNumber                    10974, 4
+		LineNumberAlt1                126, 28
+		GetThisMemberValueString      "debuginfo"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    10975, 4
+		LineNumberAlt1                127, 28
+		GetThisMemberValueString      "screenfader"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    10976, 4
+		LineNumberAlt1                128, 28
+		GetVariableValue              0                 ; local
+		GetThisMemberFunctionString   "hide"
+		JumpAbsolute                  1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initshort"
+		; address: 0x386f2
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 133:138
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    10981, 4
+		LineNumberAlt1                133, 28
+		PushConstantStringString      "[][][] hud initShort()"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    10982, 4
+		LineNumberAlt1                134, 28
+		GetThisMemberValueString      "itemsarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                        ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1                        ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    10983, 4
+		LineNumberAlt1                135, 28
+		GetThisMemberValueString      "itemsarray"
+		GetVariableValue              1                        ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "initshort"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    10985, 4
+		LineNumberAlt1                137, 28
+		GetThisMemberValueString      "screenfader"
+		Dup
+		GetMemberFunctionString       "initshort"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    10986, 4
+		LineNumberAlt1                138, 28
+		GetThisMemberValueString      "debuginfo"
+		Dup
+		GetMemberFunctionString       "initshort"
+		JumpAbsolute                  1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x38770
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 144:168
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          2
+		LineNumber                    10992, 4
+		LineNumberAlt1                144, 28
+		GetThisMemberValueString      "cdtimer"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    10993, 4
+		LineNumberAlt1                145, 28
+		GetThisMemberValueString      "cdtimer"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    10994, 4
+		LineNumberAlt1                146, 28
+		PushNothing
+		SetThisMemberValueString      "cdtimer"
+		; <-
+		BranchTarget                  0
+		LineNumber                    10996, 4
+		LineNumberAlt1                148, 28
+		GetThisMemberValueString      "screenfader"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    10997, 4
+		LineNumberAlt1                149, 28
+		GetThisMemberValueString      "screenfader"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    10998, 4
+		LineNumberAlt1                150, 28
+		PushNothing
+		SetThisMemberValueString      "screenfader"
+		; <-
+		BranchTarget                  1
+		LineNumber                    11000, 4
+		LineNumberAlt1                152, 28
+		PushConstantStringString      "[][][]cleanup debug info"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    11001, 4
+		LineNumberAlt1                153, 28
+		GetThisMemberValueString      "debuginfo"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    11002, 4
+		LineNumberAlt1                154, 28
+		GetThisMemberValueString      "debuginfo"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    11003, 4
+		LineNumberAlt1                155, 28
+		PushNothing
+		SetThisMemberValueString      "debuginfo"
+		; <-
+		BranchTarget                  2
+		LineNumber                    11005, 4
+		LineNumberAlt1                157, 28
+		GetThisMemberValueString      "itemsarray"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    11006, 4
+		LineNumberAlt1                158, 28
+		GetThisMemberValueString      "itemsarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		SetVariableValue              1                          ; local
+		LineNumber                    11007, 4
+		LineNumberAlt1                159, 28
+		GetVariableValue              1                          ; local
+		PushConstant0
+		SetVariableValue              2                          ; local
+		; <-
+		BranchTarget                  3
+		Dup
+		GetVariableValue              2                          ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    11008, 4
+		LineNumberAlt1                160, 28
+		GetThisMemberValueString      "itemsarray"
+		GetVariableValue              1                          ; local
+		GetVariableValue              2                          ; local
+		Subtract
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    11009, 4
+		LineNumberAlt1                161, 28
+		GetThisMemberValueString      "itemsarray"
+		GetVariableValue              1                          ; local
+		GetVariableValue              2                          ; local
+		Subtract
+		PushNothing
+		SetArrayValue
+		IncrementVariable             2
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		Pop
+		LineNumber                    11011, 4
+		LineNumberAlt1                163, 28
+		PushNothing
+		SetThisMemberValueString      "itemsarray"
+		; <-
+		BranchTarget                  5
+		LineNumber                    11013, 4
+		LineNumberAlt1                165, 28
+		PushNothing
+		SetThisMemberValueString      "mask"
+		LineNumber                    11014, 4
+		LineNumberAlt1                166, 28
+		PushNothing
+		SetThisMemberValueString      "tokens"
+		LineNumber                    11015, 4
+		LineNumberAlt1                167, 28
+		PushNothing
+		SetThisMemberValueString      "element"
+		LineNumber                    11016, 4
+		LineNumberAlt1                168, 28
+		PushNothing
+		SetThisMemberValueString      "thingy"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupshort"
+		; address: 0x388e8
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 173:177
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    11021, 4
+		LineNumberAlt1                173, 28
+		GetThisMemberValueString      "itemsarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1              ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1              ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    11022, 4
+		LineNumberAlt1                174, 28
+		GetThisMemberValueString      "itemsarray"
+		GetVariableValue              1              ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupshort"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    11024, 4
+		LineNumberAlt1                176, 28
+		GetThisMemberValueString      "screenfader"
+		Dup
+		GetMemberFunctionString       "cleanupshort"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    11025, 4
+		LineNumberAlt1                177, 28
+		GetThisMemberValueString      "debuginfo"
+		Dup
+		GetMemberFunctionString       "cleanupshort"
+		JumpAbsolute                  1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "add"
+		; address: 0x38952
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 182:182
+		MemberFunctionArgumentCheck 1
+		LineNumber                  11030, 4
+		LineNumberAlt1              182, 28
+		PushConstanti8              1
+		SetThisMemberValueString    "added"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "show"
+		; address: 0x38965
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 191:194
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    11039, 4
+		LineNumberAlt1                191, 28
+		GetThisMemberValueString      "added"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    11040, 4
+		LineNumberAlt1                192, 28
+		PushConstant0
+		SetThisMemberValueString      "hidden"
+		LineNumber                    11041, 4
+		LineNumberAlt1                193, 28
+		GetThisMemberValueString      "itemsarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1            ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1            ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    11042, 4
+		LineNumberAlt1                194, 28
+		GetThisMemberValueString      "itemsarray"
+		GetVariableValue              1            ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		; <-
+		BranchTarget                  2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hide"
+		; address: 0x389c8
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 203:208
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    11051, 4
+		LineNumberAlt1                203, 28
+		GetThisMemberValueString      "added"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    11053, 4
+		LineNumberAlt1                205, 28
+		GetThisMemberValueString      "itemsarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1            ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1            ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    11054, 4
+		LineNumberAlt1                206, 28
+		GetThisMemberValueString      "itemsarray"
+		GetVariableValue              1            ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    11056, 4
+		LineNumberAlt1                208, 28
+		PushConstanti8                1
+		SetThisMemberValueString      "hidden"
+		; <-
+		BranchTarget                  2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x38a2c
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "slideall"
+		; address: 0x38a30
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 219:224
+		MemberFunctionArgumentCheck   2
+		LineNumber                    11067, 4
+		LineNumberAlt1                219, 28
+		GetThisMemberValueString      "added"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    11068, 4
+		LineNumberAlt1                220, 28
+		PushConstantStringString      "[][][] Slide all Hud elements: "
+		GetVariableValue              1                                 ; local
+		ConvertToString
+		Add
+		PushConstantStringString      "."
+		Add
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    11069, 4
+		LineNumberAlt1                221, 28
+		GetThisMemberValueString      "thingy"
+		GetVariableValue              1                                 ; local
+		Pull                          2
+		GetMemberFunctionString       "slide"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    11070, 4
+		LineNumberAlt1                222, 28
+		GetThisMemberValueString      "tokens"
+		GetVariableValue              1                                 ; local
+		Pull                          2
+		GetMemberFunctionString       "slide"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    11071, 4
+		LineNumberAlt1                223, 28
+		GetThisMemberValueString      "mask"
+		GetVariableValue              1                                 ; local
+		Pull                          2
+		GetMemberFunctionString       "slide"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    11072, 4
+		LineNumberAlt1                224, 28
+		GetThisMemberValueString      "element"
+		GetVariableValue              1                                 ; local
+		Pull                          2
+		GetMemberFunctionString       "slide"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x38ac4
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 230:239
+		MemberFunctionArgumentCheck   2
+		LineNumber                    11078, 4
+		LineNumberAlt1                230, 28
+		GetThisMemberValueString      "added"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    11079, 4
+		LineNumberAlt1                231, 28
+		GetThisMemberValueString      "thingy"
+		GetVariableValue              1                       ; local
+		Pull                          2
+		GetMemberFunctionString       "onevent"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    11081, 4
+		LineNumberAlt1                233, 28
+		GetVariableValue              1                       ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                32
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    11083, 4
+		LineNumberAlt1                235, 28
+		PushConstantStringString      "[][][] Hide Hud Event"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    11084, 4
+		LineNumberAlt1                236, 28
+		GetVariableValue              0                       ; local
+		GetThisMemberFunctionString   "hide"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		Dup
+		PushConstanti8                33
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    11086, 4
+		LineNumberAlt1                238, 28
+		PushConstantStringString      "[][][] Show Hud Event"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    11087, 4
+		LineNumberAlt1                239, 28
+		GetVariableValue              0                       ; local
+		GetThisMemberFunctionString   "show"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  1
+		Pop
+		; <-
+		BranchTarget                  2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x38b63
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 246:262
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          1
+		LineNumber                    11094, 4
+		LineNumberAlt1                246, 28
+		GetVariableValue              1               ; local
+		GetMemberValueString          "deltatime"
+		PushConstant0
+		EqualTo
+		Not
+		GetThisMemberValueString      "added"
+		PushConstanti8                1
+		EqualTo
+		And
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    11096, 4
+		LineNumberAlt1                248, 28
+		GetThisMemberValueString      "cdtimer"
+		GetMemberValueString          "active"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    11097, 4
+		LineNumberAlt1                249, 28
+		GetThisMemberValueString      "cdtimer"
+		GetVariableValue              1               ; local
+		Pull                          2
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    11100, 4
+		LineNumberAlt1                252, 28
+		GetThisMemberValueString      "showdebuginfo"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    11101, 4
+		LineNumberAlt1                253, 28
+		GetThisMemberValueString      "debuginfo"
+		GetVariableValue              1               ; local
+		Pull                          2
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  1
+		LineNumber                    11104, 4
+		LineNumberAlt1                256, 28
+		GetThisMemberValueString      "hidden"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    11105, 4
+		LineNumberAlt1                257, 28
+		GetThisMemberValueString      "itemsarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2               ; local
+		; <-
+		BranchTarget                  2
+		Dup
+		GetVariableValue              2               ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    11106, 4
+		LineNumberAlt1                258, 28
+		GetThisMemberValueString      "itemsarray"
+		GetVariableValue              2               ; local
+		GetArrayValue
+		GetVariableValue              1               ; local
+		Pull                          2
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  2
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Pop
+		; <-
+		BranchTarget                  4
+		LineNumber                    11110, 4
+		LineNumberAlt1                262, 28
+		GetThisMemberValueString      "screenfader"
+		GetVariableValue              1               ; local
+		Pull                          2
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  5
+		PushNothing
+		Return
+	end ; method
+
+	begin method "showframerate"
+		; address: 0x38c49
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 269:273
+		MemberFunctionArgumentCheck   2
+		LineNumber                    11117, 4
+		LineNumberAlt1                269, 28
+		GetVariableValue              1               ; local
+		SetThisMemberValueString      "showdebuginfo"
+		LineNumber                    11118, 4
+		LineNumberAlt1                270, 28
+		GetVariableValue              1               ; local
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    11119, 4
+		LineNumberAlt1                271, 28
+		GetThisMemberValueString      "debuginfo"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    11121, 4
+		LineNumberAlt1                273, 28
+		GetThisMemberValueString      "debuginfo"
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "fadeoutscreen"
+		; address: 0x38c98
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 279:279
+		MemberFunctionArgumentCheck 1
+		LineNumber                  11127, 4
+		LineNumberAlt1              279, 28
+		GetThisMemberValueString    "screenfader"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "fadeinscreen"
+		; address: 0x38cb0
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 283:283
+		MemberFunctionArgumentCheck 1
+		LineNumber                  11131, 4
+		LineNumberAlt1              283, 28
+		GetThisMemberValueString    "screenfader"
+		Dup
+		GetMemberFunctionString     "hide"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

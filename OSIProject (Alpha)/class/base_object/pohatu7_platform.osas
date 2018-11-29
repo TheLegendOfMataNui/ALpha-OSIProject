@@ -1,0 +1,175 @@
+begin class "pohatu7_platform", "base_object"
+	property "obj"
+	property "id"
+	property "dist"
+	property "time"
+	property "x"
+	property "y"
+	property "z"
+	property "moveup"
+
+	begin method "pohatu7_platform"
+		; address: 0xd66aa
+		; source: 239 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_poha.vbo" 323:331
+		MemberFunctionArgumentCheck 6
+		LineNumber                  19807, 4
+		LineNumberAlt1              323, 239
+		GetVariableValue            0                                            ; local
+		GetThisMemberFunctionString "base_object"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  19808, 4
+		LineNumberAlt1              324, 239
+		GetVariableValue            1                                            ; local
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  19808, 4
+		LineNumberAlt1              324, 239
+		SetThisMemberValueString    "id"
+		LineNumber                  19809, 4
+		LineNumberAlt1              325, 239
+		GetThisMemberValueString    "id"
+		GetVariableValue            2                                            ; local
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  19809, 4
+		LineNumberAlt1              325, 239
+		CallGameFunctionString      "gcareadirector", "getmoveableobj", 2
+		LineNumber                  19809, 4
+		LineNumberAlt1              325, 239
+		SetThisMemberValueString    "obj"
+		LineNumber                  19810, 4
+		LineNumberAlt1              326, 239
+		GetThisMemberValueString    "obj"
+		PushConstant0
+		PushConstant0
+		PushConstanti8              3
+		CallGameFunctionString      "gcmoveableobj", "setcharacterresponses", 4
+		Pop
+		LineNumber                  19811, 4
+		LineNumberAlt1              327, 239
+		GetThisMemberValueString    "obj"
+		CallGameFunctionString      "gcmoveableobj", "getx", 1
+		LineNumber                  19811, 4
+		LineNumberAlt1              327, 239
+		SetThisMemberValueString    "x"
+		LineNumber                  19812, 4
+		LineNumberAlt1              328, 239
+		GetThisMemberValueString    "obj"
+		CallGameFunctionString      "gcmoveableobj", "gety", 1
+		LineNumber                  19812, 4
+		LineNumberAlt1              328, 239
+		SetThisMemberValueString    "y"
+		LineNumber                  19813, 4
+		LineNumberAlt1              329, 239
+		GetThisMemberValueString    "obj"
+		CallGameFunctionString      "gcmoveableobj", "getz", 1
+		LineNumber                  19813, 4
+		LineNumberAlt1              329, 239
+		SetThisMemberValueString    "z"
+		LineNumber                  19814, 4
+		LineNumberAlt1              330, 239
+		GetVariableValue            4                                            ; local
+		SetThisMemberValueString    "dist"
+		LineNumber                  19815, 4
+		LineNumberAlt1              331, 239
+		GetVariableValue            5                                            ; local
+		SetThisMemberValueString    "time"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xd67ac
+		; source: 239 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_poha.vbo" 337:337
+		MemberFunctionArgumentCheck 1
+		LineNumber                  19821, 4
+		LineNumberAlt1              337, 239
+		PushConstanti8              1
+		SetThisMemberValueString    "moveup"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xd67bf
+		; source: 239 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_poha.vbo" 342:342
+		MemberFunctionArgumentCheck 1
+		LineNumber                  19826, 4
+		LineNumberAlt1              342, 239
+		PushNothing
+		SetThisMemberValueString    "obj"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "toggle"
+		; address: 0xd67d1
+		; source: 239 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_poha.vbo" 347:352
+		MemberFunctionArgumentCheck   1
+		LineNumber                    19831, 4
+		LineNumberAlt1                347, 239
+		GetThisMemberValueString      "moveup"
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    19832, 4
+		LineNumberAlt1                348, 239
+		PushConstant0
+		SetThisMemberValueString      "moveup"
+		LineNumber                    19833, 4
+		LineNumberAlt1                349, 239
+		GetThisMemberValueString      "obj"
+		GetThisMemberValueString      "x"
+		GetThisMemberValueString      "y"
+		GetThisMemberValueString      "dist"
+		Add
+		GetThisMemberValueString      "z"
+		GetThisMemberValueString      "time"
+		CallGameFunctionString        "gcmoveableobj", "interpolate", 5
+		Pop
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    19835, 4
+		LineNumberAlt1                351, 239
+		PushConstanti8                1
+		SetThisMemberValueString      "moveup"
+		LineNumber                    19836, 4
+		LineNumberAlt1                352, 239
+		GetThisMemberValueString      "obj"
+		GetThisMemberValueString      "x"
+		GetThisMemberValueString      "y"
+		GetThisMemberValueString      "z"
+		GetThisMemberValueString      "time"
+		CallGameFunctionString        "gcmoveableobj", "interpolate", 5
+		Pop
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "reset"
+		; address: 0xd6849
+		; source: 239 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_poha.vbo" 358:360
+		MemberFunctionArgumentCheck 1
+		LineNumber                  19842, 4
+		LineNumberAlt1              358, 239
+		PushConstanti8              1
+		SetThisMemberValueString    "moveup"
+		LineNumber                  19843, 4
+		LineNumberAlt1              359, 239
+		GetThisMemberValueString    "obj"
+		CallGameFunctionString      "gcmoveableobj", "cancelinterpolate", 1
+		Pop
+		LineNumber                  19844, 4
+		LineNumberAlt1              360, 239
+		GetThisMemberValueString    "obj"
+		GetThisMemberValueString    "x"
+		GetThisMemberValueString    "y"
+		GetThisMemberValueString    "z"
+		CallGameFunctionString      "gcmoveableobj", "setposition", 4
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

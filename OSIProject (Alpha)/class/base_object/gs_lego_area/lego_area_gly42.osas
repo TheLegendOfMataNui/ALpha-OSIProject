@@ -1,0 +1,71 @@
+begin class "lego_area_gly42", "gs_lego_area"
+	begin method "lego_area_gly42"
+		; address: 0x89165
+		; source: 142 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_gly4.vbo" 23:24
+		MemberFunctionArgumentCheck 2
+		LineNumber                  52501, 4
+		LineNumberAlt1              23, 142
+		GetVariableValue            0                    ; local
+		PushConstantStringString    "gly4"
+		GetVariableValue            1                    ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  52502, 4
+		LineNumberAlt1              24, 142
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x89197
+		; source: 142 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_gly4.vbo" 31:32
+		MemberFunctionArgumentCheck 1
+		LineNumber                  52509, 4
+		LineNumberAlt1              31, 142
+		PushConstanti8              -1
+		PushConstant0
+		PushConstantf32             70
+		Subtract
+		PushConstant0
+		PushConstantf32             1200
+		Subtract
+		PushConstantf32             0.05000000074505806
+		CallGameFunctionString      "gcareadirector", "setfog", 4
+		Pop
+		LineNumber                  52510, 4
+		LineNumberAlt1              32, 142
+		PushConstant0
+		CallGameFunctionString      "gclightdirector", "setcavelighting", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x891d3
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x891d7
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x891db
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+end ; class

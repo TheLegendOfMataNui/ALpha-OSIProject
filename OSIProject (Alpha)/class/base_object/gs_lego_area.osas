@@ -1,0 +1,230 @@
+begin class "gs_lego_area", "base_object"
+	property "name"
+	property "id"
+	property "onscreen"
+	property "darkarea"
+	property "startingarea"
+	property "enterstartid"
+	property "enterlookid"
+	property "level"
+
+	begin method "gs_lego_area"
+		; address: 0x5941e
+		; source: 84 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_area.vbo" 33:41
+		MemberFunctionArgumentCheck   5
+		LineNumber                    30032, 4
+		LineNumberAlt1                33, 84
+		GetVariableValue              1                                            ; local
+		SetThisMemberValueString      "name"
+		LineNumber                    30033, 4
+		LineNumberAlt1                34, 84
+		GetVariableValue              2                                            ; local
+		SetThisMemberValueString      "level"
+		LineNumber                    30034, 4
+		LineNumberAlt1                35, 84
+		GetVariableValue              1                                            ; local
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    30034, 4
+		LineNumberAlt1                35, 84
+		SetThisMemberValueString      "id"
+		LineNumber                    30035, 4
+		LineNumberAlt1                36, 84
+		GetVariableValue              3                                            ; local
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    30036, 4
+		LineNumberAlt1                37, 84
+		PushConstant0
+		SetThisMemberValueString      "onscreen"
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    30038, 4
+		LineNumberAlt1                39, 84
+		GetVariableValue              3                                            ; local
+		SetThisMemberValueString      "onscreen"
+		; <-
+		BranchTarget                  1
+		LineNumber                    30040, 4
+		LineNumberAlt1                41, 84
+		CreateArray
+		Dup
+		PushConstant0
+		AppendToArray
+		Dup
+		PushConstant0
+		AppendToArray
+		Dup
+		PushConstant0
+		AppendToArray
+		Dup
+		PushConstant0
+		AppendToArray
+		SetThisMemberValueString      "startingarea"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x594af
+		; source: 84 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_area.vbo" 49:49
+		MemberFunctionArgumentCheck 1
+		LineNumber                  30048, 4
+		LineNumberAlt1              49, 84
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "lego_area_initfull"
+		; address: 0x594c6
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "show"
+		; address: 0x594ca
+		; source: 84 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_area.vbo" 59:59
+		MemberFunctionArgumentCheck 1
+		LineNumber                  30058, 4
+		LineNumberAlt1              59, 84
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_show"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "lego_area_show"
+		; address: 0x594e1
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hide"
+		; address: 0x594e5
+		; source: 84 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_area.vbo" 70:70
+		MemberFunctionArgumentCheck 1
+		LineNumber                  30069, 4
+		LineNumberAlt1              70, 84
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_hide"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "lego_area_hide"
+		; address: 0x594fc
+		; source: 84 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_area.vbo" 76:77
+		MemberFunctionArgumentCheck   1
+		LineNumber                    30075, 4
+		LineNumberAlt1                76, 84
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "maskcontrol"
+		Dup
+		GetMemberFunctionString       "isactive"
+		JumpAbsolute                  1
+		LineNumber                    30075, 4
+		LineNumberAlt1                76, 84
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    30076, 4
+		LineNumberAlt1                77, 84
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "maskcontrol"
+		Dup
+		GetMemberFunctionString       "toggleactive"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setcurrent"
+		; address: 0x59540
+		; source: 84 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_area.vbo" 85:85
+		MemberFunctionArgumentCheck 1
+		LineNumber                  30084, 4
+		LineNumberAlt1              85, 84
+		GetThisMemberValueString    "name"
+		CallGameFunctionString      "gcareadirector", "setcurrentarea", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "createemmiter"
+		; address: 0x59558
+		; source: 84 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_area.vbo" 90:90
+		MemberFunctionArgumentCheck 5
+		LineNumber                  30089, 4
+		LineNumberAlt1              90, 84
+		GetVariableValue            1                                    ; local
+		GetVariableValue            2                                    ; local
+		GetVariableValue            3                                    ; local
+		GetVariableValue            4                                    ; local
+		CallGameFunctionString      "gcareadirector", "createemitter", 4
+		LineNumber                  30089, 4
+		LineNumberAlt1              90, 84
+		Return
+	end ; method
+
+	begin method "releaseemmiter"
+		; address: 0x59581
+		; source: 84 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_area.vbo" 95:95
+		MemberFunctionArgumentCheck 3
+		LineNumber                  30094, 4
+		LineNumberAlt1              95, 84
+		GetVariableValue            1                                     ; local
+		GetVariableValue            2                                     ; local
+		CallGameFunctionString      "gcareadirector", "releaseemitter", 2
+		LineNumber                  30094, 4
+		LineNumberAlt1              95, 84
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x595a4
+		; source: 84 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_area.vbo" 100:100
+		MemberFunctionArgumentCheck 1
+		LineNumber                  30099, 4
+		LineNumberAlt1              100, 84
+		GetVariableValue            0                       ; local
+		GetThisMemberFunctionString "lego_area_cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "lego_area_cleanupfull"
+		; address: 0x595bb
+		; source: 84 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_area.vbo" 105:106
+		MemberFunctionArgumentCheck 1
+		LineNumber                  30104, 4
+		LineNumberAlt1              105, 84
+		PushNothing
+		SetThisMemberValueString    "startingarea"
+		LineNumber                  30105, 4
+		LineNumberAlt1              106, 84
+		PushNothing
+		SetThisMemberValueString    "level"
+		PushNothing
+		Return
+	end ; method
+end ; class

@@ -1,0 +1,983 @@
+begin class "tumblemazepuzzlep", "base_object"
+	property "doors"
+	property "nextdoor"
+	property "glyph"
+	property "showglyph"
+	property "area"
+	property "dead"
+
+	begin method "tumblemazepuzzlep"
+		; address: 0x63d83
+		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 167:167
+		MemberFunctionArgumentCheck 2
+		LineNumber                  36120, 4
+		LineNumberAlt1              167, 99
+		GetVariableValue            1        ; local
+		SetThisMemberValueString    "area"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x63d97
+		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 175:232
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          2
+		LineNumber                    36128, 4
+		LineNumberAlt1                175, 99
+		PushConstanti8                50
+		CallGameFunctionString        "gcareadirector", "setnearestmax", 1
+		Pop
+		LineNumber                    36130, 4
+		LineNumberAlt1                177, 99
+		PushConstant0
+		SetThisMemberValueString      "dead"
+		LineNumber                    36132, 4
+		LineNumberAlt1                179, 99
+		PushConstantStringString      "gly0"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    36132, 4
+		LineNumberAlt1                179, 99
+		CallGameFunctionString        "gcsaver", "findglyph", 1
+		LineNumber                    36132, 4
+		LineNumberAlt1                179, 99
+		SetVariableValue              1                                            ; local
+		LineNumber                    36133, 4
+		LineNumberAlt1                180, 99
+		GetVariableValue              1                                            ; local
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    36134, 4
+		LineNumberAlt1                181, 99
+		PushConstant0
+		SetThisMemberValueString      "showglyph"
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    36136, 4
+		LineNumberAlt1                183, 99
+		PushConstanti8                1
+		SetThisMemberValueString      "showglyph"
+		; <-
+		BranchTarget                  1
+		LineNumber                    36138, 4
+		LineNumberAlt1                185, 99
+		GetThisMemberValueString      "showglyph"
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    36139, 4
+		LineNumberAlt1                186, 99
+		CreateObjectString            "lego_pickup"
+		Dup
+		PushConstantStringString      "gly0"
+		PushConstanti8                3
+		PushConstanti8                2
+		PushConstantStringString      "item"
+		PushConstanti8                7
+		PushConstanti8                1
+		Pull                          7
+		GetMemberFunctionString       "lego_pickup"
+		JumpAbsolute                  7
+		Pop
+		LineNumber                    36139, 4
+		LineNumberAlt1                186, 99
+		SetThisMemberValueString      "glyph"
+		LineNumber                    36140, 4
+		LineNumberAlt1                187, 99
+		GetThisMemberValueString      "glyph"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  2
+		LineNumber                    36144, 4
+		LineNumberAlt1                191, 99
+		CreateArray
+		SetThisMemberValueString      "doors"
+		LineNumber                    36145, 4
+		LineNumberAlt1                192, 99
+		GetThisMemberValueString      "doors"
+		CreateObjectString            "tmbl_doorway"
+		Dup
+		PushConstantStringString      "stre"
+		PushConstantStringString      "loke"
+		PushConstantStringString      "tpt1"
+		GetThisMemberValueString      "area"
+		GetMemberValueString          "name"
+		Pull                          5
+		GetMemberFunctionString       "tmbl_doorway"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    36145, 4
+		LineNumberAlt1                192, 99
+		AppendToArray
+		LineNumber                    36146, 4
+		LineNumberAlt1                193, 99
+		GetThisMemberValueString      "doors"
+		CreateObjectString            "tmbl_doorway"
+		Dup
+		PushConstantStringString      "strd"
+		PushConstantStringString      "lokd"
+		PushConstantStringString      "tpt2"
+		GetThisMemberValueString      "area"
+		GetMemberValueString          "name"
+		Pull                          5
+		GetMemberFunctionString       "tmbl_doorway"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    36146, 4
+		LineNumberAlt1                193, 99
+		AppendToArray
+		LineNumber                    36147, 4
+		LineNumberAlt1                194, 99
+		GetThisMemberValueString      "doors"
+		CreateObjectString            "tmbl_doorway"
+		Dup
+		PushConstantStringString      "strc"
+		PushConstantStringString      "lokc"
+		PushConstantStringString      "tpt3"
+		GetThisMemberValueString      "area"
+		GetMemberValueString          "name"
+		Pull                          5
+		GetMemberFunctionString       "tmbl_doorway"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    36147, 4
+		LineNumberAlt1                194, 99
+		AppendToArray
+		LineNumber                    36148, 4
+		LineNumberAlt1                195, 99
+		GetThisMemberValueString      "doors"
+		CreateObjectString            "tmbl_doorway"
+		Dup
+		PushConstantStringString      "str0"
+		PushConstantStringString      "lok0"
+		PushConstantStringString      "tpt0"
+		GetThisMemberValueString      "area"
+		GetMemberValueString          "name"
+		Pull                          5
+		GetMemberFunctionString       "tmbl_doorway"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    36148, 4
+		LineNumberAlt1                195, 99
+		AppendToArray
+		LineNumber                    36149, 4
+		LineNumberAlt1                196, 99
+		GetThisMemberValueString      "doors"
+		CreateObjectString            "tmbl_doorway"
+		Dup
+		PushConstantStringString      "str1"
+		PushConstantStringString      "lok1"
+		PushConstantStringString      "tpt8"
+		GetThisMemberValueString      "area"
+		GetMemberValueString          "name"
+		Pull                          5
+		GetMemberFunctionString       "tmbl_doorway"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    36149, 4
+		LineNumberAlt1                196, 99
+		AppendToArray
+		LineNumber                    36150, 4
+		LineNumberAlt1                197, 99
+		GetThisMemberValueString      "doors"
+		CreateObjectString            "tmbl_doorway"
+		Dup
+		PushConstantStringString      "str4"
+		PushConstantStringString      "lok4"
+		PushConstantStringString      "tpt7"
+		GetThisMemberValueString      "area"
+		GetMemberValueString          "name"
+		Pull                          5
+		GetMemberFunctionString       "tmbl_doorway"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    36150, 4
+		LineNumberAlt1                197, 99
+		AppendToArray
+		LineNumber                    36151, 4
+		LineNumberAlt1                198, 99
+		GetThisMemberValueString      "doors"
+		CreateObjectString            "tmbl_doorway"
+		Dup
+		PushConstantStringString      "str3"
+		PushConstantStringString      "lok3"
+		PushConstantStringString      "tpt6"
+		GetThisMemberValueString      "area"
+		GetMemberValueString          "name"
+		Pull                          5
+		GetMemberFunctionString       "tmbl_doorway"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    36151, 4
+		LineNumberAlt1                198, 99
+		AppendToArray
+		LineNumber                    36152, 4
+		LineNumberAlt1                199, 99
+		GetThisMemberValueString      "doors"
+		CreateObjectString            "tmbl_doorway"
+		Dup
+		PushConstantStringString      "str2"
+		PushConstantStringString      "lok2"
+		PushConstantStringString      "tpt5"
+		GetThisMemberValueString      "area"
+		GetMemberValueString          "name"
+		Pull                          5
+		GetMemberFunctionString       "tmbl_doorway"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    36152, 4
+		LineNumberAlt1                199, 99
+		AppendToArray
+		LineNumber                    36153, 4
+		LineNumberAlt1                200, 99
+		GetThisMemberValueString      "doors"
+		CreateObjectString            "tmbl_doorway"
+		Dup
+		PushConstantStringString      "str8"
+		PushConstantStringString      "lok8"
+		PushConstantStringString      "tptc"
+		GetThisMemberValueString      "area"
+		GetMemberValueString          "name"
+		Pull                          5
+		GetMemberFunctionString       "tmbl_doorway"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    36153, 4
+		LineNumberAlt1                200, 99
+		AppendToArray
+		LineNumber                    36154, 4
+		LineNumberAlt1                201, 99
+		GetThisMemberValueString      "doors"
+		CreateObjectString            "tmbl_doorway"
+		Dup
+		PushConstantStringString      "str7"
+		PushConstantStringString      "lok7"
+		PushConstantStringString      "tptb"
+		GetThisMemberValueString      "area"
+		GetMemberValueString          "name"
+		Pull                          5
+		GetMemberFunctionString       "tmbl_doorway"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    36154, 4
+		LineNumberAlt1                201, 99
+		AppendToArray
+		LineNumber                    36155, 4
+		LineNumberAlt1                202, 99
+		GetThisMemberValueString      "doors"
+		CreateObjectString            "tmbl_doorway"
+		Dup
+		PushConstantStringString      "str6"
+		PushConstantStringString      "lok6"
+		PushConstantStringString      "tpta"
+		GetThisMemberValueString      "area"
+		GetMemberValueString          "name"
+		Pull                          5
+		GetMemberFunctionString       "tmbl_doorway"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    36155, 4
+		LineNumberAlt1                202, 99
+		AppendToArray
+		LineNumber                    36156, 4
+		LineNumberAlt1                203, 99
+		GetThisMemberValueString      "doors"
+		CreateObjectString            "tmbl_doorway"
+		Dup
+		PushConstantStringString      "str5"
+		PushConstantStringString      "lok5"
+		PushConstantStringString      "tpt9"
+		GetThisMemberValueString      "area"
+		GetMemberValueString          "name"
+		Pull                          5
+		GetMemberFunctionString       "tmbl_doorway"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    36156, 4
+		LineNumberAlt1                203, 99
+		AppendToArray
+		LineNumber                    36157, 4
+		LineNumberAlt1                204, 99
+		GetThisMemberValueString      "doors"
+		CreateObjectString            "tmbl_doorway"
+		Dup
+		PushConstantStringString      "str9"
+		PushConstantStringString      "lok9"
+		PushConstantStringString      "tptf"
+		GetThisMemberValueString      "area"
+		GetMemberValueString          "name"
+		Pull                          5
+		GetMemberFunctionString       "tmbl_doorway"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    36157, 4
+		LineNumberAlt1                204, 99
+		AppendToArray
+		LineNumber                    36158, 4
+		LineNumberAlt1                205, 99
+		GetThisMemberValueString      "doors"
+		CreateObjectString            "tmbl_doorway"
+		Dup
+		PushConstantStringString      "strb"
+		PushConstantStringString      "lokb"
+		PushConstantStringString      "tpte"
+		GetThisMemberValueString      "area"
+		GetMemberValueString          "name"
+		Pull                          5
+		GetMemberFunctionString       "tmbl_doorway"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    36158, 4
+		LineNumberAlt1                205, 99
+		AppendToArray
+		LineNumber                    36159, 4
+		LineNumberAlt1                206, 99
+		GetThisMemberValueString      "doors"
+		CreateObjectString            "tmbl_doorway"
+		Dup
+		PushConstantStringString      "stra"
+		PushConstantStringString      "loka"
+		PushConstantStringString      "tptd"
+		GetThisMemberValueString      "area"
+		GetMemberValueString          "name"
+		Pull                          5
+		GetMemberFunctionString       "tmbl_doorway"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    36159, 4
+		LineNumberAlt1                206, 99
+		AppendToArray
+		LineNumber                    36162, 4
+		LineNumberAlt1                209, 99
+		GetThisMemberValueString      "doors"
+		PushConstant0
+		GetArrayValue
+		PushConstanti8                2
+		Pull                          2
+		GetMemberFunctionString       "setgotodoor"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    36163, 4
+		LineNumberAlt1                210, 99
+		GetThisMemberValueString      "doors"
+		PushConstanti8                1
+		GetArrayValue
+		PushConstanti8                6
+		Pull                          2
+		GetMemberFunctionString       "setgotodoor"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    36164, 4
+		LineNumberAlt1                211, 99
+		GetThisMemberValueString      "doors"
+		PushConstanti8                2
+		GetArrayValue
+		PushConstanti8                3
+		Pull                          2
+		GetMemberFunctionString       "setgotodoor"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    36165, 4
+		LineNumberAlt1                212, 99
+		GetThisMemberValueString      "doors"
+		PushConstanti8                3
+		GetArrayValue
+		PushConstanti8                3
+		Pull                          2
+		GetMemberFunctionString       "setgotodoor"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    36166, 4
+		LineNumberAlt1                213, 99
+		GetThisMemberValueString      "doors"
+		PushConstanti8                4
+		GetArrayValue
+		PushConstanti8                3
+		Pull                          2
+		GetMemberFunctionString       "setgotodoor"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    36167, 4
+		LineNumberAlt1                214, 99
+		GetThisMemberValueString      "doors"
+		PushConstanti8                5
+		GetArrayValue
+		PushConstanti8                7
+		Pull                          2
+		GetMemberFunctionString       "setgotodoor"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    36168, 4
+		LineNumberAlt1                215, 99
+		GetThisMemberValueString      "doors"
+		PushConstanti8                6
+		GetArrayValue
+		PushConstanti8                7
+		Pull                          2
+		GetMemberFunctionString       "setgotodoor"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    36169, 4
+		LineNumberAlt1                216, 99
+		GetThisMemberValueString      "doors"
+		PushConstanti8                7
+		GetArrayValue
+		PushConstanti8                9
+		Pull                          2
+		GetMemberFunctionString       "setgotodoor"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    36170, 4
+		LineNumberAlt1                217, 99
+		GetThisMemberValueString      "doors"
+		PushConstanti8                8
+		GetArrayValue
+		PushConstanti8                3
+		Pull                          2
+		GetMemberFunctionString       "setgotodoor"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    36171, 4
+		LineNumberAlt1                218, 99
+		GetThisMemberValueString      "doors"
+		PushConstanti8                9
+		GetArrayValue
+		PushConstanti8                3
+		Pull                          2
+		GetMemberFunctionString       "setgotodoor"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    36172, 4
+		LineNumberAlt1                219, 99
+		GetThisMemberValueString      "doors"
+		PushConstanti8                10
+		GetArrayValue
+		PushConstanti8                12
+		Pull                          2
+		GetMemberFunctionString       "setgotodoor"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    36173, 4
+		LineNumberAlt1                220, 99
+		GetThisMemberValueString      "doors"
+		PushConstanti8                11
+		GetArrayValue
+		PushConstanti8                5
+		Pull                          2
+		GetMemberFunctionString       "setgotodoor"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    36174, 4
+		LineNumberAlt1                221, 99
+		GetThisMemberValueString      "doors"
+		PushConstanti8                12
+		GetArrayValue
+		PushConstanti8                8
+		Pull                          2
+		GetMemberFunctionString       "setgotodoor"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    36175, 4
+		LineNumberAlt1                222, 99
+		GetThisMemberValueString      "doors"
+		PushConstanti8                13
+		GetArrayValue
+		PushConstanti8                10
+		Pull                          2
+		GetMemberFunctionString       "setgotodoor"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    36176, 4
+		LineNumberAlt1                223, 99
+		GetThisMemberValueString      "doors"
+		PushConstanti8                14
+		GetArrayValue
+		PushConstanti8                15
+		Pull                          2
+		GetMemberFunctionString       "setgotodoor"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    36179, 4
+		LineNumberAlt1                226, 99
+		GetThisMemberValueString      "doors"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2                                            ; local
+		; <-
+		BranchTarget                  3
+		Dup
+		GetVariableValue              2                                            ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    36180, 4
+		LineNumberAlt1                227, 99
+		GetThisMemberValueString      "doors"
+		GetVariableValue              2                                            ; local
+		GetArrayValue
+		GetMemberValueString          "trigger"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    36181, 4
+		LineNumberAlt1                228, 99
+		GetThisMemberValueString      "doors"
+		GetVariableValue              2                                            ; local
+		GetArrayValue
+		GetMemberValueString          "trigger"
+		PushConstanti8                3
+		PushConstanti8                4
+		Pull                          3
+		GetMemberFunctionString       "setresponse"
+		JumpAbsolute                  3
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		Pop
+		LineNumber                    36184, 4
+		LineNumberAlt1                231, 99
+		GetThisMemberValueString      "doors"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2                                            ; local
+		; <-
+		BranchTarget                  5
+		Dup
+		GetVariableValue              2                                            ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 6, 0
+		; ->
+		LineNumber                    36185, 4
+		LineNumberAlt1                232, 99
+		GetThisMemberValueString      "doors"
+		GetVariableValue              2                                            ; local
+		GetArrayValue
+		GetMemberValueString          "trigger"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            5, 0
+		; ->
+		; <-
+		BranchTarget                  6
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initshort"
+		; address: 0x643a1
+		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 240:240
+		MemberFunctionArgumentCheck 1
+		LineNumber                  36193, 4
+		LineNumberAlt1              240, 99
+		GetVariableValue            0          ; local
+		GetThisMemberFunctionString "initfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x643b8
+		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 247:258
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    36200, 4
+		LineNumberAlt1                247, 99
+		GetThisMemberValueString      "doors"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		SetVariableValue              1             ; local
+		; <-
+		BranchTarget                  0
+		LineNumber                    36201, 4
+		LineNumberAlt1                248, 99
+		GetVariableValue              1             ; local
+		PushConstant0
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    36202, 4
+		LineNumberAlt1                249, 99
+		GetThisMemberValueString      "doors"
+		GetVariableValue              1             ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    36203, 4
+		LineNumberAlt1                250, 99
+		GetThisMemberValueString      "doors"
+		GetVariableValue              1             ; local
+		PushNothing
+		SetArrayValue
+		LineNumber                    36204, 4
+		LineNumberAlt1                251, 99
+		GetVariableValue              1             ; local
+		PushConstanti8                1
+		Subtract
+		SetVariableValue              1             ; local
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		LineNumber                    36206, 4
+		LineNumberAlt1                253, 99
+		GetThisMemberValueString      "glyph"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    36207, 4
+		LineNumberAlt1                254, 99
+		GetThisMemberValueString      "glyph"
+		GetMemberValueString          "objshown"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    36208, 4
+		LineNumberAlt1                255, 99
+		PushConstant0
+		SetThisMemberValueString      "showglyph"
+		; <-
+		BranchTarget                  2
+		LineNumber                    36210, 4
+		LineNumberAlt1                257, 99
+		GetThisMemberValueString      "glyph"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    36211, 4
+		LineNumberAlt1                258, 99
+		PushNothing
+		SetThisMemberValueString      "glyph"
+		; <-
+		BranchTarget                  3
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupshort"
+		; address: 0x6447c
+		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 265:265
+		MemberFunctionArgumentCheck 1
+		LineNumber                  36218, 4
+		LineNumberAlt1              265, 99
+		GetVariableValue            0             ; local
+		GetThisMemberFunctionString "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x64493
+		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 270:270
+		MemberFunctionArgumentCheck 1
+		LineNumber                  36223, 4
+		LineNumberAlt1              270, 99
+		PushNothing
+		SetThisMemberValueString    "area"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x644a5
+		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 276:277
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          1
+		LineNumber                    36229, 4
+		LineNumberAlt1                276, 99
+		GetThisMemberValueString      "doors"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2         ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              2         ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    36230, 4
+		LineNumberAlt1                277, 99
+		GetThisMemberValueString      "doors"
+		GetVariableValue              2         ; local
+		GetArrayValue
+		GetMemberValueString          "trigger"
+		GetVariableValue              1         ; local
+		Pull                          2
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  2
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x644ee
+		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 284:284
+		MemberFunctionArgumentCheck   2
+		LineNumber                    36237, 4
+		LineNumberAlt1                284, 99
+		GetVariableValue              1        ; local
+		GetMemberValueString          "button"
+		PushConstanti8                67
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    36237, 4
+		LineNumberAlt1                284, 99
+		GetVariableValue              1        ; local
+		GetMemberValueString          "event"
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    36237, 4
+		LineNumberAlt1                284, 99
+		GetVariableValue              0        ; local
+		GetThisMemberFunctionString   "cheat"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x64531
+		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 292:321
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          1
+		LineNumber                    36245, 4
+		LineNumberAlt1                292, 99
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                46
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    36248, 4
+		LineNumberAlt1                295, 99
+		PushConstantf32               1.2000000476837158
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		LineNumber                    36249, 4
+		LineNumberAlt1                296, 99
+		PushConstanti8                1
+		SetThisMemberValueString      "dead"
+		BranchAlwaysTarget            8, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		Dup
+		PushConstanti8                27
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    36252, 4
+		LineNumberAlt1                299, 99
+		GetThisMemberValueString      "dead"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    36253, 4
+		LineNumberAlt1                300, 99
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "unkill"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    36254, 4
+		LineNumberAlt1                301, 99
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		GetThisMemberValueString      "area"
+		GetMemberValueString          "enterstartid"
+		GetThisMemberValueString      "area"
+		GetMemberValueString          "enterlookid"
+		Pull                          3
+		GetMemberFunctionString       "gotopos"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    36255, 4
+		LineNumberAlt1                302, 99
+		PushConstant0
+		SetThisMemberValueString      "dead"
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		LineNumber                    36258, 4
+		LineNumberAlt1                305, 99
+		GetThisMemberValueString      "nextdoor"
+		PushConstanti8                15
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    36260, 4
+		LineNumberAlt1                307, 99
+		PushConstantStringString      "shrn"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    36260, 4
+		LineNumberAlt1                307, 99
+		PushConstantStringString      "str2"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    36260, 4
+		LineNumberAlt1                307, 99
+		PushConstantStringString      "lok0"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    36260, 4
+		LineNumberAlt1                307, 99
+		CallGameFunctionString        "gcareadirector", "switchareas", 3
+		Pop
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		LineNumber                    36262, 4
+		LineNumberAlt1                309, 99
+		GetThisMemberValueString      "nextdoor"
+		PushConstanti8                -1
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    36264, 4
+		LineNumberAlt1                311, 99
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		GetThisMemberValueString      "doors"
+		GetThisMemberValueString      "nextdoor"
+		GetArrayValue
+		GetMemberValueString          "startid"
+		GetThisMemberValueString      "doors"
+		GetThisMemberValueString      "nextdoor"
+		GetArrayValue
+		GetMemberValueString          "lookid"
+		Pull                          3
+		GetMemberFunctionString       "gotopos"
+		JumpAbsolute                  3
+		Pop
+		; <-
+		BranchTarget                  3
+		BranchAlwaysTarget            8, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		Dup
+		PushConstanti8                4
+		EqualTo
+		CompareAndBranchIfFalseTarget 8, 0
+		; ->
+		LineNumber                    36270, 4
+		LineNumberAlt1                317, 99
+		GetThisMemberValueString      "doors"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2                                            ; local
+		; <-
+		BranchTarget                  5
+		Dup
+		GetVariableValue              2                                            ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 7, 0
+		; ->
+		LineNumber                    36271, 4
+		LineNumberAlt1                318, 99
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		GetThisMemberValueString      "doors"
+		GetVariableValue              2                                            ; local
+		GetArrayValue
+		GetMemberValueString          "trigger"
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 6, 0
+		; ->
+		LineNumber                    36273, 4
+		LineNumberAlt1                320, 99
+		GetThisMemberValueString      "doors"
+		GetVariableValue              2                                            ; local
+		GetArrayValue
+		GetMemberValueString          "gotodoor"
+		SetThisMemberValueString      "nextdoor"
+		LineNumber                    36274, 4
+		LineNumberAlt1                321, 99
+		PushConstantf32               0.699999988079071
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		; <-
+		BranchTarget                  6
+		IncrementVariable             2
+		BranchAlwaysTarget            5, 0
+		; ->
+		; <-
+		BranchTarget                  7
+		Pop
+		; <-
+		BranchTarget                  8
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cheat"
+		; address: 0x64701
+		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 330:331
+		MemberFunctionArgumentCheck 1
+		LineNumber                  36283, 4
+		LineNumberAlt1              330, 99
+		PushConstanti8              13
+		SetThisMemberValueString    "nextdoor"
+		LineNumber                  36284, 4
+		LineNumberAlt1              331, 99
+		PushConstantf32             0.699999988079071
+		CallGameFunctionString      "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

@@ -1,0 +1,513 @@
+begin class "target_class"
+	property "obj"
+	property "timer"
+	property "timername"
+	property "parent"
+	property "turnedin"
+	property "inflag"
+	property "rotating"
+
+	begin method "target_class"
+		; address: 0x9755b
+		; source: 161 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly3.vbo" 429:432
+		MemberFunctionArgumentCheck 9
+		LineNumber                  59353, 4
+		LineNumberAlt1              429, 161
+		GetVariableValue            2                     ; local
+		SetThisMemberValueString    "timername"
+		LineNumber                  59354, 4
+		LineNumberAlt1              430, 161
+		GetVariableValue            8                     ; local
+		SetThisMemberValueString    "parent"
+		LineNumber                  59355, 4
+		LineNumberAlt1              431, 161
+		CreateObjectString          "lego_moveableobject"
+		Dup
+		GetVariableValue            1                     ; local
+		GetVariableValue            4                     ; local
+		Pull                        3
+		GetMemberFunctionString     "lego_moveableobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  59355, 4
+		LineNumberAlt1              431, 161
+		SetThisMemberValueString    "obj"
+		LineNumber                  59356, 4
+		LineNumberAlt1              432, 161
+		CreateObjectString          "lego_timer"
+		Dup
+		GetThisMemberValueString    "timername"
+		GetVariableValue            3                     ; local
+		PushConstant0
+		Pull                        4
+		GetMemberFunctionString     "lego_timer"
+		JumpAbsolute                4
+		Pop
+		LineNumber                  59356, 4
+		LineNumberAlt1              432, 161
+		SetThisMemberValueString    "timer"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x975d2
+		; source: 161 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly3.vbo" 442:446
+		MemberFunctionArgumentCheck 4
+		LineNumber                  59366, 4
+		LineNumberAlt1              442, 161
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  59367, 4
+		LineNumberAlt1              443, 161
+		GetThisMemberValueString    "timer"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  59368, 4
+		LineNumberAlt1              444, 161
+		PushConstant0
+		SetThisMemberValueString    "turnedin"
+		LineNumber                  59369, 4
+		LineNumberAlt1              445, 161
+		PushConstant0
+		SetThisMemberValueString    "inflag"
+		LineNumber                  59370, 4
+		LineNumberAlt1              446, 161
+		PushConstant0
+		SetThisMemberValueString    "rotating"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "show"
+		; address: 0x97628
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hide"
+		; address: 0x9762c
+		; source: 161 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly3.vbo" 456:464
+		MemberFunctionArgumentCheck 1
+		LineNumber                  59380, 4
+		LineNumberAlt1              456, 161
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  59381, 4
+		LineNumberAlt1              457, 161
+		PushNothing
+		SetThisMemberValueString    "obj"
+		LineNumber                  59382, 4
+		LineNumberAlt1              458, 161
+		GetThisMemberValueString    "timer"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  59383, 4
+		LineNumberAlt1              459, 161
+		PushNothing
+		SetThisMemberValueString    "timer"
+		LineNumber                  59384, 4
+		LineNumberAlt1              460, 161
+		PushNothing
+		SetThisMemberValueString    "timername"
+		LineNumber                  59385, 4
+		LineNumberAlt1              461, 161
+		PushNothing
+		SetThisMemberValueString    "parent"
+		LineNumber                  59386, 4
+		LineNumberAlt1              462, 161
+		PushNothing
+		SetThisMemberValueString    "turnedin"
+		LineNumber                  59387, 4
+		LineNumberAlt1              463, 161
+		PushNothing
+		SetThisMemberValueString    "inflag"
+		LineNumber                  59388, 4
+		LineNumberAlt1              464, 161
+		PushNothing
+		SetThisMemberValueString    "rotating"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x976ba
+		; source: 161 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly3.vbo" 470:484
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          1
+		LineNumber                    59394, 4
+		LineNumberAlt1                470, 161
+		GetThisMemberValueString      "rotating"
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    59395, 4
+		LineNumberAlt1                471, 161
+		GetThisMemberValueString      "obj"
+		Dup
+		GetMemberFunctionString       "getorientationy"
+		JumpAbsolute                  1
+		LineNumber                    59395, 4
+		LineNumberAlt1                471, 161
+		SetVariableValue              2                 ; local
+		LineNumber                    59396, 4
+		LineNumberAlt1                472, 161
+		GetThisMemberValueString      "turnedin"
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    59397, 4
+		LineNumberAlt1                473, 161
+		GetVariableValue              2                 ; local
+		PushConstanti16               180
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    59398, 4
+		LineNumberAlt1                474, 161
+		GetThisMemberValueString      "obj"
+		PushConstant0
+		PushConstanti16               180
+		PushConstant0
+		Pull                          4
+		GetMemberFunctionString       "setorientation"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    59399, 4
+		LineNumberAlt1                475, 161
+		PushConstant0
+		SetThisMemberValueString      "rotating"
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    59401, 4
+		LineNumberAlt1                477, 161
+		GetThisMemberValueString      "obj"
+		PushConstant0
+		GetVariableValue              2                 ; local
+		PushConstanti8                11
+		Add
+		PushConstant0
+		Pull                          4
+		GetMemberFunctionString       "setorientation"
+		JumpAbsolute                  4
+		Pop
+		; <-
+		BranchTarget                  1
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		LineNumber                    59404, 4
+		LineNumberAlt1                480, 161
+		GetVariableValue              2                 ; local
+		PushConstanti16               360
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    59405, 4
+		LineNumberAlt1                481, 161
+		GetThisMemberValueString      "obj"
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		Pull                          4
+		GetMemberFunctionString       "setorientation"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    59406, 4
+		LineNumberAlt1                482, 161
+		PushConstant0
+		SetThisMemberValueString      "rotating"
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		LineNumber                    59408, 4
+		LineNumberAlt1                484, 161
+		GetThisMemberValueString      "obj"
+		PushConstant0
+		GetVariableValue              2                 ; local
+		PushConstanti8                11
+		Add
+		PushConstant0
+		Pull                          4
+		GetMemberFunctionString       "setorientation"
+		JumpAbsolute                  4
+		Pop
+		; <-
+		BranchTarget                  4
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x977b9
+		; source: 161 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly3.vbo" 492:498
+		MemberFunctionArgumentCheck   2
+		LineNumber                    59416, 4
+		LineNumberAlt1                492, 161
+		GetVariableValue              1        ; local
+		GetMemberValueString          "event"
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    59418, 4
+		LineNumberAlt1                494, 161
+		GetVariableValue              1        ; local
+		GetMemberValueString          "button"
+		PushConstanti8                79
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    59419, 4
+		LineNumberAlt1                495, 161
+		GetVariableValue              0        ; local
+		GetThisMemberFunctionString   "hit"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    59422, 4
+		LineNumberAlt1                498, 161
+		GetVariableValue              1        ; local
+		GetMemberValueString          "button"
+		PushConstanti8                80
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x97812
+		; source: 161 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly3.vbo" 507:525
+		MemberFunctionArgumentCheck   2
+		LineNumber                    59431, 4
+		LineNumberAlt1                507, 161
+		GetVariableValue              1             ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		Dup
+		PushConstanti8                8
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    59441, 4
+		LineNumberAlt1                517, 161
+		GetVariableValue              1             ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		GetThisMemberValueString      "timer"
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    59442, 4
+		LineNumberAlt1                518, 161
+		GetVariableValue              0             ; local
+		GetThisMemberFunctionString   "targerreset"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  1
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		Dup
+		PushConstanti8                19
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    59448, 4
+		LineNumberAlt1                524, 161
+		GetVariableValue              1             ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		GetThisMemberValueString      "obj"
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    59449, 4
+		LineNumberAlt1                525, 161
+		GetVariableValue              0             ; local
+		GetThisMemberFunctionString   "hit"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  3
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hit"
+		; address: 0x978a0
+		; source: 161 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly3.vbo" 534:549
+		MemberFunctionArgumentCheck   1
+		LineNumber                    59458, 4
+		LineNumberAlt1                534, 161
+		GetThisMemberValueString      "turnedin"
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    59459, 4
+		LineNumberAlt1                535, 161
+		PushConstantStringString      "* turning Out"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    59460, 4
+		LineNumberAlt1                536, 161
+		PushConstanti8                1
+		SetThisMemberValueString      "rotating"
+		LineNumber                    59461, 4
+		LineNumberAlt1                537, 161
+		PushConstant0
+		SetThisMemberValueString      "turnedin"
+		LineNumber                    59462, 4
+		LineNumberAlt1                538, 161
+		GetThisMemberValueString      "timer"
+		Dup
+		GetMemberFunctionString       "reset"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    59463, 4
+		LineNumberAlt1                539, 161
+		GetThisMemberValueString      "timer"
+		Dup
+		GetMemberFunctionString       "start"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    59464, 4
+		LineNumberAlt1                540, 161
+		GetThisMemberValueString      "parent"
+		Dup
+		GetMemberFunctionString       "targertback"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    59466, 4
+		LineNumberAlt1                542, 161
+		PushConstantStringString      "* turning IN"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    59467, 4
+		LineNumberAlt1                543, 161
+		PushConstanti8                1
+		SetThisMemberValueString      "turnedin"
+		LineNumber                    59468, 4
+		LineNumberAlt1                544, 161
+		PushConstanti8                1
+		SetThisMemberValueString      "rotating"
+		LineNumber                    59469, 4
+		LineNumberAlt1                545, 161
+		GetThisMemberValueString      "timer"
+		Dup
+		GetMemberFunctionString       "reset"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    59470, 4
+		LineNumberAlt1                546, 161
+		GetThisMemberValueString      "timer"
+		Dup
+		GetMemberFunctionString       "start"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    59473, 4
+		LineNumberAlt1                549, 161
+		GetThisMemberValueString      "parent"
+		Dup
+		GetMemberFunctionString       "hitatarget"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "targerreset"
+		; address: 0x97992
+		; source: 161 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly3.vbo" 558:564
+		MemberFunctionArgumentCheck   1
+		LineNumber                    59482, 4
+		LineNumberAlt1                558, 161
+		GetThisMemberValueString      "turnedin"
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    59483, 4
+		LineNumberAlt1                559, 161
+		PushConstant0
+		SetThisMemberValueString      "turnedin"
+		LineNumber                    59484, 4
+		LineNumberAlt1                560, 161
+		PushConstantStringString      "***** reset turnedIN = false"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    59485, 4
+		LineNumberAlt1                561, 161
+		PushConstanti8                1
+		SetThisMemberValueString      "rotating"
+		LineNumber                    59486, 4
+		LineNumberAlt1                562, 161
+		GetThisMemberValueString      "timer"
+		Dup
+		GetMemberFunctionString       "reset"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    59488, 4
+		LineNumberAlt1                564, 161
+		GetThisMemberValueString      "parent"
+		Dup
+		GetMemberFunctionString       "targertback"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "settweakable"
+		; address: 0x979ff
+		; source: 161 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly3.vbo" 571:571
+		MemberFunctionArgumentCheck 1
+		LineNumber                  59495, 4
+		LineNumberAlt1              571, 161
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "settweakable"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

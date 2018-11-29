@@ -1,0 +1,502 @@
+begin class "cavedigging", "base_object"
+	property "dig1"
+	property "dig1id"
+	property "dig1flag"
+	property "dig2"
+	property "dig2id"
+	property "dig2flag"
+	property "dig3"
+	property "dig3id"
+	property "dig3flag"
+	property "dig4"
+	property "dig4id"
+	property "dig4flag"
+	property "dig5"
+	property "dig5id"
+	property "dig5flag"
+
+	begin method "cavedigging"
+		; address: 0x7a6bf
+		; source: 125 "C:\\projects\\lego\\Scripting\\VBO\\lego_testlevel.vbo" 366:382
+		MemberFunctionArgumentCheck 1
+		LineNumber                  46690, 4
+		LineNumberAlt1              366, 125
+		PushConstantStringString    "dig1"
+		SetThisMemberValueString    "dig1"
+		LineNumber                  46691, 4
+		LineNumberAlt1              367, 125
+		PushConstantStringString    "dig2"
+		SetThisMemberValueString    "dig2"
+		LineNumber                  46692, 4
+		LineNumberAlt1              368, 125
+		PushConstantStringString    "dig3"
+		SetThisMemberValueString    "dig3"
+		LineNumber                  46693, 4
+		LineNumberAlt1              369, 125
+		PushConstantStringString    "dig4"
+		SetThisMemberValueString    "dig4"
+		LineNumber                  46694, 4
+		LineNumberAlt1              370, 125
+		PushConstantStringString    "dig5"
+		SetThisMemberValueString    "dig5"
+		LineNumber                  46696, 4
+		LineNumberAlt1              372, 125
+		GetThisMemberValueString    "dig1"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  46696, 4
+		LineNumberAlt1              372, 125
+		SetThisMemberValueString    "dig1id"
+		LineNumber                  46697, 4
+		LineNumberAlt1              373, 125
+		GetThisMemberValueString    "dig2"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  46697, 4
+		LineNumberAlt1              373, 125
+		SetThisMemberValueString    "dig2id"
+		LineNumber                  46698, 4
+		LineNumberAlt1              374, 125
+		GetThisMemberValueString    "dig3"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  46698, 4
+		LineNumberAlt1              374, 125
+		SetThisMemberValueString    "dig3id"
+		LineNumber                  46699, 4
+		LineNumberAlt1              375, 125
+		GetThisMemberValueString    "dig4"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  46699, 4
+		LineNumberAlt1              375, 125
+		SetThisMemberValueString    "dig4id"
+		LineNumber                  46700, 4
+		LineNumberAlt1              376, 125
+		GetThisMemberValueString    "dig5"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  46700, 4
+		LineNumberAlt1              376, 125
+		SetThisMemberValueString    "dig5id"
+		LineNumber                  46702, 4
+		LineNumberAlt1              378, 125
+		PushConstanti8              1
+		SetThisMemberValueString    "dig1flag"
+		LineNumber                  46703, 4
+		LineNumberAlt1              379, 125
+		PushConstanti8              1
+		SetThisMemberValueString    "dig2flag"
+		LineNumber                  46704, 4
+		LineNumberAlt1              380, 125
+		PushConstanti8              1
+		SetThisMemberValueString    "dig3flag"
+		LineNumber                  46705, 4
+		LineNumberAlt1              381, 125
+		PushConstanti8              1
+		SetThisMemberValueString    "dig4flag"
+		LineNumber                  46706, 4
+		LineNumberAlt1              382, 125
+		PushConstanti8              1
+		SetThisMemberValueString    "dig5flag"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x7a7fe
+		; source: 125 "C:\\projects\\lego\\Scripting\\VBO\\lego_testlevel.vbo" 388:422
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          2
+		LineNumber                    46712, 4
+		LineNumberAlt1                388, 125
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "eventid"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    46713, 4
+		LineNumberAlt1                389, 125
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		SetVariableValue              2                                            ; local
+		LineNumber                    46714, 4
+		LineNumberAlt1                390, 125
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		SetVariableValue              3                                            ; local
+		LineNumber                    46715, 4
+		LineNumberAlt1                391, 125
+		GetVariableValue              2                                            ; local
+		PushConstantStringString      "onua"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    46715, 4
+		LineNumberAlt1                391, 125
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    46716, 4
+		LineNumberAlt1                392, 125
+		PushConstantStringString      "Got collision with Onua"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    46717, 4
+		LineNumberAlt1                393, 125
+		PushConstantStringString      "Object ID = "
+		GetVariableValue              3                                            ; local
+		CallGameFunctionString        "scslosifoundation", "identifiertostring", 1
+		LineNumber                    46717, 4
+		LineNumberAlt1                393, 125
+		Add
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    46718, 4
+		LineNumberAlt1                394, 125
+		GetVariableValue              3                                            ; local
+		GetThisMemberValueString      "dig1id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    46719, 4
+		LineNumberAlt1                395, 125
+		GetThisMemberValueString      "dig1flag"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    46720, 4
+		LineNumberAlt1                396, 125
+		GetVariableValue              3                                            ; local
+		CallGameFunctionString        "gcareadirector", "hide", 1
+		Pop
+		LineNumber                    46721, 4
+		LineNumberAlt1                397, 125
+		PushConstant0
+		SetThisMemberValueString      "dig1flag"
+		LineNumber                    46722, 4
+		LineNumberAlt1                398, 125
+		PushConstantStringString      "Hid object"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    46726, 4
+		LineNumberAlt1                402, 125
+		GetVariableValue              3                                            ; local
+		GetThisMemberValueString      "dig2id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    46727, 4
+		LineNumberAlt1                403, 125
+		GetThisMemberValueString      "dig2flag"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    46728, 4
+		LineNumberAlt1                404, 125
+		GetVariableValue              3                                            ; local
+		CallGameFunctionString        "gcareadirector", "hide", 1
+		Pop
+		LineNumber                    46729, 4
+		LineNumberAlt1                405, 125
+		PushConstant0
+		SetThisMemberValueString      "dig2flag"
+		LineNumber                    46730, 4
+		LineNumberAlt1                406, 125
+		PushConstantStringString      "Hid object"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		; <-
+		BranchTarget                  1
+		LineNumber                    46734, 4
+		LineNumberAlt1                410, 125
+		GetVariableValue              3                                            ; local
+		GetThisMemberValueString      "dig3id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    46735, 4
+		LineNumberAlt1                411, 125
+		GetThisMemberValueString      "dig3flag"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    46736, 4
+		LineNumberAlt1                412, 125
+		GetVariableValue              3                                            ; local
+		CallGameFunctionString        "gcareadirector", "hide", 1
+		Pop
+		LineNumber                    46737, 4
+		LineNumberAlt1                413, 125
+		PushConstant0
+		SetThisMemberValueString      "dig3flag"
+		LineNumber                    46738, 4
+		LineNumberAlt1                414, 125
+		PushConstantStringString      "Hid object"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		; <-
+		BranchTarget                  2
+		LineNumber                    46742, 4
+		LineNumberAlt1                418, 125
+		GetVariableValue              3                                            ; local
+		GetThisMemberValueString      "dig4id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    46743, 4
+		LineNumberAlt1                419, 125
+		GetThisMemberValueString      "dig4flag"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    46744, 4
+		LineNumberAlt1                420, 125
+		GetVariableValue              3                                            ; local
+		CallGameFunctionString        "gcareadirector", "hide", 1
+		Pop
+		LineNumber                    46745, 4
+		LineNumberAlt1                421, 125
+		PushConstant0
+		SetThisMemberValueString      "dig4flag"
+		LineNumber                    46746, 4
+		LineNumberAlt1                422, 125
+		PushConstantStringString      "Hid object"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		; <-
+		BranchTarget                  3
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x7aa19
+		; source: 125 "C:\\projects\\lego\\Scripting\\VBO\\lego_testlevel.vbo" 432:480
+		MemberFunctionArgumentCheck   2
+		LineNumber                    46756, 4
+		LineNumberAlt1                432, 125
+		GetVariableValue              1                           ; local
+		GetMemberValueString          "button"
+		PushConstanti8                120
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    46757, 4
+		LineNumberAlt1                433, 125
+		PushConstanti8                1
+		SetThisMemberValueString      "dig1flag"
+		LineNumber                    46758, 4
+		LineNumberAlt1                434, 125
+		PushConstanti8                1
+		SetThisMemberValueString      "dig2flag"
+		LineNumber                    46759, 4
+		LineNumberAlt1                435, 125
+		PushConstanti8                1
+		SetThisMemberValueString      "dig3flag"
+		LineNumber                    46760, 4
+		LineNumberAlt1                436, 125
+		PushConstanti8                1
+		SetThisMemberValueString      "dig4flag"
+		LineNumber                    46761, 4
+		LineNumberAlt1                437, 125
+		GetThisMemberValueString      "dig1id"
+		PushConstant0
+		CallGameFunctionString        "gcareadirector", "show", 2
+		Pop
+		LineNumber                    46762, 4
+		LineNumberAlt1                438, 125
+		GetThisMemberValueString      "dig2id"
+		PushConstant0
+		CallGameFunctionString        "gcareadirector", "show", 2
+		Pop
+		LineNumber                    46763, 4
+		LineNumberAlt1                439, 125
+		GetThisMemberValueString      "dig3id"
+		PushConstant0
+		CallGameFunctionString        "gcareadirector", "show", 2
+		Pop
+		LineNumber                    46764, 4
+		LineNumberAlt1                440, 125
+		GetThisMemberValueString      "dig4id"
+		PushConstant0
+		CallGameFunctionString        "gcareadirector", "show", 2
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    46767, 4
+		LineNumberAlt1                443, 125
+		GetVariableValue              1                           ; local
+		GetMemberValueString          "event"
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 8, 0
+		; ->
+		LineNumber                    46768, 4
+		LineNumberAlt1                444, 125
+		GetVariableValue              1                           ; local
+		GetMemberValueString          "button"
+		PushConstanti8                49
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    46769, 4
+		LineNumberAlt1                445, 125
+		GetThisMemberValueString      "dig1flag"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    46770, 4
+		LineNumberAlt1                446, 125
+		GetThisMemberValueString      "dig1id"
+		CallGameFunctionString        "gcareadirector", "hide", 1
+		Pop
+		LineNumber                    46771, 4
+		LineNumberAlt1                447, 125
+		PushConstant0
+		SetThisMemberValueString      "dig1flag"
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		LineNumber                    46773, 4
+		LineNumberAlt1                449, 125
+		GetThisMemberValueString      "dig1id"
+		PushConstant0
+		CallGameFunctionString        "gcareadirector", "show", 2
+		Pop
+		LineNumber                    46774, 4
+		LineNumberAlt1                450, 125
+		PushConstanti8                1
+		SetThisMemberValueString      "dig1flag"
+		; <-
+		BranchTarget                  2
+		LineNumber                    46778, 4
+		LineNumberAlt1                454, 125
+		GetVariableValue              1                           ; local
+		GetMemberValueString          "button"
+		PushConstanti8                50
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    46779, 4
+		LineNumberAlt1                455, 125
+		GetThisMemberValueString      "dig2flag"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    46780, 4
+		LineNumberAlt1                456, 125
+		GetThisMemberValueString      "dig2id"
+		CallGameFunctionString        "gcareadirector", "hide", 1
+		Pop
+		LineNumber                    46781, 4
+		LineNumberAlt1                457, 125
+		PushConstant0
+		SetThisMemberValueString      "dig2flag"
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		LineNumber                    46783, 4
+		LineNumberAlt1                459, 125
+		GetThisMemberValueString      "dig2id"
+		PushConstant0
+		CallGameFunctionString        "gcareadirector", "show", 2
+		Pop
+		LineNumber                    46784, 4
+		LineNumberAlt1                460, 125
+		PushConstanti8                1
+		SetThisMemberValueString      "dig2flag"
+		; <-
+		BranchTarget                  4
+		LineNumber                    46788, 4
+		LineNumberAlt1                464, 125
+		GetVariableValue              1                           ; local
+		GetMemberValueString          "button"
+		PushConstanti8                51
+		EqualTo
+		CompareAndBranchIfFalseTarget 6, 0
+		; ->
+		LineNumber                    46789, 4
+		LineNumberAlt1                465, 125
+		GetThisMemberValueString      "dig3flag"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    46790, 4
+		LineNumberAlt1                466, 125
+		GetThisMemberValueString      "dig3id"
+		CallGameFunctionString        "gcareadirector", "hide", 1
+		Pop
+		LineNumber                    46791, 4
+		LineNumberAlt1                467, 125
+		PushConstant0
+		SetThisMemberValueString      "dig3flag"
+		BranchAlwaysTarget            6, 0
+		; ->
+		; <-
+		BranchTarget                  5
+		LineNumber                    46793, 4
+		LineNumberAlt1                469, 125
+		GetThisMemberValueString      "dig3id"
+		PushConstant0
+		CallGameFunctionString        "gcareadirector", "show", 2
+		Pop
+		LineNumber                    46794, 4
+		LineNumberAlt1                470, 125
+		PushConstanti8                1
+		SetThisMemberValueString      "dig3flag"
+		; <-
+		BranchTarget                  6
+		LineNumber                    46798, 4
+		LineNumberAlt1                474, 125
+		GetVariableValue              1                           ; local
+		GetMemberValueString          "button"
+		PushConstanti8                52
+		EqualTo
+		CompareAndBranchIfFalseTarget 8, 0
+		; ->
+		LineNumber                    46799, 4
+		LineNumberAlt1                475, 125
+		GetThisMemberValueString      "dig4flag"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 7, 0
+		; ->
+		LineNumber                    46800, 4
+		LineNumberAlt1                476, 125
+		GetThisMemberValueString      "dig4id"
+		CallGameFunctionString        "gcareadirector", "hide", 1
+		Pop
+		LineNumber                    46801, 4
+		LineNumberAlt1                477, 125
+		PushConstant0
+		SetThisMemberValueString      "dig4flag"
+		BranchAlwaysTarget            8, 0
+		; ->
+		; <-
+		BranchTarget                  7
+		LineNumber                    46803, 4
+		LineNumberAlt1                479, 125
+		GetThisMemberValueString      "dig4id"
+		PushConstant0
+		CallGameFunctionString        "gcareadirector", "show", 2
+		Pop
+		LineNumber                    46804, 4
+		LineNumberAlt1                480, 125
+		PushConstanti8                1
+		SetThisMemberValueString      "dig4flag"
+		; <-
+		BranchTarget                  8
+		PushNothing
+		Return
+	end ; method
+end ; class

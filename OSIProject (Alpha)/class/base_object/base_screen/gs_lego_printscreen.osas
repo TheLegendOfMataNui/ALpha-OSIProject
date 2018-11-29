@@ -1,0 +1,425 @@
+begin class "gs_lego_printscreen", "base_screen"
+	property "menu"
+	property "menuobject"
+	property "selected"
+	property "printthingy"
+	property "gobackflag"
+
+	begin method "gs_lego_printscreen"
+		; address: 0x3f039
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x3f03d
+		; source: 44 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_print_screen.vbo" 316:336
+		MemberFunctionArgumentCheck 1
+		LineNumber                  14235, 4
+		LineNumberAlt1              316, 44
+		CreateArray
+		Dup
+		PushConstantStringString    "Onua poster (1 page)"
+		AppendToArray
+		Dup
+		PushConstantStringString    "Onua poster (4 page)"
+		AppendToArray
+		Dup
+		PushConstantStringString    "Onua action scene"
+		AppendToArray
+		Dup
+		PushConstantStringString    "Mud monster concept art"
+		AppendToArray
+		Dup
+		PushConstantStringString    "Spider concept art"
+		AppendToArray
+		Dup
+		PushConstantStringString    "Gali poster (8 page)"
+		AppendToArray
+		Dup
+		PushConstantStringString    "Gali action scene"
+		AppendToArray
+		Dup
+		PushConstantStringString    "Water monster concept art"
+		AppendToArray
+		Dup
+		PushConstantStringString    "Gali concept art"
+		AppendToArray
+		Dup
+		PushConstantStringString    "BACK"
+		AppendToArray
+		SetThisMemberValueString    "menu"
+		LineNumber                  14251, 4
+		LineNumberAlt1              332, 44
+		CreateObjectString          "gs_lego_printscreenmenu"
+		Dup
+		GetThisMemberValueString    "menu"
+		Pull                        2
+		GetMemberFunctionString     "gs_lego_printscreenmenu"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  14251, 4
+		LineNumberAlt1              332, 44
+		SetThisMemberValueString    "menuobject"
+		LineNumber                  14252, 4
+		LineNumberAlt1              333, 44
+		GetThisMemberValueString    "menuobject"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  14254, 4
+		LineNumberAlt1              335, 44
+		CallGameFunctionString      "scprinter", "create", 0
+		LineNumber                  14254, 4
+		LineNumberAlt1              335, 44
+		SetThisMemberValueString    "printthingy"
+		LineNumber                  14255, 4
+		LineNumberAlt1              336, 44
+		PushConstant0
+		SetThisMemberValueString    "gobackflag"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x3f0e6
+		; source: 44 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_print_screen.vbo" 342:347
+		MemberFunctionArgumentCheck 1
+		LineNumber                  14261, 4
+		LineNumberAlt1              342, 44
+		PushNothing
+		SetThisMemberValueString    "menu"
+		LineNumber                  14262, 4
+		LineNumberAlt1              343, 44
+		PushNothing
+		SetThisMemberValueString    "selected"
+		LineNumber                  14265, 4
+		LineNumberAlt1              346, 44
+		PushNothing
+		SetThisMemberValueString    "gobackflag"
+		LineNumber                  14266, 4
+		LineNumberAlt1              347, 44
+		GetThisMemberValueString    "menuobject"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x3f128
+		; source: 44 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_print_screen.vbo" 353:355
+		MemberFunctionArgumentCheck   2
+		LineNumber                    14272, 4
+		LineNumberAlt1                353, 44
+		GetThisMemberValueString      "gobackflag"
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    14273, 4
+		LineNumberAlt1                354, 44
+		GetVariableValueGlobalString  "screenlist"
+		Dup
+		GetMemberFunctionString       "backward"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    14274, 4
+		LineNumberAlt1                355, 44
+		PushConstant0
+		SetThisMemberValueString      "gobackflag"
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x3f15e
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x3f162
+		; source: 44 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_print_screen.vbo" 367:370
+		MemberFunctionArgumentCheck   2
+		LineNumber                    14286, 4
+		LineNumberAlt1                367, 44
+		GetThisMemberValueString      "menuobject"
+		GetVariableValue              1              ; local
+		Pull                          2
+		GetMemberFunctionString       "input"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    14288, 4
+		LineNumberAlt1                369, 44
+		GetVariableValue              1              ; local
+		GetMemberValueString          "button"
+		PushConstanti8                13
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    14288, 4
+		LineNumberAlt1                369, 44
+		GetVariableValue              1              ; local
+		GetMemberValueString          "event"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    14288, 4
+		LineNumberAlt1                369, 44
+		GetVariableValue              0              ; local
+		GetThisMemberFunctionString   "selectobject"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    14289, 4
+		LineNumberAlt1                370, 44
+		GetVariableValue              1              ; local
+		GetMemberValueString          "button"
+		PushConstanti8                32
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    14289, 4
+		LineNumberAlt1                370, 44
+		GetVariableValue              1              ; local
+		GetMemberValueString          "event"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    14289, 4
+		LineNumberAlt1                370, 44
+		GetVariableValue              0              ; local
+		GetThisMemberFunctionString   "selectobject"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "selectobject"
+		; address: 0x3f1fc
+		; source: 44 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_print_screen.vbo" 378:408
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          2
+		LineNumber                    14297, 4
+		LineNumberAlt1                378, 44
+		PushConstanti8                1
+		SetThisMemberValueString      "selected"
+		LineNumber                    14298, 4
+		LineNumberAlt1                379, 44
+		PushConstant0
+		SetVariableValue              1                                             ; local
+		LineNumber                    14299, 4
+		LineNumberAlt1                380, 44
+		PushConstanti16               756
+		CallGameFunctionString        "gcstaticsoundsptrarray", "playtablesound", 1
+		Pop
+		LineNumber                    14301, 4
+		LineNumberAlt1                382, 44
+		GetThisMemberValueString      "menuobject"
+		GetMemberValueString          "pointer"
+		Dup
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    14304, 4
+		LineNumberAlt1                385, 44
+		GetThisMemberValueString      "printthingy"
+		PushConstantStringString      "Root/Data/Art/PrinterPics/op.bin"
+		PushConstantStringString      "Onua Poster (1 page)"
+		PushConstanti8                1
+		CallGameFunctionString        "scprinter", "printfile", 4
+		LineNumber                    14304, 4
+		LineNumberAlt1                385, 44
+		SetVariableValue              2                                             ; local
+		BranchAlwaysTarget            9, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    14306, 4
+		LineNumberAlt1                387, 44
+		GetThisMemberValueString      "printthingy"
+		PushConstantStringString      "Root/Data/Art/PrinterPics/op.bin"
+		PushConstantStringString      "Onua Poster (4 page)"
+		PushConstanti8                4
+		CallGameFunctionString        "scprinter", "printfile", 4
+		LineNumber                    14306, 4
+		LineNumberAlt1                387, 44
+		SetVariableValue              2                                             ; local
+		BranchAlwaysTarget            9, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Dup
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    14308, 4
+		LineNumberAlt1                389, 44
+		GetThisMemberValueString      "printthingy"
+		PushConstantStringString      "Root/Data/Art/PrinterPics/oa.bin"
+		PushConstantStringString      "Onua action scene"
+		PushConstanti8                1
+		CallGameFunctionString        "scprinter", "printfile", 4
+		LineNumber                    14308, 4
+		LineNumberAlt1                389, 44
+		SetVariableValue              2                                             ; local
+		BranchAlwaysTarget            9, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		Dup
+		PushConstanti8                3
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    14310, 4
+		LineNumberAlt1                391, 44
+		GetThisMemberValueString      "printthingy"
+		PushConstantStringString      "Root/Data/Art/PrinterPics/om.bin"
+		PushConstantStringString      "Mud monster concept art"
+		PushConstanti8                1
+		CallGameFunctionString        "scprinter", "printfile", 4
+		LineNumber                    14310, 4
+		LineNumberAlt1                391, 44
+		SetVariableValue              2                                             ; local
+		BranchAlwaysTarget            9, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Dup
+		PushConstanti8                4
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    14312, 4
+		LineNumberAlt1                393, 44
+		GetThisMemberValueString      "printthingy"
+		PushConstantStringString      "Root/Data/Art/PrinterPics/oc.bin"
+		PushConstantStringString      "Spider concept art"
+		PushConstanti8                1
+		CallGameFunctionString        "scprinter", "printfile", 4
+		LineNumber                    14312, 4
+		LineNumberAlt1                393, 44
+		SetVariableValue              2                                             ; local
+		BranchAlwaysTarget            9, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		Dup
+		PushConstanti8                5
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    14315, 4
+		LineNumberAlt1                396, 44
+		GetThisMemberValueString      "printthingy"
+		PushConstantStringString      "Root/Data/Art/PrinterPics/gp.bin"
+		PushConstantStringString      "Gali poster (8 page)"
+		PushConstanti8                8
+		CallGameFunctionString        "scprinter", "printfile", 4
+		LineNumber                    14315, 4
+		LineNumberAlt1                396, 44
+		SetVariableValue              2                                             ; local
+		BranchAlwaysTarget            9, 0
+		; ->
+		; <-
+		BranchTarget                  5
+		Dup
+		PushConstanti8                6
+		EqualTo
+		CompareAndBranchIfFalseTarget 6, 0
+		; ->
+		LineNumber                    14317, 4
+		LineNumberAlt1                398, 44
+		GetThisMemberValueString      "printthingy"
+		PushConstantStringString      "Root/Data/Art/PrinterPics/ga.bin"
+		PushConstantStringString      "Gali action scene"
+		PushConstanti8                1
+		CallGameFunctionString        "scprinter", "printfile", 4
+		LineNumber                    14317, 4
+		LineNumberAlt1                398, 44
+		SetVariableValue              2                                             ; local
+		BranchAlwaysTarget            9, 0
+		; ->
+		; <-
+		BranchTarget                  6
+		Dup
+		PushConstanti8                7
+		EqualTo
+		CompareAndBranchIfFalseTarget 7, 0
+		; ->
+		LineNumber                    14319, 4
+		LineNumberAlt1                400, 44
+		GetThisMemberValueString      "printthingy"
+		PushConstantStringString      "Root/Data/Art/PrinterPics/gm.bin"
+		PushConstantStringString      "Water monster concept art"
+		PushConstanti8                1
+		CallGameFunctionString        "scprinter", "printfile", 4
+		LineNumber                    14319, 4
+		LineNumberAlt1                400, 44
+		SetVariableValue              2                                             ; local
+		BranchAlwaysTarget            9, 0
+		; ->
+		; <-
+		BranchTarget                  7
+		Dup
+		PushConstanti8                8
+		EqualTo
+		CompareAndBranchIfFalseTarget 8, 0
+		; ->
+		LineNumber                    14321, 4
+		LineNumberAlt1                402, 44
+		GetThisMemberValueString      "printthingy"
+		PushConstantStringString      "Root/Data/Art/PrinterPics/gc.bin"
+		PushConstantStringString      "Gali concept art"
+		PushConstanti8                1
+		CallGameFunctionString        "scprinter", "printfile", 4
+		LineNumber                    14321, 4
+		LineNumberAlt1                402, 44
+		SetVariableValue              2                                             ; local
+		BranchAlwaysTarget            9, 0
+		; ->
+		; <-
+		BranchTarget                  8
+		Dup
+		PushConstanti8                9
+		EqualTo
+		CompareAndBranchIfFalseTarget 9, 0
+		; ->
+		LineNumber                    14326, 4
+		LineNumberAlt1                407, 44
+		GetThisMemberValueString      "menuobject"
+		Dup
+		GetMemberFunctionString       "hideall"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    14327, 4
+		LineNumberAlt1                408, 44
+		PushConstanti8                1
+		SetThisMemberValueString      "gobackflag"
+		; <-
+		BranchTarget                  9
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

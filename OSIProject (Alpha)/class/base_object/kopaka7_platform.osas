@@ -1,0 +1,213 @@
+begin class "kopaka7_platform", "base_object"
+	property "obj"
+	property "id"
+	property "dist"
+	property "time"
+	property "x"
+	property "y"
+	property "z"
+	property "moveup"
+	property "y2"
+
+	begin method "kopaka7_platform"
+		; address: 0xd7548
+		; source: 240 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_kopa.vbo" 350:359
+		MemberFunctionArgumentCheck 6
+		LineNumber                  20209, 4
+		LineNumberAlt1              350, 240
+		GetVariableValue            0                                            ; local
+		GetThisMemberFunctionString "base_object"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  20210, 4
+		LineNumberAlt1              351, 240
+		GetVariableValue            1                                            ; local
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  20210, 4
+		LineNumberAlt1              351, 240
+		SetThisMemberValueString    "id"
+		LineNumber                  20211, 4
+		LineNumberAlt1              352, 240
+		GetThisMemberValueString    "id"
+		GetVariableValue            2                                            ; local
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  20211, 4
+		LineNumberAlt1              352, 240
+		CallGameFunctionString      "gcareadirector", "getmoveableobj", 2
+		LineNumber                  20211, 4
+		LineNumberAlt1              352, 240
+		SetThisMemberValueString    "obj"
+		LineNumber                  20212, 4
+		LineNumberAlt1              353, 240
+		GetThisMemberValueString    "obj"
+		PushConstant0
+		PushConstant0
+		PushConstanti8              3
+		CallGameFunctionString      "gcmoveableobj", "setcharacterresponses", 4
+		Pop
+		LineNumber                  20213, 4
+		LineNumberAlt1              354, 240
+		GetThisMemberValueString    "obj"
+		CallGameFunctionString      "gcmoveableobj", "getx", 1
+		LineNumber                  20213, 4
+		LineNumberAlt1              354, 240
+		SetThisMemberValueString    "x"
+		LineNumber                  20214, 4
+		LineNumberAlt1              355, 240
+		GetThisMemberValueString    "obj"
+		CallGameFunctionString      "gcmoveableobj", "gety", 1
+		LineNumber                  20214, 4
+		LineNumberAlt1              355, 240
+		SetThisMemberValueString    "y"
+		LineNumber                  20215, 4
+		LineNumberAlt1              356, 240
+		GetThisMemberValueString    "obj"
+		CallGameFunctionString      "gcmoveableobj", "getz", 1
+		LineNumber                  20215, 4
+		LineNumberAlt1              356, 240
+		SetThisMemberValueString    "z"
+		LineNumber                  20216, 4
+		LineNumberAlt1              357, 240
+		GetThisMemberValueString    "y"
+		SetThisMemberValueString    "y2"
+		LineNumber                  20217, 4
+		LineNumberAlt1              358, 240
+		GetVariableValue            4                                            ; local
+		SetThisMemberValueString    "dist"
+		LineNumber                  20218, 4
+		LineNumberAlt1              359, 240
+		GetVariableValue            5                                            ; local
+		SetThisMemberValueString    "time"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xd765a
+		; source: 240 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_kopa.vbo" 365:365
+		MemberFunctionArgumentCheck 1
+		LineNumber                  20224, 4
+		LineNumberAlt1              365, 240
+		PushConstanti8              1
+		SetThisMemberValueString    "moveup"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xd766d
+		; source: 240 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_kopa.vbo" 370:370
+		MemberFunctionArgumentCheck 1
+		LineNumber                  20229, 4
+		LineNumberAlt1              370, 240
+		PushNothing
+		SetThisMemberValueString    "obj"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "toggle"
+		; address: 0xd767f
+		; source: 240 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_kopa.vbo" 375:382
+		MemberFunctionArgumentCheck   1
+		LineNumber                    20234, 4
+		LineNumberAlt1                375, 240
+		GetThisMemberValueString      "moveup"
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    20235, 4
+		LineNumberAlt1                376, 240
+		PushConstant0
+		SetThisMemberValueString      "moveup"
+		LineNumber                    20236, 4
+		LineNumberAlt1                377, 240
+		GetThisMemberValueString      "obj"
+		GetThisMemberValueString      "x"
+		GetThisMemberValueString      "y"
+		GetThisMemberValueString      "dist"
+		Add
+		GetThisMemberValueString      "z"
+		GetThisMemberValueString      "time"
+		CallGameFunctionString        "gcmoveableobj", "interpolate", 5
+		Pop
+		LineNumber                    20237, 4
+		LineNumberAlt1                378, 240
+		GetThisMemberValueString      "y"
+		GetThisMemberValueString      "dist"
+		Add
+		SetThisMemberValueString      "y2"
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    20239, 4
+		LineNumberAlt1                380, 240
+		PushConstanti8                1
+		SetThisMemberValueString      "moveup"
+		LineNumber                    20240, 4
+		LineNumberAlt1                381, 240
+		GetThisMemberValueString      "obj"
+		GetThisMemberValueString      "x"
+		GetThisMemberValueString      "y"
+		GetThisMemberValueString      "z"
+		GetThisMemberValueString      "time"
+		CallGameFunctionString        "gcmoveableobj", "interpolate", 5
+		Pop
+		LineNumber                    20241, 4
+		LineNumberAlt1                382, 240
+		GetThisMemberValueString      "y"
+		SetThisMemberValueString      "y2"
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "offsety"
+		; address: 0xd771b
+		; source: 240 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_kopa.vbo" 388:389
+		MemberFunctionArgumentCheck 2
+		LineNumber                  20247, 4
+		LineNumberAlt1              388, 240
+		GetThisMemberValueString    "y2"
+		GetVariableValue            1                                 ; local
+		Add
+		SetThisMemberValueString    "y2"
+		LineNumber                  20248, 4
+		LineNumberAlt1              389, 240
+		GetThisMemberValueString    "obj"
+		GetThisMemberValueString    "x"
+		GetThisMemberValueString    "y2"
+		GetThisMemberValueString    "z"
+		PushConstantf32             1
+		CallGameFunctionString      "gcmoveableobj", "interpolate", 5
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "reset"
+		; address: 0xd7755
+		; source: 240 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_kopa.vbo" 394:396
+		MemberFunctionArgumentCheck 1
+		LineNumber                  20253, 4
+		LineNumberAlt1              394, 240
+		PushConstanti8              1
+		SetThisMemberValueString    "moveup"
+		LineNumber                  20254, 4
+		LineNumberAlt1              395, 240
+		GetThisMemberValueString    "obj"
+		CallGameFunctionString      "gcmoveableobj", "cancelinterpolate", 1
+		Pop
+		LineNumber                  20255, 4
+		LineNumberAlt1              396, 240
+		GetThisMemberValueString    "obj"
+		GetThisMemberValueString    "x"
+		GetThisMemberValueString    "y"
+		GetThisMemberValueString    "z"
+		CallGameFunctionString      "gcmoveableobj", "setposition", 4
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

@@ -1,0 +1,258 @@
+begin class "lego_area_gly1", "gs_lego_area"
+	property "racepuzzle"
+	property "puzzle"
+	property "parent"
+	property "hammerpickup"
+
+	begin method "lego_area_gly1"
+		; address: 0x95874
+		; source: 160 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly1.vbo" 28:32
+		MemberFunctionArgumentCheck 2
+		LineNumber                  58594, 4
+		LineNumberAlt1              28, 160
+		GetVariableValue            1                    ; local
+		SetThisMemberValueString    "parent"
+		LineNumber                  58595, 4
+		LineNumberAlt1              29, 160
+		GetVariableValue            0                    ; local
+		PushConstantStringString    "gly1"
+		GetVariableValue            1                    ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  58596, 4
+		LineNumberAlt1              30, 160
+		CreateObjectString          "racepuzzle_class"
+		Dup
+		GetVariableValue            0                    ; local
+		Pull                        2
+		GetMemberFunctionString     "racepuzzle_class"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  58596, 4
+		LineNumberAlt1              30, 160
+		SetThisMemberValueString    "racepuzzle"
+		LineNumber                  58597, 4
+		LineNumberAlt1              31, 160
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  58598, 4
+		LineNumberAlt1              32, 160
+		CreateArray
+		Dup
+		PushConstanti16             180
+		AppendToArray
+		Dup
+		PushConstanti16             279
+		AppendToArray
+		Dup
+		PushConstanti8              -60
+		AppendToArray
+		Dup
+		PushConstanti16             -193
+		AppendToArray
+		SetThisMemberValueString    "startingarea"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x958fd
+		; source: 160 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly1.vbo" 39:48
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    58605, 4
+		LineNumberAlt1                39, 160
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "lego_area_show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58606, 4
+		LineNumberAlt1                40, 160
+		GetThisMemberValueString      "racepuzzle"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58607, 4
+		LineNumberAlt1                41, 160
+		GetThisMemberValueString      "racepuzzle"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58609, 4
+		LineNumberAlt1                43, 160
+		PushConstantStringString      "hamm"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    58609, 4
+		LineNumberAlt1                43, 160
+		CallGameFunctionString        "gcsaver", "finditem", 1
+		LineNumber                    58609, 4
+		LineNumberAlt1                43, 160
+		SetVariableValue              1                                            ; local
+		LineNumber                    58610, 4
+		LineNumberAlt1                44, 160
+		GetVariableValue              1                                            ; local
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    58611, 4
+		LineNumberAlt1                45, 160
+		CreateObjectString            "lego_pickup"
+		Dup
+		PushConstantStringString      "hamm"
+		PushConstant0
+		PushConstanti8                5
+		PushConstantStringString      "item"
+		PushConstanti8                8
+		PushConstanti8                1
+		Pull                          7
+		GetMemberFunctionString       "lego_pickup"
+		JumpAbsolute                  7
+		Pop
+		LineNumber                    58611, 4
+		LineNumberAlt1                45, 160
+		SetThisMemberValueString      "hammerpickup"
+		LineNumber                    58612, 4
+		LineNumberAlt1                46, 160
+		GetThisMemberValueString      "hammerpickup"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58613, 4
+		LineNumberAlt1                47, 160
+		GetThisMemberValueString      "hammerpickup"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58614, 4
+		LineNumberAlt1                48, 160
+		GetThisMemberValueString      "hammerpickup"
+		PushConstanti16               8192
+		Pull                          2
+		GetMemberFunctionString       "setcondition"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x959f0
+		; source: 160 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly1.vbo" 54:54
+		MemberFunctionArgumentCheck 2
+		LineNumber                  58620, 4
+		LineNumberAlt1              54, 160
+		GetThisMemberValueString    "racepuzzle"
+		GetVariableValue            1            ; local
+		Pull                        2
+		GetMemberFunctionString     "process"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x95a0c
+		; source: 160 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly1.vbo" 60:60
+		MemberFunctionArgumentCheck 2
+		LineNumber                  58626, 4
+		LineNumberAlt1              60, 160
+		GetThisMemberValueString    "racepuzzle"
+		GetVariableValue            1            ; local
+		Pull                        2
+		GetMemberFunctionString     "input"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x95a28
+		; source: 160 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly1.vbo" 68:68
+		MemberFunctionArgumentCheck 2
+		LineNumber                  58634, 4
+		LineNumberAlt1              68, 160
+		GetThisMemberValueString    "racepuzzle"
+		GetVariableValue            1            ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x95a44
+		; source: 160 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly1.vbo" 74:79
+		MemberFunctionArgumentCheck   1
+		LineNumber                    58640, 4
+		LineNumberAlt1                74, 160
+		GetVariableValue              0                ; local
+		GetThisMemberFunctionString   "lego_area_hide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58641, 4
+		LineNumberAlt1                75, 160
+		GetThisMemberValueString      "racepuzzle"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58643, 4
+		LineNumberAlt1                77, 160
+		GetThisMemberValueString      "hammerpickup"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    58644, 4
+		LineNumberAlt1                78, 160
+		GetThisMemberValueString      "hammerpickup"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58645, 4
+		LineNumberAlt1                79, 160
+		PushNothing
+		SetThisMemberValueString      "hammerpickup"
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x95aa4
+		; source: 160 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly1.vbo" 85:86
+		MemberFunctionArgumentCheck 1
+		LineNumber                  58651, 4
+		LineNumberAlt1              85, 160
+		GetThisMemberValueString    "racepuzzle"
+		Dup
+		GetMemberFunctionString     "exit"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  58652, 4
+		LineNumberAlt1              86, 160
+		PushNothing
+		SetThisMemberValueString    "racepuzzle"
+		PushNothing
+		Return
+	end ; method
+end ; class

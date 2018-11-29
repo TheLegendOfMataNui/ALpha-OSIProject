@@ -1,0 +1,147 @@
+begin class "lego_area_shrn5", "gs_lego_area"
+	property "puzzle"
+
+	begin method "lego_area_shrn5"
+		; address: 0xba0fe
+		; source: 208 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_shrn.vbo" 30:31
+		MemberFunctionArgumentCheck 2
+		LineNumber                  8278, 4
+		LineNumberAlt1              30, 208
+		GetVariableValue            0              ; local
+		PushConstantStringString    "shrn"
+		GetVariableValue            1              ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  8279, 4
+		LineNumberAlt1              31, 208
+		CreateObjectString          "shrn_puzzle"
+		Dup
+		GetVariableValue            0              ; local
+		Pull                        2
+		GetMemberFunctionString     "shrn_puzzle"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  8279, 4
+		LineNumberAlt1              31, 208
+		SetThisMemberValueString    "puzzle"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xba143
+		; source: 208 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_shrn.vbo" 38:40
+		MemberFunctionArgumentCheck 1
+		LineNumber                  8286, 4
+		LineNumberAlt1              38, 208
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  8287, 4
+		LineNumberAlt1              39, 208
+		PushConstanti32             -10381892
+		PushConstant0
+		PushConstantf32             5
+		Subtract
+		PushConstant0
+		PushConstantf32             600
+		Subtract
+		PushConstantf32             0.009999999776482582
+		CallGameFunctionString      "gcareadirector", "setfog", 4
+		Pop
+		LineNumber                  8288, 4
+		LineNumberAlt1              40, 208
+		PushConstant0
+		CallGameFunctionString      "gclightdirector", "setcavelighting", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xba196
+		; source: 208 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_shrn.vbo" 45:45
+		MemberFunctionArgumentCheck 1
+		LineNumber                  8293, 4
+		LineNumberAlt1              45, 208
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0xba1ae
+		; source: 208 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_shrn.vbo" 50:51
+		MemberFunctionArgumentCheck 1
+		LineNumber                  8298, 4
+		LineNumberAlt1              50, 208
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "exit"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  8299, 4
+		LineNumberAlt1              51, 208
+		PushNothing
+		SetThisMemberValueString    "puzzle"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xba1d4
+		; source: 208 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_shrn.vbo" 56:56
+		MemberFunctionArgumentCheck 2
+		LineNumber                  8304, 4
+		LineNumberAlt1              56, 208
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "process"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xba1f0
+		; source: 208 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_shrn.vbo" 61:61
+		MemberFunctionArgumentCheck 2
+		LineNumber                  8309, 4
+		LineNumberAlt1              61, 208
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0xba20c
+		; source: 208 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_shrn.vbo" 66:66
+		MemberFunctionArgumentCheck 2
+		LineNumber                  8314, 4
+		LineNumberAlt1              66, 208
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1        ; local
+		Pull                        2
+		GetMemberFunctionString     "input"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

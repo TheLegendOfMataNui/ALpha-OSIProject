@@ -1,0 +1,547 @@
+begin class "lego_area_vllg5", "gs_lego_area"
+	property "puzzle"
+
+	begin method "lego_area_vllg5"
+		; address: 0xb9482
+		; source: 206 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_vllg.vbo" 24:26
+		MemberFunctionArgumentCheck 2
+		LineNumber                  7913, 4
+		LineNumberAlt1              24, 206
+		GetVariableValue            0                    ; local
+		PushConstantStringString    "vllg"
+		GetVariableValue            1                    ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  7914, 4
+		LineNumberAlt1              25, 206
+		CreateObjectString          "vllg_puzzle"
+		Dup
+		GetVariableValue            0                    ; local
+		Pull                        2
+		GetMemberFunctionString     "vllg_puzzle"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  7914, 4
+		LineNumberAlt1              25, 206
+		SetThisMemberValueString    "puzzle"
+		LineNumber                  7915, 4
+		LineNumberAlt1              26, 206
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xb94da
+		; source: 206 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_vllg.vbo" 34:69
+		MemberFunctionArgumentCheck 1
+		CreateStackVariables        1
+		LineNumber                  7923, 4
+		LineNumberAlt1              34, 206
+		GetVariableValue            0                                            ; local
+		GetThisMemberFunctionString "lego_area_show"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  7924, 4
+		LineNumberAlt1              35, 206
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  7925, 4
+		LineNumberAlt1              36, 206
+		PushConstanti8              5
+		CallGameFunctionString      "gcmodeldirector", "setnearestmax", 1
+		Pop
+		LineNumber                  7926, 4
+		LineNumberAlt1              37, 206
+		PushConstanti32             -10381892
+		PushConstant0
+		PushConstantf32             5
+		Subtract
+		PushConstant0
+		PushConstantf32             1100
+		Subtract
+		PushConstantf32             0.009999999776482582
+		CallGameFunctionString      "gcareadirector", "setfog", 4
+		Pop
+		LineNumber                  7927, 4
+		LineNumberAlt1              38, 206
+		PushConstant0
+		CallGameFunctionString      "gclightdirector", "setcavelighting", 1
+		Pop
+		LineNumber                  7929, 4
+		LineNumberAlt1              40, 206
+		PushConstantStringString    "vlgr"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  7929, 4
+		LineNumberAlt1              40, 206
+		PushConstant0
+		CallGameFunctionString      "gcmodeldirector", "getcharacter", 2
+		LineNumber                  7929, 4
+		LineNumberAlt1              40, 206
+		SetVariableValue            1                                            ; local
+		LineNumber                  7930, 4
+		LineNumberAlt1              41, 206
+		GetVariableValue            1                                            ; local
+		PushConstantColor8888       0xffffffff
+		PushConstanti16             255
+		SetRedValue
+		PushConstanti16             247
+		SetGreenValue
+		PushConstant0
+		SetBlueValue
+		PushConstanti16             255
+		SetAlphaValue
+		PushConstantColor8888       0xffffffff
+		PushConstant0
+		SetRedValue
+		PushConstanti16             150
+		SetGreenValue
+		PushConstanti8              121
+		SetBlueValue
+		PushConstanti16             255
+		SetAlphaValue
+		PushConstantStringString    "mk4a"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  7930, 4
+		LineNumberAlt1              41, 206
+		CallGameFunctionString      "gccharacter", "settohunga", 4
+		Pop
+		LineNumber                  7932, 4
+		LineNumberAlt1              43, 206
+		PushConstantStringString    "vl01"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  7932, 4
+		LineNumberAlt1              43, 206
+		PushConstant0
+		CallGameFunctionString      "gcmodeldirector", "getcharacter", 2
+		LineNumber                  7932, 4
+		LineNumberAlt1              43, 206
+		SetVariableValue            1                                            ; local
+		LineNumber                  7933, 4
+		LineNumberAlt1              44, 206
+		GetVariableValue            1                                            ; local
+		PushConstantColor8888       0xffffffff
+		PushConstant0
+		SetRedValue
+		PushConstanti16             150
+		SetGreenValue
+		PushConstanti8              121
+		SetBlueValue
+		PushConstanti16             255
+		SetAlphaValue
+		PushConstantColor8888       0xffffffff
+		PushConstanti8              1
+		SetRedValue
+		PushConstanti8              127
+		SetGreenValue
+		PushConstanti8              30
+		SetBlueValue
+		PushConstanti16             255
+		SetAlphaValue
+		PushConstantStringString    "mk4a"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  7933, 4
+		LineNumberAlt1              44, 206
+		CallGameFunctionString      "gccharacter", "settohunga", 4
+		Pop
+		LineNumber                  7935, 4
+		LineNumberAlt1              46, 206
+		PushConstantStringString    "vl02"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  7935, 4
+		LineNumberAlt1              46, 206
+		PushConstant0
+		CallGameFunctionString      "gcmodeldirector", "getcharacter", 2
+		LineNumber                  7935, 4
+		LineNumberAlt1              46, 206
+		SetVariableValue            1                                            ; local
+		LineNumber                  7936, 4
+		LineNumberAlt1              47, 206
+		GetVariableValue            1                                            ; local
+		PushConstantColor8888       0xffffffff
+		PushConstanti16             255
+		SetRedValue
+		PushConstanti16             247
+		SetGreenValue
+		PushConstant0
+		SetBlueValue
+		PushConstanti16             255
+		SetAlphaValue
+		PushConstantColor8888       0xffffffff
+		PushConstanti8              1
+		SetRedValue
+		PushConstanti8              127
+		SetGreenValue
+		PushConstanti8              30
+		SetBlueValue
+		PushConstanti16             255
+		SetAlphaValue
+		PushConstantStringString    "mk4a"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  7936, 4
+		LineNumberAlt1              47, 206
+		CallGameFunctionString      "gccharacter", "settohunga", 4
+		Pop
+		LineNumber                  7938, 4
+		LineNumberAlt1              49, 206
+		PushConstantStringString    "vl03"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  7938, 4
+		LineNumberAlt1              49, 206
+		PushConstant0
+		CallGameFunctionString      "gcmodeldirector", "getcharacter", 2
+		LineNumber                  7938, 4
+		LineNumberAlt1              49, 206
+		SetVariableValue            1                                            ; local
+		LineNumber                  7939, 4
+		LineNumberAlt1              50, 206
+		GetVariableValue            1                                            ; local
+		PushConstantColor8888       0xffffffff
+		PushConstant0
+		SetRedValue
+		PushConstanti16             150
+		SetGreenValue
+		PushConstanti8              121
+		SetBlueValue
+		PushConstanti16             255
+		SetAlphaValue
+		PushConstantColor8888       0xffffffff
+		PushConstanti16             187
+		SetRedValue
+		PushConstanti16             231
+		SetGreenValue
+		PushConstanti16             133
+		SetBlueValue
+		PushConstanti16             255
+		SetAlphaValue
+		PushConstantStringString    "mkca"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  7939, 4
+		LineNumberAlt1              50, 206
+		CallGameFunctionString      "gccharacter", "settohunga", 4
+		Pop
+		LineNumber                  7941, 4
+		LineNumberAlt1              52, 206
+		PushConstantStringString    "vl04"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  7941, 4
+		LineNumberAlt1              52, 206
+		PushConstant0
+		CallGameFunctionString      "gcmodeldirector", "getcharacter", 2
+		LineNumber                  7941, 4
+		LineNumberAlt1              52, 206
+		SetVariableValue            1                                            ; local
+		LineNumber                  7942, 4
+		LineNumberAlt1              53, 206
+		GetVariableValue            1                                            ; local
+		PushConstantColor8888       0xffffffff
+		PushConstanti16             255
+		SetRedValue
+		PushConstanti16             247
+		SetGreenValue
+		PushConstant0
+		SetBlueValue
+		PushConstanti16             255
+		SetAlphaValue
+		PushConstantColor8888       0xffffffff
+		PushConstanti16             187
+		SetRedValue
+		PushConstanti16             231
+		SetGreenValue
+		PushConstanti16             133
+		SetBlueValue
+		PushConstanti16             255
+		SetAlphaValue
+		PushConstantStringString    "mkca"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  7942, 4
+		LineNumberAlt1              53, 206
+		CallGameFunctionString      "gccharacter", "settohunga", 4
+		Pop
+		LineNumber                  7944, 4
+		LineNumberAlt1              55, 206
+		PushConstantStringString    "vl05"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  7944, 4
+		LineNumberAlt1              55, 206
+		PushConstant0
+		CallGameFunctionString      "gcmodeldirector", "getcharacter", 2
+		LineNumber                  7944, 4
+		LineNumberAlt1              55, 206
+		SetVariableValue            1                                            ; local
+		LineNumber                  7945, 4
+		LineNumberAlt1              56, 206
+		GetVariableValue            1                                            ; local
+		PushConstantColor8888       0xffffffff
+		PushConstant0
+		SetRedValue
+		PushConstanti16             150
+		SetGreenValue
+		PushConstanti8              121
+		SetBlueValue
+		PushConstanti16             255
+		SetAlphaValue
+		PushConstantColor8888       0xffffffff
+		PushConstanti16             255
+		SetRedValue
+		PushConstanti8              92
+		SetGreenValue
+		PushConstanti8              1
+		SetBlueValue
+		PushConstanti16             255
+		SetAlphaValue
+		PushConstantStringString    "mkca"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  7945, 4
+		LineNumberAlt1              56, 206
+		CallGameFunctionString      "gccharacter", "settohunga", 4
+		Pop
+		LineNumber                  7947, 4
+		LineNumberAlt1              58, 206
+		PushConstantStringString    "vl06"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  7947, 4
+		LineNumberAlt1              58, 206
+		PushConstant0
+		CallGameFunctionString      "gcmodeldirector", "getcharacter", 2
+		LineNumber                  7947, 4
+		LineNumberAlt1              58, 206
+		SetVariableValue            1                                            ; local
+		LineNumber                  7948, 4
+		LineNumberAlt1              59, 206
+		GetVariableValue            1                                            ; local
+		PushConstantColor8888       0xffffffff
+		PushConstanti16             255
+		SetRedValue
+		PushConstanti16             247
+		SetGreenValue
+		PushConstant0
+		SetBlueValue
+		PushConstanti16             255
+		SetAlphaValue
+		PushConstantColor8888       0xffffffff
+		PushConstanti16             255
+		SetRedValue
+		PushConstanti8              92
+		SetGreenValue
+		PushConstanti8              1
+		SetBlueValue
+		PushConstanti16             255
+		SetAlphaValue
+		PushConstantStringString    "mkca"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  7948, 4
+		LineNumberAlt1              59, 206
+		CallGameFunctionString      "gccharacter", "settohunga", 4
+		Pop
+		LineNumber                  7950, 4
+		LineNumberAlt1              61, 206
+		PushConstantStringString    "vl07"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  7950, 4
+		LineNumberAlt1              61, 206
+		PushConstant0
+		CallGameFunctionString      "gcmodeldirector", "getcharacter", 2
+		LineNumber                  7950, 4
+		LineNumberAlt1              61, 206
+		SetVariableValue            1                                            ; local
+		LineNumber                  7951, 4
+		LineNumberAlt1              62, 206
+		GetVariableValue            1                                            ; local
+		PushConstantColor8888       0xffffffff
+		PushConstant0
+		SetRedValue
+		PushConstanti16             150
+		SetGreenValue
+		PushConstanti8              121
+		SetBlueValue
+		PushConstanti16             255
+		SetAlphaValue
+		PushConstantColor8888       0xffffffff
+		PushConstanti16             187
+		SetRedValue
+		PushConstanti16             231
+		SetGreenValue
+		PushConstanti16             133
+		SetBlueValue
+		PushConstanti16             255
+		SetAlphaValue
+		PushConstantStringString    "mkca"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  7951, 4
+		LineNumberAlt1              62, 206
+		CallGameFunctionString      "gccharacter", "settohunga", 4
+		Pop
+		LineNumber                  7953, 4
+		LineNumberAlt1              64, 206
+		PushConstantStringString    "vl08"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  7953, 4
+		LineNumberAlt1              64, 206
+		PushConstant0
+		CallGameFunctionString      "gcmodeldirector", "getcharacter", 2
+		LineNumber                  7953, 4
+		LineNumberAlt1              64, 206
+		SetVariableValue            1                                            ; local
+		LineNumber                  7954, 4
+		LineNumberAlt1              65, 206
+		GetVariableValue            1                                            ; local
+		PushConstantColor8888       0xffffffff
+		PushConstanti16             255
+		SetRedValue
+		PushConstanti16             247
+		SetGreenValue
+		PushConstant0
+		SetBlueValue
+		PushConstanti16             255
+		SetAlphaValue
+		PushConstantColor8888       0xffffffff
+		PushConstant0
+		SetRedValue
+		PushConstanti16             150
+		SetGreenValue
+		PushConstanti8              121
+		SetBlueValue
+		PushConstanti16             255
+		SetAlphaValue
+		PushConstantStringString    "mk4a"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  7954, 4
+		LineNumberAlt1              65, 206
+		CallGameFunctionString      "gccharacter", "settohunga", 4
+		Pop
+		LineNumber                  7957, 4
+		LineNumberAlt1              68, 206
+		PushConstantStringString    "vl09"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  7957, 4
+		LineNumberAlt1              68, 206
+		PushConstant0
+		CallGameFunctionString      "gcmodeldirector", "getcharacter", 2
+		LineNumber                  7957, 4
+		LineNumberAlt1              68, 206
+		SetVariableValue            1                                            ; local
+		LineNumber                  7958, 4
+		LineNumberAlt1              69, 206
+		GetVariableValue            1                                            ; local
+		PushConstantColor8888       0xffffffff
+		PushConstant0
+		SetRedValue
+		PushConstanti16             150
+		SetGreenValue
+		PushConstanti8              121
+		SetBlueValue
+		PushConstanti16             255
+		SetAlphaValue
+		PushConstantColor8888       0xffffffff
+		PushConstant0
+		SetRedValue
+		PushConstanti16             150
+		SetGreenValue
+		PushConstanti8              121
+		SetBlueValue
+		PushConstanti16             255
+		SetAlphaValue
+		PushConstantStringString    "mk4a"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  7958, 4
+		LineNumberAlt1              69, 206
+		CallGameFunctionString      "gccharacter", "settohunga", 4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xb9a3d
+		; source: 206 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_vllg.vbo" 75:76
+		MemberFunctionArgumentCheck 1
+		LineNumber                  7964, 4
+		LineNumberAlt1              75, 206
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_hide"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  7965, 4
+		LineNumberAlt1              76, 206
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0xb9a68
+		; source: 206 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_vllg.vbo" 81:81
+		MemberFunctionArgumentCheck 1
+		LineNumber                  7970, 4
+		LineNumberAlt1              81, 206
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "exit"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xb9a80
+		; source: 206 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_vllg.vbo" 86:86
+		MemberFunctionArgumentCheck 2
+		LineNumber                  7975, 4
+		LineNumberAlt1              86, 206
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "process"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xb9a9c
+		; source: 206 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_vllg.vbo" 91:91
+		MemberFunctionArgumentCheck 2
+		LineNumber                  7980, 4
+		LineNumberAlt1              91, 206
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0xb9ab8
+		; source: 206 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_vllg.vbo" 96:96
+		MemberFunctionArgumentCheck 2
+		LineNumber                  7985, 4
+		LineNumberAlt1              96, 206
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1        ; local
+		Pull                        2
+		GetMemberFunctionString     "input"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

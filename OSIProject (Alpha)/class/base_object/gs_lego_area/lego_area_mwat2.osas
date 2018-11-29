@@ -1,0 +1,170 @@
+begin class "lego_area_mwat2", "gs_lego_area"
+	property "puzzle"
+
+	begin method "lego_area_mwat2"
+		; address: 0x80d2e
+		; source: 132 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_mwat.vbo" 28:31
+		MemberFunctionArgumentCheck 2
+		LineNumber                  48941, 4
+		LineNumberAlt1              28, 132
+		GetVariableValue            0                                    ; local
+		PushConstantStringString    "mwat"
+		GetVariableValue            1                                    ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  48942, 4
+		LineNumberAlt1              29, 132
+		CreateObjectString          "mwat2_puzzle"
+		Dup
+		GetVariableValue            0                                    ; local
+		Pull                        2
+		GetMemberFunctionString     "mwat2_puzzle"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  48942, 4
+		LineNumberAlt1              29, 132
+		SetThisMemberValueString    "puzzle"
+		LineNumber                  48943, 4
+		LineNumberAlt1              30, 132
+		GetVariableValue            0                                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  48944, 4
+		LineNumberAlt1              31, 132
+		PushConstanti8              50
+		CallGameFunctionString      "gcareadirector", "setnearestmax", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x80d99
+		; source: 132 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_mwat.vbo" 38:41
+		MemberFunctionArgumentCheck 1
+		LineNumber                  48951, 4
+		LineNumberAlt1              38, 132
+		GetVariableValue            0                                       ; local
+		GetThisMemberFunctionString "lego_area_show"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  48952, 4
+		LineNumberAlt1              39, 132
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  48953, 4
+		LineNumberAlt1              40, 132
+		PushConstanti32             -9143565
+		PushConstant0
+		PushConstantf32             1000
+		Subtract
+		PushConstant0
+		PushConstantf32             2400
+		Subtract
+		PushConstantf32             0.009999999776482582
+		CallGameFunctionString      "gcareadirector", "setfog", 4
+		Pop
+		LineNumber                  48954, 4
+		LineNumberAlt1              41, 132
+		PushConstanti8              1
+		CallGameFunctionString      "gclightdirector", "setcavelighting", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x80e00
+		; source: 132 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_mwat.vbo" 46:46
+		MemberFunctionArgumentCheck 2
+		LineNumber                  48959, 4
+		LineNumberAlt1              46, 132
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x80e1c
+		; source: 132 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_mwat.vbo" 51:51
+		MemberFunctionArgumentCheck 2
+		LineNumber                  48964, 4
+		LineNumberAlt1              51, 132
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1        ; local
+		Pull                        2
+		GetMemberFunctionString     "input"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x80e38
+		; source: 132 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_mwat.vbo" 56:56
+		MemberFunctionArgumentCheck 2
+		LineNumber                  48969, 4
+		LineNumberAlt1              56, 132
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "process"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x80e54
+		; source: 132 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_mwat.vbo" 61:62
+		MemberFunctionArgumentCheck 1
+		LineNumber                  48974, 4
+		LineNumberAlt1              61, 132
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_hide"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  48975, 4
+		LineNumberAlt1              62, 132
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x80e7f
+		; source: 132 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_mwat.vbo" 67:68
+		MemberFunctionArgumentCheck 1
+		LineNumber                  48980, 4
+		LineNumberAlt1              67, 132
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "exit"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  48981, 4
+		LineNumberAlt1              68, 132
+		PushNothing
+		SetThisMemberValueString    "puzzle"
+		PushNothing
+		Return
+	end ; method
+end ; class

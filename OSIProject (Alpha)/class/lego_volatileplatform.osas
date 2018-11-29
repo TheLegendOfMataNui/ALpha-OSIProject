@@ -1,0 +1,412 @@
+begin class "lego_volatileplatform"
+	property "id"
+	property "name"
+	property "obj"
+	property "objid"
+	property "objname"
+	property "area"
+	property "dropsoundonce"
+	property "platformfallingsound"
+	property "platformrumblesound"
+	property "touched"
+
+	begin method "lego_volatileplatform"
+		; address: 0x6a4b2
+		; source: 110 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_volatilePlatform.vbo" 29:38
+		MemberFunctionArgumentCheck 3
+		LineNumber                  39148, 4
+		LineNumberAlt1              29, 110
+		CreateObjectString          "lego_physicsobject"
+		Dup
+		GetVariableValue            1                                            ; local
+		GetVariableValue            2                                            ; local
+		Pull                        3
+		GetMemberFunctionString     "lego_physicsobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  39148, 4
+		LineNumberAlt1              29, 110
+		SetThisMemberValueString    "obj"
+		LineNumber                  39149, 4
+		LineNumberAlt1              30, 110
+		GetThisMemberValueString    "obj"
+		GetMemberValueString        "id"
+		SetThisMemberValueString    "objid"
+		LineNumber                  39150, 4
+		LineNumberAlt1              31, 110
+		GetThisMemberValueString    "obj"
+		GetMemberValueString        "id"
+		SetThisMemberValueString    "id"
+		LineNumber                  39151, 4
+		LineNumberAlt1              32, 110
+		GetThisMemberValueString    "obj"
+		GetMemberValueString        "id"
+		CallGameFunctionString      "scslosifoundation", "identifiertostring", 1
+		LineNumber                  39151, 4
+		LineNumberAlt1              32, 110
+		SetThisMemberValueString    "objname"
+		LineNumber                  39152, 4
+		LineNumberAlt1              33, 110
+		GetThisMemberValueString    "obj"
+		GetMemberValueString        "id"
+		CallGameFunctionString      "scslosifoundation", "identifiertostring", 1
+		LineNumber                  39152, 4
+		LineNumberAlt1              33, 110
+		SetThisMemberValueString    "name"
+		LineNumber                  39154, 4
+		LineNumberAlt1              35, 110
+		PushNothing
+		SetThisMemberValueString    "platformfallingsound"
+		LineNumber                  39155, 4
+		LineNumberAlt1              36, 110
+		PushNothing
+		SetThisMemberValueString    "platformrumblesound"
+		LineNumber                  39156, 4
+		LineNumberAlt1              37, 110
+		PushConstanti8              1
+		SetThisMemberValueString    "dropsoundonce"
+		LineNumber                  39157, 4
+		LineNumberAlt1              38, 110
+		PushConstant0
+		SetThisMemberValueString    "touched"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x6a584
+		; source: 110 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_volatilePlatform.vbo" 46:49
+		MemberFunctionArgumentCheck 9
+		LineNumber                  39165, 4
+		LineNumberAlt1              46, 110
+		GetThisMemberValueString    "obj"
+		PushNothing
+		PushConstanti8              1
+		PushConstanti8              1
+		PushConstant0
+		PushConstant0
+		PushNothing
+		GetVariableValue            1               ; local
+		GetVariableValue            2               ; local
+		PushNothing
+		GetVariableValue            3               ; local
+		GetVariableValue            4               ; local
+		GetVariableValue            5               ; local
+		GetVariableValue            6               ; local
+		GetVariableValue            7               ; local
+		GetVariableValue            8               ; local
+		Pull                        16
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                16
+		Pop
+		LineNumber                  39166, 4
+		LineNumberAlt1              47, 110
+		GetThisMemberValueString    "obj"
+		PushConstanti8              1
+		PushConstant0
+		PushConstanti8              1
+		Pull                        4
+		GetMemberFunctionString     "setresponse"
+		JumpAbsolute                4
+		Pop
+		LineNumber                  39167, 4
+		LineNumberAlt1              48, 110
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "setasshakeobj"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  39168, 4
+		LineNumberAlt1              49, 110
+		GetVariableValue            0               ; local
+		GetThisMemberFunctionString "setupsounds"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setupsounds"
+		; address: 0x6a5ff
+		MemberFunctionArgumentCheck 3
+		PushNothing
+		Return
+	end ; method
+
+	begin method "show"
+		; address: 0x6a603
+		; source: 110 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_volatilePlatform.vbo" 73:73
+		MemberFunctionArgumentCheck 1
+		LineNumber                  39192, 4
+		LineNumberAlt1              73, 110
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hide"
+		; address: 0x6a61b
+		; source: 110 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_volatilePlatform.vbo" 77:77
+		MemberFunctionArgumentCheck 1
+		LineNumber                  39196, 4
+		LineNumberAlt1              77, 110
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "hide"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x6a633
+		; source: 110 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_volatilePlatform.vbo" 82:85
+		MemberFunctionArgumentCheck 1
+		LineNumber                  39201, 4
+		LineNumberAlt1              82, 110
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  39202, 4
+		LineNumberAlt1              83, 110
+		PushNothing
+		SetThisMemberValueString    "obj"
+		LineNumber                  39203, 4
+		LineNumberAlt1              84, 110
+		PushNothing
+		SetThisMemberValueString    "platformfallingsound"
+		LineNumber                  39204, 4
+		LineNumberAlt1              85, 110
+		PushNothing
+		SetThisMemberValueString    "platformrumblesound"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "reset"
+		; address: 0x6a675
+		; source: 110 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_volatilePlatform.vbo" 90:93
+		MemberFunctionArgumentCheck 1
+		LineNumber                  39209, 4
+		LineNumberAlt1              90, 110
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "shakereset"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  39211, 4
+		LineNumberAlt1              92, 110
+		PushConstanti8              1
+		SetThisMemberValueString    "dropsoundonce"
+		LineNumber                  39212, 4
+		LineNumberAlt1              93, 110
+		PushConstant0
+		SetThisMemberValueString    "touched"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "touch"
+		; address: 0x6a6aa
+		; source: 110 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_volatilePlatform.vbo" 98:102
+		MemberFunctionArgumentCheck   1
+		LineNumber                    39217, 4
+		LineNumberAlt1                98, 110
+		GetThisMemberValueString      "touched"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    39220, 4
+		LineNumberAlt1                101, 110
+		PushConstanti8                1
+		SetThisMemberValueString      "touched"
+		LineNumber                    39221, 4
+		LineNumberAlt1                102, 110
+		GetThisMemberValueString      "obj"
+		Dup
+		GetMemberFunctionString       "shaketouch"
+		JumpAbsolute                  1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "settimetofall"
+		; address: 0x6a6e3
+		; source: 110 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_volatilePlatform.vbo" 107:107
+		MemberFunctionArgumentCheck 2
+		LineNumber                  39226, 4
+		LineNumberAlt1              107, 110
+		GetThisMemberValueString    "obj"
+		GetVariableValue            1               ; local
+		Pull                        2
+		GetMemberFunctionString     "settimetofall"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setfallrotation"
+		; address: 0x6a6ff
+		; source: 110 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_volatilePlatform.vbo" 112:112
+		MemberFunctionArgumentCheck 4
+		LineNumber                  39231, 4
+		LineNumberAlt1              112, 110
+		GetThisMemberValueString    "obj"
+		GetVariableValue            1                 ; local
+		GetVariableValue            2                 ; local
+		GetVariableValue            3                 ; local
+		Pull                        4
+		GetMemberFunctionString     "setfallrotation"
+		JumpAbsolute                4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setshakerotateintensity"
+		; address: 0x6a721
+		; source: 110 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_volatilePlatform.vbo" 117:117
+		MemberFunctionArgumentCheck 2
+		LineNumber                  39236, 4
+		LineNumberAlt1              117, 110
+		GetThisMemberValueString    "obj"
+		GetVariableValue            1                         ; local
+		Pull                        2
+		GetMemberFunctionString     "setshakerotateintensity"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setshakebobbleintensity"
+		; address: 0x6a73d
+		; source: 110 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_volatilePlatform.vbo" 122:122
+		MemberFunctionArgumentCheck 2
+		LineNumber                  39241, 4
+		LineNumberAlt1              122, 110
+		GetThisMemberValueString    "obj"
+		GetVariableValue            1                         ; local
+		Pull                        2
+		GetMemberFunctionString     "setshakebobbleintensity"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setshakekillheight"
+		; address: 0x6a759
+		; source: 110 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_volatilePlatform.vbo" 127:127
+		MemberFunctionArgumentCheck 2
+		LineNumber                  39246, 4
+		LineNumberAlt1              127, 110
+		GetThisMemberValueString    "obj"
+		GetVariableValue            1                    ; local
+		Pull                        2
+		GetMemberFunctionString     "setshakekillheight"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x6a775
+		; source: 110 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_volatilePlatform.vbo" 132:148
+		MemberFunctionArgumentCheck   2
+		LineNumber                    39251, 4
+		LineNumberAlt1                132, 110
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    39256, 4
+		LineNumberAlt1                137, 110
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		GetThisMemberValueString      "objid"
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    39257, 4
+		LineNumberAlt1                138, 110
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		PushConstantStringString      "cnt1"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    39257, 4
+		LineNumberAlt1                138, 110
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    39258, 4
+		LineNumberAlt1                139, 110
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "touch"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Dup
+		PushConstanti8                48
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    39263, 4
+		LineNumberAlt1                144, 110
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    39264, 4
+		LineNumberAlt1                145, 110
+		GetThisMemberValueString      "platformfallingsound"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    39265, 4
+		LineNumberAlt1                146, 110
+		GetThisMemberValueString      "dropsoundonce"
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    39267, 4
+		LineNumberAlt1                148, 110
+		PushConstant0
+		SetThisMemberValueString      "dropsoundonce"
+		; <-
+		BranchTarget                  2
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

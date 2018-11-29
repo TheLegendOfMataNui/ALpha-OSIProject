@@ -1,0 +1,541 @@
+begin class "gs_lego_frontendscreen", "base_screen"
+	property "menu"
+	property "nextscreen"
+	property "selected"
+	property "temptimer"
+	property "mousex"
+	property "mousey"
+
+	begin method "gs_lego_frontendscreen"
+		; address: 0x58f44
+		; source: 46 "C:\\projects\\lego\\Scripting\\VBO\\lego_frontend.vbo" 1132:1132
+		MemberFunctionArgumentCheck 2
+		LineNumber                  29787, 4
+		LineNumberAlt1              1132, 46
+		GetVariableValue            1        ; local
+		SetThisMemberValueString    "menu"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x58f58
+		; source: 46 "C:\\projects\\lego\\Scripting\\VBO\\lego_frontend.vbo" 1137:1138
+		MemberFunctionArgumentCheck 1
+		LineNumber                  29792, 4
+		LineNumberAlt1              1137, 46
+		GetThisMemberValueString    "menu"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  29793, 4
+		LineNumberAlt1              1138, 46
+		PushConstant0
+		SetThisMemberValueString    "selected"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initshort"
+		; address: 0x58f7e
+		; source: 46 "C:\\projects\\lego\\Scripting\\VBO\\lego_frontend.vbo" 1143:1143
+		MemberFunctionArgumentCheck 1
+		LineNumber                  29798, 4
+		LineNumberAlt1              1143, 46
+		GetThisMemberValueString    "menu"
+		Dup
+		GetMemberFunctionString     "initshort"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x58f96
+		; source: 46 "C:\\projects\\lego\\Scripting\\VBO\\lego_frontend.vbo" 1148:1153
+		MemberFunctionArgumentCheck   1
+		LineNumber                    29803, 4
+		LineNumberAlt1                1148, 46
+		PushConstantStringString      "[][0][] cleanup Gs_Lego_FrontEndScreen"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    29804, 4
+		LineNumberAlt1                1149, 46
+		GetThisMemberValueString      "menu"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    29805, 4
+		LineNumberAlt1                1150, 46
+		GetThisMemberValueString      "menu"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    29806, 4
+		LineNumberAlt1                1151, 46
+		PushNothing
+		SetThisMemberValueString      "menu"
+		; <-
+		BranchTarget                  0
+		LineNumber                    29808, 4
+		LineNumberAlt1                1153, 46
+		PushConstantStringString      "[][1][] cleanup Gs_Lego_FrontEndScreen"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupshort"
+		; address: 0x58ff7
+		; source: 46 "C:\\projects\\lego\\Scripting\\VBO\\lego_frontend.vbo" 1158:1158
+		MemberFunctionArgumentCheck 1
+		LineNumber                  29813, 4
+		LineNumberAlt1              1158, 46
+		GetVariableValue            0             ; local
+		GetThisMemberFunctionString "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x5900e
+		; source: 46 "C:\\projects\\lego\\Scripting\\VBO\\lego_frontend.vbo" 1163:1170
+		MemberFunctionArgumentCheck   2
+		LineNumber                    29818, 4
+		LineNumberAlt1                1163, 46
+		GetThisMemberValueString      "menu"
+		GetVariableValue              1              ; local
+		Pull                          2
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    29819, 4
+		LineNumberAlt1                1164, 46
+		GetThisMemberValueString      "selected"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    29820, 4
+		LineNumberAlt1                1165, 46
+		GetThisMemberValueString      "temptimer"
+		PushConstantf32               0.25
+		GreaterThan
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    29821, 4
+		LineNumberAlt1                1166, 46
+		GetThisMemberValueString      "menu"
+		Dup
+		GetMemberFunctionString       "startgame"
+		JumpAbsolute                  1
+		LineNumber                    29821, 4
+		LineNumberAlt1                1166, 46
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    29822, 4
+		LineNumberAlt1                1167, 46
+		GetVariableValue              0              ; local
+		GetThisMemberFunctionString   "startnewgame"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		LineNumber                    29825, 4
+		LineNumberAlt1                1170, 46
+		GetThisMemberValueString      "temptimer"
+		GetVariableValue              1              ; local
+		GetMemberValueString          "deltatime"
+		Add
+		SetThisMemberValueString      "temptimer"
+		; <-
+		BranchTarget                  2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x590a3
+		; source: 46 "C:\\projects\\lego\\Scripting\\VBO\\lego_frontend.vbo" 1178:1187
+		MemberFunctionArgumentCheck   2
+		LineNumber                    29833, 4
+		LineNumberAlt1                1178, 46
+		GetVariableValue              1                     ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                25
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    29835, 4
+		LineNumberAlt1                1180, 46
+		GetThisMemberValueString      "menu"
+		GetVariableValue              1                     ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		GetThisMemberValueString      "mousex"
+		GetThisMemberValueString      "mousey"
+		Pull                          4
+		GetMemberFunctionString       "mousebuttonreleased"
+		JumpAbsolute                  4
+		Pop
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		Dup
+		PushConstanti8                26
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    29837, 4
+		LineNumberAlt1                1182, 46
+		GetVariableValue              1                     ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		SetThisMemberValueString      "mousex"
+		LineNumber                    29838, 4
+		LineNumberAlt1                1183, 46
+		GetVariableValue              1                     ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		SetThisMemberValueString      "mousey"
+		LineNumber                    29839, 4
+		LineNumberAlt1                1184, 46
+		GetThisMemberValueString      "menu"
+		GetThisMemberValueString      "mousex"
+		GetThisMemberValueString      "mousey"
+		Pull                          3
+		GetMemberFunctionString       "setmenupointer"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    29840, 4
+		LineNumberAlt1                1185, 46
+		GetThisMemberValueString      "menu"
+		GetThisMemberValueString      "mousex"
+		GetThisMemberValueString      "mousey"
+		Pull                          3
+		GetMemberFunctionString       "checkhighlites"
+		JumpAbsolute                  3
+		Pop
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Dup
+		PushConstanti8                6
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    29842, 4
+		LineNumberAlt1                1187, 46
+		GetThisMemberValueString      "menu"
+		Dup
+		GetMemberFunctionString       "resetcamera"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x5916b
+		; source: 46 "C:\\projects\\lego\\Scripting\\VBO\\lego_frontend.vbo" 1194:1198
+		MemberFunctionArgumentCheck   2
+		LineNumber                    29849, 4
+		LineNumberAlt1                1194, 46
+		GetThisMemberValueString      "menu"
+		GetVariableValue              1              ; local
+		Pull                          2
+		GetMemberFunctionString       "input"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    29850, 4
+		LineNumberAlt1                1195, 46
+		GetVariableValue              1              ; local
+		GetMemberValueString          "button"
+		PushConstanti8                6
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    29850, 4
+		LineNumberAlt1                1195, 46
+		GetVariableValue              1              ; local
+		GetMemberValueString          "event"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    29850, 4
+		LineNumberAlt1                1195, 46
+		GetVariableValue              0              ; local
+		GetThisMemberFunctionString   "selectobject"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    29851, 4
+		LineNumberAlt1                1196, 46
+		GetVariableValue              1              ; local
+		GetMemberValueString          "button"
+		PushConstanti8                13
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    29851, 4
+		LineNumberAlt1                1196, 46
+		GetVariableValue              1              ; local
+		GetMemberValueString          "event"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    29851, 4
+		LineNumberAlt1                1196, 46
+		GetVariableValue              0              ; local
+		GetThisMemberFunctionString   "selectobject"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  1
+		LineNumber                    29852, 4
+		LineNumberAlt1                1197, 46
+		GetVariableValue              1              ; local
+		GetMemberValueString          "button"
+		PushConstanti8                32
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    29852, 4
+		LineNumberAlt1                1197, 46
+		GetVariableValue              1              ; local
+		GetMemberValueString          "event"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    29852, 4
+		LineNumberAlt1                1197, 46
+		GetVariableValue              0              ; local
+		GetThisMemberFunctionString   "selectobject"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  2
+		LineNumber                    29853, 4
+		LineNumberAlt1                1198, 46
+		GetVariableValue              1              ; local
+		GetMemberValueString          "button"
+		PushConstanti8                98
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    29853, 4
+		LineNumberAlt1                1198, 46
+		GetVariableValue              1              ; local
+		GetMemberValueString          "event"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    29853, 4
+		LineNumberAlt1                1198, 46
+		GetVariableValue              0              ; local
+		GetThisMemberFunctionString   "selectobject"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  3
+		PushNothing
+		Return
+	end ; method
+
+	begin method "startnewgame"
+		; address: 0x59283
+		; source: 46 "C:\\projects\\lego\\Scripting\\VBO\\lego_frontend.vbo" 1206:1213
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          2
+		LineNumber                    29861, 4
+		LineNumberAlt1                1206, 46
+		PushConstanti8                9
+		SetThisMemberValueString      "nextscreen"
+		LineNumber                    29862, 4
+		LineNumberAlt1                1207, 46
+		GetThisMemberValueString      "menu"
+		GetMemberValueString          "argarray"
+		SetVariableValue              1            ; local
+		LineNumber                    29863, 4
+		LineNumberAlt1                1208, 46
+		GetThisMemberValueString      "nextscreen"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    29864, 4
+		LineNumberAlt1                1209, 46
+		GetVariableValueGlobalString  "screenlist"
+		GetThisMemberValueString      "nextscreen"
+		Pull                          2
+		GetMemberFunctionString       "getscreen"
+		JumpAbsolute                  2
+		LineNumber                    29864, 4
+		LineNumberAlt1                1209, 46
+		SetVariableValue              2            ; local
+		LineNumber                    29865, 4
+		LineNumberAlt1                1210, 46
+		GetVariableValue              1            ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    29866, 4
+		LineNumberAlt1                1211, 46
+		GetVariableValue              2            ; local
+		GetMemberValueString          "screen"
+		GetVariableValue              1            ; local
+		Pull                          2
+		GetMemberFunctionString       "setargs"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    29868, 4
+		LineNumberAlt1                1213, 46
+		GetVariableValueGlobalString  "screenlist"
+		GetThisMemberValueString      "nextscreen"
+		Pull                          2
+		GetMemberFunctionString       "forward"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "navforward"
+		; address: 0x59328
+		; source: 46 "C:\\projects\\lego\\Scripting\\VBO\\lego_frontend.vbo" 1220:1227
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          2
+		LineNumber                    29875, 4
+		LineNumberAlt1                1220, 46
+		GetThisMemberValueString      "menu"
+		GetMemberValueString          "destination"
+		SetThisMemberValueString      "nextscreen"
+		LineNumber                    29876, 4
+		LineNumberAlt1                1221, 46
+		GetThisMemberValueString      "menu"
+		GetMemberValueString          "argarray"
+		SetVariableValue              1             ; local
+		LineNumber                    29877, 4
+		LineNumberAlt1                1222, 46
+		GetThisMemberValueString      "nextscreen"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    29878, 4
+		LineNumberAlt1                1223, 46
+		GetVariableValueGlobalString  "screenlist"
+		GetThisMemberValueString      "nextscreen"
+		Pull                          2
+		GetMemberFunctionString       "getscreen"
+		JumpAbsolute                  2
+		LineNumber                    29878, 4
+		LineNumberAlt1                1223, 46
+		SetVariableValue              2             ; local
+		LineNumber                    29879, 4
+		LineNumberAlt1                1224, 46
+		GetVariableValue              1             ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    29880, 4
+		LineNumberAlt1                1225, 46
+		GetVariableValue              2             ; local
+		GetMemberValueString          "screen"
+		GetVariableValue              1             ; local
+		Pull                          2
+		GetMemberFunctionString       "setargs"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    29882, 4
+		LineNumberAlt1                1227, 46
+		GetVariableValueGlobalString  "screenlist"
+		GetThisMemberValueString      "nextscreen"
+		Pull                          2
+		GetMemberFunctionString       "forward"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "navbackward"
+		; address: 0x593d1
+		; source: 46 "C:\\projects\\lego\\Scripting\\VBO\\lego_frontend.vbo" 1233:1233
+		MemberFunctionArgumentCheck  1
+		LineNumber                   29888, 4
+		LineNumberAlt1               1233, 46
+		GetVariableValueGlobalString "screenlist"
+		Dup
+		GetMemberFunctionString      "backward"
+		JumpAbsolute                 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "selectobject"
+		; address: 0x593e9
+		; source: 46 "C:\\projects\\lego\\Scripting\\VBO\\lego_frontend.vbo" 1237:1239
+		MemberFunctionArgumentCheck 1
+		LineNumber                  29892, 4
+		LineNumberAlt1              1237, 46
+		PushConstanti8              1
+		SetThisMemberValueString    "selected"
+		LineNumber                  29893, 4
+		LineNumberAlt1              1238, 46
+		PushConstant0
+		SetThisMemberValueString    "temptimer"
+		LineNumber                  29894, 4
+		LineNumberAlt1              1239, 46
+		GetThisMemberValueString    "menu"
+		Dup
+		GetMemberFunctionString     "hidenonselected"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

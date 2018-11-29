@@ -1,0 +1,161 @@
+begin class "lego_area_boss", "gs_lego_area"
+	property "puzzle"
+
+	begin method "lego_area_boss"
+		; address: 0x9201d
+		; source: 159 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_boss.vbo" 84:87
+		MemberFunctionArgumentCheck 2
+		LineNumber                  57382, 4
+		LineNumberAlt1              84, 159
+		GetVariableValue            0                    ; local
+		PushConstantStringString    "boss"
+		GetVariableValue            1                    ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  57383, 4
+		LineNumberAlt1              85, 159
+		CreateObjectString          "boss_puzzle"
+		Dup
+		GetVariableValue            0                    ; local
+		Pull                        2
+		GetMemberFunctionString     "boss_puzzle"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  57383, 4
+		LineNumberAlt1              85, 159
+		SetThisMemberValueString    "puzzle"
+		LineNumber                  57384, 4
+		LineNumberAlt1              86, 159
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  57385, 4
+		LineNumberAlt1              87, 159
+		CreateArray
+		Dup
+		PushConstanti16             180
+		AppendToArray
+		Dup
+		PushConstantf32             1391.300048828125
+		AppendToArray
+		Dup
+		PushConstantf32             26.100000381469727
+		AppendToArray
+		Dup
+		PushConstant0
+		PushConstantf32             486.5
+		Subtract
+		AppendToArray
+		SetThisMemberValueString    "startingarea"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x9209f
+		; source: 159 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_boss.vbo" 95:96
+		MemberFunctionArgumentCheck 1
+		LineNumber                  57393, 4
+		LineNumberAlt1              95, 159
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  57394, 4
+		LineNumberAlt1              96, 159
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x920cb
+		; source: 159 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_boss.vbo" 101:101
+		MemberFunctionArgumentCheck 2
+		LineNumber                  57399, 4
+		LineNumberAlt1              101, 159
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x920e7
+		; source: 159 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_boss.vbo" 106:106
+		MemberFunctionArgumentCheck 2
+		LineNumber                  57404, 4
+		LineNumberAlt1              106, 159
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "process"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x92103
+		; source: 159 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_boss.vbo" 111:111
+		MemberFunctionArgumentCheck 2
+		LineNumber                  57409, 4
+		LineNumberAlt1              111, 159
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1        ; local
+		Pull                        2
+		GetMemberFunctionString     "input"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x9211f
+		; source: 159 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_boss.vbo" 116:116
+		MemberFunctionArgumentCheck 1
+		LineNumber                  57414, 4
+		LineNumberAlt1              116, 159
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x92137
+		; source: 159 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_boss.vbo" 121:122
+		MemberFunctionArgumentCheck 1
+		LineNumber                  57419, 4
+		LineNumberAlt1              121, 159
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "exit"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  57420, 4
+		LineNumberAlt1              122, 159
+		PushNothing
+		SetThisMemberValueString    "puzzle"
+		PushNothing
+		Return
+	end ; method
+end ; class

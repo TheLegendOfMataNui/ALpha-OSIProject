@@ -1,0 +1,40 @@
+begin class "lego_area_front", "gs_lego_area"
+	begin method "lego_area_front"
+		; address: 0x561e2
+		; source: 46 "C:\\projects\\lego\\Scripting\\VBO\\lego_frontend.vbo" 79:82
+		MemberFunctionArgumentCheck   2
+		LineNumber                    28734, 4
+		LineNumberAlt1                79, 46
+		PushConstanti8                1
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    28735, 4
+		LineNumberAlt1                80, 46
+		GetVariableValue              0              ; local
+		PushConstantStringString      "frnt"
+		GetVariableValue              1              ; local
+		PushConstanti8                1
+		PushConstant0
+		GetThisMemberFunctionString   "gs_lego_area"
+		JumpAbsolute                  5
+		Pop
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    28737, 4
+		LineNumberAlt1                82, 46
+		GetVariableValue              0              ; local
+		PushConstantStringString      "bech"
+		GetVariableValue              1              ; local
+		PushConstanti8                1
+		PushConstant0
+		GetThisMemberFunctionString   "gs_lego_area"
+		JumpAbsolute                  5
+		Pop
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+end ; class

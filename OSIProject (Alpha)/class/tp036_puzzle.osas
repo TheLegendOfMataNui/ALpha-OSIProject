@@ -1,0 +1,382 @@
+begin class "tp036_puzzle"
+	property "mmosquitoes"
+	property "mparent"
+	property "glyph"
+	property "music"
+
+	begin method "tp036_puzzle"
+		; address: 0xccfa5
+		; source: 230 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_tp03.vbo" 93:93
+		MemberFunctionArgumentCheck 2
+		LineNumber                  16511, 4
+		LineNumberAlt1              93, 230
+		GetVariableValue            1         ; local
+		SetThisMemberValueString    "mparent"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "show"
+		; address: 0xccfb9
+		; source: 230 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_tp03.vbo" 100:125
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    16518, 4
+		LineNumberAlt1                100, 230
+		CreateObjectString            "lego_pickup"
+		Dup
+		PushConstantStringString      "glyp"
+		PushConstanti8                19
+		PushConstanti8                2
+		PushConstantStringString      "item"
+		PushConstanti8                6
+		PushConstanti8                1
+		Pull                          7
+		GetMemberFunctionString       "lego_pickup"
+		JumpAbsolute                  7
+		Pop
+		LineNumber                    16518, 4
+		LineNumberAlt1                100, 230
+		SetThisMemberValueString      "glyph"
+		LineNumber                    16519, 4
+		LineNumberAlt1                101, 230
+		GetThisMemberValueString      "glyph"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    16521, 4
+		LineNumberAlt1                103, 230
+		PushConstantStringString      "glyp"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    16521, 4
+		LineNumberAlt1                103, 230
+		CallGameFunctionString        "gcsaver", "findglyph", 1
+		LineNumber                    16521, 4
+		LineNumberAlt1                103, 230
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    16522, 4
+		LineNumberAlt1                104, 230
+		GetThisMemberValueString      "glyph"
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    16524, 4
+		LineNumberAlt1                106, 230
+		GetThisMemberValueString      "glyph"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  1
+		LineNumber                    16528, 4
+		LineNumberAlt1                110, 230
+		CreateArray
+		Dup
+		CreateObjectString            "gs_lego_character"
+		Dup
+		PushConstantStringString      "bill"
+		PushConstantStringString      "msqt"
+		PushConstantStringString      "fake"
+		PushConstant0
+		PushConstantf32               27.18000030517578
+		PushConstantf32               22.700000762939453
+		PushConstantf32               2.259999990463257
+		PushConstantStringString      "aiin"
+		Pull                          9
+		GetMemberFunctionString       "gs_lego_character"
+		JumpAbsolute                  9
+		Pop
+		LineNumber                    16529, 4
+		LineNumberAlt1                111, 230
+		AppendToArray
+		Dup
+		CreateObjectString            "gs_lego_character"
+		Dup
+		PushConstantStringString      "mike"
+		PushConstantStringString      "msqt"
+		PushConstantStringString      "fake"
+		PushConstant0
+		PushConstantf32               27.18000030517578
+		PushConstantf32               22.700000762939453
+		PushConstantf32               2.259999990463257
+		PushConstantStringString      "aiin"
+		Pull                          9
+		GetMemberFunctionString       "gs_lego_character"
+		JumpAbsolute                  9
+		Pop
+		LineNumber                    16530, 4
+		LineNumberAlt1                112, 230
+		AppendToArray
+		Dup
+		CreateObjectString            "gs_lego_character"
+		Dup
+		PushConstantStringString      "earl"
+		PushConstantStringString      "msqt"
+		PushConstantStringString      "fake"
+		PushConstant0
+		PushConstantf32               27.18000030517578
+		PushConstantf32               22.700000762939453
+		PushConstantf32               2.259999990463257
+		PushConstantStringString      "aiin"
+		Pull                          9
+		GetMemberFunctionString       "gs_lego_character"
+		JumpAbsolute                  9
+		Pop
+		LineNumber                    16531, 4
+		LineNumberAlt1                113, 230
+		AppendToArray
+		SetThisMemberValueString      "mmosquitoes"
+		LineNumber                    16534, 4
+		LineNumberAlt1                116, 230
+		GetThisMemberValueString      "mmosquitoes"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                                            ; local
+		; <-
+		BranchTarget                  2
+		Dup
+		GetVariableValue              1                                            ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    16535, 4
+		LineNumberAlt1                117, 230
+		GetThisMemberValueString      "mmosquitoes"
+		GetVariableValue              1                                            ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    16536, 4
+		LineNumberAlt1                118, 230
+		GetThisMemberValueString      "mmosquitoes"
+		GetVariableValue              1                                            ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "add"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    16537, 4
+		LineNumberAlt1                119, 230
+		GetThisMemberValueString      "mmosquitoes"
+		GetVariableValue              1                                            ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Pop
+		LineNumber                    16541, 4
+		LineNumberAlt1                123, 230
+		CreateObjectString            "legomp3player"
+		Dup
+		Dup
+		GetMemberFunctionString       "legomp3player"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    16541, 4
+		LineNumberAlt1                123, 230
+		SetThisMemberValueString      "music"
+		LineNumber                    16542, 4
+		LineNumberAlt1                124, 230
+		GetThisMemberValueString      "music"
+		PushConstantStringString      "Root/Data/sounds/MUSICsurfandsnowboard"
+		Pull                          2
+		GetMemberFunctionString       "setupforplay"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    16543, 4
+		LineNumberAlt1                125, 230
+		GetThisMemberValueString      "music"
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "play"
+		JumpAbsolute                  2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hide"
+		; address: 0xcd1c6
+		; source: 230 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_tp03.vbo" 142:151
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    16560, 4
+		LineNumberAlt1                142, 230
+		GetThisMemberValueString      "mmosquitoes"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                   ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1                   ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    16561, 4
+		LineNumberAlt1                143, 230
+		GetThisMemberValueString      "mmosquitoes"
+		GetVariableValue              1                   ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    16562, 4
+		LineNumberAlt1                144, 230
+		GetThisMemberValueString      "mmosquitoes"
+		GetVariableValue              1                   ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    16564, 4
+		LineNumberAlt1                146, 230
+		PushNothing
+		SetThisMemberValueString      "glyph"
+		LineNumber                    16567, 4
+		LineNumberAlt1                149, 230
+		GetThisMemberValueString      "music"
+		Dup
+		GetMemberFunctionString       "stop"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    16568, 4
+		LineNumberAlt1                150, 230
+		GetThisMemberValueString      "music"
+		Dup
+		GetMemberFunctionString       "cleanupfordestroy"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    16569, 4
+		LineNumberAlt1                151, 230
+		PushNothing
+		SetThisMemberValueString      "music"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0xcd264
+		; source: 230 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_tp03.vbo" 156:156
+		MemberFunctionArgumentCheck 1
+		CreateStackVariables        1
+		LineNumber                  16574, 4
+		LineNumberAlt1              156, 230
+		PushNothing
+		SetVariableValue            1        ; local
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xcd278
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xcd27c
+		; source: 230 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_tp03.vbo" 168:175
+		MemberFunctionArgumentCheck   2
+		LineNumber                    16586, 4
+		LineNumberAlt1                168, 230
+		GetVariableValue              1                                        ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                46
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    16588, 4
+		LineNumberAlt1                170, 230
+		PushConstantf32               1.2000000476837158
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		LineNumber                    16589, 4
+		LineNumberAlt1                171, 230
+		GetThisMemberValueString      "music"
+		Dup
+		GetMemberFunctionString       "stop"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		Dup
+		PushConstanti8                27
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    16591, 4
+		LineNumberAlt1                173, 230
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		GetThisMemberValueString      "mparent"
+		GetMemberValueString          "enterstartid"
+		GetThisMemberValueString      "mparent"
+		GetMemberValueString          "enterlookid"
+		Pull                          3
+		GetMemberFunctionString       "gotopos"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    16592, 4
+		LineNumberAlt1                174, 230
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "unkill"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    16593, 4
+		LineNumberAlt1                175, 230
+		GetThisMemberValueString      "music"
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "play"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0xcd321
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+end ; class

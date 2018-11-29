@@ -1,0 +1,370 @@
+begin class "bkik_boulder"
+	property "stringid"
+	property "areaid"
+	property "id"
+	property "parent"
+	property "boulder"
+
+	begin method "bkik_boulder"
+		; address: 0x8d38b
+		; source: 150 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_bkik.vbo" 359:363
+		MemberFunctionArgumentCheck 5
+		LineNumber                  55051, 4
+		LineNumberAlt1              359, 150
+		GetVariableValue            3                                            ; local
+		SetThisMemberValueString    "parent"
+		LineNumber                  55052, 4
+		LineNumberAlt1              360, 150
+		GetVariableValue            1                                            ; local
+		SetThisMemberValueString    "stringid"
+		LineNumber                  55053, 4
+		LineNumberAlt1              361, 150
+		GetVariableValue            2                                            ; local
+		SetThisMemberValueString    "areaid"
+		LineNumber                  55054, 4
+		LineNumberAlt1              362, 150
+		GetThisMemberValueString    "stringid"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  55054, 4
+		LineNumberAlt1              362, 150
+		SetThisMemberValueString    "id"
+		LineNumber                  55055, 4
+		LineNumberAlt1              363, 150
+		CreateObjectString          "lego_moveableobject"
+		Dup
+		GetThisMemberValueString    "stringid"
+		GetThisMemberValueString    "areaid"
+		Pull                        3
+		GetMemberFunctionString     "lego_moveableobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  55055, 4
+		LineNumberAlt1              363, 150
+		SetThisMemberValueString    "boulder"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x8d408
+		; source: 150 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_bkik.vbo" 371:372
+		MemberFunctionArgumentCheck 1
+		LineNumber                  55063, 4
+		LineNumberAlt1              371, 150
+		GetThisMemberValueString    "boulder"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  55064, 4
+		LineNumberAlt1              372, 150
+		GetThisMemberValueString    "boulder"
+		PushConstanti8              3
+		PushConstanti8              3
+		PushConstanti8              3
+		Pull                        4
+		GetMemberFunctionString     "setresponse"
+		JumpAbsolute                4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x8d43b
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x8d43f
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x8d443
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "show"
+		; address: 0x8d447
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hide"
+		; address: 0x8d44b
+		; source: 150 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_bkik.vbo" 397:403
+		MemberFunctionArgumentCheck 1
+		LineNumber                  55089, 4
+		LineNumberAlt1              397, 150
+		PushNothing
+		SetThisMemberValueString    "parent"
+		LineNumber                  55090, 4
+		LineNumberAlt1              398, 150
+		PushNothing
+		SetThisMemberValueString    "stringid"
+		LineNumber                  55091, 4
+		LineNumberAlt1              399, 150
+		PushNothing
+		SetThisMemberValueString    "areaid"
+		LineNumber                  55092, 4
+		LineNumberAlt1              400, 150
+		PushNothing
+		SetThisMemberValueString    "id"
+		LineNumber                  55093, 4
+		LineNumberAlt1              401, 150
+		GetThisMemberValueString    "boulder"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  55094, 4
+		LineNumberAlt1              402, 150
+		PushNothing
+		SetThisMemberValueString    "boulder"
+		LineNumber                  55095, 4
+		LineNumberAlt1              403, 150
+		PushNothing
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "explode"
+		; address: 0x8d4b7
+		; source: 150 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_bkik.vbo" 410:430
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          11
+		LineNumber                    55102, 4
+		LineNumberAlt1                410, 150
+		GetThisMemberValueString      "boulder"
+		Dup
+		GetMemberFunctionString       "getx"
+		JumpAbsolute                  1
+		LineNumber                    55102, 4
+		LineNumberAlt1                410, 150
+		SetVariableValue              1                   ; local
+		LineNumber                    55103, 4
+		LineNumberAlt1                411, 150
+		GetThisMemberValueString      "boulder"
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    55103, 4
+		LineNumberAlt1                411, 150
+		SetVariableValue              2                   ; local
+		LineNumber                    55104, 4
+		LineNumberAlt1                412, 150
+		GetThisMemberValueString      "boulder"
+		Dup
+		GetMemberFunctionString       "getz"
+		JumpAbsolute                  1
+		LineNumber                    55104, 4
+		LineNumberAlt1                412, 150
+		SetVariableValue              3                   ; local
+		LineNumber                    55106, 4
+		LineNumberAlt1                414, 150
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "miniboulders"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              4                   ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              4                   ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    55107, 4
+		LineNumberAlt1                415, 150
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		PushConstantf32               0.03999999910593033
+		PushConstantf32               0.15000000596046448
+		Pull                          3
+		GetMemberFunctionString       "getrandomfloat"
+		JumpAbsolute                  3
+		LineNumber                    55107, 4
+		LineNumberAlt1                415, 150
+		SetVariableValue              5                   ; local
+		LineNumber                    55108, 4
+		LineNumberAlt1                416, 150
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		PushConstant0
+		PushConstantf32               15
+		Subtract
+		PushConstantf32               15
+		Pull                          3
+		GetMemberFunctionString       "getrandomfloat"
+		JumpAbsolute                  3
+		LineNumber                    55108, 4
+		LineNumberAlt1                416, 150
+		SetVariableValue              6                   ; local
+		LineNumber                    55109, 4
+		LineNumberAlt1                417, 150
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		PushConstantf32               1
+		PushConstantf32               10
+		Pull                          3
+		GetMemberFunctionString       "getrandomfloat"
+		JumpAbsolute                  3
+		LineNumber                    55109, 4
+		LineNumberAlt1                417, 150
+		SetVariableValue              7                   ; local
+		LineNumber                    55110, 4
+		LineNumberAlt1                418, 150
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		PushConstant0
+		PushConstantf32               15
+		Subtract
+		PushConstantf32               15
+		Pull                          3
+		GetMemberFunctionString       "getrandomfloat"
+		JumpAbsolute                  3
+		LineNumber                    55110, 4
+		LineNumberAlt1                418, 150
+		SetVariableValue              8                   ; local
+		LineNumber                    55111, 4
+		LineNumberAlt1                419, 150
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		GetVariableValue              1                   ; local
+		Dup
+		PushConstantf32               10
+		Add
+		Pull                          3
+		GetMemberFunctionString       "getrandomfloat"
+		JumpAbsolute                  3
+		LineNumber                    55111, 4
+		LineNumberAlt1                419, 150
+		SetVariableValue              9                   ; local
+		LineNumber                    55112, 4
+		LineNumberAlt1                420, 150
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		GetVariableValue              2                   ; local
+		Dup
+		PushConstantf32               10
+		Add
+		Pull                          3
+		GetMemberFunctionString       "getrandomfloat"
+		JumpAbsolute                  3
+		LineNumber                    55112, 4
+		LineNumberAlt1                420, 150
+		SetVariableValue              10                  ; local
+		LineNumber                    55113, 4
+		LineNumberAlt1                421, 150
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		GetVariableValue              3                   ; local
+		Dup
+		PushConstantf32               10
+		Add
+		Pull                          3
+		GetMemberFunctionString       "getrandomfloat"
+		JumpAbsolute                  3
+		LineNumber                    55113, 4
+		LineNumberAlt1                421, 150
+		SetVariableValue              11                  ; local
+		LineNumber                    55114, 4
+		LineNumberAlt1                422, 150
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "miniboulders"
+		GetVariableValue              4                   ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    55115, 4
+		LineNumberAlt1                423, 150
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "miniboulders"
+		GetVariableValue              4                   ; local
+		GetArrayValue
+		PushConstantf32               0
+		Pull                          2
+		GetMemberFunctionString       "fadein"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    55116, 4
+		LineNumberAlt1                424, 150
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "miniboulders"
+		GetVariableValue              4                   ; local
+		GetArrayValue
+		GetVariableValue              9                   ; local
+		GetVariableValue              10                  ; local
+		GetVariableValue              11                  ; local
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    55117, 4
+		LineNumberAlt1                425, 150
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "miniboulders"
+		GetVariableValue              4                   ; local
+		GetArrayValue
+		GetVariableValue              5                   ; local
+		Pull                          2
+		GetMemberFunctionString       "setobjscale"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    55118, 4
+		LineNumberAlt1                426, 150
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "miniboulders"
+		GetVariableValue              4                   ; local
+		GetArrayValue
+		PushConstanti8                1
+		PushConstanti8                1
+		PushConstant0
+		PushConstanti8                1
+		Pull                          5
+		GetMemberFunctionString       "setmoveableflags"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    55120, 4
+		LineNumberAlt1                428, 150
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "miniboulders"
+		GetVariableValue              4                   ; local
+		GetArrayValue
+		GetVariableValue              6                   ; local
+		GetVariableValue              7                   ; local
+		GetVariableValue              8                   ; local
+		Pull                          4
+		GetMemberFunctionString       "setvelocity"
+		JumpAbsolute                  4
+		Pop
+		IncrementVariable             4
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    55122, 4
+		LineNumberAlt1                430, 150
+		GetThisMemberValueString      "boulder"
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

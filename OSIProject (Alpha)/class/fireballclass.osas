@@ -1,0 +1,897 @@
+begin class "fireballclass"
+	property "obj"
+	property "name"
+	property "id"
+	property "parent"
+	property "curentscale"
+	property "ball_1"
+	property "ball_2"
+	property "ball_1_name"
+	property "ball_2_name"
+	property "numofsnowballs_alive"
+	property "maxstartingpoint"
+	property "minstartingpoint"
+	property "lowestpointbeforredrop"
+	property "startingvelocity"
+	property "chaseing"
+	property "bigsound"
+	property "medsound"
+	property "smlsound"
+
+	begin method "fireballclass"
+		; address: 0xa02d1
+		; source: 172 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_path.vbo" 678:689
+		MemberFunctionArgumentCheck 7
+		LineNumber                  63567, 4
+		LineNumberAlt1              678, 172
+		GetVariableValue            4                                            ; local
+		SetThisMemberValueString    "parent"
+		LineNumber                  63568, 4
+		LineNumberAlt1              679, 172
+		GetVariableValue            1                                            ; local
+		SetThisMemberValueString    "name"
+		LineNumber                  63569, 4
+		LineNumberAlt1              680, 172
+		CreateObjectString          "lego_projectileobject"
+		Dup
+		GetThisMemberValueString    "name"
+		GetThisMemberValueString    "parent"
+		GetMemberValueString        "parent"
+		GetMemberValueString        "name"
+		Pull                        3
+		GetMemberFunctionString     "lego_projectileobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  63569, 4
+		LineNumberAlt1              680, 172
+		SetThisMemberValueString    "obj"
+		LineNumber                  63570, 4
+		LineNumberAlt1              681, 172
+		GetThisMemberValueString    "name"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  63570, 4
+		LineNumberAlt1              681, 172
+		SetThisMemberValueString    "id"
+		LineNumber                  63571, 4
+		LineNumberAlt1              682, 172
+		GetVariableValue            2                                            ; local
+		SetThisMemberValueString    "ball_1_name"
+		LineNumber                  63572, 4
+		LineNumberAlt1              683, 172
+		GetVariableValue            3                                            ; local
+		SetThisMemberValueString    "ball_2_name"
+		LineNumber                  63573, 4
+		LineNumberAlt1              684, 172
+		PushConstantf32             1
+		SetThisMemberValueString    "curentscale"
+		LineNumber                  63574, 4
+		LineNumberAlt1              685, 172
+		PushConstant0
+		SetThisMemberValueString    "numofsnowballs_alive"
+		LineNumber                  63575, 4
+		LineNumberAlt1              686, 172
+		GetVariableValue            5                                            ; local
+		SetThisMemberValueString    "maxstartingpoint"
+		LineNumber                  63576, 4
+		LineNumberAlt1              687, 172
+		GetVariableValue            6                                            ; local
+		SetThisMemberValueString    "minstartingpoint"
+		LineNumber                  63577, 4
+		LineNumberAlt1              688, 172
+		PushConstanti16             -390
+		SetThisMemberValueString    "lowestpointbeforredrop"
+		LineNumber                  63578, 4
+		LineNumberAlt1              689, 172
+		CreateArray
+		Dup
+		CreateObjectString          "basicpoint"
+		Dup
+		Dup
+		GetMemberFunctionString     "basicpoint"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  63578, 4
+		LineNumberAlt1              689, 172
+		AppendToArray
+		Dup
+		CreateObjectString          "basicpoint"
+		Dup
+		Dup
+		GetMemberFunctionString     "basicpoint"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  63578, 4
+		LineNumberAlt1              689, 172
+		AppendToArray
+		SetThisMemberValueString    "startingvelocity"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xa03f0
+		; source: 172 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_path.vbo" 698:706
+		MemberFunctionArgumentCheck 1
+		LineNumber                  63587, 4
+		LineNumberAlt1              698, 172
+		GetThisMemberValueString    "obj"
+		PushConstantf32             0.699999988079071
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstantf32             2.299999952316284
+		PushConstantStringString    "snbl"
+		PushConstantStringString    "Root/data/levels/lev4/maz1"
+		PushConstanti8              60
+		PushConstanti8              -4
+		PushConstanti8              -4
+		PushConstanti8              -4
+		PushConstanti8              4
+		PushConstanti8              4
+		PushConstanti8              4
+		Pull                        16
+		GetMemberFunctionString     "init"
+		JumpAbsolute                16
+		Pop
+		LineNumber                  63589, 4
+		LineNumberAlt1              700, 172
+		GetThisMemberValueString    "obj"
+		PushConstantf32             0.75
+		Pull                        2
+		GetMemberFunctionString     "setbouncefactor"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  63591, 4
+		LineNumberAlt1              702, 172
+		GetThisMemberValueString    "obj"
+		PushConstanti8              1
+		Pull                        2
+		GetMemberFunctionString     "setbounceeventrepoert"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  63592, 4
+		LineNumberAlt1              703, 172
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  63593, 4
+		LineNumberAlt1              704, 172
+		GetThisMemberValueString    "obj"
+		PushConstanti8              2
+		PushConstanti8              2
+		PushConstanti8              2
+		Pull                        4
+		GetMemberFunctionString     "setresponse"
+		JumpAbsolute                4
+		Pop
+		LineNumber                  63594, 4
+		LineNumberAlt1              705, 172
+		GetThisMemberValueString    "obj"
+		PushConstanti8              40
+		Pull                        2
+		GetMemberFunctionString     "setobjgravity"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  63595, 4
+		LineNumberAlt1              706, 172
+		PushConstant0
+		SetThisMemberValueString    "chaseing"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xa04b0
+		; source: 172 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_path.vbo" 712:719
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    63601, 4
+		LineNumberAlt1                712, 172
+		GetThisMemberValueString      "obj"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    63602, 4
+		LineNumberAlt1                713, 172
+		PushNothing
+		SetThisMemberValueString      "obj"
+		LineNumber                    63604, 4
+		LineNumberAlt1                715, 172
+		GetThisMemberValueString      "startingvelocity"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                  ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1                  ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    63605, 4
+		LineNumberAlt1                716, 172
+		GetThisMemberValueString      "startingvelocity"
+		GetVariableValue              1                  ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    63606, 4
+		LineNumberAlt1                717, 172
+		GetThisMemberValueString      "startingvelocity"
+		GetVariableValue              1                  ; local
+		PushNothing
+		SetArrayValue
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    63608, 4
+		LineNumberAlt1                719, 172
+		PushNothing
+		SetThisMemberValueString      "startingvelocity"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "settweakable"
+		; address: 0xa0534
+		; source: 172 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_path.vbo" 724:724
+		MemberFunctionArgumentCheck 1
+		LineNumber                  63613, 4
+		LineNumberAlt1              724, 172
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "settweakable"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xa054c
+		; source: 172 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_path.vbo" 730:735
+		MemberFunctionArgumentCheck   2
+		LineNumber                    63619, 4
+		LineNumberAlt1                730, 172
+		GetThisMemberValueString      "obj"
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    63619, 4
+		LineNumberAlt1                730, 172
+		GetThisMemberValueString      "lowestpointbeforredrop"
+		LessThan
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    63620, 4
+		LineNumberAlt1                731, 172
+		GetVariableValue              0                        ; local
+		GetThisMemberFunctionString   "startdropping"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    63623, 4
+		LineNumberAlt1                734, 172
+		GetThisMemberValueString      "obj"
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    63623, 4
+		LineNumberAlt1                734, 172
+		PushConstanti16               -240
+		GreaterThan
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    63624, 4
+		LineNumberAlt1                735, 172
+		GetVariableValue              0                        ; local
+		PushConstanti8                10
+		GetThisMemberFunctionString   "chasetoa"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "show"
+		; address: 0xa05c0
+		; source: 172 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_path.vbo" 742:742
+		MemberFunctionArgumentCheck 1
+		LineNumber                  63631, 4
+		LineNumberAlt1              742, 172
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hide"
+		; address: 0xa05d8
+		; source: 172 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_path.vbo" 747:747
+		MemberFunctionArgumentCheck 1
+		LineNumber                  63636, 4
+		LineNumberAlt1              747, 172
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "hide"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "startdropping"
+		; address: 0xa05f0
+		; source: 172 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_path.vbo" 753:775
+		MemberFunctionArgumentCheck  1
+		CreateStackVariables         7
+		LineNumber                   63642, 4
+		LineNumberAlt1               753, 172
+		GetThisMemberValueString     "obj"
+		Dup
+		GetMemberFunctionString      "show"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   63643, 4
+		LineNumberAlt1               754, 172
+		GetVariableValue             0                    ; local
+		PushConstant0
+		GetThisMemberFunctionString  "chasetoa"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   63645, 4
+		LineNumberAlt1               756, 172
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "randnum"
+		GetThisMemberValueString     "minstartingpoint"
+		GetMemberValueString         "x"
+		GetThisMemberValueString     "maxstartingpoint"
+		GetMemberValueString         "x"
+		Pull                         3
+		GetMemberFunctionString      "getrandomnumber"
+		JumpAbsolute                 3
+		LineNumber                   63645, 4
+		LineNumberAlt1               756, 172
+		SetVariableValue             1                    ; local
+		LineNumber                   63646, 4
+		LineNumberAlt1               757, 172
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "randnum"
+		GetThisMemberValueString     "minstartingpoint"
+		GetMemberValueString         "y"
+		GetThisMemberValueString     "maxstartingpoint"
+		GetMemberValueString         "y"
+		Pull                         3
+		GetMemberFunctionString      "getrandomnumber"
+		JumpAbsolute                 3
+		LineNumber                   63646, 4
+		LineNumberAlt1               757, 172
+		SetVariableValue             2                    ; local
+		LineNumber                   63647, 4
+		LineNumberAlt1               758, 172
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "randnum"
+		GetThisMemberValueString     "minstartingpoint"
+		GetMemberValueString         "z"
+		GetThisMemberValueString     "maxstartingpoint"
+		GetMemberValueString         "z"
+		Pull                         3
+		GetMemberFunctionString      "getrandomnumber"
+		JumpAbsolute                 3
+		LineNumber                   63647, 4
+		LineNumberAlt1               758, 172
+		SetVariableValue             3                    ; local
+		LineNumber                   63648, 4
+		LineNumberAlt1               759, 172
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "randnum"
+		PushConstanti16              250
+		PushConstanti16              400
+		Pull                         3
+		GetMemberFunctionString      "getrandomnumber"
+		JumpAbsolute                 3
+		LineNumber                   63648, 4
+		LineNumberAlt1               759, 172
+		SetVariableValue             4                    ; local
+		LineNumber                   63649, 4
+		LineNumberAlt1               760, 172
+		GetVariableValue             4                    ; local
+		PushConstantf32              0.009999999776482582
+		Multiply
+		SetThisMemberValueString     "curentscale"
+		LineNumber                   63650, 4
+		LineNumberAlt1               761, 172
+		GetThisMemberValueString     "obj"
+		GetThisMemberValueString     "curentscale"
+		Pull                         2
+		GetMemberFunctionString      "setobjscale"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   63652, 4
+		LineNumberAlt1               763, 172
+		GetThisMemberValueString     "obj"
+		GetVariableValue             1                    ; local
+		GetVariableValue             2                    ; local
+		GetVariableValue             3                    ; local
+		Pull                         4
+		GetMemberFunctionString      "setposition"
+		JumpAbsolute                 4
+		Pop
+		LineNumber                   63653, 4
+		LineNumberAlt1               764, 172
+		GetThisMemberValueString     "obj"
+		PushConstanti8               1
+		PushConstanti8               1
+		PushConstant0
+		PushConstanti8               1
+		Pull                         5
+		GetMemberFunctionString      "setmoveableflags"
+		JumpAbsolute                 5
+		Pop
+		LineNumber                   63655, 4
+		LineNumberAlt1               766, 172
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "randnum"
+		GetThisMemberValueString     "startingvelocity"
+		PushConstanti8               1
+		GetArrayValue
+		GetMemberValueString         "x"
+		GetThisMemberValueString     "startingvelocity"
+		PushConstant0
+		GetArrayValue
+		GetMemberValueString         "x"
+		Pull                         3
+		GetMemberFunctionString      "getrandomfloat"
+		JumpAbsolute                 3
+		LineNumber                   63655, 4
+		LineNumberAlt1               766, 172
+		SetVariableValue             5                    ; local
+		LineNumber                   63656, 4
+		LineNumberAlt1               767, 172
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "randnum"
+		GetThisMemberValueString     "startingvelocity"
+		PushConstanti8               1
+		GetArrayValue
+		GetMemberValueString         "y"
+		GetThisMemberValueString     "startingvelocity"
+		PushConstant0
+		GetArrayValue
+		GetMemberValueString         "y"
+		Pull                         3
+		GetMemberFunctionString      "getrandomfloat"
+		JumpAbsolute                 3
+		LineNumber                   63656, 4
+		LineNumberAlt1               767, 172
+		SetVariableValue             6                    ; local
+		LineNumber                   63657, 4
+		LineNumberAlt1               768, 172
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "randnum"
+		GetThisMemberValueString     "startingvelocity"
+		PushConstanti8               1
+		GetArrayValue
+		GetMemberValueString         "z"
+		GetThisMemberValueString     "startingvelocity"
+		PushConstant0
+		GetArrayValue
+		GetMemberValueString         "z"
+		Pull                         3
+		GetMemberFunctionString      "getrandomfloat"
+		JumpAbsolute                 3
+		LineNumber                   63657, 4
+		LineNumberAlt1               768, 172
+		SetVariableValue             7                    ; local
+		LineNumber                   63658, 4
+		LineNumberAlt1               769, 172
+		GetThisMemberValueString     "obj"
+		GetVariableValue             5                    ; local
+		GetVariableValue             6                    ; local
+		GetVariableValue             7                    ; local
+		Pull                         4
+		GetMemberFunctionString      "setvelocity"
+		JumpAbsolute                 4
+		Pop
+		LineNumber                   63662, 4
+		LineNumberAlt1               773, 172
+		GetThisMemberValueString     "obj"
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "randnum"
+		PushConstant0
+		PushConstanti8               10
+		Pull                         3
+		GetMemberFunctionString      "getrandomfloat"
+		JumpAbsolute                 3
+		LineNumber                   63659, 4
+		LineNumberAlt1               770, 172
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "randnum"
+		PushConstant0
+		PushConstanti8               10
+		Pull                         3
+		GetMemberFunctionString      "getrandomfloat"
+		JumpAbsolute                 3
+		LineNumber                   63660, 4
+		LineNumberAlt1               771, 172
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "randnum"
+		PushConstant0
+		PushConstanti8               10
+		Pull                         3
+		GetMemberFunctionString      "getrandomfloat"
+		JumpAbsolute                 3
+		LineNumber                   63661, 4
+		LineNumberAlt1               772, 172
+		Pull                         4
+		GetMemberFunctionString      "setrollangle"
+		JumpAbsolute                 4
+		Pop
+		LineNumber                   63663, 4
+		LineNumberAlt1               774, 172
+		GetThisMemberValueString     "obj"
+		PushConstant0
+		Pull                         2
+		GetMemberFunctionString      "fadeout"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   63664, 4
+		LineNumberAlt1               775, 172
+		GetThisMemberValueString     "obj"
+		PushConstantf32              0.5
+		Pull                         2
+		GetMemberFunctionString      "fadein"
+		JumpAbsolute                 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "stopdropping"
+		; address: 0xa0890
+		; source: 172 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_path.vbo" 782:784
+		MemberFunctionArgumentCheck 1
+		LineNumber                  63671, 4
+		LineNumberAlt1              782, 172
+		GetThisMemberValueString    "obj"
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		Pull                        4
+		GetMemberFunctionString     "setvelocity"
+		JumpAbsolute                4
+		Pop
+		LineNumber                  63672, 4
+		LineNumberAlt1              783, 172
+		GetThisMemberValueString    "obj"
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		Pull                        5
+		GetMemberFunctionString     "setmoveableflags"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  63673, 4
+		LineNumberAlt1              784, 172
+		GetThisMemberValueString    "obj"
+		PushConstanti16             1000
+		PushConstant0
+		PushConstant0
+		Pull                        4
+		GetMemberFunctionString     "setposition"
+		JumpAbsolute                4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xa08df
+		; source: 172 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_path.vbo" 789:806
+		MemberFunctionArgumentCheck   2
+		LineNumber                    63678, 4
+		LineNumberAlt1                789, 172
+		GetVariableValue              1         ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                19
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    63682, 4
+		LineNumberAlt1                793, 172
+		GetVariableValue              1         ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		GetThisMemberValueString      "obj"
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    63683, 4
+		LineNumberAlt1                794, 172
+		GetVariableValue              0         ; local
+		GetThisMemberFunctionString   "hit"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Dup
+		PushConstanti8                17
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    63688, 4
+		LineNumberAlt1                799, 172
+		GetVariableValue              1         ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		GetThisMemberValueString      "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    63689, 4
+		LineNumberAlt1                800, 172
+		GetVariableValue              0         ; local
+		GetThisMemberFunctionString   "hit"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  2
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    63694, 4
+		LineNumberAlt1                805, 172
+		GetVariableValue              1         ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		GetThisMemberValueString      "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    63695, 4
+		LineNumberAlt1                806, 172
+		GetVariableValue              0         ; local
+		GetThisMemberFunctionString   "hit"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hit"
+		; address: 0xa0996
+		; source: 172 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_path.vbo" 815:821
+		MemberFunctionArgumentCheck   1
+		LineNumber                    63704, 4
+		LineNumberAlt1                815, 172
+		GetThisMemberValueString      "obj"
+		Dup
+		GetMemberFunctionString       "getscale"
+		JumpAbsolute                  1
+		LineNumber                    63704, 4
+		LineNumberAlt1                815, 172
+		SetThisMemberValueString      "curentscale"
+		LineNumber                    63706, 4
+		LineNumberAlt1                817, 172
+		GetThisMemberValueString      "curentscale"
+		PushConstanti8                3
+		LessThan
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    63707, 4
+		LineNumberAlt1                818, 172
+		GetVariableValue              0             ; local
+		GetThisMemberFunctionString   "explode"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    63710, 4
+		LineNumberAlt1                821, 172
+		GetVariableValue              0             ; local
+		GetThisMemberFunctionString   "explode"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0xa09f6
+		; source: 172 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_path.vbo" 830:840
+		MemberFunctionArgumentCheck   2
+		LineNumber                    63719, 4
+		LineNumberAlt1                830, 172
+		GetVariableValue              1                 ; local
+		GetMemberValueString          "event"
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    63721, 4
+		LineNumberAlt1                832, 172
+		GetVariableValue              1                 ; local
+		GetMemberValueString          "button"
+		PushConstanti8                79
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    63722, 4
+		LineNumberAlt1                833, 172
+		GetVariableValue              0                 ; local
+		GetThisMemberFunctionString   "hit"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    63727, 4
+		LineNumberAlt1                838, 172
+		GetVariableValue              1                 ; local
+		GetMemberValueString          "event"
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    63728, 4
+		LineNumberAlt1                839, 172
+		GetVariableValue              1                 ; local
+		GetMemberValueString          "button"
+		PushConstanti8                84
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    63729, 4
+		LineNumberAlt1                840, 172
+		GetVariableValue              0                 ; local
+		GetThisMemberFunctionString   "dropsmallball_1"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "explode"
+		; address: 0xa0a78
+		; source: 172 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_path.vbo" 850:850
+		MemberFunctionArgumentCheck 1
+		LineNumber                  63739, 4
+		LineNumberAlt1              850, 172
+		GetVariableValue            0               ; local
+		GetThisMemberFunctionString "startdropping"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setlowestpointbeforredrop"
+		; address: 0xa0a8f
+		; source: 172 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_path.vbo" 857:857
+		MemberFunctionArgumentCheck 2
+		LineNumber                  63746, 4
+		LineNumberAlt1              857, 172
+		GetVariableValue            1                        ; local
+		SetThisMemberValueString    "lowestpointbeforredrop"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setstartingvelocity"
+		; address: 0xa0aa3
+		; source: 172 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_path.vbo" 862:863
+		MemberFunctionArgumentCheck 3
+		LineNumber                  63751, 4
+		LineNumberAlt1              862, 172
+		GetThisMemberValueString    "startingvelocity"
+		PushConstant0
+		GetVariableValue            1                  ; local
+		SetArrayValue
+		LineNumber                  63752, 4
+		LineNumberAlt1              863, 172
+		GetThisMemberValueString    "startingvelocity"
+		PushConstanti8              1
+		GetVariableValue            2                  ; local
+		SetArrayValue
+		PushNothing
+		Return
+	end ; method
+
+	begin method "chasetoa"
+		; address: 0xa0acc
+		; source: 172 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_path.vbo" 870:879
+		MemberFunctionArgumentCheck   2
+		LineNumber                    63759, 4
+		LineNumberAlt1                870, 172
+		GetVariableValue              1          ; local
+		PushConstant0
+		GreaterThan
+		GetThisMemberValueString      "chaseing"
+		PushConstant0
+		EqualTo
+		BitwiseAnd
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    63760, 4
+		LineNumberAlt1                871, 172
+		PushConstanti8                1
+		SetThisMemberValueString      "chaseing"
+		LineNumber                    63761, 4
+		LineNumberAlt1                872, 172
+		GetThisMemberValueString      "obj"
+		GetVariableValue              1          ; local
+		Pull                          2
+		GetMemberFunctionString       "chasetoa"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    63766, 4
+		LineNumberAlt1                877, 172
+		GetVariableValue              1          ; local
+		PushConstant0
+		EqualTo
+		GetThisMemberValueString      "chaseing"
+		PushConstanti8                1
+		EqualTo
+		BitwiseAnd
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    63767, 4
+		LineNumberAlt1                878, 172
+		PushConstant0
+		SetThisMemberValueString      "chaseing"
+		LineNumber                    63768, 4
+		LineNumberAlt1                879, 172
+		GetThisMemberValueString      "obj"
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "chasetoa"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+end ; class

@@ -1,0 +1,609 @@
+begin class "areaviewer", "base_screen"
+	property "filehandle"
+	property "bfileexist"
+	property "slosi_fname"
+	property "slosi_aname"
+	property "fname"
+	property "aname"
+	property "nameoffolder"
+	property "nameofarea"
+	property "cam"
+	property "soundscaper"
+	property "rgbval"
+
+	begin method "areaviewer"
+		; address: 0xdafaa
+		; source: 247 "C:\\projects\\lego\\Scripting\\VBO\\AreaViewer.vbo" 45:84
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          12
+		LineNumber                    22019, 4
+		LineNumberAlt1                45, 247
+		CreateObjectString            "slosi_fileio"
+		Dup
+		PushConstantStringString      "Root/Data/AreaViewer.txt"
+		Pull                          2
+		GetMemberFunctionString       "slosi_fileio"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    22019, 4
+		LineNumberAlt1                45, 247
+		SetThisMemberValueString      "filehandle"
+		LineNumber                    22020, 4
+		LineNumberAlt1                46, 247
+		GetThisMemberValueString      "filehandle"
+		Dup
+		GetMemberFunctionString       "fileexist"
+		JumpAbsolute                  1
+		LineNumber                    22020, 4
+		LineNumberAlt1                46, 247
+		SetThisMemberValueString      "bfileexist"
+		LineNumber                    22021, 4
+		LineNumberAlt1                47, 247
+		GetThisMemberValueString      "bfileexist"
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    22022, 4
+		LineNumberAlt1                48, 247
+		GetThisMemberValueString      "filehandle"
+		Dup
+		GetMemberFunctionString       "open"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    22023, 4
+		LineNumberAlt1                49, 247
+		GetThisMemberValueString      "filehandle"
+		Dup
+		GetMemberFunctionString       "read"
+		JumpAbsolute                  1
+		LineNumber                    22023, 4
+		LineNumberAlt1                49, 247
+		SetThisMemberValueString      "fname"
+		LineNumber                    22024, 4
+		LineNumberAlt1                50, 247
+		GetThisMemberValueString      "filehandle"
+		Dup
+		GetMemberFunctionString       "read"
+		JumpAbsolute                  1
+		LineNumber                    22024, 4
+		LineNumberAlt1                50, 247
+		SetThisMemberValueString      "aname"
+		LineNumber                    22025, 4
+		LineNumberAlt1                51, 247
+		GetThisMemberValueString      "filehandle"
+		Dup
+		GetMemberFunctionString       "read"
+		JumpAbsolute                  1
+		LineNumber                    22025, 4
+		LineNumberAlt1                51, 247
+		SetVariableValue              1                                  ; local
+		LineNumber                    22026, 4
+		LineNumberAlt1                52, 247
+		GetThisMemberValueString      "filehandle"
+		Dup
+		GetMemberFunctionString       "read"
+		JumpAbsolute                  1
+		LineNumber                    22026, 4
+		LineNumberAlt1                52, 247
+		SetVariableValue              2                                  ; local
+		LineNumber                    22027, 4
+		LineNumberAlt1                53, 247
+		GetThisMemberValueString      "filehandle"
+		Dup
+		GetMemberFunctionString       "read"
+		JumpAbsolute                  1
+		LineNumber                    22027, 4
+		LineNumberAlt1                53, 247
+		SetVariableValue              3                                  ; local
+		LineNumber                    22028, 4
+		LineNumberAlt1                54, 247
+		GetThisMemberValueString      "filehandle"
+		Dup
+		GetMemberFunctionString       "close"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    22029, 4
+		LineNumberAlt1                55, 247
+		CreateObjectString            "slosi_string"
+		Dup
+		GetThisMemberValueString      "fname"
+		Pull                          2
+		GetMemberFunctionString       "slosi_string"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    22029, 4
+		LineNumberAlt1                55, 247
+		SetThisMemberValueString      "slosi_fname"
+		LineNumber                    22030, 4
+		LineNumberAlt1                56, 247
+		CreateObjectString            "slosi_string"
+		Dup
+		GetThisMemberValueString      "aname"
+		Pull                          2
+		GetMemberFunctionString       "slosi_string"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    22030, 4
+		LineNumberAlt1                56, 247
+		SetThisMemberValueString      "slosi_aname"
+		LineNumber                    22031, 4
+		LineNumberAlt1                57, 247
+		CreateObjectString            "slosi_string"
+		Dup
+		GetVariableValue              1                                  ; local
+		Pull                          2
+		GetMemberFunctionString       "slosi_string"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    22031, 4
+		LineNumberAlt1                57, 247
+		SetVariableValue              4                                  ; local
+		LineNumber                    22032, 4
+		LineNumberAlt1                58, 247
+		CreateObjectString            "slosi_string"
+		Dup
+		GetVariableValue              2                                  ; local
+		Pull                          2
+		GetMemberFunctionString       "slosi_string"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    22032, 4
+		LineNumberAlt1                58, 247
+		SetVariableValue              5                                  ; local
+		LineNumber                    22033, 4
+		LineNumberAlt1                59, 247
+		CreateObjectString            "slosi_string"
+		Dup
+		GetVariableValue              3                                  ; local
+		Pull                          2
+		GetMemberFunctionString       "slosi_string"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    22033, 4
+		LineNumberAlt1                59, 247
+		SetVariableValue              6                                  ; local
+		LineNumber                    22036, 4
+		LineNumberAlt1                62, 247
+		GetThisMemberValueString      "slosi_fname"
+		PushConstanti8                4
+		Pull                          2
+		GetMemberFunctionString       "truncateleft"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    22037, 4
+		LineNumberAlt1                63, 247
+		GetThisMemberValueString      "slosi_aname"
+		PushConstanti8                4
+		Pull                          2
+		GetMemberFunctionString       "truncateleft"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    22038, 4
+		LineNumberAlt1                64, 247
+		GetVariableValue              4                                  ; local
+		PushConstanti8                4
+		Pull                          2
+		GetMemberFunctionString       "truncateleft"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    22039, 4
+		LineNumberAlt1                65, 247
+		GetVariableValue              5                                  ; local
+		PushConstanti8                4
+		Pull                          2
+		GetMemberFunctionString       "truncateleft"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    22040, 4
+		LineNumberAlt1                66, 247
+		GetVariableValue              6                                  ; local
+		PushConstanti8                4
+		Pull                          2
+		GetMemberFunctionString       "truncateleft"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    22041, 4
+		LineNumberAlt1                67, 247
+		GetVariableValue              4                                  ; local
+		GetMemberValueString          "string"
+		SetVariableValue              7                                  ; local
+		LineNumber                    22042, 4
+		LineNumberAlt1                68, 247
+		GetVariableValue              5                                  ; local
+		GetMemberValueString          "string"
+		SetVariableValue              8                                  ; local
+		LineNumber                    22043, 4
+		LineNumberAlt1                69, 247
+		GetVariableValue              6                                  ; local
+		GetMemberValueString          "string"
+		SetVariableValue              9                                  ; local
+		LineNumber                    22044, 4
+		LineNumberAlt1                70, 247
+		PushConstantStringString      "Red = "
+		GetVariableValue              7                                  ; local
+		ConvertToString
+		Add
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    22045, 4
+		LineNumberAlt1                71, 247
+		PushConstantStringString      "Green = "
+		GetVariableValue              8                                  ; local
+		ConvertToString
+		Add
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    22046, 4
+		LineNumberAlt1                72, 247
+		PushConstantStringString      "Blue = "
+		GetVariableValue              9                                  ; local
+		ConvertToString
+		Add
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    22047, 4
+		LineNumberAlt1                73, 247
+		GetVariableValue              7                                  ; local
+		ConvertToInteger
+		SetVariableValue              10                                 ; local
+		LineNumber                    22048, 4
+		LineNumberAlt1                74, 247
+		GetVariableValue              8                                  ; local
+		ConvertToInteger
+		SetVariableValue              11                                 ; local
+		LineNumber                    22049, 4
+		LineNumberAlt1                75, 247
+		GetVariableValue              9                                  ; local
+		ConvertToInteger
+		SetVariableValue              12                                 ; local
+		LineNumber                    22050, 4
+		LineNumberAlt1                76, 247
+		GetVariableValue              10                                 ; local
+		PushConstanti8                16
+		ShiftLeft
+		GetVariableValue              11                                 ; local
+		PushConstanti8                8
+		ShiftLeft
+		Add
+		GetVariableValue              12                                 ; local
+		Add
+		SetThisMemberValueString      "rgbval"
+		LineNumber                    22051, 4
+		LineNumberAlt1                77, 247
+		PushConstantStringString      "rgbval = "
+		GetThisMemberValueString      "rgbval"
+		ConvertToString
+		Add
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    22052, 4
+		LineNumberAlt1                78, 247
+		GetThisMemberValueString      "slosi_fname"
+		GetMemberValueString          "string"
+		CallGameFunctionString        "scslosistringfuncs", "tolower", 1
+		LineNumber                    22052, 4
+		LineNumberAlt1                78, 247
+		SetThisMemberValueString      "nameoffolder"
+		LineNumber                    22053, 4
+		LineNumberAlt1                79, 247
+		GetThisMemberValueString      "slosi_aname"
+		GetMemberValueString          "string"
+		CallGameFunctionString        "scslosistringfuncs", "tolower", 1
+		LineNumber                    22053, 4
+		LineNumberAlt1                79, 247
+		SetThisMemberValueString      "nameofarea"
+		LineNumber                    22054, 4
+		LineNumberAlt1                80, 247
+		CreateObjectString            "gs_legocamera"
+		Dup
+		PushConstant0
+		PushConstantf32               346
+		Subtract
+		PushConstant0
+		PushConstantf32               61
+		Subtract
+		PushConstantf32               1349
+		PushConstantf32               608.4000244140625
+		PushConstantf32               0.699999988079071
+		PushConstantf32               404.29998779296875
+		Pull                          7
+		GetMemberFunctionString       "gs_legocamera"
+		JumpAbsolute                  7
+		Pop
+		LineNumber                    22054, 4
+		LineNumberAlt1                80, 247
+		SetThisMemberValueString      "cam"
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    22056, 4
+		LineNumberAlt1                82, 247
+		PushConstantStringString      "lev1"
+		SetThisMemberValueString      "nameoffolder"
+		LineNumber                    22057, 4
+		LineNumberAlt1                83, 247
+		PushConstantStringString      "bech"
+		SetThisMemberValueString      "nameofarea"
+		LineNumber                    22058, 4
+		LineNumberAlt1                84, 247
+		CreateObjectString            "gs_legocamera"
+		Dup
+		PushConstant0
+		PushConstantf32               346
+		Subtract
+		PushConstant0
+		PushConstantf32               61
+		Subtract
+		PushConstantf32               1349
+		PushConstantf32               608.4000244140625
+		PushConstantf32               0.699999988079071
+		PushConstantf32               404.29998779296875
+		Pull                          7
+		GetMemberFunctionString       "gs_legocamera"
+		JumpAbsolute                  7
+		Pop
+		LineNumber                    22058, 4
+		LineNumberAlt1                84, 247
+		SetThisMemberValueString      "cam"
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xdb3e0
+		; source: 247 "C:\\projects\\lego\\Scripting\\VBO\\AreaViewer.vbo" 93:124
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    22067, 4
+		LineNumberAlt1                93, 247
+		GetThisMemberValueString      "bfileexist"
+		PushConstanti8                1
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    22068, 4
+		LineNumberAlt1                94, 247
+		PushConstantStringString      "File AreaViewer.txt Doesn't Exist: Loading Lev1 bech if you want to change this Edit the AreaViewer.txt file in you c:\\projects\\lego\\data\\ folder"
+		CallGameFunctionString        "gcscripttools", "scriptmessagebox", 1
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    22070, 4
+		LineNumberAlt1                96, 247
+		GetThisMemberValueString      "nameoffolder"
+		CallGameFunctionString        "gcareadirector", "setcurrentlevel", 1
+		Pop
+		LineNumber                    22071, 4
+		LineNumberAlt1                97, 247
+		GetThisMemberValueString      "nameofarea"
+		CallGameFunctionString        "gcareadirector", "setcurrentarea", 1
+		Pop
+		LineNumber                    22072, 4
+		LineNumberAlt1                98, 247
+		CallGameFunctionString        "gclightdirector", "toggleconstantlights", 0
+		Pop
+		LineNumber                    22073, 4
+		LineNumberAlt1                99, 247
+		GetThisMemberValueString      "cam"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    22074, 4
+		LineNumberAlt1                100, 247
+		GetThisMemberValueString      "cam"
+		PushConstanti8                11
+		Pull                          2
+		GetMemberFunctionString       "setaimode"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    22075, 4
+		LineNumberAlt1                101, 247
+		GetThisMemberValueString      "cam"
+		Dup
+		GetMemberFunctionString       "settweakable"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    22076, 4
+		LineNumberAlt1                102, 247
+		GetThisMemberValueString      "nameoffolder"
+		Dup
+		PushConstantStringString      "lev1"
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    22078, 4
+		LineNumberAlt1                104, 247
+		PushConstantStringString      "onua"
+		SetVariableValue              1                                                                                                                                                       ; local
+		BranchAlwaysTarget            6, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Dup
+		PushConstantStringString      "lev2"
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    22080, 4
+		LineNumberAlt1                106, 247
+		PushConstantStringString      "gali"
+		SetVariableValue              1                                                                                                                                                       ; local
+		BranchAlwaysTarget            6, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		Dup
+		PushConstantStringString      "lev3"
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    22082, 4
+		LineNumberAlt1                108, 247
+		PushConstantStringString      "poha"
+		SetVariableValue              1                                                                                                                                                       ; local
+		BranchAlwaysTarget            6, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Dup
+		PushConstantStringString      "lev4"
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    22084, 4
+		LineNumberAlt1                110, 247
+		PushConstantStringString      "kopa"
+		SetVariableValue              1                                                                                                                                                       ; local
+		BranchAlwaysTarget            6, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		Dup
+		PushConstantStringString      "lev5"
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    22086, 4
+		LineNumberAlt1                112, 247
+		PushConstantStringString      "onua"
+		SetVariableValue              1                                                                                                                                                       ; local
+		BranchAlwaysTarget            6, 0
+		; ->
+		; <-
+		BranchTarget                  5
+		Dup
+		PushConstantStringString      "lev6"
+		EqualTo
+		CompareAndBranchIfFalseTarget 6, 0
+		; ->
+		LineNumber                    22088, 4
+		LineNumberAlt1                114, 247
+		PushConstantStringString      "tahu"
+		SetVariableValue              1                                                                                                                                                       ; local
+		; <-
+		BranchTarget                  6
+		Pop
+		LineNumber                    22090, 4
+		LineNumberAlt1                116, 247
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		PushConstantStringString      "cnt1"
+		GetVariableValue              1                                                                                                                                                       ; local
+		PushConstanti16               180
+		PushConstantf32               608.4000244140625
+		PushConstantf32               0.699999988079071
+		PushConstantf32               404.29998779296875
+		PushConstantStringString      "ninp"
+		Pull                          8
+		GetMemberFunctionString       "setactor"
+		JumpAbsolute                  8
+		Pop
+		LineNumber                    22091, 4
+		LineNumberAlt1                117, 247
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "actorinitfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    22092, 4
+		LineNumberAlt1                118, 247
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		Dup
+		GetMemberFunctionString       "add"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    22093, 4
+		LineNumberAlt1                119, 247
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    22094, 4
+		LineNumberAlt1                120, 247
+		PushConstantStringString      "str0"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    22094, 4
+		LineNumberAlt1                120, 247
+		PushConstantStringString      "lok0"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    22094, 4
+		LineNumberAlt1                120, 247
+		CallGameFunctionString        "gccollisionphysicsgroup", "settoaposition", 2
+		Pop
+		LineNumber                    22095, 4
+		LineNumberAlt1                121, 247
+		GetThisMemberValueString      "cam"
+		PushConstanti8                11
+		Pull                          2
+		GetMemberFunctionString       "setaimode"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    22096, 4
+		LineNumberAlt1                122, 247
+		PushConstantStringString      "*****rgbval = "
+		GetThisMemberValueString      "rgbval"
+		ConvertToString
+		Add
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    22097, 4
+		LineNumberAlt1                123, 247
+		GetThisMemberValueString      "rgbval"
+		PushConstant0
+		PushConstantf32               500
+		Subtract
+		PushConstant0
+		PushConstantf32               1200
+		Subtract
+		PushConstantf32               0.05000000074505806
+		CallGameFunctionString        "gcareadirector", "setfog", 4
+		Pop
+		LineNumber                    22098, 4
+		LineNumberAlt1                124, 247
+		PushConstant0
+		CallGameFunctionString        "gclightdirector", "setcavelighting", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0xdb64b
+		; source: 247 "C:\\projects\\lego\\Scripting\\VBO\\AreaViewer.vbo" 131:131
+		MemberFunctionArgumentCheck 2
+		LineNumber                  22105, 4
+		LineNumberAlt1              131, 247
+		GetThisMemberValueString    "cam"
+		GetVariableValue            1        ; local
+		Pull                        2
+		GetMemberFunctionString     "input"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xdb667
+		; source: 247 "C:\\projects\\lego\\Scripting\\VBO\\AreaViewer.vbo" 137:137
+		MemberFunctionArgumentCheck 2
+		LineNumber                  22111, 4
+		LineNumberAlt1              137, 247
+		GetThisMemberValueString    "cam"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "process"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

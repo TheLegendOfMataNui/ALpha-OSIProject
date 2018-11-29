@@ -1,0 +1,382 @@
+begin class "onuaclass", "gs_lego_toa"
+	property "walkspeed"
+	property "runspeed"
+	property "standingjumpheight"
+	property "standingjumplength"
+	property "runningjumpheight"
+	property "runningjumplength"
+	property "swimingabilty"
+	property "bounce"
+	property "dig"
+	property "mapperstate"
+	property "inputhandle"
+
+	begin method "onuaclass"
+		; address: 0x47f3b
+		; source: 54 "C:\\projects\\lego\\Scripting\\VBO\\Toa/Lego_Toa_Onua.vbo" 47:60
+		MemberFunctionArgumentCheck 6
+		LineNumber                  19803, 4
+		LineNumberAlt1              47, 54
+		GetVariableValue            0                                 ; local
+		GetVariableValue            1                                 ; local
+		GetVariableValue            2                                 ; local
+		GetVariableValue            3                                 ; local
+		GetVariableValue            4                                 ; local
+		GetVariableValue            5                                 ; local
+		GetThisMemberFunctionString "gs_lego_toa"
+		JumpAbsolute                6
+		Pop
+		LineNumber                  19804, 4
+		LineNumberAlt1              48, 54
+		PushConstanti8              1
+		SetThisMemberValueString    "dig"
+		LineNumber                  19805, 4
+		LineNumberAlt1              49, 54
+		PushConstanti8              4
+		SetThisMemberValueString    "walkspeed"
+		LineNumber                  19806, 4
+		LineNumberAlt1              50, 54
+		PushConstanti8              15
+		SetThisMemberValueString    "runspeed"
+		LineNumber                  19807, 4
+		LineNumberAlt1              51, 54
+		PushConstanti8              6
+		SetThisMemberValueString    "standingjumpheight"
+		LineNumber                  19808, 4
+		LineNumberAlt1              52, 54
+		PushConstanti8              6
+		SetThisMemberValueString    "standingjumplength"
+		LineNumber                  19809, 4
+		LineNumberAlt1              53, 54
+		PushConstanti8              4
+		SetThisMemberValueString    "runningjumpheight"
+		LineNumber                  19810, 4
+		LineNumberAlt1              54, 54
+		PushConstanti8              8
+		SetThisMemberValueString    "runningjumplength"
+		LineNumber                  19811, 4
+		LineNumberAlt1              55, 54
+		PushConstant0
+		SetThisMemberValueString    "swimingabilty"
+		LineNumber                  19812, 4
+		LineNumberAlt1              56, 54
+		PushConstant0
+		SetThisMemberValueString    "bounce"
+		LineNumber                  19813, 4
+		LineNumberAlt1              57, 54
+		PushConstanti8              2
+		SetThisMemberValueString    "mapperstate"
+		LineNumber                  19815, 4
+		LineNumberAlt1              59, 54
+		GetThisMemberValueString    "mapperhandle"
+		PushConstant0
+		CallGameFunctionString      "gckeymapper", "setusecontext", 2
+		Pop
+		LineNumber                  19816, 4
+		LineNumberAlt1              60, 54
+		PushNothing
+		SetThisMemberValueString    "inputhandle"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x48018
+		; source: 54 "C:\\projects\\lego\\Scripting\\VBO\\Toa/Lego_Toa_Onua.vbo" 66:67
+		MemberFunctionArgumentCheck  1
+		LineNumber                   19822, 4
+		LineNumberAlt1               66, 54
+		GetVariableValue             0                   ; local
+		GetThisMemberFunctionString  "lego_toa_initfull"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   19823, 4
+		LineNumberAlt1               67, 54
+		GetVariableValueGlobalString "globalclass"
+		GetVariableValue             0                   ; local
+		Pull                         2
+		GetMemberFunctionString      "addtoinputlist"
+		JumpAbsolute                 2
+		LineNumber                   19823, 4
+		LineNumberAlt1               67, 54
+		SetThisMemberValueString     "inputhandle"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x48053
+		; source: 54 "C:\\projects\\lego\\Scripting\\VBO\\Toa/Lego_Toa_Onua.vbo" 73:75
+		MemberFunctionArgumentCheck  1
+		LineNumber                   19829, 4
+		LineNumberAlt1               73, 54
+		GetVariableValue             0                      ; local
+		GetThisMemberFunctionString  "lego_toa_cleanupfull"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   19830, 4
+		LineNumberAlt1               74, 54
+		GetVariableValueGlobalString "globalclass"
+		GetThisMemberValueString     "inputhandle"
+		Pull                         2
+		GetMemberFunctionString      "removefrominputlist"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   19831, 4
+		LineNumberAlt1               75, 54
+		PushNothing
+		SetThisMemberValueString     "inputhandle"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x48090
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x48094
+		; source: 54 "C:\\projects\\lego\\Scripting\\VBO\\Toa/Lego_Toa_Onua.vbo" 86:96
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          1
+		LineNumber                    19842, 4
+		LineNumberAlt1                86, 54
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		SetVariableValue              2                    ; local
+		LineNumber                    19843, 4
+		LineNumberAlt1                87, 54
+		GetVariableValue              1                    ; local
+		GetMemberValueString          "event"
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    19844, 4
+		LineNumberAlt1                88, 54
+		GetVariableValue              1                    ; local
+		GetMemberValueString          "button"
+		PushConstanti16               231
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    19845, 4
+		LineNumberAlt1                89, 54
+		GetThisMemberValueString      "mapperstate"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    19846, 4
+		LineNumberAlt1                90, 54
+		GetVariableValue              2                    ; local
+		GetMemberValueString          "grapplinghooksetup"
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    19847, 4
+		LineNumberAlt1                91, 54
+		GetVariableValue              0                    ; local
+		GetThisMemberFunctionString   "shootdragger"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		LineNumber                    19850, 4
+		LineNumberAlt1                94, 54
+		GetThisMemberValueString      "mapperstate"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		LineNumber                    19852, 4
+		LineNumberAlt1                96, 54
+		GetThisMemberValueString      "mapperstate"
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setcontext"
+		; address: 0x4813b
+		; source: 54 "C:\\projects\\lego\\Scripting\\VBO\\Toa/Lego_Toa_Onua.vbo" 107:117
+		MemberFunctionArgumentCheck   2
+		LineNumber                    19863, 4
+		LineNumberAlt1                107, 54
+		GetVariableValue              1                                 ; local
+		SetThisMemberValueString      "dig"
+		LineNumber                    19864, 4
+		LineNumberAlt1                108, 54
+		GetThisMemberValueString      "dig"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    19865, 4
+		LineNumberAlt1                109, 54
+		PushConstant0
+		SetThisMemberValueString      "mapperstate"
+		LineNumber                    19866, 4
+		LineNumberAlt1                110, 54
+		GetThisMemberValueString      "mapperhandle"
+		PushConstanti8                4
+		CallGameFunctionString        "gckeymapper", "setusecontext", 2
+		Pop
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    19868, 4
+		LineNumberAlt1                112, 54
+		GetThisMemberValueString      "dig"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    19869, 4
+		LineNumberAlt1                113, 54
+		PushConstanti8                1
+		SetThisMemberValueString      "mapperstate"
+		LineNumber                    19870, 4
+		LineNumberAlt1                114, 54
+		GetThisMemberValueString      "mapperhandle"
+		PushConstant0
+		CallGameFunctionString        "gckeymapper", "setusecontext", 2
+		Pop
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		LineNumber                    19872, 4
+		LineNumberAlt1                116, 54
+		PushConstanti8                2
+		SetThisMemberValueString      "mapperstate"
+		LineNumber                    19873, 4
+		LineNumberAlt1                117, 54
+		GetThisMemberValueString      "mapperhandle"
+		PushConstant0
+		CallGameFunctionString        "gckeymapper", "setusecontext", 2
+		Pop
+		; <-
+		BranchTarget                  2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setupgrapplinghook"
+		; address: 0x481e6
+		; source: 54 "C:\\projects\\lego\\Scripting\\VBO\\Toa/Lego_Toa_Onua.vbo" 134:145
+		MemberFunctionArgumentCheck 4
+		LineNumber                  19890, 4
+		LineNumberAlt1              134, 54
+		GetVariableValue            0                                            ; local
+		PushConstant0
+		GetThisMemberFunctionString "setdraggerreaction"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  19891, 4
+		LineNumberAlt1              135, 54
+		GetVariableValue            0                                            ; local
+		PushConstantStringString    "o017"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  19891, 4
+		LineNumberAlt1              135, 54
+		GetThisMemberFunctionString "setmydraggerreactionanimation"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  19892, 4
+		LineNumberAlt1              136, 54
+		GetVariableValue            0                                            ; local
+		PushConstanti8              12
+		GetThisMemberFunctionString "restrictdraggercameramode"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  19893, 4
+		LineNumberAlt1              137, 54
+		GetVariableValue            0                                            ; local
+		PushConstantStringString    "Root/data/Art/SpriteAnims/CLAW"
+		PushConstantStringString    "claw"
+		PushConstantStringString    "hand"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  19893, 4
+		LineNumberAlt1              137, 54
+		PushConstantStringString    "cnt1"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  19893, 4
+		LineNumberAlt1              137, 54
+		GetThisMemberFunctionString "setupdraggertip"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  19894, 4
+		LineNumberAlt1              138, 54
+		GetVariableValue            0                                            ; local
+		PushConstanti8              35
+		GetThisMemberFunctionString "setupdraggermaxrange"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  19896, 4
+		LineNumberAlt1              140, 54
+		GetVariableValue            0                                            ; local
+		GetVariableValue            2                                            ; local
+		GetVariableValue            3                                            ; local
+		GetThisMemberFunctionString "setupdraggerspeeds"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  19897, 4
+		LineNumberAlt1              141, 54
+		GetVariableValue            0                                            ; local
+		PushConstanti16             200
+		GetThisMemberFunctionString "settargeteermaxrange"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  19898, 4
+		LineNumberAlt1              142, 54
+		GetVariableValue            0                                            ; local
+		PushConstanti8              1
+		GetThisMemberFunctionString "settargeteerselectionmode"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  19899, 4
+		LineNumberAlt1              143, 54
+		GetVariableValue            0                                            ; local
+		GetVariableValue            1                                            ; local
+		GetThisMemberFunctionString "settargeteerconeangle"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  19901, 4
+		LineNumberAlt1              145, 54
+		PushConstantStringString    "GrapplingHook has been setUp."
+		CallGameFunctionString      "debug", "print", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setgrapplinghookdistance"
+		; address: 0x482fb
+		; source: 54 "C:\\projects\\lego\\Scripting\\VBO\\Toa/Lego_Toa_Onua.vbo" 150:150
+		MemberFunctionArgumentCheck 2
+		LineNumber                  19906, 4
+		LineNumberAlt1              150, 54
+		GetVariableValue            0                      ; local
+		GetVariableValue            1                      ; local
+		GetThisMemberFunctionString "setupdraggermaxrange"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

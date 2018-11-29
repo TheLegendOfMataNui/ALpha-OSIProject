@@ -1,0 +1,186 @@
+begin class "lego_bossprojectile"
+	property "handle"
+	property "id"
+
+	begin method "lego_bossprojectile"
+		; address: 0x5ce8d
+		; source: 93 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_BossProjectile.vbo" 22:23
+		MemberFunctionArgumentCheck 2
+		LineNumber                  32242, 4
+		LineNumberAlt1              22, 93
+		GetVariableValue            1                                            ; local
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  32242, 4
+		LineNumberAlt1              22, 93
+		SetThisMemberValueString    "id"
+		LineNumber                  32243, 4
+		LineNumberAlt1              23, 93
+		GetThisMemberValueString    "id"
+		CallGameFunctionString      "gcbossprojectile", "create", 1
+		LineNumber                  32243, 4
+		LineNumberAlt1              23, 93
+		SetThisMemberValueString    "handle"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "init"
+		; address: 0x5ced1
+		; source: 93 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_BossProjectile.vbo" 30:30
+		MemberFunctionArgumentCheck 8
+		LineNumber                  32250, 4
+		LineNumberAlt1              30, 93
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                              ; local
+		GetVariableValue            2                              ; local
+		GetVariableValue            3                              ; local
+		GetVariableValue            4                              ; local
+		GetVariableValue            5                              ; local
+		GetVariableValue            6                              ; local
+		GetVariableValue            7                              ; local
+		CallGameFunctionString      "gcbossprojectile", "setup", 8
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "settarget"
+		; address: 0x5cefe
+		; source: 93 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_BossProjectile.vbo" 35:35
+		MemberFunctionArgumentCheck 2
+		LineNumber                  32255, 4
+		LineNumberAlt1              35, 93
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                                  ; local
+		CallGameFunctionString      "gcbossprojectile", "settarget", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "gettarget"
+		; address: 0x5cf19
+		; source: 93 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_BossProjectile.vbo" 40:40
+		MemberFunctionArgumentCheck 1
+		LineNumber                  32260, 4
+		LineNumberAlt1              40, 93
+		GetThisMemberValueString    "handle"
+		CallGameFunctionString      "gcbossprojectile", "gettarget", 1
+		LineNumber                  32260, 4
+		LineNumberAlt1              40, 93
+		Return
+	end ; method
+
+	begin method "setspeed"
+		; address: 0x5cf39
+		; source: 93 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_BossProjectile.vbo" 45:45
+		MemberFunctionArgumentCheck 2
+		LineNumber                  32265, 4
+		LineNumberAlt1              45, 93
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                                 ; local
+		CallGameFunctionString      "gcbossprojectile", "setspeed", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "getspeed"
+		; address: 0x5cf54
+		; source: 93 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_BossProjectile.vbo" 50:50
+		MemberFunctionArgumentCheck 1
+		LineNumber                  32270, 4
+		LineNumberAlt1              50, 93
+		GetThisMemberValueString    "handle"
+		CallGameFunctionString      "gcbossprojectile", "getspeed", 1
+		LineNumber                  32270, 4
+		LineNumberAlt1              50, 93
+		Return
+	end ; method
+
+	begin method "getmaxdistance"
+		; address: 0x5cf74
+		; source: 93 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_BossProjectile.vbo" 55:55
+		MemberFunctionArgumentCheck 1
+		LineNumber                  32275, 4
+		LineNumberAlt1              55, 93
+		GetThisMemberValueString    "handle"
+		CallGameFunctionString      "gcbossprojectile", "getmaxdistance", 1
+		LineNumber                  32275, 4
+		LineNumberAlt1              55, 93
+		Return
+	end ; method
+
+	begin method "setmaxdistance"
+		; address: 0x5cf94
+		; source: 93 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_BossProjectile.vbo" 60:60
+		MemberFunctionArgumentCheck 2
+		LineNumber                  32280, 4
+		LineNumberAlt1              60, 93
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                                       ; local
+		CallGameFunctionString      "gcbossprojectile", "setmaxdistance", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "launch"
+		; address: 0x5cfaf
+		; source: 93 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_BossProjectile.vbo" 65:65
+		MemberFunctionArgumentCheck 3
+		LineNumber                  32285, 4
+		LineNumberAlt1              65, 93
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                               ; local
+		GetVariableValue            2                               ; local
+		CallGameFunctionString      "gcbossprojectile", "launch", 3
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "launchfrom"
+		; address: 0x5cfcd
+		; source: 93 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_BossProjectile.vbo" 70:70
+		MemberFunctionArgumentCheck 2
+		LineNumber                  32290, 4
+		LineNumberAlt1              70, 93
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                                   ; local
+		GetMemberValueString        "x"
+		GetVariableValue            1                                   ; local
+		GetMemberValueString        "y"
+		GetVariableValue            1                                   ; local
+		GetMemberValueString        "z"
+		CallGameFunctionString      "gcbossprojectile", "launchfrom", 4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "kill"
+		; address: 0x5cff7
+		; source: 93 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_BossProjectile.vbo" 76:76
+		MemberFunctionArgumentCheck 1
+		LineNumber                  32296, 4
+		LineNumberAlt1              76, 93
+		GetThisMemberValueString    "handle"
+		CallGameFunctionString      "gcbossprojectile", "kill", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x5d00f
+		; source: 93 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_BossProjectile.vbo" 81:81
+		MemberFunctionArgumentCheck 1
+		LineNumber                  32301, 4
+		LineNumberAlt1              81, 93
+		PushNothing
+		SetThisMemberValueString    "handle"
+		PushNothing
+		Return
+	end ; method
+end ; class

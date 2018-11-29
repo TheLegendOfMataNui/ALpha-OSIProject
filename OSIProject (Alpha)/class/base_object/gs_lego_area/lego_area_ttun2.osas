@@ -1,0 +1,143 @@
+begin class "lego_area_ttun2", "gs_lego_area"
+	property "puzzle"
+
+	begin method "lego_area_ttun2"
+		; address: 0x8326a
+		; source: 134 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_ttun.vbo" 23:25
+		MemberFunctionArgumentCheck 2
+		LineNumber                  49792, 4
+		LineNumberAlt1              23, 134
+		GetVariableValue            0                    ; local
+		PushConstantStringString    "ttun"
+		GetVariableValue            1                    ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  49793, 4
+		LineNumberAlt1              24, 134
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  49794, 4
+		LineNumberAlt1              25, 134
+		CreateObjectString          "ttun2_puzzle"
+		Dup
+		GetVariableValue            0                    ; local
+		Pull                        2
+		GetMemberFunctionString     "ttun2_puzzle"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  49794, 4
+		LineNumberAlt1              25, 134
+		SetThisMemberValueString    "puzzle"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x832c2
+		; source: 134 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_ttun.vbo" 33:36
+		MemberFunctionArgumentCheck 1
+		LineNumber                  49802, 4
+		LineNumberAlt1              33, 134
+		GetVariableValue            0                                       ; local
+		GetThisMemberFunctionString "lego_area_show"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  49803, 4
+		LineNumberAlt1              34, 134
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  49804, 4
+		LineNumberAlt1              35, 134
+		PushConstanti32             -9143565
+		PushConstant0
+		PushConstantf32             1000
+		Subtract
+		PushConstant0
+		PushConstantf32             2400
+		Subtract
+		PushConstantf32             0.009999999776482582
+		CallGameFunctionString      "gcareadirector", "setfog", 4
+		Pop
+		LineNumber                  49805, 4
+		LineNumberAlt1              36, 134
+		PushConstant0
+		CallGameFunctionString      "gclightdirector", "setcavelighting", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x83328
+		; source: 134 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_ttun.vbo" 42:42
+		MemberFunctionArgumentCheck 2
+		LineNumber                  49811, 4
+		LineNumberAlt1              42, 134
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x83344
+		; source: 134 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_ttun.vbo" 47:47
+		MemberFunctionArgumentCheck 2
+		LineNumber                  49816, 4
+		LineNumberAlt1              47, 134
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1        ; local
+		Pull                        2
+		GetMemberFunctionString     "input"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x83360
+		; source: 134 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_ttun.vbo" 52:52
+		MemberFunctionArgumentCheck 1
+		LineNumber                  49821, 4
+		LineNumberAlt1              52, 134
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x83378
+		; source: 134 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_ttun.vbo" 57:58
+		MemberFunctionArgumentCheck 1
+		LineNumber                  49826, 4
+		LineNumberAlt1              57, 134
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "exit"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  49827, 4
+		LineNumberAlt1              58, 134
+		PushNothing
+		SetThisMemberValueString    "puzzle"
+		PushNothing
+		Return
+	end ; method
+end ; class

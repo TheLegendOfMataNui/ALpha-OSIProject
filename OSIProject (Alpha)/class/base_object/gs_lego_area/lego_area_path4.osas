@@ -1,0 +1,172 @@
+begin class "lego_area_path4", "gs_lego_area"
+	property "puzzle"
+
+	begin method "lego_area_path4"
+		; address: 0x9e6af
+		; source: 172 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_path.vbo" 23:26
+		MemberFunctionArgumentCheck 2
+		LineNumber                  62912, 4
+		LineNumberAlt1              23, 172
+		GetVariableValue            0                    ; local
+		PushConstantStringString    "path"
+		GetVariableValue            1                    ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  62913, 4
+		LineNumberAlt1              24, 172
+		CreateObjectString          "pathpuzzle"
+		Dup
+		GetVariableValue            0                    ; local
+		Pull                        2
+		GetMemberFunctionString     "pathpuzzle"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  62913, 4
+		LineNumberAlt1              24, 172
+		SetThisMemberValueString    "puzzle"
+		LineNumber                  62914, 4
+		LineNumberAlt1              25, 172
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  62915, 4
+		LineNumberAlt1              26, 172
+		CreateArray
+		Dup
+		PushConstanti16             180
+		AppendToArray
+		Dup
+		PushConstanti16             -356
+		AppendToArray
+		Dup
+		PushConstant0
+		PushConstantf32             51.400001525878906
+		Subtract
+		AppendToArray
+		Dup
+		PushConstanti16             689
+		AppendToArray
+		SetThisMemberValueString    "startingarea"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x9e72d
+		; source: 172 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_path.vbo" 33:35
+		MemberFunctionArgumentCheck 1
+		LineNumber                  62922, 4
+		LineNumberAlt1              33, 172
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_show"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  62923, 4
+		LineNumberAlt1              34, 172
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  62924, 4
+		LineNumberAlt1              35, 172
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x9e76c
+		; source: 172 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_path.vbo" 40:44
+		MemberFunctionArgumentCheck 1
+		LineNumber                  62929, 4
+		LineNumberAlt1              40, 172
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_hide"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  62930, 4
+		LineNumberAlt1              41, 172
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "hide"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  62931, 4
+		LineNumberAlt1              42, 172
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  62933, 4
+		LineNumberAlt1              44, 172
+		PushNothing
+		SetThisMemberValueString    "startingarea"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x9e7b9
+		; source: 172 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_path.vbo" 49:49
+		MemberFunctionArgumentCheck 2
+		LineNumber                  62938, 4
+		LineNumberAlt1              49, 172
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "process"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x9e7d5
+		; source: 172 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_path.vbo" 54:54
+		MemberFunctionArgumentCheck 2
+		LineNumber                  62943, 4
+		LineNumberAlt1              54, 172
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1        ; local
+		Pull                        2
+		GetMemberFunctionString     "input"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x9e7f1
+		; source: 172 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_path.vbo" 59:59
+		MemberFunctionArgumentCheck 2
+		LineNumber                  62948, 4
+		LineNumberAlt1              59, 172
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x9e80d
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+end ; class

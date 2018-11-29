@@ -1,0 +1,143 @@
+begin class "lego_area_brd24", "gs_lego_area"
+	property "puzzle"
+
+	begin method "lego_area_brd24"
+		; address: 0xaa6c8
+		; source: 181 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_brd2.vbo" 28:30
+		MemberFunctionArgumentCheck 2
+		LineNumber                  1324, 4
+		LineNumberAlt1              28, 181
+		GetVariableValue            0                    ; local
+		PushConstantStringString    "brd2"
+		GetVariableValue            1                    ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  1325, 4
+		LineNumberAlt1              29, 181
+		CreateObjectString          "brd2_puzzle"
+		Dup
+		GetVariableValue            0                    ; local
+		Pull                        2
+		GetMemberFunctionString     "brd2_puzzle"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  1325, 4
+		LineNumberAlt1              29, 181
+		SetThisMemberValueString    "puzzle"
+		LineNumber                  1326, 4
+		LineNumberAlt1              30, 181
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xaa720
+		; source: 181 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_brd2.vbo" 36:38
+		MemberFunctionArgumentCheck 1
+		LineNumber                  1332, 4
+		LineNumberAlt1              36, 181
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_show"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  1333, 4
+		LineNumberAlt1              37, 181
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  1334, 4
+		LineNumberAlt1              38, 181
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xaa75f
+		; source: 181 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_brd2.vbo" 43:45
+		MemberFunctionArgumentCheck 1
+		LineNumber                  1339, 4
+		LineNumberAlt1              43, 181
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_hide"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  1341, 4
+		LineNumberAlt1              45, 181
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "hide"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xaa78a
+		; source: 181 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_brd2.vbo" 51:51
+		MemberFunctionArgumentCheck 2
+		LineNumber                  1347, 4
+		LineNumberAlt1              51, 181
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "process"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xaa7a6
+		; source: 181 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_brd2.vbo" 56:56
+		MemberFunctionArgumentCheck 2
+		LineNumber                  1352, 4
+		LineNumberAlt1              56, 181
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0xaa7c2
+		; source: 181 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_brd2.vbo" 61:61
+		MemberFunctionArgumentCheck 2
+		LineNumber                  1357, 4
+		LineNumberAlt1              61, 181
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1        ; local
+		Pull                        2
+		GetMemberFunctionString     "input"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0xaa7de
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+end ; class

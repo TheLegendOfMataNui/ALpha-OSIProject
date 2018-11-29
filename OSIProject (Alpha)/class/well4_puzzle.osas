@@ -1,0 +1,3427 @@
+begin class "well4_puzzle"
+	property "parent"
+	property "platformarray"
+	property "rotatetimer"
+	property "pointa"
+	property "pointb"
+	property "pointc"
+	property "rotatecase"
+	property "yvalue"
+	property "glyph"
+	property "founditem"
+	property "showpickup"
+	property "starttimeronce"
+
+	begin method "well4_puzzle"
+		; address: 0xb2d64
+		; source: 189 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_well.vbo" 103:107
+		MemberFunctionArgumentCheck 2
+		LineNumber                  4993, 4
+		LineNumberAlt1              103, 189
+		GetVariableValue            1            ; local
+		SetThisMemberValueString    "parent"
+		LineNumber                  4997, 4
+		LineNumberAlt1              107, 189
+		PushConstanti8              1
+		SetThisMemberValueString    "showpickup"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xb2d87
+		; source: 189 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_well.vbo" 115:231
+		; source: 185 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_icmz.vbo" 239:239
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    5005, 4
+		LineNumberAlt1                115, 189
+		PushConstanti8                50
+		CallGameFunctionString        "gcareadirector", "setnearestmax", 1
+		Pop
+		LineNumber                    5006, 4
+		LineNumberAlt1                116, 189
+		PushConstanti8                1
+		SetThisMemberValueString      "starttimeronce"
+		LineNumber                    5007, 4
+		LineNumberAlt1                117, 189
+		PushConstantStringString      "glya"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    5007, 4
+		LineNumberAlt1                117, 189
+		CallGameFunctionString        "gcsaver", "findglyph", 1
+		LineNumber                    5007, 4
+		LineNumberAlt1                117, 189
+		SetThisMemberValueString      "founditem"
+		LineNumber                    5008, 4
+		LineNumberAlt1                118, 189
+		GetThisMemberValueString      "founditem"
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    5009, 4
+		LineNumberAlt1                119, 189
+		PushConstant0
+		SetThisMemberValueString      "showpickup"
+		; <-
+		BranchTarget                  0
+		LineNumber                    5012, 4
+		LineNumberAlt1                122, 189
+		GetThisMemberValueString      "showpickup"
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    5013, 4
+		LineNumberAlt1                123, 189
+		CreateObjectString            "lego_pickup"
+		Dup
+		PushConstantStringString      "glya"
+		PushConstanti8                13
+		PushConstanti8                2
+		PushConstantStringString      "item"
+		PushConstanti8                6
+		PushConstanti8                1
+		Pull                          7
+		GetMemberFunctionString       "lego_pickup"
+		JumpAbsolute                  7
+		Pop
+		LineNumber                    5013, 4
+		LineNumberAlt1                123, 189
+		SetThisMemberValueString      "glyph"
+		LineNumber                    5014, 4
+		LineNumberAlt1                124, 189
+		GetThisMemberValueString      "glyph"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    5015, 4
+		LineNumberAlt1                125, 189
+		GetThisMemberValueString      "glyph"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  1
+		LineNumber                    5018, 4
+		LineNumberAlt1                128, 189
+		CreateObjectString            "lego_timer"
+		Dup
+		PushConstantStringString      "rott"
+		PushConstantf32               2
+		PushConstant0
+		Pull                          4
+		GetMemberFunctionString       "lego_timer"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    5018, 4
+		LineNumberAlt1                128, 189
+		SetThisMemberValueString      "rotatetimer"
+		LineNumber                    5019, 4
+		LineNumberAlt1                129, 189
+		GetThisMemberValueString      "rotatetimer"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    5020, 4
+		LineNumberAlt1                130, 189
+		PushConstant0
+		SetThisMemberValueString      "rotatecase"
+		LineNumber                    5022, 4
+		LineNumberAlt1                132, 189
+		CreateArray
+		Dup
+		CreateObjectString            "platform"
+		Dup
+		PushConstantStringString      "pf36"
+		Pull                          2
+		GetMemberFunctionString       "platform"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5023, 4
+		LineNumberAlt1                133, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "platform"
+		Dup
+		PushConstantStringString      "pf21"
+		Pull                          2
+		GetMemberFunctionString       "platform"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5024, 4
+		LineNumberAlt1                134, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "pf15"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5025, 4
+		LineNumberAlt1                135, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "pf19"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5026, 4
+		LineNumberAlt1                136, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "pf18"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5027, 4
+		LineNumberAlt1                137, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "platform"
+		Dup
+		PushConstantStringString      "pf22"
+		Pull                          2
+		GetMemberFunctionString       "platform"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5028, 4
+		LineNumberAlt1                138, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "platform"
+		Dup
+		PushConstantStringString      "pf16"
+		Pull                          2
+		GetMemberFunctionString       "platform"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5029, 4
+		LineNumberAlt1                139, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "pf17"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5030, 4
+		LineNumberAlt1                140, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "pf40"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5031, 4
+		LineNumberAlt1                141, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "pf41"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5032, 4
+		LineNumberAlt1                142, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "pf43"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5033, 4
+		LineNumberAlt1                143, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "pf42"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5034, 4
+		LineNumberAlt1                144, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "pf44"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5035, 4
+		LineNumberAlt1                145, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "platform"
+		Dup
+		PushConstantStringString      "pf33"
+		Pull                          2
+		GetMemberFunctionString       "platform"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5036, 4
+		LineNumberAlt1                146, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "platform"
+		Dup
+		PushConstantStringString      "pf34"
+		Pull                          2
+		GetMemberFunctionString       "platform"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5037, 4
+		LineNumberAlt1                147, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "platform"
+		Dup
+		PushConstantStringString      "pf37"
+		Pull                          2
+		GetMemberFunctionString       "platform"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5038, 4
+		LineNumberAlt1                148, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "platform"
+		Dup
+		PushConstantStringString      "pf35"
+		Pull                          2
+		GetMemberFunctionString       "platform"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5039, 4
+		LineNumberAlt1                149, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "platform"
+		Dup
+		PushConstantStringString      "pf48"
+		Pull                          2
+		GetMemberFunctionString       "platform"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5040, 4
+		LineNumberAlt1                150, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "platform"
+		Dup
+		PushConstantStringString      "pf50"
+		Pull                          2
+		GetMemberFunctionString       "platform"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5041, 4
+		LineNumberAlt1                151, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "platform"
+		Dup
+		PushConstantStringString      "pf52"
+		Pull                          2
+		GetMemberFunctionString       "platform"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5042, 4
+		LineNumberAlt1                152, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "platform"
+		Dup
+		PushConstantStringString      "pf54"
+		Pull                          2
+		GetMemberFunctionString       "platform"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5043, 4
+		LineNumberAlt1                153, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "pf55"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5044, 4
+		LineNumberAlt1                154, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "pf56"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5045, 4
+		LineNumberAlt1                155, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "pf57"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5046, 4
+		LineNumberAlt1                156, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "pf58"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5047, 4
+		LineNumberAlt1                157, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "pf60"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5048, 4
+		LineNumberAlt1                158, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "pf62"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5049, 4
+		LineNumberAlt1                159, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "pf27"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5050, 4
+		LineNumberAlt1                160, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "pf28"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5051, 4
+		LineNumberAlt1                161, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "pf29"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5052, 4
+		LineNumberAlt1                162, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "pf30"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5053, 4
+		LineNumberAlt1                163, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "pf31"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5054, 4
+		LineNumberAlt1                164, 189
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "pf38"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5055, 4
+		LineNumberAlt1                165, 189
+		AppendToArray
+		SetThisMemberValueString      "platformarray"
+		LineNumber                    5058, 4
+		LineNumberAlt1                168, 189
+		GetThisMemberValueString      "platformarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                                            ; local
+		; <-
+		BranchTarget                  2
+		Dup
+		GetVariableValue              1                                            ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    5059, 4
+		LineNumberAlt1                169, 189
+		GetThisMemberValueString      "platformarray"
+		GetVariableValue              1                                            ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Pop
+		LineNumber                    5062, 4
+		LineNumberAlt1                172, 189
+		GetThisMemberValueString      "platformarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                                            ; local
+		; <-
+		BranchTarget                  4
+		Dup
+		GetVariableValue              1                                            ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    5063, 4
+		LineNumberAlt1                173, 189
+		GetThisMemberValueString      "platformarray"
+		GetVariableValue              1                                            ; local
+		GetArrayValue
+		PushConstanti8                1
+		PushConstant0
+		PushConstanti8                1
+		Pull                          4
+		GetMemberFunctionString       "setresponse"
+		JumpAbsolute                  4
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  5
+		Pop
+		LineNumber                    5066, 4
+		LineNumberAlt1                176, 189
+		PushConstantf32               0
+		CallGameFunctionString        "gcareadirector", "setallobjectsalpha", 1
+		Pop
+		GetThisMemberValueString      "showpickup"
+		CompareAndBranchIfFalseTarget 6, 0
+		; ->
+		LineNumber                    6746, 4
+		LineNumberAlt1                239, 185
+		GetThisMemberValueString      "glyph"
+		GetMemberValueString          "obj"
+		Dup
+		GetMemberFunctionString       "setalpha"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  6
+		LineNumber                    5068, 4
+		LineNumberAlt1                178, 189
+		CreateObjectString            "basicpoint"
+		Dup
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                2
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getx"
+		JumpAbsolute                  1
+		LineNumber                    5068, 4
+		LineNumberAlt1                178, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                2
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    5068, 4
+		LineNumberAlt1                178, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                2
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getz"
+		JumpAbsolute                  1
+		LineNumber                    5068, 4
+		LineNumberAlt1                178, 189
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    5068, 4
+		LineNumberAlt1                178, 189
+		SetThisMemberValueString      "pointa"
+		LineNumber                    5069, 4
+		LineNumberAlt1                179, 189
+		CreateObjectString            "basicpoint"
+		Dup
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                3
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getx"
+		JumpAbsolute                  1
+		LineNumber                    5069, 4
+		LineNumberAlt1                179, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                3
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    5069, 4
+		LineNumberAlt1                179, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                3
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getz"
+		JumpAbsolute                  1
+		LineNumber                    5069, 4
+		LineNumberAlt1                179, 189
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    5069, 4
+		LineNumberAlt1                179, 189
+		SetThisMemberValueString      "pointb"
+		LineNumber                    5070, 4
+		LineNumberAlt1                180, 189
+		CreateObjectString            "basicpoint"
+		Dup
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                4
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getx"
+		JumpAbsolute                  1
+		LineNumber                    5070, 4
+		LineNumberAlt1                180, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                4
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    5070, 4
+		LineNumberAlt1                180, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                4
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getz"
+		JumpAbsolute                  1
+		LineNumber                    5070, 4
+		LineNumberAlt1                180, 189
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    5070, 4
+		LineNumberAlt1                180, 189
+		SetThisMemberValueString      "pointc"
+		LineNumber                    5072, 4
+		LineNumberAlt1                182, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstant0
+		GetArrayValue
+		PushConstantf32               1
+		PushConstantf32               1.5
+		PushConstantf32               1
+		PushConstantf32               0.8999999761581421
+		Pull                          5
+		GetMemberFunctionString       "setuptouchshakerotate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5073, 4
+		LineNumberAlt1                183, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstant0
+		GetArrayValue
+		PushConstantf32               1
+		PushConstantStringString      "tm21"
+		PushConstantf32               2
+		PushConstantStringString      "hp10"
+		Pull                          5
+		GetMemberFunctionString       "setupfall"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5075, 4
+		LineNumberAlt1                185, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                1
+		GetArrayValue
+		PushConstantf32               1
+		PushConstantf32               1.5
+		PushConstantf32               1
+		PushConstantf32               0.8999999761581421
+		Pull                          5
+		GetMemberFunctionString       "setuptouchshakerotate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5076, 4
+		LineNumberAlt1                186, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                1
+		GetArrayValue
+		PushConstantf32               1
+		PushConstantStringString      "tm22"
+		PushConstantf32               2
+		PushConstantStringString      "hp11"
+		Pull                          5
+		GetMemberFunctionString       "setupfall"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5078, 4
+		LineNumberAlt1                188, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                5
+		GetArrayValue
+		PushConstantf32               1
+		PushConstantf32               1.5
+		PushConstantf32               1
+		PushConstantf32               0.8999999761581421
+		Pull                          5
+		GetMemberFunctionString       "setuptouchshakerotate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5079, 4
+		LineNumberAlt1                189, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                5
+		GetArrayValue
+		PushConstantf32               1
+		PushConstantStringString      "tma5"
+		PushConstantf32               2
+		PushConstantStringString      "hp00"
+		Pull                          5
+		GetMemberFunctionString       "setupfall"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5081, 4
+		LineNumberAlt1                191, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                6
+		GetArrayValue
+		PushConstantf32               1
+		PushConstantf32               1.5
+		PushConstantf32               1
+		PushConstantf32               0.8999999761581421
+		Pull                          5
+		GetMemberFunctionString       "setuptouchshakerotate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5082, 4
+		LineNumberAlt1                192, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                6
+		GetArrayValue
+		PushConstantf32               1
+		PushConstantStringString      "tma6"
+		PushConstantf32               2
+		PushConstantStringString      "hp01"
+		Pull                          5
+		GetMemberFunctionString       "setupfall"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5084, 4
+		LineNumberAlt1                194, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                13
+		GetArrayValue
+		PushConstantf32               1
+		PushConstantf32               1.5
+		PushConstantf32               1
+		PushConstantf32               0.8999999761581421
+		Pull                          5
+		GetMemberFunctionString       "setuptouchshakerotate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5085, 4
+		LineNumberAlt1                195, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                13
+		GetArrayValue
+		PushConstantf32               1
+		PushConstantStringString      "tm13"
+		PushConstantf32               2
+		PushConstantStringString      "hp02"
+		Pull                          5
+		GetMemberFunctionString       "setupfall"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5087, 4
+		LineNumberAlt1                197, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                14
+		GetArrayValue
+		PushConstantf32               1
+		PushConstantf32               1.5
+		PushConstantf32               1
+		PushConstantf32               0.8999999761581421
+		Pull                          5
+		GetMemberFunctionString       "setuptouchshakerotate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5088, 4
+		LineNumberAlt1                198, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                14
+		GetArrayValue
+		PushConstantf32               1
+		PushConstantStringString      "tm14"
+		PushConstantf32               2
+		PushConstantStringString      "hp03"
+		Pull                          5
+		GetMemberFunctionString       "setupfall"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5090, 4
+		LineNumberAlt1                200, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                15
+		GetArrayValue
+		PushConstantf32               1
+		PushConstantf32               1.5
+		PushConstantf32               1
+		PushConstantf32               0.8999999761581421
+		Pull                          5
+		GetMemberFunctionString       "setuptouchshakerotate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5091, 4
+		LineNumberAlt1                201, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                15
+		GetArrayValue
+		PushConstantf32               1
+		PushConstantStringString      "tm15"
+		PushConstantf32               2
+		PushConstantStringString      "hp04"
+		Pull                          5
+		GetMemberFunctionString       "setupfall"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5093, 4
+		LineNumberAlt1                203, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                16
+		GetArrayValue
+		PushConstantf32               1
+		PushConstantf32               1.5
+		PushConstantf32               1
+		PushConstantf32               0.8999999761581421
+		Pull                          5
+		GetMemberFunctionString       "setuptouchshakerotate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5094, 4
+		LineNumberAlt1                204, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                16
+		GetArrayValue
+		PushConstantf32               1
+		PushConstantStringString      "tm16"
+		PushConstantf32               2
+		PushConstantStringString      "hp05"
+		Pull                          5
+		GetMemberFunctionString       "setupfall"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5096, 4
+		LineNumberAlt1                206, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                17
+		GetArrayValue
+		PushConstantf32               1
+		PushConstantf32               1.5
+		PushConstantf32               1
+		PushConstantf32               0.8999999761581421
+		Pull                          5
+		GetMemberFunctionString       "setuptouchshakerotate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5097, 4
+		LineNumberAlt1                207, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                17
+		GetArrayValue
+		PushConstantf32               1
+		PushConstantStringString      "tm17"
+		PushConstantf32               2
+		PushConstantStringString      "hp06"
+		Pull                          5
+		GetMemberFunctionString       "setupfall"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5099, 4
+		LineNumberAlt1                209, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                18
+		GetArrayValue
+		PushConstantf32               1
+		PushConstantf32               1.5
+		PushConstantf32               1
+		PushConstantf32               0.8999999761581421
+		Pull                          5
+		GetMemberFunctionString       "setuptouchshakerotate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5100, 4
+		LineNumberAlt1                210, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                18
+		GetArrayValue
+		PushConstantf32               1
+		PushConstantStringString      "tm18"
+		PushConstantf32               2
+		PushConstantStringString      "hp07"
+		Pull                          5
+		GetMemberFunctionString       "setupfall"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5102, 4
+		LineNumberAlt1                212, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                19
+		GetArrayValue
+		PushConstantf32               1
+		PushConstantf32               1.5
+		PushConstantf32               1
+		PushConstantf32               0.8999999761581421
+		Pull                          5
+		GetMemberFunctionString       "setuptouchshakerotate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5103, 4
+		LineNumberAlt1                213, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                19
+		GetArrayValue
+		PushConstantf32               1
+		PushConstantStringString      "tm19"
+		PushConstantf32               2
+		PushConstantStringString      "hp08"
+		Pull                          5
+		GetMemberFunctionString       "setupfall"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5105, 4
+		LineNumberAlt1                215, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                20
+		GetArrayValue
+		PushConstantf32               1
+		PushConstantf32               1.5
+		PushConstantf32               1
+		PushConstantf32               0.8999999761581421
+		Pull                          5
+		GetMemberFunctionString       "setuptouchshakerotate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5106, 4
+		LineNumberAlt1                216, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                20
+		GetArrayValue
+		PushConstantf32               1
+		PushConstantStringString      "tm20"
+		PushConstantf32               2
+		PushConstantStringString      "hp09"
+		Pull                          5
+		GetMemberFunctionString       "setupfall"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5108, 4
+		LineNumberAlt1                218, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                7
+		GetArrayValue
+		PushConstant0
+		PushConstantf32               20
+		Subtract
+		PushConstantf32               0.699999988079071
+		PushConstantf32               14
+		PushConstantf32               1
+		PushConstanti8                -1
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		PushConstantf32               0.30000001192092896
+		PushConstantf32               0.8999999761581421
+		Pull                          3
+		GetMemberFunctionString       "getrandomfloat"
+		JumpAbsolute                  3
+		LineNumber                    5108, 4
+		LineNumberAlt1                218, 189
+		Pull                          7
+		GetMemberFunctionString       "setslidetimer"
+		JumpAbsolute                  7
+		Pop
+		LineNumber                    5110, 4
+		LineNumberAlt1                220, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                8
+		GetArrayValue
+		PushConstantf32               0
+		PushConstant0
+		PushConstantf32               12
+		Subtract
+		PushConstantf32               0
+		PushConstantf32               1.5
+		PushConstanti8                -1
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		PushConstantf32               0.30000001192092896
+		PushConstantf32               0.8999999761581421
+		Pull                          3
+		GetMemberFunctionString       "getrandomfloat"
+		JumpAbsolute                  3
+		LineNumber                    5110, 4
+		LineNumberAlt1                220, 189
+		Pull                          7
+		GetMemberFunctionString       "setslidetimer"
+		JumpAbsolute                  7
+		Pop
+		LineNumber                    5111, 4
+		LineNumberAlt1                221, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                9
+		GetArrayValue
+		PushConstantf32               0
+		PushConstantf32               12
+		PushConstantf32               0
+		PushConstantf32               1.5
+		PushConstanti8                -1
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		PushConstantf32               0.30000001192092896
+		PushConstantf32               0.8999999761581421
+		Pull                          3
+		GetMemberFunctionString       "getrandomfloat"
+		JumpAbsolute                  3
+		LineNumber                    5111, 4
+		LineNumberAlt1                221, 189
+		Pull                          7
+		GetMemberFunctionString       "setslidetimer"
+		JumpAbsolute                  7
+		Pop
+		LineNumber                    5112, 4
+		LineNumberAlt1                222, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                10
+		GetArrayValue
+		PushConstantf32               0
+		PushConstant0
+		PushConstantf32               12
+		Subtract
+		PushConstantf32               0
+		PushConstantf32               1.5
+		PushConstanti8                -1
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		PushConstantf32               0.30000001192092896
+		PushConstantf32               0.8999999761581421
+		Pull                          3
+		GetMemberFunctionString       "getrandomfloat"
+		JumpAbsolute                  3
+		LineNumber                    5112, 4
+		LineNumberAlt1                222, 189
+		Pull                          7
+		GetMemberFunctionString       "setslidetimer"
+		JumpAbsolute                  7
+		Pop
+		LineNumber                    5113, 4
+		LineNumberAlt1                223, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                11
+		GetArrayValue
+		PushConstantf32               0
+		PushConstantf32               12
+		PushConstantf32               0
+		PushConstantf32               1.5
+		PushConstanti8                -1
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		PushConstantf32               0.30000001192092896
+		PushConstantf32               0.8999999761581421
+		Pull                          3
+		GetMemberFunctionString       "getrandomfloat"
+		JumpAbsolute                  3
+		LineNumber                    5113, 4
+		LineNumberAlt1                223, 189
+		Pull                          7
+		GetMemberFunctionString       "setslidetimer"
+		JumpAbsolute                  7
+		Pop
+		LineNumber                    5114, 4
+		LineNumberAlt1                224, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                12
+		GetArrayValue
+		PushConstantf32               0
+		PushConstant0
+		PushConstantf32               12
+		Subtract
+		PushConstantf32               0
+		PushConstantf32               1.5
+		PushConstanti8                -1
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		PushConstantf32               0.30000001192092896
+		PushConstantf32               0.8999999761581421
+		Pull                          3
+		GetMemberFunctionString       "getrandomfloat"
+		JumpAbsolute                  3
+		LineNumber                    5114, 4
+		LineNumberAlt1                224, 189
+		Pull                          7
+		GetMemberFunctionString       "setslidetimer"
+		JumpAbsolute                  7
+		Pop
+		LineNumber                    5116, 4
+		LineNumberAlt1                226, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                27
+		GetArrayValue
+		PushConstantf32               0
+		PushConstantf32               0
+		PushConstant0
+		PushConstantf32               10
+		Subtract
+		PushConstantf32               1.5
+		PushConstanti8                -1
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		PushConstantf32               0.30000001192092896
+		PushConstantf32               0.8999999761581421
+		Pull                          3
+		GetMemberFunctionString       "getrandomfloat"
+		JumpAbsolute                  3
+		LineNumber                    5116, 4
+		LineNumberAlt1                226, 189
+		Pull                          7
+		GetMemberFunctionString       "setslidetimer"
+		JumpAbsolute                  7
+		Pop
+		LineNumber                    5117, 4
+		LineNumberAlt1                227, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                28
+		GetArrayValue
+		PushConstantf32               0
+		PushConstantf32               0
+		PushConstantf32               10
+		PushConstantf32               1.5
+		PushConstanti8                -1
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		PushConstantf32               0.30000001192092896
+		PushConstantf32               0.8999999761581421
+		Pull                          3
+		GetMemberFunctionString       "getrandomfloat"
+		JumpAbsolute                  3
+		LineNumber                    5117, 4
+		LineNumberAlt1                227, 189
+		Pull                          7
+		GetMemberFunctionString       "setslidetimer"
+		JumpAbsolute                  7
+		Pop
+		LineNumber                    5118, 4
+		LineNumberAlt1                228, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                29
+		GetArrayValue
+		PushConstantf32               0
+		PushConstantf32               0
+		PushConstant0
+		PushConstantf32               10
+		Subtract
+		PushConstantf32               1.5
+		PushConstanti8                -1
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		PushConstantf32               0.30000001192092896
+		PushConstantf32               0.8999999761581421
+		Pull                          3
+		GetMemberFunctionString       "getrandomfloat"
+		JumpAbsolute                  3
+		LineNumber                    5118, 4
+		LineNumberAlt1                228, 189
+		Pull                          7
+		GetMemberFunctionString       "setslidetimer"
+		JumpAbsolute                  7
+		Pop
+		LineNumber                    5119, 4
+		LineNumberAlt1                229, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                30
+		GetArrayValue
+		PushConstantf32               0
+		PushConstantf32               0
+		PushConstantf32               10
+		PushConstantf32               1.5
+		PushConstanti8                -1
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		PushConstantf32               0.30000001192092896
+		PushConstantf32               0.8999999761581421
+		Pull                          3
+		GetMemberFunctionString       "getrandomfloat"
+		JumpAbsolute                  3
+		LineNumber                    5119, 4
+		LineNumberAlt1                229, 189
+		Pull                          7
+		GetMemberFunctionString       "setslidetimer"
+		JumpAbsolute                  7
+		Pop
+		LineNumber                    5120, 4
+		LineNumberAlt1                230, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                31
+		GetArrayValue
+		PushConstantf32               0
+		PushConstantf32               0
+		PushConstant0
+		PushConstantf32               10
+		Subtract
+		PushConstantf32               1.5
+		PushConstanti8                -1
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		PushConstantf32               0.30000001192092896
+		PushConstantf32               0.8999999761581421
+		Pull                          3
+		GetMemberFunctionString       "getrandomfloat"
+		JumpAbsolute                  3
+		LineNumber                    5120, 4
+		LineNumberAlt1                230, 189
+		Pull                          7
+		GetMemberFunctionString       "setslidetimer"
+		JumpAbsolute                  7
+		Pop
+		LineNumber                    5121, 4
+		LineNumberAlt1                231, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                32
+		GetArrayValue
+		PushConstantf32               0
+		PushConstantf32               0
+		PushConstantf32               10
+		PushConstantf32               1.5
+		PushConstanti8                -1
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		PushConstantf32               0.30000001192092896
+		PushConstantf32               0.8999999761581421
+		Pull                          3
+		GetMemberFunctionString       "getrandomfloat"
+		JumpAbsolute                  3
+		LineNumber                    5121, 4
+		LineNumberAlt1                231, 189
+		Pull                          7
+		GetMemberFunctionString       "setslidetimer"
+		JumpAbsolute                  7
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "show"
+		; address: 0xb3bcd
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hide"
+		; address: 0xb3bd1
+		; source: 189 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_well.vbo" 243:264
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    5133, 4
+		LineNumberAlt1                243, 189
+		GetThisMemberValueString      "glyph"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    5134, 4
+		LineNumberAlt1                244, 189
+		GetThisMemberValueString      "glyph"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    5135, 4
+		LineNumberAlt1                245, 189
+		PushNothing
+		SetThisMemberValueString      "glyph"
+		; <-
+		BranchTarget                  0
+		LineNumber                    5137, 4
+		LineNumberAlt1                247, 189
+		PushNothing
+		SetThisMemberValueString      "founditem"
+		LineNumber                    5138, 4
+		LineNumberAlt1                248, 189
+		PushNothing
+		SetThisMemberValueString      "showpickup"
+		LineNumber                    5141, 4
+		LineNumberAlt1                251, 189
+		GetThisMemberValueString      "platformarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                ; local
+		; <-
+		BranchTarget                  1
+		Dup
+		GetVariableValue              1                ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    5142, 4
+		LineNumberAlt1                252, 189
+		GetThisMemberValueString      "platformarray"
+		GetVariableValue              1                ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    5143, 4
+		LineNumberAlt1                253, 189
+		GetThisMemberValueString      "platformarray"
+		GetVariableValue              1                ; local
+		PushNothing
+		SetArrayValue
+		IncrementVariable             1
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		Pop
+		LineNumber                    5145, 4
+		LineNumberAlt1                255, 189
+		PushNothing
+		SetThisMemberValueString      "platformarray"
+		LineNumber                    5147, 4
+		LineNumberAlt1                257, 189
+		PushNothing
+		SetThisMemberValueString      "pointa"
+		LineNumber                    5148, 4
+		LineNumberAlt1                258, 189
+		PushNothing
+		SetThisMemberValueString      "pointb"
+		LineNumber                    5149, 4
+		LineNumberAlt1                259, 189
+		PushNothing
+		SetThisMemberValueString      "pointc"
+		LineNumber                    5150, 4
+		LineNumberAlt1                260, 189
+		PushNothing
+		SetThisMemberValueString      "yvalue"
+		LineNumber                    5151, 4
+		LineNumberAlt1                261, 189
+		GetThisMemberValueString      "rotatetimer"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    5152, 4
+		LineNumberAlt1                262, 189
+		PushNothing
+		SetThisMemberValueString      "rotatetimer"
+		LineNumber                    5153, 4
+		LineNumberAlt1                263, 189
+		PushNothing
+		SetThisMemberValueString      "rotatecase"
+		LineNumber                    5154, 4
+		LineNumberAlt1                264, 189
+		PushNothing
+		SetThisMemberValueString      "starttimeronce"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xb3cfa
+		; source: 189 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_well.vbo" 271:318
+		MemberFunctionArgumentCheck   2
+		LineNumber                    5161, 4
+		LineNumberAlt1                271, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstant0
+		GetArrayValue
+		GetVariableValue              1                  ; local
+		Pull                          2
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5162, 4
+		LineNumberAlt1                272, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                1
+		GetArrayValue
+		GetVariableValue              1                  ; local
+		Pull                          2
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5163, 4
+		LineNumberAlt1                273, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                5
+		GetArrayValue
+		GetVariableValue              1                  ; local
+		Pull                          2
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5164, 4
+		LineNumberAlt1                274, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                6
+		GetArrayValue
+		GetVariableValue              1                  ; local
+		Pull                          2
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5165, 4
+		LineNumberAlt1                275, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                13
+		GetArrayValue
+		GetVariableValue              1                  ; local
+		Pull                          2
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5166, 4
+		LineNumberAlt1                276, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                14
+		GetArrayValue
+		GetVariableValue              1                  ; local
+		Pull                          2
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5167, 4
+		LineNumberAlt1                277, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                15
+		GetArrayValue
+		GetVariableValue              1                  ; local
+		Pull                          2
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5168, 4
+		LineNumberAlt1                278, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                16
+		GetArrayValue
+		GetVariableValue              1                  ; local
+		Pull                          2
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5169, 4
+		LineNumberAlt1                279, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                17
+		GetArrayValue
+		GetVariableValue              1                  ; local
+		Pull                          2
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5170, 4
+		LineNumberAlt1                280, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                18
+		GetArrayValue
+		GetVariableValue              1                  ; local
+		Pull                          2
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5171, 4
+		LineNumberAlt1                281, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                19
+		GetArrayValue
+		GetVariableValue              1                  ; local
+		Pull                          2
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5172, 4
+		LineNumberAlt1                282, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                20
+		GetArrayValue
+		GetVariableValue              1                  ; local
+		Pull                          2
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5173, 4
+		LineNumberAlt1                283, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                21
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    5174, 4
+		LineNumberAlt1                284, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                22
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    5175, 4
+		LineNumberAlt1                285, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                23
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    5176, 4
+		LineNumberAlt1                286, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                24
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    5177, 4
+		LineNumberAlt1                287, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                25
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    5178, 4
+		LineNumberAlt1                288, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                26
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    5181, 4
+		LineNumberAlt1                291, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                21
+		GetArrayValue
+		GetMemberValueString          "collide"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    5182, 4
+		LineNumberAlt1                292, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                21
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    5182, 4
+		LineNumberAlt1                292, 189
+		PushConstantf32               6.158209800720215
+		LessOrEqual
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    5183, 4
+		LineNumberAlt1                293, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                21
+		GetArrayValue
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                21
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getx"
+		JumpAbsolute                  1
+		LineNumber                    5183, 4
+		LineNumberAlt1                293, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                21
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    5183, 4
+		LineNumberAlt1                293, 189
+		PushConstanti8                2
+		Add
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                21
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getz"
+		JumpAbsolute                  1
+		LineNumber                    5183, 4
+		LineNumberAlt1                293, 189
+		PushConstantf32               0.4000000059604645
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    5186, 4
+		LineNumberAlt1                296, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                22
+		GetArrayValue
+		GetMemberValueString          "collide"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    5187, 4
+		LineNumberAlt1                297, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                22
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    5187, 4
+		LineNumberAlt1                297, 189
+		PushConstantf32               6.158209800720215
+		LessOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    5188, 4
+		LineNumberAlt1                298, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                22
+		GetArrayValue
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                22
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getx"
+		JumpAbsolute                  1
+		LineNumber                    5188, 4
+		LineNumberAlt1                298, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                22
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    5188, 4
+		LineNumberAlt1                298, 189
+		PushConstanti8                2
+		Add
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                22
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getz"
+		JumpAbsolute                  1
+		LineNumber                    5188, 4
+		LineNumberAlt1                298, 189
+		PushConstantf32               0.4000000059604645
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		; <-
+		BranchTarget                  1
+		LineNumber                    5191, 4
+		LineNumberAlt1                301, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                23
+		GetArrayValue
+		GetMemberValueString          "collide"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    5192, 4
+		LineNumberAlt1                302, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                23
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    5192, 4
+		LineNumberAlt1                302, 189
+		PushConstantf32               6.158209800720215
+		LessOrEqual
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    5193, 4
+		LineNumberAlt1                303, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                23
+		GetArrayValue
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                23
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getx"
+		JumpAbsolute                  1
+		LineNumber                    5193, 4
+		LineNumberAlt1                303, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                23
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    5193, 4
+		LineNumberAlt1                303, 189
+		PushConstanti8                2
+		Add
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                23
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getz"
+		JumpAbsolute                  1
+		LineNumber                    5193, 4
+		LineNumberAlt1                303, 189
+		PushConstantf32               0.4000000059604645
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		; <-
+		BranchTarget                  2
+		LineNumber                    5196, 4
+		LineNumberAlt1                306, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                24
+		GetArrayValue
+		GetMemberValueString          "collide"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    5197, 4
+		LineNumberAlt1                307, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                24
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    5197, 4
+		LineNumberAlt1                307, 189
+		PushConstantf32               6.158209800720215
+		LessOrEqual
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    5198, 4
+		LineNumberAlt1                308, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                24
+		GetArrayValue
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                24
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getx"
+		JumpAbsolute                  1
+		LineNumber                    5198, 4
+		LineNumberAlt1                308, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                24
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    5198, 4
+		LineNumberAlt1                308, 189
+		PushConstanti8                2
+		Add
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                24
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getz"
+		JumpAbsolute                  1
+		LineNumber                    5198, 4
+		LineNumberAlt1                308, 189
+		PushConstantf32               0.4000000059604645
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		; <-
+		BranchTarget                  3
+		LineNumber                    5201, 4
+		LineNumberAlt1                311, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                25
+		GetArrayValue
+		GetMemberValueString          "collide"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    5202, 4
+		LineNumberAlt1                312, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                25
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    5202, 4
+		LineNumberAlt1                312, 189
+		PushConstantf32               6.158209800720215
+		LessOrEqual
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    5203, 4
+		LineNumberAlt1                313, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                25
+		GetArrayValue
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                25
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getx"
+		JumpAbsolute                  1
+		LineNumber                    5203, 4
+		LineNumberAlt1                313, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                25
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    5203, 4
+		LineNumberAlt1                313, 189
+		PushConstanti8                2
+		Add
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                25
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getz"
+		JumpAbsolute                  1
+		LineNumber                    5203, 4
+		LineNumberAlt1                313, 189
+		PushConstantf32               0.4000000059604645
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		; <-
+		BranchTarget                  4
+		LineNumber                    5206, 4
+		LineNumberAlt1                316, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                26
+		GetArrayValue
+		GetMemberValueString          "collide"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    5207, 4
+		LineNumberAlt1                317, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                26
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    5207, 4
+		LineNumberAlt1                317, 189
+		PushConstantf32               6.158209800720215
+		LessOrEqual
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    5208, 4
+		LineNumberAlt1                318, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                26
+		GetArrayValue
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                26
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getx"
+		JumpAbsolute                  1
+		LineNumber                    5208, 4
+		LineNumberAlt1                318, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                26
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    5208, 4
+		LineNumberAlt1                318, 189
+		PushConstanti8                2
+		Add
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                26
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getz"
+		JumpAbsolute                  1
+		LineNumber                    5208, 4
+		LineNumberAlt1                318, 189
+		PushConstantf32               0.4000000059604645
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		; <-
+		BranchTarget                  5
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xb429d
+		; source: 189 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_well.vbo" 327:486
+		MemberFunctionArgumentCheck   2
+		LineNumber                    5217, 4
+		LineNumberAlt1                327, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstant0
+		GetArrayValue
+		GetVariableValue              1                                                       ; local
+		Pull                          2
+		GetMemberFunctionString       "onevent"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5218, 4
+		LineNumberAlt1                328, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                1
+		GetArrayValue
+		GetVariableValue              1                                                       ; local
+		Pull                          2
+		GetMemberFunctionString       "onevent"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5219, 4
+		LineNumberAlt1                329, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                5
+		GetArrayValue
+		GetVariableValue              1                                                       ; local
+		Pull                          2
+		GetMemberFunctionString       "onevent"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5220, 4
+		LineNumberAlt1                330, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                6
+		GetArrayValue
+		GetVariableValue              1                                                       ; local
+		Pull                          2
+		GetMemberFunctionString       "onevent"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5221, 4
+		LineNumberAlt1                331, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                13
+		GetArrayValue
+		GetVariableValue              1                                                       ; local
+		Pull                          2
+		GetMemberFunctionString       "onevent"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5222, 4
+		LineNumberAlt1                332, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                14
+		GetArrayValue
+		GetVariableValue              1                                                       ; local
+		Pull                          2
+		GetMemberFunctionString       "onevent"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5223, 4
+		LineNumberAlt1                333, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                15
+		GetArrayValue
+		GetVariableValue              1                                                       ; local
+		Pull                          2
+		GetMemberFunctionString       "onevent"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5224, 4
+		LineNumberAlt1                334, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                16
+		GetArrayValue
+		GetVariableValue              1                                                       ; local
+		Pull                          2
+		GetMemberFunctionString       "onevent"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5225, 4
+		LineNumberAlt1                335, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                17
+		GetArrayValue
+		GetVariableValue              1                                                       ; local
+		Pull                          2
+		GetMemberFunctionString       "onevent"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5226, 4
+		LineNumberAlt1                336, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                18
+		GetArrayValue
+		GetVariableValue              1                                                       ; local
+		Pull                          2
+		GetMemberFunctionString       "onevent"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5227, 4
+		LineNumberAlt1                337, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                19
+		GetArrayValue
+		GetVariableValue              1                                                       ; local
+		Pull                          2
+		GetMemberFunctionString       "onevent"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5228, 4
+		LineNumberAlt1                338, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                20
+		GetArrayValue
+		GetVariableValue              1                                                       ; local
+		Pull                          2
+		GetMemberFunctionString       "onevent"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5230, 4
+		LineNumberAlt1                340, 189
+		GetVariableValue              1                                                       ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                44
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    5232, 4
+		LineNumberAlt1                342, 189
+		GetThisMemberValueString      "starttimeronce"
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    5233, 4
+		LineNumberAlt1                343, 189
+		PushConstant0
+		SetThisMemberValueString      "starttimeronce"
+		LineNumber                    5234, 4
+		LineNumberAlt1                344, 189
+		GetThisMemberValueString      "rotatetimer"
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "reset"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5235, 4
+		LineNumberAlt1                345, 189
+		GetThisMemberValueString      "rotatetimer"
+		Dup
+		GetMemberFunctionString       "start"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    5236, 4
+		LineNumberAlt1                346, 189
+		PushConstantStringString      "******TIMER STARTED***********"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		; <-
+		BranchTarget                  0
+		BranchAlwaysTarget            27, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Dup
+		PushConstanti8                8
+		EqualTo
+		CompareAndBranchIfFalseTarget 6, 0
+		; ->
+		LineNumber                    5242, 4
+		LineNumberAlt1                352, 189
+		PushConstantStringString      "*********TIMER "
+		GetVariableValue              1                                                       ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		CallGameFunctionString        "scslosifoundation", "identifiertostring", 1
+		LineNumber                    5242, 4
+		LineNumberAlt1                352, 189
+		Add
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    5243, 4
+		LineNumberAlt1                353, 189
+		GetVariableValue              1                                                       ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		Dup
+		PushConstantStringString      "rott"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    5244, 4
+		LineNumberAlt1                354, 189
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    5245, 4
+		LineNumberAlt1                355, 189
+		PushConstantStringString      "***********timer event for rott"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    5246, 4
+		LineNumberAlt1                356, 189
+		GetThisMemberValueString      "rotatecase"
+		Dup
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    5248, 4
+		LineNumberAlt1                358, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                2
+		GetArrayValue
+		GetThisMemberValueString      "pointb"
+		GetMemberValueString          "x"
+		GetThisMemberValueString      "pointb"
+		GetMemberValueString          "y"
+		GetThisMemberValueString      "pointb"
+		GetMemberValueString          "z"
+		PushConstantf32               1.5
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5249, 4
+		LineNumberAlt1                359, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                3
+		GetArrayValue
+		GetThisMemberValueString      "pointc"
+		GetMemberValueString          "x"
+		GetThisMemberValueString      "pointc"
+		GetMemberValueString          "y"
+		GetThisMemberValueString      "pointc"
+		GetMemberValueString          "z"
+		PushConstantf32               1.5
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5250, 4
+		LineNumberAlt1                360, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                4
+		GetArrayValue
+		GetThisMemberValueString      "pointa"
+		GetMemberValueString          "x"
+		GetThisMemberValueString      "pointa"
+		GetMemberValueString          "y"
+		GetThisMemberValueString      "pointa"
+		GetMemberValueString          "z"
+		PushConstantf32               1.5
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5251, 4
+		LineNumberAlt1                361, 189
+		PushConstanti8                1
+		SetThisMemberValueString      "rotatecase"
+		LineNumber                    5252, 4
+		LineNumberAlt1                362, 189
+		GetThisMemberValueString      "rotatetimer"
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "reset"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5253, 4
+		LineNumberAlt1                363, 189
+		GetThisMemberValueString      "rotatetimer"
+		Dup
+		GetMemberFunctionString       "start"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    5255, 4
+		LineNumberAlt1                365, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                2
+		GetArrayValue
+		GetThisMemberValueString      "pointc"
+		GetMemberValueString          "x"
+		GetThisMemberValueString      "pointc"
+		GetMemberValueString          "y"
+		GetThisMemberValueString      "pointc"
+		GetMemberValueString          "z"
+		PushConstantf32               1.5
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5256, 4
+		LineNumberAlt1                366, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                3
+		GetArrayValue
+		GetThisMemberValueString      "pointa"
+		GetMemberValueString          "x"
+		GetThisMemberValueString      "pointa"
+		GetMemberValueString          "y"
+		GetThisMemberValueString      "pointa"
+		GetMemberValueString          "z"
+		PushConstantf32               1.5
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5257, 4
+		LineNumberAlt1                367, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                4
+		GetArrayValue
+		GetThisMemberValueString      "pointb"
+		GetMemberValueString          "x"
+		GetThisMemberValueString      "pointb"
+		GetMemberValueString          "y"
+		GetThisMemberValueString      "pointb"
+		GetMemberValueString          "z"
+		PushConstantf32               1.5
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5258, 4
+		LineNumberAlt1                368, 189
+		PushConstanti8                2
+		SetThisMemberValueString      "rotatecase"
+		LineNumber                    5259, 4
+		LineNumberAlt1                369, 189
+		GetThisMemberValueString      "rotatetimer"
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "reset"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5260, 4
+		LineNumberAlt1                370, 189
+		GetThisMemberValueString      "rotatetimer"
+		Dup
+		GetMemberFunctionString       "start"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Dup
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    5262, 4
+		LineNumberAlt1                372, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                2
+		GetArrayValue
+		GetThisMemberValueString      "pointa"
+		GetMemberValueString          "x"
+		GetThisMemberValueString      "pointa"
+		GetMemberValueString          "y"
+		GetThisMemberValueString      "pointa"
+		GetMemberValueString          "z"
+		PushConstantf32               1.5
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5263, 4
+		LineNumberAlt1                373, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                3
+		GetArrayValue
+		GetThisMemberValueString      "pointb"
+		GetMemberValueString          "x"
+		GetThisMemberValueString      "pointb"
+		GetMemberValueString          "y"
+		GetThisMemberValueString      "pointb"
+		GetMemberValueString          "z"
+		PushConstantf32               1.5
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5264, 4
+		LineNumberAlt1                374, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                4
+		GetArrayValue
+		GetThisMemberValueString      "pointc"
+		GetMemberValueString          "x"
+		GetThisMemberValueString      "pointc"
+		GetMemberValueString          "y"
+		GetThisMemberValueString      "pointc"
+		GetMemberValueString          "z"
+		PushConstantf32               1.5
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    5265, 4
+		LineNumberAlt1                375, 189
+		PushConstant0
+		SetThisMemberValueString      "rotatecase"
+		LineNumber                    5266, 4
+		LineNumberAlt1                376, 189
+		GetThisMemberValueString      "rotatetimer"
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "reset"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5267, 4
+		LineNumberAlt1                377, 189
+		GetThisMemberValueString      "rotatetimer"
+		Dup
+		GetMemberFunctionString       "start"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  4
+		Pop
+		; <-
+		BranchTarget                  5
+		Pop
+		BranchAlwaysTarget            27, 0
+		; ->
+		; <-
+		BranchTarget                  6
+		Dup
+		PushConstanti16               1002
+		EqualTo
+		CompareAndBranchIfFalseTarget 9, 0
+		; ->
+		LineNumber                    5273, 4
+		LineNumberAlt1                383, 189
+		GetVariableValue              1                                                       ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 7, 0
+		; ->
+		LineNumber                    5274, 4
+		LineNumberAlt1                384, 189
+		PushConstanti8                1
+		CallGameFunctionString        "gcareadirector", "setallobjectsadfade", 1
+		Pop
+		; <-
+		BranchTarget                  7
+		LineNumber                    5276, 4
+		LineNumberAlt1                386, 189
+		GetVariableValue              1                                                       ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 8, 0
+		; ->
+		LineNumber                    5277, 4
+		LineNumberAlt1                387, 189
+		PushConstantf32               0
+		CallGameFunctionString        "gcareadirector", "setallobjectsalpha", 1
+		Pop
+		; <-
+		BranchTarget                  8
+		BranchAlwaysTarget            27, 0
+		; ->
+		; <-
+		BranchTarget                  9
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 21, 0
+		; ->
+		LineNumber                    5300, 4
+		LineNumberAlt1                410, 189
+		GetVariableValue              1                                                       ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		CallGameFunctionString        "scslosifoundation", "identifiertostring", 1
+		LineNumber                    5300, 4
+		LineNumberAlt1                410, 189
+		Dup
+		PushConstantStringString      "pf55"
+		EqualTo
+		CompareAndBranchIfFalseTarget 11, 0
+		; ->
+		LineNumber                    5302, 4
+		LineNumberAlt1                412, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                21
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "setcollide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    5303, 4
+		LineNumberAlt1                413, 189
+		PushConstantf32               6.158209800720215
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                21
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    5303, 4
+		LineNumberAlt1                413, 189
+		Subtract
+		SetThisMemberValueString      "yvalue"
+		LineNumber                    5304, 4
+		LineNumberAlt1                414, 189
+		GetThisMemberValueString      "yvalue"
+		PushConstantf32               12
+		LessThan
+		CompareAndBranchIfFalseTarget 10, 0
+		; ->
+		LineNumber                    5305, 4
+		LineNumberAlt1                415, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                21
+		GetArrayValue
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                21
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getx"
+		JumpAbsolute                  1
+		LineNumber                    5305, 4
+		LineNumberAlt1                415, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                21
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    5305, 4
+		LineNumberAlt1                415, 189
+		PushConstanti8                2
+		Subtract
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                21
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getz"
+		JumpAbsolute                  1
+		LineNumber                    5305, 4
+		LineNumberAlt1                415, 189
+		PushConstantf32               0.4000000059604645
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		; <-
+		BranchTarget                  10
+		BranchAlwaysTarget            20, 0
+		; ->
+		; <-
+		BranchTarget                  11
+		Dup
+		PushConstantStringString      "pf56"
+		EqualTo
+		CompareAndBranchIfFalseTarget 13, 0
+		; ->
+		LineNumber                    5309, 4
+		LineNumberAlt1                419, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                22
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "setcollide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    5310, 4
+		LineNumberAlt1                420, 189
+		PushConstantf32               6.158209800720215
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                22
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    5310, 4
+		LineNumberAlt1                420, 189
+		Subtract
+		SetThisMemberValueString      "yvalue"
+		LineNumber                    5311, 4
+		LineNumberAlt1                421, 189
+		GetThisMemberValueString      "yvalue"
+		PushConstantf32               12
+		LessThan
+		CompareAndBranchIfFalseTarget 12, 0
+		; ->
+		LineNumber                    5312, 4
+		LineNumberAlt1                422, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                22
+		GetArrayValue
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                22
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getx"
+		JumpAbsolute                  1
+		LineNumber                    5312, 4
+		LineNumberAlt1                422, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                22
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    5312, 4
+		LineNumberAlt1                422, 189
+		PushConstanti8                2
+		Subtract
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                22
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getz"
+		JumpAbsolute                  1
+		LineNumber                    5312, 4
+		LineNumberAlt1                422, 189
+		PushConstantf32               0.4000000059604645
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		; <-
+		BranchTarget                  12
+		BranchAlwaysTarget            20, 0
+		; ->
+		; <-
+		BranchTarget                  13
+		Dup
+		PushConstantStringString      "pf57"
+		EqualTo
+		CompareAndBranchIfFalseTarget 15, 0
+		; ->
+		LineNumber                    5316, 4
+		LineNumberAlt1                426, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                23
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "setcollide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    5317, 4
+		LineNumberAlt1                427, 189
+		PushConstantf32               6.158209800720215
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                23
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    5317, 4
+		LineNumberAlt1                427, 189
+		Subtract
+		SetThisMemberValueString      "yvalue"
+		LineNumber                    5318, 4
+		LineNumberAlt1                428, 189
+		GetThisMemberValueString      "yvalue"
+		PushConstantf32               12
+		LessThan
+		CompareAndBranchIfFalseTarget 14, 0
+		; ->
+		LineNumber                    5319, 4
+		LineNumberAlt1                429, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                23
+		GetArrayValue
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                23
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getx"
+		JumpAbsolute                  1
+		LineNumber                    5319, 4
+		LineNumberAlt1                429, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                23
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    5319, 4
+		LineNumberAlt1                429, 189
+		PushConstanti8                2
+		Subtract
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                23
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getz"
+		JumpAbsolute                  1
+		LineNumber                    5319, 4
+		LineNumberAlt1                429, 189
+		PushConstantf32               0.4000000059604645
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		; <-
+		BranchTarget                  14
+		BranchAlwaysTarget            20, 0
+		; ->
+		; <-
+		BranchTarget                  15
+		Dup
+		PushConstantStringString      "pf58"
+		EqualTo
+		CompareAndBranchIfFalseTarget 17, 0
+		; ->
+		LineNumber                    5323, 4
+		LineNumberAlt1                433, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                24
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "setcollide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    5324, 4
+		LineNumberAlt1                434, 189
+		PushConstantf32               6.158209800720215
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                24
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    5324, 4
+		LineNumberAlt1                434, 189
+		Subtract
+		SetThisMemberValueString      "yvalue"
+		LineNumber                    5325, 4
+		LineNumberAlt1                435, 189
+		GetThisMemberValueString      "yvalue"
+		PushConstantf32               12
+		LessThan
+		CompareAndBranchIfFalseTarget 16, 0
+		; ->
+		LineNumber                    5326, 4
+		LineNumberAlt1                436, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                24
+		GetArrayValue
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                24
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getx"
+		JumpAbsolute                  1
+		LineNumber                    5326, 4
+		LineNumberAlt1                436, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                24
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    5326, 4
+		LineNumberAlt1                436, 189
+		PushConstanti8                2
+		Subtract
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                24
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getz"
+		JumpAbsolute                  1
+		LineNumber                    5326, 4
+		LineNumberAlt1                436, 189
+		PushConstantf32               0.4000000059604645
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		; <-
+		BranchTarget                  16
+		BranchAlwaysTarget            20, 0
+		; ->
+		; <-
+		BranchTarget                  17
+		Dup
+		PushConstantStringString      "pf60"
+		EqualTo
+		CompareAndBranchIfFalseTarget 19, 0
+		; ->
+		LineNumber                    5330, 4
+		LineNumberAlt1                440, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                25
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "setcollide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    5331, 4
+		LineNumberAlt1                441, 189
+		PushConstantf32               6.158209800720215
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                25
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    5331, 4
+		LineNumberAlt1                441, 189
+		Subtract
+		SetThisMemberValueString      "yvalue"
+		LineNumber                    5332, 4
+		LineNumberAlt1                442, 189
+		GetThisMemberValueString      "yvalue"
+		PushConstantf32               12
+		LessThan
+		CompareAndBranchIfFalseTarget 18, 0
+		; ->
+		LineNumber                    5333, 4
+		LineNumberAlt1                443, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                25
+		GetArrayValue
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                25
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getx"
+		JumpAbsolute                  1
+		LineNumber                    5333, 4
+		LineNumberAlt1                443, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                25
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    5333, 4
+		LineNumberAlt1                443, 189
+		PushConstanti8                2
+		Subtract
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                25
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getz"
+		JumpAbsolute                  1
+		LineNumber                    5333, 4
+		LineNumberAlt1                443, 189
+		PushConstantf32               0.4000000059604645
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		; <-
+		BranchTarget                  18
+		BranchAlwaysTarget            20, 0
+		; ->
+		; <-
+		BranchTarget                  19
+		Dup
+		PushConstantStringString      "pf62"
+		EqualTo
+		CompareAndBranchIfFalseTarget 20, 0
+		; ->
+		LineNumber                    5337, 4
+		LineNumberAlt1                447, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                26
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "setcollide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    5338, 4
+		LineNumberAlt1                448, 189
+		PushConstantf32               6.158209800720215
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                26
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    5338, 4
+		LineNumberAlt1                448, 189
+		Subtract
+		SetThisMemberValueString      "yvalue"
+		LineNumber                    5339, 4
+		LineNumberAlt1                449, 189
+		GetThisMemberValueString      "yvalue"
+		PushConstantf32               12
+		LessThan
+		CompareAndBranchIfFalseTarget 20, 0
+		; ->
+		LineNumber                    5340, 4
+		LineNumberAlt1                450, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                26
+		GetArrayValue
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                26
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getx"
+		JumpAbsolute                  1
+		LineNumber                    5340, 4
+		LineNumberAlt1                450, 189
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                26
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    5340, 4
+		LineNumberAlt1                450, 189
+		PushConstanti8                2
+		Subtract
+		GetThisMemberValueString      "platformarray"
+		PushConstanti8                26
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "getz"
+		JumpAbsolute                  1
+		LineNumber                    5340, 4
+		LineNumberAlt1                450, 189
+		PushConstantf32               0.4000000059604645
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		; <-
+		BranchTarget                  20
+		Pop
+		BranchAlwaysTarget            27, 0
+		; ->
+		; <-
+		BranchTarget                  21
+		Dup
+		PushConstanti8                3
+		EqualTo
+		CompareAndBranchIfFalseTarget 24, 0
+		; ->
+		LineNumber                    5346, 4
+		LineNumberAlt1                456, 189
+		GetVariableValue              1                                                       ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		Dup
+		PushConstantStringString      "tb00"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    5347, 4
+		LineNumberAlt1                457, 189
+		EqualTo
+		CompareAndBranchIfFalseTarget 22, 0
+		; ->
+		LineNumber                    5348, 4
+		LineNumberAlt1                458, 189
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "kill"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    5349, 4
+		LineNumberAlt1                459, 189
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "level"
+		GetMemberValueString          "cam"
+		PushConstanti8                7
+		Pull                          2
+		GetMemberFunctionString       "setaimode"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5350, 4
+		LineNumberAlt1                460, 189
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "none"
+		Pull                          2
+		GetMemberFunctionString       "setinputstate"
+		JumpAbsolute                  2
+		Pop
+		BranchAlwaysTarget            23, 0
+		; ->
+		; <-
+		BranchTarget                  22
+		Dup
+		PushConstantStringString      "tb01"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    5351, 4
+		LineNumberAlt1                461, 189
+		EqualTo
+		CompareAndBranchIfFalseTarget 23, 0
+		; ->
+		LineNumber                    5352, 4
+		LineNumberAlt1                462, 189
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "kill"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    5353, 4
+		LineNumberAlt1                463, 189
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "level"
+		GetMemberValueString          "cam"
+		PushConstanti8                7
+		Pull                          2
+		GetMemberFunctionString       "setaimode"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5354, 4
+		LineNumberAlt1                464, 189
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "none"
+		Pull                          2
+		GetMemberFunctionString       "setinputstate"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  23
+		Pop
+		BranchAlwaysTarget            27, 0
+		; ->
+		; <-
+		BranchTarget                  24
+		Dup
+		PushConstanti8                27
+		EqualTo
+		CompareAndBranchIfFalseTarget 25, 0
+		; ->
+		LineNumber                    5360, 4
+		LineNumberAlt1                470, 189
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "unkill"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    5361, 4
+		LineNumberAlt1                471, 189
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "enterstartid"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "enterlookid"
+		Pull                          3
+		GetMemberFunctionString       "gotopos"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    5362, 4
+		LineNumberAlt1                472, 189
+		GetVariableValue              0                                                       ; local
+		GetThisMemberFunctionString   "resetplatforms"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    5363, 4
+		LineNumberAlt1                473, 189
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "k000"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    5363, 4
+		LineNumberAlt1                473, 189
+		Pull                          2
+		GetMemberFunctionString       "switchanimation"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5364, 4
+		LineNumberAlt1                474, 189
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "ninp"
+		Pull                          2
+		GetMemberFunctionString       "setinputstate"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5365, 4
+		LineNumberAlt1                475, 189
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "level"
+		GetMemberValueString          "cam"
+		PushConstanti8                11
+		Pull                          2
+		GetMemberFunctionString       "setaimode"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    5366, 4
+		LineNumberAlt1                476, 189
+		PushConstantStringString      "tb00"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    5366, 4
+		LineNumberAlt1                476, 189
+		PushConstant0
+		CallGameFunctionString        "gccollisionphysicsgroup", "toggletriggerboxentered", 2
+		Pop
+		LineNumber                    5367, 4
+		LineNumberAlt1                477, 189
+		PushConstantStringString      "tb01"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    5367, 4
+		LineNumberAlt1                477, 189
+		PushConstant0
+		CallGameFunctionString        "gccollisionphysicsgroup", "toggletriggerboxentered", 2
+		Pop
+		BranchAlwaysTarget            27, 0
+		; ->
+		; <-
+		BranchTarget                  25
+		Dup
+		PushConstanti8                46
+		EqualTo
+		CompareAndBranchIfFalseTarget 26, 0
+		; ->
+		LineNumber                    5371, 4
+		LineNumberAlt1                481, 189
+		PushConstantf32               1.2000000476837158
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		BranchAlwaysTarget            27, 0
+		; ->
+		; <-
+		BranchTarget                  26
+		Dup
+		PushConstanti8                7
+		EqualTo
+		CompareAndBranchIfFalseTarget 27, 0
+		; ->
+		LineNumber                    5374, 4
+		LineNumberAlt1                484, 189
+		GetVariableValue              1                                                       ; local
+		GetMemberValueString          "args"
+		PushConstanti8                2
+		GetArrayValue
+		PushConstantStringString      "Ecut"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    5374, 4
+		LineNumberAlt1                484, 189
+		EqualTo
+		CompareAndBranchIfFalseTarget 27, 0
+		; ->
+		LineNumber                    5376, 4
+		LineNumberAlt1                486, 189
+		PushConstanti16               144
+		CallGameFunctionString        "gcstaticsoundsptrarray", "playtablesound", 1
+		Pop
+		; <-
+		BranchTarget                  27
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "resetplatforms"
+		; address: 0xb4ed1
+		; source: 189 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_well.vbo" 494:513
+		MemberFunctionArgumentCheck 1
+		LineNumber                  5384, 4
+		LineNumberAlt1              494, 189
+		GetThisMemberValueString    "platformarray"
+		PushConstant0
+		GetArrayValue
+		Dup
+		GetMemberFunctionString     "reset"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  5385, 4
+		LineNumberAlt1              495, 189
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              1
+		GetArrayValue
+		Dup
+		GetMemberFunctionString     "reset"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  5386, 4
+		LineNumberAlt1              496, 189
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              5
+		GetArrayValue
+		Dup
+		GetMemberFunctionString     "reset"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  5387, 4
+		LineNumberAlt1              497, 189
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              6
+		GetArrayValue
+		Dup
+		GetMemberFunctionString     "reset"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  5388, 4
+		LineNumberAlt1              498, 189
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              13
+		GetArrayValue
+		Dup
+		GetMemberFunctionString     "reset"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  5389, 4
+		LineNumberAlt1              499, 189
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              14
+		GetArrayValue
+		Dup
+		GetMemberFunctionString     "reset"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  5390, 4
+		LineNumberAlt1              500, 189
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              15
+		GetArrayValue
+		Dup
+		GetMemberFunctionString     "reset"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  5391, 4
+		LineNumberAlt1              501, 189
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              16
+		GetArrayValue
+		Dup
+		GetMemberFunctionString     "reset"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  5392, 4
+		LineNumberAlt1              502, 189
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              17
+		GetArrayValue
+		Dup
+		GetMemberFunctionString     "reset"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  5393, 4
+		LineNumberAlt1              503, 189
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              18
+		GetArrayValue
+		Dup
+		GetMemberFunctionString     "reset"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  5394, 4
+		LineNumberAlt1              504, 189
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              19
+		GetArrayValue
+		Dup
+		GetMemberFunctionString     "reset"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  5395, 4
+		LineNumberAlt1              505, 189
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              20
+		GetArrayValue
+		Dup
+		GetMemberFunctionString     "reset"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  5396, 4
+		LineNumberAlt1              506, 189
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              21
+		GetArrayValue
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              21
+		GetArrayValue
+		Dup
+		GetMemberFunctionString     "getx"
+		JumpAbsolute                1
+		LineNumber                  5396, 4
+		LineNumberAlt1              506, 189
+		PushConstantf32             6.158209800720215
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              21
+		GetArrayValue
+		Dup
+		GetMemberFunctionString     "getz"
+		JumpAbsolute                1
+		LineNumber                  5396, 4
+		LineNumberAlt1              506, 189
+		Pull                        4
+		GetMemberFunctionString     "setposition"
+		JumpAbsolute                4
+		Pop
+		LineNumber                  5397, 4
+		LineNumberAlt1              507, 189
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              22
+		GetArrayValue
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              22
+		GetArrayValue
+		Dup
+		GetMemberFunctionString     "getx"
+		JumpAbsolute                1
+		LineNumber                  5397, 4
+		LineNumberAlt1              507, 189
+		PushConstantf32             6.158209800720215
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              22
+		GetArrayValue
+		Dup
+		GetMemberFunctionString     "getz"
+		JumpAbsolute                1
+		LineNumber                  5397, 4
+		LineNumberAlt1              507, 189
+		Pull                        4
+		GetMemberFunctionString     "setposition"
+		JumpAbsolute                4
+		Pop
+		LineNumber                  5398, 4
+		LineNumberAlt1              508, 189
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              23
+		GetArrayValue
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              23
+		GetArrayValue
+		Dup
+		GetMemberFunctionString     "getx"
+		JumpAbsolute                1
+		LineNumber                  5398, 4
+		LineNumberAlt1              508, 189
+		PushConstantf32             6.158209800720215
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              23
+		GetArrayValue
+		Dup
+		GetMemberFunctionString     "getz"
+		JumpAbsolute                1
+		LineNumber                  5398, 4
+		LineNumberAlt1              508, 189
+		Pull                        4
+		GetMemberFunctionString     "setposition"
+		JumpAbsolute                4
+		Pop
+		LineNumber                  5399, 4
+		LineNumberAlt1              509, 189
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              24
+		GetArrayValue
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              24
+		GetArrayValue
+		Dup
+		GetMemberFunctionString     "getx"
+		JumpAbsolute                1
+		LineNumber                  5399, 4
+		LineNumberAlt1              509, 189
+		PushConstantf32             6.158209800720215
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              24
+		GetArrayValue
+		Dup
+		GetMemberFunctionString     "getz"
+		JumpAbsolute                1
+		LineNumber                  5399, 4
+		LineNumberAlt1              509, 189
+		Pull                        4
+		GetMemberFunctionString     "setposition"
+		JumpAbsolute                4
+		Pop
+		LineNumber                  5400, 4
+		LineNumberAlt1              510, 189
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              25
+		GetArrayValue
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              25
+		GetArrayValue
+		Dup
+		GetMemberFunctionString     "getx"
+		JumpAbsolute                1
+		LineNumber                  5400, 4
+		LineNumberAlt1              510, 189
+		PushConstantf32             6.158209800720215
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              25
+		GetArrayValue
+		Dup
+		GetMemberFunctionString     "getz"
+		JumpAbsolute                1
+		LineNumber                  5400, 4
+		LineNumberAlt1              510, 189
+		Pull                        4
+		GetMemberFunctionString     "setposition"
+		JumpAbsolute                4
+		Pop
+		LineNumber                  5401, 4
+		LineNumberAlt1              511, 189
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              26
+		GetArrayValue
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              26
+		GetArrayValue
+		Dup
+		GetMemberFunctionString     "getx"
+		JumpAbsolute                1
+		LineNumber                  5401, 4
+		LineNumberAlt1              511, 189
+		PushConstantf32             6.158209800720215
+		GetThisMemberValueString    "platformarray"
+		PushConstanti8              26
+		GetArrayValue
+		Dup
+		GetMemberFunctionString     "getz"
+		JumpAbsolute                1
+		LineNumber                  5401, 4
+		LineNumberAlt1              511, 189
+		Pull                        4
+		GetMemberFunctionString     "setposition"
+		JumpAbsolute                4
+		Pop
+		LineNumber                  5403, 4
+		LineNumberAlt1              513, 189
+		PushConstantf32             0
+		CallGameFunctionString      "gcareadirector", "setallobjectsalpha", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0xb51b4
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+end ; class

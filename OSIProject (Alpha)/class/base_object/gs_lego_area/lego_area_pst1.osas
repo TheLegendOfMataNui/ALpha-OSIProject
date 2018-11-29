@@ -1,0 +1,214 @@
+begin class "lego_area_pst1", "gs_lego_area"
+	property "puzzle"
+
+	begin method "lego_area_pst1"
+		; address: 0xd8a35
+		; source: 245 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_pst1.vbo" 22:22
+		MemberFunctionArgumentCheck 2
+		LineNumber                  21052, 4
+		LineNumberAlt1              22, 245
+		GetVariableValue            0              ; local
+		PushConstantStringString    "pst1"
+		GetVariableValue            1              ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xd8a54
+		; source: 245 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_pst1.vbo" 30:38
+		MemberFunctionArgumentCheck   1
+		LineNumber                    21060, 4
+		LineNumberAlt1                30, 245
+		PushConstanti8                5
+		CallGameFunctionString        "gcmodeldirector", "setnearestmax", 1
+		Pop
+		LineNumber                    21061, 4
+		LineNumberAlt1                31, 245
+		PushConstanti8                15
+		CallGameFunctionString        "gcareadirector", "setnearestmax", 1
+		Pop
+		LineNumber                    21063, 4
+		LineNumberAlt1                33, 245
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actorid"
+		PushConstantStringString      "akam"
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    21064, 4
+		LineNumberAlt1                34, 245
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "addelement"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    21067, 4
+		LineNumberAlt1                37, 245
+		CreateObjectString            "puzzle_pst1"
+		Dup
+		Dup
+		GetMemberFunctionString       "puzzle_pst1"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    21067, 4
+		LineNumberAlt1                37, 245
+		SetThisMemberValueString      "puzzle"
+		LineNumber                    21068, 4
+		LineNumberAlt1                38, 245
+		GetThisMemberValueString      "puzzle"
+		GetThisMemberValueString      "name"
+		Pull                          2
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xd8aec
+		; source: 245 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_pst1.vbo" 45:50
+		MemberFunctionArgumentCheck   1
+		LineNumber                    21075, 4
+		LineNumberAlt1                45, 245
+		GetThisMemberValueString      "puzzle"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    21076, 4
+		LineNumberAlt1                46, 245
+		PushNothing
+		SetThisMemberValueString      "puzzle"
+		LineNumber                    21078, 4
+		LineNumberAlt1                48, 245
+		GetVariableValueGlobalString  "globalclass"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    21079, 4
+		LineNumberAlt1                49, 245
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    21080, 4
+		LineNumberAlt1                50, 245
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "setcrushfromtop"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xd8b5a
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xd8b5e
+		; source: 245 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_pst1.vbo" 64:72
+		MemberFunctionArgumentCheck   2
+		LineNumber                    21094, 4
+		LineNumberAlt1                64, 245
+		GetVariableValue              1                                              ; local
+		GetMemberValueString          "eventid"
+		PushConstanti8                44
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    21095, 4
+		LineNumberAlt1                65, 245
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actorid"
+		PushConstantStringString      "akam"
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    21096, 4
+		LineNumberAlt1                66, 245
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		PushConstantStringString      "akam"
+		Pull                          2
+		GetMemberFunctionString       "changetoa"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    21097, 4
+		LineNumberAlt1                67, 245
+		PushConstantStringString      "str0"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    21097, 4
+		LineNumberAlt1                67, 245
+		PushConstantStringString      "lok0"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    21097, 4
+		LineNumberAlt1                67, 245
+		CallGameFunctionString        "gccollisionphysicsgroup", "settoaposition", 2
+		Pop
+		LineNumber                    21098, 4
+		LineNumberAlt1                68, 245
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "addelement"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    21102, 4
+		LineNumberAlt1                72, 245
+		GetThisMemberValueString      "puzzle"
+		GetVariableValue              1                                              ; local
+		Pull                          2
+		GetMemberFunctionString       "onevent"
+		JumpAbsolute                  2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0xd8c17
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0xd8c1b
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+end ; class

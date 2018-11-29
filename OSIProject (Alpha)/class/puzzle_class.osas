@@ -1,0 +1,349 @@
+begin class "puzzle_class"
+	property "westdoor"
+	property "northdoor"
+	property "southdoor"
+	property "westdoor_up"
+	property "northdoor_up"
+	property "southdoor_up"
+	property "bgmusic"
+
+	begin method "puzzle_class"
+		; address: 0x9a83b
+		; source: 167 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_shrn.vbo" 106:108
+		MemberFunctionArgumentCheck 2
+		LineNumber                  61278, 4
+		LineNumberAlt1              106, 167
+		PushConstanti8              1
+		SetThisMemberValueString    "westdoor_up"
+		LineNumber                  61279, 4
+		LineNumberAlt1              107, 167
+		PushConstanti8              1
+		SetThisMemberValueString    "northdoor_up"
+		LineNumber                  61280, 4
+		LineNumberAlt1              108, 167
+		PushConstanti8              1
+		SetThisMemberValueString    "southdoor_up"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x9a86c
+		; source: 167 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_shrn.vbo" 117:129
+		MemberFunctionArgumentCheck 1
+		LineNumber                  61289, 4
+		LineNumberAlt1              117, 167
+		CreateObjectString          "lego_moveableobject"
+		Dup
+		PushConstantStringString    "drs0"
+		PushConstantStringString    "shrn"
+		Pull                        3
+		GetMemberFunctionString     "lego_moveableobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  61289, 4
+		LineNumberAlt1              117, 167
+		SetThisMemberValueString    "westdoor"
+		LineNumber                  61290, 4
+		LineNumberAlt1              118, 167
+		CreateObjectString          "lego_moveableobject"
+		Dup
+		PushConstantStringString    "drs2"
+		PushConstantStringString    "shrn"
+		Pull                        3
+		GetMemberFunctionString     "lego_moveableobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  61290, 4
+		LineNumberAlt1              118, 167
+		SetThisMemberValueString    "northdoor"
+		LineNumber                  61291, 4
+		LineNumberAlt1              119, 167
+		CreateObjectString          "lego_moveableobject"
+		Dup
+		PushConstantStringString    "drs4"
+		PushConstantStringString    "shrn"
+		Pull                        3
+		GetMemberFunctionString     "lego_moveableobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  61291, 4
+		LineNumberAlt1              119, 167
+		SetThisMemberValueString    "southdoor"
+		LineNumber                  61293, 4
+		LineNumberAlt1              121, 167
+		GetThisMemberValueString    "westdoor"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  61294, 4
+		LineNumberAlt1              122, 167
+		GetThisMemberValueString    "northdoor"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  61295, 4
+		LineNumberAlt1              123, 167
+		GetThisMemberValueString    "southdoor"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  61297, 4
+		LineNumberAlt1              125, 167
+		GetVariableValue            0                                      ; local
+		GetThisMemberFunctionString "placedoors"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  61299, 4
+		LineNumberAlt1              127, 167
+		CreateObjectString          "legomp3player"
+		Dup
+		Dup
+		GetMemberFunctionString     "legomp3player"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  61299, 4
+		LineNumberAlt1              127, 167
+		SetThisMemberValueString    "bgmusic"
+		LineNumber                  61300, 4
+		LineNumberAlt1              128, 167
+		GetThisMemberValueString    "bgmusic"
+		PushConstantStringString    "Root/Data/sounds/MUSICpohatuambience"
+		Pull                        2
+		GetMemberFunctionString     "setupforplay"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  61301, 4
+		LineNumberAlt1              129, 167
+		GetThisMemberValueString    "bgmusic"
+		PushConstanti8              1
+		Pull                        2
+		GetMemberFunctionString     "play"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "show"
+		; address: 0x9a98b
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hide"
+		; address: 0x9a98f
+		; source: 167 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_shrn.vbo" 140:154
+		MemberFunctionArgumentCheck   1
+		LineNumber                    61312, 4
+		LineNumberAlt1                140, 167
+		GetThisMemberValueString      "bgmusic"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    61313, 4
+		LineNumberAlt1                141, 167
+		GetThisMemberValueString      "bgmusic"
+		Dup
+		GetMemberFunctionString       "stop"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    61314, 4
+		LineNumberAlt1                142, 167
+		PushNothing
+		SetThisMemberValueString      "bgmusic"
+		; <-
+		BranchTarget                  0
+		LineNumber                    61317, 4
+		LineNumberAlt1                145, 167
+		GetThisMemberValueString      "westdoor"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    61318, 4
+		LineNumberAlt1                146, 167
+		PushNothing
+		SetThisMemberValueString      "westdoor"
+		LineNumber                    61319, 4
+		LineNumberAlt1                147, 167
+		GetThisMemberValueString      "northdoor"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    61320, 4
+		LineNumberAlt1                148, 167
+		PushNothing
+		SetThisMemberValueString      "northdoor"
+		LineNumber                    61321, 4
+		LineNumberAlt1                149, 167
+		GetThisMemberValueString      "southdoor"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    61322, 4
+		LineNumberAlt1                150, 167
+		PushNothing
+		SetThisMemberValueString      "southdoor"
+		LineNumber                    61324, 4
+		LineNumberAlt1                152, 167
+		PushNothing
+		SetThisMemberValueString      "westdoor_up"
+		LineNumber                    61325, 4
+		LineNumberAlt1                153, 167
+		PushNothing
+		SetThisMemberValueString      "northdoor_up"
+		LineNumber                    61326, 4
+		LineNumberAlt1                154, 167
+		PushNothing
+		SetThisMemberValueString      "southdoor_up"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x9aa58
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x9aa5c
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x9aa60
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "placedoors"
+		; address: 0x9aa64
+		; source: 167 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_shrn.vbo" 180:197
+		MemberFunctionArgumentCheck   1
+		LineNumber                    61352, 4
+		LineNumberAlt1                180, 167
+		GetThisMemberValueString      "westdoor_up"
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    61353, 4
+		LineNumberAlt1                181, 167
+		GetThisMemberValueString      "westdoor"
+		PushConstantf32               531.5700073242188
+		PushConstantf32               27.1299991607666
+		PushConstant0
+		PushConstantf32               97.77999877929688
+		Subtract
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    61355, 4
+		LineNumberAlt1                183, 167
+		GetThisMemberValueString      "westdoor"
+		PushConstantf32               531.5700073242188
+		PushConstantf32               19.1299991607666
+		PushConstant0
+		PushConstantf32               97.77999877929688
+		Subtract
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		; <-
+		BranchTarget                  1
+		LineNumber                    61359, 4
+		LineNumberAlt1                187, 167
+		GetThisMemberValueString      "northdoor_up"
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    61360, 4
+		LineNumberAlt1                188, 167
+		GetThisMemberValueString      "northdoor"
+		PushConstantf32               415.6099853515625
+		PushConstantf32               0.10999999940395355
+		PushConstant0
+		PushConstantf32               22.209999084472656
+		Subtract
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		LineNumber                    61362, 4
+		LineNumberAlt1                190, 167
+		GetThisMemberValueString      "northdoor"
+		PushConstantf32               415.6099853515625
+		PushConstant0
+		PushConstantf32               8.109999656677246
+		Subtract
+		PushConstant0
+		PushConstantf32               22.209999084472656
+		Subtract
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		; <-
+		BranchTarget                  3
+		LineNumber                    61366, 4
+		LineNumberAlt1                194, 167
+		GetThisMemberValueString      "southdoor_up"
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    61367, 4
+		LineNumberAlt1                195, 167
+		GetThisMemberValueString      "southdoor"
+		PushConstantf32               422.7099914550781
+		PushConstantf32               1.75
+		PushConstant0
+		PushConstantf32               193.75
+		Subtract
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		BranchAlwaysTarget            5, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		LineNumber                    61369, 4
+		LineNumberAlt1                197, 167
+		GetThisMemberValueString      "southdoor"
+		PushConstantf32               422.7099914550781
+		PushConstant0
+		PushConstantf32               7.75
+		Subtract
+		PushConstant0
+		PushConstantf32               193.75
+		Subtract
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		; <-
+		BranchTarget                  5
+		PushNothing
+		Return
+	end ; method
+end ; class

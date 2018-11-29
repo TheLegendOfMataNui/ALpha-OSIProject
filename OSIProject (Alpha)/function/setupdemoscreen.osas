@@ -1,0 +1,22 @@
+begin function "setupdemoscreen", 0
+	; address: 0x2c599
+	; source: 123 "C:\\projects\\lego\\Scripting\\VBO\\demo.vbo" 143:143
+	LineNumber                   46233, 4
+	LineNumberAlt1               143, 123
+	GetVariableValueGlobalString "screenlist"
+	CreateObjectString           "demoscreen"
+	Dup
+	Dup
+	GetMemberFunctionString      "demoscreen"
+	JumpAbsolute                 1
+	Pop
+	LineNumber                   46233, 4
+	LineNumberAlt1               143, 123
+	PushConstanti8               7
+	Pull                         3
+	GetMemberFunctionString      "addscreen"
+	JumpAbsolute                 3
+	Pop
+	PushNothing
+	Return
+end ; function

@@ -1,0 +1,386 @@
+begin class "gs_legoactivetext", "gs_legotext"
+	property "fontname2"
+	property "font2"
+	property "curfont"
+	property "basex"
+	property "pad"
+
+	begin method "gs_legoactivetext"
+		; address: 0x2fca4
+		; source: 11 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_text.vbo" 176:190
+		MemberFunctionArgumentCheck   12
+		LineNumber                    2447, 4
+		LineNumberAlt1                176, 11
+		GetVariableValue              0             ; local
+		GetVariableValue              1             ; local
+		GetVariableValue              3             ; local
+		GetVariableValue              4             ; local
+		GetVariableValue              5             ; local
+		GetVariableValue              6             ; local
+		GetVariableValue              7             ; local
+		GetVariableValue              8             ; local
+		GetVariableValue              9             ; local
+		GetVariableValue              11            ; local
+		GetThisMemberFunctionString   "gs_legotext"
+		JumpAbsolute                  10
+		Pop
+		LineNumber                    2448, 4
+		LineNumberAlt1                177, 11
+		GetVariableValue              3             ; local
+		SetThisMemberValueString      "string"
+		LineNumber                    2449, 4
+		LineNumberAlt1                178, 11
+		GetVariableValue              2             ; local
+		SetThisMemberValueString      "fontname2"
+		LineNumber                    2457, 4
+		LineNumberAlt1                186, 11
+		PushConstant0
+		SetThisMemberValueString      "curfont"
+		LineNumber                    2458, 4
+		LineNumberAlt1                187, 11
+		GetVariableValue              10            ; local
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    2459, 4
+		LineNumberAlt1                188, 11
+		PushConstanti8                -11
+		SetThisMemberValueString      "pad"
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    2461, 4
+		LineNumberAlt1                190, 11
+		GetVariableValue              10            ; local
+		SetThisMemberValueString      "pad"
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x2fd38
+		; source: 11 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_text.vbo" 197:206
+		MemberFunctionArgumentCheck   1
+		LineNumber                    2468, 4
+		LineNumberAlt1                197, 11
+		GetVariableValueGlobalString  "globalclass"
+		GetThisMemberValueString      "fontname"
+		Pull                          2
+		GetMemberFunctionString       "getgamefont"
+		JumpAbsolute                  2
+		LineNumber                    2468, 4
+		LineNumberAlt1                197, 11
+		SetThisMemberValueString      "font"
+		LineNumber                    2469, 4
+		LineNumberAlt1                198, 11
+		GetVariableValueGlobalString  "globalclass"
+		GetThisMemberValueString      "fontname2"
+		Pull                          2
+		GetMemberFunctionString       "getgamefont"
+		JumpAbsolute                  2
+		LineNumber                    2469, 4
+		LineNumberAlt1                198, 11
+		SetThisMemberValueString      "font2"
+		LineNumber                    2470, 4
+		LineNumberAlt1                199, 11
+		GetThisMemberValueString      "curfont"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    2471, 4
+		LineNumberAlt1                200, 11
+		GetThisMemberValueString      "x1"
+		GetThisMemberValueString      "y1"
+		GetThisMemberValueString      "z"
+		GetThisMemberValueString      "font"
+		GetThisMemberValueString      "string"
+		CallGameFunctionString        "sctextobject", "create", 5
+		LineNumber                    2471, 4
+		LineNumberAlt1                200, 11
+		SetThisMemberValueString      "text"
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    2473, 4
+		LineNumberAlt1                202, 11
+		GetThisMemberValueString      "x1"
+		GetThisMemberValueString      "y1"
+		GetThisMemberValueString      "z"
+		GetThisMemberValueString      "font2"
+		GetThisMemberValueString      "string"
+		CallGameFunctionString        "sctextobject", "create", 5
+		LineNumber                    2473, 4
+		LineNumberAlt1                202, 11
+		SetThisMemberValueString      "text"
+		; <-
+		BranchTarget                  1
+		LineNumber                    2475, 4
+		LineNumberAlt1                204, 11
+		GetVariableValue              0                                     ; local
+		GetThisMemberValueString      "scale"
+		GetThisMemberFunctionString   "scalefont"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    2476, 4
+		LineNumberAlt1                205, 11
+		GetVariableValue              0                                     ; local
+		GetThisMemberValueString      "horizontal"
+		GetThisMemberValueString      "verticle"
+		GetThisMemberFunctionString   "setjustification"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    2477, 4
+		LineNumberAlt1                206, 11
+		GetThisMemberValueString      "font"
+		PushConstanti8                1
+		CallGameFunctionString        "sctilefont", "enabletransparency", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initshort"
+		; address: 0x2fe36
+		; source: 11 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_text.vbo" 211:220
+		MemberFunctionArgumentCheck   1
+		LineNumber                    2482, 4
+		LineNumberAlt1                211, 11
+		GetVariableValueGlobalString  "globalclass"
+		GetThisMemberValueString      "fontname"
+		Pull                          2
+		GetMemberFunctionString       "getgamefont"
+		JumpAbsolute                  2
+		LineNumber                    2482, 4
+		LineNumberAlt1                211, 11
+		SetThisMemberValueString      "font"
+		LineNumber                    2483, 4
+		LineNumberAlt1                212, 11
+		GetVariableValueGlobalString  "globalclass"
+		GetThisMemberValueString      "fontname2"
+		Pull                          2
+		GetMemberFunctionString       "getgamefont"
+		JumpAbsolute                  2
+		LineNumber                    2483, 4
+		LineNumberAlt1                212, 11
+		SetThisMemberValueString      "font2"
+		LineNumber                    2484, 4
+		LineNumberAlt1                213, 11
+		GetThisMemberValueString      "curfont"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    2485, 4
+		LineNumberAlt1                214, 11
+		GetThisMemberValueString      "x1"
+		GetThisMemberValueString      "y1"
+		GetThisMemberValueString      "z"
+		GetThisMemberValueString      "font"
+		GetThisMemberValueString      "string"
+		CallGameFunctionString        "sctextobject", "create", 5
+		LineNumber                    2485, 4
+		LineNumberAlt1                214, 11
+		SetThisMemberValueString      "text"
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    2487, 4
+		LineNumberAlt1                216, 11
+		GetThisMemberValueString      "x1"
+		GetThisMemberValueString      "y1"
+		GetThisMemberValueString      "z"
+		GetThisMemberValueString      "font2"
+		GetThisMemberValueString      "string"
+		CallGameFunctionString        "sctextobject", "create", 5
+		LineNumber                    2487, 4
+		LineNumberAlt1                216, 11
+		SetThisMemberValueString      "text"
+		; <-
+		BranchTarget                  1
+		LineNumber                    2489, 4
+		LineNumberAlt1                218, 11
+		GetVariableValue              0                                     ; local
+		GetThisMemberValueString      "scale"
+		GetThisMemberFunctionString   "scalefont"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    2490, 4
+		LineNumberAlt1                219, 11
+		GetVariableValue              0                                     ; local
+		GetThisMemberValueString      "horizontal"
+		GetThisMemberValueString      "verticle"
+		GetThisMemberFunctionString   "setjustification"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    2491, 4
+		LineNumberAlt1                220, 11
+		GetThisMemberValueString      "font"
+		PushConstanti8                1
+		CallGameFunctionString        "sctilefont", "enabletransparency", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x2ff34
+		; source: 11 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_text.vbo" 224:226
+		MemberFunctionArgumentCheck 1
+		LineNumber                  2495, 4
+		LineNumberAlt1              224, 11
+		PushNothing
+		SetThisMemberValueString    "font"
+		LineNumber                  2496, 4
+		LineNumberAlt1              225, 11
+		PushNothing
+		SetThisMemberValueString    "font2"
+		LineNumber                  2497, 4
+		LineNumberAlt1              226, 11
+		PushNothing
+		SetThisMemberValueString    "text"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupshort"
+		; address: 0x2ff62
+		; source: 11 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_text.vbo" 230:232
+		MemberFunctionArgumentCheck 1
+		LineNumber                  2501, 4
+		LineNumberAlt1              230, 11
+		PushNothing
+		SetThisMemberValueString    "font"
+		LineNumber                  2502, 4
+		LineNumberAlt1              231, 11
+		PushNothing
+		SetThisMemberValueString    "font2"
+		LineNumber                  2503, 4
+		LineNumberAlt1              232, 11
+		PushNothing
+		SetThisMemberValueString    "text"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setactive"
+		; address: 0x2ff90
+		; source: 11 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_text.vbo" 236:239
+		MemberFunctionArgumentCheck   2
+		LineNumber                    2507, 4
+		LineNumberAlt1                236, 11
+		GetThisMemberValueString      "curfont"
+		PushConstanti8                1
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    2508, 4
+		LineNumberAlt1                237, 11
+		GetThisMemberValueString      "text"
+		GetThisMemberValueString      "font2"
+		CallGameFunctionString        "sctextobject", "setfont", 2
+		Pop
+		LineNumber                    2509, 4
+		LineNumberAlt1                238, 11
+		GetVariableValue              0                            ; local
+		GetThisMemberValueString      "x1"
+		GetThisMemberValueString      "pad"
+		GetThisMemberValueString      "scale"
+		Multiply
+		Add
+		GetThisMemberValueString      "y1"
+		GetThisMemberValueString      "padadjustment"
+		Subtract
+		GetThisMemberValueString      "z"
+		GetThisMemberFunctionString   "setpos"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    2510, 4
+		LineNumberAlt1                239, 11
+		PushConstanti8                1
+		SetThisMemberValueString      "curfont"
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setinactive"
+		; address: 0x2fff6
+		; source: 11 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_text.vbo" 244:247
+		MemberFunctionArgumentCheck   1
+		LineNumber                    2515, 4
+		LineNumberAlt1                244, 11
+		GetThisMemberValueString      "curfont"
+		PushConstant0
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    2516, 4
+		LineNumberAlt1                245, 11
+		GetThisMemberValueString      "text"
+		GetThisMemberValueString      "font"
+		CallGameFunctionString        "sctextobject", "setfont", 2
+		Pop
+		LineNumber                    2517, 4
+		LineNumberAlt1                246, 11
+		PushConstant0
+		SetThisMemberValueString      "curfont"
+		LineNumber                    2518, 4
+		LineNumberAlt1                247, 11
+		GetVariableValue              0                            ; local
+		GetThisMemberValueString      "x1"
+		GetThisMemberValueString      "pad"
+		GetThisMemberValueString      "scale"
+		Multiply
+		Subtract
+		GetThisMemberValueString      "y1"
+		GetThisMemberValueString      "padadjustment"
+		Subtract
+		GetThisMemberValueString      "z"
+		GetThisMemberFunctionString   "setpos"
+		JumpAbsolute                  4
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "getactive"
+		; address: 0x3005a
+		; source: 11 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_text.vbo" 252:252
+		MemberFunctionArgumentCheck 1
+		LineNumber                  2523, 4
+		LineNumberAlt1              252, 11
+		GetThisMemberValueString    "curfont"
+		Return
+	end ; method
+
+	begin method "scalefont"
+		; address: 0x3006a
+		; source: 11 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_text.vbo" 256:257
+		MemberFunctionArgumentCheck 2
+		LineNumber                  2527, 4
+		LineNumberAlt1              256, 11
+		GetVariableValue            1                             ; local
+		SetThisMemberValueString    "scale"
+		LineNumber                  2528, 4
+		LineNumberAlt1              257, 11
+		GetThisMemberValueString    "text"
+		GetThisMemberValueString    "scale"
+		Dup
+		CallGameFunctionString      "sctextobject", "setscale", 3
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

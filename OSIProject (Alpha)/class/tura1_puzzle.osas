@@ -1,0 +1,127 @@
+begin class "tura1_puzzle"
+	property "parent"
+
+	begin method "tura1_puzzle"
+		; address: 0x6f66b
+		; source: 115 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tura.vbo" 89:89
+		MemberFunctionArgumentCheck 2
+		LineNumber                  41168, 4
+		LineNumberAlt1              89, 115
+		GetVariableValue            1        ; local
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x6f67f
+		; source: 115 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tura.vbo" 96:97
+		MemberFunctionArgumentCheck 1
+		CreateStackVariables        1
+		LineNumber                  41175, 4
+		LineNumberAlt1              96, 115
+		PushConstantStringString    "when"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  41175, 4
+		LineNumberAlt1              96, 115
+		PushConstant0
+		CallGameFunctionString      "gcmodeldirector", "getcharacter", 2
+		LineNumber                  41175, 4
+		LineNumberAlt1              96, 115
+		SetVariableValue            1                                            ; local
+		LineNumber                  41176, 4
+		LineNumberAlt1              97, 115
+		GetVariableValue            1                                            ; local
+		PushConstantStringString    "none"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  41176, 4
+		LineNumberAlt1              97, 115
+		CallGameFunctionString      "gccharacter", "setinputstate", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "show"
+		; address: 0x6f6dd
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hide"
+		; address: 0x6f6e1
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x6f6e5
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x6f6e9
+		; source: 115 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tura.vbo" 116:122
+		MemberFunctionArgumentCheck   2
+		LineNumber                    41195, 4
+		LineNumberAlt1                116, 115
+		GetVariableValue              1                                        ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                46
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    41197, 4
+		LineNumberAlt1                118, 115
+		PushConstantf32               1.2000000476837158
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		Dup
+		PushConstanti8                27
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    41200, 4
+		LineNumberAlt1                121, 115
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "unkill"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    41201, 4
+		LineNumberAlt1                122, 115
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "enterstartid"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "enterlookid"
+		Pull                          3
+		GetMemberFunctionString       "gotopos"
+		JumpAbsolute                  3
+		Pop
+		; <-
+		BranchTarget                  1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x6f763
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+end ; class

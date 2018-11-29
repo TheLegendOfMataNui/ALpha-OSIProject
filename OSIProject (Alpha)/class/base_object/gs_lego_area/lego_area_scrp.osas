@@ -1,0 +1,178 @@
+begin class "lego_area_scrp", "gs_lego_area"
+	property "puzzle"
+
+	begin method "lego_area_scrp"
+		; address: 0x5e0c8
+		; source: 94 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_scrpp.vbo" 31:36
+		MemberFunctionArgumentCheck 2
+		LineNumber                  33720, 4
+		LineNumberAlt1              31, 94
+		GetVariableValue            0                                    ; local
+		PushConstantStringString    "scrp"
+		GetVariableValue            1                                    ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  33721, 4
+		LineNumberAlt1              32, 94
+		CreateObjectString          "rescuetohunga_puzzlep"
+		Dup
+		GetVariableValue            0                                    ; local
+		Pull                        2
+		GetMemberFunctionString     "rescuetohunga_puzzlep"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  33721, 4
+		LineNumberAlt1              32, 94
+		SetThisMemberValueString    "puzzle"
+		LineNumber                  33723, 4
+		LineNumberAlt1              34, 94
+		GetVariableValue            0                                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  33725, 4
+		LineNumberAlt1              36, 94
+		PushConstanti8              35
+		CallGameFunctionString      "gcareadirector", "setnearestmax", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x5e133
+		; source: 94 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_scrpp.vbo" 44:49
+		MemberFunctionArgumentCheck  1
+		LineNumber                   33733, 4
+		LineNumberAlt1               44, 94
+		GetVariableValue             0                                       ; local
+		GetThisMemberFunctionString  "lego_area_show"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   33734, 4
+		LineNumberAlt1               45, 94
+		PushConstanti32              -16777216
+		PushConstant0
+		PushConstantf32              75
+		Subtract
+		PushConstant0
+		PushConstantf32              200
+		Subtract
+		PushConstantf32              0.05000000074505806
+		CallGameFunctionString       "gcareadirector", "setfog", 4
+		Pop
+		LineNumber                   33735, 4
+		LineNumberAlt1               46, 94
+		GetThisMemberValueString     "puzzle"
+		Dup
+		GetMemberFunctionString      "initfull"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   33736, 4
+		LineNumberAlt1               47, 94
+		GetThisMemberValueString     "puzzle"
+		Dup
+		GetMemberFunctionString      "show"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   33737, 4
+		LineNumberAlt1               48, 94
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		GetMemberValueString         "actor"
+		PushConstant0
+		Pull                         2
+		GetMemberFunctionString      "setcontext"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   33738, 4
+		LineNumberAlt1               49, 94
+		PushConstanti8               1
+		CallGameFunctionString       "gclightdirector", "setcavelighting", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x5e1ca
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x5e1ce
+		; source: 94 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_scrpp.vbo" 60:60
+		MemberFunctionArgumentCheck 2
+		LineNumber                  33749, 4
+		LineNumberAlt1              60, 94
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1        ; local
+		Pull                        2
+		GetMemberFunctionString     "input"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x5e1ea
+		; source: 94 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_scrpp.vbo" 65:65
+		MemberFunctionArgumentCheck 2
+		LineNumber                  33754, 4
+		LineNumberAlt1              65, 94
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x5e206
+		; source: 94 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_scrpp.vbo" 69:70
+		MemberFunctionArgumentCheck 1
+		LineNumber                  33758, 4
+		LineNumberAlt1              69, 94
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_hide"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  33759, 4
+		LineNumberAlt1              70, 94
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x5e231
+		; source: 94 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_scrpp.vbo" 76:77
+		MemberFunctionArgumentCheck 1
+		LineNumber                  33765, 4
+		LineNumberAlt1              76, 94
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "exit"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  33766, 4
+		LineNumberAlt1              77, 94
+		PushNothing
+		SetThisMemberValueString    "puzzle"
+		PushNothing
+		Return
+	end ; method
+end ; class

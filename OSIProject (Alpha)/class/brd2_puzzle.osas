@@ -1,0 +1,369 @@
+begin class "brd2_puzzle"
+	property "parent"
+
+	begin method "brd2_puzzle"
+		; address: 0xaa7e2
+		; source: 181 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_brd2.vbo" 84:84
+		MemberFunctionArgumentCheck 2
+		LineNumber                  1380, 4
+		LineNumberAlt1              84, 181
+		GetVariableValue            1        ; local
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xaa7f6
+		; source: 181 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_brd2.vbo" 92:92
+		; source: 223 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta10.vbo" 897:897
+		MemberFunctionArgumentCheck 1
+		LineNumber                  1388, 4
+		LineNumberAlt1              92, 181
+		PushConstanti8              5
+		CallGameFunctionString      "gcareadirector", "setnearestmax", 1
+		Pop
+		LineNumber                  14163, 4
+		LineNumberAlt1              897, 223
+		GetVariableValue            0                                    ; local
+		PushConstanti8              1
+		GetThisMemberFunctionString "setsurfmode"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initshort"
+		; address: 0xaa91f
+		; source: 181 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_brd2.vbo" 105:105
+		MemberFunctionArgumentCheck  1
+		LineNumber                   1401, 4
+		LineNumberAlt1               105, 181
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		GetMemberValueString         "actor"
+		PushConstantStringString     "k033"
+		CallGameFunctionString       "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                   1401, 4
+		LineNumberAlt1               105, 181
+		PushConstant0
+		Pull                         3
+		GetMemberFunctionString      "setsplitanimation"
+		JumpAbsolute                 3
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "show"
+		; address: 0xaa952
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hide"
+		; address: 0xaa956
+		; source: 223 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta10.vbo" 897:897
+		MemberFunctionArgumentCheck 1
+		LineNumber                  14163, 4
+		LineNumberAlt1              897, 223
+		GetVariableValue            0             ; local
+		PushConstant0
+		GetThisMemberFunctionString "setsurfmode"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xaa96e
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xaa972
+		; source: 181 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_brd2.vbo" 128:157
+		MemberFunctionArgumentCheck   2
+		LineNumber                    1424, 4
+		LineNumberAlt1                128, 181
+		GetVariableValue              1                                             ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                3
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    1428, 4
+		LineNumberAlt1                132, 181
+		GetVariableValue              1                                             ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		Dup
+		PushConstantStringString      "tb00"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    1429, 4
+		LineNumberAlt1                133, 181
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    1430, 4
+		LineNumberAlt1                134, 181
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "level"
+		GetMemberValueString          "cam"
+		PushConstanti8                7
+		Pull                          2
+		GetMemberFunctionString       "setaimode"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    1431, 4
+		LineNumberAlt1                135, 181
+		PushConstantf32               1.2000000476837158
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		LineNumber                    1432, 4
+		LineNumberAlt1                136, 181
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "none"
+		Pull                          2
+		GetMemberFunctionString       "setinputstate"
+		JumpAbsolute                  2
+		Pop
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    1434, 4
+		LineNumberAlt1                138, 181
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "level"
+		GetMemberValueString          "cam"
+		PushConstanti8                7
+		Pull                          2
+		GetMemberFunctionString       "setaimode"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    1435, 4
+		LineNumberAlt1                139, 181
+		PushConstantf32               1.2000000476837158
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		LineNumber                    1436, 4
+		LineNumberAlt1                140, 181
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "none"
+		Pull                          2
+		GetMemberFunctionString       "setinputstate"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  1
+		Pop
+		BranchAlwaysTarget            5, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		Dup
+		PushConstanti8                27
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    1441, 4
+		LineNumberAlt1                145, 181
+		GetVariableValue              0                                             ; local
+		GetThisMemberFunctionString   "initshort"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    1442, 4
+		LineNumberAlt1                146, 181
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "str0"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    1442, 4
+		LineNumberAlt1                146, 181
+		PushConstantStringString      "lok0"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    1442, 4
+		LineNumberAlt1                146, 181
+		Pull                          3
+		GetMemberFunctionString       "gotopos"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    1444, 4
+		LineNumberAlt1                148, 181
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "ninp"
+		Pull                          2
+		GetMemberFunctionString       "setinputstate"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    1445, 4
+		LineNumberAlt1                149, 181
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "level"
+		GetMemberValueString          "cam"
+		PushConstanti8                11
+		Pull                          2
+		GetMemberFunctionString       "setaimode"
+		JumpAbsolute                  2
+		Pop
+		BranchAlwaysTarget            5, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Dup
+		PushConstanti8                29
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    1448, 4
+		LineNumberAlt1                152, 181
+		GetVariableValue              0                                             ; local
+		GetThisMemberFunctionString   "initshort"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            5, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		Dup
+		PushConstanti8                7
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    1451, 4
+		LineNumberAlt1                155, 181
+		GetVariableValue              1                                             ; local
+		GetMemberValueString          "args"
+		PushConstanti8                2
+		GetArrayValue
+		PushConstantStringString      "Ecut"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    1451, 4
+		LineNumberAlt1                155, 181
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    1453, 4
+		LineNumberAlt1                157, 181
+		PushConstanti16               144
+		CallGameFunctionString        "gcstaticsoundsptrarray", "playtablesound", 1
+		Pop
+		; <-
+		BranchTarget                  5
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0xaab5c
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setsurfmode"
+		; address: 0xaa822
+		; source: 221 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta09.vbo" 181:200
+		; source: 182 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_brd3.vbo" 89:90
+		MemberFunctionArgumentCheck   2
+		LineNumber                    13223, 4
+		LineNumberAlt1                181, 221
+		GetVariableValue              1                                            ; local
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    1568, 4
+		LineNumberAlt1                89, 182
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "k033"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    1568, 4
+		LineNumberAlt1                89, 182
+		PushConstant0
+		Pull                          3
+		GetMemberFunctionString       "setsplitanimation"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    1569, 4
+		LineNumberAlt1                90, 182
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantf32               1.2000000476837158
+		PushConstantf32               1
+		Pull                          3
+		GetMemberFunctionString       "setsurfingability"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    13231, 4
+		LineNumberAlt1                189, 221
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "kopa/xs/surf"
+		PushConstantStringString      "surf"
+		Pull                          3
+		GetMemberFunctionString       "addpart"
+		JumpAbsolute                  3
+		Pop
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    13236, 4
+		LineNumberAlt1                194, 221
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantf32               0
+		PushConstantf32               0
+		Pull                          3
+		GetMemberFunctionString       "setsurfingability"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    13239, 4
+		LineNumberAlt1                197, 221
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "surf"
+		Pull                          2
+		GetMemberFunctionString       "removepart"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    13242, 4
+		LineNumberAlt1                200, 221
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "k000"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    13242, 4
+		LineNumberAlt1                200, 221
+		Pull                          2
+		GetMemberFunctionString       "setsplitanimation"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+end ; class

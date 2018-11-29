@@ -1,0 +1,80 @@
+begin class "kopakaclass", "gs_lego_toa"
+	property "walkspeed"
+	property "runspeed"
+	property "standingjumpheight"
+	property "standingjumplength"
+	property "runningjumpheight"
+	property "runningjumplength"
+	property "swimingabilty"
+	property "bounce"
+	property "slopeclimbability"
+
+	begin method "kopakaclass"
+		; address: 0x48774
+		; source: 58 "C:\\projects\\lego\\Scripting\\VBO\\Toa/Lego_Toa_Kopaka.vbo" 42:52
+		MemberFunctionArgumentCheck 6
+		LineNumber                  20188, 4
+		LineNumberAlt1              42, 58
+		GetVariableValue            0                    ; local
+		GetVariableValue            1                    ; local
+		GetVariableValue            2                    ; local
+		GetVariableValue            3                    ; local
+		GetVariableValue            4                    ; local
+		GetVariableValue            5                    ; local
+		GetThisMemberFunctionString "gs_lego_toa"
+		JumpAbsolute                6
+		Pop
+		LineNumber                  20190, 4
+		LineNumberAlt1              44, 58
+		PushConstanti8              4
+		SetThisMemberValueString    "walkspeed"
+		LineNumber                  20191, 4
+		LineNumberAlt1              45, 58
+		PushConstanti8              15
+		SetThisMemberValueString    "runspeed"
+		LineNumber                  20192, 4
+		LineNumberAlt1              46, 58
+		PushConstanti8              6
+		SetThisMemberValueString    "standingjumpheight"
+		LineNumber                  20193, 4
+		LineNumberAlt1              47, 58
+		PushConstanti8              6
+		SetThisMemberValueString    "standingjumplength"
+		LineNumber                  20194, 4
+		LineNumberAlt1              48, 58
+		PushConstanti8              4
+		SetThisMemberValueString    "runningjumpheight"
+		LineNumber                  20195, 4
+		LineNumberAlt1              49, 58
+		PushConstanti8              8
+		SetThisMemberValueString    "runningjumplength"
+		LineNumber                  20196, 4
+		LineNumberAlt1              50, 58
+		PushConstanti8              5
+		SetThisMemberValueString    "slopeclimbability"
+		LineNumber                  20197, 4
+		LineNumberAlt1              51, 58
+		PushConstant0
+		SetThisMemberValueString    "swimingabilty"
+		LineNumber                  20198, 4
+		LineNumberAlt1              52, 58
+		PushConstant0
+		SetThisMemberValueString    "bounce"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setclimbability"
+		; address: 0x4881f
+		; source: 58 "C:\\projects\\lego\\Scripting\\VBO\\Toa/Lego_Toa_Kopaka.vbo" 60:60
+		MemberFunctionArgumentCheck 2
+		LineNumber                  20206, 4
+		LineNumberAlt1              60, 58
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                                        ; local
+		CallGameFunctionString      "gccharacter", "setslopeclimbability", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

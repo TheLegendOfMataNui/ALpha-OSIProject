@@ -1,0 +1,22 @@
+begin function "setuplanguagetest", 0
+	; address: 0x2c765
+	; source: 249 "C:\\projects\\lego\\Scripting\\VBO\\LanguageTest.vbo" 110:110
+	LineNumber                   22337, 4
+	LineNumberAlt1               110, 249
+	GetVariableValueGlobalString "screenlist"
+	CreateObjectString           "lego_testlanguage_screen"
+	Dup
+	Dup
+	GetMemberFunctionString      "lego_testlanguage_screen"
+	JumpAbsolute                 1
+	Pop
+	LineNumber                   22337, 4
+	LineNumberAlt1               110, 249
+	PushConstanti8               20
+	Pull                         3
+	GetMemberFunctionString      "addscreen"
+	JumpAbsolute                 3
+	Pop
+	PushNothing
+	Return
+end ; function

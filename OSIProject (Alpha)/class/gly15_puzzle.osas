@@ -1,0 +1,496 @@
+begin class "gly15_puzzle"
+	property "parent"
+	property "thermalarray"
+	property "glyph"
+	property "showpickup"
+
+	begin method "gly15_puzzle"
+		; address: 0xb8668
+		; source: 202 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_gly1.vbo" 85:86
+		MemberFunctionArgumentCheck 2
+		LineNumber                  7338, 4
+		LineNumberAlt1              85, 202
+		GetVariableValue            1            ; local
+		SetThisMemberValueString    "parent"
+		LineNumber                  7339, 4
+		LineNumberAlt1              86, 202
+		PushConstanti8              1
+		SetThisMemberValueString    "showpickup"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xb868b
+		; source: 202 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_gly1.vbo" 93:115
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    7346, 4
+		LineNumberAlt1                93, 202
+		CreateArray
+		Dup
+		CreateObjectString            "thermal"
+		Dup
+		PushConstantStringString      "tm01"
+		Pull                          2
+		GetMemberFunctionString       "thermal"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    7347, 4
+		LineNumberAlt1                94, 202
+		AppendToArray
+		Dup
+		CreateObjectString            "thermal"
+		Dup
+		PushConstantStringString      "tm02"
+		Pull                          2
+		GetMemberFunctionString       "thermal"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    7348, 4
+		LineNumberAlt1                95, 202
+		AppendToArray
+		Dup
+		CreateObjectString            "thermal"
+		Dup
+		PushConstantStringString      "tm03"
+		Pull                          2
+		GetMemberFunctionString       "thermal"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    7349, 4
+		LineNumberAlt1                96, 202
+		AppendToArray
+		Dup
+		CreateObjectString            "thermal"
+		Dup
+		PushConstantStringString      "tm04"
+		Pull                          2
+		GetMemberFunctionString       "thermal"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    7350, 4
+		LineNumberAlt1                97, 202
+		AppendToArray
+		Dup
+		CreateObjectString            "thermal"
+		Dup
+		PushConstantStringString      "tm05"
+		Pull                          2
+		GetMemberFunctionString       "thermal"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    7351, 4
+		LineNumberAlt1                98, 202
+		AppendToArray
+		Dup
+		CreateObjectString            "thermal"
+		Dup
+		PushConstantStringString      "tm06"
+		Pull                          2
+		GetMemberFunctionString       "thermal"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    7352, 4
+		LineNumberAlt1                99, 202
+		AppendToArray
+		Dup
+		CreateObjectString            "thermal"
+		Dup
+		PushConstantStringString      "tm07"
+		Pull                          2
+		GetMemberFunctionString       "thermal"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    7353, 4
+		LineNumberAlt1                100, 202
+		AppendToArray
+		Dup
+		CreateObjectString            "thermal"
+		Dup
+		PushConstantStringString      "tm08"
+		Pull                          2
+		GetMemberFunctionString       "thermal"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    7354, 4
+		LineNumberAlt1                101, 202
+		AppendToArray
+		Dup
+		CreateObjectString            "thermal"
+		Dup
+		PushConstantStringString      "tm09"
+		Pull                          2
+		GetMemberFunctionString       "thermal"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    7355, 4
+		LineNumberAlt1                102, 202
+		AppendToArray
+		Dup
+		CreateObjectString            "thermal"
+		Dup
+		PushConstantStringString      "tm10"
+		Pull                          2
+		GetMemberFunctionString       "thermal"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    7356, 4
+		LineNumberAlt1                103, 202
+		AppendToArray
+		Dup
+		CreateObjectString            "thermal"
+		Dup
+		PushConstantStringString      "tm11"
+		Pull                          2
+		GetMemberFunctionString       "thermal"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    7357, 4
+		LineNumberAlt1                104, 202
+		AppendToArray
+		Dup
+		CreateObjectString            "thermal"
+		Dup
+		PushConstantStringString      "tm12"
+		Pull                          2
+		GetMemberFunctionString       "thermal"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    7358, 4
+		LineNumberAlt1                105, 202
+		AppendToArray
+		Dup
+		CreateObjectString            "thermal"
+		Dup
+		PushConstantStringString      "tm13"
+		Pull                          2
+		GetMemberFunctionString       "thermal"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    7359, 4
+		LineNumberAlt1                106, 202
+		AppendToArray
+		SetThisMemberValueString      "thermalarray"
+		LineNumber                    7361, 4
+		LineNumberAlt1                108, 202
+		PushConstantStringString      "glyp"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    7361, 4
+		LineNumberAlt1                108, 202
+		CallGameFunctionString        "gcsaver", "findglyph", 1
+		LineNumber                    7361, 4
+		LineNumberAlt1                108, 202
+		SetVariableValue              1                                            ; local
+		LineNumber                    7362, 4
+		LineNumberAlt1                109, 202
+		GetVariableValue              1                                            ; local
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    7363, 4
+		LineNumberAlt1                110, 202
+		PushConstant0
+		SetThisMemberValueString      "showpickup"
+		; <-
+		BranchTarget                  0
+		LineNumber                    7365, 4
+		LineNumberAlt1                112, 202
+		GetThisMemberValueString      "showpickup"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    7366, 4
+		LineNumberAlt1                113, 202
+		CreateObjectString            "lego_pickup"
+		Dup
+		PushConstantStringString      "glyp"
+		PushConstanti8                14
+		PushConstanti8                2
+		PushConstantStringString      "item"
+		PushConstanti8                4
+		PushConstanti8                1
+		Pull                          7
+		GetMemberFunctionString       "lego_pickup"
+		JumpAbsolute                  7
+		Pop
+		LineNumber                    7366, 4
+		LineNumberAlt1                113, 202
+		SetThisMemberValueString      "glyph"
+		LineNumber                    7367, 4
+		LineNumberAlt1                114, 202
+		GetThisMemberValueString      "glyph"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    7368, 4
+		LineNumberAlt1                115, 202
+		GetThisMemberValueString      "glyph"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xb88b8
+		; source: 202 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_gly1.vbo" 122:129
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    7375, 4
+		LineNumberAlt1                122, 202
+		GetThisMemberValueString      "thermalarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1              ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1              ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    7376, 4
+		LineNumberAlt1                123, 202
+		GetThisMemberValueString      "thermalarray"
+		GetVariableValue              1              ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    7378, 4
+		LineNumberAlt1                125, 202
+		PushNothing
+		SetThisMemberValueString      "thermalarray"
+		LineNumber                    7380, 4
+		LineNumberAlt1                127, 202
+		GetThisMemberValueString      "glyph"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    7381, 4
+		LineNumberAlt1                128, 202
+		GetThisMemberValueString      "glyph"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    7382, 4
+		LineNumberAlt1                129, 202
+		PushNothing
+		SetThisMemberValueString      "glyph"
+		; <-
+		BranchTarget                  2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0xb893d
+		; source: 202 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_gly1.vbo" 136:137
+		MemberFunctionArgumentCheck 1
+		CreateStackVariables        1
+		LineNumber                  7389, 4
+		LineNumberAlt1              136, 202
+		PushNothing
+		SetThisMemberValueString    "parent"
+		LineNumber                  7390, 4
+		LineNumberAlt1              137, 202
+		PushNothing
+		SetVariableValue            1        ; local
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xb895f
+		; source: 202 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_gly1.vbo" 142:143
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          1
+		LineNumber                    7395, 4
+		LineNumberAlt1                142, 202
+		GetThisMemberValueString      "thermalarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2              ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              2              ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    7396, 4
+		LineNumberAlt1                143, 202
+		GetThisMemberValueString      "thermalarray"
+		GetVariableValue              2              ; local
+		GetArrayValue
+		GetVariableValue              1              ; local
+		Pull                          2
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  2
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xb89a5
+		; source: 202 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_gly1.vbo" 150:162
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          1
+		LineNumber                    7403, 4
+		LineNumberAlt1                150, 202
+		GetThisMemberValueString      "thermalarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2                                            ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              2                                            ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    7404, 4
+		LineNumberAlt1                151, 202
+		GetThisMemberValueString      "thermalarray"
+		GetVariableValue              2                                            ; local
+		GetArrayValue
+		GetVariableValue              1                                            ; local
+		Pull                          2
+		GetMemberFunctionString       "onevent"
+		JumpAbsolute                  2
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    7406, 4
+		LineNumberAlt1                153, 202
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                46
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    7408, 4
+		LineNumberAlt1                155, 202
+		PushConstantf32               1.2000000476837158
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		BranchAlwaysTarget            5, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		Dup
+		PushConstanti8                27
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    7410, 4
+		LineNumberAlt1                157, 202
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "enterstartid"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "enterlookid"
+		Pull                          3
+		GetMemberFunctionString       "gotopos"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    7411, 4
+		LineNumberAlt1                158, 202
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "unkill"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            5, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Dup
+		PushConstanti8                3
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    7413, 4
+		LineNumberAlt1                160, 202
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		Dup
+		PushConstantStringString      "tb00"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    7414, 4
+		LineNumberAlt1                161, 202
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    7415, 4
+		LineNumberAlt1                162, 202
+		PushConstantStringString      "shrn"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    7415, 4
+		LineNumberAlt1                162, 202
+		PushConstantStringString      "str1"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    7415, 4
+		LineNumberAlt1                162, 202
+		PushConstantStringString      "lok1"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    7415, 4
+		LineNumberAlt1                162, 202
+		CallGameFunctionString        "gcbagroup", "setswitchareas", 3
+		Pop
+		; <-
+		BranchTarget                  4
+		Pop
+		; <-
+		BranchTarget                  5
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0xb8ae0
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+end ; class

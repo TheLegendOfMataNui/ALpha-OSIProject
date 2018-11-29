@@ -1,0 +1,985 @@
+begin class "puzzle_tahu7"
+	property "button"
+	property "buttonpos"
+	property "buttonpressed"
+	property "platforms"
+	property "platforms2"
+
+	begin method "puzzle_tahu7"
+		; address: 0xd7c35
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xd7c39
+		; source: 242 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_tahu.vbo" 108:148
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          1
+		LineNumber                    20528, 4
+		LineNumberAlt1                108, 242
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "lbtn"
+		GetVariableValue              1                     ; local
+		CreateArray
+		Pull                          4
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    20528, 4
+		LineNumberAlt1                108, 242
+		SetThisMemberValueString      "button"
+		LineNumber                    20529, 4
+		LineNumberAlt1                109, 242
+		GetThisMemberValueString      "button"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    20530, 4
+		LineNumberAlt1                110, 242
+		GetThisMemberValueString      "button"
+		PushConstant0
+		PushConstant0
+		PushConstanti8                3
+		Pull                          4
+		GetMemberFunctionString       "setresponse"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    20531, 4
+		LineNumberAlt1                111, 242
+		CreateArray
+		Dup
+		GetThisMemberValueString      "button"
+		Dup
+		GetMemberFunctionString       "getx"
+		JumpAbsolute                  1
+		LineNumber                    20531, 4
+		LineNumberAlt1                111, 242
+		AppendToArray
+		Dup
+		GetThisMemberValueString      "button"
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    20531, 4
+		LineNumberAlt1                111, 242
+		AppendToArray
+		Dup
+		GetThisMemberValueString      "button"
+		Dup
+		GetMemberFunctionString       "getz"
+		JumpAbsolute                  1
+		LineNumber                    20531, 4
+		LineNumberAlt1                111, 242
+		AppendToArray
+		SetThisMemberValueString      "buttonpos"
+		LineNumber                    20532, 4
+		LineNumberAlt1                112, 242
+		PushConstant0
+		SetThisMemberValueString      "buttonpressed"
+		LineNumber                    20534, 4
+		LineNumberAlt1                114, 242
+		CreateArray
+		Dup
+		CreateObjectString            "tahu7_platform"
+		Dup
+		PushConstantStringString      "pt01"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               8
+		PushConstantf32               4
+		Pull                          6
+		GetMemberFunctionString       "tahu7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    20535, 4
+		LineNumberAlt1                115, 242
+		AppendToArray
+		Dup
+		CreateObjectString            "tahu7_platform"
+		Dup
+		PushConstantStringString      "pt02"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               9
+		PushConstantf32               5
+		Pull                          6
+		GetMemberFunctionString       "tahu7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    20536, 4
+		LineNumberAlt1                116, 242
+		AppendToArray
+		Dup
+		CreateObjectString            "tahu7_platform"
+		Dup
+		PushConstantStringString      "pt03"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               10
+		PushConstantf32               6
+		Pull                          6
+		GetMemberFunctionString       "tahu7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    20537, 4
+		LineNumberAlt1                117, 242
+		AppendToArray
+		Dup
+		CreateObjectString            "tahu7_platform"
+		Dup
+		PushConstantStringString      "pt04"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               9
+		PushConstantf32               5
+		Pull                          6
+		GetMemberFunctionString       "tahu7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    20538, 4
+		LineNumberAlt1                118, 242
+		AppendToArray
+		Dup
+		CreateObjectString            "tahu7_platform"
+		Dup
+		PushConstantStringString      "pt05"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               8
+		PushConstantf32               4
+		Pull                          6
+		GetMemberFunctionString       "tahu7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    20539, 4
+		LineNumberAlt1                119, 242
+		AppendToArray
+		Dup
+		CreateObjectString            "tahu7_platform"
+		Dup
+		PushConstantStringString      "pt06"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               9
+		PushConstantf32               3
+		Pull                          6
+		GetMemberFunctionString       "tahu7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    20540, 4
+		LineNumberAlt1                120, 242
+		AppendToArray
+		Dup
+		CreateObjectString            "tahu7_platform"
+		Dup
+		PushConstantStringString      "pt07"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               10
+		PushConstantf32               4
+		Pull                          6
+		GetMemberFunctionString       "tahu7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    20541, 4
+		LineNumberAlt1                121, 242
+		AppendToArray
+		Dup
+		CreateObjectString            "tahu7_platform"
+		Dup
+		PushConstantStringString      "pt08"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               9
+		PushConstantf32               5
+		Pull                          6
+		GetMemberFunctionString       "tahu7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    20542, 4
+		LineNumberAlt1                122, 242
+		AppendToArray
+		Dup
+		CreateObjectString            "tahu7_platform"
+		Dup
+		PushConstantStringString      "pt09"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               8
+		PushConstantf32               6
+		Pull                          6
+		GetMemberFunctionString       "tahu7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    20543, 4
+		LineNumberAlt1                123, 242
+		AppendToArray
+		Dup
+		CreateObjectString            "tahu7_platform"
+		Dup
+		PushConstantStringString      "pt10"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               9
+		PushConstantf32               5
+		Pull                          6
+		GetMemberFunctionString       "tahu7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    20544, 4
+		LineNumberAlt1                124, 242
+		AppendToArray
+		Dup
+		CreateObjectString            "tahu7_platform"
+		Dup
+		PushConstantStringString      "pt11"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               10
+		PushConstantf32               4
+		Pull                          6
+		GetMemberFunctionString       "tahu7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    20545, 4
+		LineNumberAlt1                125, 242
+		AppendToArray
+		Dup
+		CreateObjectString            "tahu7_platform"
+		Dup
+		PushConstantStringString      "pt12"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               9
+		PushConstantf32               3
+		Pull                          6
+		GetMemberFunctionString       "tahu7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    20546, 4
+		LineNumberAlt1                126, 242
+		AppendToArray
+		Dup
+		CreateObjectString            "tahu7_platform"
+		Dup
+		PushConstantStringString      "pt13"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               8
+		PushConstantf32               2
+		Pull                          6
+		GetMemberFunctionString       "tahu7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    20547, 4
+		LineNumberAlt1                127, 242
+		AppendToArray
+		Dup
+		CreateObjectString            "tahu7_platform"
+		Dup
+		PushConstantStringString      "pt14"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               9
+		PushConstantf32               3
+		Pull                          6
+		GetMemberFunctionString       "tahu7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    20548, 4
+		LineNumberAlt1                128, 242
+		AppendToArray
+		Dup
+		CreateObjectString            "tahu7_platform"
+		Dup
+		PushConstantStringString      "pt18"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               10
+		PushConstantf32               5
+		Pull                          6
+		GetMemberFunctionString       "tahu7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    20550, 4
+		LineNumberAlt1                130, 242
+		AppendToArray
+		Dup
+		CreateObjectString            "tahu7_platform"
+		Dup
+		PushConstantStringString      "pt19"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               9
+		PushConstantf32               4
+		Pull                          6
+		GetMemberFunctionString       "tahu7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    20551, 4
+		LineNumberAlt1                131, 242
+		AppendToArray
+		Dup
+		CreateObjectString            "tahu7_platform"
+		Dup
+		PushConstantStringString      "pt20"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               8
+		PushConstantf32               3
+		Pull                          6
+		GetMemberFunctionString       "tahu7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    20552, 4
+		LineNumberAlt1                132, 242
+		AppendToArray
+		Dup
+		CreateObjectString            "tahu7_platform"
+		Dup
+		PushConstantStringString      "pt21"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               9
+		PushConstantf32               2
+		Pull                          6
+		GetMemberFunctionString       "tahu7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    20553, 4
+		LineNumberAlt1                133, 242
+		AppendToArray
+		Dup
+		CreateObjectString            "tahu7_platform"
+		Dup
+		PushConstantStringString      "pt22"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               10
+		PushConstantf32               3
+		Pull                          6
+		GetMemberFunctionString       "tahu7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    20554, 4
+		LineNumberAlt1                134, 242
+		AppendToArray
+		SetThisMemberValueString      "platforms"
+		LineNumber                    20557, 4
+		LineNumberAlt1                137, 242
+		GetThisMemberValueString      "platforms"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2                     ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              2                     ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    20558, 4
+		LineNumberAlt1                138, 242
+		GetThisMemberValueString      "platforms"
+		GetVariableValue              2                     ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    20561, 4
+		LineNumberAlt1                141, 242
+		CreateArray
+		Dup
+		CreateObjectString            "tahu7_platform"
+		Dup
+		PushConstantStringString      "pt15"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               8
+		PushConstantf32               3.5
+		Pull                          6
+		GetMemberFunctionString       "tahu7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    20562, 4
+		LineNumberAlt1                142, 242
+		AppendToArray
+		Dup
+		CreateObjectString            "tahu7_platform"
+		Dup
+		PushConstantStringString      "pt16"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               7
+		PushConstantf32               4
+		Pull                          6
+		GetMemberFunctionString       "tahu7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    20563, 4
+		LineNumberAlt1                143, 242
+		AppendToArray
+		Dup
+		CreateObjectString            "tahu7_platform"
+		Dup
+		PushConstantStringString      "pt17"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               10
+		PushConstantf32               4.5
+		Pull                          6
+		GetMemberFunctionString       "tahu7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    20564, 4
+		LineNumberAlt1                144, 242
+		AppendToArray
+		SetThisMemberValueString      "platforms2"
+		LineNumber                    20567, 4
+		LineNumberAlt1                147, 242
+		GetThisMemberValueString      "platforms2"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2                     ; local
+		; <-
+		BranchTarget                  2
+		Dup
+		GetVariableValue              2                     ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    20568, 4
+		LineNumberAlt1                148, 242
+		GetThisMemberValueString      "platforms2"
+		GetVariableValue              2                     ; local
+		GetArrayValue
+		PushConstantf32               0
+		PushConstant0
+		PushConstantf32               3
+		Subtract
+		PushConstantf32               0
+		Pull                          4
+		GetMemberFunctionString       "offsetposition"
+		JumpAbsolute                  4
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xd811d
+		; source: 242 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_tahu.vbo" 155:168
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    20575, 4
+		LineNumberAlt1                155, 242
+		GetThisMemberValueString      "button"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    20576, 4
+		LineNumberAlt1                156, 242
+		PushNothing
+		SetThisMemberValueString      "button"
+		LineNumber                    20578, 4
+		LineNumberAlt1                158, 242
+		GetThisMemberValueString      "platforms"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1             ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1             ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    20579, 4
+		LineNumberAlt1                159, 242
+		GetThisMemberValueString      "platforms"
+		GetVariableValue              1             ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    20580, 4
+		LineNumberAlt1                160, 242
+		GetThisMemberValueString      "platforms"
+		GetVariableValue              1             ; local
+		PushNothing
+		SetArrayValue
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    20582, 4
+		LineNumberAlt1                162, 242
+		PushNothing
+		SetThisMemberValueString      "platforms"
+		LineNumber                    20584, 4
+		LineNumberAlt1                164, 242
+		GetThisMemberValueString      "platforms2"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1             ; local
+		; <-
+		BranchTarget                  2
+		Dup
+		GetVariableValue              1             ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    20585, 4
+		LineNumberAlt1                165, 242
+		GetThisMemberValueString      "platforms2"
+		GetVariableValue              1             ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    20586, 4
+		LineNumberAlt1                166, 242
+		GetThisMemberValueString      "platforms2"
+		GetVariableValue              1             ; local
+		PushNothing
+		SetArrayValue
+		IncrementVariable             1
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Pop
+		LineNumber                    20588, 4
+		LineNumberAlt1                168, 242
+		PushNothing
+		SetThisMemberValueString      "platforms2"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xd81fd
+		; source: 242 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_tahu.vbo" 175:210
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          1
+		LineNumber                    20595, 4
+		LineNumberAlt1                175, 242
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                3
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    20599, 4
+		LineNumberAlt1                179, 242
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		PushConstantStringString      "tb00"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    20599, 4
+		LineNumberAlt1                179, 242
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    20600, 4
+		LineNumberAlt1                180, 242
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "reseta"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		BranchAlwaysTarget            5, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Dup
+		PushConstanti8                27
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    20606, 4
+		LineNumberAlt1                186, 242
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "resetb"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            5, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    20611, 4
+		LineNumberAlt1                191, 242
+		GetThisMemberValueString      "buttonpressed"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    20612, 4
+		LineNumberAlt1                192, 242
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		PushConstantStringString      "cnt1"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    20612, 4
+		LineNumberAlt1                192, 242
+		EqualTo
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		GetThisMemberValueString      "button"
+		GetMemberValueString          "id"
+		EqualTo
+		And
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    20613, 4
+		LineNumberAlt1                193, 242
+		PushConstanti8                1
+		SetThisMemberValueString      "buttonpressed"
+		LineNumber                    20614, 4
+		LineNumberAlt1                194, 242
+		GetThisMemberValueString      "button"
+		GetThisMemberValueString      "buttonpos"
+		PushConstant0
+		GetArrayValue
+		GetThisMemberValueString      "buttonpos"
+		PushConstanti8                1
+		GetArrayValue
+		PushConstantf32               0.6000000238418579
+		Subtract
+		GetThisMemberValueString      "buttonpos"
+		PushConstanti8                2
+		GetArrayValue
+		PushConstantf32               1
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    20616, 4
+		LineNumberAlt1                196, 242
+		GetThisMemberValueString      "platforms2"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2                                            ; local
+		; <-
+		BranchTarget                  3
+		Dup
+		GetVariableValue              2                                            ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    20617, 4
+		LineNumberAlt1                197, 242
+		GetThisMemberValueString      "platforms2"
+		GetVariableValue              2                                            ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		Pop
+		; <-
+		BranchTarget                  5
+		Pop
+		LineNumber                    20624, 4
+		LineNumberAlt1                204, 242
+		GetThisMemberValueString      "platforms"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2                                            ; local
+		; <-
+		BranchTarget                  6
+		Dup
+		GetVariableValue              2                                            ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 7, 0
+		; ->
+		LineNumber                    20625, 4
+		LineNumberAlt1                205, 242
+		GetThisMemberValueString      "platforms"
+		GetVariableValue              2                                            ; local
+		GetArrayValue
+		GetVariableValue              1                                            ; local
+		Pull                          2
+		GetMemberFunctionString       "onevent"
+		JumpAbsolute                  2
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            6, 0
+		; ->
+		; <-
+		BranchTarget                  7
+		Pop
+		LineNumber                    20628, 4
+		LineNumberAlt1                208, 242
+		GetThisMemberValueString      "buttonpressed"
+		CompareAndBranchIfFalseTarget 10, 0
+		; ->
+		LineNumber                    20629, 4
+		LineNumberAlt1                209, 242
+		GetThisMemberValueString      "platforms2"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2                                            ; local
+		; <-
+		BranchTarget                  8
+		Dup
+		GetVariableValue              2                                            ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 9, 0
+		; ->
+		LineNumber                    20630, 4
+		LineNumberAlt1                210, 242
+		GetThisMemberValueString      "platforms2"
+		GetVariableValue              2                                            ; local
+		GetArrayValue
+		GetVariableValue              1                                            ; local
+		Pull                          2
+		GetMemberFunctionString       "onevent"
+		JumpAbsolute                  2
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            8, 0
+		; ->
+		; <-
+		BranchTarget                  9
+		Pop
+		; <-
+		BranchTarget                  10
+		PushNothing
+		Return
+	end ; method
+
+	begin method "reseta"
+		; address: 0xd83d6
+		; source: 242 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_tahu.vbo" 219:222
+		MemberFunctionArgumentCheck  1
+		LineNumber                   20639, 4
+		LineNumberAlt1               219, 242
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "level"
+		GetMemberValueString         "cam"
+		PushConstanti8               7
+		Pull                         2
+		GetMemberFunctionString      "setaimode"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   20640, 4
+		LineNumberAlt1               220, 242
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		Dup
+		GetMemberFunctionString      "kill"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   20641, 4
+		LineNumberAlt1               221, 242
+		PushConstantf32              1.2000000476837158
+		CallGameFunctionString       "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		LineNumber                   20642, 4
+		LineNumberAlt1               222, 242
+		PushConstantStringString     "tb00"
+		CallGameFunctionString       "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                   20642, 4
+		LineNumberAlt1               222, 242
+		PushConstant0
+		CallGameFunctionString       "gccollisionphysicsgroup", "toggletriggerboxentered", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "resetb"
+		; address: 0xd8449
+		; source: 242 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_tahu.vbo" 228:231
+		MemberFunctionArgumentCheck  1
+		LineNumber                   20648, 4
+		LineNumberAlt1               228, 242
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		Dup
+		GetMemberFunctionString      "unkill"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   20649, 4
+		LineNumberAlt1               229, 242
+		PushConstantStringString     "str0"
+		CallGameFunctionString       "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                   20649, 4
+		LineNumberAlt1               229, 242
+		PushConstantStringString     "lok0"
+		CallGameFunctionString       "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                   20649, 4
+		LineNumberAlt1               229, 242
+		CallGameFunctionString       "gccollisionphysicsgroup", "settoaposition", 2
+		Pop
+		LineNumber                   20650, 4
+		LineNumberAlt1               230, 242
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "hud"
+		GetMemberValueString         "cdtimer"
+		Dup
+		GetMemberFunctionString      "reset"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   20651, 4
+		LineNumberAlt1               231, 242
+		GetVariableValue             0                                              ; local
+		GetThisMemberFunctionString  "resetpuzzle"
+		JumpAbsolute                 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "resetpuzzle"
+		; address: 0xd84c8
+		; source: 242 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_tahu.vbo" 236:247
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    20656, 4
+		LineNumberAlt1                236, 242
+		GetThisMemberValueString      "buttonpressed"
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    20657, 4
+		LineNumberAlt1                237, 242
+		PushConstant0
+		SetThisMemberValueString      "buttonpressed"
+		LineNumber                    20658, 4
+		LineNumberAlt1                238, 242
+		GetThisMemberValueString      "button"
+		GetThisMemberValueString      "buttonpos"
+		PushConstant0
+		GetArrayValue
+		GetThisMemberValueString      "buttonpos"
+		PushConstanti8                1
+		GetArrayValue
+		GetThisMemberValueString      "buttonpos"
+		PushConstanti8                2
+		GetArrayValue
+		PushConstantf32               0.20000000298023224
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    20660, 4
+		LineNumberAlt1                240, 242
+		GetThisMemberValueString      "platforms2"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                   ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1                   ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    20661, 4
+		LineNumberAlt1                241, 242
+		GetThisMemberValueString      "platforms2"
+		GetVariableValue              1                   ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "reset"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		; <-
+		BranchTarget                  2
+		LineNumber                    20666, 4
+		LineNumberAlt1                246, 242
+		GetThisMemberValueString      "platforms"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                   ; local
+		; <-
+		BranchTarget                  3
+		Dup
+		GetVariableValue              1                   ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    20667, 4
+		LineNumberAlt1                247, 242
+		GetThisMemberValueString      "platforms"
+		GetVariableValue              1                   ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "reset2"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

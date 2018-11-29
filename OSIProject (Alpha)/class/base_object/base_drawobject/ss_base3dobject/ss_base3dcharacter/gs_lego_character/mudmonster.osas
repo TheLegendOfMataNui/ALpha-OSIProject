@@ -1,0 +1,1784 @@
+begin class "mudmonster", "gs_lego_character"
+	property "ppuzzle"
+	property "mudstate"
+	property "mudballs"
+	property "curmudball"
+	property "miniboulders"
+	property "resetmboulders"
+	property "shakeonce"
+	property "boulderuse"
+
+	begin method "mudmonster"
+		; address: 0x67721
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 763:790
+		MemberFunctionArgumentCheck 2
+		LineNumber                  37684, 4
+		LineNumberAlt1              763, 102
+		GetVariableValue            1                       ; local
+		SetThisMemberValueString    "ppuzzle"
+		LineNumber                  37685, 4
+		LineNumberAlt1              764, 102
+		CreateArray
+		Dup
+		CreateObjectString          "lego_projectileobject"
+		Dup
+		PushConstantStringString    "mbb0"
+		GetThisMemberValueString    "ppuzzle"
+		GetMemberValueString        "parea"
+		GetMemberValueString        "name"
+		Pull                        3
+		GetMemberFunctionString     "lego_projectileobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  37685, 4
+		LineNumberAlt1              764, 102
+		AppendToArray
+		Dup
+		CreateObjectString          "lego_projectileobject"
+		Dup
+		PushConstantStringString    "mbb1"
+		GetThisMemberValueString    "ppuzzle"
+		GetMemberValueString        "parea"
+		GetMemberValueString        "name"
+		Pull                        3
+		GetMemberFunctionString     "lego_projectileobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  37686, 4
+		LineNumberAlt1              765, 102
+		AppendToArray
+		Dup
+		CreateObjectString          "lego_projectileobject"
+		Dup
+		PushConstantStringString    "mbb2"
+		GetThisMemberValueString    "ppuzzle"
+		GetMemberValueString        "parea"
+		GetMemberValueString        "name"
+		Pull                        3
+		GetMemberFunctionString     "lego_projectileobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  37687, 4
+		LineNumberAlt1              766, 102
+		AppendToArray
+		Dup
+		CreateObjectString          "lego_projectileobject"
+		Dup
+		PushConstantStringString    "mbb3"
+		GetThisMemberValueString    "ppuzzle"
+		GetMemberValueString        "parea"
+		GetMemberValueString        "name"
+		Pull                        3
+		GetMemberFunctionString     "lego_projectileobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  37688, 4
+		LineNumberAlt1              767, 102
+		AppendToArray
+		Dup
+		CreateObjectString          "lego_projectileobject"
+		Dup
+		PushConstantStringString    "mbb4"
+		GetThisMemberValueString    "ppuzzle"
+		GetMemberValueString        "parea"
+		GetMemberValueString        "name"
+		Pull                        3
+		GetMemberFunctionString     "lego_projectileobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  37689, 4
+		LineNumberAlt1              768, 102
+		AppendToArray
+		Dup
+		CreateObjectString          "lego_projectileobject"
+		Dup
+		PushConstantStringString    "mbb5"
+		GetThisMemberValueString    "ppuzzle"
+		GetMemberValueString        "parea"
+		GetMemberValueString        "name"
+		Pull                        3
+		GetMemberFunctionString     "lego_projectileobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  37690, 4
+		LineNumberAlt1              769, 102
+		AppendToArray
+		Dup
+		CreateObjectString          "lego_projectileobject"
+		Dup
+		PushConstantStringString    "mbb6"
+		GetThisMemberValueString    "ppuzzle"
+		GetMemberValueString        "parea"
+		GetMemberValueString        "name"
+		Pull                        3
+		GetMemberFunctionString     "lego_projectileobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  37691, 4
+		LineNumberAlt1              770, 102
+		AppendToArray
+		Dup
+		CreateObjectString          "lego_projectileobject"
+		Dup
+		PushConstantStringString    "mbb7"
+		GetThisMemberValueString    "ppuzzle"
+		GetMemberValueString        "parea"
+		GetMemberValueString        "name"
+		Pull                        3
+		GetMemberFunctionString     "lego_projectileobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  37692, 4
+		LineNumberAlt1              771, 102
+		AppendToArray
+		Dup
+		CreateObjectString          "lego_projectileobject"
+		Dup
+		PushConstantStringString    "mbb8"
+		GetThisMemberValueString    "ppuzzle"
+		GetMemberValueString        "parea"
+		GetMemberValueString        "name"
+		Pull                        3
+		GetMemberFunctionString     "lego_projectileobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  37693, 4
+		LineNumberAlt1              772, 102
+		AppendToArray
+		Dup
+		CreateObjectString          "lego_projectileobject"
+		Dup
+		PushConstantStringString    "mbb9"
+		GetThisMemberValueString    "ppuzzle"
+		GetMemberValueString        "parea"
+		GetMemberValueString        "name"
+		Pull                        3
+		GetMemberFunctionString     "lego_projectileobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  37694, 4
+		LineNumberAlt1              773, 102
+		AppendToArray
+		SetThisMemberValueString    "mudballs"
+		LineNumber                  37696, 4
+		LineNumberAlt1              775, 102
+		GetVariableValue            0                       ; local
+		PushConstantStringString    "cnyy"
+		PushConstantStringString    "mudm"
+		GetThisMemberValueString    "ppuzzle"
+		GetMemberValueString        "parea"
+		GetMemberValueString        "name"
+		PushConstanti8              -90
+		PushConstanti16             995
+		PushConstant0
+		PushConstanti16             212
+		PushConstantStringString    "aiin"
+		GetThisMemberFunctionString "gs_lego_character"
+		JumpAbsolute                9
+		Pop
+		LineNumber                  37699, 4
+		LineNumberAlt1              778, 102
+		CreateArray
+		Dup
+		CreateObjectString          "lego_projectileobject"
+		Dup
+		PushConstantStringString    "smb1"
+		GetThisMemberValueString    "ppuzzle"
+		GetMemberValueString        "parea"
+		GetMemberValueString        "name"
+		Pull                        3
+		GetMemberFunctionString     "lego_projectileobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  37700, 4
+		LineNumberAlt1              779, 102
+		AppendToArray
+		Dup
+		CreateObjectString          "lego_projectileobject"
+		Dup
+		PushConstantStringString    "smb2"
+		GetThisMemberValueString    "ppuzzle"
+		GetMemberValueString        "parea"
+		GetMemberValueString        "name"
+		Pull                        3
+		GetMemberFunctionString     "lego_projectileobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  37701, 4
+		LineNumberAlt1              780, 102
+		AppendToArray
+		Dup
+		CreateObjectString          "lego_projectileobject"
+		Dup
+		PushConstantStringString    "smb3"
+		GetThisMemberValueString    "ppuzzle"
+		GetMemberValueString        "parea"
+		GetMemberValueString        "name"
+		Pull                        3
+		GetMemberFunctionString     "lego_projectileobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  37702, 4
+		LineNumberAlt1              781, 102
+		AppendToArray
+		Dup
+		CreateObjectString          "lego_projectileobject"
+		Dup
+		PushConstantStringString    "smb4"
+		GetThisMemberValueString    "ppuzzle"
+		GetMemberValueString        "parea"
+		GetMemberValueString        "name"
+		Pull                        3
+		GetMemberFunctionString     "lego_projectileobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  37703, 4
+		LineNumberAlt1              782, 102
+		AppendToArray
+		Dup
+		CreateObjectString          "lego_projectileobject"
+		Dup
+		PushConstantStringString    "smb5"
+		GetThisMemberValueString    "ppuzzle"
+		GetMemberValueString        "parea"
+		GetMemberValueString        "name"
+		Pull                        3
+		GetMemberFunctionString     "lego_projectileobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  37704, 4
+		LineNumberAlt1              783, 102
+		AppendToArray
+		Dup
+		CreateObjectString          "lego_projectileobject"
+		Dup
+		PushConstantStringString    "smb6"
+		GetThisMemberValueString    "ppuzzle"
+		GetMemberValueString        "parea"
+		GetMemberValueString        "name"
+		Pull                        3
+		GetMemberFunctionString     "lego_projectileobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  37705, 4
+		LineNumberAlt1              784, 102
+		AppendToArray
+		Dup
+		CreateObjectString          "lego_projectileobject"
+		Dup
+		PushConstantStringString    "smb7"
+		GetThisMemberValueString    "ppuzzle"
+		GetMemberValueString        "parea"
+		GetMemberValueString        "name"
+		Pull                        3
+		GetMemberFunctionString     "lego_projectileobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  37706, 4
+		LineNumberAlt1              785, 102
+		AppendToArray
+		Dup
+		CreateObjectString          "lego_projectileobject"
+		Dup
+		PushConstantStringString    "smb8"
+		GetThisMemberValueString    "ppuzzle"
+		GetMemberValueString        "parea"
+		GetMemberValueString        "name"
+		Pull                        3
+		GetMemberFunctionString     "lego_projectileobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  37707, 4
+		LineNumberAlt1              786, 102
+		AppendToArray
+		SetThisMemberValueString    "miniboulders"
+		LineNumber                  37710, 4
+		LineNumberAlt1              789, 102
+		CreateObjectString          "lego_timer"
+		Dup
+		PushConstantStringString    "mbt9"
+		PushConstantf32             5.099999904632568
+		PushConstant0
+		Pull                        4
+		GetMemberFunctionString     "lego_timer"
+		JumpAbsolute                4
+		Pop
+		LineNumber                  37710, 4
+		LineNumberAlt1              789, 102
+		SetThisMemberValueString    "resetmboulders"
+		LineNumber                  37711, 4
+		LineNumberAlt1              790, 102
+		PushConstanti8              1
+		SetThisMemberValueString    "shakeonce"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "init"
+		; address: 0x67a42
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 799:832
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    37720, 4
+		LineNumberAlt1                799, 102
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    37722, 4
+		LineNumberAlt1                801, 102
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "add"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    37723, 4
+		LineNumberAlt1                802, 102
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "hide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    37724, 4
+		LineNumberAlt1                803, 102
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "disableai"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    37725, 4
+		LineNumberAlt1                804, 102
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "aiidle"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    37728, 4
+		LineNumberAlt1                807, 102
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "settweakable"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    37734, 4
+		LineNumberAlt1                813, 102
+		GetThisMemberValueString      "mudballs"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                                            ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1                                            ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    37735, 4
+		LineNumberAlt1                814, 102
+		GetThisMemberValueString      "mudballs"
+		GetVariableValue              1                                            ; local
+		GetArrayValue
+		PushConstantf32               0.699999988079071
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstantf32               1
+		PushConstantStringString      "bld0"
+		PushConstantStringString      "Root/data/levels/lev1/mud0"
+		Pull                          9
+		GetMemberFunctionString       "init"
+		JumpAbsolute                  9
+		Pop
+		LineNumber                    37737, 4
+		LineNumberAlt1                816, 102
+		GetThisMemberValueString      "mudballs"
+		GetVariableValue              1                                            ; local
+		GetArrayValue
+		PushConstanti8                2
+		PushConstanti8                4
+		PushConstanti8                2
+		Pull                          4
+		GetMemberFunctionString       "setresponse"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    37738, 4
+		LineNumberAlt1                817, 102
+		GetThisMemberValueString      "mudballs"
+		GetVariableValue              1                                            ; local
+		GetArrayValue
+		PushConstantStringString      "cnyy"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    37738, 4
+		LineNumberAlt1                817, 102
+		Pull                          2
+		GetMemberFunctionString       "ignorecollisionswith"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    37739, 4
+		LineNumberAlt1                818, 102
+		GetThisMemberValueString      "mudballs"
+		GetVariableValue              1                                            ; local
+		GetArrayValue
+		PushConstanti8                11
+		PushConstanti8                12
+		PushConstanti8                10
+		Pull                          4
+		GetMemberFunctionString       "setprojectileoffset"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    37740, 4
+		LineNumberAlt1                819, 102
+		GetThisMemberValueString      "mudballs"
+		GetVariableValue              1                                            ; local
+		GetArrayValue
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "setbounceeventrepoert"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    37741, 4
+		LineNumberAlt1                820, 102
+		GetThisMemberValueString      "mudballs"
+		GetVariableValue              1                                            ; local
+		GetArrayValue
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "settargettoa"
+		JumpAbsolute                  2
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    37746, 4
+		LineNumberAlt1                825, 102
+		GetThisMemberValueString      "resetmboulders"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    37748, 4
+		LineNumberAlt1                827, 102
+		GetThisMemberValueString      "miniboulders"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                                            ; local
+		; <-
+		BranchTarget                  2
+		Dup
+		GetVariableValue              1                                            ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    37749, 4
+		LineNumberAlt1                828, 102
+		GetThisMemberValueString      "miniboulders"
+		GetVariableValue              1                                            ; local
+		GetArrayValue
+		PushConstantf32               0.10000000149011612
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstantf32               0.800000011920929
+		PushConstantStringString      "bld0"
+		PushConstantStringString      "Root/data/levels/lev1/mud0"
+		PushConstanti8                60
+		Pull                          10
+		GetMemberFunctionString       "init"
+		JumpAbsolute                  10
+		Pop
+		LineNumber                    37750, 4
+		LineNumberAlt1                829, 102
+		GetThisMemberValueString      "miniboulders"
+		GetVariableValue              1                                            ; local
+		GetArrayValue
+		PushConstanti8                4
+		PushConstanti8                4
+		PushConstanti8                4
+		Pull                          4
+		GetMemberFunctionString       "setresponse"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    37751, 4
+		LineNumberAlt1                830, 102
+		GetThisMemberValueString      "miniboulders"
+		GetVariableValue              1                                            ; local
+		GetArrayValue
+		PushConstantf32               0
+		PushConstantf32               0
+		PushConstantf32               0
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    37752, 4
+		LineNumberAlt1                831, 102
+		GetThisMemberValueString      "miniboulders"
+		GetVariableValue              1                                            ; local
+		GetArrayValue
+		PushConstantStringString      "cnyy"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    37752, 4
+		LineNumberAlt1                831, 102
+		Pull                          2
+		GetMemberFunctionString       "ignorecollisionswith"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    37753, 4
+		LineNumberAlt1                832, 102
+		GetThisMemberValueString      "miniboulders"
+		GetVariableValue              1                                            ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initshort"
+		; address: 0x67c9d
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 839:858
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    37760, 4
+		LineNumberAlt1                839, 102
+		PushConstanti8                6
+		SetThisMemberValueString      "mudstate"
+		LineNumber                    37764, 4
+		LineNumberAlt1                843, 102
+		GetThisMemberValueString      "mudballs"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                                        ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1                                        ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    37765, 4
+		LineNumberAlt1                844, 102
+		GetThisMemberValueString      "mudballs"
+		GetVariableValue              1                                        ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    37767, 4
+		LineNumberAlt1                846, 102
+		PushConstant0
+		SetThisMemberValueString      "curmudball"
+		LineNumber                    37769, 4
+		LineNumberAlt1                848, 102
+		GetThisMemberValueString      "resetmboulders"
+		Dup
+		GetMemberFunctionString       "reset"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    37771, 4
+		LineNumberAlt1                850, 102
+		GetVariableValue              0                                        ; local
+		PushConstanti16               995
+		PushConstant0
+		PushConstanti16               212
+		GetThisMemberFunctionString   "setpos"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    37773, 4
+		LineNumberAlt1                852, 102
+		GetThisMemberValueString      "miniboulders"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                                        ; local
+		; <-
+		BranchTarget                  2
+		Dup
+		GetVariableValue              1                                        ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    37774, 4
+		LineNumberAlt1                853, 102
+		GetThisMemberValueString      "miniboulders"
+		GetVariableValue              1                                        ; local
+		GetArrayValue
+		PushConstantf32               0
+		PushConstantf32               0
+		PushConstantf32               0
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Pop
+		LineNumber                    37777, 4
+		LineNumberAlt1                856, 102
+		GetThisMemberValueString      "handle"
+		PushConstanti8                1
+		CallGameFunctionString        "gccharacter", "setdisplaymorphmodel", 2
+		Pop
+		LineNumber                    37778, 4
+		LineNumberAlt1                857, 102
+		GetVariableValue              0                                        ; local
+		GetThisMemberFunctionString   "idle"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    37779, 4
+		LineNumberAlt1                858, 102
+		PushConstanti8                1
+		SetThisMemberValueString      "boulderuse"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x67dae
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 865:867
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    37786, 4
+		LineNumberAlt1                865, 102
+		GetThisMemberValueString      "miniboulders"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1              ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1              ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    37787, 4
+		LineNumberAlt1                866, 102
+		GetThisMemberValueString      "miniboulders"
+		Dup
+		GetMemberFunctionString       "remove"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    37788, 4
+		LineNumberAlt1                867, 102
+		GetThisMemberValueString      "miniboulders"
+		GetVariableValue              1              ; local
+		PushNothing
+		SetArrayValue
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupshort"
+		; address: 0x67dfe
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 873:873
+		MemberFunctionArgumentCheck 1
+		LineNumber                  37794, 4
+		LineNumberAlt1              873, 102
+		GetVariableValue            0             ; local
+		GetThisMemberFunctionString "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x67e15
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 879:1009
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          2
+		LineNumber                    37800, 4
+		LineNumberAlt1                879, 102
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                17
+		EqualTo
+		CompareAndBranchIfFalseTarget 10, 0
+		; ->
+		LineNumber                    37803, 4
+		LineNumberAlt1                882, 102
+		PushConstant0
+		SetVariableValue              2                                            ; local
+		LineNumber                    37804, 4
+		LineNumberAlt1                883, 102
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		Dup
+		PushConstanti32               1835164208
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    37806, 4
+		LineNumberAlt1                885, 102
+		PushConstant0
+		SetVariableValue              2                                            ; local
+		BranchAlwaysTarget            8, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		Dup
+		PushConstanti32               1835164209
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    37808, 4
+		LineNumberAlt1                887, 102
+		PushConstanti8                1
+		SetVariableValue              2                                            ; local
+		BranchAlwaysTarget            8, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Dup
+		PushConstanti32               1835164210
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    37810, 4
+		LineNumberAlt1                889, 102
+		PushConstanti8                2
+		SetVariableValue              2                                            ; local
+		BranchAlwaysTarget            8, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		Dup
+		PushConstanti32               1835164211
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    37812, 4
+		LineNumberAlt1                891, 102
+		PushConstanti8                3
+		SetVariableValue              2                                            ; local
+		BranchAlwaysTarget            8, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Dup
+		PushConstanti32               1835164212
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    37814, 4
+		LineNumberAlt1                893, 102
+		PushConstanti8                4
+		SetVariableValue              2                                            ; local
+		BranchAlwaysTarget            8, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		Dup
+		PushConstanti32               1835164213
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    37816, 4
+		LineNumberAlt1                895, 102
+		PushConstanti8                5
+		SetVariableValue              2                                            ; local
+		BranchAlwaysTarget            8, 0
+		; ->
+		; <-
+		BranchTarget                  5
+		Dup
+		PushConstanti32               1835164214
+		EqualTo
+		CompareAndBranchIfFalseTarget 6, 0
+		; ->
+		LineNumber                    37818, 4
+		LineNumberAlt1                897, 102
+		PushConstanti8                6
+		SetVariableValue              2                                            ; local
+		BranchAlwaysTarget            8, 0
+		; ->
+		; <-
+		BranchTarget                  6
+		Dup
+		PushConstanti32               1835164215
+		EqualTo
+		CompareAndBranchIfFalseTarget 7, 0
+		; ->
+		LineNumber                    37820, 4
+		LineNumberAlt1                899, 102
+		PushConstanti8                7
+		SetVariableValue              2                                            ; local
+		BranchAlwaysTarget            8, 0
+		; ->
+		; <-
+		BranchTarget                  7
+		Dup
+		PushConstanti32               1835164216
+		EqualTo
+		CompareAndBranchIfFalseTarget 8, 0
+		; ->
+		LineNumber                    37822, 4
+		LineNumberAlt1                901, 102
+		PushConstanti8                8
+		SetVariableValue              2                                            ; local
+		; <-
+		BranchTarget                  8
+		Pop
+		LineNumber                    37825, 4
+		LineNumberAlt1                904, 102
+		GetVariableValue              0                                            ; local
+		GetThisMemberValueString      "mudballs"
+		GetVariableValue              2                                            ; local
+		GetArrayValue
+		GetThisMemberFunctionString   "explode"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    37826, 4
+		LineNumberAlt1                905, 102
+		GetVariableValue              2                                            ; local
+		GetThisMemberValueString      "curmudball"
+		EqualTo
+		CompareAndBranchIfFalseTarget 9, 0
+		; ->
+		LineNumber                    37827, 4
+		LineNumberAlt1                906, 102
+		PushConstanti8                1
+		SetThisMemberValueString      "boulderuse"
+		; <-
+		BranchTarget                  9
+		BranchAlwaysTarget            18, 0
+		; ->
+		; <-
+		BranchTarget                  10
+		Dup
+		PushConstanti8                8
+		EqualTo
+		CompareAndBranchIfFalseTarget 14, 0
+		; ->
+		LineNumber                    37914, 4
+		LineNumberAlt1                993, 102
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		Dup
+		GetThisMemberValueString      "resetmboulders"
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 13, 0
+		; ->
+		LineNumber                    37917, 4
+		LineNumberAlt1                996, 102
+		GetThisMemberValueString      "miniboulders"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              3                                            ; local
+		; <-
+		BranchTarget                  11
+		Dup
+		GetVariableValue              3                                            ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 12, 0
+		; ->
+		LineNumber                    37918, 4
+		LineNumberAlt1                997, 102
+		GetThisMemberValueString      "miniboulders"
+		GetVariableValue              3                                            ; local
+		GetArrayValue
+		PushConstantf32               1
+		Pull                          2
+		GetMemberFunctionString       "fadeout"
+		JumpAbsolute                  2
+		Pop
+		IncrementVariable             3
+		BranchAlwaysTarget            11, 0
+		; ->
+		; <-
+		BranchTarget                  12
+		Pop
+		; <-
+		BranchTarget                  13
+		Pop
+		BranchAlwaysTarget            18, 0
+		; ->
+		; <-
+		BranchTarget                  14
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 18, 0
+		; ->
+		LineNumber                    37924, 4
+		LineNumberAlt1                1003, 102
+		GetThisMemberValueString      "mudballs"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              3                                            ; local
+		; <-
+		BranchTarget                  15
+		Dup
+		GetVariableValue              3                                            ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 17, 0
+		; ->
+		LineNumber                    37925, 4
+		LineNumberAlt1                1004, 102
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		GetThisMemberValueString      "mudballs"
+		GetVariableValue              3                                            ; local
+		GetArrayValue
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 16, 0
+		; ->
+		LineNumber                    37928, 4
+		LineNumberAlt1                1007, 102
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		PushConstantStringString      "cnt1"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    37928, 4
+		LineNumberAlt1                1007, 102
+		EqualTo
+		CompareAndBranchIfFalseTarget 16, 0
+		; ->
+		LineNumber                    37929, 4
+		LineNumberAlt1                1008, 102
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstant0
+		PushConstanti8                1
+		GetThisMemberValueString      "mudballs"
+		GetVariableValue              3                                            ; local
+		GetArrayValue
+		GetMemberValueString          "id"
+		Pull                          4
+		GetMemberFunctionString       "react"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    37930, 4
+		LineNumberAlt1                1009, 102
+		GetVariableValue              0                                            ; local
+		GetThisMemberValueString      "mudballs"
+		GetVariableValue              3                                            ; local
+		GetArrayValue
+		GetThisMemberFunctionString   "explode"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  16
+		IncrementVariable             3
+		BranchAlwaysTarget            15, 0
+		; ->
+		; <-
+		BranchTarget                  17
+		Pop
+		; <-
+		BranchTarget                  18
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x680ad
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "morph"
+		; address: 0x680b1
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 1048:1073
+		MemberFunctionArgumentCheck   3
+		CreateStackVariables          1
+		LineNumber                    37969, 4
+		LineNumberAlt1                1048, 102
+		PushConstantf32               1.5
+		SetVariableValue              3                   ; local
+		LineNumber                    37970, 4
+		LineNumberAlt1                1049, 102
+		GetVariableValue              1                   ; local
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    37971, 4
+		LineNumberAlt1                1050, 102
+		GetThisMemberValueString      "mudstate"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    37972, 4
+		LineNumberAlt1                1051, 102
+		PushConstanti8                1
+		SetVariableValue              1                   ; local
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    37974, 4
+		LineNumberAlt1                1053, 102
+		PushConstant0
+		SetVariableValue              1                   ; local
+		; <-
+		BranchTarget                  1
+		LineNumber                    37978, 4
+		LineNumberAlt1                1057, 102
+		GetVariableValue              2                   ; local
+		PushConstanti8                4
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    37979, 4
+		LineNumberAlt1                1058, 102
+		PushConstantf32               1
+		SetVariableValue              3                   ; local
+		; <-
+		BranchTarget                  2
+		LineNumber                    37982, 4
+		LineNumberAlt1                1061, 102
+		GetVariableValue              1                   ; local
+		Dup
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    37984, 4
+		LineNumberAlt1                1063, 102
+		GetVariableValue              0                   ; local
+		PushConstanti8                1
+		PushConstanti8                2
+		PushConstanti8                3
+		GetVariableValue              3                   ; local
+		PushConstanti8                1
+		GetThisMemberFunctionString   "morphmidcharacter"
+		JumpAbsolute                  6
+		Pop
+		BranchAlwaysTarget            5, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    37989, 4
+		LineNumberAlt1                1068, 102
+		GetVariableValue              0                   ; local
+		PushConstanti8                3
+		PushConstanti8                2
+		PushConstanti8                1
+		GetVariableValue              3                   ; local
+		PushConstanti8                1
+		GetThisMemberFunctionString   "morphmidcharacter"
+		JumpAbsolute                  6
+		Pop
+		BranchAlwaysTarget            5, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		Dup
+		PushConstanti8                3
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    37994, 4
+		LineNumberAlt1                1073, 102
+		GetVariableValue              0                   ; local
+		PushConstanti8                3
+		PushConstanti8                4
+		PushConstanti8                5
+		GetVariableValue              3                   ; local
+		PushConstanti8                1
+		GetThisMemberFunctionString   "morphmidcharacter"
+		JumpAbsolute                  6
+		Pop
+		; <-
+		BranchTarget                  5
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "throw"
+		; address: 0x681b4
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 1083:1085
+		MemberFunctionArgumentCheck 1
+		LineNumber                  38004, 4
+		LineNumberAlt1              1083, 102
+		GetVariableValue            0                   ; local
+		PushConstanti32             1831874615
+		GetThisMemberFunctionString "setsplitanimation"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  38006, 4
+		LineNumberAlt1              1085, 102
+		PushConstant0
+		SetThisMemberValueString    "boulderuse"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "releasemudball"
+		; address: 0x681de
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 1092:1119
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          3
+		LineNumber                    38013, 4
+		LineNumberAlt1                1092, 102
+		GetThisMemberValueString      "mudballs"
+		GetThisMemberValueString      "curmudball"
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    38015, 4
+		LineNumberAlt1                1094, 102
+		GetThisMemberValueString      "mudballs"
+		GetThisMemberValueString      "curmudball"
+		GetArrayValue
+		PushConstanti8                1
+		PushConstanti8                1
+		PushConstant0
+		PushConstanti8                1
+		Pull                          5
+		GetMemberFunctionString       "setmoveableflags"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    38024, 4
+		LineNumberAlt1                1103, 102
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		Dup
+		GetMemberFunctionString       "getposx"
+		JumpAbsolute                  1
+		LineNumber                    38024, 4
+		LineNumberAlt1                1103, 102
+		SetVariableValue              2                  ; local
+		LineNumber                    38025, 4
+		LineNumberAlt1                1104, 102
+		GetVariableValue              0                  ; local
+		GetThisMemberFunctionString   "getposx"
+		JumpAbsolute                  1
+		LineNumber                    38025, 4
+		LineNumberAlt1                1104, 102
+		SetVariableValue              3                  ; local
+		LineNumber                    38026, 4
+		LineNumberAlt1                1105, 102
+		GetVariableValue              2                  ; local
+		GetVariableValue              3                  ; local
+		Subtract
+		SetVariableValue              4                  ; local
+		LineNumber                    38028, 4
+		LineNumberAlt1                1107, 102
+		GetVariableValue              1                  ; local
+		PushConstanti8                4
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    38029, 4
+		LineNumberAlt1                1108, 102
+		GetVariableValue              4                  ; local
+		PushConstanti8                4
+		Multiply
+		SetVariableValue              4                  ; local
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    38031, 4
+		LineNumberAlt1                1110, 102
+		GetVariableValue              4                  ; local
+		PushConstanti8                2
+		Multiply
+		SetVariableValue              4                  ; local
+		; <-
+		BranchTarget                  1
+		LineNumber                    38035, 4
+		LineNumberAlt1                1114, 102
+		GetThisMemberValueString      "mudballs"
+		GetThisMemberValueString      "curmudball"
+		GetArrayValue
+		GetVariableValue              4                  ; local
+		PushConstantf32               1
+		GetThisMemberValueString      "contid"
+		PushConstantf32               0
+		Pull                          5
+		GetMemberFunctionString       "throwprojectile"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    38038, 4
+		LineNumberAlt1                1117, 102
+		GetThisMemberValueString      "curmudball"
+		PushConstanti8                1
+		Add
+		SetThisMemberValueString      "curmudball"
+		LineNumber                    38039, 4
+		LineNumberAlt1                1118, 102
+		GetThisMemberValueString      "curmudball"
+		GetThisMemberValueString      "mudballs"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		GreaterThan
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    38040, 4
+		LineNumberAlt1                1119, 102
+		PushConstant0
+		SetThisMemberValueString      "curmudball"
+		; <-
+		BranchTarget                  2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "dropmudballs"
+		; address: 0x68313
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 1127:1142
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          3
+		LineNumber                    38048, 4
+		LineNumberAlt1                1127, 102
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		Dup
+		GetMemberFunctionString       "getposx"
+		JumpAbsolute                  1
+		LineNumber                    38048, 4
+		LineNumberAlt1                1127, 102
+		SetVariableValue              1                  ; local
+		LineNumber                    38049, 4
+		LineNumberAlt1                1128, 102
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		Dup
+		GetMemberFunctionString       "getposz"
+		JumpAbsolute                  1
+		LineNumber                    38049, 4
+		LineNumberAlt1                1128, 102
+		SetVariableValue              2                  ; local
+		LineNumber                    38051, 4
+		LineNumberAlt1                1130, 102
+		GetThisMemberValueString      "mudballs"
+		PushConstant0
+		GetArrayValue
+		GetVariableValue              1                  ; local
+		PushConstanti8                50
+		GetVariableValue              2                  ; local
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    38052, 4
+		LineNumberAlt1                1131, 102
+		GetThisMemberValueString      "mudballs"
+		PushConstanti8                1
+		GetArrayValue
+		GetVariableValue              1                  ; local
+		PushConstanti8                8
+		Add
+		PushConstanti8                50
+		GetVariableValue              2                  ; local
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    38053, 4
+		LineNumberAlt1                1132, 102
+		GetThisMemberValueString      "mudballs"
+		PushConstanti8                2
+		GetArrayValue
+		GetVariableValue              1                  ; local
+		PushConstanti8                8
+		Subtract
+		PushConstanti8                50
+		GetVariableValue              2                  ; local
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    38054, 4
+		LineNumberAlt1                1133, 102
+		GetThisMemberValueString      "mudballs"
+		PushConstanti8                3
+		GetArrayValue
+		GetVariableValue              1                  ; local
+		PushConstanti8                50
+		GetVariableValue              2                  ; local
+		PushConstanti8                8
+		Add
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    38055, 4
+		LineNumberAlt1                1134, 102
+		GetThisMemberValueString      "mudballs"
+		PushConstanti8                4
+		GetArrayValue
+		GetVariableValue              1                  ; local
+		PushConstanti8                50
+		GetVariableValue              2                  ; local
+		PushConstanti8                8
+		Subtract
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    38056, 4
+		LineNumberAlt1                1135, 102
+		GetThisMemberValueString      "mudballs"
+		PushConstanti8                5
+		GetArrayValue
+		GetVariableValue              1                  ; local
+		PushConstanti8                4
+		Add
+		PushConstanti8                50
+		GetVariableValue              2                  ; local
+		PushConstanti8                4
+		Add
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    38057, 4
+		LineNumberAlt1                1136, 102
+		GetThisMemberValueString      "mudballs"
+		PushConstanti8                6
+		GetArrayValue
+		GetVariableValue              1                  ; local
+		PushConstanti8                4
+		Add
+		PushConstanti8                50
+		GetVariableValue              2                  ; local
+		PushConstanti8                4
+		Subtract
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    38058, 4
+		LineNumberAlt1                1137, 102
+		GetThisMemberValueString      "mudballs"
+		PushConstanti8                7
+		GetArrayValue
+		GetVariableValue              1                  ; local
+		PushConstanti8                4
+		Subtract
+		PushConstanti8                50
+		GetVariableValue              2                  ; local
+		PushConstanti8                4
+		Add
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    38059, 4
+		LineNumberAlt1                1138, 102
+		GetThisMemberValueString      "mudballs"
+		PushConstanti8                8
+		GetArrayValue
+		GetVariableValue              1                  ; local
+		PushConstanti8                4
+		Subtract
+		PushConstanti8                50
+		GetVariableValue              2                  ; local
+		PushConstanti8                4
+		Subtract
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    38061, 4
+		LineNumberAlt1                1140, 102
+		GetThisMemberValueString      "mudballs"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              3                  ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              3                  ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    38062, 4
+		LineNumberAlt1                1141, 102
+		GetThisMemberValueString      "mudballs"
+		GetVariableValue              3                  ; local
+		GetArrayValue
+		PushConstanti8                1
+		PushConstant0
+		PushConstant0
+		PushConstanti8                1
+		Pull                          5
+		GetMemberFunctionString       "setmoveableflags"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    38063, 4
+		LineNumberAlt1                1142, 102
+		GetThisMemberValueString      "mudballs"
+		GetVariableValue              3                  ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             3
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "die"
+		; address: 0x68503
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 1150:1151
+		MemberFunctionArgumentCheck 1
+		LineNumber                  38071, 4
+		LineNumberAlt1              1150, 102
+		PushConstanti8              4
+		SetThisMemberValueString    "mudstate"
+		LineNumber                  38072, 4
+		LineNumberAlt1              1151, 102
+		GetVariableValue            0          ; local
+		GetThisMemberFunctionString "hide"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "explode"
+		; address: 0x68529
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 1157:1186
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          13
+		LineNumber                    38078, 4
+		LineNumberAlt1                1157, 102
+		GetVariableValue              1                   ; local
+		Dup
+		GetMemberFunctionString       "getx"
+		JumpAbsolute                  1
+		LineNumber                    38078, 4
+		LineNumberAlt1                1157, 102
+		SetVariableValue              2                   ; local
+		LineNumber                    38079, 4
+		LineNumberAlt1                1158, 102
+		GetVariableValue              1                   ; local
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    38079, 4
+		LineNumberAlt1                1158, 102
+		SetVariableValue              3                   ; local
+		LineNumber                    38080, 4
+		LineNumberAlt1                1159, 102
+		GetVariableValue              1                   ; local
+		Dup
+		GetMemberFunctionString       "getz"
+		JumpAbsolute                  1
+		LineNumber                    38080, 4
+		LineNumberAlt1                1159, 102
+		SetVariableValue              4                   ; local
+		LineNumber                    38082, 4
+		LineNumberAlt1                1161, 102
+		GetThisMemberValueString      "miniboulders"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              5                   ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              5                   ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    38083, 4
+		LineNumberAlt1                1162, 102
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		PushConstantf32               0.05000000074505806
+		PushConstantf32               0.30000001192092896
+		Pull                          3
+		GetMemberFunctionString       "getrandomfloat"
+		JumpAbsolute                  3
+		LineNumber                    38083, 4
+		LineNumberAlt1                1162, 102
+		SetVariableValue              6                   ; local
+		LineNumber                    38084, 4
+		LineNumberAlt1                1163, 102
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		PushConstant0
+		PushConstantf32               5
+		Subtract
+		PushConstantf32               5
+		Pull                          3
+		GetMemberFunctionString       "getrandomfloat"
+		JumpAbsolute                  3
+		LineNumber                    38084, 4
+		LineNumberAlt1                1163, 102
+		SetVariableValue              7                   ; local
+		LineNumber                    38085, 4
+		LineNumberAlt1                1164, 102
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		PushConstantf32               0
+		PushConstantf32               5
+		Pull                          3
+		GetMemberFunctionString       "getrandomfloat"
+		JumpAbsolute                  3
+		LineNumber                    38085, 4
+		LineNumberAlt1                1164, 102
+		SetVariableValue              8                   ; local
+		LineNumber                    38086, 4
+		LineNumberAlt1                1165, 102
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		PushConstant0
+		PushConstantf32               5
+		Subtract
+		PushConstantf32               5
+		Pull                          3
+		GetMemberFunctionString       "getrandomfloat"
+		JumpAbsolute                  3
+		LineNumber                    38086, 4
+		LineNumberAlt1                1165, 102
+		SetVariableValue              9                   ; local
+		LineNumber                    38087, 4
+		LineNumberAlt1                1166, 102
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		GetVariableValue              2                   ; local
+		Dup
+		PushConstantf32               1
+		Add
+		Pull                          3
+		GetMemberFunctionString       "getrandomfloat"
+		JumpAbsolute                  3
+		LineNumber                    38087, 4
+		LineNumberAlt1                1166, 102
+		SetVariableValue              10                  ; local
+		LineNumber                    38088, 4
+		LineNumberAlt1                1167, 102
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		GetVariableValue              3                   ; local
+		Dup
+		PushConstantf32               1
+		Add
+		Pull                          3
+		GetMemberFunctionString       "getrandomfloat"
+		JumpAbsolute                  3
+		LineNumber                    38088, 4
+		LineNumberAlt1                1167, 102
+		SetVariableValue              11                  ; local
+		LineNumber                    38089, 4
+		LineNumberAlt1                1168, 102
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "randnum"
+		GetVariableValue              4                   ; local
+		Dup
+		PushConstantf32               1
+		Add
+		Pull                          3
+		GetMemberFunctionString       "getrandomfloat"
+		JumpAbsolute                  3
+		LineNumber                    38089, 4
+		LineNumberAlt1                1168, 102
+		SetThisMemberValueString      "z"
+		LineNumber                    38090, 4
+		LineNumberAlt1                1169, 102
+		GetThisMemberValueString      "miniboulders"
+		GetVariableValue              5                   ; local
+		GetArrayValue
+		GetVariableValue              6                   ; local
+		Pull                          2
+		GetMemberFunctionString       "setobjscale"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    38091, 4
+		LineNumberAlt1                1170, 102
+		GetThisMemberValueString      "miniboulders"
+		GetVariableValue              5                   ; local
+		GetArrayValue
+		GetVariableValue              10                  ; local
+		GetVariableValue              11                  ; local
+		GetThisMemberValueString      "z"
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    38092, 4
+		LineNumberAlt1                1171, 102
+		GetThisMemberValueString      "miniboulders"
+		GetVariableValue              5                   ; local
+		GetArrayValue
+		PushConstantf32               0.8999999761581421
+		Pull                          2
+		GetMemberFunctionString       "setalpha"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    38093, 4
+		LineNumberAlt1                1172, 102
+		GetThisMemberValueString      "miniboulders"
+		GetVariableValue              5                   ; local
+		GetArrayValue
+		PushConstanti8                1
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		Pull                          5
+		GetMemberFunctionString       "setmoveableflags"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    38094, 4
+		LineNumberAlt1                1173, 102
+		GetThisMemberValueString      "miniboulders"
+		GetVariableValue              5                   ; local
+		GetArrayValue
+		GetVariableValue              7                   ; local
+		GetVariableValue              8                   ; local
+		GetVariableValue              9                   ; local
+		Pull                          4
+		GetMemberFunctionString       "setvelocity"
+		JumpAbsolute                  4
+		Pop
+		IncrementVariable             5
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    38096, 4
+		LineNumberAlt1                1175, 102
+		GetVariableValue              1                   ; local
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		Pull                          5
+		GetMemberFunctionString       "setmoveableflags"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    38098, 4
+		LineNumberAlt1                1177, 102
+		GetVariableValue              1                   ; local
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    38099, 4
+		LineNumberAlt1                1178, 102
+		GetThisMemberValueString      "resetmboulders"
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "reset"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    38100, 4
+		LineNumberAlt1                1179, 102
+		GetThisMemberValueString      "resetmboulders"
+		Dup
+		GetMemberFunctionString       "start"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    38101, 4
+		LineNumberAlt1                1180, 102
+		PushConstanti8                1
+		SetThisMemberValueString      "shakeonce"
+		LineNumber                    38103, 4
+		LineNumberAlt1                1182, 102
+		GetVariableValue              0                   ; local
+		GetThisMemberFunctionString   "getposx"
+		JumpAbsolute                  1
+		LineNumber                    38103, 4
+		LineNumberAlt1                1182, 102
+		SetVariableValue              12                  ; local
+		LineNumber                    38104, 4
+		LineNumberAlt1                1183, 102
+		GetVariableValue              0                   ; local
+		GetThisMemberFunctionString   "getposy"
+		JumpAbsolute                  1
+		LineNumber                    38104, 4
+		LineNumberAlt1                1183, 102
+		SetVariableValue              13                  ; local
+		LineNumber                    38105, 4
+		LineNumberAlt1                1184, 102
+		GetVariableValue              0                   ; local
+		GetThisMemberFunctionString   "getposz"
+		JumpAbsolute                  1
+		LineNumber                    38105, 4
+		LineNumberAlt1                1184, 102
+		SetVariableValue              14                  ; local
+		LineNumber                    38107, 4
+		LineNumberAlt1                1186, 102
+		GetVariableValue              1                   ; local
+		GetVariableValue              12                  ; local
+		GetVariableValue              13                  ; local
+		GetVariableValue              14                  ; local
+		Pull                          4
+		GetMemberFunctionString       "setpos"
+		JumpAbsolute                  4
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

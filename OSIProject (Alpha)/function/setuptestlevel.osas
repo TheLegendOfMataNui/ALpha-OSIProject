@@ -1,0 +1,22 @@
+begin function "setuptestlevel", 0
+	; address: 0x2c5c7
+	; source: 125 "C:\\projects\\lego\\Scripting\\VBO\\lego_testlevel.vbo" 492:492
+	LineNumber                   46816, 4
+	LineNumberAlt1               492, 125
+	GetVariableValueGlobalString "screenlist"
+	CreateObjectString           "lego_testlevel"
+	Dup
+	Dup
+	GetMemberFunctionString      "lego_testlevel"
+	JumpAbsolute                 1
+	Pop
+	LineNumber                   46816, 4
+	LineNumberAlt1               492, 125
+	PushConstanti8               8
+	Pull                         3
+	GetMemberFunctionString      "addscreen"
+	JumpAbsolute                 3
+	Pop
+	PushNothing
+	Return
+end ; function

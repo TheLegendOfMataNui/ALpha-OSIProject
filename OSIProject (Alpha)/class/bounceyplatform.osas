@@ -1,0 +1,552 @@
+begin class "bounceyplatform"
+	property "obj"
+	property "id"
+	property "stat"
+	property "originalpos"
+	property "waspaused"
+	property "sinksound"
+
+	begin method "bounceyplatform"
+		; address: 0xbf2e7
+		; source: 214 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta02.vbo" 419:419
+		MemberFunctionArgumentCheck 2
+		LineNumber                  10404, 4
+		LineNumberAlt1              419, 214
+		CreateObjectString          "lego_moveableobject"
+		Dup
+		GetVariableValue            1                     ; local
+		Pull                        2
+		GetMemberFunctionString     "lego_moveableobject"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  10404, 4
+		LineNumberAlt1              419, 214
+		SetThisMemberValueString    "obj"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xbf311
+		; source: 214 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta02.vbo" 427:433
+		MemberFunctionArgumentCheck 1
+		LineNumber                  10412, 4
+		LineNumberAlt1              427, 214
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  10413, 4
+		LineNumberAlt1              428, 214
+		GetThisMemberValueString    "obj"
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		Pull                        4
+		GetMemberFunctionString     "setresponse"
+		JumpAbsolute                4
+		Pop
+		LineNumber                  10414, 4
+		LineNumberAlt1              429, 214
+		GetThisMemberValueString    "obj"
+		GetMemberValueString        "id"
+		SetThisMemberValueString    "id"
+		LineNumber                  10415, 4
+		LineNumberAlt1              430, 214
+		CreateObjectString          "basicpoint"
+		Dup
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "getx"
+		JumpAbsolute                1
+		LineNumber                  10415, 4
+		LineNumberAlt1              430, 214
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "gety"
+		JumpAbsolute                1
+		LineNumber                  10415, 4
+		LineNumberAlt1              430, 214
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "getz"
+		JumpAbsolute                1
+		LineNumber                  10415, 4
+		LineNumberAlt1              430, 214
+		Pull                        4
+		GetMemberFunctionString     "basicpoint"
+		JumpAbsolute                4
+		Pop
+		LineNumber                  10415, 4
+		LineNumberAlt1              430, 214
+		SetThisMemberValueString    "originalpos"
+		LineNumber                  10416, 4
+		LineNumberAlt1              431, 214
+		PushConstant0
+		SetThisMemberValueString    "stat"
+		LineNumber                  10417, 4
+		LineNumberAlt1              432, 214
+		CreateObjectString          "tablecopysound"
+		Dup
+		PushConstanti16             775
+		Pull                        2
+		GetMemberFunctionString     "tablecopysound"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  10417, 4
+		LineNumberAlt1              432, 214
+		SetThisMemberValueString    "sinksound"
+		LineNumber                  10418, 4
+		LineNumberAlt1              433, 214
+		GetThisMemberValueString    "sinksound"
+		GetThisMemberValueString    "id"
+		Pull                        2
+		GetMemberFunctionString     "synctoobject"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xbf3fc
+		; source: 214 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta02.vbo" 438:444
+		MemberFunctionArgumentCheck 1
+		LineNumber                  10423, 4
+		LineNumberAlt1              438, 214
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  10424, 4
+		LineNumberAlt1              439, 214
+		PushNothing
+		SetThisMemberValueString    "obj"
+		LineNumber                  10425, 4
+		LineNumberAlt1              440, 214
+		PushNothing
+		SetThisMemberValueString    "id"
+		LineNumber                  10426, 4
+		LineNumberAlt1              441, 214
+		PushNothing
+		SetThisMemberValueString    "stat"
+		LineNumber                  10427, 4
+		LineNumberAlt1              442, 214
+		PushNothing
+		SetThisMemberValueString    "originalpos"
+		LineNumber                  10428, 4
+		LineNumberAlt1              443, 214
+		PushNothing
+		SetThisMemberValueString    "waspaused"
+		LineNumber                  10429, 4
+		LineNumberAlt1              444, 214
+		PushNothing
+		SetThisMemberValueString    "sinksound"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setignoreallcollisions"
+		; address: 0xbf468
+		; source: 214 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta02.vbo" 449:449
+		MemberFunctionArgumentCheck 2
+		LineNumber                  10434, 4
+		LineNumberAlt1              449, 214
+		GetThisMemberValueString    "obj"
+		GetVariableValue            1                        ; local
+		Pull                        2
+		GetMemberFunctionString     "setignoreallcollisions"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "ignoreignorecollisionswith"
+		; address: 0xbf484
+		; source: 214 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta02.vbo" 454:454
+		MemberFunctionArgumentCheck 2
+		LineNumber                  10439, 4
+		LineNumberAlt1              454, 214
+		GetThisMemberValueString    "obj"
+		GetVariableValue            1                            ; local
+		Pull                        2
+		GetMemberFunctionString     "ignoreignorecollisionswith"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "show"
+		; address: 0xbf4a0
+		; source: 214 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta02.vbo" 460:460
+		MemberFunctionArgumentCheck 1
+		LineNumber                  10445, 4
+		LineNumberAlt1              460, 214
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hide"
+		; address: 0xbf4b8
+		; source: 214 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta02.vbo" 465:465
+		MemberFunctionArgumentCheck 1
+		LineNumber                  10450, 4
+		LineNumberAlt1              465, 214
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "hide"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0xbf4d0
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xbf4d4
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xbf4d8
+		; source: 214 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta02.vbo" 484:543
+		MemberFunctionArgumentCheck   2
+		LineNumber                    10469, 4
+		LineNumberAlt1                484, 214
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                12
+		EqualTo
+		CompareAndBranchIfFalseTarget 9, 0
+		; ->
+		LineNumber                    10474, 4
+		LineNumberAlt1                489, 214
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		GetThisMemberValueString      "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 8, 0
+		; ->
+		LineNumber                    10475, 4
+		LineNumberAlt1                490, 214
+		GetThisMemberValueString      "stat"
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    10479, 4
+		LineNumberAlt1                494, 214
+		PushConstanti8                2
+		SetThisMemberValueString      "stat"
+		LineNumber                    10480, 4
+		LineNumberAlt1                495, 214
+		GetThisMemberValueString      "obj"
+		GetThisMemberValueString      "originalpos"
+		GetMemberValueString          "x"
+		GetThisMemberValueString      "originalpos"
+		GetMemberValueString          "y"
+		PushConstantf32               0.5
+		Add
+		GetThisMemberValueString      "originalpos"
+		GetMemberValueString          "z"
+		PushConstantf32               0.20000000298023224
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		BranchAlwaysTarget            7, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		Dup
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    10485, 4
+		LineNumberAlt1                500, 214
+		PushConstanti8                3
+		SetThisMemberValueString      "stat"
+		LineNumber                    10486, 4
+		LineNumberAlt1                501, 214
+		GetThisMemberValueString      "obj"
+		GetThisMemberValueString      "originalpos"
+		GetMemberValueString          "x"
+		GetThisMemberValueString      "originalpos"
+		GetMemberValueString          "y"
+		PushConstanti8                4
+		Subtract
+		GetThisMemberValueString      "originalpos"
+		GetMemberValueString          "z"
+		PushConstanti8                2
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		BranchAlwaysTarget            7, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Dup
+		PushConstanti8                3
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    10491, 4
+		LineNumberAlt1                506, 214
+		GetThisMemberValueString      "waspaused"
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    10492, 4
+		LineNumberAlt1                507, 214
+		PushConstant0
+		SetThisMemberValueString      "waspaused"
+		LineNumber                    10493, 4
+		LineNumberAlt1                508, 214
+		PushConstanti8                4
+		SetThisMemberValueString      "stat"
+		LineNumber                    10494, 4
+		LineNumberAlt1                509, 214
+		GetThisMemberValueString      "obj"
+		GetThisMemberValueString      "originalpos"
+		GetMemberValueString          "x"
+		GetThisMemberValueString      "originalpos"
+		GetMemberValueString          "y"
+		PushConstantf32               0.5
+		Add
+		GetThisMemberValueString      "originalpos"
+		GetMemberValueString          "z"
+		PushConstanti8                2
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    10495, 4
+		LineNumberAlt1                510, 214
+		GetThisMemberValueString      "sinksound"
+		Dup
+		GetMemberFunctionString       "play"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		LineNumber                    10497, 4
+		LineNumberAlt1                512, 214
+		PushConstanti8                1
+		SetThisMemberValueString      "waspaused"
+		LineNumber                    10498, 4
+		LineNumberAlt1                513, 214
+		GetThisMemberValueString      "obj"
+		GetThisMemberValueString      "originalpos"
+		GetMemberValueString          "x"
+		GetThisMemberValueString      "originalpos"
+		GetMemberValueString          "y"
+		PushConstanti8                4
+		Subtract
+		GetThisMemberValueString      "originalpos"
+		GetMemberValueString          "z"
+		PushConstanti8                20
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		; <-
+		BranchTarget                  3
+		BranchAlwaysTarget            7, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		Dup
+		PushConstanti8                4
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    10505, 4
+		LineNumberAlt1                520, 214
+		PushConstanti8                5
+		SetThisMemberValueString      "stat"
+		LineNumber                    10506, 4
+		LineNumberAlt1                521, 214
+		GetThisMemberValueString      "obj"
+		GetThisMemberValueString      "originalpos"
+		GetMemberValueString          "x"
+		GetThisMemberValueString      "originalpos"
+		GetMemberValueString          "y"
+		PushConstantf32               0.5
+		Subtract
+		GetThisMemberValueString      "originalpos"
+		GetMemberValueString          "z"
+		PushConstantf32               0.20000000298023224
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		BranchAlwaysTarget            7, 0
+		; ->
+		; <-
+		BranchTarget                  5
+		Dup
+		PushConstanti8                5
+		EqualTo
+		CompareAndBranchIfFalseTarget 6, 0
+		; ->
+		LineNumber                    10511, 4
+		LineNumberAlt1                526, 214
+		PushConstanti8                6
+		SetThisMemberValueString      "stat"
+		LineNumber                    10512, 4
+		LineNumberAlt1                527, 214
+		GetThisMemberValueString      "obj"
+		GetThisMemberValueString      "originalpos"
+		GetMemberValueString          "x"
+		GetThisMemberValueString      "originalpos"
+		GetMemberValueString          "y"
+		GetThisMemberValueString      "originalpos"
+		GetMemberValueString          "z"
+		PushConstantf32               0.20000000298023224
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		BranchAlwaysTarget            7, 0
+		; ->
+		; <-
+		BranchTarget                  6
+		Dup
+		PushConstanti8                6
+		EqualTo
+		CompareAndBranchIfFalseTarget 7, 0
+		; ->
+		LineNumber                    10517, 4
+		LineNumberAlt1                532, 214
+		PushConstant0
+		SetThisMemberValueString      "stat"
+		; <-
+		BranchTarget                  7
+		Pop
+		; <-
+		BranchTarget                  8
+		BranchAlwaysTarget            10, 0
+		; ->
+		; <-
+		BranchTarget                  9
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 10, 0
+		; ->
+		LineNumber                    10527, 4
+		LineNumberAlt1                542, 214
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		PushConstantStringString      "cnt1"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    10527, 4
+		LineNumberAlt1                542, 214
+		EqualTo
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		GetThisMemberValueString      "id"
+		EqualTo
+		And
+		CompareAndBranchIfFalseTarget 10, 0
+		; ->
+		LineNumber                    10528, 4
+		LineNumberAlt1                543, 214
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "startsink"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  10
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "startsink"
+		; address: 0xbf75c
+		; source: 214 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta02.vbo" 553:556
+		MemberFunctionArgumentCheck   1
+		LineNumber                    10538, 4
+		LineNumberAlt1                553, 214
+		GetThisMemberValueString      "stat"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    10539, 4
+		LineNumberAlt1                554, 214
+		PushConstanti8                1
+		SetThisMemberValueString      "stat"
+		LineNumber                    10540, 4
+		LineNumberAlt1                555, 214
+		GetThisMemberValueString      "obj"
+		GetThisMemberValueString      "originalpos"
+		GetMemberValueString          "x"
+		GetThisMemberValueString      "originalpos"
+		GetMemberValueString          "y"
+		PushConstantf32               0.5
+		Subtract
+		GetThisMemberValueString      "originalpos"
+		GetMemberValueString          "z"
+		PushConstantf32               0.20000000298023224
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    10541, 4
+		LineNumberAlt1                556, 214
+		GetThisMemberValueString      "sinksound"
+		Dup
+		GetMemberFunctionString       "play"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "settweakable"
+		; address: 0xbf7c7
+		; source: 214 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta02.vbo" 562:562
+		MemberFunctionArgumentCheck 1
+		LineNumber                  10547, 4
+		LineNumberAlt1              562, 214
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "settweakable"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

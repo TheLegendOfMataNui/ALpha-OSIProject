@@ -1,0 +1,156 @@
+begin class "lego_area_rkfl", "gs_lego_area"
+	property "astroypuzzle"
+	property "parent"
+
+	begin method "lego_area_rkfl"
+		; address: 0x98aa1
+		; source: 166 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_rkfl.vbo" 26:29
+		MemberFunctionArgumentCheck 2
+		LineNumber                  60339, 4
+		LineNumberAlt1              26, 166
+		GetVariableValue            1                    ; local
+		SetThisMemberValueString    "parent"
+		LineNumber                  60340, 4
+		LineNumberAlt1              27, 166
+		GetVariableValue            0                    ; local
+		PushConstantStringString    "rkfl"
+		GetVariableValue            1                    ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  60341, 4
+		LineNumberAlt1              28, 166
+		CreateObjectString          "astroypuzzle"
+		Dup
+		GetVariableValue            0                    ; local
+		Pull                        2
+		GetMemberFunctionString     "astroypuzzle"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  60341, 4
+		LineNumberAlt1              28, 166
+		SetThisMemberValueString    "astroypuzzle"
+		LineNumber                  60342, 4
+		LineNumberAlt1              29, 166
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x98b09
+		; source: 166 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_rkfl.vbo" 35:37
+		MemberFunctionArgumentCheck 1
+		LineNumber                  60348, 4
+		LineNumberAlt1              35, 166
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_show"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  60349, 4
+		LineNumberAlt1              36, 166
+		GetThisMemberValueString    "astroypuzzle"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  60350, 4
+		LineNumberAlt1              37, 166
+		GetThisMemberValueString    "astroypuzzle"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x98b48
+		; source: 166 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_rkfl.vbo" 42:42
+		MemberFunctionArgumentCheck 2
+		LineNumber                  60355, 4
+		LineNumberAlt1              42, 166
+		GetThisMemberValueString    "astroypuzzle"
+		GetVariableValue            1              ; local
+		Pull                        2
+		GetMemberFunctionString     "process"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x98b64
+		; source: 166 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_rkfl.vbo" 47:47
+		MemberFunctionArgumentCheck 2
+		LineNumber                  60360, 4
+		LineNumberAlt1              47, 166
+		GetThisMemberValueString    "astroypuzzle"
+		GetVariableValue            1              ; local
+		Pull                        2
+		GetMemberFunctionString     "input"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x98b80
+		; source: 166 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_rkfl.vbo" 54:54
+		MemberFunctionArgumentCheck 2
+		LineNumber                  60367, 4
+		LineNumberAlt1              54, 166
+		GetThisMemberValueString    "astroypuzzle"
+		GetVariableValue            1              ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x98b9c
+		; source: 166 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_rkfl.vbo" 60:61
+		MemberFunctionArgumentCheck 1
+		LineNumber                  60373, 4
+		LineNumberAlt1              60, 166
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_hide"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  60374, 4
+		LineNumberAlt1              61, 166
+		GetThisMemberValueString    "astroypuzzle"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x98bc7
+		; source: 166 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_rkfl.vbo" 66:66
+		MemberFunctionArgumentCheck 1
+		LineNumber                  60379, 4
+		LineNumberAlt1              66, 166
+		GetThisMemberValueString    "astroypuzzle"
+		Dup
+		GetMemberFunctionString     "exit"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

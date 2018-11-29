@@ -1,0 +1,2190 @@
+begin class "vllg2_puzzle"
+	property "parent"
+	property "oldplatform"
+	property "newplatform"
+	property "printwhichplatformimon"
+	property "logarray"
+	property "horns"
+	property "puzinc"
+	property "currentlycollidingwith"
+	property "tempplatform"
+	property "canblow"
+	property "currentsound"
+	property "testplatforms"
+	property "firsttouch"
+	property "logarrayubound"
+	property "testplatformsubound"
+	property "cinema"
+	property "cinema_shown"
+	property "wirlpool"
+	property "show_wirlpool"
+	property "gearpickup"
+	property "bgmusic"
+
+	begin method "vllg2_puzzle"
+		; address: 0x7dc5e
+		; source: 128 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_vllg.vbo" 145:148
+		MemberFunctionArgumentCheck 2
+		LineNumber                  47733, 4
+		LineNumberAlt1              145, 128
+		GetVariableValue            1               ; local
+		SetThisMemberValueString    "parent"
+		LineNumber                  47734, 4
+		LineNumberAlt1              146, 128
+		PushConstanti8              1
+		SetThisMemberValueString    "firsttouch"
+		LineNumber                  47735, 4
+		LineNumberAlt1              147, 128
+		PushConstant0
+		SetThisMemberValueString    "cinema_shown"
+		LineNumber                  47736, 4
+		LineNumberAlt1              148, 128
+		PushConstant0
+		SetThisMemberValueString    "show_wirlpool"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x7dc9d
+		; source: 128 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_vllg.vbo" 156:233
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          3
+		LineNumber                    47744, 4
+		LineNumberAlt1                156, 128
+		CreateObjectString            "legomp3player"
+		Dup
+		Dup
+		GetMemberFunctionString       "legomp3player"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    47744, 4
+		LineNumberAlt1                156, 128
+		SetThisMemberValueString      "bgmusic"
+		LineNumber                    47745, 4
+		LineNumberAlt1                157, 128
+		GetThisMemberValueString      "bgmusic"
+		PushConstantStringString      "Root/Data/sounds/MusicVillage"
+		Pull                          2
+		GetMemberFunctionString       "setupforplay"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    47746, 4
+		LineNumberAlt1                158, 128
+		GetThisMemberValueString      "bgmusic"
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "play"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    47748, 4
+		LineNumberAlt1                160, 128
+		GetThisMemberValueString      "cinema_shown"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    47749, 4
+		LineNumberAlt1                161, 128
+		CallGameFunctionString        "gccinemaengine", "create", 0
+		LineNumber                    47749, 4
+		LineNumberAlt1                161, 128
+		SetThisMemberValueString      "cinema"
+		LineNumber                    47750, 4
+		LineNumberAlt1                162, 128
+		GetThisMemberValueString      "cinema"
+		PushConstantStringString      "cin2"
+		CallGameFunctionString        "gccinemaengine", "load", 2
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    47754, 4
+		LineNumberAlt1                166, 128
+		PushConstantStringString      "g054"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    47754, 4
+		LineNumberAlt1                166, 128
+		CallGameFunctionString        "gccharactermoveinterpreter", "checkanimdone", 1
+		Pop
+		LineNumber                    47756, 4
+		LineNumberAlt1                168, 128
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "vwhp"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    47756, 4
+		LineNumberAlt1                168, 128
+		SetThisMemberValueString      "wirlpool"
+		LineNumber                    47757, 4
+		LineNumberAlt1                169, 128
+		GetThisMemberValueString      "wirlpool"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    47758, 4
+		LineNumberAlt1                170, 128
+		GetThisMemberValueString      "show_wirlpool"
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    47759, 4
+		LineNumberAlt1                171, 128
+		GetThisMemberValueString      "wirlpool"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		LineNumber                    47761, 4
+		LineNumberAlt1                173, 128
+		GetThisMemberValueString      "wirlpool"
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  2
+		LineNumber                    47764, 4
+		LineNumberAlt1                176, 128
+		CreateArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "pl01"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    47764, 4
+		LineNumberAlt1                176, 128
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "pl02"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    47765, 4
+		LineNumberAlt1                177, 128
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "pl03"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    47766, 4
+		LineNumberAlt1                178, 128
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "pl04"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    47767, 4
+		LineNumberAlt1                179, 128
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "pl05"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    47768, 4
+		LineNumberAlt1                180, 128
+		AppendToArray
+		SetThisMemberValueString      "testplatforms"
+		LineNumber                    47771, 4
+		LineNumberAlt1                183, 128
+		GetThisMemberValueString      "testplatforms"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                                                ; local
+		; <-
+		BranchTarget                  3
+		Dup
+		GetVariableValue              1                                                ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    47772, 4
+		LineNumberAlt1                184, 128
+		GetThisMemberValueString      "testplatforms"
+		GetVariableValue              1                                                ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    47773, 4
+		LineNumberAlt1                185, 128
+		GetThisMemberValueString      "testplatforms"
+		GetVariableValue              1                                                ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "settweakable"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    47774, 4
+		LineNumberAlt1                186, 128
+		GetThisMemberValueString      "testplatforms"
+		GetVariableValue              1                                                ; local
+		GetArrayValue
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		Pull                          4
+		GetMemberFunctionString       "setresponse"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    47775, 4
+		LineNumberAlt1                187, 128
+		GetThisMemberValueString      "testplatforms"
+		GetVariableValue              1                                                ; local
+		GetArrayValue
+		PushConstantf32               1.7000000476837158
+		PushConstantf32               1.7000000476837158
+		PushConstantf32               1.7000000476837158
+		PushConstant0
+		PushConstantf32               1.7000000476837158
+		Subtract
+		PushConstant0
+		PushConstantf32               1.7000000476837158
+		Subtract
+		PushConstant0
+		PushConstantf32               1.7000000476837158
+		Subtract
+		Pull                          7
+		GetMemberFunctionString       "movebboxsides"
+		JumpAbsolute                  7
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		Pop
+		LineNumber                    47778, 4
+		LineNumberAlt1                190, 128
+		GetThisMemberValueString      "testplatforms"
+		PushConstanti8                4
+		GetArrayValue
+		PushConstantf32               0
+		Pull                          2
+		GetMemberFunctionString       "setalpha"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    47779, 4
+		LineNumberAlt1                191, 128
+		GetThisMemberValueString      "testplatforms"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		SetThisMemberValueString      "testplatformsubound"
+		LineNumber                    47781, 4
+		LineNumberAlt1                193, 128
+		CreateArray
+		Dup
+		CreateObjectString            "logplatform"
+		Dup
+		PushConstantStringString      "lg01"
+		Pull                          2
+		GetMemberFunctionString       "logplatform"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    47782, 4
+		LineNumberAlt1                194, 128
+		AppendToArray
+		Dup
+		CreateObjectString            "logplatform"
+		Dup
+		PushConstantStringString      "lg02"
+		Pull                          2
+		GetMemberFunctionString       "logplatform"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    47783, 4
+		LineNumberAlt1                195, 128
+		AppendToArray
+		Dup
+		CreateObjectString            "logplatform"
+		Dup
+		PushConstantStringString      "lg03"
+		Pull                          2
+		GetMemberFunctionString       "logplatform"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    47784, 4
+		LineNumberAlt1                196, 128
+		AppendToArray
+		Dup
+		CreateObjectString            "logplatform"
+		Dup
+		PushConstantStringString      "lg04"
+		Pull                          2
+		GetMemberFunctionString       "logplatform"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    47785, 4
+		LineNumberAlt1                197, 128
+		AppendToArray
+		Dup
+		CreateObjectString            "logplatform"
+		Dup
+		PushConstantStringString      "lg05"
+		Pull                          2
+		GetMemberFunctionString       "logplatform"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    47786, 4
+		LineNumberAlt1                198, 128
+		AppendToArray
+		Dup
+		CreateObjectString            "logplatform"
+		Dup
+		PushConstantStringString      "lg06"
+		Pull                          2
+		GetMemberFunctionString       "logplatform"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    47787, 4
+		LineNumberAlt1                199, 128
+		AppendToArray
+		Dup
+		CreateObjectString            "logplatform"
+		Dup
+		PushConstantStringString      "lg07"
+		Pull                          2
+		GetMemberFunctionString       "logplatform"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    47788, 4
+		LineNumberAlt1                200, 128
+		AppendToArray
+		Dup
+		CreateObjectString            "logplatform"
+		Dup
+		PushConstantStringString      "lg08"
+		Pull                          2
+		GetMemberFunctionString       "logplatform"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    47789, 4
+		LineNumberAlt1                201, 128
+		AppendToArray
+		Dup
+		CreateObjectString            "logplatform"
+		Dup
+		PushConstantStringString      "lg09"
+		Pull                          2
+		GetMemberFunctionString       "logplatform"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    47790, 4
+		LineNumberAlt1                202, 128
+		AppendToArray
+		Dup
+		CreateObjectString            "logplatform"
+		Dup
+		PushConstantStringString      "lg10"
+		Pull                          2
+		GetMemberFunctionString       "logplatform"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    47791, 4
+		LineNumberAlt1                203, 128
+		AppendToArray
+		Dup
+		CreateObjectString            "logplatform"
+		Dup
+		PushConstantStringString      "lg11"
+		Pull                          2
+		GetMemberFunctionString       "logplatform"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    47792, 4
+		LineNumberAlt1                204, 128
+		AppendToArray
+		Dup
+		CreateObjectString            "logplatform"
+		Dup
+		PushConstantStringString      "lg12"
+		Pull                          2
+		GetMemberFunctionString       "logplatform"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    47793, 4
+		LineNumberAlt1                205, 128
+		AppendToArray
+		Dup
+		CreateObjectString            "logplatform"
+		Dup
+		PushConstantStringString      "lg13"
+		Pull                          2
+		GetMemberFunctionString       "logplatform"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    47794, 4
+		LineNumberAlt1                206, 128
+		AppendToArray
+		Dup
+		CreateObjectString            "logplatform"
+		Dup
+		PushConstantStringString      "lg14"
+		Pull                          2
+		GetMemberFunctionString       "logplatform"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    47795, 4
+		LineNumberAlt1                207, 128
+		AppendToArray
+		SetThisMemberValueString      "logarray"
+		LineNumber                    47798, 4
+		LineNumberAlt1                210, 128
+		GetThisMemberValueString      "logarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                                                ; local
+		; <-
+		BranchTarget                  5
+		Dup
+		GetVariableValue              1                                                ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 6, 0
+		; ->
+		LineNumber                    47799, 4
+		LineNumberAlt1                211, 128
+		GetThisMemberValueString      "logarray"
+		GetVariableValue              1                                                ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    47800, 4
+		LineNumberAlt1                212, 128
+		GetThisMemberValueString      "logarray"
+		GetVariableValue              1                                                ; local
+		GetArrayValue
+		GetMemberValueString          "obj"
+		PushConstanti8                1
+		PushConstant0
+		PushConstanti8                1
+		Pull                          4
+		GetMemberFunctionString       "setresponse"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    47801, 4
+		LineNumberAlt1                213, 128
+		GetThisMemberValueString      "logarray"
+		GetVariableValue              1                                                ; local
+		GetArrayValue
+		GetThisMemberValueString      "logarray"
+		GetVariableValue              1                                                ; local
+		GetArrayValue
+		GetMemberValueString          "obj"
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    47801, 4
+		LineNumberAlt1                213, 128
+		Pull                          2
+		GetMemberFunctionString       "setstartingycoord"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    47802, 4
+		LineNumberAlt1                214, 128
+		GetThisMemberValueString      "logarray"
+		GetVariableValue              1                                                ; local
+		GetArrayValue
+		GetThisMemberValueString      "logarray"
+		GetVariableValue              1                                                ; local
+		GetArrayValue
+		GetMemberValueString          "obj"
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    47802, 4
+		LineNumberAlt1                214, 128
+		PushConstantf32               1
+		Subtract
+		Pull                          2
+		GetMemberFunctionString       "setfinalycoord"
+		JumpAbsolute                  2
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            5, 0
+		; ->
+		; <-
+		BranchTarget                  6
+		Pop
+		LineNumber                    47805, 4
+		LineNumberAlt1                217, 128
+		GetThisMemberValueString      "logarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		SetThisMemberValueString      "logarrayubound"
+		LineNumber                    47807, 4
+		LineNumberAlt1                219, 128
+		PushConstanti8                1
+		SetThisMemberValueString      "puzinc"
+		LineNumber                    47808, 4
+		LineNumberAlt1                220, 128
+		PushNothing
+		SetVariableValue              2                                                ; local
+		LineNumber                    47809, 4
+		LineNumberAlt1                221, 128
+		PushConstant0
+		SetThisMemberValueString      "canblow"
+		LineNumber                    47810, 4
+		LineNumberAlt1                222, 128
+		GetThisMemberValueString      "testplatforms"
+		PushConstant0
+		GetArrayValue
+		SetThisMemberValueString      "tempplatform"
+		LineNumber                    47813, 4
+		LineNumberAlt1                225, 128
+		PushConstant0
+		GetThisMemberValueString      "tempplatform"
+		SetMemberValueString          "collide"
+		LineNumber                    47816, 4
+		LineNumberAlt1                228, 128
+		PushConstantStringString      "gear"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    47816, 4
+		LineNumberAlt1                228, 128
+		CallGameFunctionString        "gcsaver", "finditem", 1
+		LineNumber                    47816, 4
+		LineNumberAlt1                228, 128
+		SetVariableValue              3                                                ; local
+		LineNumber                    47817, 4
+		LineNumberAlt1                229, 128
+		GetVariableValue              3                                                ; local
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 7, 0
+		; ->
+		LineNumber                    47818, 4
+		LineNumberAlt1                230, 128
+		CreateObjectString            "lego_pickup"
+		Dup
+		PushConstantStringString      "gear"
+		PushConstant0
+		PushConstanti8                5
+		PushConstantStringString      "item"
+		PushConstanti8                10
+		PushConstanti8                1
+		Pull                          7
+		GetMemberFunctionString       "lego_pickup"
+		JumpAbsolute                  7
+		Pop
+		LineNumber                    47818, 4
+		LineNumberAlt1                230, 128
+		SetThisMemberValueString      "gearpickup"
+		LineNumber                    47819, 4
+		LineNumberAlt1                231, 128
+		GetThisMemberValueString      "gearpickup"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    47820, 4
+		LineNumberAlt1                232, 128
+		GetThisMemberValueString      "gearpickup"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    47821, 4
+		LineNumberAlt1                233, 128
+		GetThisMemberValueString      "gearpickup"
+		PushConstanti32               131072
+		Pull                          2
+		GetMemberFunctionString       "setcondition"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  7
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x7e2ad
+		; source: 128 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_vllg.vbo" 239:265
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    47827, 4
+		LineNumberAlt1                239, 128
+		GetThisMemberValueString      "bgmusic"
+		Dup
+		GetMemberFunctionString       "stop"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    47828, 4
+		LineNumberAlt1                240, 128
+		PushNothing
+		SetThisMemberValueString      "bgmusic"
+		LineNumber                    47829, 4
+		LineNumberAlt1                241, 128
+		GetThisMemberValueString      "cinema"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    47830, 4
+		LineNumberAlt1                242, 128
+		PushNothing
+		SetThisMemberValueString      "cinema"
+		; <-
+		BranchTarget                  0
+		LineNumber                    47832, 4
+		LineNumberAlt1                244, 128
+		PushNothing
+		SetThisMemberValueString      "oldplatform"
+		LineNumber                    47833, 4
+		LineNumberAlt1                245, 128
+		PushNothing
+		SetThisMemberValueString      "newplatform"
+		LineNumber                    47834, 4
+		LineNumberAlt1                246, 128
+		PushNothing
+		SetThisMemberValueString      "printwhichplatformimon"
+		LineNumber                    47835, 4
+		LineNumberAlt1                247, 128
+		GetThisMemberValueString      "logarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                        ; local
+		; <-
+		BranchTarget                  1
+		Dup
+		GetVariableValue              1                        ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    47836, 4
+		LineNumberAlt1                248, 128
+		GetThisMemberValueString      "logarray"
+		GetVariableValue              1                        ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    47837, 4
+		LineNumberAlt1                249, 128
+		GetThisMemberValueString      "logarray"
+		GetVariableValue              1                        ; local
+		PushNothing
+		SetArrayValue
+		IncrementVariable             1
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		Pop
+		LineNumber                    47839, 4
+		LineNumberAlt1                251, 128
+		PushNothing
+		SetThisMemberValueString      "logarray"
+		LineNumber                    47840, 4
+		LineNumberAlt1                252, 128
+		PushNothing
+		SetThisMemberValueString      "puzinc"
+		LineNumber                    47841, 4
+		LineNumberAlt1                253, 128
+		PushNothing
+		SetThisMemberValueString      "currentlycollidingwith"
+		LineNumber                    47842, 4
+		LineNumberAlt1                254, 128
+		PushNothing
+		SetThisMemberValueString      "tempplatform"
+		LineNumber                    47843, 4
+		LineNumberAlt1                255, 128
+		PushNothing
+		SetThisMemberValueString      "canblow"
+		LineNumber                    47844, 4
+		LineNumberAlt1                256, 128
+		PushNothing
+		SetThisMemberValueString      "currentsound"
+		LineNumber                    47845, 4
+		LineNumberAlt1                257, 128
+		GetThisMemberValueString      "testplatforms"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                        ; local
+		; <-
+		BranchTarget                  3
+		Dup
+		GetVariableValue              1                        ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    47846, 4
+		LineNumberAlt1                258, 128
+		GetThisMemberValueString      "testplatforms"
+		GetVariableValue              1                        ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    47847, 4
+		LineNumberAlt1                259, 128
+		GetThisMemberValueString      "testplatforms"
+		GetVariableValue              1                        ; local
+		PushNothing
+		SetArrayValue
+		IncrementVariable             1
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		Pop
+		LineNumber                    47849, 4
+		LineNumberAlt1                261, 128
+		PushNothing
+		SetThisMemberValueString      "testplatforms"
+		LineNumber                    47851, 4
+		LineNumberAlt1                263, 128
+		GetThisMemberValueString      "gearpickup"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    47852, 4
+		LineNumberAlt1                264, 128
+		GetThisMemberValueString      "gearpickup"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    47853, 4
+		LineNumberAlt1                265, 128
+		PushNothing
+		SetThisMemberValueString      "gearpickup"
+		; <-
+		BranchTarget                  5
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x7e453
+		; source: 128 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_vllg.vbo" 271:296
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          1
+		LineNumber                    47859, 4
+		LineNumberAlt1                271, 128
+		GetThisMemberValueString      "testplatformsubound"
+		PushConstant0
+		SetVariableValue              2                     ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              2                     ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    47860, 4
+		LineNumberAlt1                272, 128
+		GetThisMemberValueString      "testplatforms"
+		GetVariableValue              2                     ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    47864, 4
+		LineNumberAlt1                276, 128
+		GetThisMemberValueString      "logarrayubound"
+		PushConstant0
+		SetVariableValue              2                     ; local
+		; <-
+		BranchTarget                  2
+		Dup
+		GetVariableValue              2                     ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    47865, 4
+		LineNumberAlt1                277, 128
+		GetThisMemberValueString      "logarray"
+		GetVariableValue              2                     ; local
+		GetArrayValue
+		GetMemberValueString          "obj"
+		Dup
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Pop
+		LineNumber                    47868, 4
+		LineNumberAlt1                280, 128
+		GetThisMemberValueString      "logarrayubound"
+		PushConstant0
+		SetVariableValue              2                     ; local
+		; <-
+		BranchTarget                  4
+		Dup
+		GetVariableValue              2                     ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 6, 0
+		; ->
+		LineNumber                    47869, 4
+		LineNumberAlt1                281, 128
+		GetThisMemberValueString      "logarray"
+		GetVariableValue              2                     ; local
+		GetArrayValue
+		GetMemberValueString          "obj"
+		GetMemberValueString          "collide"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    47870, 4
+		LineNumberAlt1                282, 128
+		GetThisMemberValueString      "logarray"
+		GetVariableValue              2                     ; local
+		GetArrayValue
+		GetMemberValueString          "obj"
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    47870, 4
+		LineNumberAlt1                282, 128
+		GetThisMemberValueString      "logarray"
+		GetVariableValue              2                     ; local
+		GetArrayValue
+		GetMemberValueString          "startingycoord"
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    47871, 4
+		LineNumberAlt1                283, 128
+		GetThisMemberValueString      "logarray"
+		GetVariableValue              2                     ; local
+		GetArrayValue
+		PushConstantStringString      "true"
+		Pull                          2
+		GetMemberFunctionString       "setfirsttouch"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    47872, 4
+		LineNumberAlt1                284, 128
+		GetThisMemberValueString      "logarray"
+		GetVariableValue              2                     ; local
+		GetArrayValue
+		GetMemberValueString          "obj"
+		GetThisMemberValueString      "logarray"
+		GetVariableValue              2                     ; local
+		GetArrayValue
+		GetMemberValueString          "obj"
+		Dup
+		GetMemberFunctionString       "getx"
+		JumpAbsolute                  1
+		LineNumber                    47872, 4
+		LineNumberAlt1                284, 128
+		GetThisMemberValueString      "logarray"
+		GetVariableValue              2                     ; local
+		GetArrayValue
+		GetMemberValueString          "startingycoord"
+		GetThisMemberValueString      "logarray"
+		GetVariableValue              2                     ; local
+		GetArrayValue
+		GetMemberValueString          "obj"
+		Dup
+		GetMemberFunctionString       "getz"
+		JumpAbsolute                  1
+		LineNumber                    47872, 4
+		LineNumberAlt1                284, 128
+		PushConstantf32               0.20000000298023224
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		; <-
+		BranchTarget                  5
+		IncrementVariable             2
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  6
+		Pop
+		LineNumber                    47877, 4
+		LineNumberAlt1                289, 128
+		GetThisMemberValueString      "tempplatform"
+		Dup
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    47878, 4
+		LineNumberAlt1                290, 128
+		GetThisMemberValueString      "tempplatform"
+		GetMemberValueString          "collide"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 7, 0
+		; ->
+		LineNumber                    47879, 4
+		LineNumberAlt1                291, 128
+		PushConstant0
+		SetThisMemberValueString      "canblow"
+		; <-
+		BranchTarget                  7
+		LineNumber                    47882, 4
+		LineNumberAlt1                294, 128
+		GetThisMemberValueString      "testplatforms"
+		PushConstanti8                4
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    47883, 4
+		LineNumberAlt1                295, 128
+		GetThisMemberValueString      "testplatforms"
+		PushConstanti8                4
+		GetArrayValue
+		GetMemberValueString          "collide"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 8, 0
+		; ->
+		LineNumber                    47884, 4
+		LineNumberAlt1                296, 128
+		PushConstanti8                1
+		SetThisMemberValueString      "firsttouch"
+		; <-
+		BranchTarget                  8
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x7e62b
+		; source: 128 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_vllg.vbo" 305:433
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          1
+		LineNumber                    47893, 4
+		LineNumberAlt1                305, 128
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                4
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    47900, 4
+		LineNumberAlt1                312, 128
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		PushConstantStringString      "tp05"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    47900, 4
+		LineNumberAlt1                312, 128
+		EqualTo
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		PushConstant0
+		EqualTo
+		And
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    47902, 4
+		LineNumberAlt1                314, 128
+		PushConstanti8                1
+		SetThisMemberValueString      "firsttouch"
+		; <-
+		BranchTarget                  0
+		BranchAlwaysTarget            18, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 14, 0
+		; ->
+		LineNumber                    47910, 4
+		LineNumberAlt1                322, 128
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		PushConstantStringString      "cnt1"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    47910, 4
+		LineNumberAlt1                322, 128
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    47911, 4
+		LineNumberAlt1                323, 128
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		PushConstantStringString      "cnt1"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    47911, 4
+		LineNumberAlt1                323, 128
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    47912, 4
+		LineNumberAlt1                324, 128
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		SetThisMemberValueString      "newplatform"
+		LineNumber                    47914, 4
+		LineNumberAlt1                326, 128
+		GetThisMemberValueString      "oldplatform"
+		GetThisMemberValueString      "newplatform"
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    47915, 4
+		LineNumberAlt1                327, 128
+		PushConstanti8                1
+		SetThisMemberValueString      "printwhichplatformimon"
+		; <-
+		BranchTarget                  2
+		LineNumber                    47918, 4
+		LineNumberAlt1                330, 128
+		GetThisMemberValueString      "printwhichplatformimon"
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    47921, 4
+		LineNumberAlt1                333, 128
+		PushConstantStringString      "You're on platform "
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		CallGameFunctionString        "scslosifoundation", "identifiertostring", 1
+		LineNumber                    47921, 4
+		LineNumberAlt1                333, 128
+		Add
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    47922, 4
+		LineNumberAlt1                334, 128
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		SetThisMemberValueString      "oldplatform"
+		LineNumber                    47923, 4
+		LineNumberAlt1                335, 128
+		PushConstant0
+		SetThisMemberValueString      "printwhichplatformimon"
+		; <-
+		BranchTarget                  3
+		LineNumber                    47929, 4
+		LineNumberAlt1                341, 128
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		Dup
+		PushConstantStringString      "cnt1"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    47930, 4
+		LineNumberAlt1                342, 128
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    47931, 4
+		LineNumberAlt1                343, 128
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		Dup
+		GetThisMemberValueString      "wirlpool"
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    47933, 4
+		LineNumberAlt1                345, 128
+		PushConstantf32               1.2000000476837158
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		LineNumber                    47934, 4
+		LineNumberAlt1                346, 128
+		PushConstantStringString      "isld"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    47934, 4
+		LineNumberAlt1                346, 128
+		PushConstantStringString      "str0"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    47934, 4
+		LineNumberAlt1                346, 128
+		PushConstantStringString      "lok0"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    47934, 4
+		LineNumberAlt1                346, 128
+		CallGameFunctionString        "gcbagroup", "setswitchareas", 3
+		Pop
+		; <-
+		BranchTarget                  4
+		Pop
+		; <-
+		BranchTarget                  5
+		Pop
+		LineNumber                    47939, 4
+		LineNumberAlt1                351, 128
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                2
+		GetArrayValue
+		Dup
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 13, 0
+		; ->
+		LineNumber                    47941, 4
+		LineNumberAlt1                353, 128
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		Dup
+		PushConstantStringString      "cnt1"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    47942, 4
+		LineNumberAlt1                354, 128
+		EqualTo
+		CompareAndBranchIfFalseTarget 12, 0
+		; ->
+		LineNumber                    47943, 4
+		LineNumberAlt1                355, 128
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		Dup
+		GetThisMemberValueString      "testplatforms"
+		PushConstant0
+		GetArrayValue
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 6, 0
+		; ->
+		LineNumber                    47946, 4
+		LineNumberAlt1                358, 128
+		GetThisMemberValueString      "testplatforms"
+		PushConstant0
+		GetArrayValue
+		GetMemberValueString          "id"
+		SetThisMemberValueString      "currentlycollidingwith"
+		LineNumber                    47947, 4
+		LineNumberAlt1                359, 128
+		GetThisMemberValueString      "testplatforms"
+		PushConstant0
+		GetArrayValue
+		SetThisMemberValueString      "tempplatform"
+		LineNumber                    47948, 4
+		LineNumberAlt1                360, 128
+		PushConstanti8                1
+		SetThisMemberValueString      "canblow"
+		LineNumber                    47949, 4
+		LineNumberAlt1                361, 128
+		GetThisMemberValueString      "tempplatform"
+		Dup
+		GetMemberFunctionString       "setcollide"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            11, 0
+		; ->
+		; <-
+		BranchTarget                  6
+		Dup
+		GetThisMemberValueString      "testplatforms"
+		PushConstanti8                1
+		GetArrayValue
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 7, 0
+		; ->
+		LineNumber                    47952, 4
+		LineNumberAlt1                364, 128
+		GetThisMemberValueString      "testplatforms"
+		PushConstanti8                1
+		GetArrayValue
+		GetMemberValueString          "id"
+		SetThisMemberValueString      "currentlycollidingwith"
+		LineNumber                    47953, 4
+		LineNumberAlt1                365, 128
+		GetThisMemberValueString      "testplatforms"
+		PushConstanti8                1
+		GetArrayValue
+		SetThisMemberValueString      "tempplatform"
+		LineNumber                    47954, 4
+		LineNumberAlt1                366, 128
+		PushConstanti8                1
+		SetThisMemberValueString      "canblow"
+		LineNumber                    47955, 4
+		LineNumberAlt1                367, 128
+		GetThisMemberValueString      "tempplatform"
+		Dup
+		GetMemberFunctionString       "setcollide"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            11, 0
+		; ->
+		; <-
+		BranchTarget                  7
+		Dup
+		GetThisMemberValueString      "testplatforms"
+		PushConstanti8                2
+		GetArrayValue
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 8, 0
+		; ->
+		LineNumber                    47958, 4
+		LineNumberAlt1                370, 128
+		GetThisMemberValueString      "testplatforms"
+		PushConstanti8                2
+		GetArrayValue
+		GetMemberValueString          "id"
+		SetThisMemberValueString      "currentlycollidingwith"
+		LineNumber                    47959, 4
+		LineNumberAlt1                371, 128
+		GetThisMemberValueString      "testplatforms"
+		PushConstanti8                2
+		GetArrayValue
+		SetThisMemberValueString      "tempplatform"
+		LineNumber                    47960, 4
+		LineNumberAlt1                372, 128
+		PushConstanti8                1
+		SetThisMemberValueString      "canblow"
+		LineNumber                    47961, 4
+		LineNumberAlt1                373, 128
+		GetThisMemberValueString      "tempplatform"
+		Dup
+		GetMemberFunctionString       "setcollide"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            11, 0
+		; ->
+		; <-
+		BranchTarget                  8
+		Dup
+		GetThisMemberValueString      "testplatforms"
+		PushConstanti8                3
+		GetArrayValue
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 9, 0
+		; ->
+		LineNumber                    47964, 4
+		LineNumberAlt1                376, 128
+		GetThisMemberValueString      "testplatforms"
+		PushConstanti8                3
+		GetArrayValue
+		GetMemberValueString          "id"
+		SetThisMemberValueString      "currentlycollidingwith"
+		LineNumber                    47965, 4
+		LineNumberAlt1                377, 128
+		GetThisMemberValueString      "testplatforms"
+		PushConstanti8                3
+		GetArrayValue
+		SetThisMemberValueString      "tempplatform"
+		LineNumber                    47966, 4
+		LineNumberAlt1                378, 128
+		PushConstanti8                1
+		SetThisMemberValueString      "canblow"
+		LineNumber                    47967, 4
+		LineNumberAlt1                379, 128
+		GetThisMemberValueString      "tempplatform"
+		Dup
+		GetMemberFunctionString       "setcollide"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            11, 0
+		; ->
+		; <-
+		BranchTarget                  9
+		Dup
+		GetThisMemberValueString      "testplatforms"
+		PushConstanti8                4
+		GetArrayValue
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 11, 0
+		; ->
+		LineNumber                    47970, 4
+		LineNumberAlt1                382, 128
+		GetThisMemberValueString      "firsttouch"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 10, 0
+		; ->
+		LineNumber                    47971, 4
+		LineNumberAlt1                383, 128
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "whichmaskonface"
+		JumpAbsolute                  1
+		LineNumber                    47971, 4
+		LineNumberAlt1                383, 128
+		PushConstanti8                9
+		EqualTo
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "ismaskpoweron"
+		JumpAbsolute                  1
+		LineNumber                    47971, 4
+		LineNumberAlt1                383, 128
+		PushConstanti8                1
+		EqualTo
+		And
+		CompareAndBranchIfFalseTarget 10, 0
+		; ->
+		LineNumber                    47973, 4
+		LineNumberAlt1                385, 128
+		PushConstant0
+		SetThisMemberValueString      "firsttouch"
+		; <-
+		BranchTarget                  10
+		LineNumber                    47976, 4
+		LineNumberAlt1                388, 128
+		GetThisMemberValueString      "testplatforms"
+		PushConstanti8                4
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "setcollide"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  11
+		Pop
+		; <-
+		BranchTarget                  12
+		Pop
+		; <-
+		BranchTarget                  13
+		Pop
+		BranchAlwaysTarget            18, 0
+		; ->
+		; <-
+		BranchTarget                  14
+		Dup
+		PushConstanti8                11
+		EqualTo
+		CompareAndBranchIfFalseTarget 16, 0
+		; ->
+		LineNumber                    47986, 4
+		LineNumberAlt1                398, 128
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		CallGameFunctionString        "scslosifoundation", "identifiertostring", 1
+		LineNumber                    47986, 4
+		LineNumberAlt1                398, 128
+		Dup
+		PushConstantStringString      "g054"
+		EqualTo
+		CompareAndBranchIfFalseTarget 15, 0
+		; ->
+		LineNumber                    47988, 4
+		LineNumberAlt1                400, 128
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "ninp"
+		Pull                          2
+		GetMemberFunctionString       "setinputstate"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    47989, 4
+		LineNumberAlt1                401, 128
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "level"
+		GetMemberValueString          "cam"
+		PushConstanti8                11
+		Pull                          2
+		GetMemberFunctionString       "setaimode"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  15
+		Pop
+		BranchAlwaysTarget            18, 0
+		; ->
+		; <-
+		BranchTarget                  16
+		Dup
+		PushConstanti8                46
+		EqualTo
+		CompareAndBranchIfFalseTarget 17, 0
+		; ->
+		LineNumber                    48008, 4
+		LineNumberAlt1                420, 128
+		PushConstantf32               1.2000000476837158
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		BranchAlwaysTarget            18, 0
+		; ->
+		; <-
+		BranchTarget                  17
+		Dup
+		PushConstanti8                27
+		EqualTo
+		CompareAndBranchIfFalseTarget 18, 0
+		; ->
+		LineNumber                    48012, 4
+		LineNumberAlt1                424, 128
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "unkill"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    48013, 4
+		LineNumberAlt1                425, 128
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "enterstartid"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "enterlookid"
+		Pull                          3
+		GetMemberFunctionString       "gotopos"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    48014, 4
+		LineNumberAlt1                426, 128
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "g000"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    48014, 4
+		LineNumberAlt1                426, 128
+		Pull                          2
+		GetMemberFunctionString       "switchanimation"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    48015, 4
+		LineNumberAlt1                427, 128
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "level"
+		GetMemberValueString          "cam"
+		PushConstanti8                11
+		Pull                          2
+		GetMemberFunctionString       "setaimode"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  18
+		Pop
+		LineNumber                    48020, 4
+		LineNumberAlt1                432, 128
+		GetThisMemberValueString      "logarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2                                            ; local
+		; <-
+		BranchTarget                  19
+		Dup
+		GetVariableValue              2                                            ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 20, 0
+		; ->
+		LineNumber                    48021, 4
+		LineNumberAlt1                433, 128
+		GetThisMemberValueString      "logarray"
+		GetVariableValue              2                                            ; local
+		GetArrayValue
+		GetVariableValue              1                                            ; local
+		Pull                          2
+		GetMemberFunctionString       "onevent"
+		JumpAbsolute                  2
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            19, 0
+		; ->
+		; <-
+		BranchTarget                  20
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x7ebe5
+		; source: 128 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_vllg.vbo" 439:440
+		; source: 204 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_mtop.vbo" 80:84
+		MemberFunctionArgumentCheck   2
+		LineNumber                    48027, 4
+		LineNumberAlt1                439, 128
+		GetVariableValue              1                           ; local
+		GetMemberValueString          "button"
+		PushConstanti8                90
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    48027, 4
+		LineNumberAlt1                439, 128
+		GetVariableValue              1                           ; local
+		GetMemberValueString          "event"
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    48027, 4
+		LineNumberAlt1                439, 128
+		GetVariableValue              0                           ; local
+		GetThisMemberFunctionString   "cheat"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    48028, 4
+		LineNumberAlt1                440, 128
+		GetVariableValue              1                           ; local
+		GetMemberValueString          "button"
+		PushConstanti8                32
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    48028, 4
+		LineNumberAlt1                440, 128
+		GetVariableValue              1                           ; local
+		GetMemberValueString          "event"
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    48028, 4
+		LineNumberAlt1                440, 128
+		GetVariableValue              0                           ; local
+		GetThisMemberFunctionString   "blowtheconch"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  1
+		LineNumber                    7724, 4
+		LineNumberAlt1                80, 204
+		GetVariableValue              1                           ; local
+		GetMemberValueString          "event"
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    7725, 4
+		LineNumberAlt1                81, 204
+		GetVariableValue              1                           ; local
+		GetMemberValueString          "button"
+		Dup
+		PushConstanti16               255
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    7727, 4
+		LineNumberAlt1                83, 204
+		GetThisMemberValueString      "cinema"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    7728, 4
+		LineNumberAlt1                84, 204
+		GetThisMemberValueString      "cinema"
+		CallGameFunctionString        "gccinemaengine", "stop", 1
+		Pop
+		; <-
+		BranchTarget                  2
+		Pop
+		; <-
+		BranchTarget                  3
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cheat"
+		; address: 0x7ecbd
+		; source: 128 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_vllg.vbo" 448:448
+		MemberFunctionArgumentCheck 1
+		LineNumber                  48036, 4
+		LineNumberAlt1              448, 128
+		PushConstanti8              7
+		SetThisMemberValueString    "puzinc"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "soundthehorn"
+		; address: 0x7ecd0
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "blowtheconch"
+		; address: 0x7ecd4
+		; source: 128 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_vllg.vbo" 465:554
+		; source: 146 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_mosh.vbo" 43:43
+		MemberFunctionArgumentCheck   1
+		LineNumber                    48053, 4
+		LineNumberAlt1                465, 128
+		GetThisMemberValueString      "canblow"
+		CompareAndBranchIfFalseTarget 13, 0
+		; ->
+		LineNumber                    48055, 4
+		LineNumberAlt1                467, 128
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		Dup
+		GetMemberFunctionString       "getorientation"
+		JumpAbsolute                  1
+		LineNumber                    48055, 4
+		LineNumberAlt1                467, 128
+		PushConstanti8                66
+		GreaterThan
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		Dup
+		GetMemberFunctionString       "getorientation"
+		JumpAbsolute                  1
+		LineNumber                    48055, 4
+		LineNumberAlt1                467, 128
+		PushConstanti16               136
+		LessThan
+		And
+		CompareAndBranchIfFalseTarget 12, 0
+		; ->
+		LineNumber                    48057, 4
+		LineNumberAlt1                469, 128
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstanti8                101
+		Pull                          2
+		GetMemberFunctionString       "setorientation"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    48059, 4
+		LineNumberAlt1                471, 128
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "level"
+		GetMemberValueString          "cam"
+		PushConstant0
+		PushConstantf32               402.7950134277344
+		Subtract
+		PushConstantf32               141.42599487304688
+		PushConstant0
+		PushConstantf32               319.1910095214844
+		Subtract
+		PushConstant0
+		PushConstantf32               83.92400360107422
+		Subtract
+		PushConstantf32               28.417999267578125
+		PushConstant0
+		PushConstantf32               400.6669921875
+		Subtract
+		PushConstantf32               5.5
+		Pull                          8
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  8
+		Pop
+		LineNumber                    48061, 4
+		LineNumberAlt1                473, 128
+		GetThisMemberValueString      "currentlycollidingwith"
+		Dup
+		GetThisMemberValueString      "testplatforms"
+		PushConstant0
+		GetArrayValue
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    48063, 4
+		LineNumberAlt1                475, 128
+		PushConstanti16               733
+		CallGameFunctionString        "gcstaticsoundsptrarray", "playtablesound", 1
+		Pop
+		LineNumber                    48064, 4
+		LineNumberAlt1                476, 128
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstant0
+		PushConstantf32               393.6919860839844
+		Subtract
+		PushConstantf32               130.66700744628906
+		PushConstant0
+		PushConstantf32               327.8840026855469
+		Subtract
+		Pull                          4
+		GetMemberFunctionString       "setpos"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    48065, 4
+		LineNumberAlt1                477, 128
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "none"
+		Pull                          2
+		GetMemberFunctionString       "setinputstate"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    48066, 4
+		LineNumberAlt1                478, 128
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "g054"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    48066, 4
+		LineNumberAlt1                478, 128
+		Pull                          2
+		GetMemberFunctionString       "setsplitanimation"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    48070, 4
+		LineNumberAlt1                482, 128
+		GetVariableValue              0                                                    ; local
+		GetThisMemberValueString      "currentsound"
+		GetThisMemberFunctionString   "soundthehorn"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    48072, 4
+		LineNumberAlt1                484, 128
+		GetThisMemberValueString      "puzinc"
+		PushConstanti8                8
+		LessThan
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    48073, 4
+		LineNumberAlt1                485, 128
+		GetThisMemberValueString      "puzinc"
+		PushConstanti8                1
+		EqualTo
+		GetThisMemberValueString      "puzinc"
+		PushConstanti8                6
+		EqualTo
+		Or
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    48074, 4
+		LineNumberAlt1                486, 128
+		GetThisMemberValueString      "puzinc"
+		PushConstanti8                1
+		Add
+		SetThisMemberValueString      "puzinc"
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    48076, 4
+		LineNumberAlt1                488, 128
+		PushConstanti8                1
+		SetThisMemberValueString      "puzinc"
+		; <-
+		BranchTarget                  1
+		BranchAlwaysTarget            11, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		Dup
+		GetThisMemberValueString      "testplatforms"
+		PushConstanti8                1
+		GetArrayValue
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    48080, 4
+		LineNumberAlt1                492, 128
+		PushConstanti16               734
+		CallGameFunctionString        "gcstaticsoundsptrarray", "playtablesound", 1
+		Pop
+		LineNumber                    48081, 4
+		LineNumberAlt1                493, 128
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstant0
+		PushConstantf32               393.26300048828125
+		Subtract
+		PushConstantf32               130.5330047607422
+		PushConstant0
+		PushConstantf32               325.3900146484375
+		Subtract
+		Pull                          4
+		GetMemberFunctionString       "setpos"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    48082, 4
+		LineNumberAlt1                494, 128
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "none"
+		Pull                          2
+		GetMemberFunctionString       "setinputstate"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    48083, 4
+		LineNumberAlt1                495, 128
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "g054"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    48083, 4
+		LineNumberAlt1                495, 128
+		Pull                          2
+		GetMemberFunctionString       "setsplitanimation"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    48087, 4
+		LineNumberAlt1                499, 128
+		GetVariableValue              0                                                    ; local
+		GetThisMemberValueString      "currentsound"
+		GetThisMemberFunctionString   "soundthehorn"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    48089, 4
+		LineNumberAlt1                501, 128
+		GetThisMemberValueString      "puzinc"
+		PushConstanti8                8
+		LessThan
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    48090, 4
+		LineNumberAlt1                502, 128
+		GetThisMemberValueString      "puzinc"
+		PushConstanti8                4
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    48091, 4
+		LineNumberAlt1                503, 128
+		GetThisMemberValueString      "puzinc"
+		PushConstanti8                1
+		Add
+		SetThisMemberValueString      "puzinc"
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		LineNumber                    48093, 4
+		LineNumberAlt1                505, 128
+		PushConstanti8                1
+		SetThisMemberValueString      "puzinc"
+		; <-
+		BranchTarget                  4
+		BranchAlwaysTarget            11, 0
+		; ->
+		; <-
+		BranchTarget                  5
+		Dup
+		GetThisMemberValueString      "testplatforms"
+		PushConstanti8                2
+		GetArrayValue
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 9, 0
+		; ->
+		LineNumber                    48097, 4
+		LineNumberAlt1                509, 128
+		PushConstanti16               735
+		CallGameFunctionString        "gcstaticsoundsptrarray", "playtablesound", 1
+		Pop
+		LineNumber                    48098, 4
+		LineNumberAlt1                510, 128
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstant0
+		PushConstantf32               391.71099853515625
+		Subtract
+		PushConstantf32               130.62100219726562
+		PushConstant0
+		PushConstantf32               318.0060119628906
+		Subtract
+		Pull                          4
+		GetMemberFunctionString       "setpos"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    48099, 4
+		LineNumberAlt1                511, 128
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "none"
+		Pull                          2
+		GetMemberFunctionString       "setinputstate"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    48100, 4
+		LineNumberAlt1                512, 128
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "g054"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    48100, 4
+		LineNumberAlt1                512, 128
+		Pull                          2
+		GetMemberFunctionString       "setsplitanimation"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    48104, 4
+		LineNumberAlt1                516, 128
+		GetVariableValue              0                                                    ; local
+		GetThisMemberValueString      "currentsound"
+		GetThisMemberFunctionString   "soundthehorn"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    48106, 4
+		LineNumberAlt1                518, 128
+		GetThisMemberValueString      "puzinc"
+		PushConstanti8                8
+		LessThan
+		CompareAndBranchIfFalseTarget 8, 0
+		; ->
+		LineNumber                    48107, 4
+		LineNumberAlt1                519, 128
+		GetThisMemberValueString      "puzinc"
+		PushConstanti8                2
+		EqualTo
+		GetThisMemberValueString      "puzinc"
+		PushConstanti8                7
+		EqualTo
+		Or
+		CompareAndBranchIfFalseTarget 7, 0
+		; ->
+		LineNumber                    48108, 4
+		LineNumberAlt1                520, 128
+		GetThisMemberValueString      "puzinc"
+		PushConstanti8                7
+		EqualTo
+		CompareAndBranchIfFalseTarget 6, 0
+		; ->
+		LineNumber                    48109, 4
+		LineNumberAlt1                521, 128
+		GetThisMemberValueString      "cinema_shown"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 6, 0
+		; ->
+		LineNumber                    48111, 4
+		LineNumberAlt1                523, 128
+		PushConstanti8                1
+		SetThisMemberValueString      "show_wirlpool"
+		LineNumber                    48112, 4
+		LineNumberAlt1                524, 128
+		GetThisMemberValueString      "wirlpool"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    48113, 4
+		LineNumberAlt1                525, 128
+		GetThisMemberValueString      "cinema"
+		CallGameFunctionString        "gccinemaengine", "play", 1
+		Pop
+		LineNumber                    53076, 4
+		LineNumberAlt1                43, 146
+		GetThisMemberValueString      "cinema"
+		PushConstantStringString      "isld"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    53076, 4
+		LineNumberAlt1                43, 146
+		CallGameFunctionString        "gccinemaengine", "setnextarea", 2
+		Pop
+		; <-
+		BranchTarget                  6
+		LineNumber                    48117, 4
+		LineNumberAlt1                529, 128
+		GetThisMemberValueString      "puzinc"
+		PushConstanti8                1
+		Add
+		SetThisMemberValueString      "puzinc"
+		BranchAlwaysTarget            8, 0
+		; ->
+		; <-
+		BranchTarget                  7
+		LineNumber                    48119, 4
+		LineNumberAlt1                531, 128
+		PushConstanti8                1
+		SetThisMemberValueString      "puzinc"
+		; <-
+		BranchTarget                  8
+		BranchAlwaysTarget            11, 0
+		; ->
+		; <-
+		BranchTarget                  9
+		Dup
+		GetThisMemberValueString      "testplatforms"
+		PushConstanti8                3
+		GetArrayValue
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 11, 0
+		; ->
+		LineNumber                    48123, 4
+		LineNumberAlt1                535, 128
+		PushConstanti16               736
+		CallGameFunctionString        "gcstaticsoundsptrarray", "playtablesound", 1
+		Pop
+		LineNumber                    48124, 4
+		LineNumberAlt1                536, 128
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstant0
+		PushConstantf32               391.1109924316406
+		Subtract
+		PushConstantf32               130.6020050048828
+		PushConstant0
+		PushConstantf32               315.4179992675781
+		Subtract
+		Pull                          4
+		GetMemberFunctionString       "setpos"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    48125, 4
+		LineNumberAlt1                537, 128
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "none"
+		Pull                          2
+		GetMemberFunctionString       "setinputstate"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    48126, 4
+		LineNumberAlt1                538, 128
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "g054"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    48126, 4
+		LineNumberAlt1                538, 128
+		Pull                          2
+		GetMemberFunctionString       "setsplitanimation"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    48130, 4
+		LineNumberAlt1                542, 128
+		GetVariableValue              0                                                    ; local
+		GetThisMemberValueString      "currentsound"
+		GetThisMemberFunctionString   "soundthehorn"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    48132, 4
+		LineNumberAlt1                544, 128
+		GetThisMemberValueString      "puzinc"
+		PushConstanti8                8
+		LessThan
+		CompareAndBranchIfFalseTarget 11, 0
+		; ->
+		LineNumber                    48133, 4
+		LineNumberAlt1                545, 128
+		GetThisMemberValueString      "puzinc"
+		PushConstanti8                3
+		EqualTo
+		GetThisMemberValueString      "puzinc"
+		PushConstanti8                5
+		EqualTo
+		Or
+		CompareAndBranchIfFalseTarget 10, 0
+		; ->
+		LineNumber                    48134, 4
+		LineNumberAlt1                546, 128
+		GetThisMemberValueString      "puzinc"
+		PushConstanti8                1
+		Add
+		SetThisMemberValueString      "puzinc"
+		BranchAlwaysTarget            11, 0
+		; ->
+		; <-
+		BranchTarget                  10
+		LineNumber                    48136, 4
+		LineNumberAlt1                548, 128
+		PushConstanti8                1
+		SetThisMemberValueString      "puzinc"
+		; <-
+		BranchTarget                  11
+		Pop
+		BranchAlwaysTarget            13, 0
+		; ->
+		; <-
+		BranchTarget                  12
+		LineNumber                    48142, 4
+		LineNumberAlt1                554, 128
+		PushConstantStringString      "you are not within the orientation range limit...."
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		; <-
+		BranchTarget                  13
+		PushNothing
+		Return
+	end ; method
+end ; class

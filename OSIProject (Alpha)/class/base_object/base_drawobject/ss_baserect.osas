@@ -1,0 +1,640 @@
+begin class "ss_baserect", "base_drawobject"
+	property "rect"
+	property "rident"
+	property "mycolor"
+
+	begin method "ss_baserect"
+		; address: 0x7003c
+		; source: 117 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_baseshapes.vbo" 77:90
+		MemberFunctionArgumentCheck   7
+		LineNumber                    41509, 4
+		LineNumberAlt1                77, 117
+		GetVariableValue              1          ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    41509, 4
+		LineNumberAlt1                77, 117
+		GetVariableValue              1          ; local
+		SetThisMemberValueString      "x1"
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    41510, 4
+		LineNumberAlt1                78, 117
+		PushConstant0
+		SetThisMemberValueString      "x1"
+		; <-
+		BranchTarget                  1
+		LineNumber                    41511, 4
+		LineNumberAlt1                79, 117
+		GetVariableValue              2          ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    41511, 4
+		LineNumberAlt1                79, 117
+		GetVariableValue              2          ; local
+		SetThisMemberValueString      "y1"
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		LineNumber                    41512, 4
+		LineNumberAlt1                80, 117
+		PushConstant0
+		SetThisMemberValueString      "y1"
+		; <-
+		BranchTarget                  3
+		LineNumber                    41513, 4
+		LineNumberAlt1                81, 117
+		GetVariableValue              3          ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    41513, 4
+		LineNumberAlt1                81, 117
+		GetVariableValue              3          ; local
+		SetThisMemberValueString      "x2"
+		BranchAlwaysTarget            5, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		LineNumber                    41514, 4
+		LineNumberAlt1                82, 117
+		PushConstant0
+		SetThisMemberValueString      "x2"
+		; <-
+		BranchTarget                  5
+		LineNumber                    41515, 4
+		LineNumberAlt1                83, 117
+		GetVariableValue              4          ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 6, 0
+		; ->
+		LineNumber                    41515, 4
+		LineNumberAlt1                83, 117
+		GetVariableValue              4          ; local
+		SetThisMemberValueString      "y2"
+		BranchAlwaysTarget            7, 0
+		; ->
+		; <-
+		BranchTarget                  6
+		LineNumber                    41516, 4
+		LineNumberAlt1                84, 117
+		PushConstant0
+		SetThisMemberValueString      "y2"
+		; <-
+		BranchTarget                  7
+		LineNumber                    41518, 4
+		LineNumberAlt1                86, 117
+		GetVariableValue              6          ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 8, 0
+		; ->
+		LineNumber                    41518, 4
+		LineNumberAlt1                86, 117
+		GetVariableValue              6          ; local
+		SetThisMemberValueString      "mycolor"
+		BranchAlwaysTarget            9, 0
+		; ->
+		; <-
+		BranchTarget                  8
+		LineNumber                    41519, 4
+		LineNumberAlt1                87, 117
+		PushConstantColor8888         0xffffffff
+		PushConstanti16               255
+		SetRedValue
+		PushConstanti16               255
+		SetGreenValue
+		PushConstanti16               255
+		SetBlueValue
+		PushConstanti16               255
+		SetAlphaValue
+		SetThisMemberValueString      "mycolor"
+		; <-
+		BranchTarget                  9
+		LineNumber                    41521, 4
+		LineNumberAlt1                89, 117
+		GetVariableValue              5          ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 10, 0
+		; ->
+		LineNumber                    41521, 4
+		LineNumberAlt1                89, 117
+		GetVariableValue              5          ; local
+		SetThisMemberValueString      "z"
+		BranchAlwaysTarget            11, 0
+		; ->
+		; <-
+		BranchTarget                  10
+		LineNumber                    41522, 4
+		LineNumberAlt1                90, 117
+		PushConstant0
+		SetThisMemberValueString      "z"
+		; <-
+		BranchTarget                  11
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x7018c
+		; source: 117 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_baseshapes.vbo" 96:99
+		MemberFunctionArgumentCheck 1
+		LineNumber                  41528, 4
+		LineNumberAlt1              96, 117
+		CallGameFunctionString      "gcrectangle", "create", 0
+		LineNumber                  41528, 4
+		LineNumberAlt1              96, 117
+		SetThisMemberValueString    "rect"
+		LineNumber                  41529, 4
+		LineNumberAlt1              97, 117
+		GetThisMemberValueString    "rect"
+		GetThisMemberValueString    "x1"
+		GetThisMemberValueString    "y1"
+		GetThisMemberValueString    "x2"
+		GetThisMemberValueString    "y2"
+		CallGameFunctionString      "gcrectangle", "setposition", 5
+		Pop
+		LineNumber                  41530, 4
+		LineNumberAlt1              98, 117
+		GetThisMemberValueString    "rect"
+		GetThisMemberValueString    "mycolor"
+		CallGameFunctionString      "gcrectangle", "setcolor", 2
+		Pop
+		LineNumber                  41531, 4
+		LineNumberAlt1              99, 117
+		GetThisMemberValueString    "rect"
+		GetThisMemberValueString    "z"
+		CallGameFunctionString      "gcrectangle", "setzdepth", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x701fb
+		; source: 117 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_baseshapes.vbo" 103:103
+		MemberFunctionArgumentCheck 1
+		LineNumber                  41535, 4
+		LineNumberAlt1              103, 117
+		PushNothing
+		SetThisMemberValueString    "rect"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initshort"
+		; address: 0x7020d
+		; source: 117 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_baseshapes.vbo" 107:107
+		MemberFunctionArgumentCheck 1
+		LineNumber                  41539, 4
+		LineNumberAlt1              107, 117
+		GetVariableValue            0          ; local
+		GetThisMemberFunctionString "initfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupshort"
+		; address: 0x70224
+		; source: 117 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_baseshapes.vbo" 111:111
+		MemberFunctionArgumentCheck 1
+		LineNumber                  41543, 4
+		LineNumberAlt1              111, 117
+		GetVariableValue            0             ; local
+		GetThisMemberFunctionString "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "add"
+		; address: 0x7023b
+		; source: 117 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_baseshapes.vbo" 115:115
+		MemberFunctionArgumentCheck 1
+		LineNumber                  41547, 4
+		LineNumberAlt1              115, 117
+		GetThisMemberValueString    "rect"
+		CallGameFunctionString      "gchuddirector", "addrectangle", 1
+		LineNumber                  41547, 4
+		LineNumberAlt1              115, 117
+		SetThisMemberValueString    "rident"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "show"
+		; address: 0x7025f
+		; source: 117 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_baseshapes.vbo" 119:120
+		MemberFunctionArgumentCheck 1
+		LineNumber                  41551, 4
+		LineNumberAlt1              119, 117
+		GetThisMemberValueString    "rident"
+		CallGameFunctionString      "gchuddirector", "show", 1
+		Pop
+		LineNumber                  41552, 4
+		LineNumberAlt1              120, 117
+		PushConstanti8              1
+		SetThisMemberValueString    "onscreen"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hide"
+		; address: 0x70286
+		; source: 117 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_baseshapes.vbo" 124:125
+		MemberFunctionArgumentCheck 1
+		LineNumber                  41556, 4
+		LineNumberAlt1              124, 117
+		GetThisMemberValueString    "rident"
+		CallGameFunctionString      "gchuddirector", "hide", 1
+		Pop
+		LineNumber                  41557, 4
+		LineNumberAlt1              125, 117
+		PushConstant0
+		SetThisMemberValueString    "onscreen"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "remove"
+		; address: 0x702ac
+		; source: 117 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_baseshapes.vbo" 129:129
+		MemberFunctionArgumentCheck 1
+		LineNumber                  41561, 4
+		LineNumberAlt1              129, 117
+		GetThisMemberValueString    "rident"
+		CallGameFunctionString      "gchuddirector", "remove", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setpos"
+		; address: 0x702c4
+		; source: 117 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_baseshapes.vbo" 133:138
+		MemberFunctionArgumentCheck   5
+		LineNumber                    41565, 4
+		LineNumberAlt1                133, 117
+		GetThisMemberValueString      "x1"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    41565, 4
+		LineNumberAlt1                133, 117
+		GetVariableValue              1                               ; local
+		SetThisMemberValueString      "x1"
+		; <-
+		BranchTarget                  0
+		LineNumber                    41566, 4
+		LineNumberAlt1                134, 117
+		GetThisMemberValueString      "y1"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    41566, 4
+		LineNumberAlt1                134, 117
+		GetVariableValue              2                               ; local
+		SetThisMemberValueString      "y1"
+		; <-
+		BranchTarget                  1
+		LineNumber                    41567, 4
+		LineNumberAlt1                135, 117
+		GetThisMemberValueString      "x2"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    41567, 4
+		LineNumberAlt1                135, 117
+		GetVariableValue              3                               ; local
+		SetThisMemberValueString      "x2"
+		; <-
+		BranchTarget                  2
+		LineNumber                    41568, 4
+		LineNumberAlt1                136, 117
+		GetThisMemberValueString      "y2"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    41568, 4
+		LineNumberAlt1                136, 117
+		GetVariableValue              4                               ; local
+		SetThisMemberValueString      "y2"
+		; <-
+		BranchTarget                  3
+		LineNumber                    41570, 4
+		LineNumberAlt1                138, 117
+		GetThisMemberValueString      "rect"
+		GetThisMemberValueString      "x1"
+		GetThisMemberValueString      "y1"
+		GetThisMemberValueString      "x2"
+		GetThisMemberValueString      "y2"
+		CallGameFunctionString        "gcrectangle", "setposition", 5
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setzvalue"
+		; address: 0x70374
+		; source: 117 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_baseshapes.vbo" 142:144
+		MemberFunctionArgumentCheck   2
+		LineNumber                    41574, 4
+		LineNumberAlt1                142, 117
+		GetVariableValue              1                             ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    41574, 4
+		LineNumberAlt1                142, 117
+		GetVariableValue              1                             ; local
+		SetThisMemberValueString      "z"
+		; <-
+		BranchTarget                  0
+		LineNumber                    41576, 4
+		LineNumberAlt1                144, 117
+		GetThisMemberValueString      "rect"
+		GetThisMemberValueString      "z"
+		CallGameFunctionString        "gcrectangle", "setzdepth", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "changepos"
+		; address: 0x703b2
+		; source: 117 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_baseshapes.vbo" 149:154
+		MemberFunctionArgumentCheck   3
+		LineNumber                    41581, 4
+		LineNumberAlt1                149, 117
+		GetVariableValue              1                               ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    41581, 4
+		LineNumberAlt1                149, 117
+		GetThisMemberValueString      "x1"
+		GetVariableValue              1                               ; local
+		Add
+		SetThisMemberValueString      "x1"
+		; <-
+		BranchTarget                  0
+		LineNumber                    41582, 4
+		LineNumberAlt1                150, 117
+		GetVariableValue              2                               ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    41582, 4
+		LineNumberAlt1                150, 117
+		GetThisMemberValueString      "y1"
+		GetVariableValue              2                               ; local
+		Add
+		SetThisMemberValueString      "y1"
+		; <-
+		BranchTarget                  1
+		LineNumber                    41583, 4
+		LineNumberAlt1                151, 117
+		GetVariableValue              1                               ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    41583, 4
+		LineNumberAlt1                151, 117
+		GetThisMemberValueString      "x2"
+		GetVariableValue              1                               ; local
+		Add
+		SetThisMemberValueString      "x2"
+		; <-
+		BranchTarget                  2
+		LineNumber                    41584, 4
+		LineNumberAlt1                152, 117
+		GetVariableValue              2                               ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    41584, 4
+		LineNumberAlt1                152, 117
+		GetThisMemberValueString      "y2"
+		GetVariableValue              2                               ; local
+		Add
+		SetThisMemberValueString      "y2"
+		; <-
+		BranchTarget                  3
+		LineNumber                    41586, 4
+		LineNumberAlt1                154, 117
+		GetThisMemberValueString      "rect"
+		GetThisMemberValueString      "x1"
+		GetThisMemberValueString      "y1"
+		GetThisMemberValueString      "x2"
+		GetThisMemberValueString      "y2"
+		CallGameFunctionString        "gcrectangle", "setposition", 5
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setcolor"
+		; address: 0x70472
+		; source: 117 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_baseshapes.vbo" 158:163
+		MemberFunctionArgumentCheck   5
+		LineNumber                    41590, 4
+		LineNumberAlt1                158, 117
+		GetVariableValue              1                            ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    41590, 4
+		LineNumberAlt1                158, 117
+		GetThisMemberValueString      "mycolor"
+		GetVariableValue              1                            ; local
+		SetRedValue
+		SetThisMemberValueString      "mycolor"
+		; <-
+		BranchTarget                  0
+		LineNumber                    41591, 4
+		LineNumberAlt1                159, 117
+		GetVariableValue              2                            ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    41591, 4
+		LineNumberAlt1                159, 117
+		GetThisMemberValueString      "mycolor"
+		GetVariableValue              2                            ; local
+		SetGreenValue
+		SetThisMemberValueString      "mycolor"
+		; <-
+		BranchTarget                  1
+		LineNumber                    41592, 4
+		LineNumberAlt1                160, 117
+		GetVariableValue              3                            ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    41592, 4
+		LineNumberAlt1                160, 117
+		GetThisMemberValueString      "mycolor"
+		GetVariableValue              3                            ; local
+		SetBlueValue
+		SetThisMemberValueString      "mycolor"
+		; <-
+		BranchTarget                  2
+		LineNumber                    41593, 4
+		LineNumberAlt1                161, 117
+		GetVariableValue              4                            ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    41593, 4
+		LineNumberAlt1                161, 117
+		GetThisMemberValueString      "mycolor"
+		GetVariableValue              4                            ; local
+		SetAlphaValue
+		SetThisMemberValueString      "mycolor"
+		; <-
+		BranchTarget                  3
+		LineNumber                    41595, 4
+		LineNumberAlt1                163, 117
+		GetThisMemberValueString      "rect"
+		GetThisMemberValueString      "mycolor"
+		CallGameFunctionString        "gcrectangle", "setcolor", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "changecolor"
+		; address: 0x70529
+		; source: 117 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_baseshapes.vbo" 167:172
+		MemberFunctionArgumentCheck   5
+		LineNumber                    41599, 4
+		LineNumberAlt1                167, 117
+		GetVariableValue              1                            ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    41599, 4
+		LineNumberAlt1                167, 117
+		GetThisMemberValueString      "mycolor"
+		GetThisMemberValueString      "mycolor"
+		GetRedValue
+		GetVariableValue              1                            ; local
+		Add
+		SetRedValue
+		SetThisMemberValueString      "mycolor"
+		; <-
+		BranchTarget                  0
+		LineNumber                    41600, 4
+		LineNumberAlt1                168, 117
+		GetVariableValue              2                            ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    41600, 4
+		LineNumberAlt1                168, 117
+		GetThisMemberValueString      "mycolor"
+		GetThisMemberValueString      "mycolor"
+		GetGreenValue
+		GetVariableValue              2                            ; local
+		Add
+		SetGreenValue
+		SetThisMemberValueString      "mycolor"
+		; <-
+		BranchTarget                  1
+		LineNumber                    41601, 4
+		LineNumberAlt1                169, 117
+		GetVariableValue              3                            ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    41601, 4
+		LineNumberAlt1                169, 117
+		GetThisMemberValueString      "mycolor"
+		GetThisMemberValueString      "mycolor"
+		GetBlueValue
+		GetVariableValue              3                            ; local
+		Add
+		SetBlueValue
+		SetThisMemberValueString      "mycolor"
+		; <-
+		BranchTarget                  2
+		LineNumber                    41602, 4
+		LineNumberAlt1                170, 117
+		GetVariableValue              4                            ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    41602, 4
+		LineNumberAlt1                170, 117
+		GetThisMemberValueString      "mycolor"
+		GetThisMemberValueString      "mycolor"
+		GetAlphaValue
+		GetVariableValue              4                            ; local
+		Add
+		SetAlphaValue
+		SetThisMemberValueString      "mycolor"
+		; <-
+		BranchTarget                  3
+		LineNumber                    41604, 4
+		LineNumberAlt1                172, 117
+		GetThisMemberValueString      "rect"
+		GetThisMemberValueString      "mycolor"
+		CallGameFunctionString        "gcrectangle", "setcolor", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

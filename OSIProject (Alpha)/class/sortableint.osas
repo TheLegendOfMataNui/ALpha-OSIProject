@@ -1,0 +1,95 @@
+begin class "sortableint"
+	property "number"
+	property "evaluate"
+
+	begin method "sortableint"
+		; address: 0xd3e7a
+		; source: 234 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_boss.vbo" 1372:1377
+		MemberFunctionArgumentCheck   3
+		LineNumber                    18682, 4
+		LineNumberAlt1                1372, 234
+		GetVariableValue              1          ; local
+		PushNothing
+		EqualTo
+		Not
+		GetVariableValue              2          ; local
+		PushNothing
+		EqualTo
+		Not
+		And
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    18683, 4
+		LineNumberAlt1                1373, 234
+		GetVariableValue              1          ; local
+		SetThisMemberValueString      "number"
+		LineNumber                    18684, 4
+		LineNumberAlt1                1374, 234
+		GetVariableValue              2          ; local
+		SetThisMemberValueString      "evaluate"
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    18686, 4
+		LineNumberAlt1                1376, 234
+		PushConstant0
+		SetThisMemberValueString      "number"
+		LineNumber                    18687, 4
+		LineNumberAlt1                1377, 234
+		PushConstant0
+		SetThisMemberValueString      "evaluate"
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setevaluate"
+		; address: 0xd3ed7
+		; source: 234 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_boss.vbo" 1384:1384
+		MemberFunctionArgumentCheck 2
+		LineNumber                  18694, 4
+		LineNumberAlt1              1384, 234
+		GetVariableValue            1          ; local
+		SetThisMemberValueString    "evaluate"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "getevaluate"
+		; address: 0xd3eeb
+		; source: 234 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_boss.vbo" 1389:1389
+		MemberFunctionArgumentCheck 1
+		LineNumber                  18699, 4
+		LineNumberAlt1              1389, 234
+		GetThisMemberValueString    "evaluate"
+		Return
+	end ; method
+
+	begin method "getnumber"
+		; address: 0xd3efb
+		; source: 234 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_boss.vbo" 1394:1394
+		MemberFunctionArgumentCheck 1
+		LineNumber                  18704, 4
+		LineNumberAlt1              1394, 234
+		GetThisMemberValueString    "number"
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xd3f0b
+		; source: 234 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_boss.vbo" 1399:1400
+		MemberFunctionArgumentCheck 1
+		LineNumber                  18709, 4
+		LineNumberAlt1              1399, 234
+		PushNothing
+		SetThisMemberValueString    "number"
+		LineNumber                  18710, 4
+		LineNumberAlt1              1400, 234
+		PushNothing
+		SetThisMemberValueString    "evaluate"
+		PushNothing
+		Return
+	end ; method
+end ; class

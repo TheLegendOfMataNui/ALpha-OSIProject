@@ -1,0 +1,144 @@
+begin class "lego_area_ptos", "gs_lego_area"
+	property "puzzle"
+
+	begin method "lego_area_ptos"
+		; address: 0x9836f
+		; source: 165 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_ptos.vbo" 23:25
+		MemberFunctionArgumentCheck 2
+		LineNumber                  60064, 4
+		LineNumberAlt1              23, 165
+		GetVariableValue            0                    ; local
+		PushConstantStringString    "ptos"
+		GetVariableValue            1                    ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  60065, 4
+		LineNumberAlt1              24, 165
+		CreateObjectString          "pohatutoss"
+		Dup
+		GetVariableValue            0                    ; local
+		Pull                        2
+		GetMemberFunctionString     "pohatutoss"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  60065, 4
+		LineNumberAlt1              24, 165
+		SetThisMemberValueString    "puzzle"
+		LineNumber                  60066, 4
+		LineNumberAlt1              25, 165
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x983c7
+		; source: 165 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_ptos.vbo" 32:33
+		MemberFunctionArgumentCheck 1
+		LineNumber                  60073, 4
+		LineNumberAlt1              32, 165
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_show"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  60074, 4
+		LineNumberAlt1              33, 165
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "init"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x983f2
+		; source: 165 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_ptos.vbo" 38:38
+		MemberFunctionArgumentCheck 2
+		LineNumber                  60079, 4
+		LineNumberAlt1              38, 165
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "process"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x9840e
+		; source: 165 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_ptos.vbo" 43:43
+		MemberFunctionArgumentCheck 2
+		LineNumber                  60084, 4
+		LineNumberAlt1              43, 165
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1        ; local
+		Pull                        2
+		GetMemberFunctionString     "input"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x9842a
+		; source: 165 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_ptos.vbo" 48:48
+		MemberFunctionArgumentCheck 2
+		LineNumber                  60089, 4
+		LineNumberAlt1              48, 165
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x98446
+		; source: 165 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_ptos.vbo" 53:54
+		MemberFunctionArgumentCheck 1
+		LineNumber                  60094, 4
+		LineNumberAlt1              53, 165
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_hide"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  60095, 4
+		LineNumberAlt1              54, 165
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x98471
+		; source: 165 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_ptos.vbo" 59:59
+		MemberFunctionArgumentCheck 1
+		LineNumber                  60100, 4
+		LineNumberAlt1              59, 165
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "exit"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

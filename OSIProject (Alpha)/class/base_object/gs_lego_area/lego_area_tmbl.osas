@@ -1,0 +1,236 @@
+begin class "lego_area_tmbl", "gs_lego_area"
+	property "puzzle"
+	property "bgmusic"
+
+	begin method "lego_area_tmbl"
+		; address: 0x63a9e
+		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 53:55
+		MemberFunctionArgumentCheck 2
+		LineNumber                  36006, 4
+		LineNumberAlt1              53, 99
+		GetVariableValue            0                    ; local
+		PushConstantStringString    "tmbl"
+		GetVariableValue            1                    ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  36007, 4
+		LineNumberAlt1              54, 99
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  36008, 4
+		LineNumberAlt1              55, 99
+		CreateObjectString          "tumblemazepuzzlep"
+		Dup
+		GetVariableValue            0                    ; local
+		Pull                        2
+		GetMemberFunctionString     "tumblemazepuzzlep"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  36008, 4
+		LineNumberAlt1              55, 99
+		SetThisMemberValueString    "puzzle"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x63af6
+		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 62:72
+		MemberFunctionArgumentCheck  1
+		LineNumber                   36015, 4
+		LineNumberAlt1               62, 99
+		GetVariableValue             0                                            ; local
+		GetThisMemberFunctionString  "lego_area_show"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   36016, 4
+		LineNumberAlt1               63, 99
+		GetThisMemberValueString     "puzzle"
+		Dup
+		GetMemberFunctionString      "initfull"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   36018, 4
+		LineNumberAlt1               65, 99
+		PushConstanti8               5
+		CallGameFunctionString       "gcareadirector", "setnearestmax", 1
+		Pop
+		LineNumber                   36019, 4
+		LineNumberAlt1               66, 99
+		PushConstanti32              -16777216
+		PushConstant0
+		PushConstantf32              1
+		Subtract
+		PushConstant0
+		PushConstantf32              60
+		Subtract
+		PushConstantf32              0.05000000074505806
+		CallGameFunctionString       "gcareadirector", "setfog", 4
+		Pop
+		LineNumber                   36020, 4
+		LineNumberAlt1               67, 99
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		GetMemberValueString         "actor"
+		PushConstanti8               2
+		Pull                         2
+		GetMemberFunctionString      "setcontext"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   36021, 4
+		LineNumberAlt1               68, 99
+		PushConstanti8               1
+		CallGameFunctionString       "gclightdirector", "setcavelighting", 1
+		Pop
+		LineNumber                   36022, 4
+		LineNumberAlt1               69, 99
+		CreateObjectString           "legomp3player"
+		Dup
+		Dup
+		GetMemberFunctionString      "legomp3player"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   36022, 4
+		LineNumberAlt1               69, 99
+		SetThisMemberValueString     "bgmusic"
+		LineNumber                   36023, 4
+		LineNumberAlt1               70, 99
+		GetThisMemberValueString     "bgmusic"
+		PushConstantStringString     "Root/Data/sounds/MUSICPart2LegoUnderground"
+		Pull                         2
+		GetMemberFunctionString      "setupforplay"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   36024, 4
+		LineNumberAlt1               71, 99
+		GetThisMemberValueString     "bgmusic"
+		PushConstanti8               1
+		Pull                         2
+		GetMemberFunctionString      "play"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   36025, 4
+		LineNumberAlt1               72, 99
+		GetThisMemberValueString     "puzzle"
+		Dup
+		GetMemberFunctionString      "initfull"
+		JumpAbsolute                 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x63bf2
+		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 78:78
+		MemberFunctionArgumentCheck 2
+		LineNumber                  36031, 4
+		LineNumberAlt1              78, 99
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "process"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x63c0e
+		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 83:83
+		MemberFunctionArgumentCheck 2
+		LineNumber                  36036, 4
+		LineNumberAlt1              83, 99
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1        ; local
+		Pull                        2
+		GetMemberFunctionString     "input"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x63c2a
+		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 88:88
+		MemberFunctionArgumentCheck 2
+		LineNumber                  36041, 4
+		LineNumberAlt1              88, 99
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x63c46
+		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 93:98
+		MemberFunctionArgumentCheck   1
+		LineNumber                    36046, 4
+		LineNumberAlt1                93, 99
+		GetVariableValue              0                ; local
+		GetThisMemberFunctionString   "lego_area_hide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    36047, 4
+		LineNumberAlt1                94, 99
+		GetThisMemberValueString      "bgmusic"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    36048, 4
+		LineNumberAlt1                95, 99
+		GetThisMemberValueString      "bgmusic"
+		Dup
+		GetMemberFunctionString       "stop"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    36049, 4
+		LineNumberAlt1                96, 99
+		PushNothing
+		SetThisMemberValueString      "bgmusic"
+		; <-
+		BranchTarget                  0
+		LineNumber                    36051, 4
+		LineNumberAlt1                98, 99
+		GetThisMemberValueString      "puzzle"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x63ca6
+		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 103:104
+		MemberFunctionArgumentCheck 1
+		LineNumber                  36056, 4
+		LineNumberAlt1              103, 99
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "exit"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  36057, 4
+		LineNumberAlt1              104, 99
+		PushNothing
+		SetThisMemberValueString    "puzzle"
+		PushNothing
+		Return
+	end ; method
+end ; class

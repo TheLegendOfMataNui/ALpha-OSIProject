@@ -1,0 +1,156 @@
+begin class "lego_area_wthk2", "gs_lego_area"
+	property "puzzle"
+
+	begin method "lego_area_wthk2"
+		; address: 0x86751
+		; source: 138 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_wthk.vbo" 23:25
+		MemberFunctionArgumentCheck 2
+		LineNumber                  51233, 4
+		LineNumberAlt1              23, 138
+		GetVariableValue            0                    ; local
+		PushConstantStringString    "wthk"
+		GetVariableValue            1                    ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  51234, 4
+		LineNumberAlt1              24, 138
+		CreateObjectString          "wthk2_puzzle"
+		Dup
+		GetVariableValue            0                    ; local
+		Pull                        2
+		GetMemberFunctionString     "wthk2_puzzle"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  51234, 4
+		LineNumberAlt1              24, 138
+		SetThisMemberValueString    "puzzle"
+		LineNumber                  51235, 4
+		LineNumberAlt1              25, 138
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x867a9
+		; source: 138 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_wthk.vbo" 31:35
+		MemberFunctionArgumentCheck 1
+		LineNumber                  51241, 4
+		LineNumberAlt1              31, 138
+		GetVariableValue            0                                       ; local
+		GetThisMemberFunctionString "lego_area_show"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  51242, 4
+		LineNumberAlt1              32, 138
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  51243, 4
+		LineNumberAlt1              33, 138
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  51244, 4
+		LineNumberAlt1              34, 138
+		PushConstanti32             -9143565
+		PushConstant0
+		PushConstantf32             1000
+		Subtract
+		PushConstant0
+		PushConstantf32             2400
+		Subtract
+		PushConstantf32             0.009999999776482582
+		CallGameFunctionString      "gcareadirector", "setfog", 4
+		Pop
+		LineNumber                  51245, 4
+		LineNumberAlt1              35, 138
+		PushConstanti8              1
+		CallGameFunctionString      "gclightdirector", "setcavelighting", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x86824
+		; source: 138 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_wthk.vbo" 40:40
+		MemberFunctionArgumentCheck 2
+		LineNumber                  51250, 4
+		LineNumberAlt1              40, 138
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x86840
+		; source: 138 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_wthk.vbo" 45:45
+		MemberFunctionArgumentCheck 2
+		LineNumber                  51255, 4
+		LineNumberAlt1              45, 138
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "process"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x8685c
+		; source: 138 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_wthk.vbo" 50:51
+		MemberFunctionArgumentCheck 1
+		LineNumber                  51260, 4
+		LineNumberAlt1              50, 138
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_hide"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  51261, 4
+		LineNumberAlt1              51, 138
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x86887
+		; source: 138 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_wthk.vbo" 56:57
+		MemberFunctionArgumentCheck 1
+		LineNumber                  51266, 4
+		LineNumberAlt1              56, 138
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "exit"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  51267, 4
+		LineNumberAlt1              57, 138
+		PushNothing
+		SetThisMemberValueString    "puzzle"
+		PushNothing
+		Return
+	end ; method
+end ; class

@@ -1,0 +1,173 @@
+begin class "lego_area_ta066", "gs_lego_area"
+	property "puzzle"
+
+	begin method "lego_area_ta066"
+		; address: 0xc1c78
+		; source: 218 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta06.vbo" 20:23
+		MemberFunctionArgumentCheck 2
+		LineNumber                  11654, 4
+		LineNumberAlt1              20, 218
+		GetVariableValue            0                    ; local
+		PushConstantStringString    "ta06"
+		GetVariableValue            1                    ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  11655, 4
+		LineNumberAlt1              21, 218
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  11656, 4
+		LineNumberAlt1              22, 218
+		CreateObjectString          "ta066_puzzle"
+		Dup
+		GetVariableValue            0                    ; local
+		Pull                        2
+		GetMemberFunctionString     "ta066_puzzle"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  11656, 4
+		LineNumberAlt1              22, 218
+		SetThisMemberValueString    "puzzle"
+		LineNumber                  11657, 4
+		LineNumberAlt1              23, 218
+		CreateArray
+		Dup
+		PushConstanti16             180
+		AppendToArray
+		Dup
+		PushConstanti16             -356
+		AppendToArray
+		Dup
+		PushConstant0
+		PushConstantf32             51.400001525878906
+		Subtract
+		AppendToArray
+		Dup
+		PushConstanti16             689
+		AppendToArray
+		SetThisMemberValueString    "startingarea"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xc1cf6
+		; source: 218 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta06.vbo" 29:31
+		MemberFunctionArgumentCheck 1
+		LineNumber                  11663, 4
+		LineNumberAlt1              29, 218
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_show"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  11664, 4
+		LineNumberAlt1              30, 218
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  11665, 4
+		LineNumberAlt1              31, 218
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xc1d35
+		; source: 218 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta06.vbo" 36:37
+		MemberFunctionArgumentCheck 1
+		LineNumber                  11670, 4
+		LineNumberAlt1              36, 218
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_hide"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  11671, 4
+		LineNumberAlt1              37, 218
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "hide"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xc1d60
+		; source: 218 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta06.vbo" 42:42
+		MemberFunctionArgumentCheck 2
+		LineNumber                  11676, 4
+		LineNumberAlt1              42, 218
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "process"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xc1d7c
+		; source: 218 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta06.vbo" 47:47
+		MemberFunctionArgumentCheck 2
+		LineNumber                  11681, 4
+		LineNumberAlt1              47, 218
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0xc1d98
+		; source: 218 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta06.vbo" 52:52
+		MemberFunctionArgumentCheck 2
+		LineNumber                  11686, 4
+		LineNumberAlt1              52, 218
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1        ; local
+		Pull                        2
+		GetMemberFunctionString     "input"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0xc1db4
+		; source: 218 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta06.vbo" 57:58
+		MemberFunctionArgumentCheck 1
+		LineNumber                  11691, 4
+		LineNumberAlt1              57, 218
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "exit"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  11692, 4
+		LineNumberAlt1              58, 218
+		PushNothing
+		SetThisMemberValueString    "puzzle"
+		PushNothing
+		Return
+	end ; method
+end ; class

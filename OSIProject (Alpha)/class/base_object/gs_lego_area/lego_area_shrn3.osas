@@ -1,0 +1,166 @@
+begin class "lego_area_shrn3", "gs_lego_area"
+	property "puzzle"
+	property "parent"
+
+	begin method "lego_area_shrn3"
+		; address: 0x9a6e5
+		; source: 167 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_shrn.vbo" 26:29
+		MemberFunctionArgumentCheck 2
+		LineNumber                  61198, 4
+		LineNumberAlt1              26, 167
+		GetVariableValue            1                    ; local
+		SetThisMemberValueString    "parent"
+		LineNumber                  61199, 4
+		LineNumberAlt1              27, 167
+		GetVariableValue            0                    ; local
+		PushConstantStringString    "shrn"
+		GetVariableValue            1                    ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  61200, 4
+		LineNumberAlt1              28, 167
+		CreateObjectString          "puzzle_class"
+		Dup
+		GetVariableValue            0                    ; local
+		Pull                        2
+		GetMemberFunctionString     "puzzle_class"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  61200, 4
+		LineNumberAlt1              28, 167
+		SetThisMemberValueString    "puzzle"
+		LineNumber                  61201, 4
+		LineNumberAlt1              29, 167
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x9a74d
+		; source: 167 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_shrn.vbo" 35:37
+		MemberFunctionArgumentCheck 1
+		LineNumber                  61207, 4
+		LineNumberAlt1              35, 167
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_show"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  61208, 4
+		LineNumberAlt1              36, 167
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  61209, 4
+		LineNumberAlt1              37, 167
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x9a78c
+		; source: 167 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_shrn.vbo" 42:42
+		MemberFunctionArgumentCheck 2
+		LineNumber                  61214, 4
+		LineNumberAlt1              42, 167
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "process"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x9a7a8
+		; source: 167 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_shrn.vbo" 48:53
+		MemberFunctionArgumentCheck   2
+		LineNumber                    61220, 4
+		LineNumberAlt1                48, 167
+		GetThisMemberValueString      "puzzle"
+		GetVariableValue              1        ; local
+		Pull                          2
+		GetMemberFunctionString       "input"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    61224, 4
+		LineNumberAlt1                52, 167
+		GetVariableValue              1        ; local
+		GetMemberValueString          "event"
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    61225, 4
+		LineNumberAlt1                53, 167
+		GetVariableValue              1        ; local
+		GetMemberValueString          "button"
+		PushConstanti8                89
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x9a7f0
+		; source: 167 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_shrn.vbo" 64:64
+		MemberFunctionArgumentCheck 2
+		LineNumber                  61236, 4
+		LineNumberAlt1              64, 167
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x9a80c
+		; source: 167 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_shrn.vbo" 70:71
+		MemberFunctionArgumentCheck 1
+		LineNumber                  61242, 4
+		LineNumberAlt1              70, 167
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_hide"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  61243, 4
+		LineNumberAlt1              71, 167
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "hide"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x9a837
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+end ; class

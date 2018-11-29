@@ -1,0 +1,80 @@
+begin class "tahuclass", "gs_lego_toa"
+	property "walkspeed"
+	property "runspeed"
+	property "standingjumpheight"
+	property "standingjumplength"
+	property "runningjumpheight"
+	property "runningjumplength"
+	property "swimingabilty"
+	property "bounce"
+	property "slopeclimbability"
+
+	begin method "tahuclass"
+		; address: 0x48900
+		; source: 60 "C:\\projects\\lego\\Scripting\\VBO\\Toa/Lego_Toa_Tahu.vbo" 42:52
+		MemberFunctionArgumentCheck 6
+		LineNumber                  20350, 4
+		LineNumberAlt1              42, 60
+		GetVariableValue            0                    ; local
+		GetVariableValue            1                    ; local
+		GetVariableValue            2                    ; local
+		GetVariableValue            3                    ; local
+		GetVariableValue            4                    ; local
+		GetVariableValue            5                    ; local
+		GetThisMemberFunctionString "gs_lego_toa"
+		JumpAbsolute                6
+		Pop
+		LineNumber                  20352, 4
+		LineNumberAlt1              44, 60
+		PushConstanti8              4
+		SetThisMemberValueString    "walkspeed"
+		LineNumber                  20353, 4
+		LineNumberAlt1              45, 60
+		PushConstanti8              15
+		SetThisMemberValueString    "runspeed"
+		LineNumber                  20354, 4
+		LineNumberAlt1              46, 60
+		PushConstanti8              6
+		SetThisMemberValueString    "standingjumpheight"
+		LineNumber                  20355, 4
+		LineNumberAlt1              47, 60
+		PushConstanti8              6
+		SetThisMemberValueString    "standingjumplength"
+		LineNumber                  20356, 4
+		LineNumberAlt1              48, 60
+		PushConstanti8              4
+		SetThisMemberValueString    "runningjumpheight"
+		LineNumber                  20357, 4
+		LineNumberAlt1              49, 60
+		PushConstanti8              8
+		SetThisMemberValueString    "runningjumplength"
+		LineNumber                  20358, 4
+		LineNumberAlt1              50, 60
+		PushConstanti8              5
+		SetThisMemberValueString    "slopeclimbability"
+		LineNumber                  20359, 4
+		LineNumberAlt1              51, 60
+		PushConstant0
+		SetThisMemberValueString    "swimingabilty"
+		LineNumber                  20360, 4
+		LineNumberAlt1              52, 60
+		PushConstant0
+		SetThisMemberValueString    "bounce"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setclimbability"
+		; address: 0x489ab
+		; source: 60 "C:\\projects\\lego\\Scripting\\VBO\\Toa/Lego_Toa_Tahu.vbo" 60:60
+		MemberFunctionArgumentCheck 2
+		LineNumber                  20368, 4
+		LineNumberAlt1              60, 60
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                                        ; local
+		CallGameFunctionString      "gccharacter", "setslopeclimbability", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

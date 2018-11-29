@@ -1,0 +1,1364 @@
+begin class "ta056_puzzle"
+	property "mparent"
+	property "msurfboards"
+	property "mtriggerstate"
+	property "mboulders"
+	property "mmaskon"
+	property "mcinema"
+	property "music"
+
+	begin method "ta056_puzzle"
+		; address: 0xc0f0f
+		; source: 217 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta05.vbo" 116:120
+		MemberFunctionArgumentCheck 2
+		LineNumber                  11280, 4
+		LineNumberAlt1              116, 217
+		GetVariableValue            1                             ; local
+		SetThisMemberValueString    "mparent"
+		LineNumber                  11282, 4
+		LineNumberAlt1              118, 217
+		PushConstant0
+		SetThisMemberValueString    "mtriggerstate"
+		LineNumber                  11284, 4
+		LineNumberAlt1              120, 217
+		CallGameFunctionString      "gccinemaengine", "create", 0
+		LineNumber                  11284, 4
+		LineNumberAlt1              120, 217
+		SetThisMemberValueString    "mcinema"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xc0f4e
+		; source: 217 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta05.vbo" 127:141
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    11291, 4
+		LineNumberAlt1                127, 217
+		GetThisMemberValueString      "msurfboards"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1               ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1               ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    11292, 4
+		LineNumberAlt1                128, 217
+		GetThisMemberValueString      "msurfboards"
+		GetVariableValue              1               ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    11293, 4
+		LineNumberAlt1                129, 217
+		GetThisMemberValueString      "msurfboards"
+		GetVariableValue              1               ; local
+		PushNothing
+		SetArrayValue
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    11295, 4
+		LineNumberAlt1                131, 217
+		PushNothing
+		SetThisMemberValueString      "msurfboards"
+		LineNumber                    11297, 4
+		LineNumberAlt1                133, 217
+		GetThisMemberValueString      "mboulders"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1               ; local
+		; <-
+		BranchTarget                  2
+		Dup
+		GetVariableValue              1               ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    11298, 4
+		LineNumberAlt1                134, 217
+		GetThisMemberValueString      "mboulders"
+		GetVariableValue              1               ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    11299, 4
+		LineNumberAlt1                135, 217
+		GetThisMemberValueString      "mboulders"
+		GetVariableValue              1               ; local
+		PushNothing
+		SetArrayValue
+		IncrementVariable             1
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Pop
+		LineNumber                    11301, 4
+		LineNumberAlt1                137, 217
+		PushNothing
+		SetThisMemberValueString      "mboulders"
+		LineNumber                    11303, 4
+		LineNumberAlt1                139, 217
+		PushNothing
+		SetThisMemberValueString      "mcinema"
+		LineNumber                    11304, 4
+		LineNumberAlt1                140, 217
+		PushNothing
+		SetThisMemberValueString      "mmaskon"
+		LineNumber                    11305, 4
+		LineNumberAlt1                141, 217
+		PushNothing
+		SetThisMemberValueString      "mtriggerstate"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0xc1036
+		; source: 217 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta05.vbo" 148:148
+		MemberFunctionArgumentCheck 1
+		LineNumber                  11312, 4
+		LineNumberAlt1              148, 217
+		PushNothing
+		SetThisMemberValueString    "mparent"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "enterarea"
+		; address: 0xc1048
+		; source: 217 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta05.vbo" 156:216
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    11320, 4
+		LineNumberAlt1                156, 217
+		PushConstantStringString      "TA05 EnterArea"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    11323, 4
+		LineNumberAlt1                159, 217
+		CreateArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "bld2"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    11325, 4
+		LineNumberAlt1                161, 217
+		AppendToArray
+		Dup
+		CreateObjectString            "runningobj"
+		Dup
+		PushConstantStringString      "bld1"
+		Pull                          2
+		GetMemberFunctionString       "runningobj"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    11326, 4
+		LineNumberAlt1                162, 217
+		AppendToArray
+		SetThisMemberValueString      "mboulders"
+		LineNumber                    11330, 4
+		LineNumberAlt1                166, 217
+		CreateArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "surk"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    11332, 4
+		LineNumberAlt1                168, 217
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "surf"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    11333, 4
+		LineNumberAlt1                169, 217
+		AppendToArray
+		SetThisMemberValueString      "msurfboards"
+		LineNumber                    11337, 4
+		LineNumberAlt1                173, 217
+		GetThisMemberValueString      "mboulders"
+		PushConstant0
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    11338, 4
+		LineNumberAlt1                174, 217
+		GetThisMemberValueString      "mboulders"
+		PushConstanti8                1
+		GetArrayValue
+		PushConstantStringString      "Root/Data/Levels/lev6/ta05/lev6_ta05_path_1.txt"
+		Pull                          2
+		GetMemberFunctionString       "init"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    11339, 4
+		LineNumberAlt1                175, 217
+		GetThisMemberValueString      "mboulders"
+		PushConstanti8                1
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "settweakable"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    11340, 4
+		LineNumberAlt1                176, 217
+		GetThisMemberValueString      "mboulders"
+		PushConstanti8                1
+		GetArrayValue
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "setrollspeed"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    11350, 4
+		LineNumberAlt1                186, 217
+		GetThisMemberValueString      "msurfboards"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                                                 ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1                                                 ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    11351, 4
+		LineNumberAlt1                187, 217
+		GetThisMemberValueString      "msurfboards"
+		GetVariableValue              1                                                 ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    11355, 4
+		LineNumberAlt1                191, 217
+		GetThisMemberValueString      "mtriggerstate"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    11357, 4
+		LineNumberAlt1                193, 217
+		GetThisMemberValueString      "mboulders"
+		PushConstant0
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    11358, 4
+		LineNumberAlt1                194, 217
+		GetThisMemberValueString      "mboulders"
+		PushConstanti8                1
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    11359, 4
+		LineNumberAlt1                195, 217
+		GetThisMemberValueString      "msurfboards"
+		PushConstant0
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    11360, 4
+		LineNumberAlt1                196, 217
+		GetThisMemberValueString      "msurfboards"
+		PushConstanti8                1
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		LineNumber                    11363, 4
+		LineNumberAlt1                199, 217
+		GetThisMemberValueString      "mboulders"
+		PushConstant0
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    11364, 4
+		LineNumberAlt1                200, 217
+		GetThisMemberValueString      "mboulders"
+		PushConstanti8                1
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    11365, 4
+		LineNumberAlt1                201, 217
+		GetThisMemberValueString      "msurfboards"
+		PushConstant0
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    11366, 4
+		LineNumberAlt1                202, 217
+		GetThisMemberValueString      "msurfboards"
+		PushConstanti8                1
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  3
+		LineNumber                    11370, 4
+		LineNumberAlt1                206, 217
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "whichmaskonface"
+		JumpAbsolute                  1
+		LineNumber                    11370, 4
+		LineNumberAlt1                206, 217
+		PushConstanti8                3
+		EqualTo
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "ismaskpoweron"
+		JumpAbsolute                  1
+		LineNumber                    11370, 4
+		LineNumberAlt1                206, 217
+		PushConstanti8                1
+		EqualTo
+		And
+		SetThisMemberValueString      "mmaskon"
+		LineNumber                    11372, 4
+		LineNumberAlt1                208, 217
+		GetThisMemberValueString      "mmaskon"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    11374, 4
+		LineNumberAlt1                210, 217
+		GetThisMemberValueString      "msurfboards"
+		PushConstant0
+		GetArrayValue
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "fadeout"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  4
+		LineNumber                    11378, 4
+		LineNumberAlt1                214, 217
+		CreateObjectString            "legomp3player"
+		Dup
+		Dup
+		GetMemberFunctionString       "legomp3player"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    11378, 4
+		LineNumberAlt1                214, 217
+		SetThisMemberValueString      "music"
+		LineNumber                    11379, 4
+		LineNumberAlt1                215, 217
+		GetThisMemberValueString      "music"
+		PushConstantStringString      "Root/Data/sounds/MUSICsurfandsnowboard"
+		Pull                          2
+		GetMemberFunctionString       "setupforplay"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    11380, 4
+		LineNumberAlt1                216, 217
+		GetThisMemberValueString      "music"
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "play"
+		JumpAbsolute                  2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "leavearea"
+		; address: 0xc130c
+		; source: 217 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta05.vbo" 225:268
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    11389, 4
+		LineNumberAlt1                225, 217
+		PushConstantStringString      "TA05 LeaveArea"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    11392, 4
+		LineNumberAlt1                228, 217
+		GetVariableValue              0                            ; local
+		PushConstant0
+		GetThisMemberFunctionString   "setsurfmode"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    11394, 4
+		LineNumberAlt1                230, 217
+		GetThisMemberValueString      "mtriggerstate"
+		PushConstant0
+		GreaterThan
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    11409, 4
+		LineNumberAlt1                245, 217
+		PushConstanti32               4194304
+		PushConstanti8                1
+		CallGameFunctionString        "gcsaver", "setcondition", 2
+		Pop
+		LineNumber                    11410, 4
+		LineNumberAlt1                246, 217
+		PushConstantStringString      "* set ta02 to cold"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    11414, 4
+		LineNumberAlt1                250, 217
+		GetThisMemberValueString      "mboulders"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                            ; local
+		; <-
+		BranchTarget                  1
+		Dup
+		GetVariableValue              1                            ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    11415, 4
+		LineNumberAlt1                251, 217
+		GetThisMemberValueString      "mboulders"
+		GetVariableValue              1                            ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    11416, 4
+		LineNumberAlt1                252, 217
+		GetThisMemberValueString      "mboulders"
+		GetVariableValue              1                            ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    11417, 4
+		LineNumberAlt1                253, 217
+		GetThisMemberValueString      "mboulders"
+		GetVariableValue              1                            ; local
+		PushNothing
+		SetArrayValue
+		IncrementVariable             1
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		Pop
+		LineNumber                    11419, 4
+		LineNumberAlt1                255, 217
+		PushNothing
+		SetThisMemberValueString      "mboulders"
+		LineNumber                    11422, 4
+		LineNumberAlt1                258, 217
+		GetThisMemberValueString      "msurfboards"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                            ; local
+		; <-
+		BranchTarget                  3
+		Dup
+		GetVariableValue              1                            ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    11423, 4
+		LineNumberAlt1                259, 217
+		GetThisMemberValueString      "msurfboards"
+		GetVariableValue              1                            ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    11424, 4
+		LineNumberAlt1                260, 217
+		GetThisMemberValueString      "msurfboards"
+		GetVariableValue              1                            ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    11425, 4
+		LineNumberAlt1                261, 217
+		GetThisMemberValueString      "msurfboards"
+		GetVariableValue              1                            ; local
+		PushNothing
+		SetArrayValue
+		IncrementVariable             1
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		Pop
+		LineNumber                    11427, 4
+		LineNumberAlt1                263, 217
+		PushNothing
+		SetThisMemberValueString      "msurfboards"
+		LineNumber                    11430, 4
+		LineNumberAlt1                266, 217
+		GetThisMemberValueString      "music"
+		Dup
+		GetMemberFunctionString       "stop"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    11431, 4
+		LineNumberAlt1                267, 217
+		GetThisMemberValueString      "music"
+		Dup
+		GetMemberFunctionString       "cleanupfordestroy"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    11432, 4
+		LineNumberAlt1                268, 217
+		PushNothing
+		SetThisMemberValueString      "music"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xc1496
+		; source: 217 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta05.vbo" 273:278
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          1
+		LineNumber                    11437, 4
+		LineNumberAlt1                273, 217
+		GetThisMemberValueString      "mboulders"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2             ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              2             ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    11438, 4
+		LineNumberAlt1                274, 217
+		GetThisMemberValueString      "mboulders"
+		GetVariableValue              2             ; local
+		GetArrayValue
+		GetVariableValue              1             ; local
+		Pull                          2
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  2
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    11441, 4
+		LineNumberAlt1                277, 217
+		GetThisMemberValueString      "msurfboards"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2             ; local
+		; <-
+		BranchTarget                  2
+		Dup
+		GetVariableValue              2             ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    11442, 4
+		LineNumberAlt1                278, 217
+		GetThisMemberValueString      "msurfboards"
+		GetVariableValue              2             ; local
+		GetArrayValue
+		GetVariableValue              1             ; local
+		Pull                          2
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  2
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xc151c
+		; source: 217 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta05.vbo" 285:346
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          1
+		LineNumber                    11449, 4
+		LineNumberAlt1                285, 217
+		GetThisMemberValueString      "mboulders"
+		PushConstanti8                1
+		GetArrayValue
+		GetVariableValue              1                                                   ; local
+		Pull                          2
+		GetMemberFunctionString       "onevent"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    11450, 4
+		LineNumberAlt1                286, 217
+		GetVariableValue              1                                                   ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                46
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    11452, 4
+		LineNumberAlt1                288, 217
+		PushConstantf32               1.2000000476837158
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		LineNumber                    11453, 4
+		LineNumberAlt1                289, 217
+		GetThisMemberValueString      "music"
+		Dup
+		GetMemberFunctionString       "stop"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            12, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		Dup
+		PushConstanti8                27
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    11455, 4
+		LineNumberAlt1                291, 217
+		GetVariableValue              0                                                   ; local
+		GetThisMemberFunctionString   "resetafterdeath"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            12, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Dup
+		PushConstanti16               1002
+		EqualTo
+		CompareAndBranchIfFalseTarget 6, 0
+		; ->
+		LineNumber                    11458, 4
+		LineNumberAlt1                294, 217
+		GetVariableValue              1                                                   ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    11459, 4
+		LineNumberAlt1                295, 217
+		PushConstantStringString      "TA05 Mask of Vision Activated"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    11461, 4
+		LineNumberAlt1                297, 217
+		GetThisMemberValueString      "mtriggerstate"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    11462, 4
+		LineNumberAlt1                298, 217
+		PushConstantStringString      "TA05 Fading in SURFBOARD_BOULDER"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    11463, 4
+		LineNumberAlt1                299, 217
+		GetThisMemberValueString      "msurfboards"
+		GetThisMemberValueString      "mtriggerstate"
+		GetArrayValue
+		PushConstantf32               0.25
+		Pull                          2
+		GetMemberFunctionString       "fadein"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  2
+		LineNumber                    11465, 4
+		LineNumberAlt1                301, 217
+		PushConstanti8                1
+		SetThisMemberValueString      "mmaskon"
+		LineNumber                    11466, 4
+		LineNumberAlt1                302, 217
+		PushConstantStringString      "mMaskOn = true"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		BranchAlwaysTarget            5, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		LineNumber                    11468, 4
+		LineNumberAlt1                304, 217
+		PushConstantStringString      "TA05 Mask of Vision Deactivated"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    11470, 4
+		LineNumberAlt1                306, 217
+		GetThisMemberValueString      "mtriggerstate"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    11471, 4
+		LineNumberAlt1                307, 217
+		PushConstantStringString      "TA05 Fading out SURFBOARD_BOULDER"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    11472, 4
+		LineNumberAlt1                308, 217
+		GetThisMemberValueString      "msurfboards"
+		GetThisMemberValueString      "mtriggerstate"
+		GetArrayValue
+		PushConstantf32               0.25
+		Pull                          2
+		GetMemberFunctionString       "fadeout"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  4
+		LineNumber                    11474, 4
+		LineNumberAlt1                310, 217
+		PushConstant0
+		SetThisMemberValueString      "mmaskon"
+		LineNumber                    11475, 4
+		LineNumberAlt1                311, 217
+		PushConstantStringString      "mMaskOn = false"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		; <-
+		BranchTarget                  5
+		BranchAlwaysTarget            12, 0
+		; ->
+		; <-
+		BranchTarget                  6
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 10, 0
+		; ->
+		LineNumber                    11480, 4
+		LineNumberAlt1                316, 217
+		GetVariableValue              1                                                   ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		GetThisMemberValueString      "msurfboards"
+		PushConstant0
+		GetArrayValue
+		GetMemberValueString          "id"
+		EqualTo
+		GetVariableValue              1                                                   ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		PushConstantStringString      "cnt1"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    11480, 4
+		LineNumberAlt1                316, 217
+		EqualTo
+		And
+		CompareAndBranchIfFalseTarget 8, 0
+		; ->
+		LineNumber                    11482, 4
+		LineNumberAlt1                318, 217
+		GetThisMemberValueString      "mmaskon"
+		CompareAndBranchIfFalseTarget 7, 0
+		; ->
+		LineNumber                    11484, 4
+		LineNumberAlt1                320, 217
+		PushConstantStringString      "Playing cinematic of Tahu jumping on the surfoard"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    11485, 4
+		LineNumberAlt1                321, 217
+		GetVariableValue              0                                                   ; local
+		GetThisMemberFunctionString   "startcinematic"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    11488, 4
+		LineNumberAlt1                324, 217
+		GetVariableValue              0                                                   ; local
+		GetThisMemberFunctionString   "endcinematic"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            8, 0
+		; ->
+		; <-
+		BranchTarget                  7
+		LineNumber                    11490, 4
+		LineNumberAlt1                326, 217
+		PushConstantStringString      "Mask isn't on, so the cinematic won't start"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		; <-
+		BranchTarget                  8
+		LineNumber                    11495, 4
+		LineNumberAlt1                331, 217
+		GetVariableValue              1                                                   ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		GetThisMemberValueString      "mboulders"
+		PushConstanti8                1
+		GetArrayValue
+		GetMemberValueString          "id"
+		EqualTo
+		GetVariableValue              1                                                   ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		PushConstantStringString      "cnt1"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    11495, 4
+		LineNumberAlt1                331, 217
+		EqualTo
+		And
+		CompareAndBranchIfFalseTarget 9, 0
+		; ->
+		LineNumber                    11497, 4
+		LineNumberAlt1                333, 217
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "kill"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    11498, 4
+		LineNumberAlt1                334, 217
+		PushConstantf32               1.2000000476837158
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		; <-
+		BranchTarget                  9
+		BranchAlwaysTarget            12, 0
+		; ->
+		; <-
+		BranchTarget                  10
+		Dup
+		PushConstanti8                30
+		EqualTo
+		CompareAndBranchIfFalseTarget 11, 0
+		; ->
+		LineNumber                    11502, 4
+		LineNumberAlt1                338, 217
+		PushConstantStringString      "Cinematic is over, so position the dude and stuff"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    11503, 4
+		LineNumberAlt1                339, 217
+		GetVariableValue              0                                                   ; local
+		GetThisMemberFunctionString   "endcinematic"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            12, 0
+		; ->
+		; <-
+		BranchTarget                  11
+		Dup
+		PushConstanti16               1000
+		EqualTo
+		CompareAndBranchIfFalseTarget 12, 0
+		; ->
+		LineNumber                    11508, 4
+		LineNumberAlt1                344, 217
+		GetVariableValue              1                                                   ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		ConvertToString
+		SetVariableValue              2                                                   ; local
+		LineNumber                    11509, 4
+		LineNumberAlt1                345, 217
+		PushConstantStringString      " got PATH_EVENT "
+		GetVariableValue              2                                                   ; local
+		Add
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    11510, 4
+		LineNumberAlt1                346, 217
+		GetVariableValue              2                                                   ; local
+		ConvertToInteger
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 12, 0
+		; ->
+		; <-
+		BranchTarget                  12
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setsurfmode"
+		; address: 0xc1843
+		; source: 217 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta05.vbo" 357:376
+		MemberFunctionArgumentCheck   2
+		LineNumber                    11521, 4
+		LineNumberAlt1                357, 217
+		GetVariableValue              1                                            ; local
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    11525, 4
+		LineNumberAlt1                361, 217
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantf32               2
+		PushConstantf32               0.800000011920929
+		Pull                          3
+		GetMemberFunctionString       "setsurfingability"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    11526, 4
+		LineNumberAlt1                362, 217
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantf32               45
+		Pull                          2
+		GetMemberFunctionString       "setsurfminspeed"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    11527, 4
+		LineNumberAlt1                363, 217
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantf32               60
+		Pull                          2
+		GetMemberFunctionString       "setsurfmaxspeed"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    11529, 4
+		LineNumberAlt1                365, 217
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "tahu/xs/surf"
+		PushConstantStringString      "surf"
+		Pull                          3
+		GetMemberFunctionString       "addpart"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    11531, 4
+		LineNumberAlt1                367, 217
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "t038"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    11531, 4
+		LineNumberAlt1                367, 217
+		Pull                          2
+		GetMemberFunctionString       "setsplitanimation"
+		JumpAbsolute                  2
+		Pop
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    11534, 4
+		LineNumberAlt1                370, 217
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantf32               0
+		PushConstantf32               0
+		Pull                          3
+		GetMemberFunctionString       "setsurfingability"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    11537, 4
+		LineNumberAlt1                373, 217
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "surf"
+		Pull                          2
+		GetMemberFunctionString       "removepart"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    11540, 4
+		LineNumberAlt1                376, 217
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "t000"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    11540, 4
+		LineNumberAlt1                376, 217
+		Pull                          2
+		GetMemberFunctionString       "setsplitanimation"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "resetafterdeath"
+		; address: 0xc197f
+		; source: 217 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta05.vbo" 384:394
+		MemberFunctionArgumentCheck  1
+		LineNumber                   11548, 4
+		LineNumberAlt1               384, 217
+		GetVariableValue             0               ; local
+		PushConstant0
+		GetThisMemberFunctionString  "setsurfmode"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   11550, 4
+		LineNumberAlt1               386, 217
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		GetMemberValueString         "actor"
+		GetThisMemberValueString     "mparent"
+		GetMemberValueString         "enterstartid"
+		GetThisMemberValueString     "mparent"
+		GetMemberValueString         "enterlookid"
+		Pull                         3
+		GetMemberFunctionString      "gotopos"
+		JumpAbsolute                 3
+		Pop
+		LineNumber                   11551, 4
+		LineNumberAlt1               387, 217
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		Dup
+		GetMemberFunctionString      "unkill"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   11553, 4
+		LineNumberAlt1               389, 217
+		PushConstant0
+		SetThisMemberValueString     "mtriggerstate"
+		LineNumber                   11554, 4
+		LineNumberAlt1               390, 217
+		GetThisMemberValueString     "msurfboards"
+		PushConstanti8               1
+		GetArrayValue
+		Dup
+		GetMemberFunctionString      "hide"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   11555, 4
+		LineNumberAlt1               391, 217
+		GetThisMemberValueString     "msurfboards"
+		PushConstant0
+		GetArrayValue
+		Dup
+		GetMemberFunctionString      "show"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   11556, 4
+		LineNumberAlt1               392, 217
+		GetThisMemberValueString     "mboulders"
+		PushConstanti8               1
+		GetArrayValue
+		Dup
+		GetMemberFunctionString      "hide"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   11557, 4
+		LineNumberAlt1               393, 217
+		GetThisMemberValueString     "mboulders"
+		PushConstant0
+		GetArrayValue
+		Dup
+		GetMemberFunctionString      "show"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   11558, 4
+		LineNumberAlt1               394, 217
+		GetThisMemberValueString     "music"
+		PushConstanti8               1
+		Pull                         2
+		GetMemberFunctionString      "play"
+		JumpAbsolute                 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "startcinematic"
+		; address: 0xc1a54
+		; source: 217 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta05.vbo" 401:408
+		MemberFunctionArgumentCheck   1
+		LineNumber                    11565, 4
+		LineNumberAlt1                401, 217
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    11568, 4
+		LineNumberAlt1                404, 217
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "maskcontrol"
+		Dup
+		GetMemberFunctionString       "isactive"
+		JumpAbsolute                  1
+		LineNumber                    11568, 4
+		LineNumberAlt1                404, 217
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    11569, 4
+		LineNumberAlt1                405, 217
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "maskcontrol"
+		Dup
+		GetMemberFunctionString       "toggleactive"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    11572, 4
+		LineNumberAlt1                408, 217
+		GetThisMemberValueString      "mcinema"
+		CallGameFunctionString        "gccinemaengine", "play", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "endcinematic"
+		; address: 0xc1ac6
+		; source: 217 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta05.vbo" 416:453
+		MemberFunctionArgumentCheck  1
+		LineNumber                   11580, 4
+		LineNumberAlt1               416, 217
+		GetThisMemberValueString     "mparent"
+		GetMemberValueString         "level"
+		GetMemberValueString         "cam"
+		PushConstantf32              0.12999999523162842
+		PushConstantf32              0.4000000059604645
+		Pull                         3
+		GetMemberFunctionString      "shakecamera"
+		JumpAbsolute                 3
+		Pop
+		LineNumber                   11583, 4
+		LineNumberAlt1               419, 217
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "hud"
+		Dup
+		GetMemberFunctionString      "show"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   11587, 4
+		LineNumberAlt1               423, 217
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		GetMemberValueString         "actor"
+		PushConstanti8               15
+		PushConstanti8               -74
+		PushConstanti8               32
+		Pull                         4
+		GetMemberFunctionString      "setpos"
+		JumpAbsolute                 4
+		Pop
+		LineNumber                   11588, 4
+		LineNumberAlt1               424, 217
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		GetMemberValueString         "actor"
+		PushConstant0
+		Pull                         2
+		GetMemberFunctionString      "setorientation"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   11591, 4
+		LineNumberAlt1               427, 217
+		PushConstantStringString     "hiding PreTrigger boulder/surfboard"
+		CallGameFunctionString       "debug", "print", 1
+		Pop
+		LineNumber                   11592, 4
+		LineNumberAlt1               428, 217
+		GetThisMemberValueString     "mboulders"
+		GetThisMemberValueString     "mtriggerstate"
+		GetArrayValue
+		Dup
+		GetMemberFunctionString      "hide"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   11593, 4
+		LineNumberAlt1               429, 217
+		GetThisMemberValueString     "msurfboards"
+		GetThisMemberValueString     "mtriggerstate"
+		GetArrayValue
+		Dup
+		GetMemberFunctionString      "hide"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   11595, 4
+		LineNumberAlt1               431, 217
+		PushConstanti8               1
+		SetThisMemberValueString     "mtriggerstate"
+		LineNumber                   11597, 4
+		LineNumberAlt1               433, 217
+		PushConstantStringString     "showing PostTrigger boulder/surfboard"
+		CallGameFunctionString       "debug", "print", 1
+		Pop
+		LineNumber                   11598, 4
+		LineNumberAlt1               434, 217
+		GetThisMemberValueString     "mboulders"
+		GetThisMemberValueString     "mtriggerstate"
+		GetArrayValue
+		Dup
+		GetMemberFunctionString      "show"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   11604, 4
+		LineNumberAlt1               440, 217
+		GetVariableValue             0                                        ; local
+		PushConstanti8               1
+		GetThisMemberFunctionString  "setsurfmode"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   11609, 4
+		LineNumberAlt1               445, 217
+		PushConstantStringString     "telling the boulder start on it's path"
+		CallGameFunctionString       "debug", "print", 1
+		Pop
+		LineNumber                   11610, 4
+		LineNumberAlt1               446, 217
+		GetThisMemberValueString     "mboulders"
+		GetThisMemberValueString     "mtriggerstate"
+		GetArrayValue
+		PushConstantf32              0.6000000238418579
+		Pull                         2
+		GetMemberFunctionString      "startrunning"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   11616, 4
+		LineNumberAlt1               452, 217
+		PushConstanti32              4194304
+		PushConstanti8               1
+		CallGameFunctionString       "gcsaver", "setcondition", 2
+		Pop
+		LineNumber                   11617, 4
+		LineNumberAlt1               453, 217
+		PushConstantStringString     "*** set ta02 to cold"
+		CallGameFunctionString       "debug", "print", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0xc1c35
+		; source: 217 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta05.vbo" 459:459
+		MemberFunctionArgumentCheck   2
+		LineNumber                    11623, 4
+		LineNumberAlt1                459, 217
+		GetVariableValue              1              ; local
+		GetMemberValueString          "button"
+		PushConstanti8                80
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    11623, 4
+		LineNumberAlt1                459, 217
+		GetVariableValue              1              ; local
+		GetMemberValueString          "event"
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    11623, 4
+		LineNumberAlt1                459, 217
+		GetVariableValue              0              ; local
+		GetThisMemberFunctionString   "endcinematic"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+end ; class

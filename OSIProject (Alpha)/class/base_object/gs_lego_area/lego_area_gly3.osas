@@ -1,0 +1,156 @@
+begin class "lego_area_gly3", "gs_lego_area"
+	property "brigpuzzle"
+	property "parent"
+
+	begin method "lego_area_gly3"
+		; address: 0x96336
+		; source: 161 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly3.vbo" 27:30
+		MemberFunctionArgumentCheck 2
+		LineNumber                  58951, 4
+		LineNumberAlt1              27, 161
+		GetVariableValue            1                    ; local
+		SetThisMemberValueString    "parent"
+		LineNumber                  58952, 4
+		LineNumberAlt1              28, 161
+		GetVariableValue            0                    ; local
+		PushConstantStringString    "gly3"
+		GetVariableValue            1                    ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  58953, 4
+		LineNumberAlt1              29, 161
+		CreateObjectString          "brigpuzzle"
+		Dup
+		GetVariableValue            0                    ; local
+		Pull                        2
+		GetMemberFunctionString     "brigpuzzle"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  58953, 4
+		LineNumberAlt1              29, 161
+		SetThisMemberValueString    "brigpuzzle"
+		LineNumber                  58954, 4
+		LineNumberAlt1              30, 161
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x9639e
+		; source: 161 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly3.vbo" 36:38
+		MemberFunctionArgumentCheck 1
+		LineNumber                  58960, 4
+		LineNumberAlt1              36, 161
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_show"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  58961, 4
+		LineNumberAlt1              37, 161
+		GetThisMemberValueString    "brigpuzzle"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  58962, 4
+		LineNumberAlt1              38, 161
+		GetThisMemberValueString    "brigpuzzle"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x963dd
+		; source: 161 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly3.vbo" 43:43
+		MemberFunctionArgumentCheck 2
+		LineNumber                  58967, 4
+		LineNumberAlt1              43, 161
+		GetThisMemberValueString    "brigpuzzle"
+		GetVariableValue            1            ; local
+		Pull                        2
+		GetMemberFunctionString     "process"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x963f9
+		; source: 161 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly3.vbo" 48:48
+		MemberFunctionArgumentCheck 2
+		LineNumber                  58972, 4
+		LineNumberAlt1              48, 161
+		GetThisMemberValueString    "brigpuzzle"
+		GetVariableValue            1            ; local
+		Pull                        2
+		GetMemberFunctionString     "input"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x96415
+		; source: 161 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly3.vbo" 53:53
+		MemberFunctionArgumentCheck 2
+		LineNumber                  58977, 4
+		LineNumberAlt1              53, 161
+		GetThisMemberValueString    "brigpuzzle"
+		GetVariableValue            1            ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x96431
+		; source: 161 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly3.vbo" 58:59
+		MemberFunctionArgumentCheck 1
+		LineNumber                  58982, 4
+		LineNumberAlt1              58, 161
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_hide"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  58983, 4
+		LineNumberAlt1              59, 161
+		GetThisMemberValueString    "brigpuzzle"
+		Dup
+		GetMemberFunctionString     "hide"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x9645c
+		; source: 161 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly3.vbo" 64:64
+		MemberFunctionArgumentCheck 1
+		LineNumber                  58988, 4
+		LineNumberAlt1              64, 161
+		GetThisMemberValueString    "brigpuzzle"
+		Dup
+		GetMemberFunctionString     "exit"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

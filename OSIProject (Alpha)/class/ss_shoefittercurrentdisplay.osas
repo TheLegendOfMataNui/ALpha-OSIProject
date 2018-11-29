@@ -1,0 +1,461 @@
+begin class "ss_shoefittercurrentdisplay"
+	property "currentlabel"
+	property "framelabel"
+	property "timelabel"
+	property "cframe"
+	property "ctime"
+
+	begin method "ss_shoefittercurrentdisplay"
+		; address: 0x71f15
+		; source: 116 "C:\\projects\\lego\\Scripting\\VBO\\eventeditor/shoefitter.vbo" 305:309
+		MemberFunctionArgumentCheck 6
+		LineNumber                  42718, 4
+		LineNumberAlt1              305, 116
+		GetVariableValue            1              ; local
+		SetThisMemberValueString    "currentlabel"
+		LineNumber                  42719, 4
+		LineNumberAlt1              306, 116
+		GetVariableValue            2              ; local
+		SetThisMemberValueString    "framelabel"
+		LineNumber                  42720, 4
+		LineNumberAlt1              307, 116
+		GetVariableValue            3              ; local
+		SetThisMemberValueString    "timelabel"
+		LineNumber                  42721, 4
+		LineNumberAlt1              308, 116
+		GetVariableValue            4              ; local
+		SetThisMemberValueString    "cframe"
+		LineNumber                  42722, 4
+		LineNumberAlt1              309, 116
+		GetVariableValue            5              ; local
+		SetThisMemberValueString    "ctime"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x71f69
+		; source: 116 "C:\\projects\\lego\\Scripting\\VBO\\eventeditor/shoefitter.vbo" 314:327
+		MemberFunctionArgumentCheck 1
+		LineNumber                  42727, 4
+		LineNumberAlt1              314, 116
+		GetThisMemberValueString    "currentlabel"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  42728, 4
+		LineNumberAlt1              315, 116
+		GetThisMemberValueString    "framelabel"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  42729, 4
+		LineNumberAlt1              316, 116
+		GetThisMemberValueString    "timelabel"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  42730, 4
+		LineNumberAlt1              317, 116
+		GetThisMemberValueString    "cframe"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  42731, 4
+		LineNumberAlt1              318, 116
+		GetThisMemberValueString    "ctime"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  42733, 4
+		LineNumberAlt1              320, 116
+		GetThisMemberValueString    "currentlabel"
+		Dup
+		GetMemberFunctionString     "add"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  42734, 4
+		LineNumberAlt1              321, 116
+		GetThisMemberValueString    "framelabel"
+		Dup
+		GetMemberFunctionString     "add"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  42735, 4
+		LineNumberAlt1              322, 116
+		GetThisMemberValueString    "timelabel"
+		Dup
+		GetMemberFunctionString     "add"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  42736, 4
+		LineNumberAlt1              323, 116
+		GetThisMemberValueString    "cframe"
+		Dup
+		GetMemberFunctionString     "add"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  42737, 4
+		LineNumberAlt1              324, 116
+		GetThisMemberValueString    "ctime"
+		Dup
+		GetMemberFunctionString     "add"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  42739, 4
+		LineNumberAlt1              326, 116
+		GetThisMemberValueString    "cframe"
+		PushConstantStringString    "0"
+		Pull                        2
+		GetMemberFunctionString     "setstring"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  42740, 4
+		LineNumberAlt1              327, 116
+		GetThisMemberValueString    "ctime"
+		PushConstantStringString    "0.0"
+		Pull                        2
+		GetMemberFunctionString     "setstring"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initshort"
+		; address: 0x72065
+		; source: 116 "C:\\projects\\lego\\Scripting\\VBO\\eventeditor/shoefitter.vbo" 333:333
+		MemberFunctionArgumentCheck 1
+		LineNumber                  42746, 4
+		LineNumberAlt1              333, 116
+		GetVariableValue            0          ; local
+		GetThisMemberFunctionString "initfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x7207c
+		; source: 116 "C:\\projects\\lego\\Scripting\\VBO\\eventeditor/shoefitter.vbo" 338:354
+		MemberFunctionArgumentCheck   1
+		LineNumber                    42751, 4
+		LineNumberAlt1                338, 116
+		GetThisMemberValueString      "currentlabel"
+		GetMemberValueString          "onscreen"
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    42751, 4
+		LineNumberAlt1                338, 116
+		GetThisMemberValueString      "currentlabel"
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    42752, 4
+		LineNumberAlt1                339, 116
+		GetThisMemberValueString      "framelabel"
+		GetMemberValueString          "onscreen"
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    42752, 4
+		LineNumberAlt1                339, 116
+		GetThisMemberValueString      "framelabel"
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  1
+		LineNumber                    42753, 4
+		LineNumberAlt1                340, 116
+		GetThisMemberValueString      "timelabel"
+		GetMemberValueString          "onscreen"
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    42753, 4
+		LineNumberAlt1                340, 116
+		GetThisMemberValueString      "timelabel"
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  2
+		LineNumber                    42754, 4
+		LineNumberAlt1                341, 116
+		GetThisMemberValueString      "cframe"
+		GetMemberValueString          "onscreen"
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    42754, 4
+		LineNumberAlt1                341, 116
+		GetThisMemberValueString      "cframe"
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  3
+		LineNumber                    42755, 4
+		LineNumberAlt1                342, 116
+		GetThisMemberValueString      "ctime"
+		GetMemberValueString          "onscreen"
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    42755, 4
+		LineNumberAlt1                342, 116
+		GetThisMemberValueString      "ctime"
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  4
+		LineNumber                    42757, 4
+		LineNumberAlt1                344, 116
+		GetThisMemberValueString      "currentlabel"
+		Dup
+		GetMemberFunctionString       "remove"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    42758, 4
+		LineNumberAlt1                345, 116
+		GetThisMemberValueString      "framelabel"
+		Dup
+		GetMemberFunctionString       "remove"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    42759, 4
+		LineNumberAlt1                346, 116
+		GetThisMemberValueString      "timelabel"
+		Dup
+		GetMemberFunctionString       "remove"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    42760, 4
+		LineNumberAlt1                347, 116
+		GetThisMemberValueString      "cframe"
+		Dup
+		GetMemberFunctionString       "remove"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    42761, 4
+		LineNumberAlt1                348, 116
+		GetThisMemberValueString      "ctime"
+		Dup
+		GetMemberFunctionString       "remove"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    42763, 4
+		LineNumberAlt1                350, 116
+		GetThisMemberValueString      "currentlabel"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    42764, 4
+		LineNumberAlt1                351, 116
+		GetThisMemberValueString      "framelabel"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    42765, 4
+		LineNumberAlt1                352, 116
+		GetThisMemberValueString      "timelabel"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    42766, 4
+		LineNumberAlt1                353, 116
+		GetThisMemberValueString      "cframe"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    42767, 4
+		LineNumberAlt1                354, 116
+		GetThisMemberValueString      "ctime"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupshort"
+		; address: 0x7220b
+		; source: 116 "C:\\projects\\lego\\Scripting\\VBO\\eventeditor/shoefitter.vbo" 359:359
+		MemberFunctionArgumentCheck 1
+		LineNumber                  42772, 4
+		LineNumberAlt1              359, 116
+		GetVariableValue            0             ; local
+		GetThisMemberFunctionString "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x72222
+		; source: 116 "C:\\projects\\lego\\Scripting\\VBO\\eventeditor/shoefitter.vbo" 364:366
+		MemberFunctionArgumentCheck   3
+		LineNumber                    42777, 4
+		LineNumberAlt1                364, 116
+		GetThisMemberValueString      "cframe"
+		GetMemberValueString          "onscreen"
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    42778, 4
+		LineNumberAlt1                365, 116
+		GetThisMemberValueString      "cframe"
+		GetVariableValue              2                               ; local
+		Dup
+		GetMemberFunctionString       "getframe"
+		JumpAbsolute                  1
+		LineNumber                    42778, 4
+		LineNumberAlt1                365, 116
+		ConvertToString
+		Pull                          2
+		GetMemberFunctionString       "setstring"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    42779, 4
+		LineNumberAlt1                366, 116
+		GetThisMemberValueString      "ctime"
+		GetVariableValue              2                               ; local
+		Dup
+		GetMemberFunctionString       "gettime"
+		JumpAbsolute                  1
+		LineNumber                    42779, 4
+		LineNumberAlt1                366, 116
+		ConvertToString
+		PushConstanti8                6
+		CallGameFunctionString        "scslosistringfuncs", "left", 2
+		LineNumber                    42779, 4
+		LineNumberAlt1                366, 116
+		Pull                          2
+		GetMemberFunctionString       "setstring"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "showlabels"
+		; address: 0x7229d
+		; source: 116 "C:\\projects\\lego\\Scripting\\VBO\\eventeditor/shoefitter.vbo" 372:377
+		MemberFunctionArgumentCheck   1
+		LineNumber                    42785, 4
+		LineNumberAlt1                372, 116
+		GetThisMemberValueString      "currentlabel"
+		GetMemberValueString          "onscreen"
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    42786, 4
+		LineNumberAlt1                373, 116
+		GetThisMemberValueString      "currentlabel"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    42787, 4
+		LineNumberAlt1                374, 116
+		GetThisMemberValueString      "framelabel"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    42788, 4
+		LineNumberAlt1                375, 116
+		GetThisMemberValueString      "timelabel"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    42789, 4
+		LineNumberAlt1                376, 116
+		GetThisMemberValueString      "cframe"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    42790, 4
+		LineNumberAlt1                377, 116
+		GetThisMemberValueString      "ctime"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hidelabels"
+		; address: 0x72319
+		; source: 116 "C:\\projects\\lego\\Scripting\\VBO\\eventeditor/shoefitter.vbo" 383:388
+		MemberFunctionArgumentCheck   1
+		LineNumber                    42796, 4
+		LineNumberAlt1                383, 116
+		GetThisMemberValueString      "currentlabel"
+		GetMemberValueString          "onscreen"
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    42797, 4
+		LineNumberAlt1                384, 116
+		GetThisMemberValueString      "currentlabel"
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    42798, 4
+		LineNumberAlt1                385, 116
+		GetThisMemberValueString      "framelabel"
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    42799, 4
+		LineNumberAlt1                386, 116
+		GetThisMemberValueString      "timelabel"
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    42800, 4
+		LineNumberAlt1                387, 116
+		GetThisMemberValueString      "cframe"
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    42801, 4
+		LineNumberAlt1                388, 116
+		GetThisMemberValueString      "ctime"
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+end ; class

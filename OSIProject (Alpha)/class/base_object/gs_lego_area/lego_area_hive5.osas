@@ -1,0 +1,134 @@
+begin class "lego_area_hive5", "gs_lego_area"
+	property "puzzle"
+
+	begin method "lego_area_hive5"
+		; address: 0xb9cf3
+		; source: 207 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_hive.vbo" 28:29
+		MemberFunctionArgumentCheck 2
+		LineNumber                  8101, 4
+		LineNumberAlt1              28, 207
+		GetVariableValue            0              ; local
+		PushConstantStringString    "hive"
+		GetVariableValue            1              ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  8102, 4
+		LineNumberAlt1              29, 207
+		CreateObjectString          "hive_puzzle"
+		Dup
+		GetVariableValue            0              ; local
+		Pull                        2
+		GetMemberFunctionString     "hive_puzzle"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  8102, 4
+		LineNumberAlt1              29, 207
+		SetThisMemberValueString    "puzzle"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xb9d38
+		; source: 207 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_hive.vbo" 36:38
+		MemberFunctionArgumentCheck 1
+		LineNumber                  8109, 4
+		LineNumberAlt1              36, 207
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  8110, 4
+		LineNumberAlt1              37, 207
+		PushConstanti32             -10381892
+		PushConstant0
+		PushConstantf32             5
+		Subtract
+		PushConstant0
+		PushConstantf32             600
+		Subtract
+		PushConstantf32             0.009999999776482582
+		CallGameFunctionString      "gcareadirector", "setfog", 4
+		Pop
+		LineNumber                  8111, 4
+		LineNumberAlt1              38, 207
+		PushConstant0
+		CallGameFunctionString      "gclightdirector", "setcavelighting", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xb9d8b
+		; source: 207 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_hive.vbo" 43:43
+		MemberFunctionArgumentCheck 1
+		LineNumber                  8116, 4
+		LineNumberAlt1              43, 207
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0xb9da3
+		; source: 207 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_hive.vbo" 48:48
+		MemberFunctionArgumentCheck 1
+		LineNumber                  8121, 4
+		LineNumberAlt1              48, 207
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "exit"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xb9dbb
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xb9dbf
+		; source: 207 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_hive.vbo" 58:58
+		MemberFunctionArgumentCheck 2
+		LineNumber                  8131, 4
+		LineNumberAlt1              58, 207
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0xb9ddb
+		; source: 207 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_hive.vbo" 63:63
+		MemberFunctionArgumentCheck 2
+		LineNumber                  8136, 4
+		LineNumberAlt1              63, 207
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1        ; local
+		Pull                        2
+		GetMemberFunctionString     "input"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

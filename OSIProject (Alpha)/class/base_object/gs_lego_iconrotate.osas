@@ -1,0 +1,245 @@
+begin class "gs_lego_iconrotate", "base_object"
+	property "enabled"
+	property "rotate"
+	property "hidden"
+
+	begin method "gs_lego_iconrotate"
+		; address: 0x39d8d
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 758:760
+		MemberFunctionArgumentCheck 4
+		LineNumber                  11606, 4
+		LineNumberAlt1              758, 28
+		GetVariableValue            1         ; local
+		SetThisMemberValueString    "rotate"
+		LineNumber                  11607, 4
+		LineNumberAlt1              759, 28
+		GetVariableValue            2         ; local
+		SetThisMemberValueString    "enabled"
+		LineNumber                  11608, 4
+		LineNumberAlt1              760, 28
+		PushConstant0
+		SetThisMemberValueString    "hidden"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x39dbf
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 765:765
+		MemberFunctionArgumentCheck 1
+		LineNumber                  11613, 4
+		LineNumberAlt1              765, 28
+		GetThisMemberValueString    "rotate"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x39dd7
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 769:771
+		MemberFunctionArgumentCheck   1
+		LineNumber                    11617, 4
+		LineNumberAlt1                769, 28
+		GetThisMemberValueString      "rotate"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    11618, 4
+		LineNumberAlt1                770, 28
+		GetThisMemberValueString      "rotate"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    11619, 4
+		LineNumberAlt1                771, 28
+		PushNothing
+		SetThisMemberValueString      "rotate"
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "add"
+		; address: 0x39e10
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 776:776
+		MemberFunctionArgumentCheck 1
+		LineNumber                  11624, 4
+		LineNumberAlt1              776, 28
+		GetThisMemberValueString    "rotate"
+		Dup
+		GetMemberFunctionString     "add"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "show"
+		; address: 0x39e28
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 780:781
+		MemberFunctionArgumentCheck 1
+		LineNumber                  11628, 4
+		LineNumberAlt1              780, 28
+		PushConstant0
+		SetThisMemberValueString    "hidden"
+		LineNumber                  11629, 4
+		LineNumberAlt1              781, 28
+		GetThisMemberValueString    "rotate"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "remove"
+		; address: 0x39e4e
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 785:785
+		MemberFunctionArgumentCheck 1
+		LineNumber                  11633, 4
+		LineNumberAlt1              785, 28
+		GetThisMemberValueString    "rotate"
+		Dup
+		GetMemberFunctionString     "remove"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hide"
+		; address: 0x39e66
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 789:790
+		MemberFunctionArgumentCheck 1
+		LineNumber                  11637, 4
+		LineNumberAlt1              789, 28
+		PushConstanti8              1
+		SetThisMemberValueString    "hidden"
+		LineNumber                  11638, 4
+		LineNumberAlt1              790, 28
+		GetThisMemberValueString    "rotate"
+		Dup
+		GetMemberFunctionString     "hide"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "enablealphachannel"
+		; address: 0x39e8d
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 795:795
+		MemberFunctionArgumentCheck 2
+		LineNumber                  11643, 4
+		LineNumberAlt1              795, 28
+		GetThisMemberValueString    "rotate"
+		GetVariableValue            1                    ; local
+		Pull                        2
+		GetMemberFunctionString     "enablealphachannel"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setpos"
+		; address: 0x39ea9
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 800:800
+		MemberFunctionArgumentCheck 5
+		LineNumber                  11648, 4
+		LineNumberAlt1              800, 28
+		GetThisMemberValueString    "rotate"
+		GetVariableValue            1        ; local
+		GetVariableValue            2        ; local
+		GetVariableValue            3        ; local
+		GetVariableValue            4        ; local
+		Pull                        5
+		GetMemberFunctionString     "setpos"
+		JumpAbsolute                5
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "enableicon"
+		; address: 0x39ece
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x39ed2
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 810:811
+		MemberFunctionArgumentCheck   2
+		LineNumber                    11658, 4
+		LineNumberAlt1                810, 28
+		GetThisMemberValueString      "enabled"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    11659, 4
+		LineNumberAlt1                811, 28
+		GetThisMemberValueString      "rotate"
+		GetVariableValue              1         ; local
+		Pull                          2
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "animate"
+		; address: 0x39f01
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 820:825
+		MemberFunctionArgumentCheck   2
+		LineNumber                    11668, 4
+		LineNumberAlt1                820, 28
+		GetVariableValue              1              ; local
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    11669, 4
+		LineNumberAlt1                821, 28
+		GetThisMemberValueString      "rotate"
+		Dup
+		GetMemberFunctionString       "startanimate"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    11671, 4
+		LineNumberAlt1                823, 28
+		GetThisMemberValueString      "rotate"
+		PushConstant0
+		PushConstanti8                1
+		Pull                          3
+		GetMemberFunctionString       "gotoframe"
+		JumpAbsolute                  3
+		Pop
+		; <-
+		BranchTarget                  1
+		LineNumber                    11673, 4
+		LineNumberAlt1                825, 28
+		GetVariableValue              1              ; local
+		SetThisMemberValueString      "enabled"
+		PushNothing
+		Return
+	end ; method
+end ; class

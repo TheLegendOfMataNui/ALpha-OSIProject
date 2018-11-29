@@ -1,0 +1,288 @@
+begin class "ta07_switch"
+	property "parent"
+	property "obj"
+	property "id"
+	property "name"
+	property "up"
+
+	begin method "ta07_switch"
+		; address: 0xc2ebd
+		; source: 219 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta07.vbo" 502:506
+		MemberFunctionArgumentCheck 3
+		LineNumber                  12255, 4
+		LineNumberAlt1              502, 219
+		CreateObjectString          "lego_moveableobject"
+		Dup
+		GetVariableValue            1                                            ; local
+		Pull                        2
+		GetMemberFunctionString     "lego_moveableobject"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  12255, 4
+		LineNumberAlt1              502, 219
+		SetThisMemberValueString    "obj"
+		LineNumber                  12256, 4
+		LineNumberAlt1              503, 219
+		GetVariableValue            2                                            ; local
+		SetThisMemberValueString    "parent"
+		LineNumber                  12257, 4
+		LineNumberAlt1              504, 219
+		GetVariableValue            1                                            ; local
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  12257, 4
+		LineNumberAlt1              504, 219
+		SetThisMemberValueString    "id"
+		LineNumber                  12258, 4
+		LineNumberAlt1              505, 219
+		GetVariableValue            1                                            ; local
+		SetThisMemberValueString    "name"
+		LineNumber                  12259, 4
+		LineNumberAlt1              506, 219
+		PushConstanti8              1
+		SetThisMemberValueString    "up"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xc2f36
+		; source: 219 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta07.vbo" 513:514
+		MemberFunctionArgumentCheck 1
+		LineNumber                  12266, 4
+		LineNumberAlt1              513, 219
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  12267, 4
+		LineNumberAlt1              514, 219
+		GetThisMemberValueString    "obj"
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		Pull                        4
+		GetMemberFunctionString     "setresponse"
+		JumpAbsolute                4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xc2f66
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xc2f6a
+		; source: 219 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta07.vbo" 525:529
+		MemberFunctionArgumentCheck 1
+		LineNumber                  12278, 4
+		LineNumberAlt1              525, 219
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  12279, 4
+		LineNumberAlt1              526, 219
+		PushNothing
+		SetThisMemberValueString    "obj"
+		LineNumber                  12280, 4
+		LineNumberAlt1              527, 219
+		PushNothing
+		SetThisMemberValueString    "id"
+		LineNumber                  12281, 4
+		LineNumberAlt1              528, 219
+		PushNothing
+		SetThisMemberValueString    "name"
+		LineNumber                  12282, 4
+		LineNumberAlt1              529, 219
+		PushNothing
+		SetThisMemberValueString    "up"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0xc2fba
+		; source: 219 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta07.vbo" 535:535
+		MemberFunctionArgumentCheck 1
+		LineNumber                  12288, 4
+		LineNumberAlt1              535, 219
+		PushNothing
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xc2fcc
+		; source: 219 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta07.vbo" 540:546
+		MemberFunctionArgumentCheck   2
+		LineNumber                    12293, 4
+		LineNumberAlt1                540, 219
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    12297, 4
+		LineNumberAlt1                544, 219
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		GetThisMemberValueString      "id"
+		EqualTo
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		PushConstantStringString      "cnt1"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    12297, 4
+		LineNumberAlt1                544, 219
+		EqualTo
+		And
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    12298, 4
+		LineNumberAlt1                545, 219
+		GetThisMemberValueString      "up"
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    12299, 4
+		LineNumberAlt1                546, 219
+		GetVariableValue              0                                            ; local
+		PushConstant0
+		GetThisMemberFunctionString   "rase"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  0
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "reset"
+		; address: 0xc3043
+		; source: 219 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta07.vbo" 556:556
+		MemberFunctionArgumentCheck 1
+		LineNumber                  12309, 4
+		LineNumberAlt1              556, 219
+		GetVariableValue            0        ; local
+		PushConstanti8              1
+		GetThisMemberFunctionString "rase"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "rase"
+		; address: 0xc305c
+		; source: 219 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta07.vbo" 561:572
+		MemberFunctionArgumentCheck   2
+		LineNumber                    12314, 4
+		LineNumberAlt1                561, 219
+		GetVariableValue              1                                             ; local
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    12315, 4
+		LineNumberAlt1                562, 219
+		GetThisMemberValueString      "up"
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    12316, 4
+		LineNumberAlt1                563, 219
+		PushConstanti8                1
+		SetThisMemberValueString      "up"
+		LineNumber                    12317, 4
+		LineNumberAlt1                564, 219
+		GetThisMemberValueString      "obj"
+		PushConstant0
+		PushConstantf32               0.5
+		PushConstant0
+		PushConstantf32               0.5
+		Pull                          5
+		GetMemberFunctionString       "changeposition"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    12318, 4
+		LineNumberAlt1                565, 219
+		GetThisMemberValueString      "parent"
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "addtonumberofbuttonsdown"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  0
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		LineNumber                    12321, 4
+		LineNumberAlt1                568, 219
+		GetThisMemberValueString      "up"
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    12322, 4
+		LineNumberAlt1                569, 219
+		PushConstant0
+		SetThisMemberValueString      "up"
+		LineNumber                    12323, 4
+		LineNumberAlt1                570, 219
+		PushConstanti16               767
+		CallGameFunctionString        "gcstaticsoundsptrarray", "playtablesound", 1
+		Pop
+		LineNumber                    12324, 4
+		LineNumberAlt1                571, 219
+		GetThisMemberValueString      "obj"
+		PushConstant0
+		PushConstant0
+		PushConstantf32               0.5
+		Subtract
+		PushConstant0
+		PushConstantf32               0.5
+		Pull                          5
+		GetMemberFunctionString       "changeposition"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    12325, 4
+		LineNumberAlt1                572, 219
+		GetThisMemberValueString      "parent"
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "addtonumberofbuttonsdown"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "settweakable"
+		; address: 0xc3136
+		; source: 219 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta07.vbo" 582:582
+		MemberFunctionArgumentCheck 1
+		LineNumber                  12335, 4
+		LineNumberAlt1              582, 219
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "settweakable"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

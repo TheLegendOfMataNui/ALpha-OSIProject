@@ -1,0 +1,826 @@
+begin class "puzzle_kopa7"
+	property "platforms"
+	property "ring"
+	property "targets"
+	property "button"
+	property "buttonpos"
+	property "buttonpressed"
+
+	begin method "puzzle_kopa7"
+		; address: 0xd6b27
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xd6b2b
+		; source: 240 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_kopa.vbo" 119:151
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          1
+		LineNumber                    19978, 4
+		LineNumberAlt1                119, 240
+		CreateArray
+		Dup
+		CreateObjectString            "kopaka7_platform"
+		Dup
+		PushConstantStringString      "pt01"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               60
+		PushConstantf32               2
+		Pull                          6
+		GetMemberFunctionString       "kopaka7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    19979, 4
+		LineNumberAlt1                120, 240
+		AppendToArray
+		Dup
+		CreateObjectString            "kopaka7_platform"
+		Dup
+		PushConstantStringString      "pt02"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               60
+		PushConstantf32               2
+		Pull                          6
+		GetMemberFunctionString       "kopaka7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    19980, 4
+		LineNumberAlt1                121, 240
+		AppendToArray
+		Dup
+		CreateObjectString            "kopaka7_platform"
+		Dup
+		PushConstantStringString      "pt03"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               60
+		PushConstantf32               2
+		Pull                          6
+		GetMemberFunctionString       "kopaka7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    19981, 4
+		LineNumberAlt1                122, 240
+		AppendToArray
+		Dup
+		CreateObjectString            "kopaka7_platform"
+		Dup
+		PushConstantStringString      "pt04"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               60
+		PushConstantf32               2
+		Pull                          6
+		GetMemberFunctionString       "kopaka7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    19982, 4
+		LineNumberAlt1                123, 240
+		AppendToArray
+		Dup
+		CreateObjectString            "kopaka7_platform"
+		Dup
+		PushConstantStringString      "pt05"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               60
+		PushConstantf32               2
+		Pull                          6
+		GetMemberFunctionString       "kopaka7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    19983, 4
+		LineNumberAlt1                124, 240
+		AppendToArray
+		Dup
+		CreateObjectString            "kopaka7_platform"
+		Dup
+		PushConstantStringString      "pt06"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstantf32               60
+		PushConstantf32               2
+		Pull                          6
+		GetMemberFunctionString       "kopaka7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    19984, 4
+		LineNumberAlt1                125, 240
+		AppendToArray
+		SetThisMemberValueString      "platforms"
+		LineNumber                    19987, 4
+		LineNumberAlt1                128, 240
+		GetThisMemberValueString      "platforms"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2                     ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              2                     ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    19988, 4
+		LineNumberAlt1                129, 240
+		GetThisMemberValueString      "platforms"
+		GetVariableValue              2                     ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    19989, 4
+		LineNumberAlt1                130, 240
+		GetThisMemberValueString      "platforms"
+		GetVariableValue              2                     ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "toggle"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    19992, 4
+		LineNumberAlt1                133, 240
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "tg04"
+		GetVariableValue              1                     ; local
+		CreateArray
+		Pull                          4
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    19992, 4
+		LineNumberAlt1                133, 240
+		SetThisMemberValueString      "button"
+		LineNumber                    19993, 4
+		LineNumberAlt1                134, 240
+		GetThisMemberValueString      "button"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    19994, 4
+		LineNumberAlt1                135, 240
+		GetThisMemberValueString      "button"
+		PushConstant0
+		PushConstant0
+		PushConstanti8                3
+		Pull                          4
+		GetMemberFunctionString       "setresponse"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    19995, 4
+		LineNumberAlt1                136, 240
+		CreateArray
+		Dup
+		GetThisMemberValueString      "button"
+		Dup
+		GetMemberFunctionString       "getx"
+		JumpAbsolute                  1
+		LineNumber                    19995, 4
+		LineNumberAlt1                136, 240
+		AppendToArray
+		Dup
+		GetThisMemberValueString      "button"
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    19995, 4
+		LineNumberAlt1                136, 240
+		AppendToArray
+		Dup
+		GetThisMemberValueString      "button"
+		Dup
+		GetMemberFunctionString       "getz"
+		JumpAbsolute                  1
+		LineNumber                    19995, 4
+		LineNumberAlt1                136, 240
+		AppendToArray
+		SetThisMemberValueString      "buttonpos"
+		LineNumber                    19996, 4
+		LineNumberAlt1                137, 240
+		GetThisMemberValueString      "button"
+		GetThisMemberValueString      "buttonpos"
+		PushConstant0
+		GetArrayValue
+		GetThisMemberValueString      "buttonpos"
+		PushConstanti8                1
+		GetArrayValue
+		PushConstantf32               60
+		Subtract
+		GetThisMemberValueString      "buttonpos"
+		PushConstanti8                2
+		GetArrayValue
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    19997, 4
+		LineNumberAlt1                138, 240
+		PushConstant0
+		SetThisMemberValueString      "buttonpressed"
+		LineNumber                    19999, 4
+		LineNumberAlt1                140, 240
+		CreateObjectString            "kopaka7_platform"
+		Dup
+		PushConstantStringString      "pf01"
+		GetVariableValue              1                     ; local
+		CreateArray
+		PushConstant0
+		PushConstantf32               60
+		Subtract
+		PushConstantf32               0.10000000149011612
+		Pull                          6
+		GetMemberFunctionString       "kopaka7_platform"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    19999, 4
+		LineNumberAlt1                140, 240
+		SetThisMemberValueString      "ring"
+		LineNumber                    20000, 4
+		LineNumberAlt1                141, 240
+		GetThisMemberValueString      "ring"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    20001, 4
+		LineNumberAlt1                142, 240
+		GetThisMemberValueString      "ring"
+		Dup
+		GetMemberFunctionString       "toggle"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    20003, 4
+		LineNumberAlt1                144, 240
+		CreateArray
+		Dup
+		CreateObjectString            "kopaka7_target"
+		Dup
+		PushConstantStringString      "tg00"
+		GetVariableValue              1                     ; local
+		GetThisMemberValueString      "ring"
+		GetThisMemberValueString      "button"
+		Pull                          5
+		GetMemberFunctionString       "kopaka7_target"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    20004, 4
+		LineNumberAlt1                145, 240
+		AppendToArray
+		Dup
+		CreateObjectString            "kopaka7_target"
+		Dup
+		PushConstantStringString      "tg01"
+		GetVariableValue              1                     ; local
+		GetThisMemberValueString      "ring"
+		GetThisMemberValueString      "button"
+		Pull                          5
+		GetMemberFunctionString       "kopaka7_target"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    20005, 4
+		LineNumberAlt1                146, 240
+		AppendToArray
+		Dup
+		CreateObjectString            "kopaka7_target"
+		Dup
+		PushConstantStringString      "tg02"
+		GetVariableValue              1                     ; local
+		GetThisMemberValueString      "ring"
+		GetThisMemberValueString      "button"
+		Pull                          5
+		GetMemberFunctionString       "kopaka7_target"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    20006, 4
+		LineNumberAlt1                147, 240
+		AppendToArray
+		SetThisMemberValueString      "targets"
+		LineNumber                    20009, 4
+		LineNumberAlt1                150, 240
+		GetThisMemberValueString      "targets"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2                     ; local
+		; <-
+		BranchTarget                  2
+		Dup
+		GetVariableValue              2                     ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    20010, 4
+		LineNumberAlt1                151, 240
+		GetThisMemberValueString      "targets"
+		GetVariableValue              2                     ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xd6e7b
+		; source: 240 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_kopa.vbo" 158:174
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    20017, 4
+		LineNumberAlt1                158, 240
+		GetThisMemberValueString      "platforms"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1             ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1             ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    20018, 4
+		LineNumberAlt1                159, 240
+		GetThisMemberValueString      "platforms"
+		GetVariableValue              1             ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    20019, 4
+		LineNumberAlt1                160, 240
+		GetThisMemberValueString      "platforms"
+		GetVariableValue              1             ; local
+		PushNothing
+		SetArrayValue
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    20021, 4
+		LineNumberAlt1                162, 240
+		PushNothing
+		SetThisMemberValueString      "platforms"
+		LineNumber                    20023, 4
+		LineNumberAlt1                164, 240
+		GetThisMemberValueString      "targets"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1             ; local
+		; <-
+		BranchTarget                  2
+		Dup
+		GetVariableValue              1             ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    20024, 4
+		LineNumberAlt1                165, 240
+		GetThisMemberValueString      "targets"
+		GetVariableValue              1             ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    20025, 4
+		LineNumberAlt1                166, 240
+		GetThisMemberValueString      "targets"
+		GetVariableValue              1             ; local
+		PushNothing
+		SetArrayValue
+		IncrementVariable             1
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Pop
+		LineNumber                    20027, 4
+		LineNumberAlt1                168, 240
+		PushNothing
+		SetThisMemberValueString      "targets"
+		LineNumber                    20029, 4
+		LineNumberAlt1                170, 240
+		GetThisMemberValueString      "button"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    20030, 4
+		LineNumberAlt1                171, 240
+		PushNothing
+		SetThisMemberValueString      "button"
+		LineNumber                    20032, 4
+		LineNumberAlt1                173, 240
+		GetThisMemberValueString      "ring"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    20033, 4
+		LineNumberAlt1                174, 240
+		PushNothing
+		SetThisMemberValueString      "ring"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xd6f7d
+		; source: 240 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_kopa.vbo" 180:210
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          1
+		LineNumber                    20039, 4
+		LineNumberAlt1                180, 240
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                3
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    20043, 4
+		LineNumberAlt1                184, 240
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		PushConstantStringString      "tb00"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    20043, 4
+		LineNumberAlt1                184, 240
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    20044, 4
+		LineNumberAlt1                185, 240
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "reseta"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		BranchAlwaysTarget            5, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Dup
+		PushConstanti8                27
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    20050, 4
+		LineNumberAlt1                191, 240
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "resetb"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            5, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    20055, 4
+		LineNumberAlt1                196, 240
+		GetThisMemberValueString      "buttonpressed"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    20056, 4
+		LineNumberAlt1                197, 240
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		PushConstantStringString      "cnt1"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    20056, 4
+		LineNumberAlt1                197, 240
+		EqualTo
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		GetThisMemberValueString      "button"
+		GetMemberValueString          "id"
+		EqualTo
+		And
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    20057, 4
+		LineNumberAlt1                198, 240
+		PushConstanti8                1
+		SetThisMemberValueString      "buttonpressed"
+		LineNumber                    20058, 4
+		LineNumberAlt1                199, 240
+		GetThisMemberValueString      "button"
+		PushConstant0
+		PushConstant0
+		PushConstantf32               0.6000000238418579
+		Subtract
+		PushConstant0
+		PushConstantf32               1
+		Pull                          5
+		GetMemberFunctionString       "changeposition"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    20060, 4
+		LineNumberAlt1                201, 240
+		GetThisMemberValueString      "platforms"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2                                            ; local
+		; <-
+		BranchTarget                  3
+		Dup
+		GetVariableValue              2                                            ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    20061, 4
+		LineNumberAlt1                202, 240
+		GetThisMemberValueString      "platforms"
+		GetVariableValue              2                                            ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "toggle"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		Pop
+		; <-
+		BranchTarget                  5
+		Pop
+		LineNumber                    20068, 4
+		LineNumberAlt1                209, 240
+		GetThisMemberValueString      "targets"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2                                            ; local
+		; <-
+		BranchTarget                  6
+		Dup
+		GetVariableValue              2                                            ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 7, 0
+		; ->
+		LineNumber                    20069, 4
+		LineNumberAlt1                210, 240
+		GetThisMemberValueString      "targets"
+		GetVariableValue              2                                            ; local
+		GetArrayValue
+		GetVariableValue              1                                            ; local
+		Pull                          2
+		GetMemberFunctionString       "onevent"
+		JumpAbsolute                  2
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            6, 0
+		; ->
+		; <-
+		BranchTarget                  7
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "reseta"
+		; address: 0xd70f8
+		; source: 240 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_kopa.vbo" 218:221
+		MemberFunctionArgumentCheck  1
+		LineNumber                   20077, 4
+		LineNumberAlt1               218, 240
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "level"
+		GetMemberValueString         "cam"
+		PushConstanti8               7
+		Pull                         2
+		GetMemberFunctionString      "setaimode"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   20078, 4
+		LineNumberAlt1               219, 240
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		Dup
+		GetMemberFunctionString      "kill"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   20079, 4
+		LineNumberAlt1               220, 240
+		PushConstantf32              1.2000000476837158
+		CallGameFunctionString       "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		LineNumber                   20080, 4
+		LineNumberAlt1               221, 240
+		PushConstantStringString     "tb00"
+		CallGameFunctionString       "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                   20080, 4
+		LineNumberAlt1               221, 240
+		PushConstant0
+		CallGameFunctionString       "gccollisionphysicsgroup", "toggletriggerboxentered", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "resetb"
+		; address: 0xd716b
+		; source: 240 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_kopa.vbo" 227:230
+		MemberFunctionArgumentCheck  1
+		LineNumber                   20086, 4
+		LineNumberAlt1               227, 240
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		Dup
+		GetMemberFunctionString      "unkill"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   20087, 4
+		LineNumberAlt1               228, 240
+		PushConstantStringString     "str0"
+		CallGameFunctionString       "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                   20087, 4
+		LineNumberAlt1               228, 240
+		PushConstantStringString     "lok0"
+		CallGameFunctionString       "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                   20087, 4
+		LineNumberAlt1               228, 240
+		CallGameFunctionString       "gccollisionphysicsgroup", "settoaposition", 2
+		Pop
+		LineNumber                   20088, 4
+		LineNumberAlt1               229, 240
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "hud"
+		GetMemberValueString         "cdtimer"
+		Dup
+		GetMemberFunctionString      "reset"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   20089, 4
+		LineNumberAlt1               230, 240
+		GetVariableValue             0                                              ; local
+		GetThisMemberFunctionString  "resetpuzzle"
+		JumpAbsolute                 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "resetpuzzle"
+		; address: 0xd71ea
+		; source: 240 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_kopa.vbo" 235:248
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    20094, 4
+		LineNumberAlt1                235, 240
+		GetThisMemberValueString      "platforms"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1               ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1               ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    20095, 4
+		LineNumberAlt1                236, 240
+		GetThisMemberValueString      "platforms"
+		GetVariableValue              1               ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "reset"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    20096, 4
+		LineNumberAlt1                237, 240
+		GetThisMemberValueString      "platforms"
+		GetVariableValue              1               ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "toggle"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    20099, 4
+		LineNumberAlt1                240, 240
+		GetThisMemberValueString      "ring"
+		Dup
+		GetMemberFunctionString       "reset"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    20100, 4
+		LineNumberAlt1                241, 240
+		GetThisMemberValueString      "ring"
+		Dup
+		GetMemberFunctionString       "toggle"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    20102, 4
+		LineNumberAlt1                243, 240
+		GetThisMemberValueString      "targets"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1               ; local
+		; <-
+		BranchTarget                  2
+		Dup
+		GetVariableValue              1               ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    20103, 4
+		LineNumberAlt1                244, 240
+		GetThisMemberValueString      "targets"
+		GetVariableValue              1               ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "reset"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Pop
+		LineNumber                    20106, 4
+		LineNumberAlt1                247, 240
+		GetThisMemberValueString      "button"
+		GetThisMemberValueString      "buttonpos"
+		PushConstant0
+		GetArrayValue
+		GetThisMemberValueString      "buttonpos"
+		PushConstanti8                1
+		GetArrayValue
+		PushConstantf32               60
+		Subtract
+		GetThisMemberValueString      "buttonpos"
+		PushConstanti8                2
+		GetArrayValue
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    20107, 4
+		LineNumberAlt1                248, 240
+		PushConstant0
+		SetThisMemberValueString      "buttonpressed"
+		PushNothing
+		Return
+	end ; method
+end ; class

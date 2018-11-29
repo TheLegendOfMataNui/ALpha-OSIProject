@@ -1,0 +1,23 @@
+begin function "setuplevel_4", 0
+	; address: 0x2c651
+	; source: 170 "C:\\projects\\lego\\Scripting\\VBO\\lev4/level_4.vbo" 181:181
+	JumpTarget                   8
+	LineNumber                   5689, 4
+	LineNumberAlt1               181, 170
+	GetVariableValueGlobalString "screenlist"
+	CreateObjectString           "lego_level_4"
+	Dup
+	Dup
+	GetMemberFunctionString      "lego_level_4"
+	JumpAbsolute                 1
+	Pop
+	LineNumber                   5689, 4
+	LineNumberAlt1               181, 170
+	PushConstanti8               12
+	Pull                         3
+	GetMemberFunctionString      "addscreen"
+	JumpAbsolute                 3
+	Pop
+	PushNothing
+	Return
+end ; function

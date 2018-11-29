@@ -1,0 +1,321 @@
+begin class "l4_gly1_chomperdoor"
+	property "mtop"
+	property "mbottom"
+	property "mtopheight"
+	property "mbottomheight"
+	property "misopen"
+
+	begin method "l4_gly1_chomperdoor"
+		; address: 0xae806
+		; source: 187 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_gly1.vbo" 94:98
+		MemberFunctionArgumentCheck 5
+		LineNumber                  3375, 4
+		LineNumberAlt1              94, 187
+		CreateObjectString          "lego_moveableobject"
+		Dup
+		GetVariableValue            1                     ; local
+		Pull                        2
+		GetMemberFunctionString     "lego_moveableobject"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  3375, 4
+		LineNumberAlt1              94, 187
+		SetThisMemberValueString    "mtop"
+		LineNumber                  3376, 4
+		LineNumberAlt1              95, 187
+		CreateObjectString          "lego_moveableobject"
+		Dup
+		GetVariableValue            2                     ; local
+		Pull                        2
+		GetMemberFunctionString     "lego_moveableobject"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  3376, 4
+		LineNumberAlt1              95, 187
+		SetThisMemberValueString    "mbottom"
+		LineNumber                  3377, 4
+		LineNumberAlt1              96, 187
+		GetVariableValue            3                     ; local
+		SetThisMemberValueString    "mtopheight"
+		LineNumber                  3378, 4
+		LineNumberAlt1              97, 187
+		GetVariableValue            4                     ; local
+		SetThisMemberValueString    "mbottomheight"
+		LineNumber                  3379, 4
+		LineNumberAlt1              98, 187
+		PushConstant0
+		SetThisMemberValueString    "misopen"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xae884
+		; source: 187 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_gly1.vbo" 102:106
+		MemberFunctionArgumentCheck 1
+		LineNumber                  3383, 4
+		LineNumberAlt1              102, 187
+		GetThisMemberValueString    "mtop"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  3384, 4
+		LineNumberAlt1              103, 187
+		GetThisMemberValueString    "mbottom"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  3386, 4
+		LineNumberAlt1              105, 187
+		GetThisMemberValueString    "mtop"
+		Dup
+		GetMemberFunctionString     "settweakable"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  3387, 4
+		LineNumberAlt1              106, 187
+		GetThisMemberValueString    "mbottom"
+		Dup
+		GetMemberFunctionString     "settweakable"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xae8d8
+		; source: 187 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_gly1.vbo" 110:114
+		MemberFunctionArgumentCheck 1
+		LineNumber                  3391, 4
+		LineNumberAlt1              110, 187
+		GetThisMemberValueString    "mtop"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  3392, 4
+		LineNumberAlt1              111, 187
+		GetThisMemberValueString    "mbottom"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  3394, 4
+		LineNumberAlt1              113, 187
+		PushNothing
+		SetThisMemberValueString    "mtop"
+		LineNumber                  3395, 4
+		LineNumberAlt1              114, 187
+		PushNothing
+		SetThisMemberValueString    "mbottom"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "open"
+		; address: 0xae920
+		; source: 187 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_gly1.vbo" 118:121
+		MemberFunctionArgumentCheck   1
+		LineNumber                    3399, 4
+		LineNumberAlt1                118, 187
+		GetThisMemberValueString      "misopen"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    3400, 4
+		LineNumberAlt1                119, 187
+		GetThisMemberValueString      "mtop"
+		Dup
+		Dup
+		GetMemberFunctionString       "getx"
+		JumpAbsolute                  1
+		LineNumber                    3400, 4
+		LineNumberAlt1                119, 187
+		GetThisMemberValueString      "mtop"
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    3400, 4
+		LineNumberAlt1                119, 187
+		GetThisMemberValueString      "mtopheight"
+		Add
+		GetThisMemberValueString      "mtop"
+		Dup
+		GetMemberFunctionString       "getz"
+		JumpAbsolute                  1
+		LineNumber                    3400, 4
+		LineNumberAlt1                119, 187
+		PushConstantf32               5
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    3401, 4
+		LineNumberAlt1                120, 187
+		GetThisMemberValueString      "mbottom"
+		Dup
+		Dup
+		GetMemberFunctionString       "getx"
+		JumpAbsolute                  1
+		LineNumber                    3401, 4
+		LineNumberAlt1                120, 187
+		GetThisMemberValueString      "mbottom"
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    3401, 4
+		LineNumberAlt1                120, 187
+		GetThisMemberValueString      "mbottomheight"
+		Subtract
+		GetThisMemberValueString      "mbottom"
+		Dup
+		GetMemberFunctionString       "getz"
+		JumpAbsolute                  1
+		LineNumber                    3401, 4
+		LineNumberAlt1                120, 187
+		PushConstantf32               5
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    3402, 4
+		LineNumberAlt1                121, 187
+		PushConstanti8                1
+		SetThisMemberValueString      "misopen"
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "close"
+		; address: 0xae9ef
+		; source: 187 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_gly1.vbo" 126:129
+		MemberFunctionArgumentCheck   1
+		LineNumber                    3407, 4
+		LineNumberAlt1                126, 187
+		GetThisMemberValueString      "misopen"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    3408, 4
+		LineNumberAlt1                127, 187
+		GetThisMemberValueString      "mtop"
+		Dup
+		Dup
+		GetMemberFunctionString       "getx"
+		JumpAbsolute                  1
+		LineNumber                    3408, 4
+		LineNumberAlt1                127, 187
+		GetThisMemberValueString      "mtop"
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    3408, 4
+		LineNumberAlt1                127, 187
+		GetThisMemberValueString      "mtopheight"
+		Subtract
+		GetThisMemberValueString      "mtop"
+		Dup
+		GetMemberFunctionString       "getz"
+		JumpAbsolute                  1
+		LineNumber                    3408, 4
+		LineNumberAlt1                127, 187
+		PushConstantf32               5
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    3409, 4
+		LineNumberAlt1                128, 187
+		GetThisMemberValueString      "mbottom"
+		Dup
+		Dup
+		GetMemberFunctionString       "getx"
+		JumpAbsolute                  1
+		LineNumber                    3409, 4
+		LineNumberAlt1                128, 187
+		GetThisMemberValueString      "mbottom"
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    3409, 4
+		LineNumberAlt1                128, 187
+		GetThisMemberValueString      "mbottomheight"
+		Add
+		GetThisMemberValueString      "mbottom"
+		Dup
+		GetMemberFunctionString       "getz"
+		JumpAbsolute                  1
+		LineNumber                    3409, 4
+		LineNumberAlt1                128, 187
+		PushConstantf32               5
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    3410, 4
+		LineNumberAlt1                129, 187
+		PushConstant0
+		SetThisMemberValueString      "misopen"
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xaeabe
+		; source: 187 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_gly1.vbo" 136:139
+		MemberFunctionArgumentCheck   2
+		LineNumber                    3417, 4
+		LineNumberAlt1                136, 187
+		GetVariableValue              1                   ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                12
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    3419, 4
+		LineNumberAlt1                138, 187
+		GetVariableValue              1                   ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		GetThisMemberValueString      "mtop"
+		GetMemberValueString          "id"
+		EqualTo
+		GetVariableValue              1                   ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		GetThisMemberValueString      "mbottom"
+		GetMemberValueString          "id"
+		EqualTo
+		Or
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    3420, 4
+		LineNumberAlt1                139, 187
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "level"
+		GetMemberValueString          "cam"
+		PushConstantf32               0.10000000149011612
+		PushConstantf32               0.07999999821186066
+		Pull                          3
+		GetMemberFunctionString       "shakecamera"
+		JumpAbsolute                  3
+		Pop
+		; <-
+		BranchTarget                  0
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

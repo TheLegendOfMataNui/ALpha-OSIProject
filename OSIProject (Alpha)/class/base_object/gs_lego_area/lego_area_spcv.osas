@@ -1,0 +1,163 @@
+begin class "lego_area_spcv", "gs_lego_area"
+	property "spiderpuzzle"
+
+	begin method "lego_area_spcv"
+		; address: 0x5d021
+		; source: 92 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_spcv.vbo" 28:30
+		MemberFunctionArgumentCheck 2
+		LineNumber                  32330, 4
+		LineNumberAlt1              28, 92
+		GetVariableValue            0                    ; local
+		PushConstantStringString    "spcv"
+		GetVariableValue            1                    ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  32331, 4
+		LineNumberAlt1              29, 92
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  32332, 4
+		LineNumberAlt1              30, 92
+		CreateObjectString          "spiderfight_class"
+		Dup
+		GetVariableValue            0                    ; local
+		Pull                        2
+		GetMemberFunctionString     "spiderfight_class"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  32332, 4
+		LineNumberAlt1              30, 92
+		SetThisMemberValueString    "spiderpuzzle"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x5d079
+		; source: 92 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_spcv.vbo" 38:41
+		MemberFunctionArgumentCheck  1
+		LineNumber                   32340, 4
+		LineNumberAlt1               38, 92
+		GetVariableValue             0                                       ; local
+		GetThisMemberFunctionString  "lego_area_show"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   32341, 4
+		LineNumberAlt1               39, 92
+		GetThisMemberValueString     "spiderpuzzle"
+		Dup
+		GetMemberFunctionString      "initfull"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   32342, 4
+		LineNumberAlt1               40, 92
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		GetMemberValueString         "actor"
+		PushConstanti8               2
+		Pull                         2
+		GetMemberFunctionString      "setcontext"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   32343, 4
+		LineNumberAlt1               41, 92
+		PushConstanti8               1
+		CallGameFunctionString       "gclightdirector", "setcavelighting", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x5d0d4
+		; source: 92 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_spcv.vbo" 46:46
+		MemberFunctionArgumentCheck 2
+		LineNumber                  32348, 4
+		LineNumberAlt1              46, 92
+		GetThisMemberValueString    "spiderpuzzle"
+		GetVariableValue            1              ; local
+		Pull                        2
+		GetMemberFunctionString     "process"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x5d0f0
+		; source: 92 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_spcv.vbo" 51:51
+		MemberFunctionArgumentCheck 2
+		LineNumber                  32353, 4
+		LineNumberAlt1              51, 92
+		GetThisMemberValueString    "spiderpuzzle"
+		GetVariableValue            1              ; local
+		Pull                        2
+		GetMemberFunctionString     "input"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x5d10c
+		; source: 92 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_spcv.vbo" 56:56
+		MemberFunctionArgumentCheck 2
+		LineNumber                  32358, 4
+		LineNumberAlt1              56, 92
+		GetThisMemberValueString    "spiderpuzzle"
+		GetVariableValue            1              ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x5d128
+		; source: 92 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_spcv.vbo" 61:62
+		MemberFunctionArgumentCheck 1
+		LineNumber                  32363, 4
+		LineNumberAlt1              61, 92
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_hide"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  32364, 4
+		LineNumberAlt1              62, 92
+		GetThisMemberValueString    "spiderpuzzle"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x5d153
+		; source: 92 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_spcv.vbo" 67:68
+		MemberFunctionArgumentCheck 1
+		LineNumber                  32369, 4
+		LineNumberAlt1              67, 92
+		GetThisMemberValueString    "spiderpuzzle"
+		Dup
+		GetMemberFunctionString     "exit"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  32370, 4
+		LineNumberAlt1              68, 92
+		PushNothing
+		SetThisMemberValueString    "spiderpuzzle"
+		PushNothing
+		Return
+	end ; method
+end ; class

@@ -1,0 +1,844 @@
+begin class "racepuzzle_class"
+	property "roadrunner"
+	property "rider"
+	property "parent"
+	property "tiggerboxid"
+	property "timer"
+	property "areaid"
+	property "roadrunnerwon"
+	property "switchai"
+	property "atendofspline"
+	property "bgmusic"
+	property "startraceonce"
+
+	begin method "racepuzzle_class"
+		; address: 0x95aca
+		; source: 160 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly1.vbo" 114:116
+		MemberFunctionArgumentCheck 2
+		LineNumber                  58680, 4
+		LineNumberAlt1              114, 160
+		GetVariableValue            1               ; local
+		SetThisMemberValueString    "parent"
+		LineNumber                  58681, 4
+		LineNumberAlt1              115, 160
+		PushConstanti8              1
+		SetThisMemberValueString    "switchai"
+		LineNumber                  58682, 4
+		LineNumberAlt1              116, 160
+		PushConstant0
+		SetThisMemberValueString    "atendofspline"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x95afb
+		; source: 160 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly1.vbo" 122:142
+		MemberFunctionArgumentCheck 1
+		LineNumber                  58688, 4
+		LineNumberAlt1              122, 160
+		GetThisMemberValueString    "parent"
+		GetMemberValueString        "name"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  58688, 4
+		LineNumberAlt1              122, 160
+		SetThisMemberValueString    "areaid"
+		LineNumber                  58691, 4
+		LineNumberAlt1              125, 160
+		PushConstanti8              1
+		SetThisMemberValueString    "startraceonce"
+		LineNumber                  58692, 4
+		LineNumberAlt1              126, 160
+		CreateObjectString          "gs_lego_character"
+		Dup
+		PushConstantStringString    "rrun"
+		PushConstantStringString    "rrun"
+		PushConstantStringString    "fake"
+		PushConstant0
+		PushConstantf32             331.98699951171875
+		PushConstant0
+		PushConstantf32             11.881199836730957
+		Subtract
+		PushConstantf32             94.60780334472656
+		PushConstantStringString    "aiin"
+		Pull                        9
+		GetMemberFunctionString     "gs_lego_character"
+		JumpAbsolute                9
+		Pop
+		LineNumber                  58692, 4
+		LineNumberAlt1              126, 160
+		SetThisMemberValueString    "roadrunner"
+		LineNumber                  58693, 4
+		LineNumberAlt1              127, 160
+		GetThisMemberValueString    "roadrunner"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  58694, 4
+		LineNumberAlt1              128, 160
+		GetThisMemberValueString    "roadrunner"
+		PushConstant0
+		Pull                        2
+		GetMemberFunctionString     "add"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  58695, 4
+		LineNumberAlt1              129, 160
+		GetThisMemberValueString    "roadrunner"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  58698, 4
+		LineNumberAlt1              132, 160
+		CreateObjectString          "gs_lego_character"
+		Dup
+		PushConstantStringString    "xman"
+		PushConstantStringString    "vlgr"
+		PushConstantStringString    "gly1"
+		PushConstant0
+		PushConstanti16             305
+		PushConstant0
+		PushConstantf32             11.800000190734863
+		Subtract
+		PushConstanti8              103
+		PushConstantStringString    "none"
+		Pull                        9
+		GetMemberFunctionString     "gs_lego_character"
+		JumpAbsolute                9
+		Pop
+		LineNumber                  58698, 4
+		LineNumberAlt1              132, 160
+		SetThisMemberValueString    "rider"
+		LineNumber                  58699, 4
+		LineNumberAlt1              133, 160
+		GetThisMemberValueString    "rider"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  58700, 4
+		LineNumberAlt1              134, 160
+		GetThisMemberValueString    "rider"
+		Dup
+		GetMemberFunctionString     "add"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  58701, 4
+		LineNumberAlt1              135, 160
+		GetThisMemberValueString    "rider"
+		Dup
+		GetMemberFunctionString     "settweakable"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  58702, 4
+		LineNumberAlt1              136, 160
+		GetThisMemberValueString    "rider"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  58704, 4
+		LineNumberAlt1              138, 160
+		PushNothing
+		SetThisMemberValueString    "roadrunnerwon"
+		LineNumber                  58705, 4
+		LineNumberAlt1              139, 160
+		CreateObjectString          "lego_timer"
+		Dup
+		PushConstantStringString    "timr"
+		PushConstanti8              1
+		PushConstant0
+		Pull                        4
+		GetMemberFunctionString     "lego_timer"
+		JumpAbsolute                4
+		Pop
+		LineNumber                  58705, 4
+		LineNumberAlt1              139, 160
+		SetThisMemberValueString    "timer"
+		LineNumber                  58706, 4
+		LineNumberAlt1              140, 160
+		GetThisMemberValueString    "timer"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  58708, 4
+		LineNumberAlt1              142, 160
+		GetVariableValue            0                                            ; local
+		GetThisMemberFunctionString "setuprace"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initshort"
+		; address: 0x95c9a
+		; source: 160 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly1.vbo" 149:152
+		MemberFunctionArgumentCheck 1
+		LineNumber                  58715, 4
+		LineNumberAlt1              149, 160
+		PushConstanti8              1
+		SetThisMemberValueString    "startraceonce"
+		LineNumber                  58716, 4
+		LineNumberAlt1              150, 160
+		GetThisMemberValueString    "roadrunner"
+		Dup
+		GetMemberFunctionString     "aidisablepatrolonspline"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  58717, 4
+		LineNumberAlt1              151, 160
+		GetThisMemberValueString    "roadrunner"
+		Dup
+		GetMemberFunctionString     "aiidle"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  58718, 4
+		LineNumberAlt1              152, 160
+		GetThisMemberValueString    "roadrunner"
+		PushConstantf32             331.2279968261719
+		PushConstant0
+		PushConstantf32             12.078200340270996
+		Subtract
+		PushConstantf32             95.0781021118164
+		Pull                        4
+		GetMemberFunctionString     "setpos"
+		JumpAbsolute                4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "show"
+		; address: 0x95cfb
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setuprace"
+		; address: 0x95cff
+		; source: 160 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly1.vbo" 163:163
+		MemberFunctionArgumentCheck 1
+		LineNumber                  58729, 4
+		LineNumberAlt1              163, 160
+		GetThisMemberValueString    "rider"
+		PushConstantStringString    "rrun"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  58729, 4
+		LineNumberAlt1              163, 160
+		PushConstantStringString    "gly1"
+		PushConstanti32             2063160497
+		Pull                        4
+		GetMemberFunctionString     "ride"
+		JumpAbsolute                4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "startrace"
+		; address: 0x95d33
+		; source: 160 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly1.vbo" 169:176
+		MemberFunctionArgumentCheck 1
+		LineNumber                  58735, 4
+		LineNumberAlt1              169, 160
+		PushNothing
+		SetThisMemberValueString    "roadrunnerwon"
+		LineNumber                  58737, 4
+		LineNumberAlt1              171, 160
+		GetThisMemberValueString    "roadrunner"
+		PushConstantStringString    "rr02"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  58737, 4
+		LineNumberAlt1              171, 160
+		Pull                        2
+		GetMemberFunctionString     "setsplitanimation"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  58738, 4
+		LineNumberAlt1              172, 160
+		GetThisMemberValueString    "roadrunner"
+		Dup
+		GetMemberFunctionString     "aienablepatrolonspline"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  58740, 4
+		LineNumberAlt1              174, 160
+		GetThisMemberValueString    "roadrunner"
+		Dup
+		GetMemberFunctionString     "aipatrol"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  58742, 4
+		LineNumberAlt1              176, 160
+		PushConstantStringString    "************ROAD RUNNER SHOULD BE RUNNING***********"
+		CallGameFunctionString      "debug", "print", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x95da9
+		; source: 160 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly1.vbo" 181:190
+		MemberFunctionArgumentCheck   1
+		LineNumber                    58747, 4
+		LineNumberAlt1                181, 160
+		GetThisMemberValueString      "bgmusic"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    58748, 4
+		LineNumberAlt1                182, 160
+		GetThisMemberValueString      "bgmusic"
+		Dup
+		GetMemberFunctionString       "stop"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58749, 4
+		LineNumberAlt1                183, 160
+		PushNothing
+		SetThisMemberValueString      "bgmusic"
+		; <-
+		BranchTarget                  0
+		LineNumber                    58752, 4
+		LineNumberAlt1                186, 160
+		GetThisMemberValueString      "roadrunner"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58753, 4
+		LineNumberAlt1                187, 160
+		PushNothing
+		SetThisMemberValueString      "roadrunner"
+		LineNumber                    58755, 4
+		LineNumberAlt1                189, 160
+		GetThisMemberValueString      "rider"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58756, 4
+		LineNumberAlt1                190, 160
+		PushNothing
+		SetThisMemberValueString      "rider"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x95e26
+		; source: 160 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly1.vbo" 196:210
+		MemberFunctionArgumentCheck   2
+		LineNumber                    58762, 4
+		LineNumberAlt1                196, 160
+		GetThisMemberValueString      "roadrunner"
+		GetVariableValue              1                                                                           ; local
+		Pull                          2
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    58764, 4
+		LineNumberAlt1                198, 160
+		GetThisMemberValueString      "switchai"
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    58765, 4
+		LineNumberAlt1                199, 160
+		PushConstant0
+		SetThisMemberValueString      "switchai"
+		LineNumber                    58766, 4
+		LineNumberAlt1                200, 160
+		GetThisMemberValueString      "roadrunner"
+		Dup
+		GetMemberFunctionString       "disableai"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58767, 4
+		LineNumberAlt1                201, 160
+		GetThisMemberValueString      "roadrunner"
+		Dup
+		GetMemberFunctionString       "aiidle"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58768, 4
+		LineNumberAlt1                202, 160
+		GetThisMemberValueString      "roadrunner"
+		Dup
+		GetMemberFunctionString       "aidisablepatrolonspline"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    58772, 4
+		LineNumberAlt1                206, 160
+		GetThisMemberValueString      "atendofspline"
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    58773, 4
+		LineNumberAlt1                207, 160
+		PushConstant0
+		SetThisMemberValueString      "atendofspline"
+		LineNumber                    58774, 4
+		LineNumberAlt1                208, 160
+		GetThisMemberValueString      "roadrunner"
+		Dup
+		GetMemberFunctionString       "aidisablepatrolonspline"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58775, 4
+		LineNumberAlt1                209, 160
+		GetThisMemberValueString      "roadrunner"
+		Dup
+		GetMemberFunctionString       "aiidle"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58776, 4
+		LineNumberAlt1                210, 160
+		PushConstantStringString      "*************ROAD RUNNER AT END OF SPLINE...SHOULD BE IDLING*************"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x95ef6
+		; source: 160 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly1.vbo" 218:220
+		MemberFunctionArgumentCheck   2
+		LineNumber                    58784, 4
+		LineNumberAlt1                218, 160
+		GetVariableValue              1           ; local
+		GetMemberValueString          "event"
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    58785, 4
+		LineNumberAlt1                219, 160
+		GetVariableValue              1           ; local
+		GetMemberValueString          "button"
+		PushConstanti8                89
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    58786, 4
+		LineNumberAlt1                220, 160
+		GetVariableValue              0           ; local
+		GetThisMemberFunctionString   "startrace"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x95f39
+		; source: 160 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly1.vbo" 230:289
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          2
+		LineNumber                    58796, 4
+		LineNumberAlt1                230, 160
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                49
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    58801, 4
+		LineNumberAlt1                235, 160
+		PushConstanti8                1
+		SetThisMemberValueString      "atendofspline"
+		BranchAlwaysTarget            11, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		Dup
+		PushConstanti8                4
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    58806, 4
+		LineNumberAlt1                240, 160
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		SetVariableValue              2                                            ; local
+		LineNumber                    58808, 4
+		LineNumberAlt1                242, 160
+		GetVariableValue              2                                            ; local
+		PushConstantStringString      "tp02"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    58808, 4
+		LineNumberAlt1                242, 160
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    58809, 4
+		LineNumberAlt1                243, 160
+		GetThisMemberValueString      "roadrunnerwon"
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    58810, 4
+		LineNumberAlt1                244, 160
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "youwin"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  1
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		LineNumber                    58813, 4
+		LineNumberAlt1                247, 160
+		GetVariableValue              2                                            ; local
+		PushConstantStringString      "tp03"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    58813, 4
+		LineNumberAlt1                247, 160
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    58814, 4
+		LineNumberAlt1                248, 160
+		GetThisMemberValueString      "startraceonce"
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    58815, 4
+		LineNumberAlt1                249, 160
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "startrace"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58816, 4
+		LineNumberAlt1                250, 160
+		PushConstant0
+		SetThisMemberValueString      "startraceonce"
+		; <-
+		BranchTarget                  3
+		BranchAlwaysTarget            11, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		Dup
+		PushConstanti8                3
+		EqualTo
+		CompareAndBranchIfFalseTarget 7, 0
+		; ->
+		LineNumber                    58825, 4
+		LineNumberAlt1                259, 160
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		SetVariableValue              2                                            ; local
+		LineNumber                    58827, 4
+		LineNumberAlt1                261, 160
+		GetVariableValue              2                                            ; local
+		PushConstantStringString      "tb00"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    58827, 4
+		LineNumberAlt1                261, 160
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    58828, 4
+		LineNumberAlt1                262, 160
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "reseta"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58829, 4
+		LineNumberAlt1                263, 160
+		PushConstantStringString      "tb00"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    58829, 4
+		LineNumberAlt1                263, 160
+		SetThisMemberValueString      "tiggerboxid"
+		; <-
+		BranchTarget                  5
+		LineNumber                    58832, 4
+		LineNumberAlt1                266, 160
+		GetVariableValue              2                                            ; local
+		PushConstantStringString      "tb01"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    58832, 4
+		LineNumberAlt1                266, 160
+		EqualTo
+		CompareAndBranchIfFalseTarget 6, 0
+		; ->
+		LineNumber                    58833, 4
+		LineNumberAlt1                267, 160
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "reseta"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58834, 4
+		LineNumberAlt1                268, 160
+		PushConstantStringString      "tb01"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    58834, 4
+		LineNumberAlt1                268, 160
+		SetThisMemberValueString      "tiggerboxid"
+		; <-
+		BranchTarget                  6
+		BranchAlwaysTarget            11, 0
+		; ->
+		; <-
+		BranchTarget                  7
+		Dup
+		PushConstanti8                27
+		EqualTo
+		CompareAndBranchIfFalseTarget 8, 0
+		; ->
+		LineNumber                    58841, 4
+		LineNumberAlt1                275, 160
+		PushConstantStringString      "Screen Black Event"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    58842, 4
+		LineNumberAlt1                276, 160
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "resetc"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            11, 0
+		; ->
+		; <-
+		BranchTarget                  8
+		Dup
+		PushConstanti8                8
+		EqualTo
+		CompareAndBranchIfFalseTarget 10, 0
+		; ->
+		LineNumber                    58847, 4
+		LineNumberAlt1                281, 160
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		SetVariableValue              3                                            ; local
+		LineNumber                    58848, 4
+		LineNumberAlt1                282, 160
+		GetVariableValue              3                                            ; local
+		PushConstantStringString      "timr"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    58848, 4
+		LineNumberAlt1                282, 160
+		EqualTo
+		CompareAndBranchIfFalseTarget 9, 0
+		; ->
+		LineNumber                    58849, 4
+		LineNumberAlt1                283, 160
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "resetb"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  9
+		BranchAlwaysTarget            11, 0
+		; ->
+		; <-
+		BranchTarget                  10
+		Dup
+		PushConstanti8                46
+		EqualTo
+		CompareAndBranchIfFalseTarget 11, 0
+		; ->
+		LineNumber                    58855, 4
+		LineNumberAlt1                289, 160
+		PushConstantf32               1.2000000476837158
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		; <-
+		BranchTarget                  11
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "reseta"
+		; address: 0x9619a
+		; source: 160 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly1.vbo" 298:299
+		MemberFunctionArgumentCheck 1
+		LineNumber                  58864, 4
+		LineNumberAlt1              298, 160
+		GetThisMemberValueString    "parent"
+		GetMemberValueString        "parent"
+		GetMemberValueString        "cam"
+		PushConstanti8              7
+		Pull                        2
+		GetMemberFunctionString     "setaimode"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  58865, 4
+		LineNumberAlt1              299, 160
+		GetThisMemberValueString    "timer"
+		Dup
+		GetMemberFunctionString     "start"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "resetb"
+		; address: 0x961cf
+		; source: 160 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly1.vbo" 305:305
+		MemberFunctionArgumentCheck  1
+		LineNumber                   58871, 4
+		LineNumberAlt1               305, 160
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		Dup
+		GetMemberFunctionString      "kill"
+		JumpAbsolute                 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "resetc"
+		; address: 0x961ea
+		; source: 160 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly1.vbo" 311:316
+		MemberFunctionArgumentCheck  1
+		LineNumber                   58877, 4
+		LineNumberAlt1               311, 160
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		GetMemberValueString         "actor"
+		GetThisMemberValueString     "parent"
+		GetMemberValueString         "enterstartid"
+		GetThisMemberValueString     "parent"
+		GetMemberValueString         "enterlookid"
+		Pull                         3
+		GetMemberFunctionString      "gotopos"
+		JumpAbsolute                 3
+		Pop
+		LineNumber                   58878, 4
+		LineNumberAlt1               312, 160
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		Dup
+		GetMemberFunctionString      "unkill"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   58879, 4
+		LineNumberAlt1               313, 160
+		PushConstantStringString     "tb00"
+		CallGameFunctionString       "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                   58879, 4
+		LineNumberAlt1               313, 160
+		PushConstant0
+		CallGameFunctionString       "gccollisionphysicsgroup", "toggletriggerboxentered", 2
+		Pop
+		LineNumber                   58880, 4
+		LineNumberAlt1               314, 160
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		GetMemberValueString         "actor"
+		PushConstantStringString     "ninp"
+		Pull                         2
+		GetMemberFunctionString      "setinputstate"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   58881, 4
+		LineNumberAlt1               315, 160
+		GetThisMemberValueString     "parent"
+		GetMemberValueString         "level"
+		GetMemberValueString         "cam"
+		PushConstanti8               11
+		Pull                         2
+		GetMemberFunctionString      "setaimode"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   58882, 4
+		LineNumberAlt1               316, 160
+		GetVariableValue             0                                                       ; local
+		GetThisMemberFunctionString  "initshort"
+		JumpAbsolute                 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "youwin"
+		; address: 0x9629f
+		; source: 160 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly1.vbo" 328:332
+		MemberFunctionArgumentCheck  1
+		LineNumber                   58894, 4
+		LineNumberAlt1               328, 160
+		PushConstant0
+		SetThisMemberValueString     "roadrunnerwon"
+		LineNumber                   58895, 4
+		LineNumberAlt1               329, 160
+		PushConstantStringString     "**********************************YOU WIN"
+		CallGameFunctionString       "debug", "print", 1
+		Pop
+		LineNumber                   58897, 4
+		LineNumberAlt1               331, 160
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		PushConstanti8               10
+		Pull                         2
+		GetMemberFunctionString      "addelement"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   58898, 4
+		LineNumberAlt1               332, 160
+		PushConstanti8               1
+		SetThisMemberValueString     "startraceonce"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "youlost"
+		; address: 0x962ee
+		; source: 160 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly1.vbo" 338:340
+		MemberFunctionArgumentCheck 1
+		LineNumber                  58904, 4
+		LineNumberAlt1              338, 160
+		PushConstanti8              1
+		SetThisMemberValueString    "roadrunnerwon"
+		LineNumber                  58905, 4
+		LineNumberAlt1              339, 160
+		PushConstantStringString    "YOU LOST"
+		CallGameFunctionString      "debug", "print", 1
+		Pop
+		LineNumber                  58906, 4
+		LineNumberAlt1              340, 160
+		PushConstanti8              1
+		SetThisMemberValueString    "startraceonce"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x96324
+		; source: 160 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_gly1.vbo" 345:345
+		MemberFunctionArgumentCheck 1
+		LineNumber                  58911, 4
+		LineNumberAlt1              345, 160
+		PushNothing
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+end ; class

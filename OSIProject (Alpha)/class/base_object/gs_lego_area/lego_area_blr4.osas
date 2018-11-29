@@ -1,0 +1,120 @@
+begin class "lego_area_blr4", "gs_lego_area"
+	property "puzzle"
+
+	begin method "lego_area_blr4"
+		; address: 0x90479
+		; source: 156 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_blr4.vbo" 24:26
+		MemberFunctionArgumentCheck 2
+		LineNumber                  56633, 4
+		LineNumberAlt1              24, 156
+		GetVariableValue            0                    ; local
+		PushConstantStringString    "blr4"
+		GetVariableValue            1                    ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  56634, 4
+		LineNumberAlt1              25, 156
+		CreateObjectString          "bullrun4"
+		Dup
+		GetVariableValue            0                    ; local
+		Pull                        2
+		GetMemberFunctionString     "bullrun4"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  56634, 4
+		LineNumberAlt1              25, 156
+		SetThisMemberValueString    "puzzle"
+		LineNumber                  56635, 4
+		LineNumberAlt1              26, 156
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x904d1
+		; source: 156 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_blr4.vbo" 32:33
+		MemberFunctionArgumentCheck 1
+		LineNumber                  56641, 4
+		LineNumberAlt1              32, 156
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_show"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  56642, 4
+		LineNumberAlt1              33, 156
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "init"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x904fc
+		; source: 156 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_blr4.vbo" 38:38
+		MemberFunctionArgumentCheck 2
+		LineNumber                  56647, 4
+		LineNumberAlt1              38, 156
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1        ; local
+		Pull                        2
+		GetMemberFunctionString     "input"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x90518
+		; source: 156 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_blr4.vbo" 43:43
+		MemberFunctionArgumentCheck 2
+		LineNumber                  56652, 4
+		LineNumberAlt1              43, 156
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x90534
+		; source: 156 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_blr4.vbo" 48:49
+		MemberFunctionArgumentCheck 1
+		LineNumber                  56657, 4
+		LineNumberAlt1              48, 156
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_hide"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  56658, 4
+		LineNumberAlt1              49, 156
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "cleanup"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x9055f
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+end ; class

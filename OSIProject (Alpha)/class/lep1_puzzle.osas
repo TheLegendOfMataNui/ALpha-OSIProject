@@ -1,0 +1,167 @@
+begin class "lep1_puzzle"
+	property "parent"
+	property "gern"
+
+	begin method "lep1_puzzle"
+		; address: 0xb7682
+		; source: 199 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_lep1.vbo" 82:82
+		MemberFunctionArgumentCheck 2
+		LineNumber                  6789, 4
+		LineNumberAlt1              82, 199
+		GetVariableValue            1        ; local
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xb7696
+		; source: 199 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_lep1.vbo" 89:94
+		MemberFunctionArgumentCheck 1
+		LineNumber                  6796, 4
+		LineNumberAlt1              89, 199
+		CreateObjectString          "gs_lego_character"
+		Dup
+		PushConstantStringString    "rptl"
+		PushConstantStringString    "rptl"
+		PushConstantStringString    "fake"
+		PushConstant0
+		PushConstanti8              -19
+		PushConstanti8              -6
+		PushConstanti8              -85
+		PushConstantStringString    "aiin"
+		Pull                        9
+		GetMemberFunctionString     "gs_lego_character"
+		JumpAbsolute                9
+		Pop
+		LineNumber                  6796, 4
+		LineNumberAlt1              89, 199
+		SetThisMemberValueString    "gern"
+		LineNumber                  6798, 4
+		LineNumberAlt1              91, 199
+		GetThisMemberValueString    "gern"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  6799, 4
+		LineNumberAlt1              92, 199
+		GetThisMemberValueString    "gern"
+		Dup
+		GetMemberFunctionString     "settweakable"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  6800, 4
+		LineNumberAlt1              93, 199
+		GetThisMemberValueString    "gern"
+		PushConstant0
+		Pull                        2
+		GetMemberFunctionString     "add"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  6801, 4
+		LineNumberAlt1              94, 199
+		GetThisMemberValueString    "gern"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xb7722
+		; source: 199 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_lep1.vbo" 103:104
+		MemberFunctionArgumentCheck 1
+		LineNumber                  6810, 4
+		LineNumberAlt1              103, 199
+		GetThisMemberValueString    "gern"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  6811, 4
+		LineNumberAlt1              104, 199
+		PushNothing
+		SetThisMemberValueString    "gern"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0xb7748
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xb774c
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xb7750
+		; source: 199 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_lep1.vbo" 120:125
+		MemberFunctionArgumentCheck   2
+		LineNumber                    6827, 4
+		LineNumberAlt1                120, 199
+		GetVariableValue              1                                        ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                46
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    6829, 4
+		LineNumberAlt1                122, 199
+		PushConstantf32               1.2000000476837158
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		Dup
+		PushConstanti8                27
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    6831, 4
+		LineNumberAlt1                124, 199
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "enterstartid"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "enterlookid"
+		Pull                          3
+		GetMemberFunctionString       "gotopos"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    6832, 4
+		LineNumberAlt1                125, 199
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "unkill"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0xb77ca
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+end ; class

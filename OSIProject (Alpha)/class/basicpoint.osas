@@ -1,0 +1,342 @@
+begin class "basicpoint"
+	property "x"
+	property "y"
+	property "z"
+
+	begin method "basicpoint"
+		; address: 0x452b3
+		; source: 53 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_platform.vbo" 635:647
+		MemberFunctionArgumentCheck   4
+		LineNumber                    18090, 4
+		LineNumberAlt1                635, 53
+		GetVariableValue              1        ; local
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    18091, 4
+		LineNumberAlt1                636, 53
+		PushConstantf32               0
+		SetVariableValue              1        ; local
+		; <-
+		BranchTarget                  0
+		LineNumber                    18093, 4
+		LineNumberAlt1                638, 53
+		GetVariableValue              2        ; local
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    18094, 4
+		LineNumberAlt1                639, 53
+		PushConstantf32               0
+		SetVariableValue              2        ; local
+		; <-
+		BranchTarget                  1
+		LineNumber                    18096, 4
+		LineNumberAlt1                641, 53
+		GetVariableValue              3        ; local
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    18097, 4
+		LineNumberAlt1                642, 53
+		PushConstantf32               0
+		SetVariableValue              3        ; local
+		; <-
+		BranchTarget                  2
+		LineNumber                    18100, 4
+		LineNumberAlt1                645, 53
+		GetVariableValue              1        ; local
+		SetThisMemberValueString      "x"
+		LineNumber                    18101, 4
+		LineNumberAlt1                646, 53
+		GetVariableValue              2        ; local
+		SetThisMemberValueString      "y"
+		LineNumber                    18102, 4
+		LineNumberAlt1                647, 53
+		GetVariableValue              3        ; local
+		SetThisMemberValueString      "z"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "plusequal"
+		; address: 0x45353
+		; source: 53 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_platform.vbo" 656:668
+		MemberFunctionArgumentCheck   2
+		LineNumber                    18111, 4
+		LineNumberAlt1                656, 53
+		GetVariableValue              1        ; local
+		GetMemberValueString          "x"
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    18112, 4
+		LineNumberAlt1                657, 53
+		PushConstantf32               0
+		GetVariableValue              1        ; local
+		SetMemberValueString          "x"
+		; <-
+		BranchTarget                  0
+		LineNumber                    18114, 4
+		LineNumberAlt1                659, 53
+		GetVariableValue              1        ; local
+		GetMemberValueString          "y"
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    18115, 4
+		LineNumberAlt1                660, 53
+		PushConstantf32               0
+		GetVariableValue              1        ; local
+		SetMemberValueString          "y"
+		; <-
+		BranchTarget                  1
+		LineNumber                    18117, 4
+		LineNumberAlt1                662, 53
+		GetVariableValue              1        ; local
+		GetMemberValueString          "z"
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    18118, 4
+		LineNumberAlt1                663, 53
+		PushConstantf32               0
+		GetVariableValue              1        ; local
+		SetMemberValueString          "z"
+		; <-
+		BranchTarget                  2
+		LineNumber                    18121, 4
+		LineNumberAlt1                666, 53
+		GetThisMemberValueString      "x"
+		GetVariableValue              1        ; local
+		GetMemberValueString          "x"
+		Add
+		SetThisMemberValueString      "x"
+		LineNumber                    18122, 4
+		LineNumberAlt1                667, 53
+		GetThisMemberValueString      "y"
+		GetVariableValue              1        ; local
+		GetMemberValueString          "y"
+		Add
+		SetThisMemberValueString      "y"
+		LineNumber                    18123, 4
+		LineNumberAlt1                668, 53
+		GetThisMemberValueString      "z"
+		GetVariableValue              1        ; local
+		GetMemberValueString          "z"
+		Add
+		SetThisMemberValueString      "z"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "plusplus"
+		; address: 0x4541a
+		; source: 53 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_platform.vbo" 674:676
+		MemberFunctionArgumentCheck 1
+		LineNumber                  18129, 4
+		LineNumberAlt1              674, 53
+		GetThisMemberValueString    "x"
+		PushConstanti8              1
+		Add
+		SetThisMemberValueString    "x"
+		LineNumber                  18130, 4
+		LineNumberAlt1              675, 53
+		GetThisMemberValueString    "y"
+		PushConstanti8              1
+		Add
+		SetThisMemberValueString    "y"
+		LineNumber                  18131, 4
+		LineNumberAlt1              676, 53
+		GetThisMemberValueString    "z"
+		PushConstanti8              1
+		Add
+		SetThisMemberValueString    "z"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "add"
+		; address: 0x45457
+		; source: 53 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_platform.vbo" 683:685
+		MemberFunctionArgumentCheck 3
+		LineNumber                  18138, 4
+		LineNumberAlt1              683, 53
+		GetVariableValue            1        ; local
+		GetMemberValueString        "x"
+		GetVariableValue            2        ; local
+		GetMemberValueString        "x"
+		Add
+		SetThisMemberValueString    "x"
+		LineNumber                  18139, 4
+		LineNumberAlt1              684, 53
+		GetVariableValue            1        ; local
+		GetMemberValueString        "y"
+		GetVariableValue            2        ; local
+		GetMemberValueString        "y"
+		Add
+		SetThisMemberValueString    "y"
+		LineNumber                  18140, 4
+		LineNumberAlt1              685, 53
+		GetVariableValue            1        ; local
+		GetMemberValueString        "z"
+		GetVariableValue            2        ; local
+		GetMemberValueString        "z"
+		Add
+		SetThisMemberValueString    "z"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "equals"
+		; address: 0x454a9
+		; source: 53 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_platform.vbo" 692:704
+		MemberFunctionArgumentCheck   2
+		LineNumber                    18147, 4
+		LineNumberAlt1                692, 53
+		GetVariableValue              1        ; local
+		GetMemberValueString          "x"
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    18148, 4
+		LineNumberAlt1                693, 53
+		PushConstantf32               0
+		GetVariableValue              1        ; local
+		SetMemberValueString          "x"
+		; <-
+		BranchTarget                  0
+		LineNumber                    18150, 4
+		LineNumberAlt1                695, 53
+		GetVariableValue              1        ; local
+		GetMemberValueString          "y"
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    18151, 4
+		LineNumberAlt1                696, 53
+		PushConstantf32               0
+		GetVariableValue              1        ; local
+		SetMemberValueString          "y"
+		; <-
+		BranchTarget                  1
+		LineNumber                    18153, 4
+		LineNumberAlt1                698, 53
+		GetVariableValue              1        ; local
+		GetMemberValueString          "z"
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    18154, 4
+		LineNumberAlt1                699, 53
+		PushConstantf32               0
+		GetVariableValue              1        ; local
+		SetMemberValueString          "z"
+		; <-
+		BranchTarget                  2
+		LineNumber                    18157, 4
+		LineNumberAlt1                702, 53
+		GetVariableValue              1        ; local
+		GetMemberValueString          "x"
+		SetThisMemberValueString      "x"
+		LineNumber                    18158, 4
+		LineNumberAlt1                703, 53
+		GetVariableValue              1        ; local
+		GetMemberValueString          "y"
+		SetThisMemberValueString      "y"
+		LineNumber                    18159, 4
+		LineNumberAlt1                704, 53
+		GetVariableValue              1        ; local
+		GetMemberValueString          "z"
+		SetThisMemberValueString      "z"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "equalequal"
+		; address: 0x45564
+		; source: 53 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_platform.vbo" 711:714
+		MemberFunctionArgumentCheck   2
+		LineNumber                    18166, 4
+		LineNumberAlt1                711, 53
+		GetThisMemberValueString      "x"
+		GetVariableValue              1        ; local
+		GetMemberValueString          "x"
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    18167, 4
+		LineNumberAlt1                712, 53
+		GetThisMemberValueString      "y"
+		GetVariableValue              1        ; local
+		GetMemberValueString          "y"
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    18168, 4
+		LineNumberAlt1                713, 53
+		GetThisMemberValueString      "z"
+		GetVariableValue              1        ; local
+		GetMemberValueString          "z"
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    18169, 4
+		LineNumberAlt1                714, 53
+		PushConstanti8                1
+		Return
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setto"
+		; address: 0x455ba
+		; source: 53 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_platform.vbo" 723:725
+		MemberFunctionArgumentCheck 4
+		LineNumber                  18178, 4
+		LineNumberAlt1              723, 53
+		GetVariableValue            1        ; local
+		SetThisMemberValueString    "x"
+		LineNumber                  18179, 4
+		LineNumberAlt1              724, 53
+		GetVariableValue            2        ; local
+		SetThisMemberValueString    "y"
+		LineNumber                  18180, 4
+		LineNumberAlt1              725, 53
+		GetVariableValue            3        ; local
+		SetThisMemberValueString    "z"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x455ee
+		; source: 53 "C:\\projects\\lego\\Scripting\\VBO\\legobase/lego_platform.vbo" 730:732
+		MemberFunctionArgumentCheck 1
+		LineNumber                  18185, 4
+		LineNumberAlt1              730, 53
+		PushNothing
+		SetThisMemberValueString    "x"
+		LineNumber                  18186, 4
+		LineNumberAlt1              731, 53
+		PushNothing
+		SetThisMemberValueString    "y"
+		LineNumber                  18187, 4
+		LineNumberAlt1              732, 53
+		PushNothing
+		SetThisMemberValueString    "z"
+		PushNothing
+		Return
+	end ; method
+end ; class

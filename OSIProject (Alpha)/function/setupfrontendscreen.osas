@@ -1,0 +1,45 @@
+begin function "setupfrontendscreen", 0
+	; address: 0x2b2f1
+	; source: 46 "C:\\projects\\lego\\Scripting\\VBO\\lego_frontend.vbo" 233:242
+	JumpTarget                   4
+	CreateStackVariables         3
+	LineNumber                   28888, 4
+	LineNumberAlt1               233, 46
+	CreateArray
+	SetVariableValue             0                        ; local
+	LineNumber                   28893, 4
+	LineNumberAlt1               238, 46
+	CreateObjectString           "gs_lego_screenfrontend"
+	Dup
+	GetVariableValue             0                        ; local
+	Pull                         2
+	GetMemberFunctionString      "gs_lego_screenfrontend"
+	JumpAbsolute                 2
+	Pop
+	LineNumber                   28893, 4
+	LineNumberAlt1               238, 46
+	SetVariableValue             1                        ; local
+	LineNumber                   28895, 4
+	LineNumberAlt1               240, 46
+	CreateObjectString           "gs_lego_frontendscreen"
+	Dup
+	GetVariableValue             1                        ; local
+	Pull                         2
+	GetMemberFunctionString      "gs_lego_frontendscreen"
+	JumpAbsolute                 2
+	Pop
+	LineNumber                   28895, 4
+	LineNumberAlt1               240, 46
+	SetVariableValue             2                        ; local
+	LineNumber                   28897, 4
+	LineNumberAlt1               242, 46
+	GetVariableValueGlobalString "screenlist"
+	GetVariableValue             2                        ; local
+	PushConstanti8               21
+	Pull                         3
+	GetMemberFunctionString      "addscreen"
+	JumpAbsolute                 3
+	Pop
+	PushNothing
+	Return
+end ; function

@@ -1,0 +1,175 @@
+begin class "spike"
+	property "id"
+	property "name"
+	property "obj"
+	property "objid"
+	property "objname"
+	property "area"
+	property "hitcounter"
+
+	begin method "spike"
+		; address: 0xd3f2b
+		; source: 234 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_boss.vbo" 1424:1435
+		MemberFunctionArgumentCheck   3
+		LineNumber                    18734, 4
+		LineNumberAlt1                1424, 234
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		GetVariableValue              1                                            ; local
+		GetVariableValue              2                                            ; local
+		Pull                          3
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    18734, 4
+		LineNumberAlt1                1424, 234
+		SetThisMemberValueString      "obj"
+		LineNumber                    18735, 4
+		LineNumberAlt1                1425, 234
+		GetThisMemberValueString      "obj"
+		GetMemberValueString          "id"
+		SetThisMemberValueString      "objid"
+		LineNumber                    18736, 4
+		LineNumberAlt1                1426, 234
+		GetThisMemberValueString      "obj"
+		GetMemberValueString          "id"
+		SetThisMemberValueString      "id"
+		LineNumber                    18737, 4
+		LineNumberAlt1                1427, 234
+		GetThisMemberValueString      "obj"
+		GetMemberValueString          "id"
+		CallGameFunctionString        "scslosifoundation", "identifiertostring", 1
+		LineNumber                    18737, 4
+		LineNumberAlt1                1427, 234
+		SetThisMemberValueString      "objname"
+		LineNumber                    18738, 4
+		LineNumberAlt1                1428, 234
+		GetThisMemberValueString      "obj"
+		GetMemberValueString          "id"
+		CallGameFunctionString        "scslosifoundation", "identifiertostring", 1
+		LineNumber                    18738, 4
+		LineNumberAlt1                1428, 234
+		SetThisMemberValueString      "name"
+		LineNumber                    18739, 4
+		LineNumberAlt1                1429, 234
+		GetVariableValue              2                                            ; local
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    18740, 4
+		LineNumberAlt1                1430, 234
+		PushConstantStringString      "fake"
+		SetThisMemberValueString      "area"
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    18742, 4
+		LineNumberAlt1                1432, 234
+		GetVariableValue              2                                            ; local
+		SetThisMemberValueString      "area"
+		; <-
+		BranchTarget                  1
+		LineNumber                    18745, 4
+		LineNumberAlt1                1435, 234
+		PushConstant0
+		SetThisMemberValueString      "hitcounter"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xd4007
+		; source: 234 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_boss.vbo" 1442:1442
+		MemberFunctionArgumentCheck 1
+		LineNumber                  18752, 4
+		LineNumberAlt1              1442, 234
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xd401f
+		; source: 234 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_boss.vbo" 1448:1455
+		MemberFunctionArgumentCheck 1
+		LineNumber                  18758, 4
+		LineNumberAlt1              1448, 234
+		PushNothing
+		SetThisMemberValueString    "id"
+		LineNumber                  18759, 4
+		LineNumberAlt1              1449, 234
+		PushNothing
+		SetThisMemberValueString    "name"
+		LineNumber                  18760, 4
+		LineNumberAlt1              1450, 234
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  18761, 4
+		LineNumberAlt1              1451, 234
+		PushNothing
+		SetThisMemberValueString    "obj"
+		LineNumber                  18762, 4
+		LineNumberAlt1              1452, 234
+		PushNothing
+		SetThisMemberValueString    "objid"
+		LineNumber                  18763, 4
+		LineNumberAlt1              1453, 234
+		PushNothing
+		SetThisMemberValueString    "objname"
+		LineNumber                  18764, 4
+		LineNumberAlt1              1454, 234
+		PushNothing
+		SetThisMemberValueString    "area"
+		LineNumber                  18765, 4
+		LineNumberAlt1              1455, 234
+		PushNothing
+		SetThisMemberValueString    "hitcounter"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xd4099
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xd409d
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "gethitcountervalue"
+		; address: 0xd40a1
+		; source: 234 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_boss.vbo" 1471:1471
+		MemberFunctionArgumentCheck 1
+		LineNumber                  18781, 4
+		LineNumberAlt1              1471, 234
+		GetThisMemberValueString    "hitcounter"
+		Return
+	end ; method
+
+	begin method "sethitcountervalue"
+		; address: 0xd40b1
+		; source: 234 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_boss.vbo" 1476:1476
+		MemberFunctionArgumentCheck 2
+		LineNumber                  18786, 4
+		LineNumberAlt1              1476, 234
+		GetVariableValue            1            ; local
+		SetThisMemberValueString    "hitcounter"
+		PushNothing
+		Return
+	end ; method
+end ; class

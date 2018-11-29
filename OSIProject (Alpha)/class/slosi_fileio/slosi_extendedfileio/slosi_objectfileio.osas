@@ -1,0 +1,42 @@
+begin class "slosi_objectfileio", "slosi_extendedfileio"
+	begin method "slosi_objectfileio"
+		; address: 0x715a6
+		; source: 118 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\slosi/slosi_fileio.vbo" 169:169
+		MemberFunctionArgumentCheck 2
+		LineNumber                  42057, 4
+		LineNumberAlt1              169, 118
+		GetVariableValue            1          ; local
+		PushConstantStringString    ".osd"
+		Add
+		SetThisMemberValueString    "filename"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "saveosiobject"
+		; address: 0x715be
+		; source: 118 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\slosi/slosi_fileio.vbo" 181:181
+		MemberFunctionArgumentCheck 2
+		LineNumber                  42069, 4
+		LineNumberAlt1              181, 118
+		GetThisMemberValueString    "filename"
+		GetVariableValue            1                                   ; local
+		CallGameFunctionString      "scslosifileio", "saveosiobject", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "loadosiobject"
+		; address: 0x715d9
+		; source: 118 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\slosi/slosi_fileio.vbo" 185:185
+		MemberFunctionArgumentCheck 1
+		LineNumber                  42073, 4
+		LineNumberAlt1              185, 118
+		GetThisMemberValueString    "filename"
+		CallGameFunctionString      "scslosifileio", "loadosiobject", 1
+		LineNumber                  42073, 4
+		LineNumberAlt1              185, 118
+		Return
+	end ; method
+end ; class

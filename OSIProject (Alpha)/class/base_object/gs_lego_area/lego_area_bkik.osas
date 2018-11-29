@@ -1,0 +1,154 @@
+begin class "lego_area_bkik", "gs_lego_area"
+	property "puzzle"
+
+	begin method "lego_area_bkik"
+		; address: 0x8c414
+		; source: 150 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_bkik.vbo" 23:26
+		MemberFunctionArgumentCheck 2
+		LineNumber                  54715, 4
+		LineNumberAlt1              23, 150
+		GetVariableValue            0                    ; local
+		PushConstantStringString    "bkik"
+		GetVariableValue            1                    ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  54716, 4
+		LineNumberAlt1              24, 150
+		CreateObjectString          "bkik_puzzle"
+		Dup
+		GetVariableValue            0                    ; local
+		Pull                        2
+		GetMemberFunctionString     "bkik_puzzle"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  54716, 4
+		LineNumberAlt1              24, 150
+		SetThisMemberValueString    "puzzle"
+		LineNumber                  54717, 4
+		LineNumberAlt1              25, 150
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  54718, 4
+		LineNumberAlt1              26, 150
+		CreateArray
+		Dup
+		PushConstanti16             180
+		AppendToArray
+		Dup
+		PushConstanti16             -356
+		AppendToArray
+		Dup
+		PushConstant0
+		PushConstantf32             51.400001525878906
+		Subtract
+		AppendToArray
+		Dup
+		PushConstanti16             689
+		AppendToArray
+		SetThisMemberValueString    "startingarea"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x8c492
+		; source: 150 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_bkik.vbo" 33:34
+		MemberFunctionArgumentCheck 1
+		LineNumber                  54725, 4
+		LineNumberAlt1              33, 150
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  54726, 4
+		LineNumberAlt1              34, 150
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x8c4be
+		; source: 150 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_bkik.vbo" 39:39
+		MemberFunctionArgumentCheck 2
+		LineNumber                  54731, 4
+		LineNumberAlt1              39, 150
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "process"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x8c4da
+		; source: 150 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_bkik.vbo" 44:44
+		MemberFunctionArgumentCheck 2
+		LineNumber                  54736, 4
+		LineNumberAlt1              44, 150
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x8c4f6
+		; source: 150 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_bkik.vbo" 49:49
+		MemberFunctionArgumentCheck 2
+		LineNumber                  54741, 4
+		LineNumberAlt1              49, 150
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1        ; local
+		Pull                        2
+		GetMemberFunctionString     "input"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x8c512
+		; source: 150 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_bkik.vbo" 54:54
+		MemberFunctionArgumentCheck 1
+		LineNumber                  54746, 4
+		LineNumberAlt1              54, 150
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x8c52a
+		; source: 150 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_bkik.vbo" 59:59
+		MemberFunctionArgumentCheck 1
+		LineNumber                  54751, 4
+		LineNumberAlt1              59, 150
+		PushNothing
+		SetThisMemberValueString    "puzzle"
+		PushNothing
+		Return
+	end ; method
+end ; class

@@ -1,0 +1,356 @@
+begin class "legosoundscaper"
+	property "handle"
+	property "levelid"
+	property "areaid"
+
+	begin method "legosoundscaper"
+		; address: 0x6472a
+		; source: 101 "C:\\projects\\lego\\Scripting\\VBO\\legobase/LegoSoundscaper.vbo" 26:28
+		MemberFunctionArgumentCheck 3
+		LineNumber                  36338, 4
+		LineNumberAlt1              26, 101
+		CallGameFunctionString      "gcsoundscapeeditor", "create", 0
+		LineNumber                  36338, 4
+		LineNumberAlt1              26, 101
+		SetThisMemberValueString    "handle"
+		LineNumber                  36339, 4
+		LineNumberAlt1              27, 101
+		GetVariableValue            1                                 ; local
+		SetThisMemberValueString    "levelid"
+		LineNumber                  36340, 4
+		LineNumberAlt1              28, 101
+		GetVariableValue            2                                 ; local
+		SetThisMemberValueString    "areaid"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x6476b
+		; source: 101 "C:\\projects\\lego\\Scripting\\VBO\\legobase/LegoSoundscaper.vbo" 34:66
+		MemberFunctionArgumentCheck   2
+		LineNumber                    36346, 4
+		LineNumberAlt1                34, 101
+		PushConstantStringString      "GETTING TO SOUNDSCAPER INPUT"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    36347, 4
+		LineNumberAlt1                35, 101
+		GetVariableValue              1                              ; local
+		GetMemberValueString          "event"
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 8, 0
+		; ->
+		LineNumber                    36349, 4
+		LineNumberAlt1                37, 101
+		GetVariableValue              1                              ; local
+		GetMemberValueString          "button"
+		PushConstanti8                49
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    36350, 4
+		LineNumberAlt1                38, 101
+		GetVariableValue              0                              ; local
+		GetThisMemberValueString      "levelid"
+		GetThisMemberValueString      "areaid"
+		GetThisMemberFunctionString   "activate"
+		JumpAbsolute                  3
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    36352, 4
+		LineNumberAlt1                40, 101
+		GetVariableValue              1                              ; local
+		GetMemberValueString          "button"
+		PushConstanti8                48
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    36353, 4
+		LineNumberAlt1                41, 101
+		GetVariableValue              0                              ; local
+		PushConstant0
+		GetThisMemberFunctionString   "deactivate"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  1
+		LineNumber                    36356, 4
+		LineNumberAlt1                44, 101
+		GetVariableValue              1                              ; local
+		GetMemberValueString          "button"
+		PushConstanti8                53
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    36357, 4
+		LineNumberAlt1                45, 101
+		GetVariableValue              0                              ; local
+		GetThisMemberFunctionString   "save"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  2
+		LineNumber                    36360, 4
+		LineNumberAlt1                48, 101
+		GetVariableValue              1                              ; local
+		GetMemberValueString          "button"
+		PushConstanti8                56
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    36361, 4
+		LineNumberAlt1                49, 101
+		GetVariableValue              0                              ; local
+		GetThisMemberFunctionString   "pickfrontest"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  3
+		LineNumber                    36363, 4
+		LineNumberAlt1                51, 101
+		GetVariableValue              1                              ; local
+		GetMemberValueString          "button"
+		PushConstanti8                57
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    36364, 4
+		LineNumberAlt1                52, 101
+		GetVariableValue              0                              ; local
+		GetThisMemberFunctionString   "unpick"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  4
+		LineNumber                    36367, 4
+		LineNumberAlt1                55, 101
+		GetVariableValue              1                              ; local
+		GetMemberValueString          "button"
+		PushConstanti16               219
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    36368, 4
+		LineNumberAlt1                56, 101
+		GetVariableValue              0                              ; local
+		GetThisMemberFunctionString   "startadjustpicked"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  5
+		LineNumber                    36370, 4
+		LineNumberAlt1                58, 101
+		GetVariableValue              1                              ; local
+		GetMemberValueString          "button"
+		PushConstanti16               221
+		EqualTo
+		CompareAndBranchIfFalseTarget 6, 0
+		; ->
+		LineNumber                    36371, 4
+		LineNumberAlt1                59, 101
+		GetVariableValue              0                              ; local
+		GetThisMemberFunctionString   "endadjustpicked"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  6
+		LineNumber                    36374, 4
+		LineNumberAlt1                62, 101
+		GetVariableValue              1                              ; local
+		GetMemberValueString          "button"
+		PushConstanti8                54
+		EqualTo
+		CompareAndBranchIfFalseTarget 7, 0
+		; ->
+		LineNumber                    36375, 4
+		LineNumberAlt1                63, 101
+		GetVariableValue              0                              ; local
+		GetThisMemberFunctionString   "addandpick"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  7
+		LineNumber                    36377, 4
+		LineNumberAlt1                65, 101
+		GetVariableValue              1                              ; local
+		GetMemberValueString          "button"
+		PushConstanti8                55
+		EqualTo
+		CompareAndBranchIfFalseTarget 8, 0
+		; ->
+		LineNumber                    36378, 4
+		LineNumberAlt1                66, 101
+		GetVariableValue              0                              ; local
+		GetThisMemberFunctionString   "removepicked"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  8
+		PushNothing
+		Return
+	end ; method
+
+	begin method "activate"
+		; address: 0x64913
+		; source: 101 "C:\\projects\\lego\\Scripting\\VBO\\legobase/LegoSoundscaper.vbo" 74:74
+		MemberFunctionArgumentCheck 3
+		LineNumber                  36386, 4
+		LineNumberAlt1              74, 101
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                                   ; local
+		GetVariableValue            2                                   ; local
+		CallGameFunctionString      "gcsoundscapeeditor", "activate", 3
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "deactivate"
+		; address: 0x64931
+		; source: 101 "C:\\projects\\lego\\Scripting\\VBO\\legobase/LegoSoundscaper.vbo" 79:79
+		MemberFunctionArgumentCheck 2
+		LineNumber                  36391, 4
+		LineNumberAlt1              79, 101
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                                     ; local
+		CallGameFunctionString      "gcsoundscapeeditor", "deactivate", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "save"
+		; address: 0x6494c
+		; source: 101 "C:\\projects\\lego\\Scripting\\VBO\\legobase/LegoSoundscaper.vbo" 84:84
+		MemberFunctionArgumentCheck 1
+		LineNumber                  36396, 4
+		LineNumberAlt1              84, 101
+		GetThisMemberValueString    "handle"
+		CallGameFunctionString      "gcsoundscapeeditor", "saveslkfile", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "pickfrontest"
+		; address: 0x64964
+		; source: 101 "C:\\projects\\lego\\Scripting\\VBO\\legobase/LegoSoundscaper.vbo" 89:89
+		MemberFunctionArgumentCheck 1
+		LineNumber                  36401, 4
+		LineNumberAlt1              89, 101
+		GetThisMemberValueString    "handle"
+		CallGameFunctionString      "gcsoundscapeeditor", "pickfrontestsound", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "pickclosest"
+		; address: 0x6497c
+		; source: 101 "C:\\projects\\lego\\Scripting\\VBO\\legobase/LegoSoundscaper.vbo" 94:94
+		MemberFunctionArgumentCheck 1
+		LineNumber                  36406, 4
+		LineNumberAlt1              94, 101
+		GetThisMemberValueString    "handle"
+		CallGameFunctionString      "gcsoundscapeeditor", "pickclosestsound", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "unpick"
+		; address: 0x64994
+		; source: 101 "C:\\projects\\lego\\Scripting\\VBO\\legobase/LegoSoundscaper.vbo" 99:99
+		MemberFunctionArgumentCheck 1
+		LineNumber                  36411, 4
+		LineNumberAlt1              99, 101
+		GetThisMemberValueString    "handle"
+		CallGameFunctionString      "gcsoundscapeeditor", "unpick", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "pushpicked"
+		; address: 0x649ac
+		; source: 101 "C:\\projects\\lego\\Scripting\\VBO\\legobase/LegoSoundscaper.vbo" 104:104
+		MemberFunctionArgumentCheck 2
+		LineNumber                  36416, 4
+		LineNumberAlt1              104, 101
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                                          ; local
+		CallGameFunctionString      "gcsoundscapeeditor", "pushpickedsound", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "pullpicked"
+		; address: 0x649c7
+		; source: 101 "C:\\projects\\lego\\Scripting\\VBO\\legobase/LegoSoundscaper.vbo" 109:109
+		MemberFunctionArgumentCheck 2
+		LineNumber                  36421, 4
+		LineNumberAlt1              109, 101
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                                          ; local
+		CallGameFunctionString      "gcsoundscapeeditor", "pullpickedsound", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "startadjustpicked"
+		; address: 0x649e2
+		; source: 101 "C:\\projects\\lego\\Scripting\\VBO\\legobase/LegoSoundscaper.vbo" 114:114
+		MemberFunctionArgumentCheck 1
+		LineNumber                  36426, 4
+		LineNumberAlt1              114, 101
+		GetThisMemberValueString    "handle"
+		CallGameFunctionString      "gcsoundscapeeditor", "startadjustpickedsound", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "endadjustpicked"
+		; address: 0x649fa
+		; source: 101 "C:\\projects\\lego\\Scripting\\VBO\\legobase/LegoSoundscaper.vbo" 119:119
+		MemberFunctionArgumentCheck 1
+		LineNumber                  36431, 4
+		LineNumberAlt1              119, 101
+		GetThisMemberValueString    "handle"
+		CallGameFunctionString      "gcsoundscapeeditor", "endadjustpickedsound", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "addandpick"
+		; address: 0x64a12
+		; source: 101 "C:\\projects\\lego\\Scripting\\VBO\\legobase/LegoSoundscaper.vbo" 124:124
+		MemberFunctionArgumentCheck 1
+		LineNumber                  36436, 4
+		LineNumberAlt1              124, 101
+		GetThisMemberValueString    "handle"
+		CallGameFunctionString      "gcsoundscapeeditor", "addandpicksound", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "removepicked"
+		; address: 0x64a2a
+		; source: 101 "C:\\projects\\lego\\Scripting\\VBO\\legobase/LegoSoundscaper.vbo" 129:129
+		MemberFunctionArgumentCheck 1
+		LineNumber                  36441, 4
+		LineNumberAlt1              129, 101
+		GetThisMemberValueString    "handle"
+		CallGameFunctionString      "gcsoundscapeeditor", "removepickedsound", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

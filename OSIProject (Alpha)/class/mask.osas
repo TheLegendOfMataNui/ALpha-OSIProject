@@ -1,0 +1,1314 @@
+begin class "mask"
+	property "maskname"
+	property "maskid"
+	property "powerdrainrate"
+	property "selectable"
+
+	begin method "mask"
+		; address: 0x4c7cf
+		; source: 64 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_masks.vbo" 398:401
+		MemberFunctionArgumentCheck 3
+		LineNumber                  23198, 4
+		LineNumberAlt1              398, 64
+		GetVariableValue            1                                            ; local
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  23198, 4
+		LineNumberAlt1              398, 64
+		SetThisMemberValueString    "maskid"
+		LineNumber                  23199, 4
+		LineNumberAlt1              399, 64
+		GetVariableValue            2                                            ; local
+		SetThisMemberValueString    "maskname"
+		LineNumber                  23200, 4
+		LineNumberAlt1              400, 64
+		PushConstantf32             0
+		SetThisMemberValueString    "powerdrainrate"
+		LineNumber                  23201, 4
+		LineNumberAlt1              401, 64
+		PushConstant0
+		SetThisMemberValueString    "selectable"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "add"
+		; address: 0x4c823
+		; source: 64 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_masks.vbo" 408:481
+		MemberFunctionArgumentCheck   1
+		LineNumber                    23208, 4
+		LineNumberAlt1                408, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		GetMemberValueString          "toahandle"
+		GetThisMemberValueString      "maskid"
+		PushConstantStringString      "john pruden"
+		CallGameFunctionString        "gctoa", "addmask", 3
+		Pop
+		LineNumber                    23210, 4
+		LineNumberAlt1                410, 64
+		GetThisMemberValueString      "maskname"
+		Dup
+		PushConstanti8                7
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    23215, 4
+		LineNumberAlt1                415, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		GetMemberValueString          "mask"
+		CreateObjectString            "gs_lego_animatesprite"
+		Dup
+		PushConstantStringString      "Root/data/art/hud/mask rotate/mask8"
+		PushConstant0
+		PushConstanti8                23
+		PushConstanti8                1
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		Pull                          10
+		GetMemberFunctionString       "gs_lego_animatesprite"
+		JumpAbsolute                  10
+		Pop
+		LineNumber                    23215, 4
+		LineNumberAlt1                415, 64
+		Pull                          2
+		GetMemberFunctionString       "addmask"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    23216, 4
+		LineNumberAlt1                416, 64
+		PushConstanti8                3
+		SetThisMemberValueString      "powerdrainrate"
+		BranchAlwaysTarget            12, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		Dup
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    23220, 4
+		LineNumberAlt1                420, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		GetMemberValueString          "mask"
+		CreateObjectString            "gs_lego_animatesprite"
+		Dup
+		PushConstantStringString      "Root/data/art/hud/mask rotate/mask1"
+		PushConstant0
+		PushConstanti8                23
+		PushConstanti8                1
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		Pull                          10
+		GetMemberFunctionString       "gs_lego_animatesprite"
+		JumpAbsolute                  10
+		Pop
+		LineNumber                    23220, 4
+		LineNumberAlt1                420, 64
+		Pull                          2
+		GetMemberFunctionString       "addmask"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    23221, 4
+		LineNumberAlt1                421, 64
+		PushConstanti8                5
+		SetThisMemberValueString      "powerdrainrate"
+		BranchAlwaysTarget            12, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Dup
+		PushConstanti8                8
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    23225, 4
+		LineNumberAlt1                425, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		GetMemberValueString          "mask"
+		CreateObjectString            "gs_lego_animatesprite"
+		Dup
+		PushConstantStringString      "Root/data/art/hud/mask rotate/mask9"
+		PushConstant0
+		PushConstanti8                23
+		PushConstanti8                1
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		Pull                          10
+		GetMemberFunctionString       "gs_lego_animatesprite"
+		JumpAbsolute                  10
+		Pop
+		LineNumber                    23225, 4
+		LineNumberAlt1                425, 64
+		Pull                          2
+		GetMemberFunctionString       "addmask"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    23226, 4
+		LineNumberAlt1                426, 64
+		PushConstanti8                3
+		SetThisMemberValueString      "powerdrainrate"
+		BranchAlwaysTarget            12, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		Dup
+		PushConstanti8                9
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    23231, 4
+		LineNumberAlt1                431, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		GetMemberValueString          "mask"
+		CreateObjectString            "gs_lego_animatesprite"
+		Dup
+		PushConstantStringString      "Root/data/art/hud/mask rotate/mask10"
+		PushConstant0
+		PushConstanti8                23
+		PushConstanti8                1
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		Pull                          10
+		GetMemberFunctionString       "gs_lego_animatesprite"
+		JumpAbsolute                  10
+		Pop
+		LineNumber                    23231, 4
+		LineNumberAlt1                431, 64
+		Pull                          2
+		GetMemberFunctionString       "addmask"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    23232, 4
+		LineNumberAlt1                432, 64
+		PushConstanti8                3
+		SetThisMemberValueString      "powerdrainrate"
+		BranchAlwaysTarget            12, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    23236, 4
+		LineNumberAlt1                436, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		GetMemberValueString          "mask"
+		CreateObjectString            "gs_lego_animatesprite"
+		Dup
+		PushConstantStringString      "Root/data/art/hud/mask rotate/mask2"
+		PushConstant0
+		PushConstanti8                23
+		PushConstanti8                1
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		Pull                          10
+		GetMemberFunctionString       "gs_lego_animatesprite"
+		JumpAbsolute                  10
+		Pop
+		LineNumber                    23236, 4
+		LineNumberAlt1                436, 64
+		Pull                          2
+		GetMemberFunctionString       "addmask"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    23237, 4
+		LineNumberAlt1                437, 64
+		PushConstantf32               0.800000011920929
+		SetThisMemberValueString      "powerdrainrate"
+		BranchAlwaysTarget            12, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		Dup
+		PushConstanti8                10
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    23242, 4
+		LineNumberAlt1                442, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		GetMemberValueString          "mask"
+		CreateObjectString            "gs_lego_animatesprite"
+		Dup
+		PushConstantStringString      "Root/data/art/hud/mask rotate/mask11"
+		PushConstant0
+		PushConstanti8                23
+		PushConstanti8                1
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		Pull                          10
+		GetMemberFunctionString       "gs_lego_animatesprite"
+		JumpAbsolute                  10
+		Pop
+		LineNumber                    23242, 4
+		LineNumberAlt1                442, 64
+		Pull                          2
+		GetMemberFunctionString       "addmask"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    23243, 4
+		LineNumberAlt1                443, 64
+		PushConstanti8                3
+		SetThisMemberValueString      "powerdrainrate"
+		BranchAlwaysTarget            12, 0
+		; ->
+		; <-
+		BranchTarget                  5
+		Dup
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 6, 0
+		; ->
+		LineNumber                    23247, 4
+		LineNumberAlt1                447, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		GetMemberValueString          "mask"
+		CreateObjectString            "gs_lego_animatesprite"
+		Dup
+		PushConstantStringString      "Root/data/art/hud/mask rotate/mask3"
+		PushConstant0
+		PushConstanti8                23
+		PushConstanti8                1
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		Pull                          10
+		GetMemberFunctionString       "gs_lego_animatesprite"
+		JumpAbsolute                  10
+		Pop
+		LineNumber                    23247, 4
+		LineNumberAlt1                447, 64
+		Pull                          2
+		GetMemberFunctionString       "addmask"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    23248, 4
+		LineNumberAlt1                448, 64
+		PushConstanti8                3
+		SetThisMemberValueString      "powerdrainrate"
+		BranchAlwaysTarget            12, 0
+		; ->
+		; <-
+		BranchTarget                  6
+		Dup
+		PushConstanti8                11
+		EqualTo
+		CompareAndBranchIfFalseTarget 7, 0
+		; ->
+		LineNumber                    23253, 4
+		LineNumberAlt1                453, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		GetMemberValueString          "mask"
+		CreateObjectString            "gs_lego_animatesprite"
+		Dup
+		PushConstantStringString      "Root/data/art/hud/mask rotate/mask12"
+		PushConstant0
+		PushConstanti8                23
+		PushConstanti8                1
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		Pull                          10
+		GetMemberFunctionString       "gs_lego_animatesprite"
+		JumpAbsolute                  10
+		Pop
+		LineNumber                    23253, 4
+		LineNumberAlt1                453, 64
+		Pull                          2
+		GetMemberFunctionString       "addmask"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    23254, 4
+		LineNumberAlt1                454, 64
+		PushConstanti8                3
+		SetThisMemberValueString      "powerdrainrate"
+		BranchAlwaysTarget            12, 0
+		; ->
+		; <-
+		BranchTarget                  7
+		Dup
+		PushConstanti8                3
+		EqualTo
+		CompareAndBranchIfFalseTarget 8, 0
+		; ->
+		LineNumber                    23258, 4
+		LineNumberAlt1                458, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		GetMemberValueString          "mask"
+		CreateObjectString            "gs_lego_animatesprite"
+		Dup
+		PushConstantStringString      "Root/data/art/hud/mask rotate/mask4"
+		PushConstant0
+		PushConstanti8                23
+		PushConstanti8                1
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		Pull                          10
+		GetMemberFunctionString       "gs_lego_animatesprite"
+		JumpAbsolute                  10
+		Pop
+		LineNumber                    23258, 4
+		LineNumberAlt1                458, 64
+		Pull                          2
+		GetMemberFunctionString       "addmask"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    23259, 4
+		LineNumberAlt1                459, 64
+		PushConstanti8                1
+		SetThisMemberValueString      "powerdrainrate"
+		BranchAlwaysTarget            12, 0
+		; ->
+		; <-
+		BranchTarget                  8
+		Dup
+		PushConstanti8                4
+		EqualTo
+		CompareAndBranchIfFalseTarget 9, 0
+		; ->
+		LineNumber                    23264, 4
+		LineNumberAlt1                464, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		GetMemberValueString          "mask"
+		CreateObjectString            "gs_lego_animatesprite"
+		Dup
+		PushConstantStringString      "Root/data/art/hud/mask rotate/mask5"
+		PushConstant0
+		PushConstanti8                23
+		PushConstanti8                1
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		Pull                          10
+		GetMemberFunctionString       "gs_lego_animatesprite"
+		JumpAbsolute                  10
+		Pop
+		LineNumber                    23264, 4
+		LineNumberAlt1                464, 64
+		Pull                          2
+		GetMemberFunctionString       "addmask"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    23265, 4
+		LineNumberAlt1                465, 64
+		PushConstanti8                1
+		SetThisMemberValueString      "powerdrainrate"
+		BranchAlwaysTarget            12, 0
+		; ->
+		; <-
+		BranchTarget                  9
+		Dup
+		PushConstanti8                12
+		EqualTo
+		CompareAndBranchIfFalseTarget 10, 0
+		; ->
+		LineNumber                    23269, 4
+		LineNumberAlt1                469, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		GetMemberValueString          "mask"
+		CreateObjectString            "gs_lego_animatesprite"
+		Dup
+		PushConstantStringString      "Root/data/art/hud/mask rotate/mask13"
+		PushConstant0
+		PushConstanti8                23
+		PushConstanti8                1
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		Pull                          10
+		GetMemberFunctionString       "gs_lego_animatesprite"
+		JumpAbsolute                  10
+		Pop
+		LineNumber                    23269, 4
+		LineNumberAlt1                469, 64
+		Pull                          2
+		GetMemberFunctionString       "addmask"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    23270, 4
+		LineNumberAlt1                470, 64
+		PushConstanti8                3
+		SetThisMemberValueString      "powerdrainrate"
+		BranchAlwaysTarget            12, 0
+		; ->
+		; <-
+		BranchTarget                  10
+		Dup
+		PushConstanti8                5
+		EqualTo
+		CompareAndBranchIfFalseTarget 11, 0
+		; ->
+		LineNumber                    23275, 4
+		LineNumberAlt1                475, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		GetMemberValueString          "mask"
+		CreateObjectString            "gs_lego_animatesprite"
+		Dup
+		PushConstantStringString      "Root/data/art/hud/mask rotate/mask6"
+		PushConstant0
+		PushConstanti8                23
+		PushConstanti8                1
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		Pull                          10
+		GetMemberFunctionString       "gs_lego_animatesprite"
+		JumpAbsolute                  10
+		Pop
+		LineNumber                    23275, 4
+		LineNumberAlt1                475, 64
+		Pull                          2
+		GetMemberFunctionString       "addmask"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    23276, 4
+		LineNumberAlt1                476, 64
+		PushConstanti8                3
+		SetThisMemberValueString      "powerdrainrate"
+		BranchAlwaysTarget            12, 0
+		; ->
+		; <-
+		BranchTarget                  11
+		Dup
+		PushConstanti8                6
+		EqualTo
+		CompareAndBranchIfFalseTarget 12, 0
+		; ->
+		LineNumber                    23280, 4
+		LineNumberAlt1                480, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		GetMemberValueString          "mask"
+		CreateObjectString            "gs_lego_animatesprite"
+		Dup
+		PushConstantStringString      "Root/data/art/hud/mask rotate/mask7"
+		PushConstant0
+		PushConstanti8                23
+		PushConstanti8                1
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		Pull                          10
+		GetMemberFunctionString       "gs_lego_animatesprite"
+		JumpAbsolute                  10
+		Pop
+		LineNumber                    23280, 4
+		LineNumberAlt1                480, 64
+		Pull                          2
+		GetMemberFunctionString       "addmask"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    23281, 4
+		LineNumberAlt1                481, 64
+		PushConstanti8                3
+		SetThisMemberValueString      "powerdrainrate"
+		; <-
+		BranchTarget                  12
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setselectable"
+		; address: 0x4ccc2
+		; source: 64 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_masks.vbo" 489:489
+		MemberFunctionArgumentCheck 2
+		LineNumber                  23289, 4
+		LineNumberAlt1              489, 64
+		GetVariableValue            1            ; local
+		SetThisMemberValueString    "selectable"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "activate"
+		; address: 0x4ccd6
+		; source: 64 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_masks.vbo" 496:633
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          1
+		LineNumber                    23296, 4
+		LineNumberAlt1                496, 64
+		GetVariableValue              1                                              ; local
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    23297, 4
+		LineNumberAlt1                497, 64
+		PushConstanti8                1
+		SetVariableValue              1                                              ; local
+		; <-
+		BranchTarget                  0
+		LineNumber                    23300, 4
+		LineNumberAlt1                500, 64
+		GetVariableValue              1                                              ; local
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    23301, 4
+		LineNumberAlt1                501, 64
+		PushConstanti16               759
+		CallGameFunctionString        "gcstaticsoundsptrarray", "playtablesound", 1
+		Pop
+		LineNumber                    23302, 4
+		LineNumberAlt1                502, 64
+		PushConstanti16               758
+		PushConstanti8                1
+		CallGameFunctionString        "gcstaticsoundsptrarray", "playtablesound", 2
+		Pop
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		LineNumber                    23304, 4
+		LineNumberAlt1                504, 64
+		PushConstanti16               758
+		CallGameFunctionString        "gcstaticsoundsptrarray", "stoptablesound", 1
+		Pop
+		; <-
+		BranchTarget                  2
+		LineNumber                    23308, 4
+		LineNumberAlt1                508, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		GetMemberValueString          "handle"
+		GetVariableValue              1                                              ; local
+		CallGameFunctionString        "gccharacter", "setmaskactive", 2
+		Pop
+		LineNumber                    23310, 4
+		LineNumberAlt1                510, 64
+		GetThisMemberValueString      "maskname"
+		Dup
+		PushConstanti8                7
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    23315, 4
+		LineNumberAlt1                515, 64
+		GetVariableValue              1                                              ; local
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    23317, 4
+		LineNumberAlt1                517, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		GetMemberValueString          "handle"
+		PushConstantf32               0.6000000238418579
+		CallGameFunctionString        "gccharacter", "settransparency", 2
+		Pop
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		LineNumber                    23322, 4
+		LineNumberAlt1                522, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		GetMemberValueString          "handle"
+		PushConstantf32               1
+		CallGameFunctionString        "gccharacter", "settransparency", 2
+		Pop
+		; <-
+		BranchTarget                  4
+		BranchAlwaysTarget            35, 0
+		; ->
+		; <-
+		BranchTarget                  5
+		Dup
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 6, 0
+		; ->
+		BranchAlwaysTarget            35, 0
+		; ->
+		; <-
+		BranchTarget                  6
+		Dup
+		PushConstanti8                8
+		EqualTo
+		CompareAndBranchIfFalseTarget 9, 0
+		; ->
+		LineNumber                    23329, 4
+		LineNumberAlt1                529, 64
+		GetVariableValue              1                                              ; local
+		CompareAndBranchIfFalseTarget 7, 0
+		; ->
+		LineNumber                    23330, 4
+		LineNumberAlt1                530, 64
+		PushConstanti8                1
+		CallGameFunctionString        "gclightdirector", "setnightvisionlighting", 1
+		Pop
+		BranchAlwaysTarget            8, 0
+		; ->
+		; <-
+		BranchTarget                  7
+		LineNumber                    23332, 4
+		LineNumberAlt1                532, 64
+		PushConstant0
+		CallGameFunctionString        "gclightdirector", "setnightvisionlighting", 1
+		Pop
+		; <-
+		BranchTarget                  8
+		BranchAlwaysTarget            35, 0
+		; ->
+		; <-
+		BranchTarget                  9
+		Dup
+		PushConstanti8                9
+		EqualTo
+		CompareAndBranchIfFalseTarget 10, 0
+		; ->
+		LineNumber                    23338, 4
+		LineNumberAlt1                538, 64
+		PushConstanti32               4194304
+		GetVariableValue              1                                              ; local
+		CallGameFunctionString        "gcsaver", "setcondition", 2
+		Pop
+		BranchAlwaysTarget            35, 0
+		; ->
+		; <-
+		BranchTarget                  10
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 13, 0
+		; ->
+		LineNumber                    23341, 4
+		LineNumberAlt1                541, 64
+		GetVariableValue              1                                              ; local
+		CompareAndBranchIfFalseTarget 11, 0
+		; ->
+		LineNumber                    23343, 4
+		LineNumberAlt1                543, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		GetMemberValueString          "handle"
+		PushConstant0
+		CallGameFunctionString        "gccharacter", "setwatertimerlength", 2
+		Pop
+		BranchAlwaysTarget            12, 0
+		; ->
+		; <-
+		BranchTarget                  11
+		LineNumber                    23345, 4
+		LineNumberAlt1                545, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		GetMemberValueString          "handle"
+		PushConstanti8                10
+		CallGameFunctionString        "gccharacter", "setwatertimerlength", 2
+		Pop
+		; <-
+		BranchTarget                  12
+		BranchAlwaysTarget            35, 0
+		; ->
+		; <-
+		BranchTarget                  13
+		Dup
+		PushConstanti8                10
+		EqualTo
+		CompareAndBranchIfFalseTarget 16, 0
+		; ->
+		LineNumber                    23351, 4
+		LineNumberAlt1                551, 64
+		GetVariableValue              1                                              ; local
+		CompareAndBranchIfFalseTarget 14, 0
+		; ->
+		LineNumber                    23352, 4
+		LineNumberAlt1                552, 64
+		PushConstantStringString      "MofAC Activated"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		BranchAlwaysTarget            15, 0
+		; ->
+		; <-
+		BranchTarget                  14
+		LineNumber                    23354, 4
+		LineNumberAlt1                554, 64
+		PushConstantStringString      "MofAC Deactivated"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		; <-
+		BranchTarget                  15
+		BranchAlwaysTarget            35, 0
+		; ->
+		; <-
+		BranchTarget                  16
+		Dup
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 19, 0
+		; ->
+		LineNumber                    23358, 4
+		LineNumberAlt1                558, 64
+		GetVariableValue              1                                              ; local
+		CompareAndBranchIfFalseTarget 17, 0
+		; ->
+		LineNumber                    23359, 4
+		LineNumberAlt1                559, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantf32               2.5
+		Pull                          2
+		GetMemberFunctionString       "setanimationscalar"
+		JumpAbsolute                  2
+		Pop
+		BranchAlwaysTarget            18, 0
+		; ->
+		; <-
+		BranchTarget                  17
+		LineNumber                    23361, 4
+		LineNumberAlt1                561, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "setanimationscalar"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  18
+		BranchAlwaysTarget            35, 0
+		; ->
+		; <-
+		BranchTarget                  19
+		Dup
+		PushConstanti8                11
+		EqualTo
+		CompareAndBranchIfFalseTarget 22, 0
+		; ->
+		LineNumber                    23367, 4
+		LineNumberAlt1                567, 64
+		GetVariableValue              1                                              ; local
+		CompareAndBranchIfFalseTarget 20, 0
+		; ->
+		LineNumber                    23368, 4
+		LineNumberAlt1                568, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		Dup
+		GetMemberFunctionString       "telekineticgrab"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    23369, 4
+		LineNumberAlt1                569, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "k003"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    23369, 4
+		LineNumberAlt1                569, 64
+		Pull                          2
+		GetMemberFunctionString       "disableanim"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    23370, 4
+		LineNumberAlt1                570, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "o013"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    23370, 4
+		LineNumberAlt1                570, 64
+		Pull                          2
+		GetMemberFunctionString       "disableanim"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    23371, 4
+		LineNumberAlt1                571, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "k001"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    23371, 4
+		LineNumberAlt1                571, 64
+		Pull                          2
+		GetMemberFunctionString       "disableanim"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    23372, 4
+		LineNumberAlt1                572, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "k002"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    23372, 4
+		LineNumberAlt1                572, 64
+		Pull                          2
+		GetMemberFunctionString       "disableanim"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    23373, 4
+		LineNumberAlt1                573, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "k028"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    23373, 4
+		LineNumberAlt1                573, 64
+		Pull                          2
+		GetMemberFunctionString       "disableanim"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    23374, 4
+		LineNumberAlt1                574, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "k029"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    23374, 4
+		LineNumberAlt1                574, 64
+		Pull                          2
+		GetMemberFunctionString       "disableanim"
+		JumpAbsolute                  2
+		Pop
+		BranchAlwaysTarget            21, 0
+		; ->
+		; <-
+		BranchTarget                  20
+		LineNumber                    23376, 4
+		LineNumberAlt1                576, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		Dup
+		GetMemberFunctionString       "telekineticdrop"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    23377, 4
+		LineNumberAlt1                577, 64
+		CreateObjectString            "scriptevent"
+		Dup
+		PushConstanti16               1001
+		Pull                          2
+		GetMemberFunctionString       "scriptevent"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    23377, 4
+		LineNumberAlt1                577, 64
+		SetVariableValue              2                                              ; local
+		LineNumber                    23378, 4
+		LineNumberAlt1                578, 64
+		GetVariableValue              2                                              ; local
+		Dup
+		GetMemberFunctionString       "send"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    23379, 4
+		LineNumberAlt1                579, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "k003"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    23379, 4
+		LineNumberAlt1                579, 64
+		Pull                          2
+		GetMemberFunctionString       "enableanim"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    23380, 4
+		LineNumberAlt1                580, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "o013"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    23380, 4
+		LineNumberAlt1                580, 64
+		Pull                          2
+		GetMemberFunctionString       "enableanim"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    23381, 4
+		LineNumberAlt1                581, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "k001"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    23381, 4
+		LineNumberAlt1                581, 64
+		Pull                          2
+		GetMemberFunctionString       "enableanim"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    23382, 4
+		LineNumberAlt1                582, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "k002"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    23382, 4
+		LineNumberAlt1                582, 64
+		Pull                          2
+		GetMemberFunctionString       "enableanim"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    23383, 4
+		LineNumberAlt1                583, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "k028"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    23383, 4
+		LineNumberAlt1                583, 64
+		Pull                          2
+		GetMemberFunctionString       "enableanim"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    23384, 4
+		LineNumberAlt1                584, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "k029"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    23384, 4
+		LineNumberAlt1                584, 64
+		Pull                          2
+		GetMemberFunctionString       "enableanim"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  21
+		BranchAlwaysTarget            35, 0
+		; ->
+		; <-
+		BranchTarget                  22
+		Dup
+		PushConstanti8                3
+		EqualTo
+		CompareAndBranchIfFalseTarget 25, 0
+		; ->
+		LineNumber                    23388, 4
+		LineNumberAlt1                588, 64
+		GetVariableValue              1                                              ; local
+		CompareAndBranchIfFalseTarget 23, 0
+		; ->
+		LineNumber                    23389, 4
+		LineNumberAlt1                589, 64
+		CreateObjectString            "scriptevent"
+		Dup
+		PushConstanti16               1002
+		CreateArray
+		Dup
+		PushConstanti8                1
+		AppendToArray
+		Pull                          3
+		GetMemberFunctionString       "scriptevent"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    23389, 4
+		LineNumberAlt1                589, 64
+		SetVariableValue              2                                              ; local
+		LineNumber                    23390, 4
+		LineNumberAlt1                590, 64
+		GetVariableValue              2                                              ; local
+		Dup
+		GetMemberFunctionString       "send"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            24, 0
+		; ->
+		; <-
+		BranchTarget                  23
+		LineNumber                    23392, 4
+		LineNumberAlt1                592, 64
+		CreateObjectString            "scriptevent"
+		Dup
+		PushConstanti16               1002
+		CreateArray
+		Dup
+		PushConstant0
+		AppendToArray
+		Pull                          3
+		GetMemberFunctionString       "scriptevent"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    23392, 4
+		LineNumberAlt1                592, 64
+		SetVariableValue              2                                              ; local
+		LineNumber                    23393, 4
+		LineNumberAlt1                593, 64
+		GetVariableValue              2                                              ; local
+		Dup
+		GetMemberFunctionString       "send"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  24
+		BranchAlwaysTarget            35, 0
+		; ->
+		; <-
+		BranchTarget                  25
+		Dup
+		PushConstanti8                4
+		EqualTo
+		CompareAndBranchIfFalseTarget 28, 0
+		; ->
+		LineNumber                    23399, 4
+		LineNumberAlt1                599, 64
+		GetVariableValue              1                                              ; local
+		CompareAndBranchIfFalseTarget 26, 0
+		; ->
+		LineNumber                    23401, 4
+		LineNumberAlt1                601, 64
+		CreateObjectString            "scriptevent"
+		Dup
+		PushConstanti16               1010
+		CreateArray
+		Dup
+		PushConstanti8                1
+		AppendToArray
+		Pull                          3
+		GetMemberFunctionString       "scriptevent"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    23401, 4
+		LineNumberAlt1                601, 64
+		SetVariableValue              2                                              ; local
+		LineNumber                    23402, 4
+		LineNumberAlt1                602, 64
+		GetVariableValue              2                                              ; local
+		Dup
+		GetMemberFunctionString       "send"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    23404, 4
+		LineNumberAlt1                604, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "activatelevitation"
+		JumpAbsolute                  2
+		Pop
+		BranchAlwaysTarget            27, 0
+		; ->
+		; <-
+		BranchTarget                  26
+		LineNumber                    23407, 4
+		LineNumberAlt1                607, 64
+		CreateObjectString            "scriptevent"
+		Dup
+		PushConstanti16               1010
+		CreateArray
+		Dup
+		PushConstant0
+		AppendToArray
+		Pull                          3
+		GetMemberFunctionString       "scriptevent"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    23407, 4
+		LineNumberAlt1                607, 64
+		SetVariableValue              2                                              ; local
+		LineNumber                    23408, 4
+		LineNumberAlt1                608, 64
+		GetVariableValue              2                                              ; local
+		Dup
+		GetMemberFunctionString       "send"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    23410, 4
+		LineNumberAlt1                610, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "activatelevitation"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  27
+		BranchAlwaysTarget            35, 0
+		; ->
+		; <-
+		BranchTarget                  28
+		Dup
+		PushConstanti8                12
+		EqualTo
+		CompareAndBranchIfFalseTarget 31, 0
+		; ->
+		LineNumber                    23414, 4
+		LineNumberAlt1                614, 64
+		GetVariableValue              1                                              ; local
+		CompareAndBranchIfFalseTarget 29, 0
+		; ->
+		LineNumber                    23415, 4
+		LineNumberAlt1                615, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		Dup
+		GetMemberFunctionString       "activateillusion"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            30, 0
+		; ->
+		; <-
+		BranchTarget                  29
+		LineNumber                    23417, 4
+		LineNumberAlt1                617, 64
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		Dup
+		GetMemberFunctionString       "deactivateillusion"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  30
+		BranchAlwaysTarget            35, 0
+		; ->
+		; <-
+		BranchTarget                  31
+		Dup
+		PushConstanti8                5
+		EqualTo
+		CompareAndBranchIfFalseTarget 34, 0
+		; ->
+		LineNumber                    23423, 4
+		LineNumberAlt1                623, 64
+		GetVariableValue              1                                              ; local
+		CompareAndBranchIfFalseTarget 32, 0
+		; ->
+		LineNumber                    23424, 4
+		LineNumberAlt1                624, 64
+		PushConstantStringString      "setting up mask of time"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    23425, 4
+		LineNumberAlt1                625, 64
+		PushConstanti8                1
+		CallGameFunctionString        "gcbagroup", "userealtimefortoa", 1
+		Pop
+		LineNumber                    23426, 4
+		LineNumberAlt1                626, 64
+		PushConstant0
+		CallGameFunctionString        "scprocessmanager", "userealdeltatime", 1
+		Pop
+		LineNumber                    23427, 4
+		LineNumberAlt1                627, 64
+		PushConstantf32               0.017999999225139618
+		CallGameFunctionString        "scprocessmanager", "setfakedeltatime", 1
+		Pop
+		BranchAlwaysTarget            33, 0
+		; ->
+		; <-
+		BranchTarget                  32
+		LineNumber                    23431, 4
+		LineNumberAlt1                631, 64
+		PushConstant0
+		CallGameFunctionString        "gcbagroup", "userealtimefortoa", 1
+		Pop
+		LineNumber                    23432, 4
+		LineNumberAlt1                632, 64
+		PushConstanti8                1
+		CallGameFunctionString        "scprocessmanager", "userealdeltatime", 1
+		Pop
+		LineNumber                    23433, 4
+		LineNumberAlt1                633, 64
+		PushConstantf32               0.03333299979567528
+		CallGameFunctionString        "scprocessmanager", "setfakedeltatime", 1
+		Pop
+		; <-
+		BranchTarget                  33
+		BranchAlwaysTarget            35, 0
+		; ->
+		; <-
+		BranchTarget                  34
+		Dup
+		PushConstanti8                6
+		EqualTo
+		CompareAndBranchIfFalseTarget 35, 0
+		; ->
+		; <-
+		BranchTarget                  35
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "deactivate"
+		; address: 0x4d463
+		; source: 64 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_masks.vbo" 646:646
+		MemberFunctionArgumentCheck 1
+		LineNumber                  23446, 4
+		LineNumberAlt1              646, 64
+		GetVariableValue            0          ; local
+		PushConstant0
+		GetThisMemberFunctionString "activate"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

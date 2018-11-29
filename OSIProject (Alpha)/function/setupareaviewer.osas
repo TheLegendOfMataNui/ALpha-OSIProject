@@ -1,0 +1,23 @@
+begin function "setupareaviewer", 0
+	; address: 0x2c709
+	; source: 247 "C:\\projects\\lego\\Scripting\\VBO\\AreaViewer.vbo" 144:144
+	JumpTarget                   12
+	LineNumber                   22118, 4
+	LineNumberAlt1               144, 247
+	GetVariableValueGlobalString "screenlist"
+	CreateObjectString           "areaviewer"
+	Dup
+	Dup
+	GetMemberFunctionString      "areaviewer"
+	JumpAbsolute                 1
+	Pop
+	LineNumber                   22118, 4
+	LineNumberAlt1               144, 247
+	PushConstanti8               4
+	Pull                         3
+	GetMemberFunctionString      "addscreen"
+	JumpAbsolute                 3
+	Pop
+	PushNothing
+	Return
+end ; function

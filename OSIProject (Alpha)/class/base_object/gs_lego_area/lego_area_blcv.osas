@@ -1,0 +1,190 @@
+begin class "lego_area_blcv", "gs_lego_area"
+	property "mask_puzzle"
+
+	begin method "lego_area_blcv"
+		; address: 0x8d766
+		; source: 151 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_blcv.vbo" 42:44
+		MemberFunctionArgumentCheck 2
+		LineNumber                  55179, 4
+		LineNumberAlt1              42, 151
+		GetVariableValue            0                    ; local
+		PushConstantStringString    "blcv"
+		GetVariableValue            1                    ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  55180, 4
+		LineNumberAlt1              43, 151
+		CreateObjectString          "acmaskpuzzle"
+		Dup
+		GetVariableValue            0                    ; local
+		Pull                        2
+		GetMemberFunctionString     "acmaskpuzzle"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  55180, 4
+		LineNumberAlt1              43, 151
+		SetThisMemberValueString    "mask_puzzle"
+		LineNumber                  55181, 4
+		LineNumberAlt1              44, 151
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x8d7be
+		; source: 151 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_blcv.vbo" 50:54
+		MemberFunctionArgumentCheck 1
+		CreateStackVariables        1
+		LineNumber                  55187, 4
+		LineNumberAlt1              50, 151
+		GetVariableValue            0                                            ; local
+		GetThisMemberFunctionString "lego_area_show"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  55188, 4
+		LineNumberAlt1              51, 151
+		GetThisMemberValueString    "mask_puzzle"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  55189, 4
+		LineNumberAlt1              52, 151
+		GetThisMemberValueString    "mask_puzzle"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  55190, 4
+		LineNumberAlt1              53, 151
+		PushConstantStringString    "vlgr"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  55190, 4
+		LineNumberAlt1              53, 151
+		PushConstant0
+		CallGameFunctionString      "gcmodeldirector", "getcharacter", 2
+		LineNumber                  55190, 4
+		LineNumberAlt1              53, 151
+		SetVariableValue            1                                            ; local
+		LineNumber                  55191, 4
+		LineNumberAlt1              54, 151
+		GetVariableValue            1                                            ; local
+		PushConstantColor8888       0xffffffff
+		PushConstanti16             255
+		SetRedValue
+		PushConstanti16             247
+		SetGreenValue
+		PushConstant0
+		SetBlueValue
+		PushConstanti16             255
+		SetAlphaValue
+		PushConstantColor8888       0xffffffff
+		PushConstanti16             255
+		SetRedValue
+		PushConstant0
+		SetGreenValue
+		PushConstanti8              13
+		SetBlueValue
+		PushConstanti16             255
+		SetAlphaValue
+		PushConstantStringString    "mk2a"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  55191, 4
+		LineNumberAlt1              54, 151
+		CallGameFunctionString      "gccharacter", "settohunga", 4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x8d87c
+		; source: 151 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_blcv.vbo" 59:59
+		MemberFunctionArgumentCheck 2
+		LineNumber                  55196, 4
+		LineNumberAlt1              59, 151
+		GetThisMemberValueString    "mask_puzzle"
+		GetVariableValue            1             ; local
+		Pull                        2
+		GetMemberFunctionString     "process"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x8d898
+		; source: 151 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_blcv.vbo" 64:64
+		MemberFunctionArgumentCheck 2
+		LineNumber                  55201, 4
+		LineNumberAlt1              64, 151
+		GetThisMemberValueString    "mask_puzzle"
+		GetVariableValue            1             ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x8d8b4
+		; source: 151 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_blcv.vbo" 69:69
+		MemberFunctionArgumentCheck 2
+		LineNumber                  55206, 4
+		LineNumberAlt1              69, 151
+		GetThisMemberValueString    "mask_puzzle"
+		GetVariableValue            1             ; local
+		Pull                        2
+		GetMemberFunctionString     "input"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x8d8d0
+		; source: 151 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_blcv.vbo" 74:75
+		MemberFunctionArgumentCheck 1
+		LineNumber                  55211, 4
+		LineNumberAlt1              74, 151
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_hide"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  55212, 4
+		LineNumberAlt1              75, 151
+		GetThisMemberValueString    "mask_puzzle"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x8d8fb
+		; source: 151 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_blcv.vbo" 80:80
+		MemberFunctionArgumentCheck 1
+		LineNumber                  55217, 4
+		LineNumberAlt1              80, 151
+		GetThisMemberValueString    "mask_puzzle"
+		Dup
+		GetMemberFunctionString     "exit"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

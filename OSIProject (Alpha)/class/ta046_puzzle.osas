@@ -1,0 +1,897 @@
+begin class "ta046_puzzle"
+	property "parent"
+	property "fireballarray"
+	property "timer"
+	property "music"
+
+	begin method "ta046_puzzle"
+		; address: 0xbfffb
+		; source: 216 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta04.vbo" 80:80
+		MemberFunctionArgumentCheck 2
+		LineNumber                  10819, 4
+		LineNumberAlt1              80, 216
+		GetVariableValue            1        ; local
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xc000f
+		; source: 216 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta04.vbo" 88:141
+		MemberFunctionArgumentCheck 1
+		LineNumber                  10827, 4
+		LineNumberAlt1              88, 216
+		CreateObjectString          "legomp3player"
+		Dup
+		Dup
+		GetMemberFunctionString     "legomp3player"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  10827, 4
+		LineNumberAlt1              88, 216
+		SetThisMemberValueString    "music"
+		LineNumber                  10828, 4
+		LineNumberAlt1              89, 216
+		GetThisMemberValueString    "music"
+		PushConstantStringString    "Root/Data/sounds/MUSICPart2LegoUNDERGROUND"
+		Pull                        2
+		GetMemberFunctionString     "setupforplay"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  10829, 4
+		LineNumberAlt1              90, 216
+		GetThisMemberValueString    "music"
+		PushConstanti8              1
+		Pull                        2
+		GetMemberFunctionString     "play"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  10831, 4
+		LineNumberAlt1              92, 216
+		PushConstant0
+		SetThisMemberValueString    "timer"
+		LineNumber                  10832, 4
+		LineNumberAlt1              93, 216
+		CreateArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb00"
+		PushConstanti8              1
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10833, 4
+		LineNumberAlt1              94, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb01"
+		PushConstanti8              1
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10834, 4
+		LineNumberAlt1              95, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb02"
+		PushConstanti8              1
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10835, 4
+		LineNumberAlt1              96, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb03"
+		PushConstanti8              1
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10836, 4
+		LineNumberAlt1              97, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb04"
+		PushConstanti8              2
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10837, 4
+		LineNumberAlt1              98, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb05"
+		PushConstanti8              2
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10838, 4
+		LineNumberAlt1              99, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb06"
+		PushConstanti8              2
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10839, 4
+		LineNumberAlt1              100, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb07"
+		PushConstanti8              2
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10840, 4
+		LineNumberAlt1              101, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb08"
+		PushConstanti8              3
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10841, 4
+		LineNumberAlt1              102, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb09"
+		PushConstanti8              2
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10842, 4
+		LineNumberAlt1              103, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb10"
+		PushConstanti8              2
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10843, 4
+		LineNumberAlt1              104, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb11"
+		PushConstanti8              2
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10844, 4
+		LineNumberAlt1              105, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb12"
+		PushConstanti8              3
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10845, 4
+		LineNumberAlt1              106, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb13"
+		PushConstanti8              3
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10846, 4
+		LineNumberAlt1              107, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb14"
+		PushConstanti8              3
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10847, 4
+		LineNumberAlt1              108, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb15"
+		PushConstanti8              3
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10848, 4
+		LineNumberAlt1              109, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb16"
+		PushConstanti8              3
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10849, 4
+		LineNumberAlt1              110, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb17"
+		PushConstanti8              3
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10850, 4
+		LineNumberAlt1              111, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb18"
+		PushConstanti8              3
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10851, 4
+		LineNumberAlt1              112, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb19"
+		PushConstanti8              3
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10852, 4
+		LineNumberAlt1              113, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb20"
+		PushConstanti8              3
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10853, 4
+		LineNumberAlt1              114, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb21"
+		PushConstanti8              3
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10854, 4
+		LineNumberAlt1              115, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb22"
+		PushConstanti8              3
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10855, 4
+		LineNumberAlt1              116, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb23"
+		PushConstanti8              3
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10856, 4
+		LineNumberAlt1              117, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb24"
+		PushConstanti8              3
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10857, 4
+		LineNumberAlt1              118, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb25"
+		PushConstanti8              3
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10858, 4
+		LineNumberAlt1              119, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb26"
+		PushConstanti8              3
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10859, 4
+		LineNumberAlt1              120, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb27"
+		PushConstanti8              3
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10860, 4
+		LineNumberAlt1              121, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb28"
+		PushConstanti8              4
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10861, 4
+		LineNumberAlt1              122, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb29"
+		PushConstanti8              4
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10862, 4
+		LineNumberAlt1              123, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb30"
+		PushConstanti8              4
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10863, 4
+		LineNumberAlt1              124, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb31"
+		PushConstanti8              4
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10864, 4
+		LineNumberAlt1              125, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb32"
+		PushConstanti8              4
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10865, 4
+		LineNumberAlt1              126, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb33"
+		PushConstanti8              4
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10866, 4
+		LineNumberAlt1              127, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb34"
+		PushConstanti8              4
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10867, 4
+		LineNumberAlt1              128, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb35"
+		PushConstanti8              4
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10868, 4
+		LineNumberAlt1              129, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb36"
+		PushConstanti8              4
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10869, 4
+		LineNumberAlt1              130, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb37"
+		PushConstanti8              5
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10870, 4
+		LineNumberAlt1              131, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb38"
+		PushConstanti8              5
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10871, 4
+		LineNumberAlt1              132, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb39"
+		PushConstanti8              5
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10872, 4
+		LineNumberAlt1              133, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb40"
+		PushConstanti8              5
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10873, 4
+		LineNumberAlt1              134, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb41"
+		PushConstanti8              5
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10874, 4
+		LineNumberAlt1              135, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb42"
+		PushConstanti8              5
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10875, 4
+		LineNumberAlt1              136, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb43"
+		PushConstanti8              5
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10876, 4
+		LineNumberAlt1              137, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb44"
+		PushConstanti8              5
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10877, 4
+		LineNumberAlt1              138, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb45"
+		PushConstanti8              5
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10878, 4
+		LineNumberAlt1              139, 216
+		AppendToArray
+		Dup
+		CreateObjectString          "ta04_fireball"
+		Dup
+		PushConstantStringString    "fb99"
+		PushConstanti8              5
+		Pull                        3
+		GetMemberFunctionString     "ta04_fireball"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  10880, 4
+		LineNumberAlt1              141, 216
+		AppendToArray
+		SetThisMemberValueString    "fireballarray"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xc05d3
+		; source: 216 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta04.vbo" 152:160
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    10891, 4
+		LineNumberAlt1                152, 216
+		GetThisMemberValueString      "fireballarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                   ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1                   ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    10892, 4
+		LineNumberAlt1                153, 216
+		GetThisMemberValueString      "fireballarray"
+		GetVariableValue              1                   ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    10894, 4
+		LineNumberAlt1                155, 216
+		PushNothing
+		SetThisMemberValueString      "fireballarray"
+		LineNumber                    10897, 4
+		LineNumberAlt1                158, 216
+		GetThisMemberValueString      "music"
+		Dup
+		GetMemberFunctionString       "stop"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    10898, 4
+		LineNumberAlt1                159, 216
+		GetThisMemberValueString      "music"
+		Dup
+		GetMemberFunctionString       "cleanupfordestroy"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    10899, 4
+		LineNumberAlt1                160, 216
+		PushNothing
+		SetThisMemberValueString      "music"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0xc0659
+		; source: 216 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta04.vbo" 165:165
+		MemberFunctionArgumentCheck 1
+		LineNumber                  10904, 4
+		LineNumberAlt1              165, 216
+		PushNothing
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xc066b
+		; source: 216 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta04.vbo" 170:178
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          1
+		LineNumber                    10909, 4
+		LineNumberAlt1                170, 216
+		GetThisMemberValueString      "fireballarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2               ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              2               ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    10910, 4
+		LineNumberAlt1                171, 216
+		GetThisMemberValueString      "fireballarray"
+		GetVariableValue              2               ; local
+		GetArrayValue
+		GetVariableValue              1               ; local
+		Pull                          2
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  2
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    10913, 4
+		LineNumberAlt1                174, 216
+		GetThisMemberValueString      "timer"
+		GetVariableValue              1               ; local
+		GetMemberValueString          "deltatime"
+		Add
+		SetThisMemberValueString      "timer"
+		LineNumber                    10914, 4
+		LineNumberAlt1                175, 216
+		GetThisMemberValueString      "timer"
+		PushConstanti8                4
+		GreaterThan
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    10915, 4
+		LineNumberAlt1                176, 216
+		PushConstant0
+		SetThisMemberValueString      "timer"
+		LineNumber                    10916, 4
+		LineNumberAlt1                177, 216
+		GetThisMemberValueString      "fireballarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2               ; local
+		; <-
+		BranchTarget                  2
+		Dup
+		GetVariableValue              2               ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    10917, 4
+		LineNumberAlt1                178, 216
+		GetThisMemberValueString      "fireballarray"
+		GetVariableValue              2               ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "drop"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Pop
+		; <-
+		BranchTarget                  4
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xc0725
+		; source: 216 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta04.vbo" 188:199
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          1
+		LineNumber                    10927, 4
+		LineNumberAlt1                188, 216
+		GetThisMemberValueString      "fireballarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2                                        ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              2                                        ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    10928, 4
+		LineNumberAlt1                189, 216
+		GetThisMemberValueString      "fireballarray"
+		GetVariableValue              2                                        ; local
+		GetArrayValue
+		GetVariableValue              1                                        ; local
+		Pull                          2
+		GetMemberFunctionString       "onevent"
+		JumpAbsolute                  2
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    10931, 4
+		LineNumberAlt1                192, 216
+		GetVariableValue              1                                        ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                46
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    10933, 4
+		LineNumberAlt1                194, 216
+		PushConstantf32               1.2000000476837158
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		LineNumber                    10934, 4
+		LineNumberAlt1                195, 216
+		GetThisMemberValueString      "music"
+		Dup
+		GetMemberFunctionString       "stop"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		Dup
+		PushConstanti8                27
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    10936, 4
+		LineNumberAlt1                197, 216
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "enterstartid"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "enterlookid"
+		Pull                          3
+		GetMemberFunctionString       "gotopos"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    10937, 4
+		LineNumberAlt1                198, 216
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "unkill"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    10938, 4
+		LineNumberAlt1                199, 216
+		GetThisMemberValueString      "music"
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "play"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  3
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0xc080c
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+end ; class

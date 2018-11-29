@@ -1,0 +1,329 @@
+begin class "snowbrgpart"
+	property "obj"
+	property "parent"
+	property "firsthit"
+	property "timer"
+	property "area"
+
+	begin method "snowbrgpart"
+		; address: 0xae3ea
+		; source: 186 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_snfl.vbo" 897:901
+		MemberFunctionArgumentCheck 5
+		LineNumber                  3155, 4
+		LineNumberAlt1              897, 186
+		CreateObjectString          "platform"
+		Dup
+		GetVariableValue            1          ; local
+		GetVariableValue            2          ; local
+		Pull                        3
+		GetMemberFunctionString     "platform"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  3155, 4
+		LineNumberAlt1              897, 186
+		SetThisMemberValueString    "obj"
+		LineNumber                  3157, 4
+		LineNumberAlt1              899, 186
+		GetVariableValue            2          ; local
+		SetThisMemberValueString    "area"
+		LineNumber                  3158, 4
+		LineNumberAlt1              900, 186
+		GetVariableValue            3          ; local
+		SetThisMemberValueString    "timer"
+		LineNumber                  3159, 4
+		LineNumberAlt1              901, 186
+		GetVariableValue            4          ; local
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xae447
+		; source: 186 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_snfl.vbo" 908:910
+		MemberFunctionArgumentCheck 1
+		LineNumber                  3166, 4
+		LineNumberAlt1              908, 186
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  3168, 4
+		LineNumberAlt1              910, 186
+		PushConstanti8              1
+		SetThisMemberValueString    "firsthit"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xae46e
+		; source: 186 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_snfl.vbo" 916:916
+		MemberFunctionArgumentCheck 1
+		LineNumber                  3174, 4
+		LineNumberAlt1              916, 186
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "show"
+		; address: 0xae486
+		; source: 186 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_snfl.vbo" 921:921
+		MemberFunctionArgumentCheck 1
+		LineNumber                  3179, 4
+		LineNumberAlt1              921, 186
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hide"
+		; address: 0xae49e
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xae4a2
+		; source: 186 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_snfl.vbo" 931:933
+		MemberFunctionArgumentCheck   2
+		LineNumber                    3189, 4
+		LineNumberAlt1                931, 186
+		GetThisMemberValueString      "obj"
+		GetVariableValue              1                  ; local
+		Pull                          2
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    3190, 4
+		LineNumberAlt1                932, 186
+		GetThisMemberValueString      "obj"
+		GetMemberValueString          "obj"
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    3190, 4
+		LineNumberAlt1                932, 186
+		PushConstanti8                -50
+		LessThan
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    3191, 4
+		LineNumberAlt1                933, 186
+		GetThisMemberValueString      "obj"
+		GetMemberValueString          "obj"
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		Pull                          5
+		GetMemberFunctionString       "setmoveableflags"
+		JumpAbsolute                  5
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xae500
+		; source: 186 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_snfl.vbo" 939:959
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          3
+		LineNumber                    3197, 4
+		LineNumberAlt1                939, 186
+		GetThisMemberValueString      "obj"
+		GetVariableValue              1               ; local
+		Pull                          2
+		GetMemberFunctionString       "onevent"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    3198, 4
+		LineNumberAlt1                940, 186
+		GetVariableValue              1               ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                8
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    3208, 4
+		LineNumberAlt1                950, 186
+		GetVariableValue              1               ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		SetVariableValue              2               ; local
+		LineNumber                    3209, 4
+		LineNumberAlt1                951, 186
+		GetVariableValue              1               ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		SetVariableValue              3               ; local
+		LineNumber                    3213, 4
+		LineNumberAlt1                955, 186
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "started"
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    3214, 4
+		LineNumberAlt1                956, 186
+		GetVariableValue              3               ; local
+		GetThisMemberValueString      "obj"
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    3215, 4
+		LineNumberAlt1                957, 186
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "snowballarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              4               ; local
+		; <-
+		BranchTarget                  1
+		Dup
+		GetVariableValue              4               ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    3216, 4
+		LineNumberAlt1                958, 186
+		GetVariableValue              2               ; local
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "snowballarray"
+		GetVariableValue              4               ; local
+		GetArrayValue
+		GetMemberValueString          "obj"
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    3217, 4
+		LineNumberAlt1                959, 186
+		GetVariableValue              0               ; local
+		GetThisMemberFunctionString   "hit"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  2
+		IncrementVariable             4
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Pop
+		; <-
+		BranchTarget                  4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hit"
+		; address: 0xae5f0
+		; source: 186 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_snfl.vbo" 973:983
+		MemberFunctionArgumentCheck   1
+		LineNumber                    3231, 4
+		LineNumberAlt1                973, 186
+		GetThisMemberValueString      "firsthit"
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    3232, 4
+		LineNumberAlt1                974, 186
+		PushConstantStringString      "*** hit platform "
+		GetThisMemberValueString      "obj"
+		GetMemberValueString          "name"
+		Add
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    3233, 4
+		LineNumberAlt1                975, 186
+		PushConstant0
+		SetThisMemberValueString      "firsthit"
+		LineNumber                    3234, 4
+		LineNumberAlt1                976, 186
+		GetThisMemberValueString      "parent"
+		Dup
+		GetMemberFunctionString       "platformhit"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    3241, 4
+		LineNumberAlt1                983, 186
+		GetThisMemberValueString      "obj"
+		Dup
+		GetMemberFunctionString       "drop"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "drop"
+		; address: 0xae655
+		; source: 186 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_snfl.vbo" 992:996
+		MemberFunctionArgumentCheck   1
+		LineNumber                    3250, 4
+		LineNumberAlt1                992, 186
+		GetThisMemberValueString      "firsthit"
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    3254, 4
+		LineNumberAlt1                996, 186
+		GetThisMemberValueString      "obj"
+		Dup
+		GetMemberFunctionString       "drop"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "reset"
+		; address: 0xae67d
+		; source: 186 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_snfl.vbo" 1004:1005
+		MemberFunctionArgumentCheck 1
+		LineNumber                  3262, 4
+		LineNumberAlt1              1004, 186
+		PushConstanti8              1
+		SetThisMemberValueString    "firsthit"
+		LineNumber                  3263, 4
+		LineNumberAlt1              1005, 186
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "reset"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

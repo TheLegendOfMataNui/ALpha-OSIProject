@@ -1,0 +1,180 @@
+begin class "lego_area_hk01", "gs_lego_area"
+	property "puzzle"
+
+	begin method "lego_area_hk01"
+		; address: 0x64a42
+		; source: 100 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_hk01.vbo" 26:28
+		MemberFunctionArgumentCheck 2
+		LineNumber                  36463, 4
+		LineNumberAlt1              26, 100
+		GetVariableValue            0                             ; local
+		PushConstantStringString    "hk01"
+		GetVariableValue            1                             ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  36464, 4
+		LineNumberAlt1              27, 100
+		GetVariableValue            0                             ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  36465, 4
+		LineNumberAlt1              28, 100
+		CreateObjectString          "grapplinghook2_puzzle_class"
+		Dup
+		GetVariableValue            0                             ; local
+		Pull                        2
+		GetMemberFunctionString     "grapplinghook2_puzzle_class"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  36465, 4
+		LineNumberAlt1              28, 100
+		SetThisMemberValueString    "puzzle"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x64a9a
+		; source: 100 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_hk01.vbo" 34:39
+		MemberFunctionArgumentCheck  1
+		LineNumber                   36471, 4
+		LineNumberAlt1               34, 100
+		GetVariableValue             0                                       ; local
+		GetThisMemberFunctionString  "lego_area_show"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   36472, 4
+		LineNumberAlt1               35, 100
+		GetThisMemberValueString     "puzzle"
+		Dup
+		GetMemberFunctionString      "initfull"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   36473, 4
+		LineNumberAlt1               36, 100
+		PushConstanti32              -15724528
+		PushConstant0
+		PushConstantf32              1
+		Subtract
+		PushConstant0
+		PushConstantf32              200
+		Subtract
+		PushConstantf32              0.05000000074505806
+		CallGameFunctionString       "gcareadirector", "setfog", 4
+		Pop
+		LineNumber                   36474, 4
+		LineNumberAlt1               37, 100
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		GetMemberValueString         "actor"
+		PushConstanti8               1
+		Pull                         2
+		GetMemberFunctionString      "setcontext"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   36475, 4
+		LineNumberAlt1               38, 100
+		PushConstanti8               1
+		CallGameFunctionString       "gclightdirector", "setcavelighting", 1
+		Pop
+		LineNumber                   36476, 4
+		LineNumberAlt1               39, 100
+		PushConstanti8               10
+		CallGameFunctionString       "gcareadirector", "setnearestmax", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x64b31
+		; source: 100 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_hk01.vbo" 44:44
+		MemberFunctionArgumentCheck 2
+		LineNumber                  36481, 4
+		LineNumberAlt1              44, 100
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "process"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x64b4d
+		; source: 100 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_hk01.vbo" 49:49
+		MemberFunctionArgumentCheck 2
+		LineNumber                  36486, 4
+		LineNumberAlt1              49, 100
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1        ; local
+		Pull                        2
+		GetMemberFunctionString     "input"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x64b69
+		; source: 100 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_hk01.vbo" 54:54
+		MemberFunctionArgumentCheck 2
+		LineNumber                  36491, 4
+		LineNumberAlt1              54, 100
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x64b85
+		; source: 100 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_hk01.vbo" 59:60
+		MemberFunctionArgumentCheck 1
+		LineNumber                  36496, 4
+		LineNumberAlt1              59, 100
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  36497, 4
+		LineNumberAlt1              60, 100
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_hide"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x64bb0
+		; source: 100 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_hk01.vbo" 65:66
+		MemberFunctionArgumentCheck 1
+		LineNumber                  36502, 4
+		LineNumberAlt1              65, 100
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "exit"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  36503, 4
+		LineNumberAlt1              66, 100
+		PushNothing
+		SetThisMemberValueString    "puzzle"
+		PushNothing
+		Return
+	end ; method
+end ; class

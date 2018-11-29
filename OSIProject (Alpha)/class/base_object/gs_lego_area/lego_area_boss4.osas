@@ -1,0 +1,118 @@
+begin class "lego_area_boss4", "gs_lego_area"
+	property "puzzle"
+
+	begin method "lego_area_boss4"
+		; address: 0xafefb
+		; source: 188 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_boss.vbo" 74:75
+		MemberFunctionArgumentCheck 2
+		LineNumber                  3863, 4
+		LineNumberAlt1              74, 188
+		GetVariableValue            0                ; local
+		PushConstantStringString    "boss"
+		GetVariableValue            1                ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  3864, 4
+		LineNumberAlt1              75, 188
+		CreateObjectString          "snowman_puzzle"
+		Dup
+		GetVariableValue            0                ; local
+		Pull                        2
+		GetMemberFunctionString     "snowman_puzzle"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  3864, 4
+		LineNumberAlt1              75, 188
+		SetThisMemberValueString    "puzzle"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xaff40
+		; source: 188 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_boss.vbo" 81:81
+		MemberFunctionArgumentCheck 1
+		LineNumber                  3870, 4
+		LineNumberAlt1              81, 188
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xaff58
+		; source: 188 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_boss.vbo" 86:86
+		MemberFunctionArgumentCheck 1
+		LineNumber                  3875, 4
+		LineNumberAlt1              86, 188
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xaff70
+		; source: 188 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_boss.vbo" 92:92
+		MemberFunctionArgumentCheck 2
+		LineNumber                  3881, 4
+		LineNumberAlt1              92, 188
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "process"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xaff8c
+		; source: 188 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_boss.vbo" 97:97
+		MemberFunctionArgumentCheck 2
+		LineNumber                  3886, 4
+		LineNumberAlt1              97, 188
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0xaffa8
+		; source: 188 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_boss.vbo" 102:102
+		MemberFunctionArgumentCheck 2
+		LineNumber                  3891, 4
+		LineNumberAlt1              102, 188
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1        ; local
+		Pull                        2
+		GetMemberFunctionString     "input"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0xaffc4
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+end ; class

@@ -1,0 +1,503 @@
+begin class "wair7_piston"
+	property "obj"
+	property "x"
+	property "y"
+	property "z"
+	property "moveout"
+	property "dist"
+	property "axis"
+	property "time"
+	property "moveoninit"
+
+	begin method "wair7_piston"
+		; address: 0xda85f
+		; source: 246 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_pst2.vbo" 387:391
+		MemberFunctionArgumentCheck 6
+		LineNumber                  21763, 4
+		LineNumberAlt1              387, 246
+		CreateObjectString          "lego_moveableobject"
+		Dup
+		GetVariableValue            1                     ; local
+		PushConstantStringString    "pst2"
+		Pull                        3
+		GetMemberFunctionString     "lego_moveableobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  21763, 4
+		LineNumberAlt1              387, 246
+		SetThisMemberValueString    "obj"
+		LineNumber                  21764, 4
+		LineNumberAlt1              388, 246
+		GetVariableValue            2                     ; local
+		SetThisMemberValueString    "dist"
+		LineNumber                  21765, 4
+		LineNumberAlt1              389, 246
+		GetVariableValue            3                     ; local
+		SetThisMemberValueString    "axis"
+		LineNumber                  21766, 4
+		LineNumberAlt1              390, 246
+		GetVariableValue            4                     ; local
+		SetThisMemberValueString    "time"
+		LineNumber                  21767, 4
+		LineNumberAlt1              391, 246
+		GetVariableValue            5                     ; local
+		SetThisMemberValueString    "moveoninit"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xda8cc
+		; source: 246 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_pst2.vbo" 396:410
+		MemberFunctionArgumentCheck   1
+		LineNumber                    21772, 4
+		LineNumberAlt1                396, 246
+		GetThisMemberValueString      "obj"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    21773, 4
+		LineNumberAlt1                397, 246
+		GetThisMemberValueString      "obj"
+		Dup
+		GetMemberFunctionString       "getx"
+		JumpAbsolute                  1
+		LineNumber                    21773, 4
+		LineNumberAlt1                397, 246
+		SetThisMemberValueString      "x"
+		LineNumber                    21774, 4
+		LineNumberAlt1                398, 246
+		GetThisMemberValueString      "obj"
+		Dup
+		GetMemberFunctionString       "gety"
+		JumpAbsolute                  1
+		LineNumber                    21774, 4
+		LineNumberAlt1                398, 246
+		SetThisMemberValueString      "y"
+		LineNumber                    21775, 4
+		LineNumberAlt1                399, 246
+		GetThisMemberValueString      "obj"
+		Dup
+		GetMemberFunctionString       "getz"
+		JumpAbsolute                  1
+		LineNumber                    21775, 4
+		LineNumberAlt1                399, 246
+		SetThisMemberValueString      "z"
+		LineNumber                    21776, 4
+		LineNumberAlt1                400, 246
+		GetThisMemberValueString      "moveoninit"
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    21777, 4
+		LineNumberAlt1                401, 246
+		GetThisMemberValueString      "axis"
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    21779, 4
+		LineNumberAlt1                403, 246
+		GetThisMemberValueString      "obj"
+		GetThisMemberValueString      "x"
+		GetThisMemberValueString      "dist"
+		Add
+		GetThisMemberValueString      "y"
+		GetThisMemberValueString      "z"
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		Dup
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    21781, 4
+		LineNumberAlt1                405, 246
+		GetThisMemberValueString      "obj"
+		GetThisMemberValueString      "x"
+		GetThisMemberValueString      "y"
+		GetThisMemberValueString      "dist"
+		Add
+		GetThisMemberValueString      "z"
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Dup
+		PushConstanti8                3
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    21783, 4
+		LineNumberAlt1                407, 246
+		GetThisMemberValueString      "obj"
+		GetThisMemberValueString      "x"
+		GetThisMemberValueString      "y"
+		GetThisMemberValueString      "z"
+		GetThisMemberValueString      "dist"
+		Add
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		; <-
+		BranchTarget                  2
+		Pop
+		; <-
+		BranchTarget                  3
+		LineNumber                    21786, 4
+		LineNumberAlt1                410, 246
+		PushConstanti8                1
+		SetThisMemberValueString      "moveout"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xda9f2
+		; source: 246 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_pst2.vbo" 415:416
+		MemberFunctionArgumentCheck 1
+		LineNumber                  21791, 4
+		LineNumberAlt1              415, 246
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  21792, 4
+		LineNumberAlt1              416, 246
+		PushNothing
+		SetThisMemberValueString    "obj"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "toggle"
+		; address: 0xdaa18
+		; source: 246 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_pst2.vbo" 421:449
+		MemberFunctionArgumentCheck   1
+		LineNumber                    21797, 4
+		LineNumberAlt1                421, 246
+		GetThisMemberValueString      "moveoninit"
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    21798, 4
+		LineNumberAlt1                422, 246
+		GetThisMemberValueString      "moveout"
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    21799, 4
+		LineNumberAlt1                423, 246
+		PushConstant0
+		SetThisMemberValueString      "moveout"
+		LineNumber                    21800, 4
+		LineNumberAlt1                424, 246
+		GetThisMemberValueString      "obj"
+		GetThisMemberValueString      "x"
+		GetThisMemberValueString      "y"
+		GetThisMemberValueString      "z"
+		GetThisMemberValueString      "time"
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    21802, 4
+		LineNumberAlt1                426, 246
+		PushConstanti8                1
+		SetThisMemberValueString      "moveout"
+		LineNumber                    21803, 4
+		LineNumberAlt1                427, 246
+		GetThisMemberValueString      "axis"
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    21805, 4
+		LineNumberAlt1                429, 246
+		GetThisMemberValueString      "obj"
+		GetThisMemberValueString      "x"
+		GetThisMemberValueString      "dist"
+		Add
+		GetThisMemberValueString      "y"
+		GetThisMemberValueString      "z"
+		GetThisMemberValueString      "time"
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Dup
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    21807, 4
+		LineNumberAlt1                431, 246
+		GetThisMemberValueString      "obj"
+		GetThisMemberValueString      "x"
+		GetThisMemberValueString      "y"
+		GetThisMemberValueString      "dist"
+		Add
+		GetThisMemberValueString      "z"
+		GetThisMemberValueString      "time"
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		Dup
+		PushConstanti8                3
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    21809, 4
+		LineNumberAlt1                433, 246
+		GetThisMemberValueString      "obj"
+		GetThisMemberValueString      "x"
+		GetThisMemberValueString      "y"
+		GetThisMemberValueString      "z"
+		GetThisMemberValueString      "dist"
+		Add
+		GetThisMemberValueString      "time"
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		; <-
+		BranchTarget                  3
+		Pop
+		; <-
+		BranchTarget                  4
+		BranchAlwaysTarget            10, 0
+		; ->
+		; <-
+		BranchTarget                  5
+		LineNumber                    21813, 4
+		LineNumberAlt1                437, 246
+		GetThisMemberValueString      "moveout"
+		CompareAndBranchIfFalseTarget 9, 0
+		; ->
+		LineNumber                    21814, 4
+		LineNumberAlt1                438, 246
+		PushConstant0
+		SetThisMemberValueString      "moveout"
+		LineNumber                    21815, 4
+		LineNumberAlt1                439, 246
+		GetThisMemberValueString      "axis"
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 6, 0
+		; ->
+		LineNumber                    21817, 4
+		LineNumberAlt1                441, 246
+		GetThisMemberValueString      "obj"
+		GetThisMemberValueString      "x"
+		GetThisMemberValueString      "dist"
+		Add
+		GetThisMemberValueString      "y"
+		GetThisMemberValueString      "z"
+		GetThisMemberValueString      "time"
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		BranchAlwaysTarget            8, 0
+		; ->
+		; <-
+		BranchTarget                  6
+		Dup
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 7, 0
+		; ->
+		LineNumber                    21819, 4
+		LineNumberAlt1                443, 246
+		GetThisMemberValueString      "obj"
+		GetThisMemberValueString      "x"
+		GetThisMemberValueString      "y"
+		GetThisMemberValueString      "dist"
+		Add
+		GetThisMemberValueString      "z"
+		GetThisMemberValueString      "time"
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		BranchAlwaysTarget            8, 0
+		; ->
+		; <-
+		BranchTarget                  7
+		Dup
+		PushConstanti8                3
+		EqualTo
+		CompareAndBranchIfFalseTarget 8, 0
+		; ->
+		LineNumber                    21821, 4
+		LineNumberAlt1                445, 246
+		GetThisMemberValueString      "obj"
+		GetThisMemberValueString      "x"
+		GetThisMemberValueString      "y"
+		GetThisMemberValueString      "z"
+		GetThisMemberValueString      "dist"
+		Add
+		GetThisMemberValueString      "time"
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		; <-
+		BranchTarget                  8
+		Pop
+		BranchAlwaysTarget            10, 0
+		; ->
+		; <-
+		BranchTarget                  9
+		LineNumber                    21824, 4
+		LineNumberAlt1                448, 246
+		PushConstanti8                1
+		SetThisMemberValueString      "moveout"
+		LineNumber                    21825, 4
+		LineNumberAlt1                449, 246
+		GetThisMemberValueString      "obj"
+		GetThisMemberValueString      "x"
+		GetThisMemberValueString      "y"
+		GetThisMemberValueString      "z"
+		GetThisMemberValueString      "time"
+		Pull                          5
+		GetMemberFunctionString       "interpolate"
+		JumpAbsolute                  5
+		Pop
+		; <-
+		BranchTarget                  10
+		PushNothing
+		Return
+	end ; method
+
+	begin method "reset"
+		; address: 0xdac01
+		; source: 246 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_pst2.vbo" 456:468
+		MemberFunctionArgumentCheck   1
+		LineNumber                    21832, 4
+		LineNumberAlt1                456, 246
+		PushConstanti8                1
+		SetThisMemberValueString      "moveout"
+		LineNumber                    21833, 4
+		LineNumberAlt1                457, 246
+		GetThisMemberValueString      "obj"
+		Dup
+		GetMemberFunctionString       "resetinterpolate"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    21834, 4
+		LineNumberAlt1                458, 246
+		GetThisMemberValueString      "moveoninit"
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    21835, 4
+		LineNumberAlt1                459, 246
+		GetThisMemberValueString      "axis"
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    21837, 4
+		LineNumberAlt1                461, 246
+		GetThisMemberValueString      "obj"
+		GetThisMemberValueString      "x"
+		GetThisMemberValueString      "dist"
+		Add
+		GetThisMemberValueString      "y"
+		GetThisMemberValueString      "z"
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		Dup
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    21839, 4
+		LineNumberAlt1                463, 246
+		GetThisMemberValueString      "obj"
+		GetThisMemberValueString      "x"
+		GetThisMemberValueString      "y"
+		GetThisMemberValueString      "dist"
+		Add
+		GetThisMemberValueString      "z"
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Dup
+		PushConstanti8                3
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    21841, 4
+		LineNumberAlt1                465, 246
+		GetThisMemberValueString      "obj"
+		GetThisMemberValueString      "x"
+		GetThisMemberValueString      "y"
+		GetThisMemberValueString      "z"
+		GetThisMemberValueString      "dist"
+		Add
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		; <-
+		BranchTarget                  2
+		Pop
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		LineNumber                    21844, 4
+		LineNumberAlt1                468, 246
+		GetThisMemberValueString      "obj"
+		GetThisMemberValueString      "x"
+		GetThisMemberValueString      "y"
+		GetThisMemberValueString      "z"
+		Pull                          4
+		GetMemberFunctionString       "setposition"
+		JumpAbsolute                  4
+		Pop
+		; <-
+		BranchTarget                  4
+		PushNothing
+		Return
+	end ; method
+end ; class

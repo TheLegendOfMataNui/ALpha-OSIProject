@@ -1,0 +1,93 @@
+begin function "setup", 0
+	; address: 0x2c87f
+	; source: 2 "C:\\projects\\lego\\Scripting\\VBO\\base.vbo" 37:58
+	CreateStackVariables          1
+	LineNumber                    22398, 4
+	LineNumberAlt1                37, 2
+	CallGameFunctionString        "gcgame", "getresolutionwidth", 0
+	LineNumber                    22398, 4
+	LineNumberAlt1                37, 2
+	SetVariableValueGlobalString  "screenx"
+	LineNumber                    22399, 4
+	LineNumberAlt1                38, 2
+	CallGameFunctionString        "gcgame", "getresolutionheight", 0
+	LineNumber                    22399, 4
+	LineNumberAlt1                38, 2
+	SetVariableValueGlobalString  "screeny"
+	LineNumber                    22400, 4
+	LineNumberAlt1                39, 2
+	GetVariableValueGlobalString  "screenx"
+	PushConstanti16               640
+	Divide
+	SetVariableValue              0                                  ; local
+	LineNumber                    22402, 4
+	LineNumberAlt1                41, 2
+	CreateObjectString            "global_class"
+	Dup
+	Dup
+	GetMemberFunctionString       "global_class"
+	JumpAbsolute                  1
+	Pop
+	LineNumber                    22402, 4
+	LineNumberAlt1                41, 2
+	SetVariableValueGlobalString  "globalclass"
+	LineNumber                    22403, 4
+	LineNumberAlt1                42, 2
+	GetVariableValueGlobalString  "globalclass"
+	Dup
+	GetMemberFunctionString       "initfull"
+	JumpAbsolute                  1
+	Pop
+	LineNumber                    22405, 4
+	LineNumberAlt1                44, 2
+	CreateObjectString            "base_screenlist"
+	Dup
+	Dup
+	GetMemberFunctionString       "base_screenlist"
+	JumpAbsolute                  1
+	Pop
+	LineNumber                    22405, 4
+	LineNumberAlt1                44, 2
+	SetVariableValueGlobalString  "screenlist"
+	LineNumber                    22406, 4
+	LineNumberAlt1                45, 2
+	PushConstanti32JumpTarget     14, 0
+	JumpRelative                  0
+	Pop
+	LineNumber                    22412, 4
+	LineNumberAlt1                51, 2
+	PushConstant0
+	CompareAndBranchIfFalseTarget 0, 0
+	; ->
+	LineNumber                    22413, 4
+	LineNumberAlt1                52, 2
+	GetVariableValueGlobalString  "screenlist"
+	PushConstanti8                21
+	Pull                          2
+	GetMemberFunctionString       "setactive"
+	JumpAbsolute                  2
+	Pop
+	BranchAlwaysTarget            1, 0
+	; ->
+	; <-
+	BranchTarget                  0
+	LineNumber                    22415, 4
+	LineNumberAlt1                54, 2
+	GetVariableValueGlobalString  "screenlist"
+	PushConstanti8                1
+	Pull                          2
+	GetMemberFunctionString       "setactive"
+	JumpAbsolute                  2
+	Pop
+	; <-
+	BranchTarget                  1
+	LineNumber                    22419, 4
+	LineNumberAlt1                58, 2
+	GetVariableValueGlobalString  "screenlist"
+	Dup
+	GetMemberFunctionString       "initfull"
+	JumpAbsolute                  1
+	Pop
+	PushNothing
+	Return
+end ; function

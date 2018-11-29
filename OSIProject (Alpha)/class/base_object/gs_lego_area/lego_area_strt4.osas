@@ -1,0 +1,277 @@
+begin class "lego_area_strt4", "gs_lego_area"
+	property "cinema"
+	property "puzzle"
+
+	begin method "lego_area_strt4"
+		; address: 0x9bd8a
+		; source: 171 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_strt.vbo" 22:26
+		MemberFunctionArgumentCheck 2
+		LineNumber                  61821, 4
+		LineNumberAlt1              22, 171
+		GetVariableValue            1                    ; local
+		SetThisMemberValueString    "level"
+		LineNumber                  61822, 4
+		LineNumberAlt1              23, 171
+		GetVariableValue            0                    ; local
+		PushConstantStringString    "strt"
+		GetVariableValue            1                    ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  61823, 4
+		LineNumberAlt1              24, 171
+		CreateObjectString          "startpuzzle"
+		Dup
+		GetVariableValue            0                    ; local
+		Pull                        2
+		GetMemberFunctionString     "startpuzzle"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  61823, 4
+		LineNumberAlt1              24, 171
+		SetThisMemberValueString    "puzzle"
+		LineNumber                  61824, 4
+		LineNumberAlt1              25, 171
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  61825, 4
+		LineNumberAlt1              26, 171
+		CreateArray
+		Dup
+		PushConstanti16             180
+		AppendToArray
+		Dup
+		PushConstanti16             -356
+		AppendToArray
+		Dup
+		PushConstant0
+		PushConstantf32             51.400001525878906
+		Subtract
+		AppendToArray
+		Dup
+		PushConstanti16             689
+		AppendToArray
+		SetThisMemberValueString    "startingarea"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x9be18
+		; source: 171 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_strt.vbo" 33:35
+		; source: 162 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_haka.vbo" 103:103
+		; source: 135 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_isld.vbo" 45:49
+		MemberFunctionArgumentCheck   1
+		LineNumber                    61832, 4
+		LineNumberAlt1                33, 171
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "lego_area_show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    61833, 4
+		LineNumberAlt1                34, 171
+		GetThisMemberValueString      "puzzle"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    61834, 4
+		LineNumberAlt1                35, 171
+		GetThisMemberValueString      "puzzle"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    63403, 4
+		LineNumberAlt1                103, 162
+		PushConstantStringString      "cin1"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    63403, 4
+		LineNumberAlt1                103, 162
+		CallGameFunctionString        "gcsaver", "findcinema", 1
+		LineNumber                    63403, 4
+		LineNumberAlt1                103, 162
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    52896, 4
+		LineNumberAlt1                45, 135
+		CallGameFunctionString        "gccinemaengine", "create", 0
+		LineNumber                    52896, 4
+		LineNumberAlt1                45, 135
+		SetThisMemberValueString      "cinema"
+		LineNumber                    52897, 4
+		LineNumberAlt1                46, 135
+		GetThisMemberValueString      "cinema"
+		PushConstantStringString      "cin1"
+		CallGameFunctionString        "gccinemaengine", "load", 2
+		Pop
+		LineNumber                    52899, 4
+		LineNumberAlt1                48, 135
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    52900, 4
+		LineNumberAlt1                49, 135
+		GetThisMemberValueString      "cinema"
+		CallGameFunctionString        "gccinemaengine", "play", 1
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x9bee8
+		; source: 171 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_strt.vbo" 40:45
+		; source: 135 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_isld.vbo" 54:54
+		MemberFunctionArgumentCheck 1
+		LineNumber                  61839, 4
+		LineNumberAlt1              40, 171
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_hide"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  61841, 4
+		LineNumberAlt1              42, 171
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  52905, 4
+		LineNumberAlt1              54, 135
+		PushNothing
+		SetThisMemberValueString    "cinema"
+		LineNumber                  61844, 4
+		LineNumberAlt1              45, 171
+		PushNothing
+		SetThisMemberValueString    "startingarea"
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x9bf30
+		; source: 171 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_strt.vbo" 50:50
+		MemberFunctionArgumentCheck 2
+		LineNumber                  61849, 4
+		LineNumberAlt1              50, 171
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "process"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x9bf4c
+		; source: 169 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_xrod.vbo" 57:57
+		; source: 145 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_mtup.vbo" 53:57
+		MemberFunctionArgumentCheck   2
+		LineNumber                    267, 4
+		LineNumberAlt1                57, 169
+		GetThisMemberValueString      "puzzle"
+		GetVariableValue              1                           ; local
+		Pull                          2
+		GetMemberFunctionString       "input"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    53003, 4
+		LineNumberAlt1                53, 145
+		GetVariableValue              1                           ; local
+		GetMemberValueString          "event"
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    53004, 4
+		LineNumberAlt1                54, 145
+		GetVariableValue              1                           ; local
+		GetMemberValueString          "button"
+		Dup
+		PushConstanti16               255
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    53006, 4
+		LineNumberAlt1                56, 145
+		GetThisMemberValueString      "cinema"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    53007, 4
+		LineNumberAlt1                57, 145
+		GetThisMemberValueString      "cinema"
+		CallGameFunctionString        "gccinemaengine", "stop", 1
+		Pop
+		; <-
+		BranchTarget                  0
+		Pop
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x9bfbe
+		; source: 169 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_xrod.vbo" 62:62
+		; source: 135 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_isld.vbo" 72:74
+		MemberFunctionArgumentCheck   2
+		LineNumber                    272, 4
+		LineNumberAlt1                62, 169
+		GetThisMemberValueString      "puzzle"
+		GetVariableValue              1             ; local
+		Pull                          2
+		GetMemberFunctionString       "onevent"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    52923, 4
+		LineNumberAlt1                72, 135
+		GetVariableValue              1             ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                30
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    52925, 4
+		LineNumberAlt1                74, 135
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "maskcontrol"
+		PushConstanti8                3
+		Pull                          2
+		GetMemberFunctionString       "changemask"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  0
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x9c00f
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+end ; class

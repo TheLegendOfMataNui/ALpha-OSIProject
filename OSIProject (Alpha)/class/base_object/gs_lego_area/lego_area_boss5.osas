@@ -1,0 +1,146 @@
+begin class "lego_area_boss5", "gs_lego_area"
+	property "puzzle"
+
+	begin method "lego_area_boss5"
+		; address: 0xba831
+		; source: 209 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_boss.vbo" 56:58
+		MemberFunctionArgumentCheck 2
+		LineNumber                  8561, 4
+		LineNumberAlt1              56, 209
+		GetVariableValue            0                    ; local
+		PushConstantStringString    "boss"
+		GetVariableValue            1                    ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  8562, 4
+		LineNumberAlt1              57, 209
+		CreateObjectString          "boss5_puzzle"
+		Dup
+		GetVariableValue            0                    ; local
+		Pull                        2
+		GetMemberFunctionString     "boss5_puzzle"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  8562, 4
+		LineNumberAlt1              57, 209
+		SetThisMemberValueString    "puzzle"
+		LineNumber                  8563, 4
+		LineNumberAlt1              58, 209
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xba889
+		; source: 209 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_boss.vbo" 65:68
+		MemberFunctionArgumentCheck 1
+		LineNumber                  8570, 4
+		LineNumberAlt1              65, 209
+		GetVariableValue            0                                       ; local
+		GetThisMemberFunctionString "lego_area_show"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  8571, 4
+		LineNumberAlt1              66, 209
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  8572, 4
+		LineNumberAlt1              67, 209
+		PushConstanti32             -10381892
+		PushConstant0
+		PushConstantf32             5
+		Subtract
+		PushConstant0
+		PushConstantf32             600
+		Subtract
+		PushConstantf32             0.009999999776482582
+		CallGameFunctionString      "gcareadirector", "setfog", 4
+		Pop
+		LineNumber                  8573, 4
+		LineNumberAlt1              68, 209
+		PushConstant0
+		CallGameFunctionString      "gclightdirector", "setcavelighting", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xba8ef
+		; source: 209 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_boss.vbo" 73:74
+		MemberFunctionArgumentCheck 1
+		LineNumber                  8578, 4
+		LineNumberAlt1              73, 209
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_hide"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  8579, 4
+		LineNumberAlt1              74, 209
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xba91a
+		; source: 209 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_boss.vbo" 79:79
+		MemberFunctionArgumentCheck 2
+		LineNumber                  8584, 4
+		LineNumberAlt1              79, 209
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "process"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xba936
+		; source: 209 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_boss.vbo" 84:84
+		MemberFunctionArgumentCheck 2
+		LineNumber                  8589, 4
+		LineNumberAlt1              84, 209
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0xba952
+		; source: 209 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_boss.vbo" 89:89
+		MemberFunctionArgumentCheck 2
+		LineNumber                  8594, 4
+		LineNumberAlt1              89, 209
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1        ; local
+		Pull                        2
+		GetMemberFunctionString     "input"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

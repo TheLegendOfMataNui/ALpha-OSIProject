@@ -1,0 +1,150 @@
+begin class "camobj_tweakable", "base_object"
+	property "obj"
+	property "stepamount"
+	property "desc"
+
+	begin method "camobj_tweakable"
+		; address: 0x38225
+		; source: 38 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_tweak.vbo" 774:777
+		MemberFunctionArgumentCheck 2
+		LineNumber                  9723, 4
+		LineNumberAlt1              774, 38
+		GetVariableValue            1                       ; local
+		SetThisMemberValueString    "obj"
+		LineNumber                  9724, 4
+		LineNumberAlt1              775, 38
+		PushConstantStringString    "cam"
+		SetThisMemberValueString    "desc"
+		LineNumber                  9725, 4
+		LineNumberAlt1              776, 38
+		PushConstantf32             0
+		SetThisMemberValueString    "stepamount"
+		LineNumber                  9726, 4
+		LineNumberAlt1              777, 38
+		PushConstantStringString    "Setting tweakable on "
+		GetThisMemberValueString    "desc"
+		ConvertToString
+		Add
+		CallGameFunctionString      "debug", "print", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x38274
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setpos"
+		; address: 0x38278
+		; source: 38 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_tweak.vbo" 789:789
+		MemberFunctionArgumentCheck 4
+		LineNumber                  9738, 4
+		LineNumberAlt1              789, 38
+		GetThisMemberValueString    "obj"
+		GetVariableValue            1        ; local
+		GetVariableValue            2        ; local
+		GetVariableValue            3        ; local
+		Pull                        4
+		GetMemberFunctionString     "setpos"
+		JumpAbsolute                4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "getx"
+		; address: 0x3829a
+		; source: 38 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_tweak.vbo" 794:794
+		MemberFunctionArgumentCheck 1
+		LineNumber                  9743, 4
+		LineNumberAlt1              794, 38
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "getpositionx"
+		JumpAbsolute                1
+		LineNumber                  9743, 4
+		LineNumberAlt1              794, 38
+		Return
+	end ; method
+
+	begin method "gety"
+		; address: 0x382ba
+		; source: 38 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_tweak.vbo" 799:799
+		MemberFunctionArgumentCheck 1
+		LineNumber                  9748, 4
+		LineNumberAlt1              799, 38
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "getpositiony"
+		JumpAbsolute                1
+		LineNumber                  9748, 4
+		LineNumberAlt1              799, 38
+		Return
+	end ; method
+
+	begin method "getz"
+		; address: 0x382da
+		; source: 38 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_tweak.vbo" 804:804
+		MemberFunctionArgumentCheck 1
+		LineNumber                  9753, 4
+		LineNumberAlt1              804, 38
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "getpositionz"
+		JumpAbsolute                1
+		LineNumber                  9753, 4
+		LineNumberAlt1              804, 38
+		Return
+	end ; method
+
+	begin method "getorientationx"
+		; address: 0x382fa
+		; source: 38 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_tweak.vbo" 808:808
+		MemberFunctionArgumentCheck 1
+		LineNumber                  9757, 4
+		LineNumberAlt1              808, 38
+		PushConstant0
+		Return
+	end ; method
+
+	begin method "getorientationy"
+		; address: 0x38308
+		; source: 38 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_tweak.vbo" 813:813
+		MemberFunctionArgumentCheck 1
+		LineNumber                  9762, 4
+		LineNumberAlt1              813, 38
+		PushConstant0
+		Return
+	end ; method
+
+	begin method "getorientationz"
+		; address: 0x38316
+		; source: 38 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_tweak.vbo" 818:818
+		MemberFunctionArgumentCheck 1
+		LineNumber                  9767, 4
+		LineNumberAlt1              818, 38
+		PushConstant0
+		Return
+	end ; method
+
+	begin method "setorientation"
+		; address: 0x38324
+		; source: 38 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_tweak.vbo" 823:823
+		MemberFunctionArgumentCheck 4
+		LineNumber                  9772, 4
+		LineNumberAlt1              823, 38
+		PushConstant0
+		Return
+	end ; method
+
+	begin method "zap"
+		; address: 0x38332
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+end ; class

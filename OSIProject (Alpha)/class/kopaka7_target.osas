@@ -1,0 +1,229 @@
+begin class "kopaka7_target"
+	property "obj"
+	property "x"
+	property "y"
+	property "z"
+	property "ignore"
+	property "shot"
+	property "ring"
+	property "button"
+
+	begin method "kopaka7_target"
+		; address: 0xd72e2
+		; source: 240 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_kopa.vbo" 274:276
+		MemberFunctionArgumentCheck 5
+		LineNumber                  20133, 4
+		LineNumberAlt1              274, 240
+		CreateObjectString          "lego_moveableobject"
+		Dup
+		GetVariableValue            1                     ; local
+		GetVariableValue            2                     ; local
+		Pull                        3
+		GetMemberFunctionString     "lego_moveableobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  20133, 4
+		LineNumberAlt1              274, 240
+		SetThisMemberValueString    "obj"
+		LineNumber                  20134, 4
+		LineNumberAlt1              275, 240
+		GetVariableValue            3                     ; local
+		SetThisMemberValueString    "ring"
+		LineNumber                  20135, 4
+		LineNumberAlt1              276, 240
+		GetVariableValue            4                     ; local
+		SetThisMemberValueString    "button"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xd732f
+		; source: 240 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_kopa.vbo" 281:286
+		MemberFunctionArgumentCheck 1
+		LineNumber                  20140, 4
+		LineNumberAlt1              281, 240
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  20141, 4
+		LineNumberAlt1              282, 240
+		GetThisMemberValueString    "obj"
+		GetMemberValueString        "handle"
+		CallGameFunctionString      "gcmoveableobj", "getx", 1
+		LineNumber                  20141, 4
+		LineNumberAlt1              282, 240
+		SetThisMemberValueString    "x"
+		LineNumber                  20142, 4
+		LineNumberAlt1              283, 240
+		GetThisMemberValueString    "obj"
+		GetMemberValueString        "handle"
+		CallGameFunctionString      "gcmoveableobj", "gety", 1
+		LineNumber                  20142, 4
+		LineNumberAlt1              283, 240
+		SetThisMemberValueString    "y"
+		LineNumber                  20143, 4
+		LineNumberAlt1              284, 240
+		GetThisMemberValueString    "obj"
+		GetMemberValueString        "handle"
+		CallGameFunctionString      "gcmoveableobj", "getz", 1
+		LineNumber                  20143, 4
+		LineNumberAlt1              284, 240
+		SetThisMemberValueString    "z"
+		LineNumber                  20144, 4
+		LineNumberAlt1              285, 240
+		PushConstant0
+		SetThisMemberValueString    "ignore"
+		LineNumber                  20145, 4
+		LineNumberAlt1              286, 240
+		PushConstant0
+		SetThisMemberValueString    "shot"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xd73cc
+		; source: 240 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_kopa.vbo" 291:294
+		MemberFunctionArgumentCheck 1
+		LineNumber                  20150, 4
+		LineNumberAlt1              291, 240
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  20151, 4
+		LineNumberAlt1              292, 240
+		PushNothing
+		SetThisMemberValueString    "obj"
+		LineNumber                  20152, 4
+		LineNumberAlt1              293, 240
+		PushNothing
+		SetThisMemberValueString    "ring"
+		LineNumber                  20153, 4
+		LineNumberAlt1              294, 240
+		PushNothing
+		SetThisMemberValueString    "button"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xd740e
+		; source: 240 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_kopa.vbo" 299:312
+		MemberFunctionArgumentCheck   2
+		LineNumber                    20158, 4
+		LineNumberAlt1                299, 240
+		GetVariableValue              1                                   ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                19
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    20163, 4
+		LineNumberAlt1                304, 240
+		GetVariableValue              1                                   ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		GetThisMemberValueString      "obj"
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    20164, 4
+		LineNumberAlt1                305, 240
+		GetThisMemberValueString      "ignore"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    20165, 4
+		LineNumberAlt1                306, 240
+		GetThisMemberValueString      "obj"
+		GetMemberValueString          "handle"
+		PushConstantf32               1
+		PushConstantf32               0
+		PushConstantf32               0
+		PushConstantf32               1
+		PushConstanti8                1
+		PushConstantf32               0
+		CallGameFunctionString        "gcmoveableobj", "setslidetimer", 7
+		Pop
+		LineNumber                    20166, 4
+		LineNumberAlt1                307, 240
+		PushConstanti8                1
+		SetThisMemberValueString      "ignore"
+		LineNumber                    20167, 4
+		LineNumberAlt1                308, 240
+		PushConstanti8                1
+		SetThisMemberValueString      "shot"
+		LineNumber                    20168, 4
+		LineNumberAlt1                309, 240
+		GetThisMemberValueString      "ring"
+		PushConstantf32               20
+		Pull                          2
+		GetMemberFunctionString       "offsety"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    20169, 4
+		LineNumberAlt1                310, 240
+		GetThisMemberValueString      "button"
+		PushConstant0
+		PushConstanti8                20
+		PushConstant0
+		PushConstantf32               1
+		Pull                          5
+		GetMemberFunctionString       "changeposition"
+		JumpAbsolute                  5
+		Pop
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    20171, 4
+		LineNumberAlt1                312, 240
+		PushConstant0
+		SetThisMemberValueString      "ignore"
+		; <-
+		BranchTarget                  1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "reset"
+		; address: 0xd74f1
+		; source: 240 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_kopa.vbo" 321:324
+		MemberFunctionArgumentCheck 1
+		LineNumber                  20180, 4
+		LineNumberAlt1              321, 240
+		GetThisMemberValueString    "obj"
+		GetMemberValueString        "handle"
+		CallGameFunctionString      "gcmoveableobj", "stopslidetimer", 1
+		Pop
+		LineNumber                  20181, 4
+		LineNumberAlt1              322, 240
+		GetThisMemberValueString    "obj"
+		GetMemberValueString        "handle"
+		GetThisMemberValueString    "x"
+		GetThisMemberValueString    "y"
+		GetThisMemberValueString    "z"
+		CallGameFunctionString      "gcmoveableobj", "setposition", 4
+		Pop
+		LineNumber                  20182, 4
+		LineNumberAlt1              323, 240
+		PushConstant0
+		SetThisMemberValueString    "ignore"
+		LineNumber                  20183, 4
+		LineNumberAlt1              324, 240
+		PushConstant0
+		SetThisMemberValueString    "shot"
+		PushNothing
+		Return
+	end ; method
+end ; class

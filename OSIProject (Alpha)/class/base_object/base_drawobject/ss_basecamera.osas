@@ -1,0 +1,579 @@
+begin class "ss_basecamera", "base_drawobject"
+	property "tx"
+	property "ty"
+	property "tz"
+	property "handle"
+	property "zoom"
+
+	begin method "ss_basecamera"
+		; address: 0x33630
+		; source: 25 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_basecamera.vbo" 55:70
+		MemberFunctionArgumentCheck   8
+		LineNumber                    5387, 4
+		LineNumberAlt1                55, 25
+		GetVariableValue              1       ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    5387, 4
+		LineNumberAlt1                55, 25
+		GetVariableValue              1       ; local
+		SetThisMemberValueString      "x1"
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    5388, 4
+		LineNumberAlt1                56, 25
+		PushConstantf32               0
+		SetThisMemberValueString      "x1"
+		; <-
+		BranchTarget                  1
+		LineNumber                    5389, 4
+		LineNumberAlt1                57, 25
+		GetVariableValue              2       ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    5389, 4
+		LineNumberAlt1                57, 25
+		GetVariableValue              2       ; local
+		SetThisMemberValueString      "y1"
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		LineNumber                    5390, 4
+		LineNumberAlt1                58, 25
+		PushConstantf32               0
+		SetThisMemberValueString      "y1"
+		; <-
+		BranchTarget                  3
+		LineNumber                    5391, 4
+		LineNumberAlt1                59, 25
+		GetVariableValue              3       ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    5391, 4
+		LineNumberAlt1                59, 25
+		GetVariableValue              3       ; local
+		SetThisMemberValueString      "z"
+		BranchAlwaysTarget            5, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		LineNumber                    5392, 4
+		LineNumberAlt1                60, 25
+		PushConstantf32               0
+		SetThisMemberValueString      "z"
+		; <-
+		BranchTarget                  5
+		LineNumber                    5394, 4
+		LineNumberAlt1                62, 25
+		GetVariableValue              4       ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 6, 0
+		; ->
+		LineNumber                    5394, 4
+		LineNumberAlt1                62, 25
+		GetVariableValue              4       ; local
+		SetThisMemberValueString      "tx"
+		BranchAlwaysTarget            7, 0
+		; ->
+		; <-
+		BranchTarget                  6
+		LineNumber                    5395, 4
+		LineNumberAlt1                63, 25
+		PushConstantf32               0
+		SetThisMemberValueString      "tx"
+		; <-
+		BranchTarget                  7
+		LineNumber                    5396, 4
+		LineNumberAlt1                64, 25
+		GetVariableValue              5       ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 8, 0
+		; ->
+		LineNumber                    5396, 4
+		LineNumberAlt1                64, 25
+		GetVariableValue              5       ; local
+		SetThisMemberValueString      "ty"
+		BranchAlwaysTarget            9, 0
+		; ->
+		; <-
+		BranchTarget                  8
+		LineNumber                    5397, 4
+		LineNumberAlt1                65, 25
+		PushConstantf32               0
+		SetThisMemberValueString      "ty"
+		; <-
+		BranchTarget                  9
+		LineNumber                    5398, 4
+		LineNumberAlt1                66, 25
+		GetVariableValue              6       ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 10, 0
+		; ->
+		LineNumber                    5398, 4
+		LineNumberAlt1                66, 25
+		GetVariableValue              6       ; local
+		SetThisMemberValueString      "tz"
+		BranchAlwaysTarget            11, 0
+		; ->
+		; <-
+		BranchTarget                  10
+		LineNumber                    5399, 4
+		LineNumberAlt1                67, 25
+		PushConstantf32               0
+		SetThisMemberValueString      "tz"
+		; <-
+		BranchTarget                  11
+		LineNumber                    5401, 4
+		LineNumberAlt1                69, 25
+		GetVariableValue              7       ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 12, 0
+		; ->
+		LineNumber                    5401, 4
+		LineNumberAlt1                69, 25
+		GetVariableValue              7       ; local
+		SetThisMemberValueString      "zoom"
+		BranchAlwaysTarget            13, 0
+		; ->
+		; <-
+		BranchTarget                  12
+		LineNumber                    5402, 4
+		LineNumberAlt1                70, 25
+		PushConstantf32               75
+		SetThisMemberValueString      "zoom"
+		; <-
+		BranchTarget                  13
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x337bc
+		; source: 25 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_basecamera.vbo" 74:78
+		MemberFunctionArgumentCheck 1
+		CreateStackVariables        1
+		LineNumber                  5406, 4
+		LineNumberAlt1              74, 25
+		CallGameFunctionString      "gcgame", "getmainview", 0
+		LineNumber                  5406, 4
+		LineNumberAlt1              74, 25
+		SetVariableValue            1                               ; local
+		LineNumber                  5407, 4
+		LineNumberAlt1              75, 25
+		GetVariableValue            1                               ; local
+		CallGameFunctionString      "gcviewport", "getcamera", 1
+		LineNumber                  5407, 4
+		LineNumberAlt1              75, 25
+		SetThisMemberValueString    "handle"
+		LineNumber                  5408, 4
+		LineNumberAlt1              76, 25
+		GetThisMemberValueString    "handle"
+		GetThisMemberValueString    "x1"
+		GetThisMemberValueString    "y1"
+		GetThisMemberValueString    "z"
+		CallGameFunctionString      "gclegocamera", "setcampos", 4
+		Pop
+		LineNumber                  5409, 4
+		LineNumberAlt1              77, 25
+		GetThisMemberValueString    "handle"
+		GetThisMemberValueString    "tx"
+		GetThisMemberValueString    "ty"
+		GetThisMemberValueString    "tz"
+		CallGameFunctionString      "gclegocamera", "settargpos", 4
+		Pop
+		LineNumber                  5410, 4
+		LineNumberAlt1              78, 25
+		PushNothing
+		SetVariableValue            1                               ; local
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x33847
+		; source: 25 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_basecamera.vbo" 82:82
+		MemberFunctionArgumentCheck 1
+		LineNumber                  5414, 4
+		LineNumberAlt1              82, 25
+		PushNothing
+		SetThisMemberValueString    "handle"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setpos"
+		; address: 0x33859
+		; source: 25 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_basecamera.vbo" 86:93
+		MemberFunctionArgumentCheck   4
+		LineNumber                    5418, 4
+		LineNumberAlt1                86, 25
+		GetVariableValue              1                              ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    5418, 4
+		LineNumberAlt1                86, 25
+		GetVariableValue              1                              ; local
+		SetThisMemberValueString      "x1"
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    5419, 4
+		LineNumberAlt1                87, 25
+		PushConstantf32               0
+		SetThisMemberValueString      "x1"
+		; <-
+		BranchTarget                  1
+		LineNumber                    5420, 4
+		LineNumberAlt1                88, 25
+		GetVariableValue              2                              ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    5420, 4
+		LineNumberAlt1                88, 25
+		GetVariableValue              2                              ; local
+		SetThisMemberValueString      "y1"
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		LineNumber                    5421, 4
+		LineNumberAlt1                89, 25
+		PushConstantf32               0
+		SetThisMemberValueString      "y1"
+		; <-
+		BranchTarget                  3
+		LineNumber                    5422, 4
+		LineNumberAlt1                90, 25
+		GetVariableValue              3                              ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    5422, 4
+		LineNumberAlt1                90, 25
+		GetVariableValue              3                              ; local
+		SetThisMemberValueString      "z"
+		BranchAlwaysTarget            5, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		LineNumber                    5423, 4
+		LineNumberAlt1                91, 25
+		PushConstantf32               0
+		SetThisMemberValueString      "z"
+		; <-
+		BranchTarget                  5
+		LineNumber                    5425, 4
+		LineNumberAlt1                93, 25
+		GetThisMemberValueString      "handle"
+		GetThisMemberValueString      "x1"
+		GetThisMemberValueString      "y1"
+		GetThisMemberValueString      "z"
+		CallGameFunctionString        "gclegocamera", "setcampos", 4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "changepos"
+		; address: 0x33922
+		; source: 25 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_basecamera.vbo" 97:101
+		MemberFunctionArgumentCheck   4
+		LineNumber                    5429, 4
+		LineNumberAlt1                97, 25
+		GetVariableValue              1                              ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    5429, 4
+		LineNumberAlt1                97, 25
+		GetThisMemberValueString      "x1"
+		GetVariableValue              1                              ; local
+		Add
+		SetThisMemberValueString      "x1"
+		; <-
+		BranchTarget                  0
+		LineNumber                    5430, 4
+		LineNumberAlt1                98, 25
+		GetVariableValue              2                              ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    5430, 4
+		LineNumberAlt1                98, 25
+		GetThisMemberValueString      "y1"
+		GetVariableValue              2                              ; local
+		Add
+		SetThisMemberValueString      "y1"
+		; <-
+		BranchTarget                  1
+		LineNumber                    5431, 4
+		LineNumberAlt1                99, 25
+		GetVariableValue              3                              ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    5431, 4
+		LineNumberAlt1                99, 25
+		GetThisMemberValueString      "z"
+		GetVariableValue              3                              ; local
+		Add
+		SetThisMemberValueString      "z"
+		; <-
+		BranchTarget                  2
+		LineNumber                    5433, 4
+		LineNumberAlt1                101, 25
+		GetThisMemberValueString      "handle"
+		GetThisMemberValueString      "x1"
+		GetThisMemberValueString      "y1"
+		GetThisMemberValueString      "z"
+		CallGameFunctionString        "gclegocamera", "setcampos", 4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "settargetpos"
+		; address: 0x339b8
+		; source: 25 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_basecamera.vbo" 105:112
+		MemberFunctionArgumentCheck   4
+		LineNumber                    5437, 4
+		LineNumberAlt1                105, 25
+		GetVariableValue              1                               ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    5437, 4
+		LineNumberAlt1                105, 25
+		GetVariableValue              1                               ; local
+		SetThisMemberValueString      "tx"
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    5438, 4
+		LineNumberAlt1                106, 25
+		PushConstantf32               0
+		SetThisMemberValueString      "tx"
+		; <-
+		BranchTarget                  1
+		LineNumber                    5439, 4
+		LineNumberAlt1                107, 25
+		GetVariableValue              2                               ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    5439, 4
+		LineNumberAlt1                107, 25
+		GetVariableValue              2                               ; local
+		SetThisMemberValueString      "ty"
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		LineNumber                    5440, 4
+		LineNumberAlt1                108, 25
+		PushConstantf32               0
+		SetThisMemberValueString      "ty"
+		; <-
+		BranchTarget                  3
+		LineNumber                    5441, 4
+		LineNumberAlt1                109, 25
+		GetVariableValue              3                               ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    5441, 4
+		LineNumberAlt1                109, 25
+		GetVariableValue              3                               ; local
+		SetThisMemberValueString      "tz"
+		BranchAlwaysTarget            5, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		LineNumber                    5442, 4
+		LineNumberAlt1                110, 25
+		PushConstantf32               0
+		SetThisMemberValueString      "tz"
+		; <-
+		BranchTarget                  5
+		LineNumber                    5444, 4
+		LineNumberAlt1                112, 25
+		GetThisMemberValueString      "handle"
+		GetThisMemberValueString      "tx"
+		GetThisMemberValueString      "ty"
+		GetThisMemberValueString      "tz"
+		CallGameFunctionString        "gclegocamera", "settargpos", 4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "changetargetpos"
+		; address: 0x33a81
+		; source: 25 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_basecamera.vbo" 116:120
+		MemberFunctionArgumentCheck   4
+		LineNumber                    5448, 4
+		LineNumberAlt1                116, 25
+		GetVariableValue              1                               ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    5448, 4
+		LineNumberAlt1                116, 25
+		GetVariableValue              1                               ; local
+		GetThisMemberValueString      "tx"
+		Add
+		SetThisMemberValueString      "tx"
+		; <-
+		BranchTarget                  0
+		LineNumber                    5449, 4
+		LineNumberAlt1                117, 25
+		GetVariableValue              2                               ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    5449, 4
+		LineNumberAlt1                117, 25
+		GetVariableValue              2                               ; local
+		GetThisMemberValueString      "ty"
+		Add
+		SetThisMemberValueString      "ty"
+		; <-
+		BranchTarget                  1
+		LineNumber                    5450, 4
+		LineNumberAlt1                118, 25
+		GetVariableValue              3                               ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    5450, 4
+		LineNumberAlt1                118, 25
+		GetVariableValue              3                               ; local
+		GetThisMemberValueString      "tz"
+		Add
+		SetThisMemberValueString      "tz"
+		; <-
+		BranchTarget                  2
+		LineNumber                    5452, 4
+		LineNumberAlt1                120, 25
+		GetThisMemberValueString      "handle"
+		GetThisMemberValueString      "tx"
+		GetThisMemberValueString      "ty"
+		GetThisMemberValueString      "tz"
+		CallGameFunctionString        "gclegocamera", "settargpos", 4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setzoomfactor"
+		; address: 0x33b17
+		; source: 25 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_basecamera.vbo" 124:127
+		MemberFunctionArgumentCheck   2
+		LineNumber                    5456, 4
+		LineNumberAlt1                124, 25
+		GetVariableValue              1                                  ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    5456, 4
+		LineNumberAlt1                124, 25
+		GetVariableValue              1                                  ; local
+		SetThisMemberValueString      "zoom"
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    5457, 4
+		LineNumberAlt1                125, 25
+		PushConstantf32               75
+		SetThisMemberValueString      "zoom"
+		; <-
+		BranchTarget                  1
+		LineNumber                    5459, 4
+		LineNumberAlt1                127, 25
+		GetThisMemberValueString      "handle"
+		GetThisMemberValueString      "zoom"
+		CallGameFunctionString        "gclegocamera", "setzoomfactor", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setcameraaioff"
+		; address: 0x33b6a
+		; source: 25 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_basecamera.vbo" 132:132
+		MemberFunctionArgumentCheck 1
+		LineNumber                  5464, 4
+		LineNumberAlt1              132, 25
+		GetThisMemberValueString    "handle"
+		PushConstant0
+		CallGameFunctionString      "gclegocamera", "setcameraaimode", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setcameraaion"
+		; address: 0x33b83
+		; source: 25 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\ssbase/ss_basecamera.vbo" 136:136
+		MemberFunctionArgumentCheck 1
+		LineNumber                  5468, 4
+		LineNumberAlt1              136, 25
+		GetThisMemberValueString    "handle"
+		PushConstanti8              1
+		CallGameFunctionString      "gclegocamera", "setcameraaimode", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

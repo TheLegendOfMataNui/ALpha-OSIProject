@@ -1,0 +1,160 @@
+begin class "slosi_extendedfileio", "slosi_fileio"
+	begin method "slosi_extendedfileio"
+		; address: 0x7143c
+		; source: 118 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\slosi/slosi_fileio.vbo" 96:96
+		MemberFunctionArgumentCheck 2
+		LineNumber                  41984, 4
+		LineNumberAlt1              96, 118
+		GetVariableValue            1          ; local
+		SetThisMemberValueString    "filename"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "write"
+		; address: 0x71450
+		; source: 118 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\slosi/slosi_fileio.vbo" 108:108
+		MemberFunctionArgumentCheck 2
+		LineNumber                  41996, 4
+		LineNumberAlt1              108, 118
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                           ; local
+		CallGameFunctionString      "scslosifileio", "write", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "writeln"
+		; address: 0x7146b
+		; source: 118 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\slosi/slosi_fileio.vbo" 118:118
+		MemberFunctionArgumentCheck 2
+		LineNumber                  42006, 4
+		LineNumberAlt1              118, 118
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                           ; local
+		PushConstantStringString    "\r\n"
+		Add
+		CallGameFunctionString      "scslosifileio", "write", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "eol"
+		; address: 0x7148a
+		; source: 118 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\slosi/slosi_fileio.vbo" 122:122
+		MemberFunctionArgumentCheck 1
+		LineNumber                  42010, 4
+		LineNumberAlt1              122, 118
+		GetThisMemberValueString    "handle"
+		PushConstantStringString    "\r\n"
+		CallGameFunctionString      "scslosifileio", "write", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "is_eof"
+		; address: 0x714a5
+		; source: 118 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\slosi/slosi_fileio.vbo" 126:126
+		MemberFunctionArgumentCheck 1
+		LineNumber                  42014, 4
+		LineNumberAlt1              126, 118
+		GetThisMemberValueString    "handle"
+		CallGameFunctionString      "scslosifileio", "iseof", 1
+		LineNumber                  42014, 4
+		LineNumberAlt1              126, 118
+		Return
+	end ; method
+
+	begin method "clearfile"
+		; address: 0x714c5
+		; source: 118 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\slosi/slosi_fileio.vbo" 130:145
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          2
+		LineNumber                    42018, 4
+		LineNumberAlt1                130, 118
+		PushConstanti8                1
+		SetVariableValue              1         ; local
+		; <-
+		BranchTarget                  0
+		LineNumber                    42020, 4
+		LineNumberAlt1                132, 118
+		GetVariableValue              0         ; local
+		GetThisMemberFunctionString   "is_eof"
+		JumpAbsolute                  1
+		LineNumber                    42020, 4
+		LineNumberAlt1                132, 118
+		Not
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    42021, 4
+		LineNumberAlt1                133, 118
+		GetVariableValue              1         ; local
+		PushConstanti8                1
+		Add
+		SetVariableValue              1         ; local
+		LineNumber                    42022, 4
+		LineNumberAlt1                134, 118
+		GetVariableValue              0         ; local
+		GetThisMemberFunctionString   "read"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		LineNumber                    42025, 4
+		LineNumberAlt1                137, 118
+		GetVariableValue              0         ; local
+		GetThisMemberFunctionString   "close"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    42026, 4
+		LineNumberAlt1                138, 118
+		GetVariableValue              0         ; local
+		GetThisMemberFunctionString   "open"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    42028, 4
+		LineNumberAlt1                140, 118
+		GetVariableValue              1         ; local
+		PushConstanti8                1
+		SetVariableValue              2         ; local
+		; <-
+		BranchTarget                  2
+		Dup
+		GetVariableValue              2         ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    42029, 4
+		LineNumberAlt1                141, 118
+		GetVariableValue              0         ; local
+		PushConstantStringString      ""
+		GetThisMemberFunctionString   "writeln"
+		JumpAbsolute                  2
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Pop
+		LineNumber                    42032, 4
+		LineNumberAlt1                144, 118
+		GetVariableValue              0         ; local
+		GetThisMemberFunctionString   "close"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    42033, 4
+		LineNumberAlt1                145, 118
+		GetVariableValue              0         ; local
+		GetThisMemberFunctionString   "open"
+		JumpAbsolute                  1
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

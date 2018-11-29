@@ -1,0 +1,164 @@
+begin class "lego_area_shrn4", "gs_lego_area"
+	property "puzzle"
+	property "parent"
+
+	begin method "lego_area_shrn4"
+		; address: 0xab67f
+		; source: 182 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_brd3.vbo" 29:29
+		; source: 184 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_shrn.vbo" 26:28
+		MemberFunctionArgumentCheck 2
+		LineNumber                  4913, 4
+		LineNumberAlt1              29, 182
+		GetVariableValue            1                    ; local
+		SetThisMemberValueString    "parent"
+		LineNumber                  1871, 4
+		LineNumberAlt1              26, 184
+		GetVariableValue            0                    ; local
+		PushConstantStringString    "shrn"
+		GetVariableValue            1                    ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  1872, 4
+		LineNumberAlt1              27, 184
+		CreateObjectString          "shrine_puzzle"
+		Dup
+		GetVariableValue            0                    ; local
+		Pull                        2
+		GetMemberFunctionString     "shrine_puzzle"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  1872, 4
+		LineNumberAlt1              27, 184
+		SetThisMemberValueString    "puzzle"
+		LineNumber                  1873, 4
+		LineNumberAlt1              28, 184
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xab6e7
+		; source: 184 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_shrn.vbo" 36:38
+		MemberFunctionArgumentCheck 1
+		LineNumber                  1881, 4
+		LineNumberAlt1              36, 184
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_show"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  1882, 4
+		LineNumberAlt1              37, 184
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  1883, 4
+		LineNumberAlt1              38, 184
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xab726
+		; source: 184 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_shrn.vbo" 43:45
+		MemberFunctionArgumentCheck 1
+		LineNumber                  1888, 4
+		LineNumberAlt1              43, 184
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_hide"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  1889, 4
+		LineNumberAlt1              44, 184
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "hide"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  1890, 4
+		LineNumberAlt1              45, 184
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xab765
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xab769
+		; source: 184 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_shrn.vbo" 56:56
+		MemberFunctionArgumentCheck 2
+		LineNumber                  1901, 4
+		LineNumberAlt1              56, 184
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0xab785
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0xab789
+		; source: 182 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_brd3.vbo" 76:80
+		MemberFunctionArgumentCheck   1
+		LineNumber                    4960, 4
+		LineNumberAlt1                76, 182
+		GetThisMemberValueString      "puzzle"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    4961, 4
+		LineNumberAlt1                77, 182
+		GetThisMemberValueString      "puzzle"
+		Dup
+		GetMemberFunctionString       "exit"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    4962, 4
+		LineNumberAlt1                78, 182
+		PushNothing
+		SetThisMemberValueString      "puzzle"
+		; <-
+		BranchTarget                  0
+		LineNumber                    4964, 4
+		LineNumberAlt1                80, 182
+		PushNothing
+		SetThisMemberValueString      "parent"
+		PushNothing
+		Return
+	end ; method
+end ; class

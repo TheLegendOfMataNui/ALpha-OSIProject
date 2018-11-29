@@ -1,0 +1,23 @@
+begin function "setuplevel_7", 0
+	; address: 0x2c6db
+	; source: 236 "C:\\projects\\lego\\Scripting\\VBO\\lev7/level_7.vbo" 126:126
+	JumpTarget                   11
+	LineNumber                   21965, 4
+	LineNumberAlt1               126, 236
+	GetVariableValueGlobalString "screenlist"
+	CreateObjectString           "lego_level_7"
+	Dup
+	Dup
+	GetMemberFunctionString      "lego_level_7"
+	JumpAbsolute                 1
+	Pop
+	LineNumber                   21965, 4
+	LineNumberAlt1               126, 236
+	PushConstanti8               15
+	Pull                         3
+	GetMemberFunctionString      "addscreen"
+	JumpAbsolute                 3
+	Pop
+	PushNothing
+	Return
+end ; function

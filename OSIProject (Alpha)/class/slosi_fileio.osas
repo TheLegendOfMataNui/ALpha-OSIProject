@@ -1,0 +1,113 @@
+begin class "slosi_fileio"
+	property "filename"
+	property "handle"
+
+	begin method "slosi_fileio"
+		; address: 0x7134f
+		; source: 118 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\slosi/slosi_fileio.vbo" 33:33
+		MemberFunctionArgumentCheck 2
+		LineNumber                  41921, 4
+		LineNumberAlt1              33, 118
+		GetVariableValue            1          ; local
+		SetThisMemberValueString    "filename"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "create"
+		; address: 0x71363
+		; source: 118 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\slosi/slosi_fileio.vbo" 39:39
+		MemberFunctionArgumentCheck 1
+		LineNumber                  41927, 4
+		LineNumberAlt1              39, 118
+		GetThisMemberValueString    "filename"
+		CallGameFunctionString      "scslosifileio", "create", 1
+		LineNumber                  41927, 4
+		LineNumberAlt1              39, 118
+		SetThisMemberValueString    "handle"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "open"
+		; address: 0x71387
+		; source: 118 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\slosi/slosi_fileio.vbo" 43:43
+		MemberFunctionArgumentCheck 1
+		LineNumber                  41931, 4
+		LineNumberAlt1              43, 118
+		GetThisMemberValueString    "filename"
+		CallGameFunctionString      "scslosifileio", "open", 1
+		LineNumber                  41931, 4
+		LineNumberAlt1              43, 118
+		SetThisMemberValueString    "handle"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "close"
+		; address: 0x713ab
+		; source: 118 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\slosi/slosi_fileio.vbo" 48:48
+		MemberFunctionArgumentCheck 1
+		LineNumber                  41936, 4
+		LineNumberAlt1              48, 118
+		PushNothing
+		SetThisMemberValueString    "handle"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "write"
+		; address: 0x713bd
+		; source: 118 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\slosi/slosi_fileio.vbo" 59:59
+		MemberFunctionArgumentCheck 2
+		LineNumber                  41947, 4
+		LineNumberAlt1              59, 118
+		GetThisMemberValueString    "handle"
+		GetVariableValue            1                           ; local
+		PushConstantStringString    "\r\n"
+		Add
+		CallGameFunctionString      "scslosifileio", "write", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "read"
+		; address: 0x713dc
+		; source: 118 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\slosi/slosi_fileio.vbo" 64:64
+		MemberFunctionArgumentCheck 1
+		LineNumber                  41952, 4
+		LineNumberAlt1              64, 118
+		GetThisMemberValueString    "handle"
+		CallGameFunctionString      "scslosifileio", "read", 1
+		LineNumber                  41952, 4
+		LineNumberAlt1              64, 118
+		Return
+	end ; method
+
+	begin method "fileexist"
+		; address: 0x713fc
+		; source: 118 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\slosi/slosi_fileio.vbo" 69:69
+		MemberFunctionArgumentCheck 1
+		LineNumber                  41957, 4
+		LineNumberAlt1              69, 118
+		GetThisMemberValueString    "filename"
+		CallGameFunctionString      "scslosifileio", "doesfileexist", 1
+		LineNumber                  41957, 4
+		LineNumberAlt1              69, 118
+		Return
+	end ; method
+
+	begin method "iseof"
+		; address: 0x7141c
+		; source: 118 "C:\\projects\\lego\\Scripting\\VBO\\c:\\projects\\lego\\slib\\sageparts\\scripting\\vbo\\slosi/slosi_fileio.vbo" 74:74
+		MemberFunctionArgumentCheck 1
+		LineNumber                  41962, 4
+		LineNumberAlt1              74, 118
+		GetThisMemberValueString    "handle"
+		CallGameFunctionString      "scslosifileio", "iseof", 1
+		LineNumber                  41962, 4
+		LineNumberAlt1              74, 118
+		Return
+	end ; method
+end ; class

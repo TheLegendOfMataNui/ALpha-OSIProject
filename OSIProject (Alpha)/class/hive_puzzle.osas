@@ -1,0 +1,322 @@
+begin class "hive_puzzle"
+	property "parent"
+	property "cinema_shown"
+	property "cinema"
+	property "showmask"
+	property "mask"
+
+	begin method "hive_puzzle"
+		; address: 0xb9df7
+		; source: 207 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_hive.vbo" 86:88
+		MemberFunctionArgumentCheck 2
+		LineNumber                  8159, 4
+		LineNumberAlt1              86, 207
+		GetVariableValue            1              ; local
+		SetThisMemberValueString    "parent"
+		LineNumber                  8160, 4
+		LineNumberAlt1              87, 207
+		PushConstant0
+		SetThisMemberValueString    "cinema_shown"
+		LineNumber                  8161, 4
+		LineNumberAlt1              88, 207
+		PushConstanti8              1
+		SetThisMemberValueString    "showmask"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xb9e28
+		; source: 207 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_hive.vbo" 96:107
+		MemberFunctionArgumentCheck   1
+		LineNumber                    8169, 4
+		LineNumberAlt1                96, 207
+		PushConstantStringString      "cin2"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    8169, 4
+		LineNumberAlt1                96, 207
+		CallGameFunctionString        "gcsaver", "findcinema", 1
+		LineNumber                    8169, 4
+		LineNumberAlt1                96, 207
+		SetThisMemberValueString      "cinema_shown"
+		LineNumber                    8170, 4
+		LineNumberAlt1                97, 207
+		GetThisMemberValueString      "cinema_shown"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    8171, 4
+		LineNumberAlt1                98, 207
+		CallGameFunctionString        "gccinemaengine", "create", 0
+		LineNumber                    8171, 4
+		LineNumberAlt1                98, 207
+		SetThisMemberValueString      "cinema"
+		LineNumber                    8172, 4
+		LineNumberAlt1                99, 207
+		GetThisMemberValueString      "cinema"
+		PushConstantStringString      "cin2"
+		CallGameFunctionString        "gccinemaengine", "load", 2
+		Pop
+		LineNumber                    8173, 4
+		LineNumberAlt1                100, 207
+		GetThisMemberValueString      "cinema"
+		PushConstantStringString      "shrn"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    8173, 4
+		LineNumberAlt1                100, 207
+		CallGameFunctionString        "gccinemaengine", "setnextarea", 2
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    8176, 4
+		LineNumberAlt1                103, 207
+		GetThisMemberValueString      "showmask"
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    8178, 4
+		LineNumberAlt1                105, 207
+		CreateObjectString            "lego_pickup"
+		Dup
+		PushConstantStringString      "mask"
+		PushConstanti8                4
+		PushConstanti8                1
+		PushConstantStringString      "item"
+		PushConstanti8                1
+		PushConstanti8                1
+		Pull                          7
+		GetMemberFunctionString       "lego_pickup"
+		JumpAbsolute                  7
+		Pop
+		LineNumber                    8178, 4
+		LineNumberAlt1                105, 207
+		SetThisMemberValueString      "mask"
+		LineNumber                    8179, 4
+		LineNumberAlt1                106, 207
+		GetThisMemberValueString      "mask"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    8180, 4
+		LineNumberAlt1                107, 207
+		GetThisMemberValueString      "mask"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xb9f32
+		; source: 207 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_hive.vbo" 113:117
+		MemberFunctionArgumentCheck   1
+		LineNumber                    8186, 4
+		LineNumberAlt1                113, 207
+		PushNothing
+		SetThisMemberValueString      "cinema"
+		LineNumber                    8187, 4
+		LineNumberAlt1                114, 207
+		GetThisMemberValueString      "mask"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    8188, 4
+		LineNumberAlt1                115, 207
+		GetThisMemberValueString      "mask"
+		GetMemberValueString          "objshown"
+		SetThisMemberValueString      "showmask"
+		LineNumber                    8189, 4
+		LineNumberAlt1                116, 207
+		GetThisMemberValueString      "mask"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    8190, 4
+		LineNumberAlt1                117, 207
+		PushNothing
+		SetThisMemberValueString      "mask"
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0xb9f8c
+		; source: 207 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_hive.vbo" 123:123
+		MemberFunctionArgumentCheck 1
+		LineNumber                  8196, 4
+		LineNumberAlt1              123, 207
+		PushNothing
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xb9f9e
+		; source: 207 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_hive.vbo" 130:140
+		MemberFunctionArgumentCheck   2
+		LineNumber                    8203, 4
+		LineNumberAlt1                130, 207
+		GetVariableValue              1                                        ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                46
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    8205, 4
+		LineNumberAlt1                132, 207
+		PushConstantf32               1.2000000476837158
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		Dup
+		PushConstanti8                27
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    8207, 4
+		LineNumberAlt1                134, 207
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "enterstartid"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "enterlookid"
+		Pull                          3
+		GetMemberFunctionString       "gotopos"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    8208, 4
+		LineNumberAlt1                135, 207
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "unkill"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Dup
+		PushConstanti8                39
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    8212, 4
+		LineNumberAlt1                139, 207
+		GetVariableValue              1                                        ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		GetThisMemberValueString      "mask"
+		GetMemberValueString          "obj"
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    8213, 4
+		LineNumberAlt1                140, 207
+		GetVariableValue              0                                        ; local
+		GetThisMemberFunctionString   "playcinema"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0xba054
+		; source: 207 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_hive.vbo" 147:151
+		MemberFunctionArgumentCheck   2
+		LineNumber                    8220, 4
+		LineNumberAlt1                147, 207
+		GetVariableValue              1                           ; local
+		GetMemberValueString          "event"
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    8221, 4
+		LineNumberAlt1                148, 207
+		GetVariableValue              1                           ; local
+		GetMemberValueString          "button"
+		Dup
+		PushConstanti16               255
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    8223, 4
+		LineNumberAlt1                150, 207
+		GetThisMemberValueString      "cinema"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    8224, 4
+		LineNumberAlt1                151, 207
+		GetThisMemberValueString      "cinema"
+		CallGameFunctionString        "gccinemaengine", "stop", 1
+		Pop
+		; <-
+		BranchTarget                  0
+		Pop
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "playcinema"
+		; address: 0xba0ae
+		; source: 207 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_hive.vbo" 160:163
+		MemberFunctionArgumentCheck   1
+		LineNumber                    8233, 4
+		LineNumberAlt1                160, 207
+		GetThisMemberValueString      "cinema_shown"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    8234, 4
+		LineNumberAlt1                161, 207
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    8235, 4
+		LineNumberAlt1                162, 207
+		GetThisMemberValueString      "cinema"
+		CallGameFunctionString        "gccinemaengine", "play", 1
+		Pop
+		LineNumber                    8236, 4
+		LineNumberAlt1                163, 207
+		PushConstanti8                1
+		SetThisMemberValueString      "cinema_shown"
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+end ; class

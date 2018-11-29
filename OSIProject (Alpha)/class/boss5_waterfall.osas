@@ -1,0 +1,195 @@
+begin class "boss5_waterfall"
+	property "mobject"
+	property "misactive"
+	property "mposition"
+	property "morientation"
+
+	begin method "boss5_waterfall"
+		; address: 0xba992
+		; source: 209 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_boss.vbo" 123:134
+		MemberFunctionArgumentCheck 4
+		LineNumber                  8628, 4
+		LineNumberAlt1              123, 209
+		PushConstanti8              1
+		SetThisMemberValueString    "misactive"
+		LineNumber                  8629, 4
+		LineNumberAlt1              124, 209
+		GetVariableValue            2                                            ; local
+		SetThisMemberValueString    "mposition"
+		LineNumber                  8630, 4
+		LineNumberAlt1              125, 209
+		GetVariableValue            3                                            ; local
+		SetThisMemberValueString    "morientation"
+		LineNumber                  8632, 4
+		LineNumberAlt1              127, 209
+		PushConstantStringString    "Making a waterfall named: "
+		GetVariableValue            1                                            ; local
+		Add
+		CallGameFunctionString      "debug", "print", 1
+		Pop
+		LineNumber                  8634, 4
+		LineNumberAlt1              129, 209
+		CreateObjectString          "lego_moveableobject"
+		Dup
+		GetVariableValue            1                                            ; local
+		Pull                        2
+		GetMemberFunctionString     "lego_moveableobject"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  8634, 4
+		LineNumberAlt1              129, 209
+		SetThisMemberValueString    "mobject"
+		LineNumber                  8635, 4
+		LineNumberAlt1              130, 209
+		GetThisMemberValueString    "mobject"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  8638, 4
+		LineNumberAlt1              133, 209
+		GetThisMemberValueString    "mobject"
+		PushConstanti8              4
+		PushConstanti8              4
+		PushConstanti8              4
+		Pull                        4
+		GetMemberFunctionString     "setresponse"
+		JumpAbsolute                4
+		Pop
+		LineNumber                  8639, 4
+		LineNumberAlt1              134, 209
+		GetThisMemberValueString    "mobject"
+		PushConstantStringString    "wndy"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  8639, 4
+		LineNumberAlt1              134, 209
+		Pull                        2
+		GetMemberFunctionString     "ignorecollisionswith"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "inrange"
+		; address: 0xbaa5a
+		; source: 209 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_boss.vbo" 138:144
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          1
+		LineNumber                    8643, 4
+		LineNumberAlt1                138, 209
+		GetThisMemberValueString      "morientation"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2              ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              2              ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    8644, 4
+		LineNumberAlt1                139, 209
+		GetThisMemberValueString      "morientation"
+		GetVariableValue              2              ; local
+		GetArrayValue
+		GetVariableValue              1              ; local
+		LessOrEqual
+		GetVariableValue              1              ; local
+		GetThisMemberValueString      "morientation"
+		GetVariableValue              2              ; local
+		PushConstanti8                1
+		Add
+		GetArrayValue
+		LessThan
+		And
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    8645, 4
+		LineNumberAlt1                140, 209
+		PushConstanti8                1
+		Return
+		; <-
+		BranchTarget                  1
+		GetVariableValue              2              ; local
+		PushConstanti8                2
+		Add
+		SetVariableValue              2              ; local
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		Pop
+		LineNumber                    8649, 4
+		LineNumberAlt1                144, 209
+		PushConstant0
+		Return
+	end ; method
+
+	begin method "isactive"
+		; address: 0xbaac8
+		; source: 209 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_boss.vbo" 148:148
+		MemberFunctionArgumentCheck 1
+		LineNumber                  8653, 4
+		LineNumberAlt1              148, 209
+		GetThisMemberValueString    "misactive"
+		Return
+	end ; method
+
+	begin method "enable"
+		; address: 0xbaad8
+		; source: 209 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_boss.vbo" 152:157
+		MemberFunctionArgumentCheck   2
+		LineNumber                    8657, 4
+		LineNumberAlt1                152, 209
+		GetVariableValue              1           ; local
+		SetThisMemberValueString      "misactive"
+		LineNumber                    8659, 4
+		LineNumberAlt1                154, 209
+		GetThisMemberValueString      "misactive"
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    8660, 4
+		LineNumberAlt1                155, 209
+		GetThisMemberValueString      "mobject"
+		PushConstantf32               2
+		Pull                          2
+		GetMemberFunctionString       "fadein"
+		JumpAbsolute                  2
+		Pop
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    8662, 4
+		LineNumberAlt1                157, 209
+		GetThisMemberValueString      "mobject"
+		PushConstantf32               2
+		Pull                          2
+		GetMemberFunctionString       "fadeout"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xbab33
+		; source: 209 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_boss.vbo" 162:162
+		MemberFunctionArgumentCheck 1
+		LineNumber                  8667, 4
+		LineNumberAlt1              162, 209
+		GetThisMemberValueString    "mobject"
+		Dup
+		GetMemberFunctionString     "process"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

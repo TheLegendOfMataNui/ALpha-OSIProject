@@ -1,0 +1,608 @@
+begin class "simplebug"
+	property "obj"
+	property "id"
+	property "name"
+	property "puzzlepointer"
+	property "alive"
+	property "life"
+	property "damagesound"
+	property "resurrectsound"
+	property "attacksound"
+
+	begin method "simplebug"
+		; address: 0x634c7
+		; source: 98 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_bugs.vbo" 491:498
+		MemberFunctionArgumentCheck 9
+		CreateStackVariables        2
+		LineNumber                  35688, 4
+		LineNumberAlt1              491, 98
+		GetVariableValue            2                                            ; local
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  35688, 4
+		LineNumberAlt1              491, 98
+		SetThisMemberValueString    "id"
+		LineNumber                  35689, 4
+		LineNumberAlt1              492, 98
+		GetVariableValue            2                                            ; local
+		SetThisMemberValueString    "name"
+		LineNumber                  35690, 4
+		LineNumberAlt1              493, 98
+		GetVariableValue            4                                            ; local
+		SetVariableValue            9                                            ; local
+		LineNumber                  35691, 4
+		LineNumberAlt1              494, 98
+		GetVariableValue            1                                            ; local
+		SetThisMemberValueString    "puzzlepointer"
+		LineNumber                  35692, 4
+		LineNumberAlt1              495, 98
+		PushConstanti8              1
+		SetThisMemberValueString    "alive"
+		LineNumber                  35693, 4
+		LineNumberAlt1              496, 98
+		PushConstantf32             100
+		SetThisMemberValueString    "life"
+		LineNumber                  35694, 4
+		LineNumberAlt1              497, 98
+		GetVariableValue            0                                            ; local
+		GetVariableValue            4                                            ; local
+		GetThisMemberFunctionString "makename"
+		JumpAbsolute                2
+		LineNumber                  35694, 4
+		LineNumberAlt1              497, 98
+		SetVariableValue            10                                           ; local
+		LineNumber                  35695, 4
+		LineNumberAlt1              498, 98
+		CreateObjectString          "gs_lego_character"
+		Dup
+		GetVariableValue            2                                            ; local
+		GetVariableValue            3                                            ; local
+		PushConstantStringString    "bugs"
+		GetVariableValue            5                                            ; local
+		GetVariableValue            6                                            ; local
+		GetVariableValue            7                                            ; local
+		GetVariableValue            8                                            ; local
+		PushConstantStringString    "aiin"
+		Pull                        9
+		GetMemberFunctionString     "gs_lego_character"
+		JumpAbsolute                9
+		Pop
+		LineNumber                  35695, 4
+		LineNumberAlt1              498, 98
+		SetThisMemberValueString    "obj"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x6359b
+		; source: 98 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_bugs.vbo" 508:525
+		MemberFunctionArgumentCheck 1
+		LineNumber                  35705, 4
+		LineNumberAlt1              508, 98
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  35706, 4
+		LineNumberAlt1              509, 98
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "add"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  35710, 4
+		LineNumberAlt1              513, 98
+		CreateObjectString          "tablecopysound"
+		Dup
+		PushConstanti16             580
+		Pull                        2
+		GetMemberFunctionString     "tablecopysound"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  35710, 4
+		LineNumberAlt1              513, 98
+		SetThisMemberValueString    "damagesound"
+		LineNumber                  35711, 4
+		LineNumberAlt1              514, 98
+		GetThisMemberValueString    "damagesound"
+		GetThisMemberValueString    "id"
+		Pull                        2
+		GetMemberFunctionString     "synctocharacter"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  35713, 4
+		LineNumberAlt1              516, 98
+		CreateObjectString          "tablecopysound"
+		Dup
+		PushConstanti16             582
+		Pull                        2
+		GetMemberFunctionString     "tablecopysound"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  35713, 4
+		LineNumberAlt1              516, 98
+		SetThisMemberValueString    "resurrectsound"
+		LineNumber                  35714, 4
+		LineNumberAlt1              517, 98
+		GetThisMemberValueString    "resurrectsound"
+		GetThisMemberValueString    "id"
+		Pull                        2
+		GetMemberFunctionString     "synctocharacter"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  35716, 4
+		LineNumberAlt1              519, 98
+		CreateObjectString          "tablecopysound"
+		Dup
+		PushConstanti16             581
+		Pull                        2
+		GetMemberFunctionString     "tablecopysound"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  35716, 4
+		LineNumberAlt1              519, 98
+		SetThisMemberValueString    "attacksound"
+		LineNumber                  35717, 4
+		LineNumberAlt1              520, 98
+		GetThisMemberValueString    "attacksound"
+		GetThisMemberValueString    "id"
+		Pull                        2
+		GetMemberFunctionString     "synctocharacter"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  35720, 4
+		LineNumberAlt1              523, 98
+		GetThisMemberValueString    "obj"
+		PushConstant0
+		Pull                        2
+		GetMemberFunctionString     "aisethandlereaction"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  35721, 4
+		LineNumberAlt1              524, 98
+		GetThisMemberValueString    "obj"
+		PushConstant0
+		Pull                        2
+		GetMemberFunctionString     "aisetbecomeshappy"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  35722, 4
+		LineNumberAlt1              525, 98
+		GetThisMemberValueString    "obj"
+		PushConstantf32             0
+		Pull                        2
+		GetMemberFunctionString     "setevil"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x636c7
+		; source: 98 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_bugs.vbo" 533:557
+		MemberFunctionArgumentCheck   2
+		LineNumber                    35730, 4
+		LineNumberAlt1                533, 98
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    35736, 4
+		LineNumberAlt1                539, 98
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		GetThisMemberValueString      "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    35737, 4
+		LineNumberAlt1                540, 98
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		PushConstantStringString      "cnt1"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    35737, 4
+		LineNumberAlt1                540, 98
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Dup
+		PushConstanti8                36
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    35745, 4
+		LineNumberAlt1                548, 98
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		GetThisMemberValueString      "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    35746, 4
+		LineNumberAlt1                549, 98
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "reserect"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  2
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Dup
+		PushConstanti8                19
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    35752, 4
+		LineNumberAlt1                555, 98
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		GetThisMemberValueString      "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    35753, 4
+		LineNumberAlt1                556, 98
+		PushConstantStringString      "hit bug "
+		GetThisMemberValueString      "name"
+		ConvertToString
+		Add
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    35754, 4
+		LineNumberAlt1                557, 98
+		GetVariableValue              0                                            ; local
+		PushConstanti8                101
+		GetThisMemberFunctionString   "hit"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "show"
+		; address: 0x637ad
+		; source: 98 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_bugs.vbo" 565:565
+		MemberFunctionArgumentCheck 1
+		LineNumber                  35762, 4
+		LineNumberAlt1              565, 98
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hide"
+		; address: 0x637c5
+		; source: 98 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_bugs.vbo" 570:570
+		MemberFunctionArgumentCheck 1
+		LineNumber                  35767, 4
+		LineNumberAlt1              570, 98
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "hide"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x637dd
+		; source: 98 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_bugs.vbo" 575:585
+		MemberFunctionArgumentCheck 1
+		LineNumber                  35772, 4
+		LineNumberAlt1              575, 98
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  35773, 4
+		LineNumberAlt1              576, 98
+		PushNothing
+		SetThisMemberValueString    "obj"
+		LineNumber                  35774, 4
+		LineNumberAlt1              577, 98
+		PushNothing
+		SetThisMemberValueString    "id"
+		LineNumber                  35775, 4
+		LineNumberAlt1              578, 98
+		PushNothing
+		SetThisMemberValueString    "name"
+		LineNumber                  35776, 4
+		LineNumberAlt1              579, 98
+		PushNothing
+		SetThisMemberValueString    "alive"
+		LineNumber                  35777, 4
+		LineNumberAlt1              580, 98
+		PushNothing
+		SetThisMemberValueString    "life"
+		LineNumber                  35780, 4
+		LineNumberAlt1              583, 98
+		PushNothing
+		SetThisMemberValueString    "damagesound"
+		LineNumber                  35781, 4
+		LineNumberAlt1              584, 98
+		PushNothing
+		SetThisMemberValueString    "resurrectsound"
+		LineNumber                  35782, 4
+		LineNumberAlt1              585, 98
+		PushNothing
+		SetThisMemberValueString    "attacksound"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupshort"
+		; address: 0x63865
+		; source: 98 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_bugs.vbo" 591:597
+		MemberFunctionArgumentCheck 1
+		LineNumber                  35788, 4
+		LineNumberAlt1              591, 98
+		PushConstanti8              1
+		SetThisMemberValueString    "alive"
+		LineNumber                  35789, 4
+		LineNumberAlt1              592, 98
+		PushConstanti8              100
+		SetThisMemberValueString    "life"
+		LineNumber                  35792, 4
+		LineNumberAlt1              595, 98
+		GetThisMemberValueString    "damagesound"
+		Dup
+		GetMemberFunctionString     "stop"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  35793, 4
+		LineNumberAlt1              596, 98
+		GetThisMemberValueString    "resurrectsound"
+		Dup
+		GetMemberFunctionString     "stop"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  35794, 4
+		LineNumberAlt1              597, 98
+		GetThisMemberValueString    "attacksound"
+		Dup
+		GetMemberFunctionString     "stop"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hit"
+		; address: 0x638c3
+		; source: 98 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_bugs.vbo" 602:606
+		MemberFunctionArgumentCheck   2
+		LineNumber                    35799, 4
+		LineNumberAlt1                602, 98
+		GetThisMemberValueString      "alive"
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    35800, 4
+		LineNumberAlt1                603, 98
+		GetThisMemberValueString      "damagesound"
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "play"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    35801, 4
+		LineNumberAlt1                604, 98
+		GetThisMemberValueString      "life"
+		GetVariableValue              1             ; local
+		Subtract
+		SetThisMemberValueString      "life"
+		LineNumber                    35802, 4
+		LineNumberAlt1                605, 98
+		GetThisMemberValueString      "life"
+		PushConstant0
+		LessThan
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    35803, 4
+		LineNumberAlt1                606, 98
+		GetVariableValue              0             ; local
+		GetThisMemberFunctionString   "killbug"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "killbug"
+		; address: 0x63926
+		; source: 98 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_bugs.vbo" 613:618
+		MemberFunctionArgumentCheck   1
+		LineNumber                    35810, 4
+		LineNumberAlt1                613, 98
+		GetThisMemberValueString      "alive"
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    35811, 4
+		LineNumberAlt1                614, 98
+		PushConstant0
+		SetThisMemberValueString      "alive"
+		LineNumber                    35812, 4
+		LineNumberAlt1                615, 98
+		PushConstant0
+		SetThisMemberValueString      "life"
+		LineNumber                    35813, 4
+		LineNumberAlt1                616, 98
+		PushConstantStringString      "killing bug "
+		GetThisMemberValueString      "name"
+		ConvertToString
+		Add
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    35814, 4
+		LineNumberAlt1                617, 98
+		GetThisMemberValueString      "puzzlepointer"
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "bugdied"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    35815, 4
+		LineNumberAlt1                618, 98
+		GetThisMemberValueString      "obj"
+		PushConstantf32               60
+		Pull                          2
+		GetMemberFunctionString       "aidie"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "reserect"
+		; address: 0x639a0
+		; source: 98 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_bugs.vbo" 625:632
+		MemberFunctionArgumentCheck   1
+		LineNumber                    35822, 4
+		LineNumberAlt1                625, 98
+		GetThisMemberValueString      "alive"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    35823, 4
+		LineNumberAlt1                626, 98
+		PushConstanti8                100
+		SetThisMemberValueString      "life"
+		LineNumber                    35824, 4
+		LineNumberAlt1                627, 98
+		PushConstanti8                1
+		SetThisMemberValueString      "alive"
+		LineNumber                    35826, 4
+		LineNumberAlt1                629, 98
+		GetThisMemberValueString      "resurrectsound"
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "play"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    35827, 4
+		LineNumberAlt1                630, 98
+		PushConstantStringString      "the return of "
+		GetThisMemberValueString      "name"
+		ConvertToString
+		Add
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    35828, 4
+		LineNumberAlt1                631, 98
+		GetThisMemberValueString      "puzzlepointer"
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "bugresurrects"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    35829, 4
+		LineNumberAlt1                632, 98
+		GetThisMemberValueString      "obj"
+		PushConstantf32               0
+		Pull                          2
+		GetMemberFunctionString       "setevil"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "remove"
+		; address: 0x63a34
+		; source: 98 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_bugs.vbo" 638:639
+		MemberFunctionArgumentCheck 1
+		LineNumber                  35835, 4
+		LineNumberAlt1              638, 98
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "remove"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  35836, 4
+		LineNumberAlt1              639, 98
+		PushNothing
+		SetThisMemberValueString    "obj"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "explode"
+		; address: 0x63a5a
+		MemberFunctionArgumentCheck 4
+		PushNothing
+		Return
+	end ; method
+
+	begin method "makename"
+		; address: 0x63a5e
+		; source: 98 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_bugs.vbo" 658:661
+		MemberFunctionArgumentCheck   2
+		LineNumber                    35855, 4
+		LineNumberAlt1                658, 98
+		GetVariableValue              1        ; local
+		PushConstanti8                10
+		LessThan
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    35856, 4
+		LineNumberAlt1                659, 98
+		PushConstantStringString      "tim"
+		GetVariableValue              1        ; local
+		ConvertToString
+		Add
+		Return
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    35858, 4
+		LineNumberAlt1                661, 98
+		PushConstantStringString      "ti"
+		GetVariableValue              1        ; local
+		ConvertToString
+		Add
+		Return
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+end ; class

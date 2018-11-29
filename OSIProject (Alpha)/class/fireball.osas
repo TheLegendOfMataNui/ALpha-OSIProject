@@ -1,0 +1,388 @@
+begin class "fireball"
+	property "obj"
+	property "id"
+	property "burnsound"
+	property "explodesound"
+	property "name"
+	property "burnsoundscleanedup"
+
+	begin method "fireball"
+		; address: 0xc39e4
+		; source: 219 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta07.vbo" 879:887
+		MemberFunctionArgumentCheck 5
+		LineNumber                  12632, 4
+		LineNumberAlt1              879, 219
+		GetVariableValue            1                                            ; local
+		SetThisMemberValueString    "name"
+		LineNumber                  12633, 4
+		LineNumberAlt1              880, 219
+		GetVariableValue            1                                            ; local
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  12633, 4
+		LineNumberAlt1              880, 219
+		SetThisMemberValueString    "id"
+		LineNumber                  12635, 4
+		LineNumberAlt1              882, 219
+		CreateObjectString          "sprite_projectile"
+		Dup
+		GetThisMemberValueString    "name"
+		PushConstantStringString    "Root/Data/art/SpriteAnims/fireBall/firebll"
+		GetVariableValue            2                                            ; local
+		GetVariableValue            3                                            ; local
+		GetVariableValue            4                                            ; local
+		PushConstanti8              24
+		Pull                        7
+		GetMemberFunctionString     "sprite_projectile"
+		JumpAbsolute                7
+		Pop
+		LineNumber                  12635, 4
+		LineNumberAlt1              882, 219
+		SetThisMemberValueString    "obj"
+		LineNumber                  12638, 4
+		LineNumberAlt1              885, 219
+		CreateObjectString          "tablecopysound"
+		Dup
+		PushConstanti16             743
+		Pull                        2
+		GetMemberFunctionString     "tablecopysound"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  12638, 4
+		LineNumberAlt1              885, 219
+		SetThisMemberValueString    "explodesound"
+		LineNumber                  12639, 4
+		LineNumberAlt1              886, 219
+		GetThisMemberValueString    "explodesound"
+		GetThisMemberValueString    "obj"
+		GetMemberValueString        "handle"
+		Pull                        2
+		GetMemberFunctionString     "synctoprojectile"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  12640, 4
+		LineNumberAlt1              887, 219
+		GetThisMemberValueString    "explodesound"
+		PushConstantf32             0.5
+		Pull                        2
+		GetMemberFunctionString     "setlistenerrollofffactor"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "fire"
+		; address: 0xc3aa7
+		; source: 219 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta07.vbo" 893:899
+		MemberFunctionArgumentCheck 3
+		LineNumber                  12646, 4
+		LineNumberAlt1              893, 219
+		GetThisMemberValueString    "obj"
+		GetVariableValue            1                     ; local
+		GetVariableValue            2                     ; local
+		Pull                        3
+		GetMemberFunctionString     "launch"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  12648, 4
+		LineNumberAlt1              895, 219
+		CreateObjectString          "tablecopysound"
+		Dup
+		PushConstanti16             742
+		Pull                        2
+		GetMemberFunctionString     "tablecopysound"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  12648, 4
+		LineNumberAlt1              895, 219
+		SetThisMemberValueString    "burnsound"
+		LineNumber                  12649, 4
+		LineNumberAlt1              896, 219
+		PushConstant0
+		SetThisMemberValueString    "burnsoundscleanedup"
+		LineNumber                  12650, 4
+		LineNumberAlt1              897, 219
+		GetThisMemberValueString    "burnsound"
+		GetThisMemberValueString    "obj"
+		GetMemberValueString        "handle"
+		Pull                        2
+		GetMemberFunctionString     "synctoprojectile"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  12652, 4
+		LineNumberAlt1              899, 219
+		GetThisMemberValueString    "burnsound"
+		PushConstanti8              1
+		Pull                        2
+		GetMemberFunctionString     "play"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xc3b2c
+		; source: 219 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta07.vbo" 904:915
+		MemberFunctionArgumentCheck   1
+		LineNumber                    12657, 4
+		LineNumberAlt1                904, 219
+		GetThisMemberValueString      "obj"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    12658, 4
+		LineNumberAlt1                905, 219
+		PushNothing
+		SetThisMemberValueString      "obj"
+		LineNumber                    12659, 4
+		LineNumberAlt1                906, 219
+		PushNothing
+		SetThisMemberValueString      "id"
+		LineNumber                    12660, 4
+		LineNumberAlt1                907, 219
+		GetThisMemberValueString      "burnsoundscleanedup"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    12661, 4
+		LineNumberAlt1                908, 219
+		GetThisMemberValueString      "burnsound"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    12662, 4
+		LineNumberAlt1                909, 219
+		PushConstanti8                1
+		SetThisMemberValueString      "burnsoundscleanedup"
+		LineNumber                    12663, 4
+		LineNumberAlt1                910, 219
+		PushNothing
+		SetThisMemberValueString      "burnsound"
+		; <-
+		BranchTarget                  0
+		LineNumber                    12665, 4
+		LineNumberAlt1                912, 219
+		PushNothing
+		SetThisMemberValueString      "burnsoundscleanedup"
+		LineNumber                    12667, 4
+		LineNumberAlt1                914, 219
+		GetThisMemberValueString      "explodesound"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    12668, 4
+		LineNumberAlt1                915, 219
+		PushNothing
+		SetThisMemberValueString      "explodesound"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "reset"
+		; address: 0xc3bd3
+		; source: 219 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta07.vbo" 921:924
+		MemberFunctionArgumentCheck   1
+		LineNumber                    12674, 4
+		LineNumberAlt1                921, 219
+		GetThisMemberValueString      "burnsoundscleanedup"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    12675, 4
+		LineNumberAlt1                922, 219
+		GetThisMemberValueString      "burnsound"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    12676, 4
+		LineNumberAlt1                923, 219
+		PushConstanti8                1
+		SetThisMemberValueString      "burnsoundscleanedup"
+		LineNumber                    12677, 4
+		LineNumberAlt1                924, 219
+		PushNothing
+		SetThisMemberValueString      "burnsound"
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xc3c1a
+		; source: 219 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta07.vbo" 930:930
+		MemberFunctionArgumentCheck 2
+		LineNumber                  12683, 4
+		LineNumberAlt1              930, 219
+		GetThisMemberValueString    "obj"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "process"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xc3c36
+		; source: 219 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta07.vbo" 936:943
+		MemberFunctionArgumentCheck   2
+		LineNumber                    12689, 4
+		LineNumberAlt1                936, 219
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                19
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    12693, 4
+		LineNumberAlt1                940, 219
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		GetThisMemberValueString      "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    12694, 4
+		LineNumberAlt1                941, 219
+		GetVariableValue              0                                            ; local
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                2
+		GetArrayValue
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                3
+		GetArrayValue
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstanti8                4
+		GetArrayValue
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		GetThisMemberFunctionString   "detonate"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    12695, 4
+		LineNumberAlt1                942, 219
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		PushConstantStringString      "cnt1"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    12695, 4
+		LineNumberAlt1                942, 219
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    12696, 4
+		LineNumberAlt1                943, 219
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "level"
+		GetMemberValueString          "cam"
+		PushConstantf32               0.30000001192092896
+		PushConstantf32               0.10000000149011612
+		Pull                          3
+		GetMemberFunctionString       "shakecamera"
+		JumpAbsolute                  3
+		Pop
+		; <-
+		BranchTarget                  0
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "detonate"
+		; address: 0xc3cf0
+		; source: 219 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_ta07.vbo" 953:966
+		MemberFunctionArgumentCheck   5
+		LineNumber                    12706, 4
+		LineNumberAlt1                953, 219
+		GetThisMemberValueString      "burnsoundscleanedup"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    12707, 4
+		LineNumberAlt1                954, 219
+		GetThisMemberValueString      "burnsound"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    12708, 4
+		LineNumberAlt1                955, 219
+		PushConstanti8                1
+		SetThisMemberValueString      "burnsoundscleanedup"
+		LineNumber                    12709, 4
+		LineNumberAlt1                956, 219
+		PushNothing
+		SetThisMemberValueString      "burnsound"
+		; <-
+		BranchTarget                  0
+		LineNumber                    12714, 4
+		LineNumberAlt1                961, 219
+		GetVariableValue              4                                            ; local
+		PushConstantStringString      "cnt1"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    12714, 4
+		LineNumberAlt1                961, 219
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    12715, 4
+		LineNumberAlt1                962, 219
+		GetThisMemberValueString      "explodesound"
+		PushConstanti8                100
+		Pull                          2
+		GetMemberFunctionString       "setvolume"
+		JumpAbsolute                  2
+		Pop
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		LineNumber                    12717, 4
+		LineNumberAlt1                964, 219
+		GetThisMemberValueString      "explodesound"
+		PushConstanti8                50
+		Pull                          2
+		GetMemberFunctionString       "setvolume"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  2
+		LineNumber                    12719, 4
+		LineNumberAlt1                966, 219
+		GetThisMemberValueString      "explodesound"
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "play"
+		JumpAbsolute                  2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0xc3da2
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+end ; class

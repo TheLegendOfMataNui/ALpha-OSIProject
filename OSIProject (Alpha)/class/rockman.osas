@@ -1,0 +1,968 @@
+begin class "rockman"
+	property "parent"
+	property "rocks"
+	property "currentrock"
+	property "areaid"
+	property "rocky"
+	property "curstate"
+	property "setgravity"
+
+	begin method "rockman"
+		; address: 0x94ed5
+		; source: 159 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_boss.vbo" 1041:1041
+		MemberFunctionArgumentCheck 2
+		LineNumber                  58339, 4
+		LineNumberAlt1              1041, 159
+		GetVariableValue            1         ; local
+		SetThisMemberValueString    "areaid"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x94ee9
+		; source: 159 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_boss.vbo" 1050:1086
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    58348, 4
+		LineNumberAlt1                1050, 159
+		CreateArray
+		Dup
+		CreateObjectString            "lego_projectileobject"
+		Dup
+		PushConstantStringString      "rk01"
+		GetThisMemberValueString      "areaid"
+		Pull                          3
+		GetMemberFunctionString       "lego_projectileobject"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    58348, 4
+		LineNumberAlt1                1050, 159
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_projectileobject"
+		Dup
+		PushConstantStringString      "rk02"
+		GetThisMemberValueString      "areaid"
+		Pull                          3
+		GetMemberFunctionString       "lego_projectileobject"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    58349, 4
+		LineNumberAlt1                1051, 159
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_projectileobject"
+		Dup
+		PushConstantStringString      "rk03"
+		GetThisMemberValueString      "areaid"
+		Pull                          3
+		GetMemberFunctionString       "lego_projectileobject"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    58350, 4
+		LineNumberAlt1                1052, 159
+		AppendToArray
+		Dup
+		CreateObjectString            "lego_projectileobject"
+		Dup
+		PushConstantStringString      "rk04"
+		GetThisMemberValueString      "areaid"
+		Pull                          3
+		GetMemberFunctionString       "lego_projectileobject"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    58351, 4
+		LineNumberAlt1                1053, 159
+		AppendToArray
+		SetThisMemberValueString      "rocks"
+		LineNumber                    58354, 4
+		LineNumberAlt1                1056, 159
+		CreateObjectString            "gs_lego_character"
+		Dup
+		PushConstantStringString      "stnr"
+		PushConstantStringString      "rkmn"
+		GetThisMemberValueString      "areaid"
+		PushConstanti16               -180
+		PushConstanti16               752
+		PushConstantf32               0.5
+		PushConstant0
+		PushConstantf32               429.510009765625
+		Subtract
+		PushConstantStringString      "aiin"
+		Pull                          9
+		GetMemberFunctionString       "gs_lego_character"
+		JumpAbsolute                  9
+		Pop
+		LineNumber                    58354, 4
+		LineNumberAlt1                1056, 159
+		SetThisMemberValueString      "rocky"
+		LineNumber                    58355, 4
+		LineNumberAlt1                1057, 159
+		GetThisMemberValueString      "rocky"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58356, 4
+		LineNumberAlt1                1058, 159
+		GetThisMemberValueString      "rocky"
+		Dup
+		GetMemberFunctionString       "add"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58357, 4
+		LineNumberAlt1                1059, 159
+		GetThisMemberValueString      "rocky"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58358, 4
+		LineNumberAlt1                1060, 159
+		GetThisMemberValueString      "rocky"
+		Dup
+		GetMemberFunctionString       "disableai"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58359, 4
+		LineNumberAlt1                1061, 159
+		GetThisMemberValueString      "rocky"
+		GetMemberValueString          "handle"
+		PushConstanti8                2
+		CallGameFunctionString        "gccharacter", "setshadowtype", 2
+		Pop
+		LineNumber                    58361, 4
+		LineNumberAlt1                1063, 159
+		GetThisMemberValueString      "rocky"
+		PushConstantStringString      "flr1"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    58361, 4
+		LineNumberAlt1                1063, 159
+		Pull                          2
+		GetMemberFunctionString       "ignorecollisionswith"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    58362, 4
+		LineNumberAlt1                1064, 159
+		GetThisMemberValueString      "rocky"
+		PushConstantStringString      "flr2"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    58362, 4
+		LineNumberAlt1                1064, 159
+		Pull                          2
+		GetMemberFunctionString       "ignorecollisionswith"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    58363, 4
+		LineNumberAlt1                1065, 159
+		GetThisMemberValueString      "rocky"
+		PushConstantStringString      "flr3"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    58363, 4
+		LineNumberAlt1                1065, 159
+		Pull                          2
+		GetMemberFunctionString       "ignorecollisionswith"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    58364, 4
+		LineNumberAlt1                1066, 159
+		GetThisMemberValueString      "rocky"
+		PushConstantStringString      "flr4"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    58364, 4
+		LineNumberAlt1                1066, 159
+		Pull                          2
+		GetMemberFunctionString       "ignorecollisionswith"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    58365, 4
+		LineNumberAlt1                1067, 159
+		GetThisMemberValueString      "rocky"
+		PushConstantStringString      "flr5"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    58365, 4
+		LineNumberAlt1                1067, 159
+		Pull                          2
+		GetMemberFunctionString       "ignorecollisionswith"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    58366, 4
+		LineNumberAlt1                1068, 159
+		GetThisMemberValueString      "rocky"
+		PushConstantStringString      "flr6"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    58366, 4
+		LineNumberAlt1                1068, 159
+		Pull                          2
+		GetMemberFunctionString       "ignorecollisionswith"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    58367, 4
+		LineNumberAlt1                1069, 159
+		GetThisMemberValueString      "rocky"
+		PushConstantStringString      "flr7"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    58367, 4
+		LineNumberAlt1                1069, 159
+		Pull                          2
+		GetMemberFunctionString       "ignorecollisionswith"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    58368, 4
+		LineNumberAlt1                1070, 159
+		GetThisMemberValueString      "rocky"
+		PushConstantStringString      "flr8"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    58368, 4
+		LineNumberAlt1                1070, 159
+		Pull                          2
+		GetMemberFunctionString       "ignorecollisionswith"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    58369, 4
+		LineNumberAlt1                1071, 159
+		GetThisMemberValueString      "rocky"
+		PushConstantStringString      "flr9"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    58369, 4
+		LineNumberAlt1                1071, 159
+		Pull                          2
+		GetMemberFunctionString       "ignorecollisionswith"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    58373, 4
+		LineNumberAlt1                1075, 159
+		GetThisMemberValueString      "rocks"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                                            ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1                                            ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    58375, 4
+		LineNumberAlt1                1077, 159
+		GetThisMemberValueString      "rocks"
+		GetVariableValue              1                                            ; local
+		GetArrayValue
+		PushConstantf32               0.699999988079071
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		PushConstantf32               1.2999999523162842
+		PushConstantStringString      "lbld"
+		PushConstantStringString      "Root/data/levels/lev3/boss"
+		Pull                          9
+		GetMemberFunctionString       "init"
+		JumpAbsolute                  9
+		Pop
+		LineNumber                    58376, 4
+		LineNumberAlt1                1078, 159
+		GetThisMemberValueString      "rocks"
+		GetVariableValue              1                                            ; local
+		GetArrayValue
+		PushConstanti8                2
+		PushConstanti8                4
+		PushConstanti8                2
+		Pull                          4
+		GetMemberFunctionString       "setresponse"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    58377, 4
+		LineNumberAlt1                1079, 159
+		GetThisMemberValueString      "rocks"
+		GetVariableValue              1                                            ; local
+		GetArrayValue
+		PushConstantStringString      "rkmn"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    58377, 4
+		LineNumberAlt1                1079, 159
+		Pull                          2
+		GetMemberFunctionString       "ignorecollisionswith"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    58378, 4
+		LineNumberAlt1                1080, 159
+		GetThisMemberValueString      "rocks"
+		GetVariableValue              1                                            ; local
+		GetArrayValue
+		PushConstant0
+		PushConstantf32               10
+		Subtract
+		PushConstantf32               10
+		PushConstant0
+		PushConstantf32               10
+		Subtract
+		Pull                          4
+		GetMemberFunctionString       "setprojectileoffset"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    58379, 4
+		LineNumberAlt1                1081, 159
+		GetThisMemberValueString      "rocks"
+		GetVariableValue              1                                            ; local
+		GetArrayValue
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "setbounceeventrepoert"
+		JumpAbsolute                  2
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    58382, 4
+		LineNumberAlt1                1084, 159
+		PushConstant0
+		SetThisMemberValueString      "currentrock"
+		LineNumber                    58384, 4
+		LineNumberAlt1                1086, 159
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "reset"
+		JumpAbsolute                  1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "reset"
+		; address: 0x9528b
+		; source: 159 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_boss.vbo" 1090:1098
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    58388, 4
+		LineNumberAlt1                1090, 159
+		PushConstantStringString      "Calling reset"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    58389, 4
+		LineNumberAlt1                1091, 159
+		PushConstanti8                1
+		SetThisMemberValueString      "setgravity"
+		LineNumber                    58390, 4
+		LineNumberAlt1                1092, 159
+		GetThisMemberValueString      "rocky"
+		GetMemberValueString          "handle"
+		PushConstanti8                4
+		CallGameFunctionString        "gccharacter", "setdisplaymorphmodel", 2
+		Pop
+		LineNumber                    58391, 4
+		LineNumberAlt1                1093, 159
+		PushConstanti8                3
+		SetThisMemberValueString      "curstate"
+		LineNumber                    58392, 4
+		LineNumberAlt1                1094, 159
+		GetThisMemberValueString      "rocky"
+		GetMemberValueString          "handle"
+		PushConstant0
+		CallGameFunctionString        "gccharacter", "setorientation", 2
+		Pop
+		LineNumber                    58393, 4
+		LineNumberAlt1                1095, 159
+		GetThisMemberValueString      "rocky"
+		Dup
+		GetMemberFunctionString       "aiidle"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58395, 4
+		LineNumberAlt1                1097, 159
+		GetThisMemberValueString      "rocks"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                                        ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1                                        ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    58396, 4
+		LineNumberAlt1                1098, 159
+		GetThisMemberValueString      "rocks"
+		GetVariableValue              1                                        ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initshort"
+		; address: 0x95344
+		; source: 159 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_boss.vbo" 1107:1107
+		MemberFunctionArgumentCheck 1
+		LineNumber                  58405, 4
+		LineNumberAlt1              1107, 159
+		GetVariableValue            0          ; local
+		GetThisMemberFunctionString "initfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x9535b
+		; source: 159 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_boss.vbo" 1112:1123
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    58410, 4
+		LineNumberAlt1                1112, 159
+		GetThisMemberValueString      "rocks"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1             ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1             ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    58411, 4
+		LineNumberAlt1                1113, 159
+		GetThisMemberValueString      "rocks"
+		GetVariableValue              1             ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58412, 4
+		LineNumberAlt1                1114, 159
+		GetThisMemberValueString      "rocks"
+		GetVariableValue              1             ; local
+		PushNothing
+		SetArrayValue
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    58414, 4
+		LineNumberAlt1                1116, 159
+		PushNothing
+		SetThisMemberValueString      "rocks"
+		LineNumber                    58415, 4
+		LineNumberAlt1                1117, 159
+		PushNothing
+		SetThisMemberValueString      "currentrock"
+		LineNumber                    58416, 4
+		LineNumberAlt1                1118, 159
+		PushNothing
+		SetThisMemberValueString      "areaid"
+		LineNumber                    58417, 4
+		LineNumberAlt1                1119, 159
+		GetThisMemberValueString      "rocky"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58418, 4
+		LineNumberAlt1                1120, 159
+		PushNothing
+		SetThisMemberValueString      "rocky"
+		LineNumber                    58420, 4
+		LineNumberAlt1                1122, 159
+		PushNothing
+		SetThisMemberValueString      "curstate"
+		LineNumber                    58421, 4
+		LineNumberAlt1                1123, 159
+		PushNothing
+		SetThisMemberValueString      "setgravity"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupshort"
+		; address: 0x95417
+		; source: 159 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_boss.vbo" 1129:1129
+		MemberFunctionArgumentCheck 1
+		LineNumber                  58427, 4
+		LineNumberAlt1              1129, 159
+		GetVariableValue            0             ; local
+		GetThisMemberFunctionString "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x9542e
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x95432
+		; source: 159 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_boss.vbo" 1153:1157
+		MemberFunctionArgumentCheck   2
+		LineNumber                    58451, 4
+		LineNumberAlt1                1153, 159
+		GetThisMemberValueString      "setgravity"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    58452, 4
+		LineNumberAlt1                1154, 159
+		PushConstantStringString      "Setting up stationary object"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    58453, 4
+		LineNumberAlt1                1155, 159
+		GetThisMemberValueString      "rocky"
+		GetMemberValueString          "handle"
+		CallGameFunctionString        "gccharacter", "setupstationary", 1
+		Pop
+		LineNumber                    58454, 4
+		LineNumberAlt1                1156, 159
+		PushConstant0
+		SetThisMemberValueString      "setgravity"
+		LineNumber                    58455, 4
+		LineNumberAlt1                1157, 159
+		PushConstantStringString      "Setting gravity to false"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "show"
+		; address: 0x95496
+		; source: 159 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_boss.vbo" 1164:1167
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          2
+		LineNumber                    58462, 4
+		LineNumberAlt1                1164, 159
+		GetThisMemberValueString      "rocky"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58463, 4
+		LineNumberAlt1                1165, 159
+		PushConstant0
+		SetVariableValue              1         ; local
+		LineNumber                    58464, 4
+		LineNumberAlt1                1166, 159
+		GetThisMemberValueString      "rocks"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2         ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              2         ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    58465, 4
+		LineNumberAlt1                1167, 159
+		GetThisMemberValueString      "rocks"
+		GetVariableValue              2         ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hide"
+		; address: 0x954fa
+		; source: 159 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_boss.vbo" 1173:1176
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          2
+		LineNumber                    58471, 4
+		LineNumberAlt1                1173, 159
+		PushConstanti8                1
+		SetVariableValue              1         ; local
+		LineNumber                    58472, 4
+		LineNumberAlt1                1174, 159
+		GetThisMemberValueString      "rocks"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2         ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              2         ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    58473, 4
+		LineNumberAlt1                1175, 159
+		GetThisMemberValueString      "rocks"
+		GetVariableValue              2         ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "remove"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58474, 4
+		LineNumberAlt1                1176, 159
+		GetThisMemberValueString      "rocks"
+		GetVariableValue              2         ; local
+		PushNothing
+		SetArrayValue
+		IncrementVariable             2
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "throwrock"
+		; address: 0x9555d
+		; source: 159 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_boss.vbo" 1182:1190
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    58480, 4
+		LineNumberAlt1                1182, 159
+		GetVariableValue              0                   ; local
+		GetThisMemberFunctionString   "getthrowspeed"
+		JumpAbsolute                  1
+		LineNumber                    58480, 4
+		LineNumberAlt1                1182, 159
+		SetVariableValue              1                   ; local
+		LineNumber                    58481, 4
+		LineNumberAlt1                1183, 159
+		PushConstantStringString      "Throw speed is "
+		GetVariableValue              1                   ; local
+		ConvertToString
+		Add
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    58482, 4
+		LineNumberAlt1                1184, 159
+		GetThisMemberValueString      "rocks"
+		GetThisMemberValueString      "currentrock"
+		GetArrayValue
+		PushConstanti8                1
+		PushConstanti8                1
+		PushConstant0
+		PushConstanti8                1
+		Pull                          5
+		GetMemberFunctionString       "setmoveableflags"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    58483, 4
+		LineNumberAlt1                1185, 159
+		GetThisMemberValueString      "rocks"
+		GetThisMemberValueString      "currentrock"
+		GetArrayValue
+		GetVariableValue              1                   ; local
+		PushConstantf32               1
+		GetThisMemberValueString      "rocky"
+		GetMemberValueString          "contid"
+		PushConstantf32               0
+		Pull                          5
+		GetMemberFunctionString       "throwprojectile"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    58484, 4
+		LineNumberAlt1                1186, 159
+		GetThisMemberValueString      "rocks"
+		GetThisMemberValueString      "currentrock"
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    58485, 4
+		LineNumberAlt1                1187, 159
+		GetThisMemberValueString      "currentrock"
+		PushConstanti8                1
+		Add
+		SetThisMemberValueString      "currentrock"
+		LineNumber                    58487, 4
+		LineNumberAlt1                1189, 159
+		GetThisMemberValueString      "currentrock"
+		GetThisMemberValueString      "rocks"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		GreaterThan
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    58488, 4
+		LineNumberAlt1                1190, 159
+		PushConstant0
+		SetThisMemberValueString      "currentrock"
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "getthrowspeed"
+		; address: 0x95638
+		; source: 159 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_boss.vbo" 1198:1208
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          3
+		LineNumber                    58496, 4
+		LineNumberAlt1                1198, 159
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		Dup
+		GetMemberFunctionString       "getposz"
+		JumpAbsolute                  1
+		LineNumber                    58496, 4
+		LineNumberAlt1                1198, 159
+		SetVariableValue              1             ; local
+		LineNumber                    58497, 4
+		LineNumberAlt1                1199, 159
+		GetThisMemberValueString      "rocky"
+		Dup
+		GetMemberFunctionString       "getposz"
+		JumpAbsolute                  1
+		LineNumber                    58497, 4
+		LineNumberAlt1                1199, 159
+		SetVariableValue              2             ; local
+		LineNumber                    58499, 4
+		LineNumberAlt1                1201, 159
+		GetVariableValue              1             ; local
+		GetVariableValue              2             ; local
+		Subtract
+		SetVariableValue              3             ; local
+		LineNumber                    58502, 4
+		LineNumberAlt1                1204, 159
+		GetVariableValue              3             ; local
+		PushConstanti8                20
+		LessThan
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    58503, 4
+		LineNumberAlt1                1205, 159
+		PushConstanti8                20
+		SetVariableValue              3             ; local
+		; <-
+		BranchTarget                  0
+		LineNumber                    58506, 4
+		LineNumberAlt1                1208, 159
+		GetVariableValue              3             ; local
+		Return
+	end ; method
+
+	begin method "morph"
+		; address: 0x956c6
+		; source: 159 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_boss.vbo" 1216:1239
+		MemberFunctionArgumentCheck   2
+		LineNumber                    58514, 4
+		LineNumberAlt1                1216, 159
+		GetVariableValue              1                                             ; local
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    58515, 4
+		LineNumberAlt1                1217, 159
+		GetThisMemberValueString      "curstate"
+		Dup
+		PushConstanti8                3
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    58517, 4
+		LineNumberAlt1                1219, 159
+		PushConstanti16               525
+		CallGameFunctionString        "gcstaticsoundsptrarray", "playtablesound", 1
+		Pop
+		LineNumber                    58518, 4
+		LineNumberAlt1                1220, 159
+		GetThisMemberValueString      "rocky"
+		PushConstanti8                4
+		PushConstanti8                1
+		PushConstanti8                2
+		PushConstantf32               1.5
+		PushConstanti8                1
+		Pull                          6
+		GetMemberFunctionString       "morphmidcharacter"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    58519, 4
+		LineNumberAlt1                1221, 159
+		PushConstanti8                2
+		SetThisMemberValueString      "curstate"
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		Dup
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    58522, 4
+		LineNumberAlt1                1224, 159
+		GetThisMemberValueString      "rocky"
+		PushConstanti8                2
+		PushConstanti8                3
+		PushConstantf32               0.75
+		PushConstanti8                1
+		Pull                          5
+		GetMemberFunctionString       "morphcharacter"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    58523, 4
+		LineNumberAlt1                1225, 159
+		PushConstant0
+		SetThisMemberValueString      "curstate"
+		; <-
+		BranchTarget                  1
+		Pop
+		BranchAlwaysTarget            5, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		LineNumber                    58527, 4
+		LineNumberAlt1                1229, 159
+		GetVariableValue              1                                             ; local
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    58528, 4
+		LineNumberAlt1                1230, 159
+		GetThisMemberValueString      "curstate"
+		Dup
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    58531, 4
+		LineNumberAlt1                1233, 159
+		GetThisMemberValueString      "rocky"
+		PushConstanti8                3
+		PushConstanti8                2
+		PushConstantf32               1.25
+		PushConstanti8                1
+		Pull                          5
+		GetMemberFunctionString       "morphcharacter"
+		JumpAbsolute                  5
+		Pop
+		LineNumber                    58532, 4
+		LineNumberAlt1                1234, 159
+		PushConstanti8                1
+		SetThisMemberValueString      "curstate"
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    58535, 4
+		LineNumberAlt1                1237, 159
+		PushConstanti16               525
+		CallGameFunctionString        "gcstaticsoundsptrarray", "playtablesound", 1
+		Pop
+		LineNumber                    58536, 4
+		LineNumberAlt1                1238, 159
+		GetThisMemberValueString      "rocky"
+		PushConstanti8                2
+		PushConstanti8                1
+		PushConstanti8                4
+		PushConstantf32               0.25
+		PushConstanti8                1
+		Pull                          6
+		GetMemberFunctionString       "morphmidcharacter"
+		JumpAbsolute                  6
+		Pop
+		LineNumber                    58537, 4
+		LineNumberAlt1                1239, 159
+		PushConstanti8                3
+		SetThisMemberValueString      "curstate"
+		; <-
+		BranchTarget                  4
+		Pop
+		; <-
+		BranchTarget                  5
+		PushNothing
+		Return
+	end ; method
+
+	begin method "stomp"
+		; address: 0x95816
+		; source: 159 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_boss.vbo" 1251:1253
+		MemberFunctionArgumentCheck 1
+		LineNumber                  58549, 4
+		LineNumberAlt1              1251, 159
+		GetThisMemberValueString    "rocky"
+		PushConstanti32             1919627568
+		PushConstanti8              -1
+		Pull                        3
+		GetMemberFunctionString     "setsplitanimation"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  58550, 4
+		LineNumberAlt1              1252, 159
+		PushConstanti32             1919627568
+		CallGameFunctionString      "gccharactermoveinterpreter", "checkanimdone", 1
+		Pop
+		LineNumber                  58551, 4
+		LineNumberAlt1              1253, 159
+		PushConstanti32             1919627569
+		CallGameFunctionString      "gccharactermoveinterpreter", "checkanimdone", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x95862
+		; source: 159 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_boss.vbo" 1259:1259
+		MemberFunctionArgumentCheck 1
+		LineNumber                  58557, 4
+		LineNumberAlt1              1259, 159
+		PushNothing
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+end ; class

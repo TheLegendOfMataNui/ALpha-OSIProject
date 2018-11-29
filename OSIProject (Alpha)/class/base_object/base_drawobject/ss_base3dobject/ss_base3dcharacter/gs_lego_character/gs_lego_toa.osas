@@ -1,0 +1,830 @@
+begin class "gs_lego_toa", "gs_lego_character"
+	property "toahandle"
+	property "mapperhandle"
+
+	begin method "gs_lego_toa"
+		; address: 0x477a8
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 41:56
+		MemberFunctionArgumentCheck   6
+		LineNumber                    19487, 4
+		LineNumberAlt1                41, 55
+		GetVariableValue              1                                            ; local
+		SetThisMemberValueString      "charname"
+		LineNumber                    19489, 4
+		LineNumberAlt1                43, 55
+		GetVariableValue              2                                            ; local
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    19489, 4
+		LineNumberAlt1                43, 55
+		PushConstantf32               0
+		SetThisMemberValueString      "angle"
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    19490, 4
+		LineNumberAlt1                44, 55
+		GetVariableValue              2                                            ; local
+		SetThisMemberValueString      "angle"
+		; <-
+		BranchTarget                  1
+		LineNumber                    19492, 4
+		LineNumberAlt1                46, 55
+		GetVariableValue              3                                            ; local
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    19492, 4
+		LineNumberAlt1                46, 55
+		PushConstantf32               0
+		SetThisMemberValueString      "x1"
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		LineNumber                    19493, 4
+		LineNumberAlt1                47, 55
+		GetVariableValue              3                                            ; local
+		SetThisMemberValueString      "x1"
+		; <-
+		BranchTarget                  3
+		LineNumber                    19494, 4
+		LineNumberAlt1                48, 55
+		GetVariableValue              4                                            ; local
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    19494, 4
+		LineNumberAlt1                48, 55
+		PushConstantf32               0
+		SetThisMemberValueString      "y1"
+		BranchAlwaysTarget            5, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		LineNumber                    19495, 4
+		LineNumberAlt1                49, 55
+		GetVariableValue              4                                            ; local
+		SetThisMemberValueString      "y1"
+		; <-
+		BranchTarget                  5
+		LineNumber                    19496, 4
+		LineNumberAlt1                50, 55
+		GetVariableValue              5                                            ; local
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 6, 0
+		; ->
+		LineNumber                    19496, 4
+		LineNumberAlt1                50, 55
+		PushConstantf32               0
+		SetThisMemberValueString      "z"
+		BranchAlwaysTarget            7, 0
+		; ->
+		; <-
+		BranchTarget                  6
+		LineNumber                    19497, 4
+		LineNumberAlt1                51, 55
+		GetVariableValue              5                                            ; local
+		SetThisMemberValueString      "z"
+		; <-
+		BranchTarget                  7
+		LineNumber                    19499, 4
+		LineNumberAlt1                53, 55
+		PushConstant0
+		SetThisMemberValueString      "onscreen"
+		LineNumber                    19500, 4
+		LineNumberAlt1                54, 55
+		PushConstantStringString      "cnt1"
+		SetThisMemberValueString      "area"
+		LineNumber                    19501, 4
+		LineNumberAlt1                55, 55
+		PushConstantStringString      "cnt1"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    19501, 4
+		LineNumberAlt1                55, 55
+		SetThisMemberValueString      "areaid"
+		LineNumber                    19502, 4
+		LineNumberAlt1                56, 55
+		CallGameFunctionString        "gcgame", "getkeymapper", 0
+		LineNumber                    19502, 4
+		LineNumberAlt1                56, 55
+		SetThisMemberValueString      "mapperhandle"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "lego_toa_initfull"
+		; address: 0x478f3
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 62:66
+		MemberFunctionArgumentCheck 1
+		CreateStackVariables        1
+		LineNumber                  19508, 4
+		LineNumberAlt1              62, 55
+		GetThisMemberValueString    "charname"
+		CallGameFunctionString      "gcmodeldirector", "addtoa", 1
+		Pop
+		LineNumber                  19509, 4
+		LineNumberAlt1              63, 55
+		CallGameFunctionString      "gcmodeldirector", "gettoa", 0
+		LineNumber                  19509, 4
+		LineNumberAlt1              63, 55
+		SetThisMemberValueString    "toahandle"
+		LineNumber                  19510, 4
+		LineNumberAlt1              64, 55
+		PushConstantStringString    "cnt1"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  19510, 4
+		LineNumberAlt1              64, 55
+		SetThisMemberValueString    "contid"
+		LineNumber                  19511, 4
+		LineNumberAlt1              65, 55
+		GetThisMemberValueString    "contid"
+		GetThisMemberValueString    "areaid"
+		CallGameFunctionString      "gcmodeldirector", "getcharacter", 2
+		LineNumber                  19511, 4
+		LineNumberAlt1              65, 55
+		SetThisMemberValueString    "handle"
+		LineNumber                  19512, 4
+		LineNumberAlt1              66, 55
+		PushConstanti8              1
+		SetVariableValue            1                                            ; local
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x4797c
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 71:71
+		MemberFunctionArgumentCheck 1
+		LineNumber                  19517, 4
+		LineNumberAlt1              71, 55
+		GetVariableValue            0                   ; local
+		GetThisMemberFunctionString "lego_toa_initfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "lego_toa_cleanupfull"
+		; address: 0x47993
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 76:102
+		MemberFunctionArgumentCheck 1
+		LineNumber                  19522, 4
+		LineNumberAlt1              76, 55
+		GetVariableValue            0                  ; local
+		GetThisMemberFunctionString "remove"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  19524, 4
+		LineNumberAlt1              78, 55
+		PushNothing
+		SetThisMemberValueString    "charname"
+		LineNumber                  19525, 4
+		LineNumberAlt1              79, 55
+		PushNothing
+		SetThisMemberValueString    "contid"
+		LineNumber                  19526, 4
+		LineNumberAlt1              80, 55
+		PushNothing
+		SetThisMemberValueString    "visstate"
+		LineNumber                  19527, 4
+		LineNumberAlt1              81, 55
+		PushNothing
+		SetThisMemberValueString    "charstring"
+		LineNumber                  19528, 4
+		LineNumberAlt1              82, 55
+		PushNothing
+		SetThisMemberValueString    "contstring"
+		LineNumber                  19529, 4
+		LineNumberAlt1              83, 55
+		PushNothing
+		SetThisMemberValueString    "handle"
+		LineNumber                  19530, 4
+		LineNumberAlt1              84, 55
+		PushNothing
+		SetThisMemberValueString    "angle"
+		LineNumber                  19531, 4
+		LineNumberAlt1              85, 55
+		PushNothing
+		SetThisMemberValueString    "inputstate"
+		LineNumber                  19532, 4
+		LineNumberAlt1              86, 55
+		PushNothing
+		SetThisMemberValueString    "z"
+		LineNumber                  19533, 4
+		LineNumberAlt1              87, 55
+		PushNothing
+		SetThisMemberValueString    "x1"
+		LineNumber                  19534, 4
+		LineNumberAlt1              88, 55
+		PushNothing
+		SetThisMemberValueString    "y1"
+		LineNumber                  19536, 4
+		LineNumberAlt1              90, 55
+		PushNothing
+		SetThisMemberValueString    "inputstate"
+		LineNumber                  19537, 4
+		LineNumberAlt1              91, 55
+		PushNothing
+		SetThisMemberValueString    "numanimations"
+		LineNumber                  19538, 4
+		LineNumberAlt1              92, 55
+		PushNothing
+		SetThisMemberValueString    "gepetto"
+		LineNumber                  19539, 4
+		LineNumberAlt1              93, 55
+		PushNothing
+		SetThisMemberValueString    "currentanimation"
+		LineNumber                  19541, 4
+		LineNumberAlt1              95, 55
+		PushNothing
+		SetThisMemberValueString    "area"
+		LineNumber                  19542, 4
+		LineNumberAlt1              96, 55
+		PushNothing
+		SetThisMemberValueString    "areaid"
+		LineNumber                  19543, 4
+		LineNumberAlt1              97, 55
+		PushNothing
+		SetThisMemberValueString    "myname"
+		LineNumber                  19544, 4
+		LineNumberAlt1              98, 55
+		PushNothing
+		SetThisMemberValueString    "id"
+		LineNumber                  19546, 4
+		LineNumberAlt1              100, 55
+		PushNothing
+		SetThisMemberValueString    "toahandle"
+		LineNumber                  19547, 4
+		LineNumberAlt1              101, 55
+		PushNothing
+		SetThisMemberValueString    "charname"
+		LineNumber                  19548, 4
+		LineNumberAlt1              102, 55
+		PushNothing
+		SetThisMemberValueString    "mapperhandle"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x47ade
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 107:107
+		MemberFunctionArgumentCheck 1
+		LineNumber                  19553, 4
+		LineNumberAlt1              107, 55
+		GetVariableValue            0                      ; local
+		GetThisMemberFunctionString "lego_toa_cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initshort"
+		; address: 0x47af5
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupshort"
+		; address: 0x47af9
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "add"
+		; address: 0x47afd
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 122:123
+		MemberFunctionArgumentCheck 1
+		LineNumber                  19568, 4
+		LineNumberAlt1              122, 55
+		GetVariableValue            0                ; local
+		GetThisMemberValueString    "x1"
+		GetThisMemberValueString    "y1"
+		GetThisMemberValueString    "z"
+		GetThisMemberFunctionString "setpos"
+		JumpAbsolute                4
+		Pop
+		LineNumber                  19569, 4
+		LineNumberAlt1              123, 55
+		GetVariableValue            0                ; local
+		GetThisMemberValueString    "angle"
+		GetThisMemberFunctionString "setorientation"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setglyph"
+		; address: 0x47b33
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 131:131
+		MemberFunctionArgumentCheck 2
+		LineNumber                  19577, 4
+		LineNumberAlt1              131, 55
+		GetThisMemberValueString    "mapperhandle"
+		GetVariableValue            1                               ; local
+		CallGameFunctionString      "gckeymapper", "setuseglyph", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setclimbable"
+		; address: 0x47b4e
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 138:138
+		MemberFunctionArgumentCheck 2
+		LineNumber                  19584, 4
+		LineNumberAlt1              138, 55
+		GetThisMemberValueString    "toahandle"
+		GetVariableValue            1                          ; local
+		CallGameFunctionString      "gctoa", "setclimbable", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setupdraggertipgeometry"
+		; address: 0x47b69
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 148:148
+		MemberFunctionArgumentCheck 5
+		LineNumber                  19594, 4
+		LineNumberAlt1              148, 55
+		GetThisMemberValueString    "toahandle"
+		GetVariableValue            1                                     ; local
+		GetVariableValue            2                                     ; local
+		GetVariableValue            3                                     ; local
+		GetVariableValue            4                                     ; local
+		CallGameFunctionString      "gctoa", "setupdraggertipgeometry", 5
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setupdraggertip"
+		; address: 0x47b8d
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 153:153
+		MemberFunctionArgumentCheck 5
+		LineNumber                  19599, 4
+		LineNumberAlt1              153, 55
+		GetThisMemberValueString    "toahandle"
+		GetVariableValue            1                             ; local
+		GetVariableValue            2                             ; local
+		GetVariableValue            3                             ; local
+		GetVariableValue            4                             ; local
+		CallGameFunctionString      "gctoa", "setupdraggertip", 5
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setupdraggerspeeds"
+		; address: 0x47bb1
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 158:158
+		MemberFunctionArgumentCheck 3
+		LineNumber                  19604, 4
+		LineNumberAlt1              158, 55
+		GetThisMemberValueString    "toahandle"
+		GetVariableValue            1                                ; local
+		GetVariableValue            2                                ; local
+		CallGameFunctionString      "gctoa", "setupdraggerspeeds", 3
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setupdraggermaxrange"
+		; address: 0x47bcf
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 163:163
+		MemberFunctionArgumentCheck 2
+		LineNumber                  19609, 4
+		LineNumberAlt1              163, 55
+		GetThisMemberValueString    "toahandle"
+		GetVariableValue            1                                  ; local
+		CallGameFunctionString      "gctoa", "setupdraggermaxrange", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setdraggerreaction"
+		; address: 0x47bea
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 168:168
+		MemberFunctionArgumentCheck 2
+		LineNumber                  19614, 4
+		LineNumberAlt1              168, 55
+		GetThisMemberValueString    "toahandle"
+		GetVariableValue            1                                ; local
+		CallGameFunctionString      "gctoa", "setdraggerreaction", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setmydraggerreactionanimation"
+		; address: 0x47c05
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 173:173
+		MemberFunctionArgumentCheck 2
+		LineNumber                  19619, 4
+		LineNumberAlt1              173, 55
+		GetThisMemberValueString    "toahandle"
+		GetVariableValue            1                                             ; local
+		CallGameFunctionString      "gctoa", "setmydraggerreactionanimationid", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "restrictdraggercameramode"
+		; address: 0x47c20
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 178:178
+		MemberFunctionArgumentCheck 2
+		LineNumber                  19624, 4
+		LineNumberAlt1              178, 55
+		GetThisMemberValueString    "toahandle"
+		GetVariableValue            1                                       ; local
+		CallGameFunctionString      "gctoa", "restrictdraggercameramode", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "shootdragger"
+		; address: 0x47c3b
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 183:183
+		MemberFunctionArgumentCheck 1
+		LineNumber                  19629, 4
+		LineNumberAlt1              183, 55
+		GetThisMemberValueString    "toahandle"
+		CallGameFunctionString      "gctoa", "shootdragger", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setupelementalpower"
+		; address: 0x47c53
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 191:191
+		MemberFunctionArgumentCheck 6
+		LineNumber                  19637, 4
+		LineNumberAlt1              191, 55
+		GetThisMemberValueString    "toahandle"
+		GetVariableValue            1                                 ; local
+		GetVariableValue            2                                 ; local
+		GetVariableValue            3                                 ; local
+		GetVariableValue            4                                 ; local
+		GetVariableValue            5                                 ; local
+		CallGameFunctionString      "gctoa", "setupelementalpower", 6
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "launchelementalpower"
+		; address: 0x47c7a
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 197:197
+		MemberFunctionArgumentCheck 3
+		LineNumber                  19643, 4
+		LineNumberAlt1              197, 55
+		GetThisMemberValueString    "toahandle"
+		GetVariableValue            1                                  ; local
+		GetVariableValue            2                                  ; local
+		CallGameFunctionString      "gctoa", "launchelementalpower", 3
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "idle"
+		; address: 0x47c98
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 204:204
+		MemberFunctionArgumentCheck 1
+		LineNumber                  19650, 4
+		LineNumberAlt1              204, 55
+		GetThisMemberValueString    "toahandle"
+		CallGameFunctionString      "gctoa", "idle", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "gotopos"
+		; address: 0x47cb0
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 213:213
+		MemberFunctionArgumentCheck 3
+		LineNumber                  19659, 4
+		LineNumberAlt1              213, 55
+		GetVariableValue            1                                              ; local
+		GetVariableValue            2                                              ; local
+		CallGameFunctionString      "gccollisionphysicsgroup", "settoaposition", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "activateshield"
+		; address: 0x47ccb
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 221:221
+		MemberFunctionArgumentCheck 1
+		LineNumber                  19667, 4
+		LineNumberAlt1              221, 55
+		GetThisMemberValueString    "toahandle"
+		PushConstanti8              1
+		CallGameFunctionString      "gctoa", "activateshield", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "deactivateshield"
+		; address: 0x47ce5
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 226:226
+		MemberFunctionArgumentCheck 1
+		LineNumber                  19672, 4
+		LineNumberAlt1              226, 55
+		GetThisMemberValueString    "toahandle"
+		CallGameFunctionString      "gctoa", "deactivateshield", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "telekineticgrab"
+		; address: 0x47cfd
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 231:231
+		MemberFunctionArgumentCheck 1
+		LineNumber                  19677, 4
+		LineNumberAlt1              231, 55
+		GetThisMemberValueString    "toahandle"
+		CallGameFunctionString      "gctoa", "telekineticgrab", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "telekineticdrop"
+		; address: 0x47d15
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 236:236
+		MemberFunctionArgumentCheck 1
+		LineNumber                  19682, 4
+		LineNumberAlt1              236, 55
+		GetThisMemberValueString    "toahandle"
+		CallGameFunctionString      "gctoa", "telekineticdrop", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "telekineticpush"
+		; address: 0x47d2d
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 241:241
+		MemberFunctionArgumentCheck 2
+		LineNumber                  19687, 4
+		LineNumberAlt1              241, 55
+		GetThisMemberValueString    "toahandle"
+		GetVariableValue            1                             ; local
+		CallGameFunctionString      "gctoa", "telekineticpush", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "telekineticpull"
+		; address: 0x47d48
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 246:246
+		MemberFunctionArgumentCheck 2
+		LineNumber                  19692, 4
+		LineNumberAlt1              246, 55
+		GetThisMemberValueString    "toahandle"
+		GetVariableValue            1                             ; local
+		CallGameFunctionString      "gctoa", "telekineticpull", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "pickup"
+		; address: 0x47d63
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 251:251
+		MemberFunctionArgumentCheck 2
+		LineNumber                  19697, 4
+		LineNumberAlt1              251, 55
+		GetThisMemberValueString    "toahandle"
+		GetVariableValue            1                        ; local
+		CallGameFunctionString      "gctoa", "liftobject", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "recordhakasequence"
+		; address: 0x47d7e
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 255:255
+		MemberFunctionArgumentCheck 1
+		LineNumber                  19701, 4
+		LineNumberAlt1              255, 55
+		GetThisMemberValueString    "toahandle"
+		CallGameFunctionString      "gctoa", "recordhakasequence", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "stoprecordinghaka"
+		; address: 0x47d96
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 259:259
+		MemberFunctionArgumentCheck 1
+		LineNumber                  19705, 4
+		LineNumberAlt1              259, 55
+		GetThisMemberValueString    "toahandle"
+		CallGameFunctionString      "gctoa", "stoprecordinghaka", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "ishakarecording"
+		; address: 0x47dae
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 263:263
+		MemberFunctionArgumentCheck 1
+		LineNumber                  19709, 4
+		LineNumberAlt1              263, 55
+		GetThisMemberValueString    "toahandle"
+		CallGameFunctionString      "gctoa", "ishakarecording", 1
+		LineNumber                  19709, 4
+		LineNumberAlt1              263, 55
+		Return
+	end ; method
+
+	begin method "compareagainstsequence"
+		; address: 0x47dce
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 267:267
+		MemberFunctionArgumentCheck 2
+		LineNumber                  19713, 4
+		LineNumberAlt1              267, 55
+		GetThisMemberValueString    "toahandle"
+		GetVariableValue            1                                    ; local
+		CallGameFunctionString      "gctoa", "compareagainstsequence", 2
+		LineNumber                  19713, 4
+		LineNumberAlt1              267, 55
+		Return
+	end ; method
+
+	begin method "toamustdie"
+		; address: 0x47df1
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 271:271
+		MemberFunctionArgumentCheck 1
+		LineNumber                  19717, 4
+		LineNumberAlt1              271, 55
+		GetThisMemberValueString    "toahandle"
+		CallGameFunctionString      "gctoa", "toamustdie", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "toaisalive"
+		; address: 0x47e09
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 275:275
+		MemberFunctionArgumentCheck 1
+		LineNumber                  19721, 4
+		LineNumberAlt1              275, 55
+		GetThisMemberValueString    "toahandle"
+		CallGameFunctionString      "gctoa", "toaisalive", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setswimming"
+		; address: 0x47e21
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 279:287
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          1
+		LineNumber                    19725, 4
+		LineNumberAlt1                279, 55
+		GetVariableValue              1                                             ; local
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    19726, 4
+		LineNumberAlt1                280, 55
+		PushConstanti8                1
+		SetVariableValue              2                                             ; local
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    19728, 4
+		LineNumberAlt1                282, 55
+		GetVariableValue              1                                             ; local
+		SetVariableValue              2                                             ; local
+		; <-
+		BranchTarget                  1
+		LineNumber                    19730, 4
+		LineNumberAlt1                284, 55
+		GetThisMemberValueString      "toahandle"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    19731, 4
+		LineNumberAlt1                285, 55
+		GetThisMemberValueString      "toahandle"
+		GetVariableValue              2                                             ; local
+		CallGameFunctionString        "gccharacter", "setswimming", 2
+		Pop
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		LineNumber                    19733, 4
+		LineNumberAlt1                287, 55
+		PushConstantStringString      "TOA HANDLE DOESN'T EQUAL ANYTHING DUHHH!!!!"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		; <-
+		BranchTarget                  3
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setunderwater"
+		; address: 0x47e9c
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 294:297
+		MemberFunctionArgumentCheck   2
+		LineNumber                    19740, 4
+		LineNumberAlt1                294, 55
+		GetVariableValue              1                                 ; local
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    19741, 4
+		LineNumberAlt1                295, 55
+		PushConstanti8                1
+		SetVariableValue              1                                 ; local
+		; <-
+		BranchTarget                  0
+		LineNumber                    19743, 4
+		LineNumberAlt1                297, 55
+		GetThisMemberValueString      "handle"
+		GetVariableValue              1                                 ; local
+		CallGameFunctionString        "gccharacter", "setunderwater", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "userealtime"
+		; address: 0x47ef0
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 302:302
+		MemberFunctionArgumentCheck 2
+		LineNumber                  19748, 4
+		LineNumberAlt1              302, 55
+		GetThisMemberValueString    "toahandle"
+		GetVariableValue            1                         ; local
+		CallGameFunctionString      "gctoa", "userealtime", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "activateillusion"
+		; address: 0x47f0b
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 307:307
+		MemberFunctionArgumentCheck 1
+		LineNumber                  19753, 4
+		LineNumberAlt1              307, 55
+		GetThisMemberValueString    "toahandle"
+		CallGameFunctionString      "gctoa", "activateillusion", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "deactivateillusion"
+		; address: 0x47f23
+		; source: 55 "C:\\projects\\lego\\Scripting\\VBO\\Toa/lego_Toa.vbo" 312:312
+		MemberFunctionArgumentCheck 1
+		LineNumber                  19758, 4
+		LineNumberAlt1              312, 55
+		GetThisMemberValueString    "toahandle"
+		CallGameFunctionString      "gctoa", "deactivateillusion", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

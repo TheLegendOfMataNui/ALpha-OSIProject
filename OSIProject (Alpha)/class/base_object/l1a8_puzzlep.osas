@@ -1,0 +1,1840 @@
+begin class "l1a8_puzzlep", "base_object"
+	property "parent"
+	property "plataarray"
+	property "platbarray"
+	property "platcarray"
+	property "fadepause"
+	property "callonce"
+	property "toggle"
+	property "door"
+	property "bgmusic"
+
+	begin method "l1a8_puzzlep"
+		; address: 0x6dc24
+		; source: 113 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_l1a8p.vbo" 103:103
+		MemberFunctionArgumentCheck 2
+		LineNumber                  40647, 4
+		LineNumberAlt1              103, 113
+		GetVariableValue            1        ; local
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x6dc38
+		; source: 113 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_l1a8p.vbo" 109:249
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          4
+		LineNumber                    40653, 4
+		LineNumberAlt1                109, 113
+		PushConstant0
+		SetVariableValue              1                                       ; local
+		LineNumber                    40654, 4
+		LineNumberAlt1                110, 113
+		CreateArray
+		SetVariableValue              2                                       ; local
+		LineNumber                    40655, 4
+		LineNumberAlt1                111, 113
+		PushConstanti8                1
+		SetThisMemberValueString      "callonce"
+		LineNumber                    40657, 4
+		LineNumberAlt1                113, 113
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "drp0"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40657, 4
+		LineNumberAlt1                113, 113
+		SetThisMemberValueString      "door"
+		LineNumber                    40659, 4
+		LineNumberAlt1                115, 113
+		CreateArray
+		SetThisMemberValueString      "plataarray"
+		LineNumber                    40660, 4
+		LineNumberAlt1                116, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "cla0"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40660, 4
+		LineNumberAlt1                116, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40661, 4
+		LineNumberAlt1                117, 113
+		GetThisMemberValueString      "plataarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40662, 4
+		LineNumberAlt1                118, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "cla1"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40662, 4
+		LineNumberAlt1                118, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40663, 4
+		LineNumberAlt1                119, 113
+		GetThisMemberValueString      "plataarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40664, 4
+		LineNumberAlt1                120, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "cla2"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40664, 4
+		LineNumberAlt1                120, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40665, 4
+		LineNumberAlt1                121, 113
+		GetThisMemberValueString      "plataarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40666, 4
+		LineNumberAlt1                122, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "cla3"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40666, 4
+		LineNumberAlt1                122, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40667, 4
+		LineNumberAlt1                123, 113
+		GetThisMemberValueString      "plataarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40668, 4
+		LineNumberAlt1                124, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "cla4"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40668, 4
+		LineNumberAlt1                124, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40669, 4
+		LineNumberAlt1                125, 113
+		GetThisMemberValueString      "plataarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40670, 4
+		LineNumberAlt1                126, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "cla5"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40670, 4
+		LineNumberAlt1                126, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40671, 4
+		LineNumberAlt1                127, 113
+		GetThisMemberValueString      "plataarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40672, 4
+		LineNumberAlt1                128, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "cla6"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40672, 4
+		LineNumberAlt1                128, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40673, 4
+		LineNumberAlt1                129, 113
+		GetThisMemberValueString      "plataarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40674, 4
+		LineNumberAlt1                130, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "cla7"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40674, 4
+		LineNumberAlt1                130, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40675, 4
+		LineNumberAlt1                131, 113
+		GetThisMemberValueString      "plataarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40676, 4
+		LineNumberAlt1                132, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "cla8"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40676, 4
+		LineNumberAlt1                132, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40677, 4
+		LineNumberAlt1                133, 113
+		GetThisMemberValueString      "plataarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40678, 4
+		LineNumberAlt1                134, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "cla9"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40678, 4
+		LineNumberAlt1                134, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40679, 4
+		LineNumberAlt1                135, 113
+		GetThisMemberValueString      "plataarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40680, 4
+		LineNumberAlt1                136, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "claa"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40680, 4
+		LineNumberAlt1                136, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40681, 4
+		LineNumberAlt1                137, 113
+		GetThisMemberValueString      "plataarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40682, 4
+		LineNumberAlt1                138, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clab"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40682, 4
+		LineNumberAlt1                138, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40683, 4
+		LineNumberAlt1                139, 113
+		GetThisMemberValueString      "plataarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40684, 4
+		LineNumberAlt1                140, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clac"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40684, 4
+		LineNumberAlt1                140, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40685, 4
+		LineNumberAlt1                141, 113
+		GetThisMemberValueString      "plataarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40686, 4
+		LineNumberAlt1                142, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clad"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40686, 4
+		LineNumberAlt1                142, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40687, 4
+		LineNumberAlt1                143, 113
+		GetThisMemberValueString      "plataarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40688, 4
+		LineNumberAlt1                144, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clae"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40688, 4
+		LineNumberAlt1                144, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40689, 4
+		LineNumberAlt1                145, 113
+		GetThisMemberValueString      "plataarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40690, 4
+		LineNumberAlt1                146, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "claf"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40690, 4
+		LineNumberAlt1                146, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40691, 4
+		LineNumberAlt1                147, 113
+		GetThisMemberValueString      "plataarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40692, 4
+		LineNumberAlt1                148, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clag"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40692, 4
+		LineNumberAlt1                148, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40693, 4
+		LineNumberAlt1                149, 113
+		GetThisMemberValueString      "plataarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40695, 4
+		LineNumberAlt1                151, 113
+		CreateArray
+		SetThisMemberValueString      "platbarray"
+		LineNumber                    40696, 4
+		LineNumberAlt1                152, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clb0"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40696, 4
+		LineNumberAlt1                152, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40697, 4
+		LineNumberAlt1                153, 113
+		GetThisMemberValueString      "platbarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40698, 4
+		LineNumberAlt1                154, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clb1"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40698, 4
+		LineNumberAlt1                154, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40699, 4
+		LineNumberAlt1                155, 113
+		GetThisMemberValueString      "platbarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40700, 4
+		LineNumberAlt1                156, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clb2"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40700, 4
+		LineNumberAlt1                156, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40701, 4
+		LineNumberAlt1                157, 113
+		GetThisMemberValueString      "platbarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40702, 4
+		LineNumberAlt1                158, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clb3"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40702, 4
+		LineNumberAlt1                158, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40703, 4
+		LineNumberAlt1                159, 113
+		GetThisMemberValueString      "platbarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40704, 4
+		LineNumberAlt1                160, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clb4"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40704, 4
+		LineNumberAlt1                160, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40705, 4
+		LineNumberAlt1                161, 113
+		GetThisMemberValueString      "platbarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40706, 4
+		LineNumberAlt1                162, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clb5"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40706, 4
+		LineNumberAlt1                162, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40707, 4
+		LineNumberAlt1                163, 113
+		GetThisMemberValueString      "platbarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40708, 4
+		LineNumberAlt1                164, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clb6"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40708, 4
+		LineNumberAlt1                164, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40709, 4
+		LineNumberAlt1                165, 113
+		GetThisMemberValueString      "platbarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40710, 4
+		LineNumberAlt1                166, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clb7"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40710, 4
+		LineNumberAlt1                166, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40711, 4
+		LineNumberAlt1                167, 113
+		GetThisMemberValueString      "platbarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40712, 4
+		LineNumberAlt1                168, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clb8"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40712, 4
+		LineNumberAlt1                168, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40713, 4
+		LineNumberAlt1                169, 113
+		GetThisMemberValueString      "platbarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40714, 4
+		LineNumberAlt1                170, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clb9"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40714, 4
+		LineNumberAlt1                170, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40715, 4
+		LineNumberAlt1                171, 113
+		GetThisMemberValueString      "platbarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40716, 4
+		LineNumberAlt1                172, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clba"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40716, 4
+		LineNumberAlt1                172, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40717, 4
+		LineNumberAlt1                173, 113
+		GetThisMemberValueString      "platbarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40718, 4
+		LineNumberAlt1                174, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clbb"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40718, 4
+		LineNumberAlt1                174, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40719, 4
+		LineNumberAlt1                175, 113
+		GetThisMemberValueString      "platbarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40720, 4
+		LineNumberAlt1                176, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clbc"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40720, 4
+		LineNumberAlt1                176, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40721, 4
+		LineNumberAlt1                177, 113
+		GetThisMemberValueString      "platbarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40722, 4
+		LineNumberAlt1                178, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clbd"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40722, 4
+		LineNumberAlt1                178, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40723, 4
+		LineNumberAlt1                179, 113
+		GetThisMemberValueString      "platbarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40724, 4
+		LineNumberAlt1                180, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clbe"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40724, 4
+		LineNumberAlt1                180, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40725, 4
+		LineNumberAlt1                181, 113
+		GetThisMemberValueString      "platbarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40726, 4
+		LineNumberAlt1                182, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clbf"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40726, 4
+		LineNumberAlt1                182, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40727, 4
+		LineNumberAlt1                183, 113
+		GetThisMemberValueString      "platbarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40728, 4
+		LineNumberAlt1                184, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clbg"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40728, 4
+		LineNumberAlt1                184, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40729, 4
+		LineNumberAlt1                185, 113
+		GetThisMemberValueString      "platbarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40731, 4
+		LineNumberAlt1                187, 113
+		CreateArray
+		SetThisMemberValueString      "platcarray"
+		LineNumber                    40732, 4
+		LineNumberAlt1                188, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clc0"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40732, 4
+		LineNumberAlt1                188, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40733, 4
+		LineNumberAlt1                189, 113
+		GetThisMemberValueString      "platcarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40734, 4
+		LineNumberAlt1                190, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clc1"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40734, 4
+		LineNumberAlt1                190, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40735, 4
+		LineNumberAlt1                191, 113
+		GetThisMemberValueString      "platcarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40736, 4
+		LineNumberAlt1                192, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clc2"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40736, 4
+		LineNumberAlt1                192, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40737, 4
+		LineNumberAlt1                193, 113
+		GetThisMemberValueString      "platcarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40738, 4
+		LineNumberAlt1                194, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clc3"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40738, 4
+		LineNumberAlt1                194, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40739, 4
+		LineNumberAlt1                195, 113
+		GetThisMemberValueString      "platcarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40740, 4
+		LineNumberAlt1                196, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clc4"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40740, 4
+		LineNumberAlt1                196, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40741, 4
+		LineNumberAlt1                197, 113
+		GetThisMemberValueString      "platcarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40742, 4
+		LineNumberAlt1                198, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clc5"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40742, 4
+		LineNumberAlt1                198, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40743, 4
+		LineNumberAlt1                199, 113
+		GetThisMemberValueString      "platcarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40744, 4
+		LineNumberAlt1                200, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clc6"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40744, 4
+		LineNumberAlt1                200, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40745, 4
+		LineNumberAlt1                201, 113
+		GetThisMemberValueString      "platcarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40746, 4
+		LineNumberAlt1                202, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clc7"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40746, 4
+		LineNumberAlt1                202, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40747, 4
+		LineNumberAlt1                203, 113
+		GetThisMemberValueString      "platcarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40748, 4
+		LineNumberAlt1                204, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clc8"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40748, 4
+		LineNumberAlt1                204, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40749, 4
+		LineNumberAlt1                205, 113
+		GetThisMemberValueString      "platcarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40750, 4
+		LineNumberAlt1                206, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clc9"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40750, 4
+		LineNumberAlt1                206, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40751, 4
+		LineNumberAlt1                207, 113
+		GetThisMemberValueString      "platcarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40752, 4
+		LineNumberAlt1                208, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clca"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40752, 4
+		LineNumberAlt1                208, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40753, 4
+		LineNumberAlt1                209, 113
+		GetThisMemberValueString      "platcarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40754, 4
+		LineNumberAlt1                210, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clcb"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40754, 4
+		LineNumberAlt1                210, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40755, 4
+		LineNumberAlt1                211, 113
+		GetThisMemberValueString      "platcarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40756, 4
+		LineNumberAlt1                212, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clcc"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40756, 4
+		LineNumberAlt1                212, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40757, 4
+		LineNumberAlt1                213, 113
+		GetThisMemberValueString      "platcarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40758, 4
+		LineNumberAlt1                214, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clcd"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40758, 4
+		LineNumberAlt1                214, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40759, 4
+		LineNumberAlt1                215, 113
+		GetThisMemberValueString      "platcarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40760, 4
+		LineNumberAlt1                216, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clce"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40760, 4
+		LineNumberAlt1                216, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40761, 4
+		LineNumberAlt1                217, 113
+		GetThisMemberValueString      "platcarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40762, 4
+		LineNumberAlt1                218, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clcf"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40762, 4
+		LineNumberAlt1                218, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40763, 4
+		LineNumberAlt1                219, 113
+		GetThisMemberValueString      "platcarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40764, 4
+		LineNumberAlt1                220, 113
+		CreateObjectString            "lego_volatileplatform"
+		Dup
+		PushConstantStringString      "clcg"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "name"
+		Pull                          3
+		GetMemberFunctionString       "lego_volatileplatform"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40764, 4
+		LineNumberAlt1                220, 113
+		SetVariableValue              3                                       ; local
+		LineNumber                    40765, 4
+		LineNumberAlt1                221, 113
+		GetThisMemberValueString      "platcarray"
+		GetVariableValue              3                                       ; local
+		AppendToArray
+		LineNumber                    40767, 4
+		LineNumberAlt1                223, 113
+		PushConstantf32               3.5
+		SetThisMemberValueString      "fadepause"
+		LineNumber                    40768, 4
+		LineNumberAlt1                224, 113
+		GetThisMemberValueString      "plataarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              4                                       ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              4                                       ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    40769, 4
+		LineNumberAlt1                225, 113
+		GetThisMemberValueString      "plataarray"
+		GetVariableValue              4                                       ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    40771, 4
+		LineNumberAlt1                227, 113
+		GetThisMemberValueString      "plataarray"
+		GetVariableValue              4                                       ; local
+		GetArrayValue
+		PushConstantf32               5
+		Pull                          2
+		GetMemberFunctionString       "settimetofall"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    40772, 4
+		LineNumberAlt1                228, 113
+		GetThisMemberValueString      "plataarray"
+		GetVariableValue              4                                       ; local
+		GetArrayValue
+		PushConstantf32               1.5
+		Pull                          2
+		GetMemberFunctionString       "setshakerotateintensity"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    40774, 4
+		LineNumberAlt1                230, 113
+		GetThisMemberValueString      "platbarray"
+		GetVariableValue              4                                       ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    40775, 4
+		LineNumberAlt1                231, 113
+		GetThisMemberValueString      "platbarray"
+		GetVariableValue              4                                       ; local
+		GetArrayValue
+		PushConstantf32               5
+		Pull                          2
+		GetMemberFunctionString       "settimetofall"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    40776, 4
+		LineNumberAlt1                232, 113
+		GetThisMemberValueString      "platbarray"
+		GetVariableValue              4                                       ; local
+		GetArrayValue
+		PushConstantf32               0
+		Pull                          2
+		GetMemberFunctionString       "setshakerotateintensity"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    40778, 4
+		LineNumberAlt1                234, 113
+		GetThisMemberValueString      "platcarray"
+		GetVariableValue              4                                       ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    40779, 4
+		LineNumberAlt1                235, 113
+		GetThisMemberValueString      "platcarray"
+		GetVariableValue              4                                       ; local
+		GetArrayValue
+		PushConstantf32               5
+		Pull                          2
+		GetMemberFunctionString       "settimetofall"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    40780, 4
+		LineNumberAlt1                236, 113
+		GetThisMemberValueString      "platcarray"
+		GetVariableValue              4                                       ; local
+		GetArrayValue
+		PushConstantf32               0
+		Pull                          2
+		GetMemberFunctionString       "setshakerotateintensity"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    40782, 4
+		LineNumberAlt1                238, 113
+		GetThisMemberValueString      "plataarray"
+		GetVariableValue              4                                       ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    40783, 4
+		LineNumberAlt1                239, 113
+		GetThisMemberValueString      "platbarray"
+		GetVariableValue              4                                       ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    40784, 4
+		LineNumberAlt1                240, 113
+		GetThisMemberValueString      "platcarray"
+		GetVariableValue              4                                       ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             4
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    40787, 4
+		LineNumberAlt1                243, 113
+		GetThisMemberValueString      "door"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    40788, 4
+		LineNumberAlt1                244, 113
+		GetThisMemberValueString      "door"
+		Dup
+		GetMemberFunctionString       "settweakable"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    40791, 4
+		LineNumberAlt1                247, 113
+		CreateObjectString            "legomp3player"
+		Dup
+		Dup
+		GetMemberFunctionString       "legomp3player"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    40791, 4
+		LineNumberAlt1                247, 113
+		SetThisMemberValueString      "bgmusic"
+		LineNumber                    40792, 4
+		LineNumberAlt1                248, 113
+		GetThisMemberValueString      "bgmusic"
+		PushConstantStringString      "Root/Data/sounds/LEGOUNDERGROUNDMUSIC"
+		Pull                          2
+		GetMemberFunctionString       "setupforplay"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    40793, 4
+		LineNumberAlt1                249, 113
+		GetThisMemberValueString      "bgmusic"
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "play"
+		JumpAbsolute                  2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x6ead9
+		; source: 113 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_l1a8p.vbo" 257:299
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          1
+		LineNumber                    40801, 4
+		LineNumberAlt1                257, 113
+		GetVariableValue              1                                                       ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    40805, 4
+		LineNumberAlt1                261, 113
+		GetVariableValue              1                                                       ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		Dup
+		PushConstantStringString      "cnt1"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    40806, 4
+		LineNumberAlt1                262, 113
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    40807, 4
+		LineNumberAlt1                263, 113
+		GetThisMemberValueString      "plataarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2                                                       ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              2                                                       ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    40808, 4
+		LineNumberAlt1                264, 113
+		GetVariableValue              1                                                       ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		Dup
+		GetThisMemberValueString      "plataarray"
+		GetVariableValue              2                                                       ; local
+		GetArrayValue
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    40811, 4
+		LineNumberAlt1                267, 113
+		GetThisMemberValueString      "plataarray"
+		GetVariableValue              2                                                       ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "touch"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    40812, 4
+		LineNumberAlt1                268, 113
+		GetThisMemberValueString      "platbarray"
+		GetVariableValue              2                                                       ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "touch"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    40813, 4
+		LineNumberAlt1                269, 113
+		GetThisMemberValueString      "platcarray"
+		GetVariableValue              2                                                       ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "touch"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  1
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		Pop
+		; <-
+		BranchTarget                  3
+		Pop
+		BranchAlwaysTarget            9, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		Dup
+		PushConstanti8                46
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    40819, 4
+		LineNumberAlt1                275, 113
+		PushConstantf32               1.2000000476837158
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		BranchAlwaysTarget            9, 0
+		; ->
+		; <-
+		BranchTarget                  5
+		Dup
+		PushConstanti8                27
+		EqualTo
+		CompareAndBranchIfFalseTarget 8, 0
+		; ->
+		LineNumber                    40824, 4
+		LineNumberAlt1                280, 113
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "enterstartid"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "enterlookid"
+		Pull                          3
+		GetMemberFunctionString       "gotopos"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    40825, 4
+		LineNumberAlt1                281, 113
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "unkill"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    40826, 4
+		LineNumberAlt1                282, 113
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "o000"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    40826, 4
+		LineNumberAlt1                282, 113
+		Pull                          2
+		GetMemberFunctionString       "switchanimation"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    40827, 4
+		LineNumberAlt1                283, 113
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantStringString      "ninp"
+		Pull                          2
+		GetMemberFunctionString       "setinputstate"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    40828, 4
+		LineNumberAlt1                284, 113
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "level"
+		GetMemberValueString          "cam"
+		PushConstanti8                11
+		Pull                          2
+		GetMemberFunctionString       "setaimode"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    40829, 4
+		LineNumberAlt1                285, 113
+		GetThisMemberValueString      "plataarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2                                                       ; local
+		; <-
+		BranchTarget                  6
+		Dup
+		GetVariableValue              2                                                       ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 7, 0
+		; ->
+		LineNumber                    40830, 4
+		LineNumberAlt1                286, 113
+		GetThisMemberValueString      "plataarray"
+		GetVariableValue              2                                                       ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "reset"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    40831, 4
+		LineNumberAlt1                287, 113
+		GetThisMemberValueString      "platbarray"
+		GetVariableValue              2                                                       ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "reset"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    40832, 4
+		LineNumberAlt1                288, 113
+		GetThisMemberValueString      "platcarray"
+		GetVariableValue              2                                                       ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "reset"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            6, 0
+		; ->
+		; <-
+		BranchTarget                  7
+		Pop
+		LineNumber                    40834, 4
+		LineNumberAlt1                290, 113
+		PushConstantStringString      "tbl5"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    40834, 4
+		LineNumberAlt1                290, 113
+		PushConstant0
+		CallGameFunctionString        "gccollisionphysicsgroup", "toggletriggerboxentered", 2
+		Pop
+		BranchAlwaysTarget            9, 0
+		; ->
+		; <-
+		BranchTarget                  8
+		Dup
+		PushConstanti8                3
+		EqualTo
+		CompareAndBranchIfFalseTarget 9, 0
+		; ->
+		LineNumber                    40839, 4
+		LineNumberAlt1                295, 113
+		GetVariableValue              1                                                       ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		PushConstantStringString      "tbl5"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    40839, 4
+		LineNumberAlt1                295, 113
+		EqualTo
+		CompareAndBranchIfFalseTarget 9, 0
+		; ->
+		LineNumber                    40840, 4
+		LineNumberAlt1                296, 113
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "kill"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    40841, 4
+		LineNumberAlt1                297, 113
+		PushConstanti16               737
+		CallGameFunctionString        "gcstaticsoundsptrarray", "playtablesound", 1
+		Pop
+		LineNumber                    40842, 4
+		LineNumberAlt1                298, 113
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "level"
+		GetMemberValueString          "cam"
+		PushConstanti8                7
+		Pull                          2
+		GetMemberFunctionString       "setaimode"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    40843, 4
+		LineNumberAlt1                299, 113
+		PushConstantf32               1.2000000476837158
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		; <-
+		BranchTarget                  9
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x6eda4
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x6eda8
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x6edac
+		; source: 113 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_l1a8p.vbo" 318:355
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          2
+		LineNumber                    40862, 4
+		LineNumberAlt1                318, 113
+		GetThisMemberValueString      "plataarray"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    40863, 4
+		LineNumberAlt1                319, 113
+		GetThisMemberValueString      "plataarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		SetVariableValue              1             ; local
+		LineNumber                    40864, 4
+		LineNumberAlt1                320, 113
+		GetVariableValue              1             ; local
+		PushConstant0
+		SetVariableValue              2             ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              2             ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    40865, 4
+		LineNumberAlt1                321, 113
+		GetThisMemberValueString      "plataarray"
+		GetVariableValue              1             ; local
+		GetVariableValue              2             ; local
+		Subtract
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    40866, 4
+		LineNumberAlt1                322, 113
+		GetThisMemberValueString      "plataarray"
+		GetVariableValue              1             ; local
+		GetVariableValue              2             ; local
+		Subtract
+		PushNothing
+		SetArrayValue
+		IncrementVariable             2
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		; <-
+		BranchTarget                  2
+		LineNumber                    40869, 4
+		LineNumberAlt1                325, 113
+		GetThisMemberValueString      "platbarray"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    40870, 4
+		LineNumberAlt1                326, 113
+		GetThisMemberValueString      "platbarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		SetVariableValue              1             ; local
+		LineNumber                    40871, 4
+		LineNumberAlt1                327, 113
+		GetVariableValue              1             ; local
+		PushConstant0
+		SetVariableValue              2             ; local
+		; <-
+		BranchTarget                  3
+		Dup
+		GetVariableValue              2             ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    40872, 4
+		LineNumberAlt1                328, 113
+		GetThisMemberValueString      "platbarray"
+		GetVariableValue              1             ; local
+		GetVariableValue              2             ; local
+		Subtract
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    40873, 4
+		LineNumberAlt1                329, 113
+		GetThisMemberValueString      "platbarray"
+		GetVariableValue              1             ; local
+		GetVariableValue              2             ; local
+		Subtract
+		PushNothing
+		SetArrayValue
+		IncrementVariable             2
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		Pop
+		; <-
+		BranchTarget                  5
+		LineNumber                    40876, 4
+		LineNumberAlt1                332, 113
+		GetThisMemberValueString      "platcarray"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 8, 0
+		; ->
+		LineNumber                    40877, 4
+		LineNumberAlt1                333, 113
+		GetThisMemberValueString      "platcarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		SetVariableValue              1             ; local
+		LineNumber                    40878, 4
+		LineNumberAlt1                334, 113
+		GetVariableValue              1             ; local
+		PushConstant0
+		SetVariableValue              2             ; local
+		; <-
+		BranchTarget                  6
+		Dup
+		GetVariableValue              2             ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 7, 0
+		; ->
+		LineNumber                    40879, 4
+		LineNumberAlt1                335, 113
+		GetThisMemberValueString      "platcarray"
+		GetVariableValue              1             ; local
+		GetVariableValue              2             ; local
+		Subtract
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    40880, 4
+		LineNumberAlt1                336, 113
+		GetThisMemberValueString      "platcarray"
+		GetVariableValue              1             ; local
+		GetVariableValue              2             ; local
+		Subtract
+		PushNothing
+		SetArrayValue
+		IncrementVariable             2
+		BranchAlwaysTarget            6, 0
+		; ->
+		; <-
+		BranchTarget                  7
+		Pop
+		; <-
+		BranchTarget                  8
+		LineNumber                    40884, 4
+		LineNumberAlt1                340, 113
+		PushNothing
+		SetThisMemberValueString      "plataarray"
+		LineNumber                    40885, 4
+		LineNumberAlt1                341, 113
+		PushNothing
+		SetThisMemberValueString      "platbarray"
+		LineNumber                    40886, 4
+		LineNumberAlt1                342, 113
+		PushNothing
+		SetThisMemberValueString      "platcarray"
+		LineNumber                    40888, 4
+		LineNumberAlt1                344, 113
+		PushNothing
+		SetThisMemberValueString      "fadepause"
+		LineNumber                    40889, 4
+		LineNumberAlt1                345, 113
+		PushNothing
+		SetThisMemberValueString      "callonce"
+		LineNumber                    40890, 4
+		LineNumberAlt1                346, 113
+		PushNothing
+		SetThisMemberValueString      "toggle"
+		LineNumber                    40892, 4
+		LineNumberAlt1                348, 113
+		GetThisMemberValueString      "door"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 9, 0
+		; ->
+		LineNumber                    40893, 4
+		LineNumberAlt1                349, 113
+		GetThisMemberValueString      "door"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    40894, 4
+		LineNumberAlt1                350, 113
+		PushNothing
+		SetThisMemberValueString      "door"
+		; <-
+		BranchTarget                  9
+		LineNumber                    40897, 4
+		LineNumberAlt1                353, 113
+		GetThisMemberValueString      "bgmusic"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 10, 0
+		; ->
+		LineNumber                    40898, 4
+		LineNumberAlt1                354, 113
+		GetThisMemberValueString      "bgmusic"
+		Dup
+		GetMemberFunctionString       "stop"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    40899, 4
+		LineNumberAlt1                355, 113
+		PushNothing
+		SetThisMemberValueString      "bgmusic"
+		; <-
+		BranchTarget                  10
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupshort"
+		; address: 0x6efdb
+		; source: 113 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_l1a8p.vbo" 361:361
+		MemberFunctionArgumentCheck 1
+		LineNumber                  40905, 4
+		LineNumberAlt1              361, 113
+		GetVariableValue            0             ; local
+		GetThisMemberFunctionString "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x6eff2
+		; source: 113 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_l1a8p.vbo" 366:366
+		MemberFunctionArgumentCheck 1
+		LineNumber                  40910, 4
+		LineNumberAlt1              366, 113
+		PushNothing
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "resetallplats"
+		; address: 0x6f004
+		; source: 113 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_l1a8p.vbo" 371:374
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    40915, 4
+		LineNumberAlt1                371, 113
+		GetThisMemberValueString      "plataarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1            ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1            ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    40916, 4
+		LineNumberAlt1                372, 113
+		GetThisMemberValueString      "plataarray"
+		GetVariableValue              1            ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "reset"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    40917, 4
+		LineNumberAlt1                373, 113
+		GetThisMemberValueString      "platbarray"
+		GetVariableValue              1            ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "reset"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    40918, 4
+		LineNumberAlt1                374, 113
+		GetThisMemberValueString      "platcarray"
+		GetVariableValue              1            ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "reset"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

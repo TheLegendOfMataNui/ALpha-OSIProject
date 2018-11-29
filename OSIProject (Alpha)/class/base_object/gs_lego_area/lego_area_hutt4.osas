@@ -1,0 +1,104 @@
+begin class "lego_area_hutt4", "gs_lego_area"
+	property "parent"
+
+	begin method "lego_area_hutt4"
+		; address: 0xb563e
+		; source: 186 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_snfl.vbo" 27:29
+		MemberFunctionArgumentCheck 2
+		LineNumber                  7098, 4
+		LineNumberAlt1              27, 186
+		GetVariableValue            1                    ; local
+		SetThisMemberValueString    "parent"
+		LineNumber                  7099, 4
+		LineNumberAlt1              28, 186
+		GetVariableValue            0                    ; local
+		PushConstantStringString    "hutt"
+		GetVariableValue            1                    ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  7100, 4
+		LineNumberAlt1              29, 186
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xb5680
+		; source: 186 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_snfl.vbo" 34:35
+		MemberFunctionArgumentCheck 1
+		LineNumber                  7105, 4
+		LineNumberAlt1              34, 186
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_show"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  7106, 4
+		LineNumberAlt1              35, 186
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xb56aa
+		; source: 186 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_snfl.vbo" 57:58
+		MemberFunctionArgumentCheck 1
+		LineNumber                  7128, 4
+		LineNumberAlt1              57, 186
+		GetVariableValue            0                       ; local
+		GetThisMemberFunctionString "lego_area_hide"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  7129, 4
+		LineNumberAlt1              58, 186
+		GetVariableValue            0                       ; local
+		GetThisMemberFunctionString "lego_area_cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xb56d4
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xb56d8
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0xb56dc
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0xb56e0
+		; source: 186 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_snfl.vbo" 84:84
+		MemberFunctionArgumentCheck 1
+		LineNumber                  7155, 4
+		LineNumberAlt1              84, 186
+		PushNothing
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+end ; class

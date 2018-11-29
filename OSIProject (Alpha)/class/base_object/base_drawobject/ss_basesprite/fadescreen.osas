@@ -1,0 +1,529 @@
+begin class "fadescreen", "ss_basesprite"
+	property "faderectangle"
+	property "faderate"
+	property "fadetimeleft"
+	property "incrementor"
+	property "decrementor"
+	property "blnshow"
+	property "blnhide"
+
+	begin method "fadescreen"
+		; address: 0x398b0
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 600:612
+		MemberFunctionArgumentCheck   3
+		CreateStackVariables          1
+		LineNumber                    11448, 4
+		LineNumberAlt1                600, 28
+		GetVariableValue              1                         ; local
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    11449, 4
+		LineNumberAlt1                601, 28
+		PushConstant0
+		SetVariableValue              1                         ; local
+		; <-
+		BranchTarget                  0
+		LineNumber                    11451, 4
+		LineNumberAlt1                603, 28
+		GetVariableValue              1                         ; local
+		Dup
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    11453, 4
+		LineNumberAlt1                605, 28
+		PushConstantStringString      "Root/data/art/hud/Black"
+		SetVariableValue              3                         ; local
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    11455, 4
+		LineNumberAlt1                607, 28
+		PushConstantStringString      "Root/data/art/hud/White"
+		SetVariableValue              3                         ; local
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		Dup
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    11457, 4
+		LineNumberAlt1                609, 28
+		PushConstantStringString      "Root/data/art/hud/Blue"
+		SetVariableValue              3                         ; local
+		; <-
+		BranchTarget                  3
+		Pop
+		LineNumber                    11459, 4
+		LineNumberAlt1                611, 28
+		CreateObjectString            "ss_basesprite"
+		Dup
+		GetVariableValue              3                         ; local
+		PushConstant0
+		PushConstant0
+		PushConstant0
+		GetVariableValueGlobalString  "screenx"
+		GetVariableValueGlobalString  "screeny"
+		PushConstant0
+		Pull                          8
+		GetMemberFunctionString       "ss_basesprite"
+		JumpAbsolute                  8
+		Pop
+		LineNumber                    11459, 4
+		LineNumberAlt1                611, 28
+		SetThisMemberValueString      "faderectangle"
+		LineNumber                    11460, 4
+		LineNumberAlt1                612, 28
+		GetVariableValue              2                         ; local
+		SetThisMemberValueString      "faderate"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x3996e
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 619:620
+		MemberFunctionArgumentCheck 1
+		LineNumber                  11467, 4
+		LineNumberAlt1              619, 28
+		GetThisMemberValueString    "faderectangle"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  11468, 4
+		LineNumberAlt1              620, 28
+		GetVariableValue            0               ; local
+		GetThisMemberFunctionString "initshort"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initshort"
+		; address: 0x39999
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 624:626
+		MemberFunctionArgumentCheck 1
+		LineNumber                  11472, 4
+		LineNumberAlt1              624, 28
+		PushConstant0
+		SetThisMemberValueString    "incrementor"
+		LineNumber                  11473, 4
+		LineNumberAlt1              625, 28
+		PushConstanti16             255
+		SetThisMemberValueString    "decrementor"
+		LineNumber                  11474, 4
+		LineNumberAlt1              626, 28
+		PushConstant0
+		SetThisMemberValueString    "blnshow"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "getfadetime"
+		; address: 0x399c9
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 631:634
+		MemberFunctionArgumentCheck   1
+		LineNumber                    11479, 4
+		LineNumberAlt1                631, 28
+		GetThisMemberValueString      "fadetimeleft"
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    11480, 4
+		LineNumberAlt1                632, 28
+		PushConstant0
+		Return
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    11482, 4
+		LineNumberAlt1                634, 28
+		GetThisMemberValueString      "fadetimeleft"
+		Return
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x399fc
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x39a00
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 646:657
+		MemberFunctionArgumentCheck   1
+		LineNumber                    11494, 4
+		LineNumberAlt1                646, 28
+		GetThisMemberValueString      "faderectangle"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    11495, 4
+		LineNumberAlt1                647, 28
+		PushConstantStringString      "[][b][] hiding fader"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		LineNumber                    11497, 4
+		LineNumberAlt1                649, 28
+		GetThisMemberValueString      "faderectangle"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    11498, 4
+		LineNumberAlt1                650, 28
+		PushNothing
+		SetThisMemberValueString      "faderectangle"
+		; <-
+		BranchTarget                  0
+		LineNumber                    11500, 4
+		LineNumberAlt1                652, 28
+		PushNothing
+		SetThisMemberValueString      "faderate"
+		LineNumber                    11501, 4
+		LineNumberAlt1                653, 28
+		PushNothing
+		SetThisMemberValueString      "fadetimeleft"
+		LineNumber                    11502, 4
+		LineNumberAlt1                654, 28
+		PushNothing
+		SetThisMemberValueString      "incrementor"
+		LineNumber                    11503, 4
+		LineNumberAlt1                655, 28
+		PushNothing
+		SetThisMemberValueString      "decrementor"
+		LineNumber                    11504, 4
+		LineNumberAlt1                656, 28
+		PushNothing
+		SetThisMemberValueString      "blnshow"
+		LineNumber                    11505, 4
+		LineNumberAlt1                657, 28
+		PushNothing
+		SetThisMemberValueString      "blnhide"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupshort"
+		; address: 0x39aa1
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x39aa5
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 667:680
+		MemberFunctionArgumentCheck   2
+		LineNumber                    11515, 4
+		LineNumberAlt1                667, 28
+		GetThisMemberValueString      "blnshow"
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    11516, 4
+		LineNumberAlt1                668, 28
+		GetThisMemberValueString      "fadetimeleft"
+		GetVariableValue              1                   ; local
+		GetMemberValueString          "deltatime"
+		Subtract
+		SetThisMemberValueString      "fadetimeleft"
+		LineNumber                    11517, 4
+		LineNumberAlt1                669, 28
+		GetThisMemberValueString      "fadetimeleft"
+		PushConstant0
+		LessOrEqual
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    11518, 4
+		LineNumberAlt1                670, 28
+		PushConstant0
+		SetThisMemberValueString      "fadetimeleft"
+		; <-
+		BranchTarget                  0
+		LineNumber                    11520, 4
+		LineNumberAlt1                672, 28
+		GetVariableValue              0                   ; local
+		GetThisMemberFunctionString   "setincrementvalue"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  1
+		LineNumber                    11522, 4
+		LineNumberAlt1                674, 28
+		GetThisMemberValueString      "blnhide"
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    11523, 4
+		LineNumberAlt1                675, 28
+		GetThisMemberValueString      "fadetimeleft"
+		GetVariableValue              1                   ; local
+		GetMemberValueString          "deltatime"
+		Subtract
+		SetThisMemberValueString      "fadetimeleft"
+		LineNumber                    11524, 4
+		LineNumberAlt1                676, 28
+		GetThisMemberValueString      "fadetimeleft"
+		PushConstant0
+		LessOrEqual
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    11525, 4
+		LineNumberAlt1                677, 28
+		PushConstant0
+		SetThisMemberValueString      "fadetimeleft"
+		; <-
+		BranchTarget                  2
+		LineNumber                    11528, 4
+		LineNumberAlt1                680, 28
+		GetVariableValue              0                   ; local
+		GetThisMemberFunctionString   "setdecrementvalue"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  3
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setincrementvalue"
+		; address: 0x39b5d
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 686:690
+		MemberFunctionArgumentCheck   1
+		LineNumber                    11534, 4
+		LineNumberAlt1                686, 28
+		PushConstanti16               255
+		PushConstanti16               255
+		GetThisMemberValueString      "fadetimeleft"
+		GetThisMemberValueString      "faderate"
+		Divide
+		Multiply
+		Subtract
+		SetThisMemberValueString      "incrementor"
+		LineNumber                    11535, 4
+		LineNumberAlt1                687, 28
+		GetThisMemberValueString      "faderectangle"
+		GetThisMemberValueString      "incrementor"
+		Pull                          2
+		GetMemberFunctionString       "settransparency"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    11536, 4
+		LineNumberAlt1                688, 28
+		GetThisMemberValueString      "incrementor"
+		PushConstanti16               255
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    11537, 4
+		LineNumberAlt1                689, 28
+		PushConstant0
+		SetThisMemberValueString      "incrementor"
+		LineNumber                    11538, 4
+		LineNumberAlt1                690, 28
+		PushConstant0
+		SetThisMemberValueString      "blnshow"
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setdecrementvalue"
+		; address: 0x39bc5
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 697:702
+		MemberFunctionArgumentCheck   1
+		LineNumber                    11545, 4
+		LineNumberAlt1                697, 28
+		PushConstanti16               255
+		GetThisMemberValueString      "fadetimeleft"
+		GetThisMemberValueString      "faderate"
+		Divide
+		Multiply
+		SetThisMemberValueString      "decrementor"
+		LineNumber                    11546, 4
+		LineNumberAlt1                698, 28
+		GetThisMemberValueString      "faderectangle"
+		GetThisMemberValueString      "decrementor"
+		Pull                          2
+		GetMemberFunctionString       "settransparency"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    11547, 4
+		LineNumberAlt1                699, 28
+		GetThisMemberValueString      "decrementor"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    11548, 4
+		LineNumberAlt1                700, 28
+		GetThisMemberValueString      "faderectangle"
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    11549, 4
+		LineNumberAlt1                701, 28
+		PushConstant0
+		SetThisMemberValueString      "blnhide"
+		LineNumber                    11550, 4
+		LineNumberAlt1                702, 28
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setfaderate"
+		; address: 0x39c44
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 708:708
+		MemberFunctionArgumentCheck 2
+		LineNumber                  11556, 4
+		LineNumberAlt1              708, 28
+		GetVariableValue            1          ; local
+		SetThisMemberValueString    "faderate"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "show"
+		; address: 0x39c58
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 714:721
+		MemberFunctionArgumentCheck  1
+		LineNumber                   11562, 4
+		LineNumberAlt1               714, 28
+		GetThisMemberValueString     "faderectangle"
+		Dup
+		GetMemberFunctionString      "add"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   11563, 4
+		LineNumberAlt1               715, 28
+		GetThisMemberValueString     "faderectangle"
+		PushConstanti8               1
+		Pull                         2
+		GetMemberFunctionString      "enablealphachannel"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   11564, 4
+		LineNumberAlt1               716, 28
+		GetThisMemberValueString     "faderectangle"
+		PushConstanti8               1
+		Pull                         2
+		GetMemberFunctionString      "enabletransparency"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   11565, 4
+		LineNumberAlt1               717, 28
+		GetThisMemberValueString     "faderectangle"
+		Dup
+		GetMemberFunctionString      "show"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   11566, 4
+		LineNumberAlt1               718, 28
+		PushConstanti8               1
+		SetThisMemberValueString     "blnshow"
+		LineNumber                   11567, 4
+		LineNumberAlt1               719, 28
+		PushConstant0
+		SetThisMemberValueString     "blnhide"
+		LineNumber                   11568, 4
+		LineNumberAlt1               720, 28
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "hud"
+		Dup
+		GetMemberFunctionString      "hide"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   11569, 4
+		LineNumberAlt1               721, 28
+		GetThisMemberValueString     "faderate"
+		SetThisMemberValueString     "fadetimeleft"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hide"
+		; address: 0x39cf6
+		; source: 28 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_hud.vbo" 726:733
+		MemberFunctionArgumentCheck 1
+		LineNumber                  11574, 4
+		LineNumberAlt1              726, 28
+		PushConstanti16             255
+		SetThisMemberValueString    "decrementor"
+		LineNumber                  11575, 4
+		LineNumberAlt1              727, 28
+		GetThisMemberValueString    "faderectangle"
+		Dup
+		GetMemberFunctionString     "add"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  11576, 4
+		LineNumberAlt1              728, 28
+		GetThisMemberValueString    "faderectangle"
+		PushConstanti8              1
+		Pull                        2
+		GetMemberFunctionString     "enablealphachannel"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  11577, 4
+		LineNumberAlt1              729, 28
+		GetThisMemberValueString    "faderectangle"
+		PushConstanti8              1
+		Pull                        2
+		GetMemberFunctionString     "enabletransparency"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  11578, 4
+		LineNumberAlt1              730, 28
+		GetThisMemberValueString    "faderectangle"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  11579, 4
+		LineNumberAlt1              731, 28
+		PushConstanti8              1
+		SetThisMemberValueString    "blnhide"
+		LineNumber                  11580, 4
+		LineNumberAlt1              732, 28
+		PushConstant0
+		SetThisMemberValueString    "blnshow"
+		LineNumber                  11581, 4
+		LineNumberAlt1              733, 28
+		GetThisMemberValueString    "faderate"
+		SetThisMemberValueString    "fadetimeleft"
+		PushNothing
+		Return
+	end ; method
+end ; class

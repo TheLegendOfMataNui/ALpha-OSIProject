@@ -1,0 +1,109 @@
+begin class "lego_area_man1", "gs_lego_area"
+	property "puzzle"
+
+	begin method "lego_area_man1"
+		; address: 0xd895b
+		; source: 244 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_man1.vbo" 22:22
+		MemberFunctionArgumentCheck 2
+		LineNumber                  20921, 4
+		LineNumberAlt1              22, 244
+		GetVariableValue            0              ; local
+		PushConstantStringString    "man1"
+		GetVariableValue            1              ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xd897a
+		; source: 244 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_man1.vbo" 28:31
+		MemberFunctionArgumentCheck 1
+		LineNumber                  20927, 4
+		LineNumberAlt1              28, 244
+		PushConstanti8              10
+		CallGameFunctionString      "gcmodeldirector", "setnearestmax", 1
+		Pop
+		LineNumber                  20929, 4
+		LineNumberAlt1              30, 244
+		CreateObjectString          "puzzle_manasb"
+		Dup
+		Dup
+		GetMemberFunctionString     "puzzle_manasb"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  20929, 4
+		LineNumberAlt1              30, 244
+		SetThisMemberValueString    "puzzle"
+		LineNumber                  20930, 4
+		LineNumberAlt1              31, 244
+		GetThisMemberValueString    "puzzle"
+		GetThisMemberValueString    "name"
+		Pull                        2
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xd89cb
+		; source: 244 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_man1.vbo" 36:37
+		MemberFunctionArgumentCheck 1
+		LineNumber                  20935, 4
+		LineNumberAlt1              36, 244
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  20936, 4
+		LineNumberAlt1              37, 244
+		PushNothing
+		SetThisMemberValueString    "puzzle"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xd89f1
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xd89f5
+		; source: 244 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_man1.vbo" 57:57
+		MemberFunctionArgumentCheck 2
+		LineNumber                  20956, 4
+		LineNumberAlt1              57, 244
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0xd8a11
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0xd8a15
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+end ; class

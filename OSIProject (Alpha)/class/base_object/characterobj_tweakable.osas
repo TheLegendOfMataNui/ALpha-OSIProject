@@ -1,0 +1,208 @@
+begin class "characterobj_tweakable", "base_object"
+	property "obj"
+	property "stepamount"
+	property "desc"
+
+	begin method "characterobj_tweakable"
+		; address: 0x3806f
+		; source: 38 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_tweak.vbo" 690:697
+		MemberFunctionArgumentCheck   2
+		LineNumber                    9639, 4
+		LineNumberAlt1                690, 38
+		GetVariableValue              1                       ; local
+		SetThisMemberValueString      "obj"
+		LineNumber                    9640, 4
+		LineNumberAlt1                691, 38
+		GetThisMemberValueString      "obj"
+		GetMemberValueString          "myname"
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    9641, 4
+		LineNumberAlt1                692, 38
+		PushConstantStringString      "char"
+		SetThisMemberValueString      "desc"
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    9643, 4
+		LineNumberAlt1                694, 38
+		GetThisMemberValueString      "obj"
+		GetMemberValueString          "myname"
+		SetThisMemberValueString      "desc"
+		; <-
+		BranchTarget                  1
+		LineNumber                    9645, 4
+		LineNumberAlt1                696, 38
+		PushConstantf32               0
+		SetThisMemberValueString      "stepamount"
+		LineNumber                    9646, 4
+		LineNumberAlt1                697, 38
+		PushConstantStringString      "Setting tweakable on "
+		GetThisMemberValueString      "desc"
+		ConvertToString
+		Add
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x380e9
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setpos"
+		; address: 0x380ed
+		; source: 38 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_tweak.vbo" 709:709
+		MemberFunctionArgumentCheck 4
+		LineNumber                  9658, 4
+		LineNumberAlt1              709, 38
+		GetThisMemberValueString    "obj"
+		GetVariableValue            1        ; local
+		GetVariableValue            2        ; local
+		GetVariableValue            3        ; local
+		Pull                        4
+		GetMemberFunctionString     "setpos"
+		JumpAbsolute                4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "getx"
+		; address: 0x3810f
+		; source: 38 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_tweak.vbo" 714:714
+		MemberFunctionArgumentCheck 1
+		LineNumber                  9663, 4
+		LineNumberAlt1              714, 38
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "getpos"
+		JumpAbsolute                1
+		LineNumber                  9663, 4
+		LineNumberAlt1              714, 38
+		GetMemberValueString        "x1"
+		Return
+	end ; method
+
+	begin method "gety"
+		; address: 0x38132
+		; source: 38 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_tweak.vbo" 719:719
+		MemberFunctionArgumentCheck 1
+		LineNumber                  9668, 4
+		LineNumberAlt1              719, 38
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "getpos"
+		JumpAbsolute                1
+		LineNumber                  9668, 4
+		LineNumberAlt1              719, 38
+		GetMemberValueString        "y1"
+		Return
+	end ; method
+
+	begin method "getz"
+		; address: 0x38155
+		; source: 38 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_tweak.vbo" 724:724
+		MemberFunctionArgumentCheck 1
+		LineNumber                  9673, 4
+		LineNumberAlt1              724, 38
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "getpos"
+		JumpAbsolute                1
+		LineNumber                  9673, 4
+		LineNumberAlt1              724, 38
+		GetMemberValueString        "z"
+		Return
+	end ; method
+
+	begin method "getorientationx"
+		; address: 0x38178
+		; source: 38 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_tweak.vbo" 728:728
+		MemberFunctionArgumentCheck 1
+		LineNumber                  9677, 4
+		LineNumberAlt1              728, 38
+		PushConstant0
+		Return
+	end ; method
+
+	begin method "getorientationy"
+		; address: 0x38186
+		; source: 38 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_tweak.vbo" 733:733
+		MemberFunctionArgumentCheck 1
+		LineNumber                  9682, 4
+		LineNumberAlt1              733, 38
+		GetThisMemberValueString    "obj"
+		Dup
+		GetMemberFunctionString     "getorientation"
+		JumpAbsolute                1
+		LineNumber                  9682, 4
+		LineNumberAlt1              733, 38
+		Return
+	end ; method
+
+	begin method "getorientationz"
+		; address: 0x381a6
+		; source: 38 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_tweak.vbo" 738:738
+		MemberFunctionArgumentCheck 1
+		LineNumber                  9687, 4
+		LineNumberAlt1              738, 38
+		PushConstant0
+		Return
+	end ; method
+
+	begin method "setorientation"
+		; address: 0x381b4
+		; source: 38 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_tweak.vbo" 743:743
+		MemberFunctionArgumentCheck 4
+		LineNumber                  9692, 4
+		LineNumberAlt1              743, 38
+		GetThisMemberValueString    "obj"
+		GetVariableValue            2                ; local
+		Pull                        2
+		GetMemberFunctionString     "setorientation"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "zap"
+		; address: 0x381d0
+		; source: 38 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_tweak.vbo" 749:749
+		MemberFunctionArgumentCheck  1
+		LineNumber                   9698, 4
+		LineNumberAlt1               749, 38
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "level"
+		GetMemberValueString         "cam"
+		GetVariableValue             0             ; local
+		GetThisMemberFunctionString  "getx"
+		JumpAbsolute                 1
+		LineNumber                   9698, 4
+		LineNumberAlt1               749, 38
+		GetVariableValue             0             ; local
+		GetThisMemberFunctionString  "gety"
+		JumpAbsolute                 1
+		LineNumber                   9698, 4
+		LineNumberAlt1               749, 38
+		GetVariableValue             0             ; local
+		GetThisMemberFunctionString  "getz"
+		JumpAbsolute                 1
+		LineNumber                   9698, 4
+		LineNumberAlt1               749, 38
+		Pull                         4
+		GetMemberFunctionString      "setpos"
+		JumpAbsolute                 4
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

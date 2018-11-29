@@ -1,0 +1,408 @@
+begin class "ss_shoefittersoundmarkerclass", "ss_basefilledrect"
+	property "startspot"
+	property "endspot"
+	property "filename"
+	property "soundfile"
+	property "moveamount"
+	property "arg_name_array"
+	property "arg_value_array"
+	property "blueincr"
+
+	begin method "ss_shoefittersoundmarkerclass"
+		; address: 0x74050
+		; source: 116 "C:\\projects\\lego\\Scripting\\VBO\\eventeditor/shoefitter.vbo" 1078:1094
+		MemberFunctionArgumentCheck   5
+		CreateStackVariables          1
+		LineNumber                    43491, 4
+		LineNumberAlt1                1078, 116
+		PushConstantf32               0
+		SetThisMemberValueString      "startspot"
+		LineNumber                    43492, 4
+		LineNumberAlt1                1079, 116
+		GetVariableValue              3                   ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    43493, 4
+		LineNumberAlt1                1080, 116
+		GetVariableValue              3                   ; local
+		GetMemberValueString          "name"
+		GetMemberValueString          "string"
+		SetThisMemberValueString      "filename"
+		; <-
+		BranchTarget                  0
+		LineNumber                    43495, 4
+		LineNumberAlt1                1082, 116
+		PushConstanti8                25
+		SetThisMemberValueString      "blueincr"
+		LineNumber                    43497, 4
+		LineNumberAlt1                1084, 116
+		GetVariableValue              4                   ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    43498, 4
+		LineNumberAlt1                1085, 116
+		GetVariableValue              4                   ; local
+		PushConstanti8                10
+		LessThan
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    43499, 4
+		LineNumberAlt1                1086, 116
+		PushConstantStringString      "0"
+		GetVariableValue              4                   ; local
+		ConvertToString
+		Add
+		SetVariableValue              5                   ; local
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		LineNumber                    43501, 4
+		LineNumberAlt1                1088, 116
+		GetVariableValue              4                   ; local
+		ConvertToString
+		SetVariableValue              5                   ; local
+		; <-
+		BranchTarget                  2
+		LineNumber                    43503, 4
+		LineNumberAlt1                1090, 116
+		CreateObjectString            "ss_basesound"
+		Dup
+		GetVariableValue              3                   ; local
+		GetMemberValueString          "id"
+		PushConstantStringString      "sd"
+		GetVariableValue              5                   ; local
+		Add
+		Pull                          3
+		GetMemberFunctionString       "ss_basesound"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    43503, 4
+		LineNumberAlt1                1090, 116
+		SetThisMemberValueString      "soundfile"
+		; <-
+		BranchTarget                  3
+		LineNumber                    43506, 4
+		LineNumberAlt1                1093, 116
+		GetVariableValue              1                   ; local
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    43507, 4
+		LineNumberAlt1                1094, 116
+		GetVariableValue              0                   ; local
+		PushConstanti8                43
+		GetVariableValue              1                   ; local
+		PushConstanti8                43
+		GetVariableValue              2                   ; local
+		PushConstant0
+		PushConstantColor8888         0xffffffff
+		PushConstanti16               255
+		SetRedValue
+		PushConstanti16               255
+		SetGreenValue
+		PushConstant0
+		SetBlueValue
+		PushConstanti16               255
+		SetAlphaValue
+		GetThisMemberFunctionString   "ss_basefilledrect"
+		JumpAbsolute                  7
+		Pop
+		; <-
+		BranchTarget                  4
+		PushNothing
+		Return
+	end ; method
+
+	begin method "markerinitfull"
+		; address: 0x74163
+		; source: 116 "C:\\projects\\lego\\Scripting\\VBO\\eventeditor/shoefitter.vbo" 1101:1112
+		MemberFunctionArgumentCheck 2
+		LineNumber                  43514, 4
+		LineNumberAlt1              1101, 116
+		GetThisMemberValueString    "soundfile"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  43516, 4
+		LineNumberAlt1              1103, 116
+		GetThisMemberValueString    "startspot"
+		GetThisMemberValueString    "soundfile"
+		GetMemberValueString        "length"
+		Add
+		SetThisMemberValueString    "endspot"
+		LineNumber                  43518, 4
+		LineNumberAlt1              1105, 116
+		PushConstanti8              43
+		GetThisMemberValueString    "soundfile"
+		GetMemberValueString        "length"
+		GetVariableValue            1                 ; local
+		Divide
+		PushConstanti16             532
+		Multiply
+		Add
+		SetThisMemberValueString    "x2"
+		LineNumber                  43519, 4
+		LineNumberAlt1              1106, 116
+		PushConstanti16             532
+		GetVariableValue            1                 ; local
+		PushConstanti8              100
+		Multiply
+		Divide
+		SetThisMemberValueString    "moveamount"
+		LineNumber                  43521, 4
+		LineNumberAlt1              1108, 116
+		GetVariableValue            0                 ; local
+		GetThisMemberFunctionString "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  43522, 4
+		LineNumberAlt1              1109, 116
+		GetVariableValue            0                 ; local
+		GetThisMemberFunctionString "add"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  43523, 4
+		LineNumberAlt1              1110, 116
+		GetVariableValue            0                 ; local
+		GetThisMemberFunctionString "show"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  43525, 4
+		LineNumberAlt1              1112, 116
+		GetVariableValue            0                 ; local
+		GetThisMemberFunctionString "createargarrays"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "markercleanupfull"
+		; address: 0x74213
+		; source: 116 "C:\\projects\\lego\\Scripting\\VBO\\eventeditor/shoefitter.vbo" 1117:1119
+		MemberFunctionArgumentCheck 1
+		LineNumber                  43530, 4
+		LineNumberAlt1              1117, 116
+		GetVariableValue            0             ; local
+		GetThisMemberFunctionString "hide"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  43531, 4
+		LineNumberAlt1              1118, 116
+		GetVariableValue            0             ; local
+		GetThisMemberFunctionString "remove"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  43532, 4
+		LineNumberAlt1              1119, 116
+		GetVariableValue            0             ; local
+		GetThisMemberFunctionString "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x74250
+		; source: 116 "C:\\projects\\lego\\Scripting\\VBO\\eventeditor/shoefitter.vbo" 1124:1124
+		MemberFunctionArgumentCheck 2
+		LineNumber                  43537, 4
+		LineNumberAlt1              1124, 116
+		GetVariableValue            0         ; local
+		GetThisMemberFunctionString "pulsate"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "pulsate"
+		; address: 0x74267
+		; source: 116 "C:\\projects\\lego\\Scripting\\VBO\\eventeditor/shoefitter.vbo" 1129:1132
+		MemberFunctionArgumentCheck   1
+		LineNumber                    43542, 4
+		LineNumberAlt1                1129, 116
+		GetThisMemberValueString      "mycolor"
+		GetBlueValue
+		GetThisMemberValueString      "blueincr"
+		Add
+		PushConstanti16               250
+		LessOrEqual
+		GetThisMemberValueString      "mycolor"
+		GetBlueValue
+		GetThisMemberValueString      "blueincr"
+		Add
+		PushConstant0
+		GreaterOrEqual
+		And
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    43543, 4
+		LineNumberAlt1                1130, 116
+		GetVariableValue              0             ; local
+		PushNothing
+		PushNothing
+		GetThisMemberValueString      "blueincr"
+		PushNothing
+		GetThisMemberFunctionString   "changecolor"
+		JumpAbsolute                  5
+		Pop
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    43545, 4
+		LineNumberAlt1                1132, 116
+		PushConstant0
+		GetThisMemberValueString      "blueincr"
+		Subtract
+		SetThisMemberValueString      "blueincr"
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "moveflag"
+		; address: 0x742bd
+		; source: 116 "C:\\projects\\lego\\Scripting\\VBO\\eventeditor/shoefitter.vbo" 1138:1141
+		MemberFunctionArgumentCheck   2
+		LineNumber                    43551, 4
+		LineNumberAlt1                1138, 116
+		GetThisMemberValueString      "x2"
+		GetThisMemberValueString      "moveamount"
+		GetVariableValue              1                    ; local
+		Multiply
+		Add
+		PushConstanti16               575
+		LessOrEqual
+		GetThisMemberValueString      "startspot"
+		GetVariableValue              1                    ; local
+		PushConstantf32               0.009999999776482582
+		Multiply
+		Add
+		PushConstant0
+		GreaterOrEqual
+		And
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    43552, 4
+		LineNumberAlt1                1139, 116
+		GetVariableValue              0                    ; local
+		GetThisMemberValueString      "moveamount"
+		GetVariableValue              1                    ; local
+		Multiply
+		GetThisMemberFunctionString   "changepos"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    43553, 4
+		LineNumberAlt1                1140, 116
+		GetThisMemberValueString      "startspot"
+		GetVariableValue              1                    ; local
+		PushConstantf32               0.009999999776482582
+		Multiply
+		Add
+		SetThisMemberValueString      "startspot"
+		LineNumber                    43554, 4
+		LineNumberAlt1                1141, 116
+		GetThisMemberValueString      "endspot"
+		GetVariableValue              1                    ; local
+		PushConstantf32               0.009999999776482582
+		Multiply
+		Add
+		SetThisMemberValueString      "endspot"
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "createargarrays"
+		; address: 0x7433b
+		; source: 116 "C:\\projects\\lego\\Scripting\\VBO\\eventeditor/shoefitter.vbo" 1147:1151
+		MemberFunctionArgumentCheck   1
+		LineNumber                    43560, 4
+		LineNumberAlt1                1147, 116
+		GetThisMemberValueString      "arg_name_array"
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    43561, 4
+		LineNumberAlt1                1148, 116
+		CreateArray
+		Dup
+		PushConstantStringString      "User0"
+		AppendToArray
+		Dup
+		PushConstantStringString      "User1"
+		AppendToArray
+		Dup
+		PushConstantStringString      "User2"
+		AppendToArray
+		Dup
+		PushConstantStringString      "User3"
+		AppendToArray
+		Dup
+		PushConstantStringString      "User4"
+		AppendToArray
+		SetThisMemberValueString      "arg_name_array"
+		; <-
+		BranchTarget                  0
+		LineNumber                    43563, 4
+		LineNumberAlt1                1150, 116
+		GetThisMemberValueString      "arg_value_array"
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    43564, 4
+		LineNumberAlt1                1151, 116
+		CreateArray
+		Dup
+		GetThisMemberValueString      "filename"
+		AppendToArray
+		Dup
+		PushConstantStringString      "0"
+		AppendToArray
+		Dup
+		PushConstantStringString      "0"
+		AppendToArray
+		Dup
+		PushConstantStringString      "0"
+		AppendToArray
+		Dup
+		PushConstantStringString      "0"
+		AppendToArray
+		SetThisMemberValueString      "arg_value_array"
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setargvalues"
+		; address: 0x743b1
+		; source: 116 "C:\\projects\\lego\\Scripting\\VBO\\eventeditor/shoefitter.vbo" 1157:1157
+		MemberFunctionArgumentCheck 3
+		LineNumber                  43570, 4
+		LineNumberAlt1              1157, 116
+		GetThisMemberValueString    "arg_value_array"
+		GetVariableValue            2                 ; local
+		GetVariableValue            1                 ; local
+		SetArrayValue
+		PushNothing
+		Return
+	end ; method
+end ; class

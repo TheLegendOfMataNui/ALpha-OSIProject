@@ -1,0 +1,264 @@
+begin class "lego_area_kopa", "gs_lego_area"
+	property "puzzle"
+
+	begin method "lego_area_kopa"
+		; address: 0xd688d
+		; source: 240 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_kopa.vbo" 20:20
+		MemberFunctionArgumentCheck 2
+		LineNumber                  19879, 4
+		LineNumberAlt1              20, 240
+		GetVariableValue            0              ; local
+		PushConstantStringString    "kpka"
+		GetVariableValue            1              ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xd68ac
+		; source: 240 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_kopa.vbo" 27:41
+		MemberFunctionArgumentCheck   1
+		LineNumber                    19886, 4
+		LineNumberAlt1                27, 240
+		PushConstanti8                10
+		CallGameFunctionString        "gcmodeldirector", "setnearestmax", 1
+		Pop
+		LineNumber                    19888, 4
+		LineNumberAlt1                29, 240
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actorid"
+		PushConstantStringString      "kopa"
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    19889, 4
+		LineNumberAlt1                30, 240
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "addelement"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    19895, 4
+		LineNumberAlt1                36, 240
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		GetMemberValueString          "cdtimer"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    19896, 4
+		LineNumberAlt1                37, 240
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		GetMemberValueString          "cdtimer"
+		PushConstantf32               45
+		Pull                          2
+		GetMemberFunctionString       "settime"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    19897, 4
+		LineNumberAlt1                38, 240
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		GetMemberValueString          "cdtimer"
+		Dup
+		GetMemberFunctionString       "start"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    19899, 4
+		LineNumberAlt1                40, 240
+		CreateObjectString            "puzzle_kopa7"
+		Dup
+		Dup
+		GetMemberFunctionString       "puzzle_kopa7"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    19899, 4
+		LineNumberAlt1                40, 240
+		SetThisMemberValueString      "puzzle"
+		LineNumber                    19900, 4
+		LineNumberAlt1                41, 240
+		GetThisMemberValueString      "puzzle"
+		GetThisMemberValueString      "name"
+		Pull                          2
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xd6985
+		; source: 240 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_kopa.vbo" 47:49
+		MemberFunctionArgumentCheck  1
+		LineNumber                   19906, 4
+		LineNumberAlt1               47, 240
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "hud"
+		GetMemberValueString         "cdtimer"
+		Dup
+		GetMemberFunctionString      "cleanupfull"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   19907, 4
+		LineNumberAlt1               48, 240
+		GetThisMemberValueString     "puzzle"
+		Dup
+		GetMemberFunctionString      "cleanupfull"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   19908, 4
+		LineNumberAlt1               49, 240
+		PushNothing
+		SetThisMemberValueString     "puzzle"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xd69c5
+		; source: 240 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_kopa.vbo" 55:59
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          1
+		LineNumber                    19914, 4
+		LineNumberAlt1                55, 240
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		GetMemberValueString          "cdtimer"
+		Dup
+		GetMemberFunctionString       "finished"
+		JumpAbsolute                  1
+		LineNumber                    19914, 4
+		LineNumberAlt1                55, 240
+		SetVariableValue              2                                              ; local
+		LineNumber                    19915, 4
+		LineNumberAlt1                56, 240
+		GetVariableValue              2                                              ; local
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    19916, 4
+		LineNumberAlt1                57, 240
+		PushConstantStringString      "str0"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    19916, 4
+		LineNumberAlt1                57, 240
+		PushConstantStringString      "lok0"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    19916, 4
+		LineNumberAlt1                57, 240
+		CallGameFunctionString        "gccollisionphysicsgroup", "settoaposition", 2
+		Pop
+		LineNumber                    19917, 4
+		LineNumberAlt1                58, 240
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "hud"
+		GetMemberValueString          "cdtimer"
+		Dup
+		GetMemberFunctionString       "reset"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    19918, 4
+		LineNumberAlt1                59, 240
+		GetThisMemberValueString      "puzzle"
+		Dup
+		GetMemberFunctionString       "resetpuzzle"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xd6a66
+		; source: 240 "C:\\projects\\lego\\Scripting\\VBO\\lev7/Lev7_kopa.vbo" 67:78
+		MemberFunctionArgumentCheck   2
+		LineNumber                    19926, 4
+		LineNumberAlt1                67, 240
+		GetVariableValue              1                                              ; local
+		GetMemberValueString          "eventid"
+		PushConstanti8                44
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    19927, 4
+		LineNumberAlt1                68, 240
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actorid"
+		PushConstantStringString      "kopa"
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    19928, 4
+		LineNumberAlt1                69, 240
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		PushConstantStringString      "kopa"
+		Pull                          2
+		GetMemberFunctionString       "changetoa"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    19929, 4
+		LineNumberAlt1                70, 240
+		PushConstantStringString      "str0"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    19929, 4
+		LineNumberAlt1                70, 240
+		PushConstantStringString      "lok0"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    19929, 4
+		LineNumberAlt1                70, 240
+		CallGameFunctionString        "gccollisionphysicsgroup", "settoaposition", 2
+		Pop
+		LineNumber                    19930, 4
+		LineNumberAlt1                71, 240
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "addelement"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  0
+		LineNumber                    19937, 4
+		LineNumberAlt1                78, 240
+		GetThisMemberValueString      "puzzle"
+		GetVariableValue              1                                              ; local
+		Pull                          2
+		GetMemberFunctionString       "onevent"
+		JumpAbsolute                  2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0xd6b1f
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0xd6b23
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+end ; class

@@ -1,0 +1,1258 @@
+begin class "lev2_gl3s_puzzle"
+	property "parent"
+	property "spirtarray"
+
+	begin method "lev2_gl3s_puzzle"
+		; address: 0x8948a
+		; source: 144 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_gl3s.vbo" 79:79
+		MemberFunctionArgumentCheck 2
+		LineNumber                  52689, 4
+		LineNumberAlt1              79, 144
+		GetVariableValue            1        ; local
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x8949e
+		; source: 144 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_gl3s.vbo" 87:180
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    52697, 4
+		LineNumberAlt1                87, 144
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "setunderwater"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    52698, 4
+		LineNumberAlt1                88, 144
+		CreateArray
+		Dup
+		CreateObjectString            "spirt"
+		Dup
+		PushConstantStringString      "spr0"
+		Pull                          2
+		GetMemberFunctionString       "spirt"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    52699, 4
+		LineNumberAlt1                89, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "spirt"
+		Dup
+		PushConstantStringString      "spr1"
+		Pull                          2
+		GetMemberFunctionString       "spirt"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    52700, 4
+		LineNumberAlt1                90, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "spirt"
+		Dup
+		PushConstantStringString      "spr2"
+		Pull                          2
+		GetMemberFunctionString       "spirt"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    52701, 4
+		LineNumberAlt1                91, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "spirt"
+		Dup
+		PushConstantStringString      "spr3"
+		Pull                          2
+		GetMemberFunctionString       "spirt"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    52702, 4
+		LineNumberAlt1                92, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "spirt"
+		Dup
+		PushConstantStringString      "spr4"
+		Pull                          2
+		GetMemberFunctionString       "spirt"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    52703, 4
+		LineNumberAlt1                93, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "spirt"
+		Dup
+		PushConstantStringString      "spr5"
+		Pull                          2
+		GetMemberFunctionString       "spirt"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    52704, 4
+		LineNumberAlt1                94, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "spirt"
+		Dup
+		PushConstantStringString      "spr6"
+		Pull                          2
+		GetMemberFunctionString       "spirt"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    52705, 4
+		LineNumberAlt1                95, 144
+		AppendToArray
+		SetThisMemberValueString      "spirtarray"
+		LineNumber                    52717, 4
+		LineNumberAlt1                107, 144
+		GetThisMemberValueString      "spirtarray"
+		PushConstant0
+		GetArrayValue
+		CreateArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstanti8                -10
+		PushConstant0
+		PushConstantf32               2.799999952316284
+		Subtract
+		PushConstant0
+		PushConstantf32               75.4000015258789
+		Subtract
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52709, 4
+		LineNumberAlt1                99, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstanti8                -10
+		PushConstant0
+		PushConstantf32               1.7999999523162842
+		Subtract
+		PushConstant0
+		PushConstantf32               75.4000015258789
+		Subtract
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52710, 4
+		LineNumberAlt1                100, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstanti8                -10
+		PushConstant0
+		PushConstantf32               2.799999952316284
+		Subtract
+		PushConstant0
+		PushConstantf32               75.4000015258789
+		Subtract
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52711, 4
+		LineNumberAlt1                101, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstanti8                -10
+		PushConstantf32               3.799999952316284
+		PushConstant0
+		PushConstantf32               75.4000015258789
+		Subtract
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52712, 4
+		LineNumberAlt1                102, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstanti8                -10
+		PushConstant0
+		PushConstantf32               2.799999952316284
+		Subtract
+		PushConstant0
+		PushConstantf32               75.4000015258789
+		Subtract
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52713, 4
+		LineNumberAlt1                103, 144
+		AppendToArray
+		CreateArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Pull                          3
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    52729, 4
+		LineNumberAlt1                119, 144
+		GetThisMemberValueString      "spirtarray"
+		PushConstanti8                1
+		GetArrayValue
+		CreateArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstanti8                -16
+		PushConstanti8                -16
+		PushConstanti8                -47
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52721, 4
+		LineNumberAlt1                111, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstanti8                -16
+		PushConstanti8                -15
+		PushConstanti8                -47
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52722, 4
+		LineNumberAlt1                112, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstanti8                -16
+		PushConstanti8                -16
+		PushConstanti8                -47
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52723, 4
+		LineNumberAlt1                113, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstanti8                -16
+		PushConstanti8                -11
+		PushConstanti8                -47
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52724, 4
+		LineNumberAlt1                114, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstanti8                -16
+		PushConstanti8                -16
+		PushConstanti8                -47
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52725, 4
+		LineNumberAlt1                115, 144
+		AppendToArray
+		CreateArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Pull                          3
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    52740, 4
+		LineNumberAlt1                130, 144
+		GetThisMemberValueString      "spirtarray"
+		PushConstanti8                2
+		GetArrayValue
+		CreateArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstanti8                7
+		PushConstant0
+		PushConstantf32               28.200000762939453
+		Subtract
+		PushConstanti8                -8
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52732, 4
+		LineNumberAlt1                122, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstanti8                7
+		PushConstant0
+		PushConstantf32               27.200000762939453
+		Subtract
+		PushConstanti8                -8
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52733, 4
+		LineNumberAlt1                123, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstanti8                7
+		PushConstant0
+		PushConstantf32               28.200000762939453
+		Subtract
+		PushConstanti8                -8
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52734, 4
+		LineNumberAlt1                124, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstanti8                7
+		PushConstant0
+		PushConstantf32               23.200000762939453
+		Subtract
+		PushConstanti8                -8
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52735, 4
+		LineNumberAlt1                125, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstanti8                7
+		PushConstant0
+		PushConstantf32               28.200000762939453
+		Subtract
+		PushConstanti8                -8
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52736, 4
+		LineNumberAlt1                126, 144
+		AppendToArray
+		CreateArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Pull                          3
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    52751, 4
+		LineNumberAlt1                141, 144
+		GetThisMemberValueString      "spirtarray"
+		PushConstanti8                3
+		GetArrayValue
+		CreateArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstant0
+		PushConstantf32               3.5
+		Subtract
+		PushConstant0
+		PushConstantf32               55.400001525878906
+		Subtract
+		PushConstanti8                65
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52743, 4
+		LineNumberAlt1                133, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstant0
+		PushConstantf32               3.5
+		Subtract
+		PushConstant0
+		PushConstantf32               54.400001525878906
+		Subtract
+		PushConstanti8                65
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52744, 4
+		LineNumberAlt1                134, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstant0
+		PushConstantf32               3.5
+		Subtract
+		PushConstant0
+		PushConstantf32               55.400001525878906
+		Subtract
+		PushConstanti8                65
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52745, 4
+		LineNumberAlt1                135, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstant0
+		PushConstantf32               3.5
+		Subtract
+		PushConstant0
+		PushConstantf32               50.400001525878906
+		Subtract
+		PushConstanti8                65
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52746, 4
+		LineNumberAlt1                136, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstant0
+		PushConstantf32               3.5
+		Subtract
+		PushConstant0
+		PushConstantf32               55.400001525878906
+		Subtract
+		PushConstanti8                65
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52747, 4
+		LineNumberAlt1                137, 144
+		AppendToArray
+		CreateArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Pull                          3
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    52762, 4
+		LineNumberAlt1                152, 144
+		GetThisMemberValueString      "spirtarray"
+		PushConstanti8                4
+		GetArrayValue
+		CreateArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstantf32               27.600000381469727
+		PushConstanti8                -98
+		PushConstanti16               162
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52754, 4
+		LineNumberAlt1                144, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstantf32               27.600000381469727
+		PushConstanti8                -97
+		PushConstanti16               162
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52755, 4
+		LineNumberAlt1                145, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstantf32               27.600000381469727
+		PushConstanti8                -98
+		PushConstanti16               162
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52756, 4
+		LineNumberAlt1                146, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstantf32               27.600000381469727
+		PushConstanti8                -93
+		PushConstanti16               162
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52757, 4
+		LineNumberAlt1                147, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstantf32               27.600000381469727
+		PushConstanti8                -98
+		PushConstanti16               162
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52758, 4
+		LineNumberAlt1                148, 144
+		AppendToArray
+		CreateArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Pull                          3
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    52773, 4
+		LineNumberAlt1                163, 144
+		GetThisMemberValueString      "spirtarray"
+		PushConstanti8                5
+		GetArrayValue
+		CreateArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstanti8                60
+		PushConstanti8                -121
+		PushConstanti16               222
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52765, 4
+		LineNumberAlt1                155, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstanti8                60
+		PushConstanti8                -120
+		PushConstanti16               222
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52766, 4
+		LineNumberAlt1                156, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstanti8                60
+		PushConstanti8                -121
+		PushConstanti16               222
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52767, 4
+		LineNumberAlt1                157, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstanti8                60
+		PushConstanti8                -116
+		PushConstanti16               222
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52768, 4
+		LineNumberAlt1                158, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstanti8                60
+		PushConstanti8                -121
+		PushConstanti16               222
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52769, 4
+		LineNumberAlt1                159, 144
+		AppendToArray
+		CreateArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Pull                          3
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    52785, 4
+		LineNumberAlt1                175, 144
+		GetThisMemberValueString      "spirtarray"
+		PushConstanti8                6
+		GetArrayValue
+		CreateArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstantf32               41.599998474121094
+		PushConstanti16               -154
+		PushConstanti16               326
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52777, 4
+		LineNumberAlt1                167, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstantf32               41.599998474121094
+		PushConstanti16               -153
+		PushConstanti16               326
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52778, 4
+		LineNumberAlt1                168, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstantf32               41.599998474121094
+		PushConstanti16               -154
+		PushConstanti16               326
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52779, 4
+		LineNumberAlt1                169, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstantf32               41.599998474121094
+		PushConstanti16               -149
+		PushConstanti16               326
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52780, 4
+		LineNumberAlt1                170, 144
+		AppendToArray
+		Dup
+		CreateObjectString            "basicpoint"
+		Dup
+		PushConstantf32               41.599998474121094
+		PushConstanti16               -154
+		PushConstanti16               326
+		Pull                          4
+		GetMemberFunctionString       "basicpoint"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    52781, 4
+		LineNumberAlt1                171, 144
+		AppendToArray
+		CreateArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Dup
+		PushConstantf32               0.5
+		AppendToArray
+		Pull                          3
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    52787, 4
+		LineNumberAlt1                177, 144
+		GetThisMemberValueString      "spirtarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                  ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1                  ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    52788, 4
+		LineNumberAlt1                178, 144
+		GetThisMemberValueString      "spirtarray"
+		GetVariableValue              1                  ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    52789, 4
+		LineNumberAlt1                179, 144
+		GetThisMemberValueString      "spirtarray"
+		GetVariableValue              1                  ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "settweakable"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    52790, 4
+		LineNumberAlt1                180, 144
+		GetThisMemberValueString      "spirtarray"
+		GetVariableValue              1                  ; local
+		GetArrayValue
+		GetMemberValueString          "obj"
+		GetMemberValueString          "obj"
+		PushConstantf32               0.5
+		Pull                          2
+		GetMemberFunctionString       "setscale"
+		JumpAbsolute                  2
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x89c75
+		; source: 144 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_gl3s.vbo" 188:193
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    52798, 4
+		LineNumberAlt1                188, 144
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		PushConstantf32               0
+		PushConstantf32               0.800000011920929
+		Pull                          3
+		GetMemberFunctionString       "setsurfingability"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    52799, 4
+		LineNumberAlt1                189, 144
+		GetThisMemberValueString      "spirtarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                   ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1                   ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    52800, 4
+		LineNumberAlt1                190, 144
+		GetThisMemberValueString      "spirtarray"
+		GetVariableValue              1                   ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    52801, 4
+		LineNumberAlt1                191, 144
+		GetThisMemberValueString      "spirtarray"
+		GetVariableValue              1                   ; local
+		PushNothing
+		SetArrayValue
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    52803, 4
+		LineNumberAlt1                193, 144
+		PushNothing
+		SetThisMemberValueString      "spirtarray"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x89cfc
+		; source: 144 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_gl3s.vbo" 198:199
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          1
+		LineNumber                    52808, 4
+		LineNumberAlt1                198, 144
+		GetThisMemberValueString      "spirtarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2            ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              2            ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    52809, 4
+		LineNumberAlt1                199, 144
+		GetThisMemberValueString      "spirtarray"
+		GetVariableValue              2            ; local
+		GetArrayValue
+		GetVariableValue              1            ; local
+		Pull                          2
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  2
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x89d42
+		; source: 144 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_gl3s.vbo" 206:222
+		MemberFunctionArgumentCheck   2
+		LineNumber                    52816, 4
+		LineNumberAlt1                206, 144
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                4
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    52818, 4
+		LineNumberAlt1                208, 144
+		GetVariableValue              1                                            ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		Dup
+		PushConstantStringString      "tp00"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    52819, 4
+		LineNumberAlt1                209, 144
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    52820, 4
+		LineNumberAlt1                210, 144
+		GetVariableValueGlobalString  "screenlist"
+		GetMemberValueString          "screens"
+		PushConstanti8                2
+		GetArrayValue
+		GetMemberValueString          "screen"
+		GetMemberValueString          "areas"
+		PushConstanti8                12
+		GetArrayValue
+		GetMemberValueString          "puzzle"
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "needstobeunderwater"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    52821, 4
+		LineNumberAlt1                211, 144
+		GetVariableValueGlobalString  "screenlist"
+		GetMemberValueString          "screens"
+		PushConstanti8                2
+		GetArrayValue
+		GetMemberValueString          "screen"
+		GetMemberValueString          "areas"
+		PushConstanti8                12
+		GetArrayValue
+		GetMemberValueString          "puzzle"
+		PushConstanti8                2
+		Pull                          2
+		GetMemberFunctionString       "switchit"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  0
+		Pop
+		LineNumber                    52823, 4
+		LineNumberAlt1                213, 144
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "startsurf"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Dup
+		PushConstanti8                3
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    52826, 4
+		LineNumberAlt1                216, 144
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "reseta"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		Dup
+		PushConstanti8                27
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    52829, 4
+		LineNumberAlt1                219, 144
+		GetVariableValue              0                                            ; local
+		GetThisMemberFunctionString   "resetb"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Dup
+		PushConstanti8                46
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    52832, 4
+		LineNumberAlt1                222, 144
+		PushConstantf32               1.2000000476837158
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		; <-
+		BranchTarget                  4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "reseta"
+		; address: 0x89e47
+		; source: 144 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_gl3s.vbo" 230:232
+		MemberFunctionArgumentCheck  1
+		LineNumber                   52840, 4
+		LineNumberAlt1               230, 144
+		GetThisMemberValueString     "parent"
+		GetMemberValueString         "level"
+		GetMemberValueString         "cam"
+		PushConstanti8               7
+		Pull                         2
+		GetMemberFunctionString      "setaimode"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   52841, 4
+		LineNumberAlt1               231, 144
+		PushConstantf32              1.2000000476837158
+		CallGameFunctionString       "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		LineNumber                   52842, 4
+		LineNumberAlt1               232, 144
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		GetMemberValueString         "actor"
+		PushConstantf32              0
+		PushConstanti8               1
+		Pull                         3
+		GetMemberFunctionString      "setsurfingability"
+		JumpAbsolute                 3
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "resetb"
+		; address: 0x89ea0
+		; source: 144 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_gl3s.vbo" 239:244
+		MemberFunctionArgumentCheck  1
+		LineNumber                   52849, 4
+		LineNumberAlt1               239, 144
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		GetMemberValueString         "actor"
+		PushConstant0
+		PushConstantf32              18.200000762939453
+		Subtract
+		PushConstantf32              11
+		PushConstant0
+		PushConstantf32              114
+		Subtract
+		Pull                         4
+		GetMemberFunctionString      "setpos"
+		JumpAbsolute                 4
+		Pop
+		LineNumber                   52850, 4
+		LineNumberAlt1               240, 144
+		PushConstantStringString     "tb00"
+		CallGameFunctionString       "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                   52850, 4
+		LineNumberAlt1               240, 144
+		PushConstant0
+		CallGameFunctionString       "gccollisionphysicsgroup", "toggletriggerboxentered", 2
+		Pop
+		LineNumber                   52851, 4
+		LineNumberAlt1               241, 144
+		PushConstantStringString     "tb01"
+		CallGameFunctionString       "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                   52851, 4
+		LineNumberAlt1               241, 144
+		PushConstant0
+		CallGameFunctionString       "gccollisionphysicsgroup", "toggletriggerboxentered", 2
+		Pop
+		LineNumber                   52852, 4
+		LineNumberAlt1               242, 144
+		PushConstantStringString     "tb02"
+		CallGameFunctionString       "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                   52852, 4
+		LineNumberAlt1               242, 144
+		PushConstant0
+		CallGameFunctionString       "gccollisionphysicsgroup", "toggletriggerboxentered", 2
+		Pop
+		LineNumber                   52853, 4
+		LineNumberAlt1               243, 144
+		GetThisMemberValueString     "parent"
+		GetMemberValueString         "level"
+		GetMemberValueString         "cam"
+		PushConstanti8               11
+		Pull                         2
+		GetMemberFunctionString      "setaimode"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   52854, 4
+		LineNumberAlt1               244, 144
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		Dup
+		GetMemberFunctionString      "unkill"
+		JumpAbsolute                 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x89f75
+		; source: 144 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_gl3s.vbo" 249:249
+		MemberFunctionArgumentCheck   2
+		LineNumber                    52859, 4
+		LineNumberAlt1                249, 144
+		GetVariableValue              1        ; local
+		GetMemberValueString          "button"
+		PushConstanti8                80
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    52859, 4
+		LineNumberAlt1                249, 144
+		GetVariableValue              1        ; local
+		GetMemberValueString          "event"
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    52859, 4
+		LineNumberAlt1                249, 144
+		GetVariableValue              0        ; local
+		GetThisMemberFunctionString   "cheat"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cheat"
+		; address: 0x89fb8
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "startsurf"
+		; address: 0x89fbc
+		; source: 144 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_gl3s.vbo" 260:261
+		MemberFunctionArgumentCheck  1
+		LineNumber                   52870, 4
+		LineNumberAlt1               260, 144
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		GetMemberValueString         "actor"
+		PushConstantStringString     "g032"
+		CallGameFunctionString       "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                   52870, 4
+		LineNumberAlt1               260, 144
+		PushConstanti8               -1
+		Pull                         3
+		GetMemberFunctionString      "setsplitanimation"
+		JumpAbsolute                 3
+		Pop
+		LineNumber                   52871, 4
+		LineNumberAlt1               261, 144
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		GetMemberValueString         "actor"
+		PushConstantf32              0.30000001192092896
+		PushConstantf32              0.800000011920929
+		Pull                         3
+		GetMemberFunctionString      "setsurfingability"
+		JumpAbsolute                 3
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x8a015
+		; source: 144 "C:\\projects\\lego\\Scripting\\VBO\\lev2/Lev2_gl3s.vbo" 266:266
+		MemberFunctionArgumentCheck 1
+		LineNumber                  52876, 4
+		LineNumberAlt1              266, 144
+		PushNothing
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+end ; class

@@ -1,0 +1,672 @@
+begin class "digclassp", "base_screen"
+	property "digarray"
+	property "digplanes"
+	property "disabledplanes"
+	property "disabledmoveables"
+	property "area"
+	property "moveobj1"
+	property "moveobj2"
+	property "moveobj3"
+	property "moveobj4"
+	property "trigpln1"
+	property "trigpln2"
+	property "trigpln3"
+	property "trigpln4"
+
+	begin method "digclassp"
+		; address: 0x5e257
+		; source: 94 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_scrpp.vbo" 109:117
+		MemberFunctionArgumentCheck 10
+		LineNumber                  33798, 4
+		LineNumberAlt1              109, 94
+		GetVariableValue            1          ; local
+		SetThisMemberValueString    "area"
+		LineNumber                  33799, 4
+		LineNumberAlt1              110, 94
+		GetVariableValue            2          ; local
+		SetThisMemberValueString    "moveobj1"
+		LineNumber                  33800, 4
+		LineNumberAlt1              111, 94
+		GetVariableValue            3          ; local
+		SetThisMemberValueString    "moveobj2"
+		LineNumber                  33801, 4
+		LineNumberAlt1              112, 94
+		GetVariableValue            4          ; local
+		SetThisMemberValueString    "moveobj3"
+		LineNumber                  33802, 4
+		LineNumberAlt1              113, 94
+		GetVariableValue            5          ; local
+		SetThisMemberValueString    "moveobj4"
+		LineNumber                  33803, 4
+		LineNumberAlt1              114, 94
+		GetVariableValue            6          ; local
+		SetThisMemberValueString    "trigpln1"
+		LineNumber                  33804, 4
+		LineNumberAlt1              115, 94
+		GetVariableValue            7          ; local
+		SetThisMemberValueString    "trigpln2"
+		LineNumber                  33805, 4
+		LineNumberAlt1              116, 94
+		GetVariableValue            8          ; local
+		SetThisMemberValueString    "trigpln3"
+		LineNumber                  33806, 4
+		LineNumberAlt1              117, 94
+		GetVariableValue            9          ; local
+		SetThisMemberValueString    "trigpln4"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x5e2eb
+		; source: 94 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_scrpp.vbo" 123:156
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          3
+		LineNumber                    33812, 4
+		LineNumberAlt1                123, 94
+		PushConstanti8                100
+		CallGameFunctionString        "gcareadirector", "setnearestmax", 1
+		Pop
+		LineNumber                    33814, 4
+		LineNumberAlt1                125, 94
+		CreateArray
+		SetThisMemberValueString      "digarray"
+		LineNumber                    33815, 4
+		LineNumberAlt1                126, 94
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		GetThisMemberValueString      "moveobj1"
+		GetThisMemberValueString      "area"
+		Pull                          3
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    33815, 4
+		LineNumberAlt1                126, 94
+		SetVariableValue              1                                    ; local
+		LineNumber                    33816, 4
+		LineNumberAlt1                127, 94
+		GetThisMemberValueString      "digarray"
+		GetVariableValue              1                                    ; local
+		AppendToArray
+		LineNumber                    33817, 4
+		LineNumberAlt1                128, 94
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		GetThisMemberValueString      "moveobj2"
+		GetThisMemberValueString      "area"
+		Pull                          3
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    33817, 4
+		LineNumberAlt1                128, 94
+		SetVariableValue              1                                    ; local
+		LineNumber                    33818, 4
+		LineNumberAlt1                129, 94
+		GetThisMemberValueString      "digarray"
+		GetVariableValue              1                                    ; local
+		AppendToArray
+		LineNumber                    33819, 4
+		LineNumberAlt1                130, 94
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		GetThisMemberValueString      "moveobj3"
+		GetThisMemberValueString      "area"
+		Pull                          3
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    33819, 4
+		LineNumberAlt1                130, 94
+		SetVariableValue              1                                    ; local
+		LineNumber                    33820, 4
+		LineNumberAlt1                131, 94
+		GetThisMemberValueString      "digarray"
+		GetVariableValue              1                                    ; local
+		AppendToArray
+		LineNumber                    33821, 4
+		LineNumberAlt1                132, 94
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		GetThisMemberValueString      "moveobj4"
+		GetThisMemberValueString      "area"
+		Pull                          3
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    33821, 4
+		LineNumberAlt1                132, 94
+		SetVariableValue              1                                    ; local
+		LineNumber                    33822, 4
+		LineNumberAlt1                133, 94
+		GetThisMemberValueString      "digarray"
+		GetVariableValue              1                                    ; local
+		AppendToArray
+		LineNumber                    33825, 4
+		LineNumberAlt1                136, 94
+		CreateArray
+		SetThisMemberValueString      "digplanes"
+		LineNumber                    33826, 4
+		LineNumberAlt1                137, 94
+		CreateObjectString            "lego_triggerobject"
+		Dup
+		GetThisMemberValueString      "trigpln1"
+		GetThisMemberValueString      "area"
+		PushConstant0
+		Pull                          4
+		GetMemberFunctionString       "lego_triggerobject"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    33826, 4
+		LineNumberAlt1                137, 94
+		SetVariableValue              2                                    ; local
+		LineNumber                    33827, 4
+		LineNumberAlt1                138, 94
+		GetThisMemberValueString      "digplanes"
+		GetVariableValue              2                                    ; local
+		AppendToArray
+		LineNumber                    33828, 4
+		LineNumberAlt1                139, 94
+		CreateObjectString            "lego_triggerobject"
+		Dup
+		GetThisMemberValueString      "trigpln2"
+		GetThisMemberValueString      "area"
+		PushConstant0
+		Pull                          4
+		GetMemberFunctionString       "lego_triggerobject"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    33828, 4
+		LineNumberAlt1                139, 94
+		SetVariableValue              2                                    ; local
+		LineNumber                    33829, 4
+		LineNumberAlt1                140, 94
+		GetThisMemberValueString      "digplanes"
+		GetVariableValue              2                                    ; local
+		AppendToArray
+		LineNumber                    33830, 4
+		LineNumberAlt1                141, 94
+		CreateObjectString            "lego_triggerobject"
+		Dup
+		GetThisMemberValueString      "trigpln3"
+		GetThisMemberValueString      "area"
+		PushConstant0
+		Pull                          4
+		GetMemberFunctionString       "lego_triggerobject"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    33830, 4
+		LineNumberAlt1                141, 94
+		SetVariableValue              2                                    ; local
+		LineNumber                    33831, 4
+		LineNumberAlt1                142, 94
+		GetThisMemberValueString      "digplanes"
+		GetVariableValue              2                                    ; local
+		AppendToArray
+		LineNumber                    33832, 4
+		LineNumberAlt1                143, 94
+		CreateObjectString            "lego_triggerobject"
+		Dup
+		GetThisMemberValueString      "trigpln4"
+		GetThisMemberValueString      "area"
+		PushConstant0
+		Pull                          4
+		GetMemberFunctionString       "lego_triggerobject"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    33832, 4
+		LineNumberAlt1                143, 94
+		SetVariableValue              2                                    ; local
+		LineNumber                    33833, 4
+		LineNumberAlt1                144, 94
+		GetThisMemberValueString      "digplanes"
+		GetVariableValue              2                                    ; local
+		AppendToArray
+		LineNumber                    33834, 4
+		LineNumberAlt1                145, 94
+		CreateArray
+		SetThisMemberValueString      "disabledplanes"
+		LineNumber                    33835, 4
+		LineNumberAlt1                146, 94
+		CreateArray
+		SetThisMemberValueString      "disabledmoveables"
+		LineNumber                    33837, 4
+		LineNumberAlt1                148, 94
+		GetThisMemberValueString      "digarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              3                                    ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              3                                    ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    33838, 4
+		LineNumberAlt1                149, 94
+		GetThisMemberValueString      "digarray"
+		GetVariableValue              3                                    ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    33839, 4
+		LineNumberAlt1                150, 94
+		GetThisMemberValueString      "digarray"
+		GetVariableValue              3                                    ; local
+		GetArrayValue
+		PushConstanti8                4
+		PushConstanti8                4
+		PushConstanti8                4
+		Pull                          4
+		GetMemberFunctionString       "setresponse"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    33840, 4
+		LineNumberAlt1                151, 94
+		GetThisMemberValueString      "digarray"
+		GetVariableValue              3                                    ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "disablecollisions"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             3
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    33843, 4
+		LineNumberAlt1                154, 94
+		GetThisMemberValueString      "digplanes"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              3                                    ; local
+		; <-
+		BranchTarget                  2
+		Dup
+		GetVariableValue              3                                    ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    33844, 4
+		LineNumberAlt1                155, 94
+		GetThisMemberValueString      "digplanes"
+		GetVariableValue              3                                    ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    33845, 4
+		LineNumberAlt1                156, 94
+		GetThisMemberValueString      "digplanes"
+		GetVariableValue              3                                    ; local
+		GetArrayValue
+		PushConstanti8                3
+		PushConstanti8                3
+		Pull                          3
+		GetMemberFunctionString       "setresponse"
+		JumpAbsolute                  3
+		Pop
+		IncrementVariable             3
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x5e5dc
+		; source: 94 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_scrpp.vbo" 162:164
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          2
+		LineNumber                    33851, 4
+		LineNumberAlt1                162, 94
+		GetThisMemberValueString      "digplanes"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2           ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              2           ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    33852, 4
+		LineNumberAlt1                163, 94
+		GetThisMemberValueString      "digplanes"
+		GetVariableValue              2           ; local
+		GetArrayValue
+		SetVariableValue              3           ; local
+		LineNumber                    33853, 4
+		LineNumberAlt1                164, 94
+		GetVariableValue              3           ; local
+		GetVariableValue              1           ; local
+		Pull                          2
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  2
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x5e632
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x5e636
+		; source: 94 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_scrpp.vbo" 175:197
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          3
+		LineNumber                    33864, 4
+		LineNumberAlt1                175, 94
+		GetVariableValue              1                                             ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                4
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    33866, 4
+		LineNumberAlt1                177, 94
+		GetVariableValue              1                                             ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		SetVariableValue              2                                             ; local
+		LineNumber                    33867, 4
+		LineNumberAlt1                178, 94
+		GetVariableValue              1                                             ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		SetVariableValue              3                                             ; local
+		LineNumber                    33868, 4
+		LineNumberAlt1                179, 94
+		GetThisMemberValueString      "digplanes"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              4                                             ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              4                                             ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    33869, 4
+		LineNumberAlt1                180, 94
+		GetVariableValue              2                                             ; local
+		GetThisMemberValueString      "digplanes"
+		GetVariableValue              4                                             ; local
+		GetArrayValue
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    33870, 4
+		LineNumberAlt1                181, 94
+		GetVariableValue              3                                             ; local
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    33871, 4
+		LineNumberAlt1                182, 94
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		Dup
+		GetMemberFunctionString       "getcurrentanimationid"
+		JumpAbsolute                  1
+		LineNumber                    33871, 4
+		LineNumberAlt1                182, 94
+		PushConstantStringString      "o013"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    33871, 4
+		LineNumberAlt1                182, 94
+		EqualTo
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		Dup
+		GetMemberFunctionString       "getcurrentanimationid"
+		JumpAbsolute                  1
+		LineNumber                    33871, 4
+		LineNumberAlt1                182, 94
+		PushConstantStringString      "o014"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    33871, 4
+		LineNumberAlt1                182, 94
+		EqualTo
+		Or
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    33872, 4
+		LineNumberAlt1                183, 94
+		CallGameFunctionString        "gcstaticsoundsptrarray", "playtablesound", 2
+		Pop
+		LineNumber                    33873, 4
+		LineNumberAlt1                184, 94
+		GetThisMemberValueString      "digplanes"
+		GetVariableValue              4                                             ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "setcollide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    33874, 4
+		LineNumberAlt1                185, 94
+		GetThisMemberValueString      "digplanes"
+		GetVariableValue              4                                             ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    33875, 4
+		LineNumberAlt1                186, 94
+		GetThisMemberValueString      "digarray"
+		GetVariableValue              4                                             ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "hide"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    33876, 4
+		LineNumberAlt1                187, 94
+		GetThisMemberValueString      "disabledmoveables"
+		GetThisMemberValueString      "digarray"
+		GetVariableValue              4                                             ; local
+		GetArrayValue
+		AppendToArray
+		LineNumber                    33877, 4
+		LineNumberAlt1                188, 94
+		GetThisMemberValueString      "disabledplanes"
+		GetThisMemberValueString      "digplanes"
+		GetVariableValue              4                                             ; local
+		GetArrayValue
+		AppendToArray
+		; <-
+		BranchTarget                  1
+		IncrementVariable             4
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		Pop
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Dup
+		PushConstanti8                41
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    33885, 4
+		LineNumberAlt1                196, 94
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		PushConstanti8                120
+		Pull                          2
+		GetMemberFunctionString       "setgrapplinghookdistance"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    33886, 4
+		LineNumberAlt1                197, 94
+		PushConstanti32               4194304
+		PushConstanti8                1
+		CallGameFunctionString        "gcsaver", "setcondition", 2
+		Pop
+		; <-
+		BranchTarget                  4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x5e7f8
+		; source: 94 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_scrpp.vbo" 204:214
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    33893, 4
+		LineNumberAlt1                204, 94
+		GetThisMemberValueString      "digarray"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1             ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1             ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    33894, 4
+		LineNumberAlt1                205, 94
+		GetThisMemberValueString      "digarray"
+		GetVariableValue              1             ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    33895, 4
+		LineNumberAlt1                206, 94
+		GetThisMemberValueString      "digarray"
+		GetVariableValue              1             ; local
+		PushNothing
+		SetArrayValue
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    33897, 4
+		LineNumberAlt1                208, 94
+		PushNothing
+		SetThisMemberValueString      "digarray"
+		LineNumber                    33899, 4
+		LineNumberAlt1                210, 94
+		GetThisMemberValueString      "digplanes"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1             ; local
+		; <-
+		BranchTarget                  2
+		Dup
+		GetVariableValue              1             ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    33900, 4
+		LineNumberAlt1                211, 94
+		GetThisMemberValueString      "digplanes"
+		GetVariableValue              1             ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    33901, 4
+		LineNumberAlt1                212, 94
+		GetThisMemberValueString      "digplanes"
+		GetVariableValue              1             ; local
+		PushNothing
+		SetArrayValue
+		IncrementVariable             1
+		BranchAlwaysTarget            2, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		Pop
+		LineNumber                    33903, 4
+		LineNumberAlt1                214, 94
+		PushNothing
+		SetThisMemberValueString      "digplanes"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupshort"
+		; address: 0x5e8b6
+		; source: 94 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_scrpp.vbo" 219:219
+		MemberFunctionArgumentCheck 1
+		LineNumber                  33908, 4
+		LineNumberAlt1              219, 94
+		GetVariableValue            0             ; local
+		GetThisMemberFunctionString "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "show"
+		; address: 0x5e8cd
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hide"
+		; address: 0x5e8d1
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+end ; class

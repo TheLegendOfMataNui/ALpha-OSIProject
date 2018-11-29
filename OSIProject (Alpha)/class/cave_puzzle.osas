@@ -1,0 +1,199 @@
+begin class "cave_puzzle"
+	property "parent"
+	property "showmask"
+	property "maskx"
+
+	begin method "cave_puzzle"
+		; address: 0xb92d5
+		; source: 205 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_cave.vbo" 84:84
+		MemberFunctionArgumentCheck 2
+		LineNumber                  7827, 4
+		LineNumberAlt1              84, 205
+		GetVariableValue            1        ; local
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0xb92e9
+		; source: 205 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_cave.vbo" 91:99
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    7834, 4
+		LineNumberAlt1                91, 205
+		PushConstanti8                1
+		SetThisMemberValueString      "showmask"
+		LineNumber                    7835, 4
+		LineNumberAlt1                92, 205
+		PushConstantStringString      "mask"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    7835, 4
+		LineNumberAlt1                92, 205
+		CallGameFunctionString        "gcsaver", "findmask", 1
+		LineNumber                    7835, 4
+		LineNumberAlt1                92, 205
+		SetVariableValue              1                                            ; local
+		LineNumber                    7836, 4
+		LineNumberAlt1                93, 205
+		GetVariableValue              1                                            ; local
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    7837, 4
+		LineNumberAlt1                94, 205
+		PushConstant0
+		SetThisMemberValueString      "showmask"
+		; <-
+		BranchTarget                  0
+		LineNumber                    7839, 4
+		LineNumberAlt1                96, 205
+		GetThisMemberValueString      "showmask"
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    7840, 4
+		LineNumberAlt1                97, 205
+		CreateObjectString            "lego_pickup"
+		Dup
+		PushConstantStringString      "mask"
+		PushConstanti8                12
+		PushConstanti8                1
+		PushConstantStringString      "item"
+		PushConstanti8                2
+		PushConstanti8                1
+		Pull                          7
+		GetMemberFunctionString       "lego_pickup"
+		JumpAbsolute                  7
+		Pop
+		LineNumber                    7840, 4
+		LineNumberAlt1                97, 205
+		SetThisMemberValueString      "maskx"
+		LineNumber                    7841, 4
+		LineNumberAlt1                98, 205
+		GetThisMemberValueString      "maskx"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    7842, 4
+		LineNumberAlt1                99, 205
+		GetThisMemberValueString      "maskx"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0xb93b5
+		; source: 205 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_cave.vbo" 105:107
+		MemberFunctionArgumentCheck   1
+		LineNumber                    7848, 4
+		LineNumberAlt1                105, 205
+		GetThisMemberValueString      "maskx"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    7849, 4
+		LineNumberAlt1                106, 205
+		GetThisMemberValueString      "maskx"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    7850, 4
+		LineNumberAlt1                107, 205
+		PushNothing
+		SetThisMemberValueString      "maskx"
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0xb93ee
+		; source: 205 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_cave.vbo" 113:113
+		MemberFunctionArgumentCheck 1
+		LineNumber                  7856, 4
+		LineNumberAlt1              113, 205
+		PushNothing
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0xb9400
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0xb9404
+		; source: 205 "C:\\projects\\lego\\Scripting\\VBO\\lev5/Lev5_cave.vbo" 124:129
+		MemberFunctionArgumentCheck   2
+		LineNumber                    7867, 4
+		LineNumberAlt1                124, 205
+		GetVariableValue              1                                        ; local
+		GetMemberValueString          "eventid"
+		Dup
+		PushConstanti8                46
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    7869, 4
+		LineNumberAlt1                126, 205
+		PushConstantf32               1.2000000476837158
+		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		Pop
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		Dup
+		PushConstanti8                27
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    7871, 4
+		LineNumberAlt1                128, 205
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		GetMemberValueString          "actor"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "enterstartid"
+		GetThisMemberValueString      "parent"
+		GetMemberValueString          "enterlookid"
+		Pull                          3
+		GetMemberFunctionString       "gotopos"
+		JumpAbsolute                  3
+		Pop
+		LineNumber                    7872, 4
+		LineNumberAlt1                129, 205
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "unkill"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0xb947e
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+end ; class

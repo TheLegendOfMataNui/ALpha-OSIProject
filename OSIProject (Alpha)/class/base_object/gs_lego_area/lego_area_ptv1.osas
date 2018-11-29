@@ -1,0 +1,162 @@
+begin class "lego_area_ptv1", "gs_lego_area"
+	property "puzzle"
+
+	begin method "lego_area_ptv1"
+		; address: 0x68876
+		; source: 103 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_ptv1.vbo" 19:20
+		MemberFunctionArgumentCheck 2
+		LineNumber                  38139, 4
+		LineNumberAlt1              19, 103
+		GetVariableValue            0              ; local
+		PushConstantStringString    "ptv1"
+		GetVariableValue            1              ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  38140, 4
+		LineNumberAlt1              20, 103
+		CreateObjectString          "ptv1_puzzle"
+		Dup
+		GetVariableValue            0              ; local
+		Pull                        2
+		GetMemberFunctionString     "ptv1_puzzle"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  38140, 4
+		LineNumberAlt1              20, 103
+		SetThisMemberValueString    "puzzle"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x688bb
+		; source: 103 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_ptv1.vbo" 27:28
+		MemberFunctionArgumentCheck 1
+		LineNumber                  38147, 4
+		LineNumberAlt1              27, 103
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  38148, 4
+		LineNumberAlt1              28, 103
+		CreateArray
+		Dup
+		PushConstanti16             180
+		AppendToArray
+		Dup
+		PushConstanti16             -356
+		AppendToArray
+		Dup
+		PushConstant0
+		PushConstantf32             51.400001525878906
+		Subtract
+		AppendToArray
+		Dup
+		PushConstanti16             689
+		AppendToArray
+		SetThisMemberValueString    "startingarea"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "show"
+		; address: 0x688f8
+		; source: 103 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_ptv1.vbo" 33:35
+		MemberFunctionArgumentCheck 1
+		LineNumber                  38153, 4
+		LineNumberAlt1              33, 103
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_show"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  38154, 4
+		LineNumberAlt1              34, 103
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  38155, 4
+		LineNumberAlt1              35, 103
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hide"
+		; address: 0x68937
+		; source: 103 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_ptv1.vbo" 40:41
+		MemberFunctionArgumentCheck 1
+		LineNumber                  38160, 4
+		LineNumberAlt1              40, 103
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_hide"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  38161, 4
+		LineNumberAlt1              41, 103
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "hide"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x68962
+		; source: 103 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_ptv1.vbo" 46:46
+		MemberFunctionArgumentCheck 2
+		LineNumber                  38166, 4
+		LineNumberAlt1              46, 103
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "process"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x6897e
+		; source: 103 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_ptv1.vbo" 51:51
+		MemberFunctionArgumentCheck 2
+		LineNumber                  38171, 4
+		LineNumberAlt1              51, 103
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1         ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x6899a
+		; source: 103 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_ptv1.vbo" 56:56
+		MemberFunctionArgumentCheck 2
+		LineNumber                  38176, 4
+		LineNumberAlt1              56, 103
+		GetThisMemberValueString    "puzzle"
+		GetVariableValue            1        ; local
+		Pull                        2
+		GetMemberFunctionString     "input"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

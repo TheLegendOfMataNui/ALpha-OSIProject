@@ -1,0 +1,347 @@
+begin class "l1a1_puzzle", "base_object"
+	property "parent"
+	property "clawpickup"
+	property "showclaw"
+	property "hooks"
+	property "pickpickup"
+	property "showpick"
+
+	begin method "l1a1_puzzle"
+		; address: 0x69d1a
+		; source: 106 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_l1a1p.vbo" 118:118
+		MemberFunctionArgumentCheck 2
+		LineNumber                  38839, 4
+		LineNumberAlt1              118, 106
+		GetVariableValue            1        ; local
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x69d2e
+		; source: 106 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_l1a1p.vbo" 126:154
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          2
+		LineNumber                    38847, 4
+		LineNumberAlt1                126, 106
+		CreateArray
+		Dup
+		CreateObjectString            "lego_moveableobject"
+		Dup
+		PushConstantStringString      "hot2"
+		Pull                          2
+		GetMemberFunctionString       "lego_moveableobject"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    38849, 4
+		LineNumberAlt1                128, 106
+		AppendToArray
+		SetThisMemberValueString      "hooks"
+		LineNumber                    38851, 4
+		LineNumberAlt1                130, 106
+		GetThisMemberValueString      "hooks"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                                            ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1                                            ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    38852, 4
+		LineNumberAlt1                131, 106
+		GetThisMemberValueString      "hooks"
+		GetVariableValue              1                                            ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    38853, 4
+		LineNumberAlt1                132, 106
+		GetThisMemberValueString      "hooks"
+		GetVariableValue              1                                            ; local
+		GetArrayValue
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "setmytargetingflags"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    38854, 4
+		LineNumberAlt1                133, 106
+		GetThisMemberValueString      "hooks"
+		GetVariableValue              1                                            ; local
+		GetArrayValue
+		PushConstanti8                1
+		PushConstanti8                1
+		PushConstanti8                1
+		Pull                          4
+		GetMemberFunctionString       "setresponse"
+		JumpAbsolute                  4
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    38859, 4
+		LineNumberAlt1                138, 106
+		PushConstantStringString      "claw"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    38859, 4
+		LineNumberAlt1                138, 106
+		CallGameFunctionString        "gcsaver", "finditem", 1
+		LineNumber                    38859, 4
+		LineNumberAlt1                138, 106
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    38860, 4
+		LineNumberAlt1                139, 106
+		CreateObjectString            "lego_pickup"
+		Dup
+		PushConstantStringString      "claw"
+		PushConstant0
+		PushConstanti8                3
+		PushConstantStringString      "item"
+		PushConstanti8                1
+		PushConstanti8                3
+		Pull                          7
+		GetMemberFunctionString       "lego_pickup"
+		JumpAbsolute                  7
+		Pop
+		LineNumber                    38860, 4
+		LineNumberAlt1                139, 106
+		SetThisMemberValueString      "clawpickup"
+		LineNumber                    38861, 4
+		LineNumberAlt1                140, 106
+		GetThisMemberValueString      "clawpickup"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    38862, 4
+		LineNumberAlt1                141, 106
+		GetThisMemberValueString      "clawpickup"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  2
+		LineNumber                    38865, 4
+		LineNumberAlt1                144, 106
+		PushConstantStringString      "pic1"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    38865, 4
+		LineNumberAlt1                144, 106
+		CallGameFunctionString        "gcsaver", "finditem", 1
+		LineNumber                    38865, 4
+		LineNumberAlt1                144, 106
+		SetVariableValue              2                                            ; local
+		LineNumber                    38866, 4
+		LineNumberAlt1                145, 106
+		GetVariableValue              2                                            ; local
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    38867, 4
+		LineNumberAlt1                146, 106
+		PushConstant0
+		SetThisMemberValueString      "showpick"
+		BranchAlwaysTarget            4, 0
+		; ->
+		; <-
+		BranchTarget                  3
+		LineNumber                    38869, 4
+		LineNumberAlt1                148, 106
+		PushConstanti8                1
+		SetThisMemberValueString      "showpick"
+		; <-
+		BranchTarget                  4
+		LineNumber                    38871, 4
+		LineNumberAlt1                150, 106
+		GetThisMemberValueString      "showpick"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    38872, 4
+		LineNumberAlt1                151, 106
+		CreateObjectString            "lego_pickup"
+		Dup
+		PushConstantStringString      "pic1"
+		PushConstant0
+		PushConstanti8                5
+		PushConstantStringString      "item"
+		PushConstanti8                11
+		PushConstanti8                1
+		Pull                          7
+		GetMemberFunctionString       "lego_pickup"
+		JumpAbsolute                  7
+		Pop
+		LineNumber                    38872, 4
+		LineNumberAlt1                151, 106
+		SetThisMemberValueString      "pickpickup"
+		LineNumber                    38873, 4
+		LineNumberAlt1                152, 106
+		GetThisMemberValueString      "pickpickup"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    38874, 4
+		LineNumberAlt1                153, 106
+		GetThisMemberValueString      "pickpickup"
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    38875, 4
+		LineNumberAlt1                154, 106
+		GetThisMemberValueString      "pickpickup"
+		PushConstanti16               8192
+		Pull                          2
+		GetMemberFunctionString       "setcondition"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  5
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x69f40
+		; source: 106 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_l1a1p.vbo" 164:184
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    38885, 4
+		LineNumberAlt1                164, 106
+		GetThisMemberValueString      "pickpickup"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    38886, 4
+		LineNumberAlt1                165, 106
+		GetThisMemberValueString      "pickpickup"
+		GetMemberValueString          "objshown"
+		SetThisMemberValueString      "showpick"
+		LineNumber                    38887, 4
+		LineNumberAlt1                166, 106
+		GetThisMemberValueString      "pickpickup"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    38888, 4
+		LineNumberAlt1                167, 106
+		PushNothing
+		SetThisMemberValueString      "pickpickup"
+		; <-
+		BranchTarget                  0
+		LineNumber                    38891, 4
+		LineNumberAlt1                170, 106
+		GetThisMemberValueString      "clawpickup"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    38892, 4
+		LineNumberAlt1                171, 106
+		GetThisMemberValueString      "clawpickup"
+		GetMemberValueString          "objshown"
+		SetThisMemberValueString      "showclaw"
+		LineNumber                    38893, 4
+		LineNumberAlt1                172, 106
+		GetThisMemberValueString      "showclaw"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    38894, 4
+		LineNumberAlt1                173, 106
+		PushConstanti32               134217728
+		PushConstanti8                1
+		CallGameFunctionString        "gcsaver", "setcondition", 2
+		Pop
+		; <-
+		BranchTarget                  1
+		LineNumber                    38896, 4
+		LineNumberAlt1                175, 106
+		GetThisMemberValueString      "clawpickup"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    38897, 4
+		LineNumberAlt1                176, 106
+		PushNothing
+		SetThisMemberValueString      "clawpickup"
+		; <-
+		BranchTarget                  2
+		LineNumber                    38900, 4
+		LineNumberAlt1                179, 106
+		GetThisMemberValueString      "hooks"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                            ; local
+		; <-
+		BranchTarget                  3
+		Dup
+		GetVariableValue              1                            ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    38901, 4
+		LineNumberAlt1                180, 106
+		GetThisMemberValueString      "hooks"
+		GetVariableValue              1                            ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    38902, 4
+		LineNumberAlt1                181, 106
+		GetThisMemberValueString      "hooks"
+		GetVariableValue              1                            ; local
+		PushNothing
+		SetArrayValue
+		IncrementVariable             1
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		Pop
+		LineNumber                    38905, 4
+		LineNumberAlt1                184, 106
+		PushNothing
+		SetThisMemberValueString      "hooks"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x6a05c
+		; source: 106 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_l1a1p.vbo" 189:189
+		MemberFunctionArgumentCheck 1
+		LineNumber                  38910, 4
+		LineNumberAlt1              189, 106
+		PushNothing
+		SetThisMemberValueString    "parent"
+		PushNothing
+		Return
+	end ; method
+end ; class

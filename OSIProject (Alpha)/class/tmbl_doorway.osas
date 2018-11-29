@@ -1,0 +1,77 @@
+begin class "tmbl_doorway"
+	property "startid"
+	property "lookid"
+	property "trigger"
+	property "gotodoor"
+
+	begin method "tmbl_doorway"
+		; address: 0x63ccc
+		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 129:132
+		MemberFunctionArgumentCheck 5
+		LineNumber                  36082, 4
+		LineNumberAlt1              129, 99
+		GetVariableValue            1                                            ; local
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  36082, 4
+		LineNumberAlt1              129, 99
+		SetThisMemberValueString    "startid"
+		LineNumber                  36083, 4
+		LineNumberAlt1              130, 99
+		GetVariableValue            2                                            ; local
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  36083, 4
+		LineNumberAlt1              130, 99
+		SetThisMemberValueString    "lookid"
+		LineNumber                  36084, 4
+		LineNumberAlt1              131, 99
+		CreateObjectString          "lego_triggerobject"
+		Dup
+		GetVariableValue            3                                            ; local
+		GetVariableValue            4                                            ; local
+		PushConstant0
+		Pull                        4
+		GetMemberFunctionString     "lego_triggerobject"
+		JumpAbsolute                4
+		Pop
+		LineNumber                  36084, 4
+		LineNumberAlt1              131, 99
+		SetThisMemberValueString    "trigger"
+		LineNumber                  36085, 4
+		LineNumberAlt1              132, 99
+		PushConstanti8              -1
+		SetThisMemberValueString    "gotodoor"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x63d49
+		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 137:138
+		MemberFunctionArgumentCheck 1
+		LineNumber                  36090, 4
+		LineNumberAlt1              137, 99
+		GetThisMemberValueString    "trigger"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  36091, 4
+		LineNumberAlt1              138, 99
+		PushNothing
+		SetThisMemberValueString    "trigger"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setgotodoor"
+		; address: 0x63d6f
+		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 142:142
+		MemberFunctionArgumentCheck 2
+		LineNumber                  36095, 4
+		LineNumberAlt1              142, 99
+		GetVariableValue            1          ; local
+		SetThisMemberValueString    "gotodoor"
+		PushNothing
+		Return
+	end ; method
+end ; class

@@ -1,0 +1,180 @@
+begin class "lego_area_mud0", "gs_lego_area"
+	property "mudpuzzle"
+
+	begin method "lego_area_mud0"
+		; address: 0x65ecb
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 117:120
+		MemberFunctionArgumentCheck 2
+		LineNumber                  37038, 4
+		LineNumberAlt1              117, 102
+		GetVariableValue            0                                    ; local
+		PushConstantStringString    "mud0"
+		GetVariableValue            1                                    ; local
+		PushConstant0
+		PushConstant0
+		GetThisMemberFunctionString "gs_lego_area"
+		JumpAbsolute                5
+		Pop
+		LineNumber                  37040, 4
+		LineNumberAlt1              119, 102
+		GetVariableValue            0                                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37041, 4
+		LineNumberAlt1              120, 102
+		PushConstanti8              50
+		CallGameFunctionString      "gcareadirector", "setnearestmax", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x65f10
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 128:133
+		MemberFunctionArgumentCheck  1
+		LineNumber                   37049, 4
+		LineNumberAlt1               128, 102
+		GetVariableValue             0                                       ; local
+		GetThisMemberFunctionString  "lego_area_show"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   37050, 4
+		LineNumberAlt1               129, 102
+		CreateObjectString           "mudmonster_puzzle"
+		Dup
+		GetVariableValue             0                                       ; local
+		Pull                         2
+		GetMemberFunctionString      "mudmonster_puzzle"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   37050, 4
+		LineNumberAlt1               129, 102
+		SetThisMemberValueString     "mudpuzzle"
+		LineNumber                   37051, 4
+		LineNumberAlt1               130, 102
+		GetThisMemberValueString     "mudpuzzle"
+		Dup
+		GetMemberFunctionString      "initfull"
+		JumpAbsolute                 1
+		Pop
+		LineNumber                   37052, 4
+		LineNumberAlt1               131, 102
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		GetMemberValueString         "actor"
+		PushConstanti8               2
+		Pull                         2
+		GetMemberFunctionString      "setcontext"
+		JumpAbsolute                 2
+		Pop
+		LineNumber                   37053, 4
+		LineNumberAlt1               132, 102
+		PushConstanti8               1
+		CallGameFunctionString       "gclightdirector", "setcavelighting", 1
+		Pop
+		LineNumber                   37054, 4
+		LineNumberAlt1               133, 102
+		PushConstanti32              -14145496
+		PushConstant0
+		PushConstantf32              20
+		Subtract
+		PushConstant0
+		PushConstantf32              175
+		Subtract
+		PushConstantf32              0.05000000074505806
+		CallGameFunctionString       "gcareadirector", "setfog", 4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x65fba
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 140:140
+		MemberFunctionArgumentCheck 2
+		LineNumber                  37061, 4
+		LineNumberAlt1              140, 102
+		GetThisMemberValueString    "mudpuzzle"
+		GetVariableValue            1           ; local
+		Pull                        2
+		GetMemberFunctionString     "process"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x65fd6
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 145:145
+		MemberFunctionArgumentCheck 2
+		LineNumber                  37066, 4
+		LineNumberAlt1              145, 102
+		GetThisMemberValueString    "mudpuzzle"
+		GetVariableValue            1           ; local
+		Pull                        2
+		GetMemberFunctionString     "input"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x65ff2
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 150:150
+		MemberFunctionArgumentCheck 2
+		LineNumber                  37071, 4
+		LineNumberAlt1              150, 102
+		GetThisMemberValueString    "mudpuzzle"
+		GetVariableValue            1           ; local
+		Pull                        2
+		GetMemberFunctionString     "onevent"
+		JumpAbsolute                2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x6600e
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 155:156
+		MemberFunctionArgumentCheck 1
+		LineNumber                  37076, 4
+		LineNumberAlt1              155, 102
+		GetVariableValue            0                ; local
+		GetThisMemberFunctionString "lego_area_hide"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37077, 4
+		LineNumberAlt1              156, 102
+		GetThisMemberValueString    "mudpuzzle"
+		Dup
+		GetMemberFunctionString     "cleanupfull"
+		JumpAbsolute                1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		; address: 0x66039
+		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 162:163
+		MemberFunctionArgumentCheck 1
+		LineNumber                  37083, 4
+		LineNumberAlt1              162, 102
+		GetThisMemberValueString    "mudpuzzle"
+		Dup
+		GetMemberFunctionString     "exit"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  37084, 4
+		LineNumberAlt1              163, 102
+		PushNothing
+		SetThisMemberValueString    "mudpuzzle"
+		PushNothing
+		Return
+	end ; method
+end ; class

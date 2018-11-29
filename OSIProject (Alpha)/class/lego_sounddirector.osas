@@ -1,0 +1,515 @@
+begin class "lego_sounddirector"
+	begin method "lego_sounddirector"
+		; address: 0x5ae7d
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x5ae81
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setlistenerposition"
+		; address: 0x5ae85
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 33:33
+		MemberFunctionArgumentCheck 4
+		LineNumber                  30955, 4
+		LineNumberAlt1              33, 90
+		GetVariableValue            1                                                 ; local
+		GetVariableValue            2                                                 ; local
+		GetVariableValue            3                                                 ; local
+		CallGameFunctionString      "gclegosounddirector", "set3dlistenerposition", 3
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setlistenerorientation"
+		; address: 0x5aea3
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 38:38
+		MemberFunctionArgumentCheck 7
+		LineNumber                  30960, 4
+		LineNumberAlt1              38, 90
+		GetVariableValue            1                                                    ; local
+		GetVariableValue            2                                                    ; local
+		GetVariableValue            3                                                    ; local
+		GetVariableValue            4                                                    ; local
+		GetVariableValue            5                                                    ; local
+		GetVariableValue            6                                                    ; local
+		CallGameFunctionString      "gclegosounddirector", "set3dlistenerorientation", 6
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setlistenervelocity"
+		; address: 0x5aeca
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 45:45
+		MemberFunctionArgumentCheck 4
+		LineNumber                  30967, 4
+		LineNumberAlt1              45, 90
+		GetVariableValue            1                                                 ; local
+		GetVariableValue            2                                                 ; local
+		GetVariableValue            3                                                 ; local
+		CallGameFunctionString      "gclegosounddirector", "set3dlistenervelocity", 3
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setlistenerdistancefactor"
+		; address: 0x5aee8
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 50:50
+		MemberFunctionArgumentCheck 2
+		LineNumber                  30972, 4
+		LineNumberAlt1              50, 90
+		GetVariableValue            1                                                       ; local
+		CallGameFunctionString      "gclegosounddirector", "set3dlistenerdistancefactor", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setlistenerdopplerfactor"
+		; address: 0x5af00
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 55:55
+		MemberFunctionArgumentCheck 2
+		LineNumber                  30977, 4
+		LineNumberAlt1              55, 90
+		GetVariableValue            1                                                      ; local
+		CallGameFunctionString      "gclegosounddirector", "set3dlistenerdopplerfactor", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setlistenerrollofffactor"
+		; address: 0x5af18
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 60:60
+		MemberFunctionArgumentCheck 2
+		LineNumber                  30982, 4
+		LineNumberAlt1              60, 90
+		GetVariableValue            1                                                      ; local
+		CallGameFunctionString      "gclegosounddirector", "set3dlistenerrollofffactor", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "getlistenerpositioncomponent"
+		; address: 0x5af30
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 68:68
+		MemberFunctionArgumentCheck 2
+		LineNumber                  30990, 4
+		LineNumberAlt1              68, 90
+		GetVariableValue            1                                                          ; local
+		CallGameFunctionString      "gclegosounddirector", "get3dlistenerpositioncomponent", 1
+		LineNumber                  30990, 4
+		LineNumberAlt1              68, 90
+		Return
+	end ; method
+
+	begin method "getlistenerfrontcomponent"
+		; address: 0x5af50
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 74:74
+		MemberFunctionArgumentCheck 2
+		LineNumber                  30996, 4
+		LineNumberAlt1              74, 90
+		GetVariableValue            1                                                       ; local
+		CallGameFunctionString      "gclegosounddirector", "get3dlistenerfrontcomponent", 1
+		LineNumber                  30996, 4
+		LineNumberAlt1              74, 90
+		Return
+	end ; method
+
+	begin method "getlistenerupcomponent"
+		; address: 0x5af70
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 80:80
+		MemberFunctionArgumentCheck 2
+		LineNumber                  31002, 4
+		LineNumberAlt1              80, 90
+		GetVariableValue            1                                                    ; local
+		CallGameFunctionString      "gclegosounddirector", "get3dlistenerupcomponent", 1
+		LineNumber                  31002, 4
+		LineNumberAlt1              80, 90
+		Return
+	end ; method
+
+	begin method "getlistenervelocitycomponent"
+		; address: 0x5af90
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 86:86
+		MemberFunctionArgumentCheck 2
+		LineNumber                  31008, 4
+		LineNumberAlt1              86, 90
+		GetVariableValue            1                                                          ; local
+		CallGameFunctionString      "gclegosounddirector", "get3dlistenervelocitycomponent", 1
+		LineNumber                  31008, 4
+		LineNumberAlt1              86, 90
+		Return
+	end ; method
+
+	begin method "getlistenerdistancefactor"
+		; address: 0x5afb0
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 92:92
+		MemberFunctionArgumentCheck 1
+		LineNumber                  31014, 4
+		LineNumberAlt1              92, 90
+		CallGameFunctionString      "gclegosounddirector", "get3dlistenerdistancefactor", 0
+		LineNumber                  31014, 4
+		LineNumberAlt1              92, 90
+		Return
+	end ; method
+
+	begin method "getlistenerdopplerfactor"
+		; address: 0x5afcd
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 98:98
+		MemberFunctionArgumentCheck 1
+		LineNumber                  31020, 4
+		LineNumberAlt1              98, 90
+		CallGameFunctionString      "gclegosounddirector", "get3dlistenerdopplerfactor", 0
+		LineNumber                  31020, 4
+		LineNumberAlt1              98, 90
+		Return
+	end ; method
+
+	begin method "getlistenerrollofffactor"
+		; address: 0x5afea
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 104:104
+		MemberFunctionArgumentCheck 1
+		LineNumber                  31026, 4
+		LineNumberAlt1              104, 90
+		CallGameFunctionString      "gclegosounddirector", "get3dlistenerrollofffactor", 0
+		LineNumber                  31026, 4
+		LineNumberAlt1              104, 90
+		Return
+	end ; method
+
+	begin method "addsound"
+		; address: 0x5b007
+		MemberFunctionArgumentCheck 3
+		PushNothing
+		Return
+	end ; method
+
+	begin method "playsound"
+		; address: 0x5b00b
+		MemberFunctionArgumentCheck 3
+		PushNothing
+		Return
+	end ; method
+
+	begin method "pausesound"
+		; address: 0x5b00f
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 126:126
+		MemberFunctionArgumentCheck 3
+		LineNumber                  31048, 4
+		LineNumberAlt1              126, 90
+		GetVariableValue            1                                     ; local
+		CallGameFunctionString      "gclegosounddirector", "stopsound", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "stopsound"
+		; address: 0x5b027
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 132:133
+		MemberFunctionArgumentCheck 2
+		LineNumber                  31054, 4
+		LineNumberAlt1              132, 90
+		GetVariableValue            1                                              ; local
+		CallGameFunctionString      "gclegosounddirector", "stopsound", 1
+		Pop
+		LineNumber                  31055, 4
+		LineNumberAlt1              133, 90
+		GetVariableValue            1                                              ; local
+		PushConstant0
+		CallGameFunctionString      "gclegosounddirector", "setsoundplayoffset", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setsoundplayoffset"
+		; address: 0x5b054
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 138:138
+		MemberFunctionArgumentCheck 3
+		LineNumber                  31060, 4
+		LineNumberAlt1              138, 90
+		GetVariableValue            1                                              ; local
+		GetVariableValue            2                                              ; local
+		CallGameFunctionString      "gclegosounddirector", "setsoundplayoffset", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setsoundvolume"
+		; address: 0x5b06f
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 144:144
+		MemberFunctionArgumentCheck 3
+		LineNumber                  31066, 4
+		LineNumberAlt1              144, 90
+		GetVariableValue            1                                          ; local
+		GetVariableValue            2                                          ; local
+		CallGameFunctionString      "gclegosounddirector", "setsoundvolume", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "getsoundvolume"
+		; address: 0x5b08a
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 149:149
+		MemberFunctionArgumentCheck 2
+		LineNumber                  31071, 4
+		LineNumberAlt1              149, 90
+		GetVariableValue            1                                          ; local
+		CallGameFunctionString      "gclegosounddirector", "getsoundvolume", 1
+		LineNumber                  31071, 4
+		LineNumberAlt1              149, 90
+		Return
+	end ; method
+
+	begin method "setsoundfrequency"
+		; address: 0x5b0aa
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 155:155
+		MemberFunctionArgumentCheck 3
+		LineNumber                  31077, 4
+		LineNumberAlt1              155, 90
+		GetVariableValue            1                                             ; local
+		GetVariableValue            2                                             ; local
+		CallGameFunctionString      "gclegosounddirector", "setsoundfrequency", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "getsoundfrequency"
+		; address: 0x5b0c5
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 160:160
+		MemberFunctionArgumentCheck 2
+		LineNumber                  31082, 4
+		LineNumberAlt1              160, 90
+		GetVariableValue            1                                             ; local
+		CallGameFunctionString      "gclegosounddirector", "getsoundfrequency", 1
+		LineNumber                  31082, 4
+		LineNumberAlt1              160, 90
+		Return
+	end ; method
+
+	begin method "setsoundpan"
+		; address: 0x5b0e5
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 166:166
+		MemberFunctionArgumentCheck 3
+		LineNumber                  31088, 4
+		LineNumberAlt1              166, 90
+		GetVariableValue            1                                       ; local
+		GetVariableValue            2                                       ; local
+		CallGameFunctionString      "gclegosounddirector", "setsoundpan", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "getsoundpan"
+		; address: 0x5b100
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 171:171
+		MemberFunctionArgumentCheck 2
+		LineNumber                  31093, 4
+		LineNumberAlt1              171, 90
+		GetVariableValue            1                                       ; local
+		CallGameFunctionString      "gclegosounddirector", "getsoundpan", 1
+		LineNumber                  31093, 4
+		LineNumberAlt1              171, 90
+		Return
+	end ; method
+
+	begin method "setsoundposition"
+		; address: 0x5b120
+		MemberFunctionArgumentCheck 5
+		PushNothing
+		Return
+	end ; method
+
+	begin method "getsoundpositioncomponent"
+		; address: 0x5b124
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 181:181
+		MemberFunctionArgumentCheck 3
+		LineNumber                  31103, 4
+		LineNumberAlt1              181, 90
+		GetVariableValue            1                                                       ; local
+		GetVariableValue            2                                                       ; local
+		CallGameFunctionString      "gclegosounddirector", "get3dsoundpositioncomponent", 2
+		LineNumber                  31103, 4
+		LineNumberAlt1              181, 90
+		Return
+	end ; method
+
+	begin method "setsoundvelocity"
+		; address: 0x5b147
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 186:186
+		MemberFunctionArgumentCheck 5
+		LineNumber                  31108, 4
+		LineNumberAlt1              186, 90
+		GetVariableValue            1                                              ; local
+		GetVariableValue            2                                              ; local
+		GetVariableValue            3                                              ; local
+		GetVariableValue            4                                              ; local
+		CallGameFunctionString      "gclegosounddirector", "set3dsoundvelocity", 4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "getsoundvelocitycomponent"
+		; address: 0x5b168
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 191:191
+		MemberFunctionArgumentCheck 3
+		LineNumber                  31113, 4
+		LineNumberAlt1              191, 90
+		GetVariableValue            1                                                       ; local
+		GetVariableValue            2                                                       ; local
+		CallGameFunctionString      "gclegosounddirector", "get3dsoundvelocitycomponent", 2
+		LineNumber                  31113, 4
+		LineNumberAlt1              191, 90
+		Return
+	end ; method
+
+	begin method "setsoundmindistance"
+		; address: 0x5b18b
+		MemberFunctionArgumentCheck 3
+		PushNothing
+		Return
+	end ; method
+
+	begin method "getsoundmindistance"
+		; address: 0x5b18f
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 201:201
+		MemberFunctionArgumentCheck 2
+		LineNumber                  31123, 4
+		LineNumberAlt1              201, 90
+		GetVariableValue            1                                                 ; local
+		CallGameFunctionString      "gclegosounddirector", "get3dsoundmindistance", 1
+		LineNumber                  31123, 4
+		LineNumberAlt1              201, 90
+		Return
+	end ; method
+
+	begin method "setsoundmaxdistance"
+		; address: 0x5b1af
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 206:206
+		MemberFunctionArgumentCheck 3
+		LineNumber                  31128, 4
+		LineNumberAlt1              206, 90
+		GetVariableValue            1                                                 ; local
+		GetVariableValue            2                                                 ; local
+		CallGameFunctionString      "gclegosounddirector", "set3dsoundmaxdistance", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "getsoundmaxdistance"
+		; address: 0x5b1ca
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 211:211
+		MemberFunctionArgumentCheck 2
+		LineNumber                  31133, 4
+		LineNumberAlt1              211, 90
+		GetVariableValue            1                                                 ; local
+		CallGameFunctionString      "gclegosounddirector", "get3dsoundmaxdistance", 1
+		LineNumber                  31133, 4
+		LineNumberAlt1              211, 90
+		Return
+	end ; method
+
+	begin method "setsoundconeorientation"
+		; address: 0x5b1ea
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 216:216
+		MemberFunctionArgumentCheck 5
+		LineNumber                  31138, 4
+		LineNumberAlt1              216, 90
+		GetVariableValue            1                                                     ; local
+		GetVariableValue            2                                                     ; local
+		GetVariableValue            3                                                     ; local
+		GetVariableValue            4                                                     ; local
+		CallGameFunctionString      "gclegosounddirector", "set3dsoundconeorientation", 4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "getsoundconeorientationcomponent"
+		; address: 0x5b20b
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 221:221
+		MemberFunctionArgumentCheck 3
+		LineNumber                  31143, 4
+		LineNumberAlt1              221, 90
+		GetVariableValue            1                                                              ; local
+		GetVariableValue            2                                                              ; local
+		CallGameFunctionString      "gclegosounddirector", "get3dsoundconeorientationcomponent", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setsoundconeangles"
+		; address: 0x5b226
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 226:226
+		MemberFunctionArgumentCheck 4
+		LineNumber                  31148, 4
+		LineNumberAlt1              226, 90
+		GetVariableValue            1                                                ; local
+		GetVariableValue            2                                                ; local
+		GetVariableValue            3                                                ; local
+		CallGameFunctionString      "gclegosounddirector", "set3dsoundconeangles", 3
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "getsoundconeangles"
+		; address: 0x5b244
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 232:232
+		MemberFunctionArgumentCheck 3
+		LineNumber                  31154, 4
+		LineNumberAlt1              232, 90
+		GetVariableValue            1                                               ; local
+		GetVariableValue            2                                               ; local
+		CallGameFunctionString      "gclegosounddirector", "get3dsoundconeangle", 2
+		LineNumber                  31154, 4
+		LineNumberAlt1              232, 90
+		Return
+	end ; method
+
+	begin method "setsoundconeoutsidevolume"
+		; address: 0x5b267
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 238:238
+		MemberFunctionArgumentCheck 3
+		LineNumber                  31160, 4
+		LineNumberAlt1              238, 90
+		GetVariableValue            1                                                       ; local
+		GetVariableValue            2                                                       ; local
+		CallGameFunctionString      "gclegosounddirector", "set3dsoundconeoutsidevolume", 2
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "getsoundconeoutsidevolume"
+		; address: 0x5b282
+		; source: 90 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/lego_3dSoundDirector.vbo" 243:243
+		MemberFunctionArgumentCheck 2
+		LineNumber                  31165, 4
+		LineNumberAlt1              243, 90
+		GetVariableValue            1                                                       ; local
+		CallGameFunctionString      "gclegosounddirector", "get3dsoundconeoutsidevolume", 1
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

@@ -1,0 +1,1421 @@
+begin class "demopuzzle", "base_object"
+	property "floorswitch"
+	property "door1"
+	property "wallswitch"
+	property "door2a"
+	property "door2b"
+	property "orderswitches"
+	property "door3"
+	property "puzzle1"
+	property "puzzle2"
+	property "puzzle3"
+
+	begin method "demopuzzle"
+		; address: 0x7837a
+		; source: 124 "C:\\projects\\lego\\Scripting\\VBO\\demopuzzle.vbo" 32:46
+		MemberFunctionArgumentCheck 1
+		LineNumber                  45837, 4
+		LineNumberAlt1              32, 124
+		CreateObjectString          "lego_moveableobject"
+		Dup
+		PushConstantStringString    "sw01"
+		CreateArray
+		Dup
+		PushConstantStringString    "sw1a"
+		AppendToArray
+		Dup
+		PushConstantStringString    "sw1b"
+		AppendToArray
+		Pull                        3
+		GetMemberFunctionString     "lego_moveableobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  45837, 4
+		LineNumberAlt1              32, 124
+		SetThisMemberValueString    "floorswitch"
+		LineNumber                  45838, 4
+		LineNumberAlt1              33, 124
+		CreateObjectString          "lego_moveableobject"
+		Dup
+		PushConstantStringString    "dr01"
+		CreateArray
+		Dup
+		PushConstantStringString    "dr1a"
+		AppendToArray
+		Dup
+		PushConstantStringString    "dr1b"
+		AppendToArray
+		Pull                        3
+		GetMemberFunctionString     "lego_moveableobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  45838, 4
+		LineNumberAlt1              33, 124
+		SetThisMemberValueString    "door1"
+		LineNumber                  45839, 4
+		LineNumberAlt1              34, 124
+		CreateObjectString          "lego_moveableobject"
+		Dup
+		PushConstantStringString    "sw06"
+		CreateArray
+		Dup
+		PushConstantStringString    "sw6a"
+		AppendToArray
+		Dup
+		PushConstantStringString    "sw6b"
+		AppendToArray
+		Pull                        3
+		GetMemberFunctionString     "lego_moveableobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  45839, 4
+		LineNumberAlt1              34, 124
+		SetThisMemberValueString    "wallswitch"
+		LineNumber                  45840, 4
+		LineNumberAlt1              35, 124
+		CreateObjectString          "lego_moveableobject"
+		Dup
+		PushConstantStringString    "d02a"
+		CreateArray
+		Dup
+		PushConstantStringString    "d2aa"
+		AppendToArray
+		Dup
+		PushConstantStringString    "d2ab"
+		AppendToArray
+		Pull                        3
+		GetMemberFunctionString     "lego_moveableobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  45840, 4
+		LineNumberAlt1              35, 124
+		SetThisMemberValueString    "door2a"
+		LineNumber                  45841, 4
+		LineNumberAlt1              36, 124
+		CreateObjectString          "lego_moveableobject"
+		Dup
+		PushConstantStringString    "d02b"
+		CreateArray
+		Dup
+		PushConstantStringString    "d2ba"
+		AppendToArray
+		Dup
+		PushConstantStringString    "d2bb"
+		AppendToArray
+		Pull                        3
+		GetMemberFunctionString     "lego_moveableobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  45841, 4
+		LineNumberAlt1              36, 124
+		SetThisMemberValueString    "door2b"
+		LineNumber                  45842, 4
+		LineNumberAlt1              37, 124
+		CreateArray
+		Dup
+		CreateObjectString          "lego_moveableobject"
+		Dup
+		PushConstantStringString    "sw02"
+		CreateArray
+		Dup
+		PushConstantStringString    "sw2a"
+		AppendToArray
+		Dup
+		PushConstantStringString    "sw2b"
+		AppendToArray
+		Pull                        3
+		GetMemberFunctionString     "lego_moveableobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  45843, 4
+		LineNumberAlt1              38, 124
+		AppendToArray
+		Dup
+		CreateObjectString          "lego_moveableobject"
+		Dup
+		PushConstantStringString    "sw03"
+		CreateArray
+		Dup
+		PushConstantStringString    "sw3a"
+		AppendToArray
+		Dup
+		PushConstantStringString    "sw3b"
+		AppendToArray
+		Pull                        3
+		GetMemberFunctionString     "lego_moveableobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  45844, 4
+		LineNumberAlt1              39, 124
+		AppendToArray
+		Dup
+		CreateObjectString          "lego_moveableobject"
+		Dup
+		PushConstantStringString    "sw04"
+		CreateArray
+		Dup
+		PushConstantStringString    "sw4a"
+		AppendToArray
+		Dup
+		PushConstantStringString    "sw4b"
+		AppendToArray
+		Pull                        3
+		GetMemberFunctionString     "lego_moveableobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  45845, 4
+		LineNumberAlt1              40, 124
+		AppendToArray
+		Dup
+		CreateObjectString          "lego_moveableobject"
+		Dup
+		PushConstantStringString    "sw05"
+		CreateArray
+		Dup
+		PushConstantStringString    "sw5a"
+		AppendToArray
+		Dup
+		PushConstantStringString    "sw5b"
+		AppendToArray
+		Pull                        3
+		GetMemberFunctionString     "lego_moveableobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  45846, 4
+		LineNumberAlt1              41, 124
+		AppendToArray
+		SetThisMemberValueString    "orderswitches"
+		LineNumber                  45848, 4
+		LineNumberAlt1              43, 124
+		CreateObjectString          "lego_moveableobject"
+		Dup
+		PushConstantStringString    "dr03"
+		CreateArray
+		Dup
+		PushConstantStringString    "dr3a"
+		AppendToArray
+		Dup
+		PushConstantStringString    "dr3b"
+		AppendToArray
+		Pull                        3
+		GetMemberFunctionString     "lego_moveableobject"
+		JumpAbsolute                3
+		Pop
+		LineNumber                  45848, 4
+		LineNumberAlt1              43, 124
+		SetThisMemberValueString    "door3"
+		LineNumber                  45849, 4
+		LineNumberAlt1              44, 124
+		PushConstant0
+		SetThisMemberValueString    "puzzle1"
+		LineNumber                  45850, 4
+		LineNumberAlt1              45, 124
+		PushConstant0
+		SetThisMemberValueString    "puzzle2"
+		LineNumber                  45851, 4
+		LineNumberAlt1              46, 124
+		PushConstant0
+		SetThisMemberValueString    "puzzle3"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x78574
+		; source: 124 "C:\\projects\\lego\\Scripting\\VBO\\demopuzzle.vbo" 53:78
+		MemberFunctionArgumentCheck   1
+		CreateStackVariables          1
+		LineNumber                    45858, 4
+		LineNumberAlt1                53, 124
+		GetThisMemberValueString      "floorswitch"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    45859, 4
+		LineNumberAlt1                54, 124
+		GetThisMemberValueString      "floorswitch"
+		PushConstant0
+		PushConstanti8                3
+		PushConstanti8                3
+		Pull                          4
+		GetMemberFunctionString       "setresponse"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    45860, 4
+		LineNumberAlt1                55, 124
+		GetThisMemberValueString      "floorswitch"
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "setdefault"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    45861, 4
+		LineNumberAlt1                56, 124
+		GetThisMemberValueString      "floorswitch"
+		Dup
+		GetMemberFunctionString       "settweakable"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    45863, 4
+		LineNumberAlt1                58, 124
+		GetThisMemberValueString      "door1"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    45864, 4
+		LineNumberAlt1                59, 124
+		GetThisMemberValueString      "door1"
+		PushConstanti8                1
+		PushConstanti8                3
+		PushConstanti8                3
+		Pull                          4
+		GetMemberFunctionString       "setresponse"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    45866, 4
+		LineNumberAlt1                61, 124
+		GetThisMemberValueString      "wallswitch"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    45867, 4
+		LineNumberAlt1                62, 124
+		GetThisMemberValueString      "wallswitch"
+		PushConstanti8                1
+		PushConstanti8                3
+		PushConstanti8                3
+		Pull                          4
+		GetMemberFunctionString       "setresponse"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    45868, 4
+		LineNumberAlt1                63, 124
+		GetThisMemberValueString      "wallswitch"
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "setdefault"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    45869, 4
+		LineNumberAlt1                64, 124
+		GetThisMemberValueString      "wallswitch"
+		Dup
+		GetMemberFunctionString       "settweakable"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    45871, 4
+		LineNumberAlt1                66, 124
+		GetThisMemberValueString      "door2a"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    45872, 4
+		LineNumberAlt1                67, 124
+		GetThisMemberValueString      "door2a"
+		PushConstanti8                1
+		PushConstanti8                3
+		PushConstanti8                3
+		Pull                          4
+		GetMemberFunctionString       "setresponse"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    45873, 4
+		LineNumberAlt1                68, 124
+		GetThisMemberValueString      "door2b"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    45874, 4
+		LineNumberAlt1                69, 124
+		GetThisMemberValueString      "door2b"
+		PushConstanti8                1
+		PushConstanti8                3
+		PushConstanti8                3
+		Pull                          4
+		GetMemberFunctionString       "setresponse"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    45876, 4
+		LineNumberAlt1                71, 124
+		GetThisMemberValueString      "orderswitches"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1               ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1               ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    45877, 4
+		LineNumberAlt1                72, 124
+		GetThisMemberValueString      "orderswitches"
+		GetVariableValue              1               ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    45878, 4
+		LineNumberAlt1                73, 124
+		GetThisMemberValueString      "orderswitches"
+		GetVariableValue              1               ; local
+		GetArrayValue
+		PushConstant0
+		PushConstanti8                3
+		PushConstanti8                3
+		Pull                          4
+		GetMemberFunctionString       "setresponse"
+		JumpAbsolute                  4
+		Pop
+		LineNumber                    45879, 4
+		LineNumberAlt1                74, 124
+		GetThisMemberValueString      "orderswitches"
+		GetVariableValue              1               ; local
+		GetArrayValue
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "setdefault"
+		JumpAbsolute                  2
+		Pop
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    45882, 4
+		LineNumberAlt1                77, 124
+		GetThisMemberValueString      "door3"
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    45883, 4
+		LineNumberAlt1                78, 124
+		GetThisMemberValueString      "door3"
+		PushConstanti8                1
+		PushConstanti8                3
+		PushConstanti8                3
+		Pull                          4
+		GetMemberFunctionString       "setresponse"
+		JumpAbsolute                  4
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "onevent"
+		; address: 0x7875b
+		; source: 124 "C:\\projects\\lego\\Scripting\\VBO\\demopuzzle.vbo" 83:223
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          2
+		LineNumber                    45888, 4
+		LineNumberAlt1                83, 124
+		GetVariableValue              1                             ; local
+		GetMemberValueString          "eventid"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 6, 0
+		; ->
+		LineNumber                    45889, 4
+		LineNumberAlt1                84, 124
+		GetVariableValue              1                             ; local
+		GetMemberValueString          "args"
+		PushConstanti8                1
+		GetArrayValue
+		SetVariableValue              2                             ; local
+		LineNumber                    45890, 4
+		LineNumberAlt1                85, 124
+		GetVariableValue              2                             ; local
+		GetThisMemberValueString      "door2a"
+		GetMemberValueString          "id"
+		EqualTo
+		GetVariableValue              2                             ; local
+		GetThisMemberValueString      "door2b"
+		GetMemberValueString          "id"
+		EqualTo
+		Or
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    45891, 4
+		LineNumberAlt1                86, 124
+		PushNothing
+		Return
+		; <-
+		BranchTarget                  0
+		LineNumber                    45896, 4
+		LineNumberAlt1                91, 124
+		GetVariableValue              2                             ; local
+		GetThisMemberValueString      "floorswitch"
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    45897, 4
+		LineNumberAlt1                92, 124
+		GetThisMemberValueString      "floorswitch"
+		Dup
+		GetMemberFunctionString       "setcollide"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  1
+		LineNumber                    45900, 4
+		LineNumberAlt1                95, 124
+		GetVariableValue              2                             ; local
+		GetThisMemberValueString      "wallswitch"
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    45901, 4
+		LineNumberAlt1                96, 124
+		GetThisMemberValueString      "wallswitch"
+		Dup
+		GetMemberFunctionString       "setcollide"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  2
+		LineNumber                    45904, 4
+		LineNumberAlt1                99, 124
+		GetVariableValue              2                             ; local
+		GetThisMemberValueString      "orderswitches"
+		PushConstant0
+		GetArrayValue
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    45905, 4
+		LineNumberAlt1                100, 124
+		GetThisMemberValueString      "orderswitches"
+		PushConstant0
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "setcollide"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  3
+		LineNumber                    45908, 4
+		LineNumberAlt1                103, 124
+		GetVariableValue              2                             ; local
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                1
+		GetArrayValue
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    45909, 4
+		LineNumberAlt1                104, 124
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                1
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "setcollide"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  4
+		LineNumber                    45912, 4
+		LineNumberAlt1                107, 124
+		GetVariableValue              2                             ; local
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                2
+		GetArrayValue
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    45913, 4
+		LineNumberAlt1                108, 124
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                2
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "setcollide"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  5
+		LineNumber                    45916, 4
+		LineNumberAlt1                111, 124
+		GetVariableValue              2                             ; local
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                3
+		GetArrayValue
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 6, 0
+		; ->
+		LineNumber                    45917, 4
+		LineNumberAlt1                112, 124
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                3
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "setcollide"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  6
+		LineNumber                    45922, 4
+		LineNumberAlt1                117, 124
+		GetVariableValue              1                             ; local
+		GetMemberValueString          "eventid"
+		PushConstanti8                10
+		EqualTo
+		CompareAndBranchIfFalseTarget 17, 0
+		; ->
+		LineNumber                    45924, 4
+		LineNumberAlt1                119, 124
+		GetVariableValue              1                             ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		SetVariableValue              2                             ; local
+		LineNumber                    45926, 4
+		LineNumberAlt1                121, 124
+		GetVariableValue              2                             ; local
+		GetThisMemberValueString      "floorswitch"
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 8, 0
+		; ->
+		LineNumber                    45927, 4
+		LineNumberAlt1                122, 124
+		PushConstant0
+		GetThisMemberValueString      "floorswitch"
+		SetMemberValueString          "currentanim"
+		LineNumber                    45928, 4
+		LineNumberAlt1                123, 124
+		GetThisMemberValueString      "puzzle1"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 7, 0
+		; ->
+		LineNumber                    45929, 4
+		LineNumberAlt1                124, 124
+		PushConstanti8                1
+		SetThisMemberValueString      "puzzle1"
+		LineNumber                    45930, 4
+		LineNumberAlt1                125, 124
+		GetThisMemberValueString      "door1"
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "play"
+		JumpAbsolute                  2
+		Pop
+		BranchAlwaysTarget            8, 0
+		; ->
+		; <-
+		BranchTarget                  7
+		LineNumber                    45932, 4
+		LineNumberAlt1                127, 124
+		PushConstant0
+		SetThisMemberValueString      "puzzle1"
+		LineNumber                    45933, 4
+		LineNumberAlt1                128, 124
+		GetThisMemberValueString      "door1"
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "play"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  8
+		LineNumber                    45937, 4
+		LineNumberAlt1                132, 124
+		GetVariableValue              2                             ; local
+		GetThisMemberValueString      "wallswitch"
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 10, 0
+		; ->
+		LineNumber                    45938, 4
+		LineNumberAlt1                133, 124
+		GetThisMemberValueString      "wallswitch"
+		GetMemberValueString          "defaultanim"
+		GetThisMemberValueString      "wallswitch"
+		SetMemberValueString          "currentanim"
+		LineNumber                    45939, 4
+		LineNumberAlt1                134, 124
+		GetThisMemberValueString      "puzzle2"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 9, 0
+		; ->
+		LineNumber                    45940, 4
+		LineNumberAlt1                135, 124
+		PushConstanti8                1
+		SetThisMemberValueString      "puzzle2"
+		LineNumber                    45941, 4
+		LineNumberAlt1                136, 124
+		GetThisMemberValueString      "door2a"
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "play"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    45942, 4
+		LineNumberAlt1                137, 124
+		GetThisMemberValueString      "door2b"
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "play"
+		JumpAbsolute                  2
+		Pop
+		BranchAlwaysTarget            10, 0
+		; ->
+		; <-
+		BranchTarget                  9
+		LineNumber                    45944, 4
+		LineNumberAlt1                139, 124
+		PushConstant0
+		SetThisMemberValueString      "puzzle2"
+		LineNumber                    45945, 4
+		LineNumberAlt1                140, 124
+		GetThisMemberValueString      "door2b"
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "play"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    45946, 4
+		LineNumberAlt1                141, 124
+		GetThisMemberValueString      "door2a"
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "play"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  10
+		LineNumber                    45950, 4
+		LineNumberAlt1                145, 124
+		GetVariableValue              2                             ; local
+		GetThisMemberValueString      "orderswitches"
+		PushConstant0
+		GetArrayValue
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 11, 0
+		; ->
+		LineNumber                    45951, 4
+		LineNumberAlt1                146, 124
+		GetThisMemberValueString      "orderswitches"
+		PushConstant0
+		GetArrayValue
+		SetVariableValue              3                             ; local
+		LineNumber                    45952, 4
+		LineNumberAlt1                147, 124
+		PushConstant0
+		GetVariableValue              3                             ; local
+		SetMemberValueString          "currentanim"
+		LineNumber                    45953, 4
+		LineNumberAlt1                148, 124
+		PushConstanti8                1
+		SetThisMemberValueString      "puzzle3"
+		LineNumber                    45954, 4
+		LineNumberAlt1                149, 124
+		GetThisMemberValueString      "door3"
+		GetMemberValueString          "currentanim"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 11, 0
+		; ->
+		LineNumber                    45955, 4
+		LineNumberAlt1                150, 124
+		GetVariableValue              0                             ; local
+		GetThisMemberFunctionString   "closedoor3"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  11
+		LineNumber                    45959, 4
+		LineNumberAlt1                154, 124
+		GetVariableValue              2                             ; local
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                1
+		GetArrayValue
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 13, 0
+		; ->
+		LineNumber                    45960, 4
+		LineNumberAlt1                155, 124
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                1
+		GetArrayValue
+		SetVariableValue              3                             ; local
+		LineNumber                    45961, 4
+		LineNumberAlt1                156, 124
+		PushConstant0
+		GetVariableValue              3                             ; local
+		SetMemberValueString          "currentanim"
+		LineNumber                    45963, 4
+		LineNumberAlt1                158, 124
+		GetThisMemberValueString      "puzzle3"
+		PushConstanti8                1
+		EqualTo
+		GetThisMemberValueString      "puzzle3"
+		PushConstanti8                2
+		EqualTo
+		Or
+		CompareAndBranchIfFalseTarget 12, 0
+		; ->
+		LineNumber                    45964, 4
+		LineNumberAlt1                159, 124
+		PushConstanti8                2
+		SetThisMemberValueString      "puzzle3"
+		BranchAlwaysTarget            13, 0
+		; ->
+		; <-
+		BranchTarget                  12
+		LineNumber                    45966, 4
+		LineNumberAlt1                161, 124
+		PushConstant0
+		SetThisMemberValueString      "puzzle3"
+		LineNumber                    45967, 4
+		LineNumberAlt1                162, 124
+		GetThisMemberValueString      "door3"
+		GetMemberValueString          "currentanim"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 13, 0
+		; ->
+		LineNumber                    45968, 4
+		LineNumberAlt1                163, 124
+		GetVariableValue              0                             ; local
+		GetThisMemberFunctionString   "closedoor3"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  13
+		LineNumber                    45973, 4
+		LineNumberAlt1                168, 124
+		GetVariableValue              2                             ; local
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                2
+		GetArrayValue
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 15, 0
+		; ->
+		LineNumber                    45974, 4
+		LineNumberAlt1                169, 124
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                2
+		GetArrayValue
+		SetVariableValue              3                             ; local
+		LineNumber                    45975, 4
+		LineNumberAlt1                170, 124
+		PushConstant0
+		GetVariableValue              3                             ; local
+		SetMemberValueString          "currentanim"
+		LineNumber                    45977, 4
+		LineNumberAlt1                172, 124
+		GetThisMemberValueString      "puzzle3"
+		PushConstanti8                2
+		EqualTo
+		GetThisMemberValueString      "puzzle3"
+		PushConstanti8                3
+		EqualTo
+		Or
+		CompareAndBranchIfFalseTarget 14, 0
+		; ->
+		LineNumber                    45978, 4
+		LineNumberAlt1                173, 124
+		PushConstanti8                3
+		SetThisMemberValueString      "puzzle3"
+		BranchAlwaysTarget            15, 0
+		; ->
+		; <-
+		BranchTarget                  14
+		LineNumber                    45980, 4
+		LineNumberAlt1                175, 124
+		PushConstant0
+		SetThisMemberValueString      "puzzle3"
+		LineNumber                    45981, 4
+		LineNumberAlt1                176, 124
+		GetThisMemberValueString      "door3"
+		GetMemberValueString          "currentanim"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 15, 0
+		; ->
+		LineNumber                    45982, 4
+		LineNumberAlt1                177, 124
+		GetVariableValue              0                             ; local
+		GetThisMemberFunctionString   "closedoor3"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  15
+		LineNumber                    45988, 4
+		LineNumberAlt1                183, 124
+		GetVariableValue              2                             ; local
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                3
+		GetArrayValue
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 17, 0
+		; ->
+		LineNumber                    45989, 4
+		LineNumberAlt1                184, 124
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                3
+		GetArrayValue
+		SetVariableValue              3                             ; local
+		LineNumber                    45990, 4
+		LineNumberAlt1                185, 124
+		PushConstant0
+		GetVariableValue              3                             ; local
+		SetMemberValueString          "currentanim"
+		LineNumber                    45992, 4
+		LineNumberAlt1                187, 124
+		GetThisMemberValueString      "puzzle3"
+		PushConstanti8                3
+		EqualTo
+		CompareAndBranchIfFalseTarget 16, 0
+		; ->
+		LineNumber                    45993, 4
+		LineNumberAlt1                188, 124
+		PushConstanti8                4
+		SetThisMemberValueString      "puzzle3"
+		LineNumber                    45994, 4
+		LineNumberAlt1                189, 124
+		GetThisMemberValueString      "door3"
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "play"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    45995, 4
+		LineNumberAlt1                190, 124
+		GetThisMemberValueString      "door3"
+		PushConstanti8                4
+		PushConstanti8                3
+		PushConstanti8                3
+		Pull                          4
+		GetMemberFunctionString       "setresponse"
+		JumpAbsolute                  4
+		Pop
+		BranchAlwaysTarget            17, 0
+		; ->
+		; <-
+		BranchTarget                  16
+		LineNumber                    45997, 4
+		LineNumberAlt1                192, 124
+		GetThisMemberValueString      "puzzle3"
+		PushConstanti8                4
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 17, 0
+		; ->
+		LineNumber                    45998, 4
+		LineNumberAlt1                193, 124
+		PushConstant0
+		SetThisMemberValueString      "puzzle3"
+		LineNumber                    45999, 4
+		LineNumberAlt1                194, 124
+		GetThisMemberValueString      "door3"
+		GetMemberValueString          "currentanim"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 17, 0
+		; ->
+		LineNumber                    46000, 4
+		LineNumberAlt1                195, 124
+		GetVariableValue              0                             ; local
+		GetThisMemberFunctionString   "closedoor3"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  17
+		LineNumber                    46008, 4
+		LineNumberAlt1                203, 124
+		GetVariableValue              1                             ; local
+		GetMemberValueString          "eventid"
+		PushConstanti8                11
+		EqualTo
+		CompareAndBranchIfFalseTarget 22, 0
+		; ->
+		LineNumber                    46010, 4
+		LineNumberAlt1                205, 124
+		GetVariableValue              1                             ; local
+		GetMemberValueString          "args"
+		PushConstant0
+		GetArrayValue
+		SetVariableValue              2                             ; local
+		LineNumber                    46012, 4
+		LineNumberAlt1                207, 124
+		GetVariableValue              2                             ; local
+		GetThisMemberValueString      "floorswitch"
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 18, 0
+		; ->
+		LineNumber                    46013, 4
+		LineNumberAlt1                208, 124
+		GetThisMemberValueString      "floorswitch"
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "setdefault"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    46014, 4
+		LineNumberAlt1                209, 124
+		PushConstantStringString      "Button up, resetting button"
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		; <-
+		BranchTarget                  18
+		LineNumber                    46018, 4
+		LineNumberAlt1                213, 124
+		GetVariableValue              2                             ; local
+		GetThisMemberValueString      "orderswitches"
+		PushConstant0
+		GetArrayValue
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 19, 0
+		; ->
+		LineNumber                    46019, 4
+		LineNumberAlt1                214, 124
+		GetThisMemberValueString      "orderswitches"
+		PushConstant0
+		GetArrayValue
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "setdefault"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  19
+		LineNumber                    46021, 4
+		LineNumberAlt1                216, 124
+		GetVariableValue              2                             ; local
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                1
+		GetArrayValue
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 20, 0
+		; ->
+		LineNumber                    46022, 4
+		LineNumberAlt1                217, 124
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                1
+		GetArrayValue
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "setdefault"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  20
+		LineNumber                    46024, 4
+		LineNumberAlt1                219, 124
+		GetVariableValue              2                             ; local
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                2
+		GetArrayValue
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 21, 0
+		; ->
+		LineNumber                    46025, 4
+		LineNumberAlt1                220, 124
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                2
+		GetArrayValue
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "setdefault"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  21
+		LineNumber                    46027, 4
+		LineNumberAlt1                222, 124
+		GetVariableValue              2                             ; local
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                3
+		GetArrayValue
+		GetMemberValueString          "id"
+		EqualTo
+		CompareAndBranchIfFalseTarget 22, 0
+		; ->
+		LineNumber                    46028, 4
+		LineNumberAlt1                223, 124
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                3
+		GetArrayValue
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "setdefault"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  22
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x78e05
+		; source: 124 "C:\\projects\\lego\\Scripting\\VBO\\demopuzzle.vbo" 233:284
+		MemberFunctionArgumentCheck   2
+		CreateStackVariables          1
+		LineNumber                    46038, 4
+		LineNumberAlt1                233, 124
+		GetThisMemberValueString      "floorswitch"
+		Dup
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    46039, 4
+		LineNumberAlt1                234, 124
+		GetThisMemberValueString      "wallswitch"
+		Dup
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    46040, 4
+		LineNumberAlt1                235, 124
+		GetThisMemberValueString      "orderswitches"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              2               ; local
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              2               ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    46041, 4
+		LineNumberAlt1                236, 124
+		GetThisMemberValueString      "orderswitches"
+		GetVariableValue              2               ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "process"
+		JumpAbsolute                  1
+		Pop
+		IncrementVariable             2
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  1
+		Pop
+		LineNumber                    46047, 4
+		LineNumberAlt1                242, 124
+		GetThisMemberValueString      "floorswitch"
+		GetMemberValueString          "currentanim"
+		PushConstant0
+		EqualTo
+		GetThisMemberValueString      "floorswitch"
+		GetMemberValueString          "collide"
+		PushConstant0
+		EqualTo
+		And
+		GetThisMemberValueString      "floorswitch"
+		Dup
+		GetMemberFunctionString       "isplaying"
+		JumpAbsolute                  1
+		LineNumber                    46047, 4
+		LineNumberAlt1                242, 124
+		PushConstant0
+		EqualTo
+		And
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    46049, 4
+		LineNumberAlt1                244, 124
+		GetThisMemberValueString      "floorswitch"
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "play"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  2
+		LineNumber                    46052, 4
+		LineNumberAlt1                247, 124
+		GetThisMemberValueString      "wallswitch"
+		GetMemberValueString          "currentanim"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    46054, 4
+		LineNumberAlt1                249, 124
+		GetThisMemberValueString      "wallswitch"
+		GetMemberValueString          "collide"
+		PushConstant0
+		EqualTo
+		GetThisMemberValueString      "wallswitch"
+		Dup
+		GetMemberFunctionString       "isplaying"
+		JumpAbsolute                  1
+		LineNumber                    46054, 4
+		LineNumberAlt1                249, 124
+		PushConstant0
+		EqualTo
+		And
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    46055, 4
+		LineNumberAlt1                250, 124
+		GetThisMemberValueString      "wallswitch"
+		PushConstant0
+		Pull                          2
+		GetMemberFunctionString       "setdefault"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  3
+		BranchAlwaysTarget            5, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		LineNumber                    46059, 4
+		LineNumberAlt1                254, 124
+		GetThisMemberValueString      "wallswitch"
+		GetMemberValueString          "collide"
+		PushConstant0
+		EqualTo
+		GetThisMemberValueString      "wallswitch"
+		Dup
+		GetMemberFunctionString       "isplaying"
+		JumpAbsolute                  1
+		LineNumber                    46059, 4
+		LineNumberAlt1                254, 124
+		PushConstant0
+		EqualTo
+		And
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    46060, 4
+		LineNumberAlt1                255, 124
+		GetThisMemberValueString      "wallswitch"
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "setdefault"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  5
+		LineNumber                    46066, 4
+		LineNumberAlt1                261, 124
+		GetThisMemberValueString      "orderswitches"
+		PushConstant0
+		GetArrayValue
+		GetMemberValueString          "currentanim"
+		PushConstant0
+		EqualTo
+		GetThisMemberValueString      "orderswitches"
+		PushConstant0
+		GetArrayValue
+		GetMemberValueString          "collide"
+		PushConstant0
+		EqualTo
+		And
+		GetThisMemberValueString      "orderswitches"
+		PushConstant0
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "isplaying"
+		JumpAbsolute                  1
+		LineNumber                    46066, 4
+		LineNumberAlt1                261, 124
+		PushConstant0
+		EqualTo
+		And
+		CompareAndBranchIfFalseTarget 6, 0
+		; ->
+		LineNumber                    46068, 4
+		LineNumberAlt1                263, 124
+		GetThisMemberValueString      "orderswitches"
+		PushConstant0
+		GetArrayValue
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "play"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  6
+		LineNumber                    46073, 4
+		LineNumberAlt1                268, 124
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                1
+		GetArrayValue
+		GetMemberValueString          "currentanim"
+		PushConstant0
+		EqualTo
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                1
+		GetArrayValue
+		GetMemberValueString          "collide"
+		PushConstant0
+		EqualTo
+		And
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                1
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "isplaying"
+		JumpAbsolute                  1
+		LineNumber                    46073, 4
+		LineNumberAlt1                268, 124
+		PushConstant0
+		EqualTo
+		And
+		CompareAndBranchIfFalseTarget 7, 0
+		; ->
+		LineNumber                    46075, 4
+		LineNumberAlt1                270, 124
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                1
+		GetArrayValue
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "play"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  7
+		LineNumber                    46080, 4
+		LineNumberAlt1                275, 124
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                2
+		GetArrayValue
+		GetMemberValueString          "currentanim"
+		PushConstant0
+		EqualTo
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                2
+		GetArrayValue
+		GetMemberValueString          "collide"
+		PushConstant0
+		EqualTo
+		And
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                2
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "isplaying"
+		JumpAbsolute                  1
+		LineNumber                    46080, 4
+		LineNumberAlt1                275, 124
+		PushConstant0
+		EqualTo
+		And
+		CompareAndBranchIfFalseTarget 8, 0
+		; ->
+		LineNumber                    46082, 4
+		LineNumberAlt1                277, 124
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                2
+		GetArrayValue
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "play"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  8
+		LineNumber                    46087, 4
+		LineNumberAlt1                282, 124
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                3
+		GetArrayValue
+		GetMemberValueString          "currentanim"
+		PushConstant0
+		EqualTo
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                3
+		GetArrayValue
+		GetMemberValueString          "collide"
+		PushConstant0
+		EqualTo
+		And
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                3
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "isplaying"
+		JumpAbsolute                  1
+		LineNumber                    46087, 4
+		LineNumberAlt1                282, 124
+		PushConstant0
+		EqualTo
+		And
+		CompareAndBranchIfFalseTarget 9, 0
+		; ->
+		LineNumber                    46089, 4
+		LineNumberAlt1                284, 124
+		GetThisMemberValueString      "orderswitches"
+		PushConstanti8                3
+		GetArrayValue
+		PushConstanti8                1
+		Pull                          2
+		GetMemberFunctionString       "play"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  9
+		PushNothing
+		Return
+	end ; method
+
+	begin method "input"
+		; address: 0x790ae
+		MemberFunctionArgumentCheck 2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "closedoor3"
+		; address: 0x790b2
+		; source: 124 "C:\\projects\\lego\\Scripting\\VBO\\demopuzzle.vbo" 295:296
+		MemberFunctionArgumentCheck 1
+		LineNumber                  46100, 4
+		LineNumberAlt1              295, 124
+		GetThisMemberValueString    "door3"
+		PushConstanti8              1
+		Pull                        2
+		GetMemberFunctionString     "play"
+		JumpAbsolute                2
+		Pop
+		LineNumber                  46101, 4
+		LineNumberAlt1              296, 124
+		GetThisMemberValueString    "door3"
+		PushConstanti8              1
+		PushConstanti8              3
+		PushConstanti8              3
+		Pull                        4
+		GetMemberFunctionString     "setresponse"
+		JumpAbsolute                4
+		Pop
+		PushNothing
+		Return
+	end ; method
+end ; class

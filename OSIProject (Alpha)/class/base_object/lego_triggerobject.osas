@@ -1,0 +1,304 @@
+begin class "lego_triggerobject", "base_object"
+	property "name"
+	property "id"
+	property "handle"
+	property "area"
+	property "areaid"
+	property "triggertype"
+	property "onscreen"
+	property "collide"
+	property "collidetimer"
+
+	begin method "lego_triggerobject"
+		; address: 0x5a822
+		; source: 88 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/Lego_TriggerObj.vbo" 37:48
+		MemberFunctionArgumentCheck   4
+		LineNumber                    30685, 4
+		LineNumberAlt1                37, 88
+		GetVariableValue              1                                            ; local
+		SetThisMemberValueString      "name"
+		LineNumber                    30686, 4
+		LineNumberAlt1                38, 88
+		GetThisMemberValueString      "name"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    30686, 4
+		LineNumberAlt1                38, 88
+		SetThisMemberValueString      "id"
+		LineNumber                    30688, 4
+		LineNumberAlt1                40, 88
+		GetVariableValue              2                                            ; local
+		SetThisMemberValueString      "area"
+		LineNumber                    30689, 4
+		LineNumberAlt1                41, 88
+		GetThisMemberValueString      "area"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    30689, 4
+		LineNumberAlt1                41, 88
+		SetThisMemberValueString      "areaid"
+		LineNumber                    30691, 4
+		LineNumberAlt1                43, 88
+		GetVariableValue              3                                            ; local
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    30692, 4
+		LineNumberAlt1                44, 88
+		PushConstant0
+		SetThisMemberValueString      "triggertype"
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    30694, 4
+		LineNumberAlt1                46, 88
+		GetVariableValue              3                                            ; local
+		SetThisMemberValueString      "triggertype"
+		; <-
+		BranchTarget                  1
+		LineNumber                    30696, 4
+		LineNumberAlt1                48, 88
+		PushConstanti8                1
+		SetThisMemberValueString      "onscreen"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "initfull"
+		; address: 0x5a8c8
+		; source: 88 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/Lego_TriggerObj.vbo" 53:65
+		MemberFunctionArgumentCheck   1
+		LineNumber                    30701, 4
+		LineNumberAlt1                53, 88
+		GetThisMemberValueString      "triggertype"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    30702, 4
+		LineNumberAlt1                54, 88
+		GetThisMemberValueString      "id"
+		CallGameFunctionString        "gccollisionphysicsgroup", "gettriggerplane", 1
+		LineNumber                    30702, 4
+		LineNumberAlt1                54, 88
+		SetThisMemberValueString      "handle"
+		LineNumber                    30703, 4
+		LineNumberAlt1                55, 88
+		GetThisMemberValueString      "handle"
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    30709, 4
+		LineNumberAlt1                61, 88
+		PushConstant0
+		SetThisMemberValueString      "collide"
+		LineNumber                    30710, 4
+		LineNumberAlt1                62, 88
+		PushConstanti8                5
+		SetThisMemberValueString      "collidetimer"
+		LineNumber                    30713, 4
+		LineNumberAlt1                65, 88
+		GetVariableValue              0                                               ; local
+		PushConstanti8                4
+		PushConstanti8                4
+		GetThisMemberFunctionString   "setresponse"
+		JumpAbsolute                  3
+		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "cleanupfull"
+		; address: 0x5a944
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setresponse"
+		; address: 0x5a948
+		; source: 88 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/Lego_TriggerObj.vbo" 83:84
+		MemberFunctionArgumentCheck   3
+		LineNumber                    30731, 4
+		LineNumberAlt1                83, 88
+		GetThisMemberValueString      "triggertype"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    30732, 4
+		LineNumberAlt1                84, 88
+		GetThisMemberValueString      "handle"
+		GetVariableValue              1                                        ; local
+		GetVariableValue              2                                        ; local
+		CallGameFunctionString        "gctriggerplane", "setplaneresponses", 3
+		Pop
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "setcollide"
+		; address: 0x5a978
+		; source: 88 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/Lego_TriggerObj.vbo" 91:91
+		MemberFunctionArgumentCheck 1
+		LineNumber                  30739, 4
+		LineNumberAlt1              91, 88
+		GetThisMemberValueString    "collidetimer"
+		SetThisMemberValueString    "collide"
+		PushNothing
+		Return
+	end ; method
+
+	begin method "process"
+		; address: 0x5a98c
+		; source: 88 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/Lego_TriggerObj.vbo" 97:98
+		MemberFunctionArgumentCheck   2
+		LineNumber                    30745, 4
+		LineNumberAlt1                97, 88
+		GetThisMemberValueString      "collide"
+		PushConstant0
+		GreaterThan
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    30746, 4
+		LineNumberAlt1                98, 88
+		GetThisMemberValueString      "collide"
+		PushConstanti8                1
+		Subtract
+		SetThisMemberValueString      "collide"
+		; <-
+		BranchTarget                  0
+		PushNothing
+		Return
+	end ; method
+
+	begin method "show"
+		; address: 0x5a9b5
+		; source: 88 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/Lego_TriggerObj.vbo" 104:110
+		MemberFunctionArgumentCheck   1
+		LineNumber                    30752, 4
+		LineNumberAlt1                104, 88
+		GetThisMemberValueString      "onscreen"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    30753, 4
+		LineNumberAlt1                105, 88
+		GetThisMemberValueString      "triggertype"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    30754, 4
+		LineNumberAlt1                106, 88
+		GetThisMemberValueString      "id"
+		PushConstanti8                1
+		CallGameFunctionString        "gccollisionphysicsgroup", "toggletriggerplaneonoff", 2
+		Pop
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    30756, 4
+		LineNumberAlt1                108, 88
+		GetThisMemberValueString      "id"
+		PushConstanti8                1
+		CallGameFunctionString        "gccollisionphysicsgroup", "toggletriggerboxonoff", 2
+		Pop
+		; <-
+		BranchTarget                  1
+		LineNumber                    30758, 4
+		LineNumberAlt1                110, 88
+		PushConstanti8                1
+		SetThisMemberValueString      "onscreen"
+		; <-
+		BranchTarget                  2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "hide"
+		; address: 0x5aa1b
+		; source: 88 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/Lego_TriggerObj.vbo" 115:122
+		MemberFunctionArgumentCheck   1
+		LineNumber                    30763, 4
+		LineNumberAlt1                115, 88
+		GetThisMemberValueString      "onscreen"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    30764, 4
+		LineNumberAlt1                116, 88
+		GetThisMemberValueString      "triggertype"
+		PushConstant0
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    30766, 4
+		LineNumberAlt1                118, 88
+		GetThisMemberValueString      "id"
+		PushConstant0
+		CallGameFunctionString        "gccollisionphysicsgroup", "toggletriggerplaneonoff", 2
+		Pop
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    30768, 4
+		LineNumberAlt1                120, 88
+		GetThisMemberValueString      "id"
+		PushConstant0
+		CallGameFunctionString        "gccollisionphysicsgroup", "toggletriggerboxonoff", 2
+		Pop
+		; <-
+		BranchTarget                  1
+		LineNumber                    30770, 4
+		LineNumberAlt1                122, 88
+		PushConstant0
+		SetThisMemberValueString      "onscreen"
+		; <-
+		BranchTarget                  2
+		PushNothing
+		Return
+	end ; method
+
+	begin method "toggle"
+		; address: 0x5aa7f
+		; source: 88 "C:\\projects\\lego\\Scripting\\VBO\\LegoBase/Lego_TriggerObj.vbo" 127:130
+		MemberFunctionArgumentCheck   1
+		LineNumber                    30775, 4
+		LineNumberAlt1                127, 88
+		GetThisMemberValueString      "onscreen"
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    30776, 4
+		LineNumberAlt1                128, 88
+		GetVariableValue              0          ; local
+		GetThisMemberFunctionString   "hide"
+		JumpAbsolute                  1
+		Pop
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    30778, 4
+		LineNumberAlt1                130, 88
+		GetVariableValue              0          ; local
+		GetThisMemberFunctionString   "show"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  1
+		PushNothing
+		Return
+	end ; method
+end ; class
