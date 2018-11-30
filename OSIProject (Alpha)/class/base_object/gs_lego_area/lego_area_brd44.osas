@@ -2,7 +2,7 @@ begin class "lego_area_brd44", "gs_lego_area"
 	property "puzzle"
 
 	begin method "lego_area_brd44"
-		; address: 0xb8326
+		; address: 0xaac74
 		; source: 183 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_brd4.vbo" 28:31
 		MemberFunctionArgumentCheck 2
 		LineNumber                  1684, 4
@@ -56,7 +56,7 @@ begin class "lego_area_brd44", "gs_lego_area"
 	end ; method
 
 	begin method "initfull"
-		; address: 0xb83a4
+		; address: 0xaacf2
 		; source: 183 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_brd4.vbo" 37:39
 		MemberFunctionArgumentCheck 1
 		LineNumber                  1693, 4
@@ -84,7 +84,7 @@ begin class "lego_area_brd44", "gs_lego_area"
 	end ; method
 
 	begin method "cleanupfull"
-		; address: 0xb83e3
+		; address: 0xaad31
 		; source: 183 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_brd4.vbo" 44:49
 		MemberFunctionArgumentCheck 1
 		LineNumber                  1700, 4
@@ -108,24 +108,8 @@ begin class "lego_area_brd44", "gs_lego_area"
 		Return
 	end ; method
 
-	begin method "process"
-		; address: 0xb841c
-		; source: 183 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_brd4.vbo" 54:54
-		MemberFunctionArgumentCheck 2
-		LineNumber                  1710, 4
-		LineNumberAlt1              54, 183
-		GetThisMemberValueString    "puzzle"
-		GetVariableValue            1         ; local
-		Pull                        2
-		GetMemberFunctionString     "process"
-		JumpAbsolute                2
-		Pop
-		PushNothing
-		Return
-	end ; method
-
 	begin method "onevent"
-		; address: 0xb8438
+		; address: 0xaad6a
 		; source: 183 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_brd4.vbo" 59:59
 		MemberFunctionArgumentCheck 2
 		LineNumber                  1715, 4
@@ -140,24 +124,8 @@ begin class "lego_area_brd44", "gs_lego_area"
 		Return
 	end ; method
 
-	begin method "input"
-		; address: 0xb8454
-		; source: 183 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_brd4.vbo" 64:64
-		MemberFunctionArgumentCheck 2
-		LineNumber                  1720, 4
-		LineNumberAlt1              64, 183
-		GetThisMemberValueString    "puzzle"
-		GetVariableValue            1        ; local
-		Pull                        2
-		GetMemberFunctionString     "input"
-		JumpAbsolute                2
-		Pop
-		PushNothing
-		Return
-	end ; method
-
 	begin method "exit"
-		; address: 0xb8470
+		; address: 0xaad86
 		MemberFunctionArgumentCheck 1
 		PushNothing
 		Return

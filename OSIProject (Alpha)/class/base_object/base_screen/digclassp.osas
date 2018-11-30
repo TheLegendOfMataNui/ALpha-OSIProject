@@ -14,7 +14,7 @@ begin class "digclassp", "base_screen"
 	property "trigpln4"
 
 	begin method "digclassp"
-		; address: 0xb3994
+		; address: 0x5e17d
 		; source: 94 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_scrpp.vbo" 109:117
 		MemberFunctionArgumentCheck 10
 		LineNumber                  33798, 4
@@ -58,7 +58,7 @@ begin class "digclassp", "base_screen"
 	end ; method
 
 	begin method "initfull"
-		; address: 0xb3a28
+		; address: 0x5e211
 		; source: 94 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_scrpp.vbo" 123:156
 		MemberFunctionArgumentCheck   1
 		CreateStackVariables          3
@@ -328,7 +328,7 @@ begin class "digclassp", "base_screen"
 	end ; method
 
 	begin method "process"
-		; address: 0xb3d19
+		; address: 0x5e502
 		; source: 94 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_scrpp.vbo" 162:164
 		MemberFunctionArgumentCheck   2
 		CreateStackVariables          2
@@ -372,20 +372,20 @@ begin class "digclassp", "base_screen"
 	end ; method
 
 	begin method "input"
-		; address: 0xb3d6f
+		; address: 0x5e558
 		MemberFunctionArgumentCheck 2
 		PushNothing
 		Return
 	end ; method
 
 	begin method "onevent"
-		; address: 0xb3d73
+		; address: 0x5e55c
 		; source: 94 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_scrpp.vbo" 175:197
 		MemberFunctionArgumentCheck   2
 		CreateStackVariables          3
 		LineNumber                    33864, 4
 		LineNumberAlt1                175, 94
-		GetVariableValue              1                                             ; local
+		GetVariableValue              1                                            ; local
 		GetMemberValueString          "eventid"
 		Dup
 		PushConstanti8                4
@@ -394,18 +394,18 @@ begin class "digclassp", "base_screen"
 		; ->
 		LineNumber                    33866, 4
 		LineNumberAlt1                177, 94
-		GetVariableValue              1                                             ; local
+		GetVariableValue              1                                            ; local
 		GetMemberValueString          "args"
 		PushConstant0
 		GetArrayValue
-		SetVariableValue              2                                             ; local
+		SetVariableValue              2                                            ; local
 		LineNumber                    33867, 4
 		LineNumberAlt1                178, 94
-		GetVariableValue              1                                             ; local
+		GetVariableValue              1                                            ; local
 		GetMemberValueString          "args"
 		PushConstanti8                1
 		GetArrayValue
-		SetVariableValue              3                                             ; local
+		SetVariableValue              3                                            ; local
 		LineNumber                    33868, 4
 		LineNumberAlt1                179, 94
 		GetThisMemberValueString      "digplanes"
@@ -413,19 +413,19 @@ begin class "digclassp", "base_screen"
 		PushConstanti8                1
 		Subtract
 		PushConstant0
-		SetVariableValue              4                                             ; local
+		SetVariableValue              4                                            ; local
 		; <-
 		BranchTarget                  0
 		Dup
-		GetVariableValue              4                                             ; local
+		GetVariableValue              4                                            ; local
 		GreaterOrEqual
 		CompareAndBranchIfFalseTarget 2, 0
 		; ->
 		LineNumber                    33869, 4
 		LineNumberAlt1                180, 94
-		GetVariableValue              2                                             ; local
+		GetVariableValue              2                                            ; local
 		GetThisMemberValueString      "digplanes"
-		GetVariableValue              4                                             ; local
+		GetVariableValue              4                                            ; local
 		GetArrayValue
 		GetMemberValueString          "id"
 		EqualTo
@@ -433,7 +433,7 @@ begin class "digclassp", "base_screen"
 		; ->
 		LineNumber                    33870, 4
 		LineNumberAlt1                181, 94
-		GetVariableValue              3                                             ; local
+		GetVariableValue              3                                            ; local
 		PushConstanti8                1
 		EqualTo
 		CompareAndBranchIfFalseTarget 1, 0
@@ -469,14 +469,10 @@ begin class "digclassp", "base_screen"
 		Or
 		CompareAndBranchIfFalseTarget 1, 0
 		; ->
-		LineNumber                    33872, 4
-		LineNumberAlt1                183, 94
-		CallGameFunctionString        "gcstaticsoundsptrarray", "playtablesound", 2
-		Pop
 		LineNumber                    33873, 4
 		LineNumberAlt1                184, 94
 		GetThisMemberValueString      "digplanes"
-		GetVariableValue              4                                             ; local
+		GetVariableValue              4                                            ; local
 		GetArrayValue
 		Dup
 		GetMemberFunctionString       "setcollide"
@@ -485,7 +481,7 @@ begin class "digclassp", "base_screen"
 		LineNumber                    33874, 4
 		LineNumberAlt1                185, 94
 		GetThisMemberValueString      "digplanes"
-		GetVariableValue              4                                             ; local
+		GetVariableValue              4                                            ; local
 		GetArrayValue
 		Dup
 		GetMemberFunctionString       "hide"
@@ -494,7 +490,7 @@ begin class "digclassp", "base_screen"
 		LineNumber                    33875, 4
 		LineNumberAlt1                186, 94
 		GetThisMemberValueString      "digarray"
-		GetVariableValue              4                                             ; local
+		GetVariableValue              4                                            ; local
 		GetArrayValue
 		Dup
 		GetMemberFunctionString       "hide"
@@ -504,14 +500,14 @@ begin class "digclassp", "base_screen"
 		LineNumberAlt1                187, 94
 		GetThisMemberValueString      "disabledmoveables"
 		GetThisMemberValueString      "digarray"
-		GetVariableValue              4                                             ; local
+		GetVariableValue              4                                            ; local
 		GetArrayValue
 		AppendToArray
 		LineNumber                    33877, 4
 		LineNumberAlt1                188, 94
 		GetThisMemberValueString      "disabledplanes"
 		GetThisMemberValueString      "digplanes"
-		GetVariableValue              4                                             ; local
+		GetVariableValue              4                                            ; local
 		GetArrayValue
 		AppendToArray
 		; <-
@@ -554,7 +550,7 @@ begin class "digclassp", "base_screen"
 	end ; method
 
 	begin method "cleanupfull"
-		; address: 0xb3f35
+		; address: 0x5e70d
 		; source: 94 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_scrpp.vbo" 204:214
 		MemberFunctionArgumentCheck   1
 		CreateStackVariables          1
@@ -643,7 +639,7 @@ begin class "digclassp", "base_screen"
 	end ; method
 
 	begin method "cleanupshort"
-		; address: 0xb3ff3
+		; address: 0x5e7cb
 		; source: 94 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_scrpp.vbo" 219:219
 		MemberFunctionArgumentCheck 1
 		LineNumber                  33908, 4
@@ -657,14 +653,14 @@ begin class "digclassp", "base_screen"
 	end ; method
 
 	begin method "show"
-		; address: 0xb400a
+		; address: 0x5e7e2
 		MemberFunctionArgumentCheck 1
 		PushNothing
 		Return
 	end ; method
 
 	begin method "hide"
-		; address: 0xb400e
+		; address: 0x5e7e6
 		MemberFunctionArgumentCheck 1
 		PushNothing
 		Return

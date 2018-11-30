@@ -1,9 +1,8 @@
 begin class "lego_area_hutt", "gs_lego_area"
-	property "puzzle"
 	property "parent"
 
 	begin method "lego_area_hutt"
-		; address: 0xbaffb
+		; address: 0x97bca
 		; source: 163 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_hutt.vbo" 22:25
 		MemberFunctionArgumentCheck 2
 		LineNumber                  59806, 4
@@ -20,18 +19,6 @@ begin class "lego_area_hutt", "gs_lego_area"
 		GetThisMemberFunctionString "gs_lego_area"
 		JumpAbsolute                5
 		Pop
-		LineNumber                  59808, 4
-		LineNumberAlt1              24, 163
-		CreateObjectString          "hutt_class"
-		Dup
-		GetVariableValue            0                    ; local
-		Pull                        2
-		GetMemberFunctionString     "hutt_class"
-		JumpAbsolute                2
-		Pop
-		LineNumber                  59808, 4
-		LineNumberAlt1              24, 163
-		SetThisMemberValueString    "puzzle"
 		LineNumber                  59809, 4
 		LineNumberAlt1              25, 163
 		GetVariableValue            0                    ; local
@@ -43,8 +30,8 @@ begin class "lego_area_hutt", "gs_lego_area"
 	end ; method
 
 	begin method "initfull"
-		; address: 0xbb063
-		; source: 163 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_hutt.vbo" 31:33
+		; address: 0x97c0c
+		; source: 163 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_hutt.vbo" 31:31
 		MemberFunctionArgumentCheck 1
 		LineNumber                  59815, 4
 		LineNumberAlt1              31, 163
@@ -52,75 +39,13 @@ begin class "lego_area_hutt", "gs_lego_area"
 		GetThisMemberFunctionString "lego_area_show"
 		JumpAbsolute                1
 		Pop
-		LineNumber                  59816, 4
-		LineNumberAlt1              32, 163
-		GetThisMemberValueString    "puzzle"
-		Dup
-		GetMemberFunctionString     "initfull"
-		JumpAbsolute                1
-		Pop
-		LineNumber                  59817, 4
-		LineNumberAlt1              33, 163
-		GetThisMemberValueString    "puzzle"
-		Dup
-		GetMemberFunctionString     "show"
-		JumpAbsolute                1
-		Pop
-		PushNothing
-		Return
-	end ; method
-
-	begin method "process"
-		; address: 0xbb0a2
-		; source: 163 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_hutt.vbo" 38:38
-		MemberFunctionArgumentCheck 2
-		LineNumber                  59822, 4
-		LineNumberAlt1              38, 163
-		GetThisMemberValueString    "puzzle"
-		GetVariableValue            1         ; local
-		Pull                        2
-		GetMemberFunctionString     "process"
-		JumpAbsolute                2
-		Pop
-		PushNothing
-		Return
-	end ; method
-
-	begin method "input"
-		; address: 0xbb0be
-		; source: 163 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_hutt.vbo" 43:43
-		MemberFunctionArgumentCheck 2
-		LineNumber                  59827, 4
-		LineNumberAlt1              43, 163
-		GetThisMemberValueString    "puzzle"
-		GetVariableValue            1        ; local
-		Pull                        2
-		GetMemberFunctionString     "input"
-		JumpAbsolute                2
-		Pop
-		PushNothing
-		Return
-	end ; method
-
-	begin method "onevent"
-		; address: 0xbb0da
-		; source: 163 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_hutt.vbo" 48:48
-		MemberFunctionArgumentCheck 2
-		LineNumber                  59832, 4
-		LineNumberAlt1              48, 163
-		GetThisMemberValueString    "puzzle"
-		GetVariableValue            1         ; local
-		Pull                        2
-		GetMemberFunctionString     "onevent"
-		JumpAbsolute                2
-		Pop
 		PushNothing
 		Return
 	end ; method
 
 	begin method "cleanupfull"
-		; address: 0xbb0f6
-		; source: 163 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_hutt.vbo" 53:54
+		; address: 0x97c23
+		; source: 163 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_hutt.vbo" 53:53
 		MemberFunctionArgumentCheck 1
 		LineNumber                  59837, 4
 		LineNumberAlt1              53, 163
@@ -128,28 +53,18 @@ begin class "lego_area_hutt", "gs_lego_area"
 		GetThisMemberFunctionString "lego_area_hide"
 		JumpAbsolute                1
 		Pop
-		LineNumber                  59838, 4
-		LineNumberAlt1              54, 163
-		GetThisMemberValueString    "puzzle"
-		Dup
-		GetMemberFunctionString     "hide"
-		JumpAbsolute                1
-		Pop
 		PushNothing
 		Return
 	end ; method
 
 	begin method "exit"
-		; address: 0xbb121
-		; source: 163 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_hutt.vbo" 59:59
+		; address: 0x97c3a
+		; source: 163 "C:\\projects\\lego\\Scripting\\VBO\\lev3/lev3_hutt.vbo" 115:115
 		MemberFunctionArgumentCheck 1
-		LineNumber                  59843, 4
-		LineNumberAlt1              59, 163
-		GetThisMemberValueString    "puzzle"
-		Dup
-		GetMemberFunctionString     "exit"
-		JumpAbsolute                1
-		Pop
+		LineNumber                  59899, 4
+		LineNumberAlt1              115, 163
+		PushNothing
+		SetThisMemberValueString    "parent"
 		PushNothing
 		Return
 	end ; method

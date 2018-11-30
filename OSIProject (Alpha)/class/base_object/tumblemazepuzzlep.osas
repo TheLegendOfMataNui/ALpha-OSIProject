@@ -7,7 +7,7 @@ begin class "tumblemazepuzzlep", "base_object"
 	property "dead"
 
 	begin method "tumblemazepuzzlep"
-		; address: 0xadff2
+		; address: 0x63c7c
 		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 167:167
 		MemberFunctionArgumentCheck 2
 		LineNumber                  36120, 4
@@ -19,7 +19,7 @@ begin class "tumblemazepuzzlep", "base_object"
 	end ; method
 
 	begin method "initfull"
-		; address: 0xae006
+		; address: 0x63c90
 		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 175:232
 		MemberFunctionArgumentCheck   1
 		CreateStackVariables          2
@@ -580,7 +580,7 @@ begin class "tumblemazepuzzlep", "base_object"
 	end ; method
 
 	begin method "initshort"
-		; address: 0xae610
+		; address: 0x6429a
 		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 240:240
 		MemberFunctionArgumentCheck 1
 		LineNumber                  36193, 4
@@ -594,7 +594,7 @@ begin class "tumblemazepuzzlep", "base_object"
 	end ; method
 
 	begin method "cleanupfull"
-		; address: 0xae627
+		; address: 0x642b1
 		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 247:258
 		MemberFunctionArgumentCheck   1
 		CreateStackVariables          1
@@ -679,7 +679,7 @@ begin class "tumblemazepuzzlep", "base_object"
 	end ; method
 
 	begin method "cleanupshort"
-		; address: 0xae6eb
+		; address: 0x64375
 		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 265:265
 		MemberFunctionArgumentCheck 1
 		LineNumber                  36218, 4
@@ -693,7 +693,7 @@ begin class "tumblemazepuzzlep", "base_object"
 	end ; method
 
 	begin method "exit"
-		; address: 0xae702
+		; address: 0x6438c
 		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 270:270
 		MemberFunctionArgumentCheck 1
 		LineNumber                  36223, 4
@@ -705,7 +705,7 @@ begin class "tumblemazepuzzlep", "base_object"
 	end ; method
 
 	begin method "process"
-		; address: 0xae714
+		; address: 0x6439e
 		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 276:277
 		MemberFunctionArgumentCheck   2
 		CreateStackVariables          1
@@ -746,39 +746,14 @@ begin class "tumblemazepuzzlep", "base_object"
 	end ; method
 
 	begin method "input"
-		; address: 0xae75d
-		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 284:284
-		MemberFunctionArgumentCheck   2
-		LineNumber                    36237, 4
-		LineNumberAlt1                284, 99
-		GetVariableValue              1        ; local
-		GetMemberValueString          "button"
-		PushConstanti8                67
-		EqualTo
-		CompareAndBranchIfFalseTarget 0, 0
-		; ->
-		LineNumber                    36237, 4
-		LineNumberAlt1                284, 99
-		GetVariableValue              1        ; local
-		GetMemberValueString          "event"
-		PushConstanti8                2
-		EqualTo
-		CompareAndBranchIfFalseTarget 0, 0
-		; ->
-		LineNumber                    36237, 4
-		LineNumberAlt1                284, 99
-		GetVariableValue              0        ; local
-		GetThisMemberFunctionString   "cheat"
-		JumpAbsolute                  1
-		Pop
-		; <-
-		BranchTarget                  0
+		; address: 0x643e7
+		MemberFunctionArgumentCheck 2
 		PushNothing
 		Return
 	end ; method
 
 	begin method "onevent"
-		; address: 0xae7a0
+		; address: 0x643eb
 		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 292:321
 		MemberFunctionArgumentCheck   2
 		CreateStackVariables          1
@@ -959,23 +934,6 @@ begin class "tumblemazepuzzlep", "base_object"
 		Pop
 		; <-
 		BranchTarget                  8
-		Pop
-		PushNothing
-		Return
-	end ; method
-
-	begin method "cheat"
-		; address: 0xae970
-		; source: 99 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tmblp.vbo" 330:331
-		MemberFunctionArgumentCheck 1
-		LineNumber                  36283, 4
-		LineNumberAlt1              330, 99
-		PushConstanti8              13
-		SetThisMemberValueString    "nextdoor"
-		LineNumber                  36284, 4
-		LineNumberAlt1              331, 99
-		PushConstantf32             0.699999988079071
-		CallGameFunctionString      "gccollisionphysicsgroup", "spinmask", 1
 		Pop
 		PushNothing
 		Return

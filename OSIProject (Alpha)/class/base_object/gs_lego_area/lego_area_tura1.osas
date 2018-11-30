@@ -1,44 +1,43 @@
 begin class "lego_area_tura1", "gs_lego_area"
-	property "puzzle"
+	property "parent"
 
 	begin method "lego_area_tura1"
-		; address: 0xc3342
-		; source: 115 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tura.vbo" 30:31
+		; address: 0x6f3b8
+		; source: 115 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tura.vbo" 30:89
 		MemberFunctionArgumentCheck 2
+		LineNumber                  41168, 4
+		LineNumberAlt1              89, 115
+		GetVariableValue            1                    ; local
+		SetThisMemberValueString    "parent"
 		LineNumber                  41109, 4
 		LineNumberAlt1              30, 115
-		GetVariableValue            0              ; local
+		GetVariableValue            0                    ; local
 		PushConstantStringString    "tura"
-		GetVariableValue            1              ; local
+		GetVariableValue            1                    ; local
 		PushConstant0
 		PushConstant0
 		GetThisMemberFunctionString "gs_lego_area"
 		JumpAbsolute                5
 		Pop
-		LineNumber                  41110, 4
-		LineNumberAlt1              31, 115
-		CreateObjectString          "tura1_puzzle"
-		Dup
-		GetVariableValue            0              ; local
-		Pull                        2
-		GetMemberFunctionString     "tura1_puzzle"
-		JumpAbsolute                2
+		LineNumber                  41117, 4
+		LineNumberAlt1              38, 115
+		GetVariableValue            0                    ; local
+		GetThisMemberFunctionString "lego_area_initfull"
+		JumpAbsolute                1
 		Pop
-		LineNumber                  41110, 4
-		LineNumberAlt1              31, 115
-		SetThisMemberValueString    "puzzle"
 		PushNothing
 		Return
 	end ; method
 
 	begin method "initfull"
-		; address: 0xc3387
-		; source: 115 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tura.vbo" 38:39
+		; address: 0x6f3fa
+		; source: 115 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tura.vbo" 39:97
 		MemberFunctionArgumentCheck 1
-		LineNumber                  41117, 4
-		LineNumberAlt1              38, 115
-		GetVariableValue            0                    ; local
-		GetThisMemberFunctionString "lego_area_initfull"
+		CreateStackVariables        1
+		LineNumber                  41127, 4
+		LineNumberAlt1              48, 115
+		GetVariableValue            0                                            ; local
+		GetThisMemberFunctionString "lego_area_show"
 		JumpAbsolute                1
 		Pop
 		LineNumber                  41118, 4
@@ -59,109 +58,39 @@ begin class "lego_area_tura1", "gs_lego_area"
 		PushConstanti16             689
 		AppendToArray
 		SetThisMemberValueString    "startingarea"
+		LineNumber                  41175, 4
+		LineNumberAlt1              96, 115
+		PushConstantStringString    "when"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  41175, 4
+		LineNumberAlt1              96, 115
+		PushConstant0
+		CallGameFunctionString      "gcmodeldirector", "getcharacter", 2
+		LineNumber                  41175, 4
+		LineNumberAlt1              96, 115
+		SetVariableValue            1                                            ; local
+		LineNumber                  41176, 4
+		LineNumberAlt1              97, 115
+		GetVariableValue            1                                            ; local
+		PushConstantStringString    "none"
+		CallGameFunctionString      "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                  41176, 4
+		LineNumberAlt1              97, 115
+		CallGameFunctionString      "gccharacter", "setinputstate", 2
+		Pop
 		PushNothing
 		Return
 	end ; method
 
 	begin method "cleanupfull"
-		; address: 0xc33c4
-		MemberFunctionArgumentCheck 1
-		PushNothing
-		Return
-	end ; method
-
-	begin method "show"
-		; address: 0xc33c8
-		; source: 115 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tura.vbo" 48:50
-		MemberFunctionArgumentCheck 1
-		LineNumber                  41127, 4
-		LineNumberAlt1              48, 115
-		GetVariableValue            0                ; local
-		GetThisMemberFunctionString "lego_area_show"
-		JumpAbsolute                1
-		Pop
-		LineNumber                  41128, 4
-		LineNumberAlt1              49, 115
-		GetThisMemberValueString    "puzzle"
-		Dup
-		GetMemberFunctionString     "initfull"
-		JumpAbsolute                1
-		Pop
-		LineNumber                  41129, 4
-		LineNumberAlt1              50, 115
-		GetThisMemberValueString    "puzzle"
-		Dup
-		GetMemberFunctionString     "show"
-		JumpAbsolute                1
-		Pop
-		PushNothing
-		Return
-	end ; method
-
-	begin method "hide"
-		; address: 0xc3407
-		; source: 115 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tura.vbo" 55:56
+		; address: 0x6f491
+		; source: 115 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tura.vbo" 55:55
 		MemberFunctionArgumentCheck 1
 		LineNumber                  41134, 4
 		LineNumberAlt1              55, 115
 		GetVariableValue            0                ; local
 		GetThisMemberFunctionString "lego_area_hide"
 		JumpAbsolute                1
-		Pop
-		LineNumber                  41135, 4
-		LineNumberAlt1              56, 115
-		GetThisMemberValueString    "puzzle"
-		Dup
-		GetMemberFunctionString     "hide"
-		JumpAbsolute                1
-		Pop
-		PushNothing
-		Return
-	end ; method
-
-	begin method "process"
-		; address: 0xc3432
-		; source: 115 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tura.vbo" 61:61
-		MemberFunctionArgumentCheck 2
-		LineNumber                  41140, 4
-		LineNumberAlt1              61, 115
-		GetThisMemberValueString    "puzzle"
-		GetVariableValue            1         ; local
-		Pull                        2
-		GetMemberFunctionString     "process"
-		JumpAbsolute                2
-		Pop
-		PushNothing
-		Return
-	end ; method
-
-	begin method "onevent"
-		; address: 0xc344e
-		; source: 115 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tura.vbo" 66:66
-		MemberFunctionArgumentCheck 2
-		LineNumber                  41145, 4
-		LineNumberAlt1              66, 115
-		GetThisMemberValueString    "puzzle"
-		GetVariableValue            1         ; local
-		Pull                        2
-		GetMemberFunctionString     "onevent"
-		JumpAbsolute                2
-		Pop
-		PushNothing
-		Return
-	end ; method
-
-	begin method "input"
-		; address: 0xc346a
-		; source: 115 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_tura.vbo" 71:71
-		MemberFunctionArgumentCheck 2
-		LineNumber                  41150, 4
-		LineNumberAlt1              71, 115
-		GetThisMemberValueString    "puzzle"
-		GetVariableValue            1        ; local
-		Pull                        2
-		GetMemberFunctionString     "input"
-		JumpAbsolute                2
 		Pop
 		PushNothing
 		Return
