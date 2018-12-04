@@ -360,7 +360,7 @@ begin class "lego_level_2", "gs_lego_level"
 	begin method "initfull"
 		; address: 0xd268c
 		; source: 126 "C:\\projects\\lego\\Scripting\\VBO\\lev2/level_2.vbo" 109:138
-		MemberFunctionArgumentCheck   2
+		MemberFunctionArgumentCheck   1
 		LineNumber                    54131, 4
 		LineNumberAlt1                109, 126
 		GetVariableValue              0                                            ; local
@@ -397,11 +397,19 @@ begin class "lego_level_2", "gs_lego_level"
 		GetMemberFunctionString       "addmask"
 		JumpAbsolute                  3
 		Pop
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		PushConstanti8               1
+		PushConstant0
+		Pull                         3
+		GetMemberFunctionString      "addelement"
+		JumpAbsolute                 3
+		Pop
 		LineNumber                    54137, 4
 		LineNumberAlt1                115, 126
 		GetVariableValueGlobalString  "globalclass"
 		GetMemberValueString          "saverloaded"
-		CompareAndBranchIfFalseTarget 5, 0
+		CompareAndBranchIfFalseTarget 6, 0
 		; ->
 		LineNumber                    54140, 4
 		LineNumberAlt1                118, 126
@@ -554,12 +562,9 @@ begin class "lego_level_2", "gs_lego_level"
 		LineNumberAlt1                137, 126
 		GetVariableValueGlobalString  "globalclass"
 		GetMemberValueString          "player"
-		PushConstanti8                25
-		PushConstanti8                30
-		PushConstanti8                30
-		Pull                          4
+		Dup
 		GetMemberFunctionString       "setupgrapplinghook"
-		JumpAbsolute                  4
+		JumpAbsolute                  1
 		Pop
 		LineNumber                    54160, 4
 		LineNumberAlt1                138, 126
@@ -572,6 +577,14 @@ begin class "lego_level_2", "gs_lego_level"
 		Pop
 		; <-
 		BranchTarget                  5
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "initfromsaver"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  6
 		PushNothing
 		Return
 	end ; method
@@ -794,6 +807,14 @@ begin class "lego_level_2", "gs_lego_level"
 		PushConstanti8               8
 		Pull                         3
 		GetMemberFunctionString      "addmask"
+		JumpAbsolute                 3
+		Pop
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		PushConstanti8               1
+		PushConstant0
+		Pull                         3
+		GetMemberFunctionString      "addelement"
 		JumpAbsolute                 3
 		Pop
 		PushNothing

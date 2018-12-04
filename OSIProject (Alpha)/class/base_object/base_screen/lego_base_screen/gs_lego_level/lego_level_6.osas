@@ -547,11 +547,19 @@ begin class "lego_level_6", "gs_lego_level"
 		GetMemberFunctionString       "addmask"
 		JumpAbsolute                  3
 		Pop
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		PushConstanti8               1
+		PushConstant0
+		Pull                         3
+		GetMemberFunctionString      "addelement"
+		JumpAbsolute                 3
+		Pop
 		LineNumber                    19044, 4
 		LineNumberAlt1                143, 211
 		GetVariableValueGlobalString  "globalclass"
 		GetMemberValueString          "saverloaded"
-		CompareAndBranchIfFalseTarget 2, 0
+		CompareAndBranchIfFalseTarget 5, 0
 		; ->
 		LineNumber                    19046, 4
 		LineNumberAlt1                145, 211
@@ -586,7 +594,7 @@ begin class "lego_level_6", "gs_lego_level"
 		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
 		LineNumber                    19049, 4
 		LineNumberAlt1                148, 211
-		PushConstantStringString      "ra03"
+		PushConstantStringString      "ta03"
 		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
 		LineNumber                    19049, 4
 		LineNumberAlt1                148, 211
@@ -609,11 +617,11 @@ begin class "lego_level_6", "gs_lego_level"
 		BranchTarget                  1
 		LineNumber                    19060, 4
 		LineNumberAlt1                159, 211
-		PushConstantStringString      "gly0"
+		PushConstantStringString      "glyp"
 		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
 		LineNumber                    19060, 4
 		LineNumberAlt1                159, 211
-		PushConstantStringString      "tmbl"
+		PushConstantStringString      "tp01"
 		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
 		LineNumber                    19060, 4
 		LineNumberAlt1                159, 211
@@ -626,13 +634,73 @@ begin class "lego_level_6", "gs_lego_level"
 		LineNumberAlt1                160, 211
 		GetVariableValueGlobalString  "globalclass"
 		GetMemberValueString          "player"
-		PushConstanti8                19
+		PushConstanti8                17
 		Pull                          2
 		GetMemberFunctionString       "addelement"
 		JumpAbsolute                  2
 		Pop
 		; <-
 		BranchTarget                  2
+		LineNumber                    19060, 4
+		LineNumberAlt1                159, 211
+		PushConstantStringString      "glyp"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    19060, 4
+		LineNumberAlt1                159, 211
+		PushConstantStringString      "tp02"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    19060, 4
+		LineNumberAlt1                159, 211
+		CallGameFunctionString        "gcsaver", "findglypha", 2
+		LineNumber                    19060, 4
+		LineNumberAlt1                159, 211
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    19061, 4
+		LineNumberAlt1                160, 211
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		PushConstanti8                18
+		Pull                          2
+		GetMemberFunctionString       "addelement"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  3
+		LineNumber                    19060, 4
+		LineNumberAlt1                159, 211
+		PushConstantStringString      "glyp"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    19060, 4
+		LineNumberAlt1                159, 211
+		PushConstantStringString      "tp03"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    19060, 4
+		LineNumberAlt1                159, 211
+		CallGameFunctionString        "gcsaver", "findglypha", 2
+		LineNumber                    19060, 4
+		LineNumberAlt1                159, 211
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    19061, 4
+		LineNumberAlt1                160, 211
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		PushConstanti8                19
+		Pull                          2
+		GetMemberFunctionString       "addelement"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  4
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "initfromsaver"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  5
 		LineNumber                    19075, 4
 		LineNumberAlt1                174, 211
 		CreateObjectString            "tablecopysound"
@@ -767,6 +835,14 @@ begin class "lego_level_6", "gs_lego_level"
 		PushConstanti8               4
 		Pull                         3
 		GetMemberFunctionString      "addmask"
+		JumpAbsolute                 3
+		Pop
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		PushConstanti8               1
+		PushConstant0
+		Pull                         3
+		GetMemberFunctionString      "addelement"
 		JumpAbsolute                 3
 		Pop
 		PushNothing

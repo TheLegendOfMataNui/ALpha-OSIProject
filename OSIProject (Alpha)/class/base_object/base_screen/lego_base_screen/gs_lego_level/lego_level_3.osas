@@ -440,11 +440,19 @@ begin class "lego_level_3", "gs_lego_level"
 		GetMemberFunctionString       "addmask"
 		JumpAbsolute                  3
 		Pop
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		PushConstanti8               1
+		PushConstant0
+		Pull                         3
+		GetMemberFunctionString      "addelement"
+		JumpAbsolute                 3
+		Pop
 		LineNumber                    61691, 4
 		LineNumberAlt1                129, 148
 		GetVariableValueGlobalString  "globalclass"
 		GetMemberValueString          "saverloaded"
-		CompareAndBranchIfFalseTarget 3, 0
+		CompareAndBranchIfFalseTarget 4, 0
 		; ->
 		LineNumber                    61693, 4
 		LineNumberAlt1                131, 148
@@ -519,7 +527,7 @@ begin class "lego_level_3", "gs_lego_level"
 		LineNumberAlt1                139, 148
 		GetVariableValueGlobalString  "globalclass"
 		GetMemberValueString          "player"
-		PushConstanti8                1
+		PushConstanti8                8
 		Pull                          2
 		GetMemberFunctionString       "addelement"
 		JumpAbsolute                  2
@@ -545,13 +553,21 @@ begin class "lego_level_3", "gs_lego_level"
 		LineNumberAlt1                142, 148
 		GetVariableValueGlobalString  "globalclass"
 		GetMemberValueString          "player"
-		PushConstanti8                2
+		PushConstanti8                9
 		Pull                          2
 		GetMemberFunctionString       "addelement"
 		JumpAbsolute                  2
 		Pop
 		; <-
 		BranchTarget                  3
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "initfromsaver"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  4
 		PushNothing
 		Return
 	end ; method
@@ -574,7 +590,7 @@ begin class "lego_level_3", "gs_lego_level"
 		LineNumberAlt1               175, 148
 		GetVariableValueGlobalString "globalclass"
 		GetMemberValueString         "player"
-		PushConstantStringString     "msk1"
+		PushConstantStringString     "fake"
 		PushConstant0
 		Pull                         3
 		GetMemberFunctionString      "addmask"
@@ -618,6 +634,14 @@ begin class "lego_level_3", "gs_lego_level"
 		PushConstanti8               9
 		Pull                         3
 		GetMemberFunctionString      "addmask"
+		JumpAbsolute                 3
+		Pop
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		PushConstanti8               1
+		PushConstant0
+		Pull                         3
+		GetMemberFunctionString      "addelement"
 		JumpAbsolute                 3
 		Pop
 		PushNothing

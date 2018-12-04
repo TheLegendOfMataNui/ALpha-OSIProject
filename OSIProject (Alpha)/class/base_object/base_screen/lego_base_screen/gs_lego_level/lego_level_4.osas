@@ -388,7 +388,7 @@ begin class "lego_level_4", "gs_lego_level"
 		LineNumberAlt1                111, 170
 		GetVariableValueGlobalString  "globalclass"
 		GetMemberValueString          "player"
-		PushConstantStringString      "msk1"
+		PushConstantStringString      "fake"
 		PushConstant0
 		Pull                          3
 		GetMemberFunctionString       "addmask"
@@ -454,11 +454,19 @@ begin class "lego_level_4", "gs_lego_level"
 		GetMemberFunctionString       "addmask"
 		JumpAbsolute                  3
 		Pop
+		GetVariableValueGlobalString "globalclass"
+		GetMemberValueString         "player"
+		PushConstanti8               1
+		PushConstant0
+		Pull                         3
+		GetMemberFunctionString      "addelement"
+		JumpAbsolute                 3
+		Pop
 		LineNumber                    5629, 4
 		LineNumberAlt1                121, 170
 		GetVariableValueGlobalString  "globalclass"
 		GetMemberValueString          "saverloaded"
-		CompareAndBranchIfFalseTarget 7, 0
+		CompareAndBranchIfFalseTarget 5, 0
 		; ->
 		LineNumber                    5632, 4
 		LineNumberAlt1                124, 170
@@ -514,25 +522,9 @@ begin class "lego_level_4", "gs_lego_level"
 		Pop
 		; <-
 		BranchTarget                  1
-		LineNumber                    5640, 4
-		LineNumberAlt1                132, 170
-		PushConstanti8                1
-		CompareAndBranchIfFalseTarget 2, 0
-		; ->
-		LineNumber                    5641, 4
-		LineNumberAlt1                133, 170
-		GetVariableValueGlobalString  "globalclass"
-		GetMemberValueString          "player"
-		PushConstanti8                1
-		Pull                          2
-		GetMemberFunctionString       "addelement"
-		JumpAbsolute                  2
-		Pop
-		; <-
-		BranchTarget                  2
 		LineNumber                    5643, 4
 		LineNumberAlt1                135, 170
-		PushConstantStringString      "glyl"
+		PushConstantStringString      "glya"
 		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
 		LineNumber                    5643, 4
 		LineNumberAlt1                135, 170
@@ -543,7 +535,7 @@ begin class "lego_level_4", "gs_lego_level"
 		CallGameFunctionString        "gcsaver", "findglypha", 2
 		LineNumber                    5643, 4
 		LineNumberAlt1                135, 170
-		CompareAndBranchIfFalseTarget 3, 0
+		CompareAndBranchIfFalseTarget 2, 0
 		; ->
 		LineNumber                    5644, 4
 		LineNumberAlt1                136, 170
@@ -555,21 +547,21 @@ begin class "lego_level_4", "gs_lego_level"
 		JumpAbsolute                  2
 		Pop
 		; <-
-		BranchTarget                  3
+		BranchTarget                  2
 		LineNumber                    5646, 4
 		LineNumberAlt1                138, 170
-		PushConstantStringString      "gly2"
+		PushConstantStringString      "glya"
 		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
 		LineNumber                    5646, 4
 		LineNumberAlt1                138, 170
-		PushConstantStringString      "gly1"
+		PushConstantStringString      "icmz"
 		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
 		LineNumber                    5646, 4
 		LineNumberAlt1                138, 170
 		CallGameFunctionString        "gcsaver", "findglypha", 2
 		LineNumber                    5646, 4
 		LineNumberAlt1                138, 170
-		CompareAndBranchIfFalseTarget 4, 0
+		CompareAndBranchIfFalseTarget 3, 0
 		; ->
 		LineNumber                    5647, 4
 		LineNumberAlt1                139, 170
@@ -581,21 +573,21 @@ begin class "lego_level_4", "gs_lego_level"
 		JumpAbsolute                  2
 		Pop
 		; <-
-		BranchTarget                  4
+		BranchTarget                  3
 		LineNumber                    5649, 4
 		LineNumberAlt1                141, 170
-		PushConstantStringString      "gly3"
+		PushConstantStringString      "glya"
 		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
 		LineNumber                    5649, 4
 		LineNumberAlt1                141, 170
-		PushConstantStringString      "gly1"
+		PushConstantStringString      "well"
 		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
 		LineNumber                    5649, 4
 		LineNumberAlt1                141, 170
 		CallGameFunctionString        "gcsaver", "findglypha", 2
 		LineNumber                    5649, 4
 		LineNumberAlt1                141, 170
-		CompareAndBranchIfFalseTarget 5, 0
+		CompareAndBranchIfFalseTarget 4, 0
 		; ->
 		LineNumber                    5650, 4
 		LineNumberAlt1                142, 170
@@ -607,68 +599,15 @@ begin class "lego_level_4", "gs_lego_level"
 		JumpAbsolute                  2
 		Pop
 		; <-
+		BranchTarget                  4
+		GetVariableValueGlobalString  "globalclass"
+		GetMemberValueString          "player"
+		Dup
+		GetMemberFunctionString       "initfromsaver"
+		JumpAbsolute                  1
+		Pop
+		; <-
 		BranchTarget                  5
-		LineNumber                    5654, 4
-		LineNumberAlt1                146, 170
-		PushConstantStringString      "claw"
-		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
-		LineNumber                    5654, 4
-		LineNumberAlt1                146, 170
-		PushConstantStringString      "l1a1"
-		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
-		LineNumber                    5654, 4
-		LineNumberAlt1                146, 170
-		CallGameFunctionString        "gcsaver", "finditema", 2
-		LineNumber                    5654, 4
-		LineNumberAlt1                146, 170
-		CompareAndBranchIfFalseTarget 6, 0
-		; ->
-		LineNumber                    5655, 4
-		LineNumberAlt1                147, 170
-		GetVariableValueGlobalString  "globalclass"
-		GetMemberValueString          "player"
-		Dup
-		GetMemberFunctionString       "setupgrapplinghook"
-		JumpAbsolute                  1
-		Pop
-		LineNumber                    5656, 4
-		LineNumberAlt1                148, 170
-		GetVariableValueGlobalString  "globalclass"
-		GetMemberValueString          "player"
-		PushConstanti8                35
-		Pull                          2
-		GetMemberFunctionString       "setgrapplinghookdistance"
-		JumpAbsolute                  2
-		Pop
-		; <-
-		BranchTarget                  6
-		LineNumber                    5658, 4
-		LineNumberAlt1                150, 170
-		PushConstanti32               4194304
-		CallGameFunctionString        "gcsaver", "isconditionset", 1
-		LineNumber                    5658, 4
-		LineNumberAlt1                150, 170
-		CompareAndBranchIfFalseTarget 7, 0
-		; ->
-		LineNumber                    5659, 4
-		LineNumberAlt1                151, 170
-		GetVariableValueGlobalString  "globalclass"
-		GetMemberValueString          "player"
-		Dup
-		GetMemberFunctionString       "setupgrapplinghook"
-		JumpAbsolute                  1
-		Pop
-		LineNumber                    5660, 4
-		LineNumberAlt1                152, 170
-		GetVariableValueGlobalString  "globalclass"
-		GetMemberValueString          "player"
-		PushConstanti8                120
-		Pull                          2
-		GetMemberFunctionString       "setgrapplinghookdistance"
-		JumpAbsolute                  2
-		Pop
-		; <-
-		BranchTarget                  7
 		PushNothing
 		Return
 	end ; method
@@ -687,7 +626,7 @@ begin class "lego_level_4", "gs_lego_level"
 		LineNumberAlt1               166, 170
 		GetVariableValueGlobalString "globalclass"
 		GetMemberValueString         "player"
-		PushConstantStringString     "msk1"
+		PushConstantStringString     "fake"
 		PushConstant0
 		Pull                         3
 		GetMemberFunctionString      "addmask"
