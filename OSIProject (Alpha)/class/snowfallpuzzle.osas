@@ -4,16 +4,6 @@ begin class "snowfallpuzzle"
 	property "parent"
 	property "areaid"
 	property "savecam"
-	property "platform1"
-	property "platform2"
-	property "platform3"
-	property "platform4"
-	property "platform5"
-	property "platform6"
-	property "platform7"
-	property "platform8"
-	property "platform9"
-	property "platform10"
 	property "entrancedoora"
 	property "entrancedoorb"
 	property "exitdoora"
@@ -653,32 +643,6 @@ begin class "snowfallpuzzle"
 		LineNumberAlt1                229, 186
 		PushNothing
 		SetThisMemberValueString      "thering"
-		PushNothing
-		Return
-	end ; method
-
-	begin method "show"
-		; address: 0x7f295
-		; source: 186 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_snfl.vbo" 234:234
-		MemberFunctionArgumentCheck 1
-		LineNumber                  2492, 4
-		LineNumberAlt1              234, 186
-		PushConstantStringString    "Calling empty show function"
-		CallGameFunctionString      "debug", "print", 1
-		Pop
-		PushNothing
-		Return
-	end ; method
-
-	begin method "hide"
-		; address: 0x7f2ad
-		; source: 186 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_snfl.vbo" 239:239
-		MemberFunctionArgumentCheck 1
-		LineNumber                  2497, 4
-		LineNumberAlt1              239, 186
-		PushConstantStringString    "Calling empty hide function"
-		CallGameFunctionString      "debug", "print", 1
-		Pop
 		PushNothing
 		Return
 	end ; method
@@ -1792,6 +1756,14 @@ begin class "snowfallpuzzle"
 		GetMemberFunctionString      "interpolate"
 		JumpAbsolute                 8
 		Pop
+		PushNothing
+		Return
+	end ; method
+
+	begin method "exit"
+		MemberFunctionArgumentCheck 1
+		PushNothing
+		SetThisMemberValueString    "parent"
 		PushNothing
 		Return
 	end ; method
