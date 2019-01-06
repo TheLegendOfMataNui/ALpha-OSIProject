@@ -139,6 +139,34 @@ begin class "racepuzzle_class"
 		GetMemberFunctionString     "show"
 		JumpAbsolute                1
 		Pop
+		PushConstantStringString      "xman"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		PushConstant0
+		CallGameFunctionString        "gcmodeldirector", "getcharacter", 2
+		SetVariableValue              1                                               ; local
+		GetVariableValue              1                                               ; local
+		PushConstantColor8888         0xffffffff
+		PushConstanti16               163
+		SetRedValue
+		PushConstanti8                81
+		SetGreenValue
+		PushConstant0
+		SetBlueValue
+		PushConstanti16               255
+		SetAlphaValue
+		PushConstantColor8888         0xffffffff
+		PushConstanti16               163
+		SetRedValue
+		PushConstanti8                81
+		SetGreenValue
+		PushConstant0
+		SetBlueValue
+		PushConstanti16               255
+		SetAlphaValue
+		PushConstantStringString      "mk3a"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		CallGameFunctionString        "gccharacter", "settohunga", 4
+		Pop
 		LineNumber                  58704, 4
 		LineNumberAlt1              138, 160
 		PushNothing
