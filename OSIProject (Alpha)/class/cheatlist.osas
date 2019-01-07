@@ -4664,25 +4664,104 @@ begin class "cheatlist"
 		Subtract
 		PushConstant0
 		SetVariableValue              1                                    ; local
-	JumpTarget                   2
-	LineNumber                   22183, 4
-	LineNumberAlt1               57, 248
-	GetVariableValueGlobalString "screenlist"
-	CreateObjectString           "cinematicviewer"
-	Dup
-	Dup
-	GetMemberFunctionString      "cinematicviewer"
-	JumpAbsolute                 1
-	Pop
-	LineNumber                   22183, 4
-	LineNumberAlt1               57, 248
-	PushConstanti8               5
-	Pull                         3
-	GetMemberFunctionString      "addscreen"
-	JumpAbsolute                 3
-	Pop
-	PushNothing
-	Return
+		; <-
+		BranchTarget                  0
+		Dup
+		GetVariableValue              1                                    ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    25479, 4
+		LineNumberAlt1                980, 66
+		GetVariableValue              1                                    ; local
+		PushConstanti8                12
+		Multiply
+		SetVariableValue              2                                    ; local
+		LineNumber                    25480, 4
+		LineNumberAlt1                981, 66
+		CreateObjectString            "gs_legoactivetext"
+		Dup
+		PushConstantStringString      "Root/Data/Art/Fonts/BionicleFont"
+		PushConstantStringString      "Root/Data/Art/Fonts/BionicleFontHi"
+		GetThisMemberValueString      "abilitynames"
+		GetVariableValue              1                                    ; local
+		GetArrayValue
+		GetThisMemberValueString      "x"
+		GetThisMemberValueString      "y"
+		GetVariableValue              2                                    ; local
+		Add
+		PushConstant0
+		PushConstantf32               1
+		PushConstant0
+		PushConstanti8                4
+		PushConstant0
+		Pull                          11
+		GetMemberFunctionString       "gs_legoactivetext"
+		JumpAbsolute                  11
+		Pop
+		LineNumber                    25480, 4
+		LineNumberAlt1                981, 66
+		SetVariableValue              3                                    ; local
+		LineNumber                    25481, 4
+		LineNumberAlt1                982, 66
+		GetVariableValue              3                                    ; local
+		Dup
+		GetMemberFunctionString       "initfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    25482, 4
+		LineNumberAlt1                983, 66
+		GetVariableValue              3                                    ; local
+		Dup
+		GetMemberFunctionString       "add"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    25483, 4
+		LineNumberAlt1                984, 66
+		GetVariableValue              1                                    ; local
+		GetThisMemberValueString      "showidx"
+		LessOrEqual
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
+		LineNumber                    25484, 4
+		LineNumberAlt1                985, 66
+		GetVariableValue              3                                    ; local
+		Dup
+		GetMemberFunctionString       "show"
+		JumpAbsolute                  1
+		Pop
+		; <-
+		BranchTarget                  1
+		LineNumber                    25486, 4
+		LineNumberAlt1                987, 66
+		GetVariableValue              3                                    ; local
+		PushConstantf32               1.2000000476837158
+		Pull                          2
+		GetMemberFunctionString       "scalefont"
+		JumpAbsolute                  2
+		Pop
+		LineNumber                    25487, 4
+		LineNumberAlt1                988, 66
+		GetThisMemberValueString      "activemenu"
+		GetVariableValue              3                                    ; local
+		AppendToArray
+		IncrementVariable             1
+		BranchAlwaysTarget            0, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		Pop
+		LineNumber                    25489, 4
+		LineNumberAlt1                990, 66
+		GetThisMemberValueString      "activemenu"
+		PushConstant0
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "setactive"
+		JumpAbsolute                  1
+		Pop
+		PushNothing
+		Return
 	end ; method
 
 	begin method "maskmenusetup"
