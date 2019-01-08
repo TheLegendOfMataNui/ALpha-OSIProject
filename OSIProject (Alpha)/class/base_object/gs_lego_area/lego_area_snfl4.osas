@@ -77,13 +77,6 @@ begin class "lego_area_snfl4", "gs_lego_area"
 		GetMemberFunctionString     "initfull"
 		JumpAbsolute                1
 		Pop
-		LineNumber                  2293, 4
-		LineNumberAlt1              35, 186
-		GetThisMemberValueString    "puzzle"
-		Dup
-		GetMemberFunctionString     "show"
-		JumpAbsolute                1
-		Pop
 		PushNothing
 		Return
 	end ; method
@@ -96,13 +89,6 @@ begin class "lego_area_snfl4", "gs_lego_area"
 		LineNumberAlt1              40, 186
 		GetVariableValue            0                ; local
 		GetThisMemberFunctionString "lego_area_hide"
-		JumpAbsolute                1
-		Pop
-		LineNumber                  2299, 4
-		LineNumberAlt1              41, 186
-		GetThisMemberValueString    "puzzle"
-		Dup
-		GetMemberFunctionString     "hide"
 		JumpAbsolute                1
 		Pop
 		LineNumber                  2300, 4
@@ -171,6 +157,11 @@ begin class "lego_area_snfl4", "gs_lego_area"
 	begin method "exit"
 		; address: 0xc0d1d
 		MemberFunctionArgumentCheck 1
+		GetThisMemberValueString    "puzzle"
+		Dup
+		GetMemberFunctionString     "exit"
+		JumpAbsolute                1
+		Pop
 		PushNothing
 		Return
 	end ; method

@@ -25,24 +25,6 @@ begin class "lego_area_haka6", "gs_lego_area"
 		; source: 235 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_haka.vbo" 44:56
 		MemberFunctionArgumentCheck   1
 		CreateStackVariables          1
-		LineNumber                    18845, 4
-		LineNumberAlt1                44, 235
-		CreateArray
-		Dup
-		PushConstanti16               180
-		AppendToArray
-		Dup
-		PushConstanti16               -356
-		AppendToArray
-		Dup
-		PushConstant0
-		PushConstantf32               51.400001525878906
-		Subtract
-		AppendToArray
-		Dup
-		PushConstanti16               689
-		AppendToArray
-		SetThisMemberValueString      "startingarea"
 		LineNumber                    18847, 4
 		LineNumberAlt1                46, 235
 		PushConstantStringString      "cin2"
@@ -112,41 +94,6 @@ begin class "lego_area_haka6", "gs_lego_area"
 		LineNumberAlt1              60, 235
 		PushNothing
 		SetThisMemberValueString    "cinema"
-		PushNothing
-		Return
-	end ; method
-
-	begin method "show"
-		; address: 0xba85f
-		; source: 235 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_haka.vbo" 65:65
-		MemberFunctionArgumentCheck 1
-		LineNumber                  18866, 4
-		LineNumberAlt1              65, 235
-		GetVariableValue            0                ; local
-		GetThisMemberFunctionString "lego_area_show"
-		JumpAbsolute                1
-		Pop
-		PushNothing
-		Return
-	end ; method
-
-	begin method "hide"
-		; address: 0xba876
-		; source: 235 "C:\\projects\\lego\\Scripting\\VBO\\lev6/Lev6_haka.vbo" 70:70
-		MemberFunctionArgumentCheck 1
-		LineNumber                  18871, 4
-		LineNumberAlt1              70, 235
-		GetVariableValue            0                ; local
-		GetThisMemberFunctionString "lego_area_hide"
-		JumpAbsolute                1
-		Pop
-		PushNothing
-		Return
-	end ; method
-
-	begin method "process"
-		; address: 0xba88d
-		MemberFunctionArgumentCheck 2
 		PushNothing
 		Return
 	end ; method
