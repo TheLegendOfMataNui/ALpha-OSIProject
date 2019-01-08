@@ -28,6 +28,8 @@ begin class "global_class", "base_object"
 	property "initlevelok"
 	property "newlevel"
 	property "bgmusic"
+	property "shoefitter_font"
+	property "shoefitter_font2"
 
 	begin method "global_class"
 		; address: 0x9f860
@@ -204,6 +206,20 @@ begin class "global_class", "base_object"
 		LineNumberAlt1                127, 48
 		PushConstant0
 		SetThisMemberValueString      "language"
+		LineNumber                    26543, 4
+		LineNumberAlt1                129, 48
+		PushConstantStringString      "Root/Data/Art/Fonts/tech_font_01"
+		CallGameFunctionString        "sctilefont", "create", 1
+		LineNumber                    26543, 4
+		LineNumberAlt1                129, 48
+		SetThisMemberValueString      "shoefitter_font"
+		LineNumber                    26543, 4
+		LineNumberAlt1                129, 48
+		PushConstantStringString      "Root/Data/Art/Fonts/tech_font_01_hilight"
+		CallGameFunctionString        "sctilefont", "create", 1
+		LineNumber                    26543, 4
+		LineNumberAlt1                129, 48
+		SetThisMemberValueString      "shoefitter_font2"
 		LineNumber                    26543, 4
 		LineNumberAlt1                129, 48
 		PushConstantStringString      "Root/Data/Art/Fonts/BionicleFont"
@@ -840,6 +856,14 @@ begin class "global_class", "base_object"
 		SetThisMemberValueString      "debugtimer"
 		; <-
 		BranchTarget                  14
+		LineNumber                    26684, 4
+		LineNumberAlt1                270, 48
+		PushNothing
+		SetThisMemberValueString      "shoefitter_font"
+		LineNumber                    26684, 4
+		LineNumberAlt1                270, 48
+		PushNothing
+		SetThisMemberValueString      "shoefitter_font2"
 		LineNumber                    26684, 4
 		LineNumberAlt1                270, 48
 		PushNothing
@@ -1953,16 +1977,47 @@ begin class "global_class", "base_object"
 		LineNumberAlt1                546, 48
 		GetThisMemberValueString      "gamefont"
 		Return
-		BranchAlwaysTarget            1, 0
+		BranchAlwaysTarget            3, 0
 		; ->
 		; <-
 		BranchTarget                  0
+		Dup
+		PushConstantStringString      "Root/Data/Art/Fonts/BionicleFontHi"
+		EqualTo
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
 		LineNumber                    26962, 4
 		LineNumberAlt1                548, 48
 		GetThisMemberValueString      "gamefont2"
 		Return
+		BranchAlwaysTarget            3, 0
+		; ->
 		; <-
 		BranchTarget                  1
+		Dup
+		PushConstantStringString      "Root/Data/Art/Fonts/tech_font_01"
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    26960, 4
+		LineNumberAlt1                546, 48
+		GetThisMemberValueString      "shoefitter_font"
+		Return
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		Dup
+		PushConstantStringString      "Root/Data/Art/Fonts/tech_font_01_hilight"
+		EqualTo
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    26960, 4
+		LineNumberAlt1                546, 48
+		GetThisMemberValueString      "shoefitter_font2"
+		Return
+		; <-
+		BranchTarget                  3
 		PushNothing
 		Return
 	end ; method

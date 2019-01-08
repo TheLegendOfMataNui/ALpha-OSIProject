@@ -66,6 +66,20 @@ begin class "ss_shoefitterscreen", "lego_base_screen"
 		GetMemberFunctionString     "initfull"
 		JumpAbsolute                1
 		Pop
+		LineNumber                  42530, 4
+		LineNumberAlt1              117, 116
+		GetThisMemberValueString    "background"
+		Dup
+		GetMemberFunctionString     "add"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  42530, 4
+		LineNumberAlt1              117, 116
+		GetThisMemberValueString    "background"
+		Dup
+		GetMemberFunctionString     "show"
+		JumpAbsolute                1
+		Pop
 		LineNumber                  42531, 4
 		LineNumberAlt1              118, 116
 		GetThisMemberValueString    "bottombar"
@@ -146,6 +160,26 @@ begin class "ss_shoefitterscreen", "lego_base_screen"
 		; address: 0xcde92
 		; source: 116 "C:\\projects\\lego\\Scripting\\VBO\\eventeditor/shoefitter.vbo" 137:145
 		MemberFunctionArgumentCheck 1
+		GetThisMemberValueString     "background"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                  42550, 4
+		LineNumberAlt1              137, 116
+		GetThisMemberValueString    "background"
+		Dup
+		GetMemberFunctionString     "hide"
+		JumpAbsolute                1
+		Pop
+		LineNumber                  42550, 4
+		LineNumberAlt1              137, 116
+		GetThisMemberValueString    "background"
+		Dup
+		GetMemberFunctionString     "remove"
+		JumpAbsolute                1
+		Pop
 		LineNumber                  42550, 4
 		LineNumberAlt1              137, 116
 		GetThisMemberValueString    "background"
@@ -153,6 +187,10 @@ begin class "ss_shoefitterscreen", "lego_base_screen"
 		GetMemberFunctionString     "cleanupfull"
 		JumpAbsolute                1
 		Pop
+		PushNothing
+		SetThisMemberValueString      "background"
+		; <-
+		BranchTarget                  0
 		LineNumber                  42551, 4
 		LineNumberAlt1              138, 116
 		GetThisMemberValueString    "bottombar"
