@@ -2390,6 +2390,9 @@ begin class "iceelemental", "gs_lego_character"
 		GetThisMemberFunctionString   "interporientation"
 		JumpAbsolute                  3
 		Pop
+		PushConstanti16               462
+		CallGameFunctionString        "gcstaticsoundsptrarray", "playtablesound", 1
+		Pop
 		PushNothing
 		Return
 	end ; method
@@ -2431,13 +2434,27 @@ begin class "iceelemental", "gs_lego_character"
 		And
 		CompareAndBranchIfFalseTarget 3, 0
 		; ->
+;		LineNumber                    4598, 4
+;		LineNumberAlt1                809, 188
+;		GetVariableValueGlobalString  "globalclass"
+;		GetMemberValueString          "player"
+;		GetMemberValueString          "actor"
+;		GetMemberValueString          "handle"
+;		CallGameFunctionString        "gccharacter", "ishanging", 1
 		LineNumber                    4598, 4
 		LineNumberAlt1                809, 188
 		GetVariableValueGlobalString  "globalclass"
-		GetMemberValueString          "player"
-		GetMemberValueString          "actor"
-		GetMemberValueString          "handle"
-		CallGameFunctionString        "gccharacter", "ishanging", 1
+		GetMemberValueString         "level"
+		GetMemberValueString         "cam"
+		PushConstantf32              0.3
+		PushConstantf32              0.67999999821186066
+		Pull                         3
+		GetMemberFunctionString      "shakecamera"
+		JumpAbsolute                 3
+		Pop
+		PushConstanti16               441
+		CallGameFunctionString        "gcstaticsoundsptrarray", "playtablesound", 1
+		Pop
 		LineNumber                    4598, 4
 		LineNumberAlt1                809, 188
 		SetVariableValue              2                             ; local
@@ -3297,6 +3314,9 @@ begin class "iceelemental", "gs_lego_character"
 		GetThisMemberFunctionString "setsplitanimation"
 		JumpAbsolute                3
 		Pop
+		PushConstanti16               464
+		CallGameFunctionString        "gcstaticsoundsptrarray", "playtablesound", 1
+		Pop
 		PushNothing
 		Return
 	end ; method
@@ -3334,6 +3354,9 @@ begin class "iceelemental", "gs_lego_character"
 		GetThisMemberFunctionString   "setsplitanimation"
 		JumpAbsolute                  3
 		Pop
+		PushConstanti16               463
+		CallGameFunctionString        "gcstaticsoundsptrarray", "playtablesound", 1
+		Pop
 		LineNumber                    4812, 4
 		LineNumberAlt1                1023, 188
 		PushConstant0
@@ -3362,6 +3385,9 @@ begin class "iceelemental", "gs_lego_character"
 		GetThisMemberFunctionString   "setsplitanimation"
 		JumpAbsolute                  3
 		Pop
+		PushConstanti16               463
+		CallGameFunctionString        "gcstaticsoundsptrarray", "playtablesound", 1
+		Pop
 		LineNumber                    4816, 4
 		LineNumberAlt1                1027, 188
 		PushConstant0
@@ -3389,6 +3415,9 @@ begin class "iceelemental", "gs_lego_character"
 		PushConstantf32               0.009999999776482582
 		GetThisMemberFunctionString   "setsplitanimation"
 		JumpAbsolute                  3
+		Pop
+		PushConstanti16               463
+		CallGameFunctionString        "gcstaticsoundsptrarray", "playtablesound", 1
 		Pop
 		LineNumber                    4820, 4
 		LineNumberAlt1                1031, 188
