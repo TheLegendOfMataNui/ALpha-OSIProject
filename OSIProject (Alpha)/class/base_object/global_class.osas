@@ -985,10 +985,6 @@ begin class "global_class", "base_object"
 		LineNumberAlt1                296, 48
 		PushConstant0
 		SetThisMemberValueString      "testforlavacollisions"
-		LineNumber                    26711, 4
-		LineNumberAlt1                297, 48
-		PushConstant0
-		SetThisMemberValueString      "saverloaded"
 		PushNothing
 		Return
 	end ; method
@@ -1103,7 +1099,9 @@ begin class "global_class", "base_object"
 	begin method "setnextlevel"
 		; address: 0xa03ee
 		; source: 48 "C:\\projects\\lego\\Scripting\\VBO\\global.vbo" 356:361
-		MemberFunctionArgumentCheck   2
+		MemberFunctionArgumentCheck   3
+		CallGameFunctionString        "gcsaver", "resetdata", 0
+		Pop
 		LineNumber                    26770, 4
 		LineNumberAlt1                356, 48
 		GetVariableValue              1           ; local
@@ -1512,14 +1510,6 @@ begin class "global_class", "base_object"
 		Dup
 		GetMemberFunctionString       "cleanupshort"
 		JumpAbsolute                  1
-		Pop
-		LineNumber                    26869, 4
-		LineNumberAlt1                455, 48
-		GetVariableValueGlobalString  "screenlist"
-		PushConstanti8                9
-		Pull                          2
-		GetMemberFunctionString       "forward"
-		JumpAbsolute                  2
 		Pop
 		LineNumber                    26871, 4
 		LineNumberAlt1                457, 48
@@ -2285,6 +2275,48 @@ begin class "global_class", "base_object"
 		LineNumber                    27053, 4
 		LineNumberAlt1                639, 48
 		PushConstant0
+		Return
+	end ; method
+
+	begin method "loadgame"
+		; address: 0xc75b7
+		; source: 48 "C:\\projects\\lego\\Scripting\\VBO\\global.vbo" 383:391
+		MemberFunctionArgumentCheck   3
+		LineNumber                    29018, 4
+		LineNumberAlt1                383, 48
+		GetVariableValue              1           ; local
+		PushNothing
+		EqualTo
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
+		LineNumber                    29019, 4
+		LineNumberAlt1                384, 48
+		PushConstantStringString      "lev1"
+		SetThisMemberValueString      "newlevel"
+		BranchAlwaysTarget            1, 0
+		; ->
+		; <-
+		BranchTarget                  0
+		LineNumber                    29021, 4
+		LineNumberAlt1                386, 48
+		GetVariableValue              1           ; local
+		SetThisMemberValueString      "newlevel"
+		; <-
+		BranchTarget                  1
+		LineNumber                    29023, 4
+		LineNumberAlt1                388, 48
+		GetVariableValue              2           ; local
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		; <-
+		BranchTarget                  2
+		LineNumber                    29026, 4
+		LineNumberAlt1                391, 48
+		PushConstanti8                1
+		SetThisMemberValueString      "whatsnext"
+		PushNothing
 		Return
 	end ; method
 end ; class

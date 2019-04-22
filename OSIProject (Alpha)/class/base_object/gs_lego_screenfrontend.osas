@@ -2876,6 +2876,7 @@ begin class "gs_lego_screenfrontend", "base_object"
 		; address: 0xa360d
 		; source: 46 "C:\\projects\\lego\\Scripting\\VBO\\lego_frontend.vbo" 764:800
 		MemberFunctionArgumentCheck   2
+		CreateStackVariables		  2
 		LineNumber                    29419, 4
 		LineNumberAlt1                764, 46
 		GetThisMemberValueString      "curscreen"
@@ -2909,6 +2910,166 @@ begin class "gs_lego_screenfrontend", "base_object"
 		EqualTo
 		CompareAndBranchIfFalseTarget 1, 0
 		; ->
+		LineNumber                    13831, 4
+		LineNumberAlt1                669, 10
+		CallGameFunctionString        "gcsaver", "load", 0
+		Pop
+		LineNumber                    13832, 4
+		LineNumberAlt1                670, 10
+		CallGameFunctionString        "gcsaver", "getlevel", 0
+		LineNumber                    13832, 4
+		LineNumberAlt1                670, 10
+		SetVariableValue              2                                             ; local
+		LineNumber                    13833, 4
+		LineNumberAlt1                671, 10
+		GetVariableValue              2                                             ; local
+		PushConstant0
+		GreaterThan
+		CompareAndBranchIfFalseTarget 30, 0
+		; ->
+		LineNumber                    13834, 4
+		LineNumberAlt1                672, 10
+		PushConstanti8                1
+		GetVariableValueGlobalString  "globalclass"
+		SetMemberValueString          "saverloaded"
+		BranchAlwaysTarget            31, 0
+		; ->
+		; <-
+		BranchTarget                  30
+		LineNumber                    13836, 4
+		LineNumberAlt1                674, 10
+		PushConstant0
+		GetVariableValueGlobalString  "globalclass"
+		SetMemberValueString          "saverloaded"
+		; <-
+		BranchTarget                  31
+		LineNumber                    13839, 4
+		LineNumberAlt1                677, 10
+		GetVariableValue              2                                             ; local
+		Dup
+		PushConstanti8                1
+		EqualTo
+		CompareAndBranchIfFalseTarget 32, 0
+		; ->
+		GetVariableValueGlobalString  "globalclass"
+		PushConstantStringString      "lev1"
+		Pull                          2
+		GetMemberFunctionString       "loadgame"
+		JumpAbsolute                  2
+		Pop
+		BranchAlwaysTarget            39, 0
+		; ->
+		; <-
+		BranchTarget                  32
+		Dup
+		PushConstanti8                2
+		EqualTo
+		CompareAndBranchIfFalseTarget 33, 0
+		; ->
+		GetVariableValueGlobalString  "globalclass"
+		PushConstantStringString      "lev2"
+		Pull                          2
+		GetMemberFunctionString       "loadgame"
+		JumpAbsolute                  2
+		Pop
+		BranchAlwaysTarget            39, 0
+		; ->
+		; <-
+		BranchTarget                  33
+		Dup
+		PushConstanti8                3
+		EqualTo
+		CompareAndBranchIfFalseTarget 34, 0
+		; ->
+		GetVariableValueGlobalString  "globalclass"
+		PushConstantStringString      "lev3"
+		Pull                          2
+		GetMemberFunctionString       "loadgame"
+		JumpAbsolute                  2
+		Pop
+		BranchAlwaysTarget            39, 0
+		; ->
+		; <-
+		BranchTarget                  34
+		Dup
+		PushConstanti8                4
+		EqualTo
+		CompareAndBranchIfFalseTarget 35, 0
+		; ->
+		GetVariableValueGlobalString  "globalclass"
+		PushConstantStringString      "lev4"
+		Pull                          2
+		GetMemberFunctionString       "loadgame"
+		JumpAbsolute                  2
+		Pop
+		BranchAlwaysTarget            39, 0
+		; ->
+		; <-
+		BranchTarget                  35
+		Dup
+		PushConstanti8                5
+		EqualTo
+		CompareAndBranchIfFalseTarget 36, 0
+		; ->
+		GetVariableValueGlobalString  "globalclass"
+		PushConstantStringString      "lev5"
+		Pull                          2
+		GetMemberFunctionString       "loadgame"
+		JumpAbsolute                  2
+		Pop
+		BranchAlwaysTarget            39, 0
+		; ->
+		; <-
+		BranchTarget                  36
+		Dup
+		PushConstanti8                6
+		EqualTo
+		CompareAndBranchIfFalseTarget 37, 0
+		; ->
+		GetVariableValueGlobalString  "globalclass"
+		PushConstantStringString      "lev6"
+		Pull                          2
+		GetMemberFunctionString       "loadgame"
+		JumpAbsolute                  2
+		Pop
+		BranchAlwaysTarget            39, 0
+		; ->
+		; <-
+		BranchTarget                  37
+		Dup
+		PushConstanti8                7
+		EqualTo
+		CompareAndBranchIfFalseTarget 38, 0
+		; ->
+		GetVariableValueGlobalString  "globalclass"
+		PushConstantStringString      "lev7"
+		Pull                          2
+		GetMemberFunctionString       "loadgame"
+		JumpAbsolute                  2
+		Pop
+		BranchAlwaysTarget            39, 0
+		; ->
+		; <-
+		BranchTarget                  38
+		LineNumber                    13855, 4
+		LineNumberAlt1                693, 10
+		PushConstantStringString      "GcSaver returned an invalid level: '"
+		GetVariableValue              2                                             ; local
+		ConvertToString
+		Add
+		PushConstantStringString      "'"
+		Add
+		CallGameFunctionString        "debug", "print", 1
+		Pop
+		GetVariableValueGlobalString  "globalclass"
+		PushConstantStringString      "lev1"
+		Pull                          2
+		GetMemberFunctionString       "loadgame"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  39
+		Pop
 		BranchAlwaysTarget            3, 0
 		; ->
 		; <-

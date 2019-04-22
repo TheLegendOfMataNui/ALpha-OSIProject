@@ -3,18 +3,12 @@ begin class "lego_level_frontend", "gs_lego_level"
 	property "cameramode"
 	property "rotateval"
 	property "rotatedir"
-	property "bgmusic"
 
 	begin method "lego_level_frontend"
 		; address: 0xd5239
 		; source: 46 "C:\\projects\\lego\\Scripting\\VBO\\lego_frontend.vbo" 106:113
 		MemberFunctionArgumentCheck   2
 		CreateStackVariables          1
-		LineNumber                    28761, 4
-		LineNumberAlt1                106, 46
-		PushConstanti8                1
-		CompareAndBranchIfFalseTarget 0, 0
-		; ->
 		LineNumber                    28762, 4
 		LineNumberAlt1                107, 46
 		GetVariableValue              0                 ; local
@@ -24,21 +18,6 @@ begin class "lego_level_frontend", "gs_lego_level"
 		GetThisMemberFunctionString   "gs_lego_level"
 		JumpAbsolute                  4
 		Pop
-		BranchAlwaysTarget            1, 0
-		; ->
-		; <-
-		BranchTarget                  0
-		LineNumber                    28764, 4
-		LineNumberAlt1                109, 46
-		GetVariableValue              0                 ; local
-		PushConstantStringString      "lev1"
-		PushConstantStringString      "onua"
-		PushConstantStringString      "bech"
-		GetThisMemberFunctionString   "gs_lego_level"
-		JumpAbsolute                  4
-		Pop
-		; <-
-		BranchTarget                  1
 		LineNumber                    28767, 4
 		LineNumberAlt1                112, 46
 		CreateObjectString            "lego_area_front"
@@ -120,33 +99,9 @@ begin class "lego_level_frontend", "gs_lego_level"
 		GetThisMemberFunctionString  "adjustcamera"
 		JumpAbsolute                 5
 		Pop
-		LineNumber                   28794, 4
-		LineNumberAlt1               139, 46
-		CreateObjectString           "legomp3player"
-		Dup
-		Dup
-		GetMemberFunctionString      "legomp3player"
-		JumpAbsolute                 1
-		Pop
-		LineNumber                   28794, 4
-		LineNumberAlt1               139, 46
-		SetThisMemberValueString     "bgmusic"
-		LineNumber                   28795, 4
-		LineNumberAlt1               140, 46
-		GetThisMemberValueString     "bgmusic"
-		PushConstantStringString     "Root/Data/sounds/MUSICGaliAmbience"
-		Pull                         2
-		GetMemberFunctionString      "setupforplay"
-		JumpAbsolute                 2
-		Pop
-		LineNumber                   28796, 4
-		LineNumberAlt1               141, 46
-		GetThisMemberValueString     "bgmusic"
-		PushConstanti8               1
-		Pull                         2
-		GetMemberFunctionString      "play"
-		JumpAbsolute                 2
-		Pop
+		PushConstanti8                0
+		GetVariableValueGlobalString  "globalclass"
+		SetMemberValueString          "saverloaded"
 		PushNothing
 		Return
 	end ; method
@@ -166,34 +121,6 @@ begin class "lego_level_frontend", "gs_lego_level"
 		GetThisMemberFunctionString   "lego_level_cleanupfull"
 		JumpAbsolute                  1
 		Pop
-		LineNumber                    28803, 4
-		LineNumberAlt1                148, 46
-		GetThisMemberValueString      "bgmusic"
-		PushNothing
-		EqualTo
-		Not
-		CompareAndBranchIfFalseTarget 0, 0
-		; ->
-		LineNumber                    28804, 4
-		LineNumberAlt1                149, 46
-		GetThisMemberValueString      "bgmusic"
-		Dup
-		GetMemberFunctionString       "stop"
-		JumpAbsolute                  1
-		Pop
-		LineNumber                    28805, 4
-		LineNumberAlt1                150, 46
-		GetThisMemberValueString      "bgmusic"
-		Dup
-		GetMemberFunctionString       "cleanupfordestroy"
-		JumpAbsolute                  1
-		Pop
-		LineNumber                    28806, 4
-		LineNumberAlt1                151, 46
-		PushNothing
-		SetThisMemberValueString      "bgmusic"
-		; <-
-		BranchTarget                  0
 		LineNumber                    28808, 4
 		LineNumberAlt1                153, 46
 		PushNothing
