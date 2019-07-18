@@ -2434,6 +2434,22 @@ begin class "boss_puzzle"
 		SetThisMemberValueString      "startcam"
 		; <-
 		BranchTarget                  50
+		Dup
+		PushConstantStringString      "tp02"
+		CallGameFunctionString        "scslosifoundation", "stringtoidentifier", 1
+		LineNumber                    37555, 4
+		LineNumberAlt1                634, 102
+		EqualTo
+		CompareAndBranchIfFalseTarget 60, 0
+		; ->
+		GetVariableValueGlobalString  "globalclass"
+		PushConstantStringString      "lev4"
+		Pull                          2
+		GetMemberFunctionString       "setnextlevel"
+		JumpAbsolute                  2
+		Pop
+		; <-
+		BranchTarget                  60
 		Pop
 		BranchAlwaysTarget            59, 0
 		; ->
