@@ -116,7 +116,7 @@ begin class "iceelemental", "gs_lego_character"
 		CallGameFunctionString       "scslosifoundation", "stringtoidentifier", 1
 		LineNumber                   4130, 4
 		LineNumberAlt1               341, 188
-		PushConstant0
+		PushConstanti8               1
 		PushConstant0
 		CallGameFunctionString       "gcareadirector", "getscriptstring", 3
 		LineNumber                   4130, 4
@@ -152,7 +152,7 @@ begin class "iceelemental", "gs_lego_character"
 		CallGameFunctionString       "scslosifoundation", "stringtoidentifier", 1
 		LineNumber                   4132, 4
 		LineNumberAlt1               343, 188
-		PushConstant0
+		PushConstanti8               1
 		PushConstanti8               1
 		CallGameFunctionString       "gcareadirector", "getscriptstring", 3
 		LineNumber                   4132, 4
@@ -190,6 +190,12 @@ begin class "iceelemental", "gs_lego_character"
 		; address: 0xd607a
 		; source: 188 "C:\\projects\\lego\\Scripting\\VBO\\lev4/lev4_boss.vbo" 350:356
 		MemberFunctionArgumentCheck 1
+		GetThisMemberValueString      "text1"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
 		LineNumber                  4139, 4
 		LineNumberAlt1              350, 188
 		GetThisMemberValueString    "text1"
@@ -201,6 +207,14 @@ begin class "iceelemental", "gs_lego_character"
 		LineNumberAlt1              351, 188
 		PushNothing
 		SetThisMemberValueString    "text1"
+		; <-
+		BranchTarget                  0
+		GetThisMemberValueString      "text2"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
 		LineNumber                  4142, 4
 		LineNumberAlt1              353, 188
 		GetThisMemberValueString    "text2"
@@ -212,6 +226,8 @@ begin class "iceelemental", "gs_lego_character"
 		LineNumberAlt1              354, 188
 		PushNothing
 		SetThisMemberValueString    "text2"
+		; <-
+		BranchTarget                  1
 		LineNumber                  4145, 4
 		LineNumberAlt1              356, 188
 		GetVariableValue            0             ; local

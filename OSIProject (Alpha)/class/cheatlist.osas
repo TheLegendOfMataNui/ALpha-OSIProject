@@ -1400,11 +1400,6 @@ begin class "cheatlist"
 		GetMemberValueString          "event"
 		PushConstanti8                2
 		EqualTo
-		GetVariableValue              1                                         ; local
-		GetMemberValueString          "event"
-		PushConstanti8                4
-		EqualTo
-		Or
 		CompareAndBranchIfFalseTarget 11, 0
 		; ->
 		LineNumber                    24852, 4
