@@ -666,6 +666,14 @@ begin class "mudmonster", "gs_lego_character"
 		LineNumber                    37786, 4
 		LineNumberAlt1                865, 102
 		GetThisMemberValueString      "miniboulders"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
+		LineNumber                    44208, 4
+		LineNumberAlt1                923, 111
+		GetThisMemberValueString      "miniboulders"
 		ElementsInArray
 		PushConstanti8                1
 		Subtract
@@ -681,8 +689,10 @@ begin class "mudmonster", "gs_lego_character"
 		LineNumber                    37787, 4
 		LineNumberAlt1                866, 102
 		GetThisMemberValueString      "miniboulders"
+		GetVariableValue              1                                         ; local
+		GetArrayValue
 		Dup
-		GetMemberFunctionString       "remove"
+		GetMemberFunctionString       "cleanupfull"
 		JumpAbsolute                  1
 		Pop
 		LineNumber                    37788, 4
@@ -696,6 +706,100 @@ begin class "mudmonster", "gs_lego_character"
 		; ->
 		; <-
 		BranchTarget                  1
+		Pop
+		LineNumber                    44213, 4
+		LineNumberAlt1                928, 111
+		PushNothing
+		SetThisMemberValueString      "miniboulders"
+		; <-
+		BranchTarget                  2
+		LineNumber                    44219, 4
+		LineNumberAlt1                934, 111
+		GetThisMemberValueString      "mudballs"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 5, 0
+		; ->
+		LineNumber                    44220, 4
+		LineNumberAlt1                935, 111
+		GetThisMemberValueString      "mudballs"
+		ElementsInArray
+		PushConstanti8                1
+		Subtract
+		PushConstant0
+		SetVariableValue              1                                         ; local
+		; <-
+		BranchTarget                  3
+		Dup
+		GetVariableValue              1                                         ; local
+		GreaterOrEqual
+		CompareAndBranchIfFalseTarget 4, 0
+		; ->
+		LineNumber                    44221, 4
+		LineNumberAlt1                936, 111
+		GetThisMemberValueString      "mudballs"
+		GetVariableValue              1                                         ; local
+		GetArrayValue
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    44223, 4
+		LineNumberAlt1                938, 111
+		GetThisMemberValueString      "mudballs"
+		GetVariableValue              1                                         ; local
+		PushNothing
+		SetArrayValue
+		IncrementVariable             1
+		BranchAlwaysTarget            3, 0
+		; ->
+		; <-
+		BranchTarget                  4
+		Pop
+		LineNumber                    44225, 4
+		LineNumberAlt1                940, 111
+		PushNothing
+		SetThisMemberValueString      "mudballs"
+		; <-
+		BranchTarget                  5
+		LineNumber                    44238, 4
+		LineNumberAlt1                953, 111
+		PushNothing
+		SetThisMemberValueString      "curmudball"
+		LineNumber                    44239, 4
+		LineNumberAlt1                954, 111
+		PushNothing
+		SetThisMemberValueString      "mudstate"
+		LineNumber                    44241, 4
+		LineNumberAlt1                956, 111
+		PushNothing
+		SetThisMemberValueString      "boulderuse"
+		LineNumber                    44243, 4
+		LineNumberAlt1                958, 111
+		GetThisMemberValueString      "resetmboulders"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 7, 0
+		; ->
+		LineNumber                    44244, 4
+		LineNumberAlt1                959, 111
+		GetThisMemberValueString      "resetmboulders"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    44245, 4
+		LineNumberAlt1                960, 111
+		PushNothing
+		SetThisMemberValueString      "resetmboulders"
+		; <-
+		BranchTarget                  7
+		LineNumber                    44251, 4
+		LineNumberAlt1                966, 111
+		PushNothing
+		SetThisMemberValueString      "shakeonce"
 		Pop
 		PushNothing
 		Return

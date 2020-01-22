@@ -311,6 +311,12 @@ begin class "mudmonster_puzzle"
 		; address: 0x6bf27
 		; source: 102 "C:\\projects\\lego\\Scripting\\VBO\\lev1/Lev1_mud0.vbo" 272:283
 		MemberFunctionArgumentCheck 1
+		GetThisMemberValueString      "mudmonster"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 0, 0
+		; ->
 		LineNumber                  37193, 4
 		LineNumberAlt1              272, 102
 		GetThisMemberValueString    "mudmonster"
@@ -322,6 +328,8 @@ begin class "mudmonster_puzzle"
 		LineNumberAlt1              273, 102
 		PushNothing
 		SetThisMemberValueString    "mudmonster"
+		; <-
+		BranchTarget                  0
 		LineNumber                  37195, 4
 		LineNumberAlt1              274, 102
 		PushNothing
@@ -342,6 +350,12 @@ begin class "mudmonster_puzzle"
 		LineNumberAlt1              278, 102
 		PushNothing
 		SetThisMemberValueString    "reacting"
+		GetThisMemberValueString      "bgmusic"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 1, 0
+		; ->
 		LineNumber                  37200, 4
 		LineNumberAlt1              279, 102
 		GetThisMemberValueString    "bgmusic"
@@ -353,6 +367,14 @@ begin class "mudmonster_puzzle"
 		LineNumberAlt1              280, 102
 		PushNothing
 		SetThisMemberValueString    "bgmusic"
+		; <-
+		BranchTarget                  1
+		GetThisMemberValueString      "stone"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 2, 0
+		; ->
 		LineNumber                  37203, 4
 		LineNumberAlt1              282, 102
 		GetThisMemberValueString    "stone"
@@ -364,6 +386,34 @@ begin class "mudmonster_puzzle"
 		LineNumberAlt1              283, 102
 		PushNothing
 		SetThisMemberValueString    "stone"
+		; <-
+		BranchTarget                  2
+		GetThisMemberValueString      "turaga"
+		PushNothing
+		EqualTo
+		Not
+		CompareAndBranchIfFalseTarget 3, 0
+		; ->
+		LineNumber                    43598, 4
+		LineNumberAlt1                313, 111
+		GetThisMemberValueString      "turaga"
+		Dup
+		GetMemberFunctionString       "remove"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    43599, 4
+		LineNumberAlt1                314, 111
+		GetThisMemberValueString      "turaga"
+		Dup
+		GetMemberFunctionString       "cleanupfull"
+		JumpAbsolute                  1
+		Pop
+		LineNumber                    43600, 4
+		LineNumberAlt1                315, 111
+		PushNothing
+		SetThisMemberValueString      "turaga"
+		; <-
+		BranchTarget                  3
 		PushNothing
 		Return
 	end ; method
@@ -1794,17 +1844,11 @@ begin class "mudmonster_puzzle"
 		EqualTo
 		CompareAndBranchIfFalseTarget 28, 0
 		; ->
-		LineNumber                    37556, 4
-		LineNumberAlt1                635, 102
-		GetThisMemberValueString      "mudmandead"
-		PushConstanti8                1
-		EqualTo
-		CompareAndBranchIfFalseTarget 28, 0
-		; ->
-		LineNumber                    37557, 4
-		LineNumberAlt1                636, 102
-		PushConstantf32               1.2000000476837158
-		CallGameFunctionString        "gccollisionphysicsgroup", "spinmask", 1
+		GetVariableValueGlobalString  "globalclass"
+		PushConstantStringString      "lev2"
+		Pull                          2
+		GetMemberFunctionString       "setnextlevel"
+		JumpAbsolute                  2
 		Pop
 		; <-
 		BranchTarget                  28
